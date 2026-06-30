@@ -1,0 +1,520 @@
+{
+  "game_name": "Advanced Squad Leader",
+  "game_id": "asl",
+  "data_dir": "data/asl",
+  "text_dir": "data/asl_text",
+  "chroma_collection": "asl-rules-semantic",
+  "rule_index_file": "data/asl_rule_index.json",
+  "rule_schema": "chapter_decimal",
+  "rule_pattern": "(?:^|\\s)([A-Z]\\d{1,2}\\.\\d{1,4})\\b",
+  "cross_ref_pattern": "\\(([A-Z]\\d{1,2}\\.\\d{1,4})\\)|\\[EXC:\\s*([A-Z]\\d{1,2}\\.\\d{1,4})[^\\]]*\\]|(?:see|See|SEE)\\s+([A-Z]\\d{1,2}\\.\\d{1,4})",
+  "scenario_format": "numeric",
+  "scenario_pattern": "(?:^|\\n)\\s*(?:Scenario\\s+|ASL\\s+)?(\\d+)[.:\\s]+",
+  "schema_detection_scores": {
+    "chapter_decimal": 129,
+    "numeric_decimal": 58,
+    "outline_parenthetical": 54
+  },
+  "documents": {
+    "A15-A16vB.pdf": {
+      "doc_type": "errata",
+      "priority": 3,
+      "description": "Errata document",
+      "size_mb": 0.11,
+      "total_pages": 2,
+      "max_pages": null
+    },
+    "A53-A54vB.pdf": {
+      "doc_type": "errata",
+      "priority": 3,
+      "description": "Errata document",
+      "size_mb": 0.15,
+      "total_pages": 2,
+      "max_pages": null
+    },
+    "AOO_2006_Pages.pdf": {
+      "doc_type": "core_rules",
+      "priority": 1,
+      "description": "Advanced Squad Leader rules core document",
+      "size_mb": 22.53,
+      "total_pages": 18,
+      "max_pages": null
+    },
+    "AP4_errata_pages.pdf": {
+      "doc_type": "errata",
+      "priority": 3,
+      "description": "Errata document",
+      "size_mb": 0.62,
+      "total_pages": 4,
+      "max_pages": null
+    },
+    "ASLRB_Errata_Dec_2025.pdf": {
+      "doc_type": "errata",
+      "priority": 3,
+      "description": "Errata document",
+      "size_mb": 0.46,
+      "total_pages": 9,
+      "max_pages": null
+    },
+    "ASL_HASL_Errata_Mar_2025.pdf": {
+      "doc_type": "errata",
+      "priority": 3,
+      "description": "Errata document",
+      "size_mb": 0.28,
+      "total_pages": 9,
+      "max_pages": null
+    },
+    "ASL_Rulebook_Version_Tracker_v1.5.pdf": {
+      "doc_type": "version_tracker",
+      "priority": 2,
+      "description": "Version Tracker document",
+      "size_mb": 15.21,
+      "total_pages": 68,
+      "max_pages": 50
+    },
+    "ASL_Scenario_Balance_Nov_2025.pdf": {
+      "doc_type": "scenario_balance",
+      "priority": 5,
+      "description": "Scenario balance adjustments (Nov 2025)",
+      "size_mb": 0.3,
+      "total_pages": 10,
+      "max_pages": null
+    },
+    "ASL_Scenario_Errata_Nov_2025.pdf": {
+      "doc_type": "scenario_errata",
+      "priority": 4,
+      "description": "Scenario-specific published errata (Nov 2025)",
+      "size_mb": 0.27,
+      "total_pages": 10,
+      "max_pages": null
+    },
+    "B7-B8vB.pdf": {
+      "doc_type": "errata",
+      "priority": 3,
+      "description": "Errata document",
+      "size_mb": 0.26,
+      "total_pages": 2,
+      "max_pages": null
+    },
+    "D5-D8vB.pdf": {
+      "doc_type": "errata",
+      "priority": 3,
+      "description": "Errata document",
+      "size_mb": 0.3,
+      "total_pages": 4,
+      "max_pages": null
+    },
+    "SR ASL_QA v22.pdf": {
+      "doc_type": "qa",
+      "priority": 6,
+      "description": "Q&A clarifications v22 (2005) - unofficial unless in official source",
+      "size_mb": 0.75,
+      "total_pages": 128,
+      "max_pages": null
+    },
+    "ScenarioA.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.09,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "ScenarioB.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.05,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "ScenarioC.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.04,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "ScenarioD.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.04,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "ScenarioE.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.07,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "ScenarioF.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.04,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "ScenarioG.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.04,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "ScenarioH.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.02,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "ScenarioI.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.04,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "ScenarioJ.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.05,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "ScenarioT1.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.06,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "ScenarioT2.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.03,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "ScenarioT3.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.04,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "ScenarioT4.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.04,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "ScenarioT5.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "ScenarioT6.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.04,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "ap1-the ring.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.13,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "ap2-storm of steel.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.14,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "ap3-a breezeless day.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.13,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "ap4-l'abbaye blanche.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.14,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "ap5-invisible foes.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.15,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "ap6-savannah rain.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.16,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "ap7-directive number three.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.12,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "ap8-bloody harvest.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.09,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "pdfcoffee.com_asl-1st-edition-rulebook-advanced-squad-leader-boardgame-pdf-free.pdf": {
+      "doc_type": "core_rules_v1",
+      "priority": 9,
+      "description": "Core Rules V1 document",
+      "size_mb": 176.64,
+      "total_pages": 626,
+      "max_pages": 0
+    },
+    "pdfcoffee.com_asl-2nd-edition-core-rules-pdf-free.pdf": {
+      "doc_type": "core_rules",
+      "priority": 1,
+      "description": "ASL 2nd Edition Core Rulebook - primary authority",
+      "size_mb": 156.12,
+      "total_pages": 678,
+      "max_pages": 200
+    },
+    "pdfcoffee.com_asl-core-module-scenarios-1-136-pdf-free.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 22.74,
+      "total_pages": 136,
+      "max_pages": 80
+    },
+    "pdfcoffee.com_asl-journal-01-pdf-free.pdf": {
+      "doc_type": "journal",
+      "priority": 6,
+      "description": "Journal document",
+      "size_mb": 14.47,
+      "total_pages": 62,
+      "max_pages": null
+    },
+    "pdfcoffee.com_asl-journal-04-pdf-free.pdf": {
+      "doc_type": "journal",
+      "priority": 6,
+      "description": "Journal document",
+      "size_mb": 18.51,
+      "total_pages": 50,
+      "max_pages": 50
+    },
+    "pdfcoffee.com_asl-journal-05-pdf-free.pdf": {
+      "doc_type": "journal",
+      "priority": 6,
+      "description": "Journal document",
+      "size_mb": 12.47,
+      "total_pages": 48,
+      "max_pages": null
+    },
+    "pdfcoffee.com_asl-journal-07-pdf-free.pdf": {
+      "doc_type": "journal",
+      "priority": 6,
+      "description": "Journal document",
+      "size_mb": 13.23,
+      "total_pages": 48,
+      "max_pages": null
+    },
+    "pdfcoffee.com_asl-journal-3-advanced-squad-leader-board-game-pdf-free.pdf": {
+      "doc_type": "journal",
+      "priority": 6,
+      "description": "Journal document",
+      "size_mb": 15.78,
+      "total_pages": 80,
+      "max_pages": 50
+    },
+    "pdfcoffee.com_asl-journal-9-pdf-free.pdf": {
+      "doc_type": "journal",
+      "priority": 6,
+      "description": "Journal document",
+      "size_mb": 15.77,
+      "total_pages": 80,
+      "max_pages": 50
+    },
+    "pdfcoffee.com_wargame-avalon-hill-advanced-squad-leader-scenarios-1-to-74-pdf-free.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 4.12,
+      "total_pages": 74,
+      "max_pages": null
+    },
+    "pp1.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.11,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "pp10.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.12,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "pp2.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.2,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "pp3.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.14,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "pp4.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.22,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "pp5.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.22,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "pp6.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.32,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "pp7.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.25,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "pp8.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.32,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "pp9.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    }
+  },
+  "glossary": {
+    "ANZAC": "Good Order ANZAC",
+    "AFV": "Radio-equipped AFV",
+    "CVP": "Casualty Victory Points",
+    "DD": "Duplex Drive",
+    "DYO": "Free French",
+    "ESB": "Tracked",
+    "EX": {
+      "Blazes": "",
+      "Building": ""
+    },
+    "FIRE": {
+      "Although Opportunity Fire": "",
+      "Riders": ""
+    },
+    "FP": {
+      "Ordnance": "",
+      "Residual FP": ""
+    },
+    "GREEN": {
+      "British": "",
+      "French": ""
+    },
+    "HW": {
+      "HUMAN WAVE": "",
+      "Heavy Weapons": "",
+      "WAVE": ""
+    },
+    "IPC": "Players",
+    "KIA": "Any KIA",
+    "LAX": "Non-elite Italian",
+    "LG": "The Leader Generation",
+    "PBF": "Adjacent",
+    "PF": {
+      "FAUST": "",
+      "PANZERFAUST": ""
+    },
+    "RADIO": "All AFV",
+    "RST": [
+      "RESTRICTED SLOW TRAVERSE",
+      "VERSE"
+    ],
+    "SMOKE": "An American",
+    "SS": "Early-war SS",
+    "SW": "Unlike",
+    "TANKS": "Although",
+    "VP": "Victory Points",
+    "WAVE": {
+      "Units": "",
+      "Wave": ""
+    }
+  }
+}

@@ -1,0 +1,4526 @@
+--- PAGE 1 ---
+Volume 26, Number 5
+Flat Top
+•
+AVALON HILL
+Advanced SL
+ALSO: 8·17: Oueen 01 the Skies
+
+--- PAGE 2 ---
+2**
+The AVALON HILL
+GENERAL
+The Avalon Hill Game CompanY'$ GENERAL i$
+tattle presentation ofal,lthoritative 8rfticles on thestrategYr
+tactics, and variation ofour games ofskill. Historical articles
+are included only insomuch as they provide useful back-
+ground information on current AH titles. The GENERAL is
+published by The Avalon Hill Game Company $olely for the
+cultural edification of the serious game aficionado, in the
+hopes of improving the game owner's proficiency of play
+and providing services not otherwise available to the game
+buff. The AVi'l'on Hill
+is
+division of
+Monarch Avalon Industries, Inc. The
+of Monarch'k
+Avalon, Inc. are publici}; traded on the NASDAO System
+under the symbol MAHL For informaiion about the Com-
+pany write to Frank Fontanazza at the executive offices at
+the Company, 4517 Harford Rd., Baltimore, MD 21214.
+Publication is bi-monthly with mailings made close
+to the end of February, April, June, August, October
+December. All editorial and general mail should be sent
+to The Avaloq,.HiII GameCompany, 4517 Harford Road,
+Baltimore, M[) 21214. Oneyear subscriptions are $15.00,
+Two year subscriptions are $24.00. All domestic subscrip-
+tions sent via bulk permit. Domestic First Class Delivery
+and all subscriptions to Canada and Mexico must pay an
+additional $15.00 per year postage charge. AU overseas
+subscriptions must add an additional $25.00 per year
+postage charge. Send checks or money orders only. The
+Avalon Hill Game Company is not responsible for cash lost
+iotransit. Those with a current Arn",rican Express, VISA
+or MaSterCardrnay call
+toll free to renew
+subscriptions or order merchandise: Absolutely no com-
+plaints or questions will be handled on this number. Any
+business other than a credit card purchase must be handled
+by mail. Address changes must be submitted at least 6
+weeks in advance to guarantee delivery. Paid advertising
+is oot accepted, but news ot importance to the gaming
+C?rnmunity issolicited.
+mU$,t
+bel: received at least 6 months in advance and>contpinint'
+fOlJYlation pertaining to The Avalon Hill Game CompanY'$
+games in uSe,
+Articles from subscribers are considered for publication
+at the discretion of our editorial staff. Articles should be
+typewritten, double-spaced. and embrace the tenets of
+good English usage. There is no limit to word length.
+Accompanying examples and diagrams should be neally
+do,.,e in black or red ink, Photographs should have
+lion and credilline wntt!%n on back .. Rejected articles will
+be returned whenever possible. Poten tial authors should
+be advised that all outside submissions become the sole
+property of The Avalon Hill Game Company.
+EXECUTIVE EDITOR: Donald J. Greenwood
+MANAGING EDITOR: Rex A. Martin
+GRAPHICS, Jean Baer, Charles Kibler and David Dobyski
+COVER ART: George Parrish
+AREA Technlcian: Brenda Parris!:t
+GJ;NERAl- Subsc,iptiol1s: Katheline Grazer
+Purchase Df Games, PBM kits and pa,ts: Alice Krasnesky
+FOREIGN OI5TRIBUTORS: Overseas readers are urged 10
+make subscription arrangements with the appropriate agent
+AUSTRALIA:
+Jedko Garnes Ltd..
+134
+Cochranes Road,
+Moorabbin 3189, Victoria; BELGIUM; SPRL Prolude, 32 Ave. de
+Teruuren, Box 32, 1040 Bruxelles; DEN MARK: Super Soft,
+Aabouldvarden 51-53,8000 Aarhus; FINLAND: Fantasiapelit
+Ky, I' Bastitie 6 B22, 01360Vantaa; FRANCE: Jeux
+Actuels, BP534, EvreuxCedex; GREAT BRITAIN: :eM. Games;
+Chart House, Station Road, East Preston, Littlehampton, BN16
+3AG; HONG KONG, Wilkinson {Far Eastl Co., 1741st Floor,
+Peninsula Centre, 67 Mody Road, Kowloon; ITALY: Sllalelibri s.r.L,
+via Ruggero de Uluria N-15, 20149 Milano; Selegioch s.r.L, Via
+Fumagali 6,20143 Milano, Fernando Ferrari, via Dietro Listone
+13, 37121 Verona; Strateglae Tanica, via del Colosseo 5,
+00184 Roma; LEBANON: Nassar Trading Fl:>sl, Makdissi St.,RO.,:,
+Box 113·5284, Beirut; NEW ZEALAND: Blackw09<:1 Gayle Lttt(
+RO.B. 28358, Auckland; NORWAY: AEH Hobby, Pilestredet 7,
+0180 Oslo 1; SINGAPORE, Wong International Entc, 6 Jalan
+Sinor Bulan; Singapore 1750; SPAIN: Joe Internation de F.
+Matas Salla, Sant Hipolit 20, 08030, Barcelona 6; SOUTH
+AFRICA Gamma Games Ltd., 1'0 Box 2904, Capetown 8000;
+SWEDEN: Target Games, Frihammen, S-100 56 Stockholm;
+GERMANY: DAS SPiel. Renl2elSllasse 4/Ecke GrindelaUe,
+Hamburg 13, Spielbrett Berlin, Kortesstr 10, 1000 Berlin
+Rules Ouestions:
+R&D,. NOTE
+al] questions
+diagrammed. No questions can be answered which
+unaccompanied by a self-addressed .and stamped envelope.
+Questions must be based on rules of play fnot historical or design
+mattersl and be based on the current rules edition. Questions
+on more than one game must be listed on separate pages and
+accompanied by a separate SASE for each game.
+IF YOU CHANGE YOUR ADDRESS: Inform us immediately.
+THe Fl:>st Office destroys magaZines even ifyou leave?
+forwarding addtess. TheA>IaIon HilG;lme Cqmpafl\l aSllUmes
+nD responsibility fo, issues lost due 10 an invalid address:
+Please slate both your new and old address.
+501 CITY-FIGHT-IN-FOUR
+DYO for UP FRONT
+THE WNG CAMPAIGN
+Polishing Up the UP FRONT Campaign Game
+SERIES REPLAY
+DESERT WAR, City Fight
+ODD MAN IN
+Three-Player UP FRONT
+COMING ATTRACTIONS
+ATTACK SUB
+THE MORAL DIMENSiON
+Personal Reminiscences of AMBUSH
+SPORTS SPECIAL
+WRASSLIN'
+R.A.A.F.
+Random Appearance AIR FORCE
+BATTLES FOR THE SOUTH PACIFIC
+Hypothetical Scenarios for FLAT TOP
+COMPUTER CORNER
+Programmer Guidelines
+OPERATION PORCUPINE
+A "Killer" Variant for B-I7
+OVER THE FENCE
+Covert Missions in SE Asia
+AREA NEWS
+The Latest in Competitive Gaming
+RED DEVILS
+Reference Notes for ASL
+6
+By Marcus Watney
+13
+By M. Hall & G. Frederick
+20
+By L. Moore, S. Harvester, R. Martin
+29
+By Jay Kaufman
+30
+By Don Greenwood
+33
+By Carl Hoffman
+37
+By B. Harper & J. Burnett
+38
+By Jerry Hall
+41
+By James Lutz
+45
+By John Huff
+46
+By C. Posey & G. DeMichele
+48
+By Charles Lewis
+50
+By Don Burdick
+51
+By Steven Swann
+Copyright 1990
+ISSN 0888-1081
+
+--- PAGE 3 ---
+6
+"So-
+;j(
+j'
+.
+Range
+To Hit #
+MG FP
+0..
+2
+.2
+I
+I
+3
+2.
+0
+3
+3.
+0-1
+. .4
+4 .
+0-2
+4
+5
+0-3
+5
+ARMOR:i4/s5/k6
+FLANK:ills2lk3
+AVAILABLE: 6/42·45
++ 1 To Hit Vs.Moving Target
++ 2 To Hit if Bogged/Immobilized
+'iF
+SluG IIIG
+Effect Number: 4 III
+OVR: 2
+Button Up
+BOG:3/w9
+x5-6
+MG:X6
+501 CIT¥-FIGHT-IN-FQUR
+DYO for UP FRONT
+By Marcus Watney
+Hardly an issue of The GENERAL goes by without
+yet
+another
+ADVANCED
+SQUAD
+LEADER
+scenario. But where are the new scenarios for UP
+FRONT, BANZAI and DESERT WAR? Are we card
+enthusiasts to be shrugged off with just the 24 rather
+uninteresting ones provided with the games them-
+selves?
+Two years ago, I got fed up waiting for someone
+else to do the hard work and grudgingly sat down
+to do it myself. But it took only one evening's con- .
+centration to convert my frustration with the UP
+FRONT scenarios into the remedy of "501 City-
+Fight-in-Four. " It has proved to be a most produc-
+tive evening's work, for the result has brought hours
+of gaming pleasure throughout the European Region
+of AHIKS and at the clubs I attend. In England, it
+has become the standard UP FRONT game, played
+more often than any other single scenario.
+Quite simply, the secret of its success lies in its
+flexibility. Each player is allocated 501 Design-
+Your-Own points with which to play the City Fight
+scenario (Scenario B). The removal of the first four
+Woods cards, the special rules and the victory con-
+ditions remain unchanged; the only rule which is
+deleted is 43.41. Additionally, snipers have to be
+purchased by both sides as per Rule 43.6, and if
+a second sniper is required, he must be purchased
+at the same time as the first. But the really big differ-
+ence is that the game continues through four decks.
+Now at last you can do more than dream about
+that King Tiger. At a cost of 656 points, this
+mammoth is doomed to remain in the box, unplayed,
+whichever of the 24 published scenarios you may
+choose. But critical to good play in'SOI City-Fight-
+in-Four is Rule 43.4-which offers generous dis-
+counts for units bought in mid-game as rein-
+forcements:
+Arrival after one deck:
+xO.8
+Arrival after two decks:
+xO.5
+Arrival after three decks:
+xO.2
+If you can design a defensive strategy using not more
+than 369 points, and survive with this squad for three
+whole decks, then this time the King Tiger will ap-
+pear (like the cavalry over the hill) just in time to
+save the day for you even as the final cards are
+played. Arriving after three decks, its cost is now
+a modest 132 points.
+Well that, at least, is the theory. But the great
+strength of this scenario is that for every strategy
+there is a counter. Time is the real enemy of the
+King Tiger, for if your opponent chooses to use all
+501 points in his initial set-up, your 369-point squad
+is unlikely to survive long enough to hear the rumble
+of friendly tracks. And even if it does, just how
+much damage can even a King Tiger do in just one
+deck?
+Like most people approaching 501 City-Fight-in-
+Four for the first time, in the early days I was
+obsessed with bringing on the heaviest armor I could
+afford at the start of the fourth deck. Many defeats
+later, I now prefer to bring on something more
+modest, but have it in action through at least the
+last two decks.
+And here psychology plays an important role.
+Initial troops and reinforcements must all be selected
+and scehduled by both players secretly before either
+side begins to set up. And, while the actual cards
+to be brought on later may remain hidden until their
+entry, you must still reveal to your opponent the
+point values not yet in playas you set up your initial
+forces. Therefore, the make-up of your own squad
+will likely reflect your analysis of your opponent's
+character. Ifhe is a renowned "tankie" you'd better
+buy at least a bazooka; but if the banzai charge is
+his specialty, perhaps a medium machinegun is a
+better investment. If you can be objective about your
+own styIe of play, try playing out of character once
+or twice when facing an opponent who thinks he
+knows you well; it's worth it just for that look of
+horror on his face.
+I consider Scenario B easily the best ofthose pub-
+lished (though I also enjoy Scenario R, the Paratroop
+Drop). The City Fight has no specific attacker or
+defender, and has outstanding Victory Conditions.
+Because only
+men
+occupying
+buildings score
+Aggressive Action Points, it is one of the few
+scenarios in which the primary purpose of infiltra-
+tion is often to seize a valuable bit of terrain (Rule
+20.8) rather than merely to kill the enemy. It is also
+one of the few scenarios where discarding Brush
+or Wall onto an advancing enemy may make very
+good sense. Finally, the scenario is tailor-made for
+
+--- PAGE 4 ---
+7
+Group A:
+#42 Sexton
+329
+Group B:
+#23 Watney
+Mortar:
+54
+#21 Sgt O'Niell
+MP:
+46
+Group C:
+#9
+Bell
+Rifle:
+10
+#10 Moon
+Rifle:
+10
+#12 Gilfallin
+Bren:
+46
+#7
+Cleary
+Rifle:
+5
+Total: 500 (at stan 500)
+At 129 points, the German medium MG is the
+most expensive in the game. It is also the most
+powerful, with an extra point of firepower at all
+ranges over its American and British rivals. But the
+three cards #10 Wolff (rifle), #12 Griess (LMG)
+and #15 Volke (assault rifle) cost only 117 points
+and put out much the same amount of firepower.
+I do not find the German MMG a particularly
+attractive purchase in comparison with the excellent
+MG34 LMG.
+The American and British MMGs are virtually
+identical, and are priced at 115 and 114 points
+respectively. I like PFC Nixon with his Browning
+.30-caJ. The American BAR is not an attractive
+weapon, being only two FP stronger than a rifle and
+being restricted by Rule 46.4, so the MMG is a good
+purchase in any DYO scenario. Likewise, PFC
+Palmer with the British Vickers MMG goes some
+way to compensate for the Bren gunners Gilfallin
+and Scarborough (for the last sentence ofRule 46.4).
+The Russian and Japanese MMGs are, at 69 and
+74 points respectively, good value. The Russians
+have a unique problem in that their morale 4 LMG
+is also an ASL; this is not always desirable. The
+alternative LMG (1f28) has a morale of "3", a little
+low for such a crucial weapon in my opinion. I often
+choose #16 Cpl Semenov and his MMG, but usually
+because I don't want another ASL. (I like to put the
+commissar in charge of the firebase.) The Japanese
+also suffer from a LMG identical to the Bren. At
+only 168% of the price of their LMG, the MMG
+is an economical purchase even though it does
+require two men to move it (well, how often does
+a MMG get moved anyway).
+the surprise, though, is the high ranking enjoyed
+by the Japanese; the cheap Type 1 SP is almost iden-
+tical to the Sexton in terms of value for money,
+though its lack of a machinegun is irritating. Bear-
+ing in mind Imperial Japan's disdain for armored
+warfare, this does seem rather unrealistic.
+For those who want a quick game, I recommend
+this hand:
+British:
+MEDIUM MACHINEGUNS
+This puts the brilliant Sexton straight into action,
+hopefully well away from the panzerschreck which
+would normally be placed in Group C. Usually the
+provision of a mortar is merely to permit unuseable
+Fire cards to be burnt rather than discarded. But
+here it plays a more important role: killing troops
+pinned by the Sexton before the opponent has a
+chance to rally them. Since it may have to come
+forward to provide this duty effectively, the squad
+leader accompanies the mortarman in order to lay
+down smoke..
+When I said that this hand guarantees a quick win,
+I was careful not to say it guarantees you a quick
+victory! Weighted against the strength of the Sexton
+must be the simple lack of British numbers, the low
+morale of Group C (oh for a British commissar),
+the lack of an ASL, and the vulnerability of the SL
+to snipers. If the Sexton becomes bogged or other-
+wise incapacitated, a few good shots against Group
+C are likely to result in a rapid British defeat. Using
+this hand, I have both won and lost spectacularly,
+but I have never played through all four decks!
+Thanks, of course, are not everything.
+UP
+FRONT is an infantry game, and with 501 points
+to spend, some interesting combinations of infantry
+weapons are possible. Let's look in detail at five
+of the heavier weapons.
+15
+10
+18
+28
+54
+41
+25
+25
+30
+72
+51
+13\.2 (656xO.2)
+AR:
+LMG:
+MP:
+ATR:
+Rifle:
+AR:
+AR:
+LMG:
+MP:
+Rifle:
+Group A:
+#16 Shaeffer
+#5
+Shultz
+Group B:
+#19 Schlaffer
+#15 Volke
+#3
+Shussel
+#2
+Cpl Hessel
+Group C:
+#6
+Bernhoff
+panzerfaust
+#26 Kubler
+#12 Griess
+#1
+Sgt Diettinger
+Deck 4:
+#35 PzKw vm
+Total: 500.2 (at stan 369)
+Be warned, not once have I won with this hand.
+The small size of the front-line squads limits the
+amount of fire that can be put out; but concentrat-
+ing the squad into two groups would offer too many
+outflanking opportunities. And the tank arrives just
+too late to retrieve a position disastrous from the
+start. Still, everyone should drive a King Tiger once
+in their life, and in UP FRONT this formation is
+likely to be your only opportunity.
+A beller approach is to determine which of the
+armored units appearing in the game represents the
+best value for money for each nation. To a large
+extent, this must be a subjective decision (how
+frightened are you of becoming bogged, for example).
+Personally, I ignore everything except the unboxed
+Effect Number; the tank's prime targets are likely
+to be of high morale and hiding in - 2 or - 3 TEM
+buildings, and therefore difficult to shift. If the tank
+is to win the game for you, it is essential that it have
+a very high capability against infantry. Good cross-
+country performance is worthless if its fire then has
+no effect. By this standard of reckoning, the best
+AFVs are:
+So, what about that big tank then? Decribed below
+is a small, elite German force which must hold the
+base-line through three whole decks before salvation
+arrives. Group A is padding, and should hide in
+good terrain for as much of the game as possible;
+the sole purpose of this anti-tank rifle is to burn off
+unwanted Fire cards. Groups Band C are of com-
+parable strength, each able to lay down eleven FP
+at Relative Range 3, but Group C has the better
+morale and will therefore be slightly forward of the
+other two.
+Germans:
+ARMOR
+Vehicle
+Effect
+Cost
+CostlEffect
+G
+a:
+39 StuG WB
+4
+361
+90.25
+French:
+#34 Char BI-b
+4
+315
+78.75
+Russian:
+#3
+SU-85
+5
+372
+74.4
+American:
+#39 M8 HMC
+4
+296
+74.0
+apanese:
+#35 Tyl'!:
+SP
+21>9
+67.2-
+British:
+#42 Sexton
+5
+329
+65.8
+tal'a :
+4 Sel1lQvente
+4
+223
+55.75
+This chart shows the Germans at a distinct dis-
+advantage. The most economical AFV proves to be
+the British Sexton: a truly amazing vehicle, con-
+sisting of a 25-pdr field gun mounted on the chassis
+of an M4 Sherman. (The Italian Semovente cannot
+really be compared with the others, suffering as it
+does from staggeringly dreadful morale and an
+unbelievable 9.9% chance of malfunction.) Perhaps
+to place the panzerschreck in Group C (or, if in play,
+Group D) so as to be well-positioned to ambush
+armor entering as Group E or Z. By placing front-
+line Allied armor in Group A, the panzerschreck
+is kept at arm's length, leaving the armor relatively
+free to shred enemy Groups A and B.
+Perhaps the greatest pleasure that 501 City-Fight-
+in-Four provides is between the games. Over a long,
+solitary winter's evening, with the rain beating down
+on the window panes, what more pleasant entertain-
+ment can there be than designing new forces with
+which to astound and amaze your regular opponents
+at the next meeting? But to design well, you need
+to have a clear idea of your favorite nation's
+peculiarities and the demands of this scenario. Those
+are the considerations that the rest of this article will
+address.
+At Start:
+#1
+Sgt Dittinger
+MP:
+51
+#4
+Schumacker
+Rifle:
+15
+#8
+Wallack
+Rifle:
+8
+#9
+Streich
+Rifle:
+13
+#10 Wolff
+Rifle:
+17
+#24 Cpl Steiner
+MP:
+36
+#39 StuG lIm
+361
+Total: 501 (at stan 501)
+Americans:
+At Start:
+#3
+Fox
+BAR:
+44
+#5
+Frattali
+SAR:
+14
+#6
+Smith
+SAR:
+5
+#7
+Anderson
+SAR:
+14
+#11 Greenwood
+SAR:
+16
+#17 Ransom
+Carbine:
+16
+#18 Sgt Allen
+Carbine:
+55
+#21 Maly
+MP:
+14
+#28 Shelley
+Mortar:
+61
+Deck 2:
+#35 M10 Wolverine
+26\.6 (327xO.8)
+Total: 500.6 (at stan 239)
+the deployment of two of my favorite weapons: the
+demolition charge and the flamethrower.
+One limitation I have had to impose for purely
+practical reasons is the number of groups in which
+reinforcements may arrive: not more than two over
+the whole game. The first reinforcing batch arrives
+as Group E and the second as Group Z (appearing
+beyond Group E, not beyond Group A). If Group
+E does not exist when the second reinforcements
+arrive, they enter as Group E rather than as Group
+Z. Both reinforcing groups may appear at the same
+time. A reinforcing sniper does not count as a group.
+Of course, it is important that players do not
+become too distracted by the prospect of late-
+arriving reinforcements. With 501 points to play
+with, it is perfectly feasible to have cheap armor
+in the front line from the very start. AHIKS member
+Andy Daglish has perfected this technique of "all-
+up-front" and recommends a StuG lIlB at start. At
+the Spring 1988 AHIKS weekend meeting, he used
+the hand described below with considerable success
+against the conventional American squad of Owen
+Walters:
+Germans:
+A similar hand for the Russians (again created by
+Andy Daglish) with a typical German force shown
+for comparison, is given below:
+Russians:
+At Stan:
+#1
+Sgt RaSlOY
+SAR:
+40
+#8
+Chernenko
+Rifle:
+15
+#10 Kvasnikov
+Rifle:
+4
+#11 Sokoloff
+Rifle:
+7
+#13 Zaharoff
+Rifle:
+14
+#14 Zayakov
+Rifle:
+6
+#15 Uihailoft
+Rifle:
+10
+#19 Commisar Dottski
+MP:
+33
+#38 SU-85
+372
+Total: 501 (at stan 501)
+Germans:
+At Stan:
+sniper
+35
+#1
+Sgt Dieuinger
+MP:
+51
+#4
+Schumacker
+Rifle:
+15
+#5
+Schultz
+Rifle:
+10
+#7
+Beck
+Rifle:
+5
+#8
+Wallack
+Rifle:
+8
+#9
+Streich
+Rifle:
+·13
+#10 Wolff
+Rifle:
+17
+#12 Griess
+LMG:
+72
+#19 Schlaffer
+AR:
+18
+#24 Cpl Steiner
+MP:
+36
+Deck 2:
+#6
+Bernhoff
+Rifle:
+20 (25xO.8)
+#15 Volke
+AR:
+22.4 (28 xO.8)
+#20 Frantz
+PSK:
+52.8 (66xO.8)
+#26 Kubler
+AR:
+24 (30xO.8)
+Deck 3:
+#30 SPW 251/1
+101 (202xO.5)
+Total: 500.2 (at stan 280)
+Perhaps what these compositions demonstrate
+more than anything else is just how dangerous it
+is to assume armor will only appear as a reinforce-
+ment. A player who does not start his unit with a
+bazooka (or an AFV of his own) is just asking for
+trouble. How then can you best deploy your armor
+to avoid that inevitable bazooka? One trick of the
+trade, available to the Allied player only, is to bring
+whatever armor you can afford on at the very start
+and allocate it to group A. In the City Fight scenario,
+the Axis player sets up and moves first. It is usual
+
+--- PAGE 5 ---
+8
+The Italians and French are in much the same
+quandary as the British: while the firepower of their
+MMGs is the weakest in the game system, their
+LMGs are one-man weapons also constrained by
+Rule 46.4. Both the Italian and French LMGs are
+almost identical to the British Bren. This means that
+while the Italian MMG (at 52 points) is not particularly
+attractive, the alternative of a LMG (at 30 or 33
+points) is an even less pleasant proposition. For the
+French, the decision is even simpler-always choose
+the MMG (at 92 points) and never touch a LMG
+if you can help it because the MMG is much easier
+to repair and less likely to be removed following
+a malfunction. This is an important consideration
+in a four-deck game.
+Of course, in deciding whether or not to purchase
+a MMG, it is not just a question of comparing fire-
+power at Relative Range 3 (in my opinion, the most
+crucial range). Unlike all other infantry weapons,
+the MMG's most important characteristic is its long
+reach. Even at Range 0, it can put out a very
+reasonable amount of fire, typically two or three
+times that of an LMG. Whether or not it does suc-
+ceed in pinning the opponent to his baseline, its
+presence will most certainly force him to play more
+conservatively right from the start, giving you the
+chance to seize the middle ground first. For this
+reason, I find the medium machinegun has a value
+beyond its raw points.
+MORTARS
+The UP FRONT mortar is a strange bird, and it
+takes some skill to use it well. Its principal purpose
+is to burn up Fire cards that are unuseable else-
+where. It has tremendous nuisance value, as you
+will soon find out if your opponent uses one against
+you. You will find it firing at you with repetitive
+regularity all through the game, on most occasions
+achieving nothing but then suddenly wiping out an
+entire group!
+The reason that its performance is so difficult to
+predict is that the RNC drawn to determine if a hit
+is achieved is added to swell the Effect Number.
+At Relative Range 3, most crewed mortars will hit
+an Acquired Target on any color RNC from zero
+to four inclusive. That means there is a 27.2 %
+chance of attacking with FP2, 22.2% chance ofFP3,
+17.3% chance of FP4, 13.6% chance of FP5, and
+9.9% chance ofFP6 (plus, of course, a 9.8% chance
+of missing entirely). Nobody loses much sleep over
+a "2" attack, but suffering a FP6 attack could easily
+lose you the game in less than a minute.
+But the real killer with mortar fire (and, in fact,
+ordnance fire in general) is that any Concealed card
+must be played before the Fire strength of the attack
+is known. I find this the toughest decision in the
+game system-whether or not to use a Concealed
+card to reduce the To Hit number. And a wise
+mortarman can use this uncertainty to great effect,
+expending a useless Fire card to finesse his oppo-
+nent's best Concealed card immediately before the
+main attack from his buddies in the next group goes
+in. Little wonder that I find being subjected to per-
+sistent mortar fire easily the most nerve-wracking
+event in UP FRONT.
+Fortunately for those who suffer, the mortar also
+has tremendous weaknesses. Foremost amongst
+these is its propensity to break down: 5 % every
+single time it fires! I am uncertain what this high
+likelihood of breakdown is supposed to represent;
+historically, the mortar was (and is) a highly reliable
+weapon, with an absolute minimum of moving parts.
+(Easily the most unreliable weapon in the war was
+the dreadful British Sten, a weapon cobbled together
+in the dark days of 1940 and with an alarming
+propensity
+for
+jamming
+at
+the
+most
+critical
+moments; yet in BANZAI it is no more likely to
+malfunction than a trustworthy Lee-Enfield bolt-
+action rifle!) Malfunction of a mortar I therefore
+interpret to represent a temporary lack of ammuni-
+tion, for the great handicap of the mortar as an in-
+fantry weapon is the weight of ammunition that must
+be carried if it is to make a significant contribution
+to any battle.
+Another limitation of a mortar is its minimum
+range; often the best response to a mortar is to
+advance and attack it! Another problem, of all
+ordnance, is that it is largely ineffective when fired
+at moving targets. The mortar's ability to "undo"
+the defensive benefits of woods is of no significance
+in a City Fight scenario, while its inability to fire
+from (VP-generating) buildings is a severe limita-
+tion. All these tend to mitigate the effects of a truly
+remarkable
+But, is it worth buying? At 60 points, the German
+mortar is expensive. It does have the advantage of
+long maximum range and short minimum range, but
+the excellent German discard capability means that
+a mortar is not so important as a means of expend-
+ing unuseable Fire cards.
+On the other hand, at 61 points each, the American
+and French 60mm mortars are a very good value.
+The Americans (and even more so the French) are
+troubled by their discard capability, and these
+mortars are also the only ones in the game with an
+initial Effect Number of "3" (increasing the likeli-
+hood of any particular final FP by as much as 5 %
+in most cases). The French have the choice of a
+second, weaker mortar at 42 points; but I find it
+only rarely useful.
+The British mortar cannot be recommended. Sadly,
+PFC
+Watney
+remains
+unpicked
+and
+unloved
+throughout most 501 City-Fight-in-Four encounters.
+At 54 points, the weapon is only slightly cheaper
+than that of the German, and yet its range is
+significantly shorter. Its uncrewed performance is
+execrable.
+Particularly strange is the Japanese mortar ...
+or mortars, for there are three of them! Why so
+many of them are offered is difficult to understand;
+I have seen one game in which a player placed two
+mortars in the same group, but his purpose in so
+doing remains undivined. Each of the three mortars
+has a different morale: "4" (costing 54 points), "3"
+(costing 41) and "2" (costing 27). The great weak-
+ness of the Japanese mortar is the reduction in its
+Effect Number at Relative Ranges of "2" and "3",
+just where the likelihood of a hit is at maximum.
+It can be intensely frustrating to watch your oppo-
+nent extricate himself out from under your mortar
+barrage by calmly advancing to Relative Range 2!
+Still, at a cost of only 27 points, I do consider the
+Morale 2 mortar a good value, given the Japanese
+player's discard constraints. Mortars spend most of
+the game under cover in gullies anyway, so the low
+morale is no problem.
+As usual, the poor old Italians are saddled with
+the worst mortar in the game-a laughable pea-
+shooter with a miserable Effect Number of "1".
+But given the Italian player's four-card hand and
+discard constraints, even this pathetic little joke of
+a weapon may be worth its 35-point cost as a means
+of burning unuseable Fire cards. At least it malfunc-
+tions no more frequently than anyone else's mortar.
+Easily the best mortar is the Russian's. At only
+33 points, it is extraodinarily good value for the
+money. It is rare for me to play the Russians in 501
+without a mortar. Firstly, the Soviet four-card hand
+and discard constraint make the Russians particularly
+susceptible to a logjam of one or two unuseable Fire
+cards. Secondly, it is common for the Soviets to set
+up in only two or three groups, but this does make
+them vulnerable to natural outflanking; creating an
+extra two-man mortar group and designating it
+Group A widens the front without weakening the
+squad as a whole. The Russian mortar is compara-
+ble to the German except at extreme range, where
+a hit is unlikely. Its major disadvantage is its
+minimum range of "3". Even so, at almost half the
+price of the German mortar, it is a very good
+purchase.
+Before leaving the topic of mortars, their deploy-
+ment is worth discussing. I favor a mortar in Group
+A, the firebase in Group B and the maneuver
+element in Group C. But there is one other place
+well-suited for the mortar: amongst the reinforce-
+ments. It is poor practice to bring on riflemen after
+the end of the second deck as they are unlikely to
+be able to advance far enough before the end of the
+game to generate significant victory points. For this
+reason, if infantry reinforcements are to be brought
+on late, they should be intended as an additional fire-
+base rather than as a maneuver group. A MMG
+makes a good late reinforcement, and so too does
+a mortar. A Russian mortarman and assistant can
+be brought into the game at the start of the last deck
+for less than ten points, and at this stage of the game
+may be able to go straight into action at Relative
+Range of "2" or "3".
+ARTILLERY
+1 have noticed that off-board artillery is unpopular
+with players; yet in this scenario I consider it a
+valuable
+asset.
+Yes,
+it
+is
+exceedingly luck-
+dependent, requiring both a rare Radio card and a
+black RNC. But it can swing the game in your favor
+when a moment before all seemed lost. And while
+your radio is functioning, however disorganized
+your groups may be with critical personnel pinned
+or eliminated, your opponent will never advance
+without utmost caution.
+If you are going to buy artillery, do it properly
+and purchase FP7 artillery. Your target will likely
+be hiding in - 3 buildings and have high morale,
+so anything less than "7" is a waste of time and
+points. Nation by nation, the percentage of cards
+and costs are:
+This chart shows that the offboard artillery is best
+value for the Italians, is good value for the Russians
+and Japanese, and poorest value for the Germans,
+British and French (parenthetical values are for rare
+troop types).
+But the Americans have the most copious supply
+of Radio cards, twice the Soviet, Japanese or Italian
+allotment. Since it is perfectly possible for an entire
+game to pass without the Russians or Japanese or
+Italians to even secure the right to make a 50%
+gamble at calling down artillery fire, this in itself
+makes the American purchase of artillery just that
+little bit more attractive than statistics suggest. Also,
+the Americans can hoard one or two Radio cards,
+something the Russians, Japanese and Italians
+simply cannot afford to do with their hand limi-
+tations.
+Note that Table 3c in BANZAI is incorrect in its
+allotment of Radio cards. And what on earth does
+Rule 44.2 mean? There is no Radio card useable
+by the Germans that is not also useable by the
+Americans, so the second half of Rule 44.2 is more
+easily expressed by limiting the British to German
+Radio cards. The reference to American radios is
+irrelevant.
+DEMO CHARGES
+At 50 points (for all nations), the demolition
+charge is overpriced. It is difficult to use, and once
+used is expended. The Russians, Japanese and
+Italians are better off spending up to 66 points on
+a seven-factor off-board artillery barrage; the
+demolition charge is attractive only to the Germans
+and British. But, having said that, I have seen a
+number of games won sudddenly by the "losing"
+side through the judicious use of a demo charge.
+
+--- PAGE 6 ---
+9
+THE BRITISH
+The presence of the Wasp and L3/Lf mean the
+British and Italian players are the only ones able
+to field two flamethrowers in a squad. This is a tech-
+nical capability only; the resulting squad is so
+unbalanced it is hardly worth considering. I tried
+it for a laugh once ... and didn't laugh very much.
+9
+5
+15
+13
+36
+72
+8
+5
+23
+30
+28
+51
+25
+180.5 (361 xO.5)
+36
+72
+14
+15
+114
+26
+85
+21
+51
+658 (329xO.2)
+MP:
+MP:
+Rifle:
+Rifle:
+MP:
+LMG:
+Rifle:
+Rifle:
+MP:
+AR:
+AR:
+MP:
+MP:
+FT:
+ATR:
+Rifle:
+MMG:
+MP:
+Piat:
+MP:
+MP:
+Group A:
+#18 Posner
+#21 Hamblen
+Group B:
+#4
+Schumacker
+#9
+Streich
+#24 Cpl Steiner
+#12 Griess
+#8
+Wollack
+#7
+Beck
+Group C:
+#1'7 Hauptman
+#26 Kubler
+#15 Volke
+#1
+Sgt Diettinger
+panzerfaust
+Deck 3:
+#39 SlUG III
+Total: 500.5 (at stan 320)
+THE GERMANS
+Group A:
+#22 Cpl Burns
+#14 Vane
+Group B:
+#26 Oldaker
+#4
+Tresham
+#13 Palmer
+Group C:
+#17 Shannon
+HII Davis
+#15 Shaw
+#1 Sgt Vasey
+Deck 4:
+#42 Sexton
+Total: 499.8 (at stan 434)
+THE JAPANESE
+always prefers quality to quantity, so the initial
+squad contains just nine men (some players lament
+the low firepower that results from a compact squad,
+but I am deeply suspicious of large squads fleshed
+out with low-morale characters whose disappear-
+ance can all too easily break the squad). It is not
+a warped sense of humor that puts Cpl Burns with
+the flamethrower; the ability of the ASL to call down
+smoke offers the flamethrower some cover if caught
+in poor terrain. Also note that when using ordnance
+to free your hand of high-value Fire cards, the anti-
+tank rifle should also be used in preference to the
+PIAT. The PIAT is just too vulnerable to a malfunction
+to risk unnecessarily.
+British:
+I very rarely play the Germans, because I find
+them the least challenging side, so I have only one
+hand to offer. I am always cautious about includ-
+ing extremely nervous individuals such as Beck
+(morale "I''). My rule of thumb is only include
+him if there is an even number of men in the squad.
+Then his inclusion does not weaken the squad since,
+with or without him, the breaking point remains the
+same (in this case, five men remaining). Of course,
+Hamblen is as weak as Beck but, constituting no
+threat to the enemy, he can expect to have a very
+peaceful game. His (and Posner's) sole purpose is
+to extend the front, and this pair should hide in a
+gully as soon as possible-even retreating behind
+the baseline if necessary.
+Germans:
+Ifthe Germans are uninteresting, the Japanese are
+fascinating. Their special problems and advantages
+are so different to all other combatants that Japanese
+squads are often of unique design. The most im-
+portant Japanese advantage is that 75 % break point;
+if nothing else, it means a player can safely fill a
+squad with more low-morale men than the opposi-
+tion and thus, in a DYO scenario, achieve superior
+firepower for the same expenditure. The principal
+disadvantages are the very poor Panic values (they
+just will not get their heads down) and the lack of
+a bazooka. The anti-tank rifle compensates greatly,
+being the best in the game. It does actually hit its
+target quite regularly. And at Relative Ranges 3 or
+more, a hit once achieved does have a good chance
+of knocking out the enemy AFV (because of the
+strange Rule 30.6). At these ranges, a hit once
+achieved is likely to have an effect indistinguishable
+from a bazooka. The Japanese player should always
+purchase the ATR.
+The Japanese infiltration advantage (Rule 45.13)
+and the availability of some men with very high
+morale makes the demolition charge (and even the
+26
+21
+61
+51
+50
+15
+10
+10
+5
+40
+114
+15
+64
+17.5 (35xO.5)
+14
+46
+40
+20
+114
+265.5 (531 xO.5)
+MP:
+MP:
+Bren:
+MP:
+ATR:
+MP:
+Rifle:
+Rifle:
+MMG:
+Rifle:
+Rifle:
+Rifle:
+Rifle:
+Rifle:
+MMG:
+Rifle:
+Piat:
+Group A:
+#26 Oldaker
+#21 Sgl O'Neill
+Group B:
+#2
+Cpl Barnard
+#5
+Hodge
+#13 Palmer
+Deck 3:
+#39 Churchill
+Total: 499.5 (at stan 234)
+A more balanced and successful British hand, with
+everything up front, is described below. Because
+the flank of Group A cannot be turned, it will often
+contain the opponent's weakest personalities (typically
+little more than a mortar and an assistant). This hand
+seeks to exploit such weakness by placing the
+maneuver element in Group A, the firebase in Group
+B, and the anti-tank element in Group C. As usual,
+the maneuver element has the highest morale since
+to be effective it must close with the enemy. Note
+also the single rifleman accompanying the PlAT;
+with any other nation, I would select a machine
+pistol, but the British firepower bonus (Rule 44.3)
+doubles the number of Fire cards this single man
+can use at Relative Ranges of 1 and 2, offering
+exceptionally good value for the money.
+British:
+The great strength of the 501 City-Fight-in-Four
+scenario is that it is now played in enough clubs to
+make it worthwhile recording favorite squads on
+paper and keeping them in a game box ready for
+further use. A visit to another club then becomes
+a fascinating conflict of doctrines, for I have found
+that different clubs develop different styles of play
+and favored deployments, reflecting small shifts in
+accent perceived by each. I will devote the rest of
+this article to describing a few of the squads with
+which I have fought this scenario (however, you
+should note that I do not claim to have won with
+all of them) detailing them nation by nation, start-
+ing with the British.
+The Churchill is an excellent infantry-support
+tank, well-armored and with a good punch. Unfor-
+tunately, it is also expensive. To bring it on during
+the third deck leaves only 235.5 points to deploy
+initially. The sparse hand described below concen-
+trates on high morale for survivability and an MMG
+to keep the enemy at maximum range for as long
+as possible. It suffers from a simple lack of numbers
+and an extremely weak firebase; once the MMG is
+pinned, the enemy can advance with impunity. The
+anti-tank rifle is included solely to burn unwanted
+Fire cards. To win with this hand is extremely
+difficult, but if you manage to survive the first two
+decks cowering on the baseline you will then be well
+rewarded.
+British:
+Group A:
+#17 Shannon
+#15 Shaw
+#3
+Scarborough
+#1
+Sgl Vasey
+demo charge
+Group B:
+#4
+Tresham
+#9
+Bell
+#25 McNamara
+#7
+Cleary
+#2
+Cpl Barnard
+#13 Palmer
+Group C:
+#6
+Willis
+#20 Coleman
+Deck 3:
+sniper
+Total: 499.5 (at stan 482)
+But the most successful British hand I have ever
+used is the one shown next. As you would expect
+from what I have writtenearlier, it brings the Sexton
+on at the start of the final deck. Delaying the armor
+that long is risky, but it does mean that there is more
+to spend on the opening squad. I am a player who
+But then again, I have also had my precious demo
+charge rout out of the game in the very first deck!
+FLAMETHROWERS
+Easily my favorite weapon is the flamethrower.
+In fact, it was largely because I was dissatisfied with
+opportunities for this weapon in other scenarios that
+I set about designing 501 City-Fight-in-Four in the
+first place. The flamethrower is tailor-made for a
+City Fight, thanks to its most important asset:
+negation of the defender's terrain (Rule 22.1). Only
+by bringing forward your flamethrower can you
+hope to winkle that high-morale group out of those
+VP-generating - 3 buildings as the last deck plays
+itself out.
+When using a flamethrower as the only firing
+weapon, you should plan to generate a Fire 5 attack.
+This should be sufficient to kill or pin a significant
+proportion of the target group, unless a -3 Con-
+cealed card is played. Also remember the other great
+asset of the flamethrower: moving fire is not halved
+so the weapon can get into action immediately after
+advancing from Relative Range 4.
+Of course, the flamethrower also has major dis-
+advantages. Prime amongst these is an alarming
+tendency to break down at just the most awkward
+moment. But a less obvious problem is its bulk, as
+portrayed by its reduced KlA values. Recently, a
+four-man group including a flamethrower suffered
+three casualties in the course of a game . . . each
+time the bearer of the flamethrower! The last man
+alive in the group refused to pick the dreadful thing
+up, believing it to be jinxed.
+Do not make the mistake of imagining that the
+flamethrower is only an offensive weapon; in many
+ways it is more potent on the defense. If your
+maneuver element has succeeded in finding some
+buildings to hold well forward, it will be very
+difficult for your opponent to evict you in the face
+of the flamethrower.
+As usual, the Soviet equipment proves to be good
+value for the points, and the British and American
+poor. At more than half the cost of a MMG, the
+Italian flamethrower is too expensive, even at 30
+points. The German flamethrower costs the same
+as the British, but bearing in mind the higher costs
+of most German weapons at 72 points some players
+may consider it (relatively) quite a good purchase.
+However, easily the best value is the French
+flamethrower at a mere 34 points.
+Special mention should be made of the five
+flamethrowing AFVs. The Russian T26S and the
+German PzKw II (Fl) are not particularly attractive
+purchases-being neither cheap nor well-armored.
+But the German PzKw ill (Fl) carries sufficient
+armor to have a good chance of closing with the
+enemy. Also, alone of all the flamethrowers, the
+PzKw III (Fl) has an effect at Relative Range 4 as
+well as at 5. This can be particularly important if
+an AFV reinforcement entering as Group E is to
+have any influence on Group C. At this range, the
+flamethrower will probably only deliver a Fire 3
+attack. But if the target is holed up in - 3 build-
+ings, to achieve the same result from any other
+weapon a Fire 6 attack would be needed, so it is
+not to be dismissed lightly.
+By far the most interesting flamethrowers, though,
+are the weird British Wasp and Italian L3/Lf. The
+Wasp is appallingly vulnerable to even desultory
+fire, but at 152 points it is cheap enough to be con-
+sidered expendable. The Italian vehicle is even more
+fun as it has a better chance of closing with the
+enemy (it is not open-topped) and at 120 points is
+a bargain. Amazingly, Rule 28.6 means that one
+of the best uses of these vehicles is in a European
+version of the Banzai charge: keep them on the base-
+line until the opponent seems short of Fire cards
+and then charge forward to Relative Range 5 without
+playing a single terrain card. Well, it's worth a try.
+
+--- PAGE 7 ---
+10
+Japanese:
+THE AMERICANS
+anti-tank mine) an effective weapon. If all else fails,
+the ATM can even be placed by Banzai charge,
+although the -3 berserk DRM is crippling.
+The hand described below is quite different from
+the others I have listed. While the mortar fills a con-
+ventional role, note that the firebase in Group B has
+no machinegun, poor firepower at long range being
+compensated for by good firepower at short range.
+Group C is the most interesting: the two fanatics
+Okimoto and Shoburo,
+unencumbered by low
+morale companions, can devote all their energies
+to placing the demo charge effectively. But most
+striking is the arrival of the main maneuver element
+as late as the second deck; with any other nation
+this would be a risky delay, but the ease with which
+the Japanese player can advance makes this an im-
+pressively sophisticated ploy that may even lead to
+natural outflanking.
+One of the most surprising discoveries, which
+comes as something of a shock to patriotic American
+players of the game, is just how temperamental the
+American forces are. I count the Americans as one
+of the hardest sides to play well in a 501 scenario.
+The presence of many personalities with Panic levels
+two greater than their morale (instead of one) is a
+significant advantage. But, in this scenario, this is
+more than outweighed by the truly appalling American
+armor.
+It is not the vehicles themselves which are the
+problem; it is the tendency of the crews to button-
+up at the first sign of trouble. With one exception,
+the tank crews all have morale levels of "4". The
+exception is the weak M20 Utility Car with a morale
+level of "3"! Every German, Japanese, British and
+Soviet tank in the game has a morale of "5".
+Arguably, buttoning-up is not such a terrible thing;
+the tank still functions, albeit less effectively, and
+is in no greater danger of being destroyed. Also,
+the American buttoned-up performance is the best
+of any nation. Where a low morale value is crip-
+pling is the case of an open-topped AFV. When
+these cards are flipped over, they become not
+buttoned-up but pinned, and therefore completely
+useless until a Rally 3 card or greater is played.
+Sadly, the two most attractive pieces of U.S.
+5
+5
+16
+16
+115
+42
+9
+19.2 (24xO.8)
+15.2 (19xO.8)
+59.2 (74 xO.8)
+44 (55 xO.8)
+120 (150xO.8)
+45 (9xO.5)
+30.5 (61 xO.5)
+8
+33
+9
+12
+6
+6
+4
+69
+33
+13.6 (17xO.8)
+12 (15xO.8)
+12 (15xO.8)
+38.4 (48 xO.8)
+34.4 (43 xO.8)
+40 (50xO.8)
+170.5 (341 xO.5)
+MP:
+Marlar:
+MP:
+Mortar:
+Rifle:
+ATR:
+Rifle:
+Rifle:
+Rifle:
+MMG:
+MP:
+Rine:
+Rifle:
+Rifle:
+FT:
+MP:
+MP:
+SAR:
+SAR:
+SAR:
+MMG:
+SAR:
+SAR:
+SAR:
+MP:
+Bazooka:
+Carbine:
+Americans:
+THE RUSSIANS
+Group A:
+#24 Crain
+#6
+Smith
+Group B:
+#4
+McElroy
+#11 Greenwood
+#15 Nixon
+#20 Cpl Hull
+#8
+Burke
+Deck 2:
+#9
+Myers
+#25 Coggins
+#14 Towle
+#18 Sgt Allen
+Radio-7
+Deck 3:
+#26 Degi
+#28 Shelley
+Total: 500.6 (at start 208)
+Group A:
+#25 Kornilev
+#27 Symsilov
+Group B:
+#5
+Storchillo
+#18 Mihailoft
+#14 Zayakov
+#9
+Nosenka
+#10 Kvasnokov
+#16 Semenov
+#19 Camm Dottski
+Deck 2:
+#12 Vakuta
+1/3
+Petrovsky
+#8
+Chernenko
+#17 Kirilenko
+#26 Sgt Zorin
+demo charge
+Deck 3:
+#41 T-28C
+Total: 500.9 (at start 180)
+A more conventional approach is to bring the tank
+on in the middle ofthe game, as shown below. This
+particular hand is risky because the maneuver
+element does not arrive until the second deck, a
+luxury the Soviets cannot really afford. But it does
+generate an interesting game with a variety of
+options. Note the late arrival of the squad leader,
+and the comparative weakness of the mortar crew,
+who should seek a gully as soon as possible (those
+players of a nervous disposition may prefer to
+transfer an additional man from the firebase to the
+mortar crew).
+Russians:
+But to my way of thinking, it is the Soviets who
+are the most entertaining side to play in this scenario.
+The limitation of the four-card hand can be quite
+terrifying, particularly when consecutive attacks
+leave a pinned group in poor terrain without a Con-
+cealed card. But the Russians enjoy quite substan-
+tial compensations; personality cards are cheap,
+Concealed cards are plentiful, the mortar is outstand-
+ingly good value for cost, and the MMG and off-
+board artillery and flamethrower are also impres-
+sive. The great weakness, of course, is lack of a
+good anti-tank weapon.
+On a simple points-per-factor calculation, the best
+Soviet tank is the SU-85, delivering five unboxed
+Effect factors for 372 points (a cost/effect ratio of
+74.4). It is also an extremely effective anti-tank
+weapon, but lacks a machinegun. Personally how-
+ever, I prefer the T-28C. This funny-looking tank
+has an appalling cross-country performance and
+weak armor, but it does have a machinegun and can
+therefore overrun. With a cost/effect ratio of 85.25,
+it is a perfectly respectable purchase.
+If you want the tank up front, the hand below is
+interesting and worth trying, though success with
+it is far from guaranteed. An ASL accompanies the
+flamethrower in order to lay down smoke to cover
+its advance. Opportunities for Aggressive Action
+victory points are slight, so this squad must COfi-
+centrate on breaking the opponent to win.
+Russians:
+Group A:
+#41 T-28C
+341
+Group B:
+#23 Podgorny
+MP:
+17
+#22 Igorski
+MP:
+12
+#7
+Kristov
+Rifle:
+9
+#5
+Storchillo
+Rifie:
+9
+#19 Comm Dottski
+MP:
+33
+Group C:
+#17
+Kirilenko
+FT:
+48
+#21 Sgt Aliev
+MP:
+32
+Total: 501 (al start 501)
+armor-the M8 HMC at 296 points and the MlO
+Wolverine at 327 points-are both open-topped and
+therefore of little real value. To get a tank that can
+deliver at least four unboxed Effect factors without
+any danger of a pin, players will have to spend 418
+points on an M4 (75) Sherman or 422 points on an
+M24 Chaffee, with weaker armor but superlative
+cross-country performance. But, with cost/effect
+ratings of 104.5 and 105.5 respectively, these
+vehicles are the worst value of any nation even
+though their buttoned-up performance is truly out-
+standing.
+The inescapable conclusion is that the Americans
+are better off in this scenario sticking to infantry-
+only squads. Once this unpalatable truth is recog-
+nized, players can concentrate on building a hand
+that takes full advantage of their strengths. And there
+are many such strengths for the Americans. As has
+already been pointed out, the American mortar is
+very good value for cost and, although the purchase
+of a radio seems at first sight not particularly excit-
+ing, the American six-card hand (generous enough
+to permit the player to hold a Radio card until a
+target of opportunity presents itself) makes off-board
+artillery that much more effective. The good MMG
+also makes up for the unspectacular BAR.
+One minor irritant, however, is that there is only
+one American soldier (Pvt Coggins) with high
+morale and armed with a machine pistol. Once it
+has captured a forward building, the maneuver
+element of any squad will have to fight for its life
+to hold that building and will no doubt face repeated
+close-range assaults; therefore the group should con-
+sist of high-morale men equipped with machine
+pistols. That such men are not available to the
+American player is one more indication just how
+demanding playing the American side in this
+scenario is.
+The American hand described below is a peculiar
+one. The two men in Group A serve no purpose but
+to insure the American position during the first deck
+does not become Unbalanced (Rule 15.6). The ten
+points used to purchase these wimps must be regarded
+as a loss-leader. The men must be kept out of the
+battle whatever happens, even using Retrograde
+Movement (Rule 5.31) if necessary.
+Only the firebase (Group B), built around the
+MMG, is positioned initially. The American six-
+card hand means that the risk of bringing the
+maneuver element into the game as a reinforcement
+is just about reasonable; the extra points so generated
+are solely needed. But, of course, it means the five
+men of the firebase are going to be under a lot of
+pressure throughout the first deck. It takes guts to
+start a game with only seven men, two of whom
+are cowards, and with no anti-tank defenses-but
+the high cost of American personality cards leaves
+little alternative. Actually, the firebase is a little
+more sturdy than first impressions suggest, for four
+of the five personalities enjoy Panic levels two
+higher than their morale ratings, so that although
+the group may be pinned frequently, the enemy will
+have considerable difficulty killing them (two Panic
+"6", two Panic "5" and one Panic "3").
+As always, the maneuver element (whose mission
+is to capture and hold forward buildings and so
+generate victory points) is small but elite: four men
+with morale not less than "4". In this group is the
+anti-tank weapon (the better of the two bazookas)
+and the main offensive weapon: an Effect "7" radio.
+Bringing up the rear is a two-man mortar group.
+Note that the SL enters as a reinforcement; until then
+Cpl. Hull must act as SL. The strategy in the second
+half of the game is simple. Save a Radio card until
+a Fire card is drawn. Hit the most vulnerable enemy
+group with a "7" artillery barrage, and then try to
+panic the pinned men in that group with a second
+attack from either the MMG or the mortar (depend-
+ing on the value of the Fire card).
+35
+10
+27
+10
+10
+10
+10
+17
+7
+7
+7
+20
+45
+50
+13.6 (17xO.8)
+10.4 (13xO.8)
+10.4 (13xO.8)
+13.6 (17xO.8)
+5.6 (7xO.8)
+29.6 (37 xO.8)
+17.6 (22xO.8)
+134.5 (269xO.5)
+Rifle:
+Rifle:
+Rifle:
+Rifle:
+Rifle:
+Rifie:
+Mortar:
+Rifle:
+Rifle:
+Rifle:
+Rifle:
+ATR:
+Rifle:
+Rifle:
+Rifle:
+Rifle:
+Rifie:
+sniper
+Group A:
+#10 Korata
+#24 Yoruba
+Group B:
+#15 lsishi
+#8
+Sakai
+#13 Fusano
+#11
+Yumani
+#280i
+#9
+Fuchida
+#12 Fujita
+#26 Sakata
+Group c:
+#20 Shoburo
+#1
+Sgt Okimoto
+demo charge
+Deck 2:
+#18 Ikado
+#7
+Asanti
+#6
+Fujiyama
+#4
+Kobayashi
+anti-tank mine
+#2
+Cpl Togo
+Radio-5
+Deck 3:
+#35 Type I SP
+Total: 500.3 (at start 265)
+Note that DESERT WAR clarifies and expands
+Rule 21.11. British and French squads have the
+American limitations; Japanese and Italians, the
+German. Radios are not anti-tank weapons, and
+therefore are not counted for the purposes of Rule
+21.11.
+Incidentally, contrary to the implications of Rule
+46, the majority ofthe troops fighting the Japanese
+were from the U.S. Army-not the U.S. Marine
+Corps. I cannot think of a single city captured
+exclusively by Marines, and therefore such a troop
+type is not available in this scenario.
+
+--- PAGE 8 ---
+11
+THE ITALIANS
+The Italians are a phenomenally difficult nation
+to play, and therefore offer a tremendous challenge
+to the UP FRONT enthusiast. They labor under the
+most appalling constraints: uniformly low morale,
+and panic levels at best identical to morale and at
+worst one level lower! In comparison, American
+troops typically enjoy panic levels two greater than
+morale.
+What this means in practice is that once an Italian
+is pinned, he is almost certain to run away the next
+time anyone shoots at him. Worse, an Italian squad
+breaks once more than 40% casualties are taken.
+120
+12
+32
+10
+33
+39
+142
+3
+446 (223 xO.2)
+50
+223
+12
+10
+IO
+9
+9
+9
+52
+32
+39
+33
+1.4 (7xO.2)
+1.4 (7 xO.2)
+1.2 (6 xO.2)
+1.4 (7 xO.2)
+7 (35 xO.2)
+Rifle:
+Rifle:
+Rifle:
+LMG:
+MP:
+IG:
+Rifle:
+Rifle:
+Rifle:
+Rifle:
+Rifle:
+Mortar:
+Rifle:
+Rifle:
+Rifle:
+Rifle:
+Rifle:
+Rifle:
+MMG:
+Rifle:
+MP:
+All players tackling the Italian challenge ought
+to seriously consider selecting the Bersaglieri option
+(Rule 50.5). The Italian fondness for surrender is
+crippling and well worth the 15% surcharge to
+avoid, even though the radio (Rule 50.5) then
+becomes twice as expensive (though still a very good
+value compared with those of other nations). The
+Bersaglieri's use of German split-action cards
+miraculously converts the Italians from dithering
+wimps to Wehrmacht clones at around 75 % of the
+cost. (I consider a Morale 4/Panic 3 Italian such as
+#4 costing 11.5 points to be the equivalent of a
+Morale3/Panic 4 German such as #4 costing 15
+points.) Of course, the Bersaglieri are still severely
+limited by the Italian four-card hand and discard
+constraint, which is why they enjoy this significant
+discount in cost. For Elite troops like the Bersaglieri,
+501 becomes 435.6 City-Fight-in-Four.
+Bersaglieri:
+Group A:
+#32 U/U FT
+Group B:
+#8
+Paolini
+112
+Cpl An[Qnio
+#18 Gig.nti
+#3
+Capitano
+#21 Sgt Capone
+Group C:
+#30 47mm ATG M35
+#19 Romano
+Deck 4:
+#34 Semovente M41
+Total: 435.6 (at start 391)
+This is a most interesting squad. The anti-tank
+gun is the firebase, with Group B the maneuver
+3two snipers
+Group A:
+#34 Semovente M41
+Group B:
+#8
+Paolini
+#18 Gigan"
+#4
+Sarducci
+#12 Pasini
+#6
+Abruzzi
+1128 Ritondo
+#27 Salvadori
+#2
+Cpl Antonio
+#21 Sgt Capone
+Radio-7
+Deck 4:
+#7
+Marino
+#11 Giorgio
+#16 NaJale
+#13 Farinacci
+#25 Giovino
+Total: 500.4 (at start 488)
+the main squad. The 40% break limit means the
+optimum size of any squad is eight, 10, 13, 15, 18
+or 20 men; these are the points at which the limit
+jumps by one man.
+For those who prefer everything at the start, the
+next
+squad
+configuration
+brings
+the powerful
+Semovente on at the very beginning. The rest of the
+squad consists of the highest-morale men able to
+work together in a single group (thus, #3 with his
+LMG cannot be picked because of Rule 46.4). The
+danger of surrender is most acute in small groups
+and so the infantrymen huddle together in a single
+nine-man pack while the Semovente shells the
+enemy into submission. That, at least, is the theory.
+Needless-to-say, it is not always successful; the
+Italians are particularly vulnerable to outflanking,
+and the Semovente has a truely appalling tendency
+to malfunction (9.9%).
+Note that it is important to resist the temptation
+to place a tenth man, such as #13, in Group B as
+this would degrade the squad. The squad as con-
+structed below purposely consists of optimum num-
+bers of personality cards required to resist breaking;
+ten, raising to fifteen upon reinforcement. The Deck
+4 reinforcements are?spare points. Because these
+men have such poor morale, they should only be
+brought on if the initial squad is on the verge of
+breaking. With a mortar in the group, they may be
+able to contribute something at long range without
+risking themselves unduly. Remember that, unlike
+all the other nationalities, the Italians really do have
+to be careful about degrading the squad with weak
+personalities; never forget that there is no legal
+requirement that you bring on your reinforcements
+if you do not wish to.
+Italians:
+9
+iO
+9
+9
+7
+7
+6
+52
+31
+142
+iO
+32
+33
+39
+12
+33
+60 (120x0.5)
+ATR:
+Rifle:
+Rifle:
+Rifle:
+Rifle:
+Rifle:
+Rifle:
+MMG:
+MP:
+IG:
+Rifle:
+Rifle:
+LMG:
+MP:
+Rifle:
+Group A:
+#28 Rilondo
+#4
+Sarducci
+#6
+Abruzzi
+#12 Pasini
+#7
+Marino
+#11 Giorgio
+#16 Natale
+#27 SaJvadori
+#22 Cpl Farrio
+Group B:
+#30 47mm ATG M35
+Group C:
+#18 Giganti
+#2
+Cpt Antonio
+#3
+Capitano
+#21 Sgt Capone
+#8
+Paolini
+Radio-7
+Deck 3:
+#32 U/U FT
+Total: 501 (at start 441)
+Note that there are precisely 15 personalities in
+Italians:
+Together, these two rules can swing a game against
+the Italian player in a matter of seconds. Therefore,
+rapid rallying is absolutely critical for success. But
+with a four-card hand (two discards if no action
+taken), there is no room to hoard Rally cards. Truly,
+it is a dire situation.
+In compensation, Italian personalities are the
+cheapest in the game. But they are not that cheap,
+only a few points less than the stalwart Soviets.
+Also, although this means the Italian player can pur-
+chase an impressive firebase for very little outlay,
+I am not convinced that Morale" 1" and "2" rifle-
+men are ever likely to contribute anything other than
+to the breaking of their squad by precipitous flight.
+Their weapons have the same performance as Soviet
+and Japanese rifles; that is to say, they contribute
+nothing at all at Relative Range 1. Therefore, what
+tends to happen is that the Allied player remains
+at Relative Range 1 taking pot-shots at the Italian
+firebase, advancing closer only when a sizeable
+proportion is pinned or routed.
+Worse, the critical weapons of any UP FRONT
+scenario-the LMGs and MMGs malfunction on a
+red "5" as well as "6" (a 5.0% instead of 1.9%
+chance). And because Rout values are very low, and
+the LMGs are not crew-served, you will find that
+these most important weapons have a tendency to
+leave the game along with their fleeing operators.
+This is why the flamethrower and LMGs are not
+good choices, while the crew-served MMG is.
+Taking this liability to its ultimate extreme, the
+Italians also have the worst man in the whole game
+system. Pvt. Moselli costs just two points, but with
+a Morale of "1" and Panic of "0", rout is auto-
+matic. Readers will no doubt agree with me that,
+at this price, Moselli is still far too expensive!
+A major problem the Italians face is lack of a
+bazooka. Now, infantry guns generally are very
+poor value for the money; they are extremely
+difficult to move, cannot be concealed once used,
+and are no more accurate than comparable weapons
+mounted in AFYs. But in the case of the Italians,
+they are the only non-AFY anti-tank guns available
+(the Italians do not even have AT mines). I would
+therefore recommend the 47mm ATG. It also has
+the advantage of being Morale 5, making it tougher
+than most Italian personalities (though the lack of
+concealment means that,
+in practice, it is as
+vulnerable as a Morale 2 or 3 man).
+The squad below places the maneuver element in
+Group C, ready to be supported by the reinforce-
+ment arriving in Group E. Group A holds the fire-
+base and Group B the anti-tank weapon. Players
+willing to risk the non-arrival of a hostile AFY may
+prefer to switch around Groups A and B. Note that
+the last sentence of Rule 46.4 prevents the two
+Italian LMGs appearing in the same group. I fur-
+ther rule that this restriction extends to the MMG;
+to do otherwise would be illogical. Also note that,
+like the Americans, the Italians have very few MPs
+in capable hands. This makes it necessary to bring
+forward a LMG if the maneuver element is to have
+any chance in a close-range exchange of fire.
+35
+4
+33
+43
+66
+14
+10
+iO
+9
+9
+6
+12
+12
+69
+15
+15
+14
+17
+7
+12
+48
+17
+50
+MP:
+FT:
+Rifle:
+Rifle:
+Mortar:
+MP:
+Rifle:
+Rifle:
+Rifle:
+Rifle:
+Rifle:
+Rifle:
+ATR:
+Rifle:
+MMG:
+Rifle:
+Rifle:
+MP:
+MP:
+sniper
+Group A:
+#10 Kvasnikov
+#27 SymsiloY
+#26 Sgt Zorin
+Radio-7
+Group B:
+#13 Zaharoff
+#15 Uihailoft
+#6
+Soloviev
+#7
+Krislov
+#5
+Storchillo
+#14 Zayakov
+#18 Mihailoft
+#4
+Yastreboft
+#16 Semenoy
+Group C:
+#8
+Chernenko
+#3
+Petrovsky
+#20 Knezevich
+#23 Podgorny
+ATMM
+#22 Igorski
+#17 Kirilenko
+#12 Yakuta
+demo charge
+Total: 527 (at start 527)
+One of the most interesting recent games found
+these partisans fighting the Japanese; we postulated
+the encounter to be occurring in China and to be
+involving CCP partisans.
+When is 501 not SOl? When it's 527.3! The most
+interesting (and successful) 501 City-Fight-in-Four
+hand I have left until now to describe: partisans.
+Their increased propensity to panic and the other
+disadvantages outlined in Rule 37.1 are more than
+compensated for by the DYO 5 % discount (Rule
+43.5). This increases the maximum permitted face
+value of the squad from 501 points to 527.3 points.
+The special advantages partisans enjoy make them
+a delight to play. The extra factor of concealment
+(Rule 37.2) neatly cancels out the lowered Panic
+levels, while their ambush facility (Rule 37.5) is of
+tremendous importance. In a City Fight scenario
+there is only one useable woods card, so the partisan
+player will have to make do with entrenched brush.
+But even though men in such terrain are very vul-
+nerable, the opportunity to boost an attack by three
+whole Fire strengths simply by playing a Concealed
+- 3 card is a potential game-winner, effectively can-
+celling out the -3 TEM of buildings. Add to these
+considerations the fact that partisans are permitted
+to use weapons as heavy as MMGs, flamethrowers
+and radios and marvelous opportunities become ap-
+parent.
+Because partisans are permitted only one leader,
+it is wise not to risk the .squad leader in the front
+line. Sgt. Zorin therefore hangs back with the
+mortar. The cowardly Pvt. Kvasnikov is placed with
+the mortar group merely to give Sgt. Zorin some
+protection from snipers. An alternative is to use the
+Commissar as the SL and place him and the radio
+at the end of Group B; Knezevich and the ATMM
+can then be exchanged for a LMG, while Kvasnokov
+and Kristov changes places. The major weakness,
+of course, is the lack of any anti-tank weapon; the
+best protection is not to tell your opponent that he
+is facing partisans until after he has set up! (Both
+players must reveal the nations they are playing
+before personality cards are selected, but troop types
+and partisans do not have to be declared until after
+that side has set up.)
+Partisans:
+
+--- PAGE 9 ---
+12
+CONCLUSIONS
+the safety of a hull-down position (Rule 51.6).
+Are you a gambler? Are you willing to bet that
+your opponent will not bring on an AFV in his open-
+ing set-up? If so, the following intriguing configu-
+ration will delight you.
+French:
+I do not pretend that any of the preceding squad
+compositions are perfect. I have won with some
+more frequently than with others, but that may have
+as much to do with the style of play of my regular
+opponents as with any intrinsic worth. The purpose
+in describing in some detail these squads used in
+recent games is to stimulate readers to adapt them
+to reflect their own preferences. Should the flame-
+thrower advance on its own, or should it be part
+of the maneuver group? How late dare you bring
+on your tank? Is an infantry gun of any real value
+at all? Different answers will come from different
+players.
+But the real enjoyment comes from the universal
+nature of this DYO scenario. You can develop a
+"stable" of squads of different nationalities and
+carry them around, recorded on paper, in the game
+box. Pitting your favorite squad against that of a
+new acquaintance can highlight interesting strengths
+and weaknesses as the underlying assumptions upon
+which the squads were constructed are revealed. 501
+City-Fight-in-Four has already become the single
+most popular UP FRONT scenario in England; I
+hope it enjoys similar success in the States.
+Players have asked me why I chose a DYO value
+of 50I points for this scenario. When I was first
+toying with the idea, I developed an outstanding
+British squad totalling 501 points. But my target was
+the simple round number of 500, imagining it easier
+to remember. I spent several hours, becoming more
+and more bad-tempered, adjusting morale values
+here and there, exchanging rifles for Stens, swap-
+ping ASLs-in short doing everything imaginable
+to get this fine squad down to exactly 500 points.
+I failed. Then I said to myself, "What am I doing?
+This is my scenario; if I want it to be 501 points,
+then 501 points it will be!" So was born 501 City-
+Fight-in-Four. The final irony is that the piece of
+paper on which that perfect British squad was
+recorded has since been lost. . . and has never been
+seen again! And I can't remember all the details of
+the organization. If you find it, let me know.
+DESERT WAR
+Desert War is the latest expansion set for the
+popular UP FRONT system which provides a
+new environment and two new nationalities-
+the Italians and the French-for the game's fans.
+This unboxed module contains a rulebook,
+character cards, and counters. The inclusion of
+Range markers above "5" is bound to draw
+some praise simply because players can now
+avoid the need to combine multiple markers to
+keep track of groups moving at great distances.
+The only new rules sections cover the two new
+nationalities and the terrain alterations for
+simulating desert conditions. And the rulebook
+also carries charts for all seven nationalities
+detailing the Personality cards to be used in each
+scenario published in UP FRONT and BANZAI,
+something many aficionados have asked for in
+the past. With Desert War, UP FRONT has
+become, if not the greatest tactical wargame, cer-
+tainly the most complete. It is available for
+$10.00 direct from The Avalon Hill Game
+Company (4517 Harford Road, Baltimore, MD
+21214). Usual shipping/handling charges apply;
+Maryland residents please add 5 % state sales tax.
+50
+4
+4
+33
+61
+22
+19
+19
+13
+34
+43
+42
+9
+147.5 (295xO.5)
+Rifle:
+Rifle:
+Rifle:
+Mortar:
+Rifle:
+Rifle:
+Rifle:
+Rifle:
+FT:
+Rifle:
+Mortar:
+Rifle:
+IG:
+two snipers
+Group A:
+#19 Tardieu
+#5
+Corbeil
+Group B:
+#22 Cpl Goreux
+#26 Lasalle
+Group C:
+#20 Bernet
+#17 Rochard
+#7
+Laforte
+#8
+Decautaux
+#14 Montcalm
+#21 Sgt Petrou
+Group D:
+#25 Sarte
+#23 Barral
+Deck 3:
+#30 75mm Mle 19
+TOlal: 500.5 (at start 353)
+Tardieu and Corbeil form the mandatory drill
+team, while Group C is the maneuver element. It
+is, of course, the provision of the two mortars (in
+Groups B an D), instead of a conventional firebase
+established around a MMG, which makes this a truly
+remarkable squad. The 60mm mortar can be deadly;
+against an Acquired Target at Relative Range 3, it
+can conceivably mount a Fire 7 attack! Even the
+more likely Fire 4 attack, repeated often enough,
+will wear down the opposition by attrition. But it
+is the provision of the second mortar which will
+really make your opponent squirm; the first will
+draw out his best Concealed card, leaving his newly-
+pinned men vulnerable to panic as the second mortar
+opens up. And for the French player, the real delight
+is that his mortars live on a diet of Fire cards that
+is omnivorous-a Fire card of any strength will do,
+so the provision of two mortars coincidentally also
+alleviates the French discard problem.
+In general, I would strongly advise players never
+to attempt to introduce an infantry gun as a rein-
+forcement; Groups E and Z tend to be rather far
+from the action, and moving an IG gun is a terrify-
+ing ordeal. The only exception to this advice is for
+the French player. The 75mm IG is a potential
+game-winner, but it is also extremely expensive
+(almost as much as an AFV). Bringing it on in Deck
+3 halves the cost. Also, the generous six-card French
+hand means that the precious Flank Movement card
+can be saved through one or more decks so as to
+permit the IG to enter as per Rule 35.3. Hopefully,
+a terrain and a Concealed card will also be availa-
+ble at that time, permitting entry under a combina-
+tion of Rules 35.3 and 35.4.
+.
+If the tank had yet to be invented, this would be
+a superlative squad. Unfortunately, the squad's com-
+plete lack of anti-tank protection through the whole
+of the first half of the game makes its selection a
+nerve-wracking gamble. Against the Italians it is
+a gamble worth taking; the Semovente can be relied
+upon to jam sooner or later. Against the Germans,
+it is probably too risky; the StuG IIIB is a popular
+choice and regularly begins play at the start. In that
+event, it is tempting to run up the white flag
+immediately. The French player's only hope is to
+force the assault gun to button up under mortar fire
+and/or kill the commander with a sniper.
+Finally, under no circumstance should a French
+player ever purchase #24 (Lebesque). Personalities
+#5 and #19 cost the same four points, yet have better
+panic levels. Caveat emptor!
+Group A:
+#19 Tardieu
+Rifle:
+4
+#5
+Corbeil
+Rifle:
+4
+Group B:
+#30 75mm Mle 19
+IG:
+295
+Group C:
+#20 Bernet
+Rifle:
+22
+#7
+Laforte
+Rifle:
+19
+#17 Rochard
+Rifle:
+19
+#4
+Cassavanl
+Rifle:
+15
+#2
+Cpl Dubois
+Rifle:
+35
+#14 Montcalm
+FT:
+34
+#21 Sgl Petrou
+Rifle:
+43
+#6
+Piccard
+Rifle:
+II
+Total: 501 (at start 501)
+If you are desperate to play with French armor,
+then the Char B I-bis is the best of a bad lot. It still
+offers poor value for the cost though; the crucial
+74mm gun fires with To Hit numbers one worse
+than those printed on the card and cannot fire from
+THE FRENCH
+element. Although as usual the maneuver element
+lacks firepower even at close range, at least each
+member has a morale of not less than "4". Three
+of the men have an equivalent panic level. Released
+from the danger of mass surrender, this group is
+one of the few Italian maneuver elements that stands
+a chance of earning Aggressive Action victory
+points. The flamethrowing AFV is placed in Group
+A in the hopes of luring the bazooka or PIAT away
+from the reinforcing Semovente. The Semovente's
+tendency to malfunction is so great that it is not
+scheduled to appear until the final deck. At a cost
+of only 44.6 points, it can be classed as expenda-
+ble; hopefully, it will land a few telling shots before
+being silenced by a jam, but in this squad it is not
+an essential component of the victory. Romano's
+sole purpose is to deflect the aim of the enemy
+sniper. His presence does not degrade the Italian
+squad; both seven- and eight-man squads do not
+break until reduced to four personality cards.
+Some players believe that the French are even
+harder to play than the Italians. They have the worst
+discard capability of any nation (one card, and only
+in those turns in which no action is taken), no
+bazooka, no anti-tank mines, no machine pistols,
+and not even an anti-tank rifle! They are thus poorly
+equipped to enter a City Fight, and extremelyvul-
+nerable to a logjam of unuseable cards.
+But, unlike the Italians, they do have a six-card
+hand, personalities with reasonable morale, a cheap
+flamethrower, an outstanding 60mm mortar, and (in
+compensation for appalling armor) the best infan-
+try gun in the game. If you take care to prepare a
+squad able to circumvent the discard constraint, I
+believe the French will beat the Italians more often
+than not. The secret is always to include in your
+squad one piece of ordnance and one" drill group" .
+The use of ordnance is obvious (burning unuseable
+Fire cards), but a drill group? This two-man low-
+morale group has one job, and one job only-to
+march back and forth at the baseline expending
+unwanted terrain and Movement cards (ever in the
+sideways mode). A squad with these two elements
+is freed to employ the limited French discard capa-
+bility exclusively to remove Cower cards. And, of
+course, it goes without saying that you must never
+(never, never) deploy Reservists (Rule 51.4); to do
+so is nothing short of suicide.
+A fairly conventional French squad is shown
+below, incorporating both elements: the ordnance
+is the outstanding 75mm Mle 19, and the drill group
+is in A costing a mere eight points. Eight men com-
+prise the maneuver element (Group C); without
+machine pistols,
+the French cannot expect to
+advance to Relative Range 5 and must therefore try
+to score Aggressive Action VP by getting a large
+number of men a little way forward rather than
+ramming a small group down the very throat of the
+enemy. The flamethrower is for defense. Note that
+wherever possible, a French squad should always
+consist of an uneven number of personality cards
+(because of Rule 51.7).
+French:
+
+--- PAGE 10 ---
+13
+THE LONG CAMPAIGN
+Polishing Up the UP FRONT Campaign Game
+By Michael Hall and Gradie Frederick
+What many people fail to realize about this game
+is that it is possible to play it a thousand times, and
+still fail to have really played THE GAME . .. So
+wrote S. Craig Taylor Jr. in an article on WS&IM
+(The GENERAL, Vol. 13, No.2), and this could
+be said about UP FRONT as well. Though, in the
+case of UP FRONT, "THE GAME" is achieved
+with the Campaign rules (whereas Mr. Taylor was
+referring to the multi-player option). UP FRONT
+is a squad leader card system, and normally each
+battle is a complete game; but the Campaign Game
+spans several such scenarios and adds the concept
+of force management to the decision-making. The
+Campaign UP FRONT Game has its own set of
+tactics and strategies, and it is an experience quite
+different from an isolated session.
+In the UP FRONT Campaign Game, you assume
+the role of platoon commander, intimately familiar
+with the fighting characteristics of your men. You
+must hand-pick men for particular missions. You
+must conserve and develop them, so that they can
+fight effectively in the battles to come. At the same
+time, you must achieve the objectives ofthe current
+mission. The UP FRONT Campaign Game nicely
+simulates the inner tensions and pressures ex-
+perienced by a commander attempting to manage
+his forces.
+This whole new dimension of force management
+is added to UP FRONT through the use of campaign
+rosters, which enable you to keep track of the
+progression of your men over a series of individual
+battles. Your men earn "elan points" for perform-
+ing various actions, and you can cash these points
+in for an increase in Panic and Morale values. Given
+a certain amount of experience, your men can also
+receive promotions. However, should a man rout,
+he loses all elan points and must decrease his Panic
+or Morale by one. If men improve through battle
+experience, they soon become a bargain for DYO
+games; and if they deteriorate under the pressures
+of war, they can become DYO "rip-offs". For non-
+DYO games, similarly, the player will gain an
+advantage or disadvantage, depending upon the
+quality of the men required in the scenario OB. A
+higher level game is thus created where one attempts
+to manage the men on the roster such that they will
+not only survive but improve. The better your roster,
+the better your chance of winning future scenarios
+(and the whole campaign, of course).
+Given that the Campaign Game can add so much
+to UP FRONT, it is unfortunate that the BANZAI
+and DESERT WAR expansions did not include
+rosters for the added nationalities of Japan, Great
+Britain, France and Italy. Included with this article
+are the campaign rosters for these. What follows
+are some tips on strategy, rule clarifications and
+ideas for crafting campaigns.
+Strategy
+There are three types of decisions you will be
+faced with that will affect the development of your
+roster: before a scenario you must decide which men
+to use; during a scenario you must decide what your
+men will do (to the extent you can, given the "fog
+of war" that makes this game so appealing); and
+after a scenario you must decide how to alter the
+survivors' morale and panic values with the points
+each has gained.
+Before a Scenario:
+For non-DYO scenarios, you have little choice
+as to which men to choose. However, when a man
+called for by a non-DYO scenario is not available
+(i.e., wounded or KIA), then you may substitute
+an available equivalently-armed man. It goes without
+saying that you should substitute the best available.
+In doing so, you may substitute, for example, an
+available Morale 5/Panic 6 rifleman for an unavail-
+able Morale IIPanic 2 rifleman. This is not the case
+in DYO scenarios; for these, the key is to craft a
+solid OB, and there are several guidelines for this
+effort.
+Shop for bargains. Towards this end, a good rule-
+of-thumb is to buy your personalities in the follow-
+ing order of preference.
+1. Men who have increased Morale or Panic
+values (as a result of acquiring elan points in
+previous scenarios).
+2. Men who have some elan points, but initial
+Morale and Panic levels.
+3. Men who have a KIA "8", and initial Morale
+and Panic values but no elan points.
+4. Men who have a KIA "7" as a result ofbeing
+recently' 'resurrected", initial Morale and Panic
+but no elan points.
+5. Men with a decreased Morale/Panic value.
+6. Men who have been killed and hence can only
+be replaced with the loss of Victory Points.
+There are, of course, exceptions to the above
+order of preference. Of paramount importance is
+to Design a sound Order ofBattle for the scenario
+at hand. For some tips on developing a sound OB,
+see Steve Harvester's article "Up on the African
+Front" (Vol. 25, No.6), Jim Burnett's "Up Front
+by the Numbers" (Vol. 21, No.1) and Don Green-
+wood's piece "Playing Your Cards Up Front" (also
+Vol. 21, No. I). To develop the best OB possible,
+you may have to bend our rule-of-thumb a bit. For
+example, if you feel it is important to have your
+medium MG in the next scenario but he was killed
+in a previous one, then by all means bring in a
+replacement, even if it means passing up some DYO
+bargain riflemen. It makes even more sense to revive
+a man or use a slightly deteriorated man if you fore-
+see needing him in other scenarios later in the
+campaign.
+Buy low. Cheap-valued men can double their
+worth with just one increase in Morale or Panic
+level. Conversely, they can halve their worth with
+just one decrease. Percentage-wise, expensive men
+generally increase (and decrease) their DYO worth
+slowly. It's worthwhile to cultivate your low-value
+men. Placing two poor quality men in their own
+group is a good strategy, since they will usually be
+ignored and thus may live to become decent quality
+soldiers at bargain prices. (Or else, they will dis-
+tract some of your opponent's firepower from your
+more valuable groups.) Should you ever have a sit-
+uation where your roster is so battle-worn that you
+would have to purchase several DYO rip-offs of,
+say, Morale IIPanic IICost 8, you can always buy
+the Elite status for your troops-and thus bring in
+higher morale replacements instead.
+Replace only valuable men. Minimize loss of
+Victory Points for replacements. When you must
+bring in replacements, do not waste your VP on a
+bunch of cheap men; get a few good replacements
+instead.
+Buy lots ofmen, especially early in the campaign.
+The strategy of buying cheap fits nicely with the
+general goal of buying many. The more men you
+have at the end of a scenario, the more elan points
+your roster as a whole will accumulate. One (slightly
+slimy) trick you can pull is to bring in some of your
+force as replacements; even though you pay a
+fraction of their cost and they only participate in
+a fraction of the scenario, they will still get elan
+points for being unbroken at the end (unless the
+game ends before they appear). In a campaign game,
+you should always think twice before buying
+artillery and other off-roster extras, because, in-
+directly, such support may cost you elan; in the long
+run, this will cost you many DYO points. Suppose
+French Private Tardieu (Morale IIPanic 2/Cost 4)
+gets enough elan points to boost his morale so that
+he now becomes the equivalent to Private Bourassa
+(Cost 8). Now, every scenario in which the im-
+proved Tardieu participates, it's as if four points
+were added to the DYO total. Over the course of
+many scenarios with many men, this can add up to
+hundreds of points. So generally you should maximize
+elan by purchasing as many men as you can without
+risking high casualties.
+Towards the end of a campaign, however, you
+may do better to go off-roster for a large portion
+of your purchases. By that point, your roster will
+be so full of holes that you may have a hard time
+assembling a decent force without wasting DYO
+points on deteriorated men or losing VP through
+resurrections. Any elan earned in the final scenario
+will do nothing to help you. Therefore, you may
+wish to bring in at last the artillery, tanks, snipers
+and what-not to assist your beleaguered troops.
+During a Scenario:
+Even more nerve-wracking than deciding on
+which men to use for a scenario is deciding how
+to use them during a scenario. Since good men can
+be substituted for unavailable poor ones in non-DYO
+scenario, this can affect your play.
+Try to keep poor men unavailable and good men
+available during non-DYO campaigns. This implies
+that for non-DYO campaigns you should treat your
+low-morale men as cannon-fodder while you should
+take few chances with your high-morale men. Ifthis
+consequence of the rule does not appeal to you, then
+you should stick to a DYO campaign format.
+However, for both DYO and non-DYO scenarios,
+the most obvious way in which the campaign could
+affect your play during a scenario is the added in-
+centive (elan points) to perform various activities,
+as shown in the following table taken from the UP
+FRONT rules:
+Elan
+Event
+Points
+Required
+I
+Win Scenario.
+2
+Wounded or Unpinned at end of scenario
+(each occurrence).
+3
+Use Hero Card.
+4
+Kill an Enemy in CC (fully-manned 10 counts
+as three enemy) or destroy an AFV with
+Baz/Psk/PF.
+5
+Destroy an AFV with DC or ATMM; kill or
+break three or more men with DC.
+10
+Destroy an AFV in CC without secondary
+armament.
+X
+Infiltrate an enemy group and fire double FP
+into that group resulting in removal or pinning
+of at least one enemy due to that fire. (Elan
+points earned equal the number of unpinned
+men in the defending group prior to resolu-
+tion of the attack.)
+Text Cont'd on Page 18
+
+--- PAGE 11 ---
+14
+BRITISH CAMPAIGN GAME ROSTER
+# NAME/WEAPON
+PTS
+RANKl
+KIA2
+REPL3
+MORALE4
+PANICS
+ROUT6
+ELAN?
+SURV8
+PROM09
+1. Vasey/MP
+51
+SGT
+8
+T
+5
+6
+2. Bamard/R
+40
+CPL
+8
+T
+4
+5
+3. Scarborough/LMG
+61
+PFC
+8
+4
+5
+4. Tresham/R
+15
+PVT
+8
+3
+4
+5. Hodge/R
+20
+PVT
+8
+4
+5
+6. Willis/R
+15
+PVT
+8
+3
+4
+7. Cleary/R
+5
+PVT
+8
+1
+2
+8. Cottrell/R
+15
+PVT
+8
+3
+4
+9. Bell/R
+10
+PVT
+8
+2
+3
+1O.Moon/R
+10
+PVT
+8
+2
+3
+11. Davis/PIAT
+85
+PFC
+8
+4
+5
+12. Gilfallin/LMG
+46
+PFC
+8
+3
+4
+13. PalmerfMMG
+114
+PFC
+8
+4
+5
+14. Vane/FT
+72
+PVT
+8
+4
+5
+15. Shaw/MP
+21
+PFC
+8
+4
+5
+16. Ross/MP
+16
+PVT
+8
+3
+4
+17.Shannon/MP
+26
+PVT
+8
+5
+6
+18. Whaley/MP
+11
+PVT
+8
+2
+3
+19. Cole/MP
+5
+PVT
+8
+1
+2
+20. Coleman/PIAT
+64
+PVT
+8
+3
+4
+21. O'Neill/MP
+46
+SGT
+8
+T
+4
+5
+22. Bums/MP
+36
+CPL
+8
+T
+3
+4
+23. WatneyfMTR
+54
+PFC
+8
+3
+4
+24. Whitesell/R
+25
+PVT
+8
+5
+6
+25. McNamara/R
+10
+PVT
+8
+2
+3
+26.01daker/ATR
+15
+PFC
+8
+3
+4
+Personal/
+0
+PVT
+8
+2
+3
+BRITISH TO HIT & FIREPOWER NUMBERS
+RANGE
+WEAPONS / TO HIT & FIREPOWER
+R
+MP
+LMG
+MMG
+Fr
+PlAT: 2 [2]
+MTR:2
+ATR: [ill
+0
+0
+0
+2
+7 [3]
+NA
+NA
+1 [3]
+6
+1
+1
+1
+0
+3
+8 [4]
+NA
+NA
+o [2]
+5
+1
+2
+1
+0
+4
+9 [4]
+NA
+NA
+0-1 [1]
+5
+1
+3
+2
+1
+5
+10 [5]
+NA
+0-1
+0-2 [0]
+4
+1
+4
+2
+3
+6
+11 [5J
+NA
+0-2
+0-3 [O-IJ
+4
+1
+5
+3
+5
+6
+12 [6J
+[IT]
+0-3
+NA/2FP
+3
+1
+VICTORY POINTS:
+NOTES:
+1. Improves if Survival + Promotion =10
+2. Cannot be > 8; if wounded miss 3 games; erase all other columns if checked
+3. Replace KIA check mark with 7; I =1 VP; TI =7 VP. (REPL stands for "Replaced")
+4.
+Cannot be > 7 or PANIC; if improved enter I in Promotion column
+5.
+Cannot be > 7 or < MORALE; if 0 treat as KIA; if improved enter I in Promotion column
+6.
+Reduce MORALE or PANIC by one; enter I in Survival column
+7.
+Five points required for improvement of one in MORALE or PANIC
+8.
+Enter I if in play at game end; five Survivals improves KIA 7 back to 8.
+9.
+Enter I if in play at game end; enterI whenever man improves rating.
+BRITISH ARTILLERY RADIO
+STRENGTH / COST
+# CARDS
+5
+I
+6
+I
+7
+42 I
+84
+I
+126
+6
+
+--- PAGE 12 ---
+JAPANESE CAMPAIGN GAME ROSTER
+15
+# NAME/WEAPON
+PTS
+RANK!
+KIA2
+REPL3
+MORALE4
+PANICS
+ROUT6
+ELAN?
+SURV8
+PROM09
+1. Okimoto/R
+45
+SGT
+8
+T
+6
+6
+2. Togo/R
+37
+CPL
+8
+T
+5
+5
+3. Yoruba/LMG
+47
+PFC
+8
+4
+4
+4. Kobayashi/R
+17
+PVT
+8
+5
+5
+5. Togami/R
+10
+PVT
+8
+3
+3
+6. Fujiyama/R
+13
+PVT
+8
+4
+4
+7. Asanti/R
+13
+PVT
+8
+4
+4
+8. Sakai/R
+10
+PVT
+8
+3
+3
+9. Fuchida/R
+7
+PVT
+8
+2
+2
+10. Korata/R
+10
+PVT
+8
+3
+3
+11. Yumani/R
+10
+PVT
+8
+3
+3
+12. Fujita/R
+7
+PVT
+8
+2
+2
+13. Fusano/R
+10
+PVT
+8
+3
+3
+14. Yorido/R
+13
+PVT
+8
+4
+4
+15. Isishi/R
+10
+PVT
+8
+3
+3
+16. Ashigawa/MMG
+79
+PFC
+8
+4
+4
+17. Yamashira/FT
+55
+PFC
+7
+4
+4
+18. Ikado/R
+17
+PVT
+8
+5
+5
+19. Komoto/MP
+12
+PFC
+8
+3
+3
+20. Shoburo/R
+20
+PVT
+8
+6
+6
+21. Kodu/R
+42
+SGT
+8
+T
+5
+5
+22. Ichiki/GL
+41
+PVT
+8
+3
+3
+23. YumanalGL
+54
+PVT
+8
+4
+4
+24. YorubalGL
+27
+PVT
+8
+2
+2
+25. Kyoto/R
+33
+CPL
+8
+T
+4
+4
+26. Sakata!R
+7
+PVT
+8
+2
+2
+27. TenyrulLMG
+35
+PFC
+8
+3
+3
+28.0i/ATR
+17
+PFC
+8
+3
+3
+Personal/R
+0
+PVT
+8
+3
+3
+JAPANESE TO HIT & FIREPOWER NUMBERS
+RANGE
+WEAPONS / TO HIT & FIREPOWER
+R
+MP
+LMG
+MMG
+Ff
+GL
+ATR: fU1
+0
+0
+0
+2
+6 [3]
+NA
+1 [3]
+2
+1 [2]
+1
+1
+0
+0
+3
+7 [4]
+NA
+o [1]
+2
+o [1]
+1
+2
+1
+0
+4
+8 [4]
+NA
+0-1 [0]
+2
+o [1]
+1
+3
+2
+1
+5
+9 [5]
+NA
+0-2 [0-1]
+1
+0-1 [0]
+1
+4
+2
+3
+6
+10 [5]
+NA
+0-3 [0-2]
+1
+0-1 [0]
+1
+5
+3
+5
+6
+11 [6]
+IT2l
+NA/2FP
+NA
+0-2 [0-1]
+1
+VICTORY POINTS:
+NOTES:
+1. Improves if Survival + Promotion =10
+2.
+Cannot be > 8; if wounded miss 3 games; erase all other columns if checked
+3. Replace KIA check mark with 7; 1= 1 VP; TI =7 VP. (REPL stands for "Replaced")
+4.
+Cannot be > 7 or PANTC; if improved enter I in Promotion column
+5.
+Cannot be > 7 or < MORALE; if 0 treat as KIA; if improved enter I in Promotion column
+6.
+Reduce MORALE or PANTC by one; enterI in Survival column
+7.
+Five points required for improvement of one in MORALE or PANTC
+8.
+Enter I if in play at game end; five Survivals improves KIA 7 back to 8.
+9.
+EnterI if in play at game end; enter I whenever man improves rating.
+JAPANESE ARTILLERY RADIO
+STRENGTH / COST
+# CARDS
+5 I
+6
+I
+7
+42 I
+84
+I
+126
+6
+
+--- PAGE 13 ---
+16
+ITALIAN CAMPAIGN GAME ROSTER
+# NAMEjWEAPON
+PTS
+RANKl
+KIA2
+REPL3
+MORALE4
+PANICS
+ROUT6
+ELAN?
+SURV8
+PROM09
+1. Ferraro/MP
+36
+SGT
+8
+T
+3
+3
+2. Antonio/R
+32
+CPL
+8
+T
+4
+4
+3. Capitano/LMG
+33
+PFC
+8
+4
+3
+4. Sarducci/R
+10
+PVT
+8
+4
+3
+5. Nardo/R
+5
+PVT
+8
+2
+1
+6. Abruzzi/R
+9
+PVT
+8
+3
+3
+7. Marino/R
+7
+PVT
+8
+3
+2
+8. Paolini/R
+12
+PVT
+8
+5
+4
+9. Napoli/LMG
+30
+PFC
+8
+3
+3
+10. Celozzi/R
+6
+PVT
+8
+2
+2
+11. Giorgio/R
+7
+PVT
+8
+3
+2
+12. Pasini/R
+9
+PVT
+8
+3
+3
+13. Farinacci/R
+7
+PVT
+8
+3
+2
+. 14. Gionelli/R
+6
+PVT
+8
+2
+2
+15. Ciappi/R
+5
+PVT
+8
+2
+1
+16. Natale/R
+6
+PVT
+8
+2
+2
+17. Costanzi/R
+5
+PVT
+8
+2
+1
+18. Giganti/R
+10
+PVT
+8
+4
+3
+19. Tardieu/R
+3
+PVT
+8
+1
+1
+20. Moselli/R
+1
+PVT
+8
+1
+0
+21. Capone/MP
+39
+SGT
+8
+T
+4
+4
+22. Farrio/MP
+31
+CPL
+8
+T
+3
+3
+23. Correri/R
+9
+PVT
+8
+2
+2
+24. Tiolle/R
+5
+PVT
+8
+2
+1
+25. Giovino/MTR
+35
+PFC
+8
+3
+3
+26. Leone/FT
+30
+PFC
+7
+3
+2
+27. Salvadori/MMG
+52
+PFC
+8
+3
+3
+28. Ritondo/ATR
+9
+PFC
+8
+3
+2
+Personal/R
+0
+PVT
+8
+3
+3
+ITALlAN TO ffiT & FIREPOWER NUMBERS
+RANGE
+WEAPONS / TO HIT & FIREPOWER
+R
+MP
+LMG
+MMG
+Fr
+MTR: 1
+ATR: lID
+0
+0
+0
+2
+6 [3]
+NA
+o [2]
+5 [4]
+1
+1
+0
+0
+3
+7 [4]
+NA
+0-1 [1]
+4 [3]
+1
+2
+1
+0
+4
+8 [4]
+NA
+0-2 [0]
+4 [3]
+1
+3
+2
+1
+5
+9 [5]
+NA
+0-3 [0-1]
+3 [2]
+1
+4
+2
+3
+5
+10 [5]
+NA
+0-3 [0-1]
+3 [2]
+1
+5
+3
+5
+6
+11 [6]
+rrn
+NA/2FP
+3 [1]
+1
+VICTORY POINTS:
+NOTES:
+1. Improves if Survival + Promotion = 10
+2.
+Cannot be > 8; if wounded miss 3 games; erase all other columns if checked
+3. Replace KIA check mark with 7; / = 1 VP; T/ = 7 VP. (REPL stands for "Replaced")
+4. Cannot be > 7 or PANIC + 1; if improved enter / in Promotion column
+5. Cannot be > 7 or < MORALE - 1; if 0 treat as KIA; ifimproved enter / in Promotion column
+6.
+Reduce MORALE or PANIC by one; enter / in Survival column
+7.
+Five points required for improvement of one in MORALE or PANIC
+8. Enter / if in play at game end; five Survivals improves KIA 7 back to 8.
+9.
+Enter / if in play at game end; enter / whenever man improves rating.
+ITALlAN ARTILLERY RADIO
+TROOPS
+STRENGTH / COST
+# CARDS
+5
+6
+7
+Elite
+22
+44
+66
+4
+Line
+11
+22
+33
+4
+Secondary
+11
+22
+33
+4
+
+--- PAGE 14 ---
+FRENCH CAMPAIGN GAME ROSTER
+17
+# NAME/WEAPON
+PTS
+RANK!
+KIA2
+REPL3
+MORALE4
+PANICs
+ROUT6
+ELAN?
+SURV8
+PROM09
+1. Villeneuve/R
+38
+SGT
+8
+T
+3
+4
+2. Dubois/R
+35
+CPL
+8
+T
+4
+4
+3. Larue/LMG
+57
+PFC
+8
+4
+5
+4. Cassavant/R
+15
+PVT
+8
+4
+4
+5. Corbeil/R
+4
+PVT
+8
+1
+2
+6. Piccard/R
+11
+PVT
+8
+3
+3
+7. LaForte/R
+19
+PVT
+8
+5
+5
+8. DeCautaux/R
+13
+PVT
+8
+3
+4
+9. Bienvenue/R
+15
+PVT
+8
+4
+4
+10. Meileure/R
+8
+PVT
+8
+2
+2
+11. Kastler/R
+9
+PVT
+8
+2
+3
+12. Rousselle/R
+13
+PVT
+8
+3
+4
+13. Houle/MMG
+92
+CPL
+8
+4
+5
+14. Montcalm/FT
+34
+PFC
+7
+4
+5
+15. Brenton/R
+11
+PVT
+8
+3
+3
+16. Baudet/R
+11
+PVT
+8
+3
+3
+17. Rochard/R
+19
+PVT
+8
+5
+5
+18. Bourassa/R
+8
+PVT
+8
+2
+2
+19. Tardieu/R
+4
+PVT
+8
+1
+2
+20. Bemet/R
+22
+PVT
+8
+5
+6
+21. Petrou/R
+43
+SGT
+8
+T
+4
+5
+22. Goreux/R
+33
+CPL
+8
+T
+3
+4
+23. Barral/R
+9
+PVT
+8
+2
+3
+24. Lebesque/R
+4
+PVT
+8
+1
+2
+25. Sarte/MTR: 2
+42
+PFC
+8
+3
+3
+26. LaSalle/MTR: 3
+61
+PFC
+8
+4
+4
+27. Roche/LMG
+43
+PFC
+8
+3
+4
+Personal/R
+0
+PVT
+8
+3
+3
+FRENCH TO HIT & FIREPOWER NUMBERS
+RANGE
+WEAPONS / TO HIT & FIREPOWER
+R
+LMG
+MMG
+Ff
+MTR:2
+MTR:3
+0
+0
+2
+6 [3]
+NA
+1 [3]
+o [2]
+1
+1
+3
+7 [4]
+NA
+o [2]
+0-1 [1]
+2
+1
+4
+8 [4]
+NA
+0-1 [1]
+0-2 [0]
+3
+2
+5
+9 [5]
+NA
+0-2 [0]
+0-3 [0-1]
+4
+2
+6
+10 [6]
+NA
+0-3 [0-1)
+NNIFP
+5
+3
+7
+11 [6]
+ITIl
+NA/2FP
+NN2FP
+VICTORY POINTS:
+NOTES:
+1.
+Improves if Survival + Promotion =10
+2.
+Cannot be > 8; if wounded miss 3 games; erase all other columns if checked
+3.
+Replace KIA check mark with 7; 1= 1 VP; TI =7 VP. (REPL stands for "Replaced")
+4.
+Cannot be > 7 or PA1\TIC; if improved enter I in Promotion column
+5.
+Cannot be > 7 or < MORALE; if 0 treat as KIA; if improved enter I in Promotion column
+6.
+Reduce MORALE or PANIC by one; enter I in Survival column
+7.
+Five points required for improvement of one in MORALE or PANIC
+8.
+Enter I if in play at game end; five Survivals improves KIA 7 back to 8.
+9.
+Enter I if in play at game end; enterI whenever man improves rating.
+FRENCH ARTILLERY RADIO
+TROOPS
+STRENGTH / COST
+# CARDS
+5
+6
+7
+Elite
+42
+84
+126
+6
+Line
+42
+84
+126
+6
+Secondary
+21
+42
+63
+3
+
+--- PAGE 15 ---
+18
+Winning the scenario is your primary goal,
+because not only do you reap a lot of VP, but you
+also get some extra elan points for your men to boot.
+From the VP table above, it might appear that kill-
+ing your opponent's leaders is almost as important
+as winning the scenario, since every transfer costs
+him seven VP (while winning a scenario is worth
+only 12). However, transfers are rarely necessary,
+since in a campaign men other than marked leaders
+can serve as SLs and ASLs. Promotions will also
+increase the number of men qualified to serve as
+leaders. Even so, it is foolish to initiate close combat
+with your leaders; and conversely, it is desirable
+to get into CC with your privates attacking your
+opponent's highest ranking men (unless you can kill
+them with firepower). You should also give extra
+consideration to destroying enemy AFVs and IGs,
+since not only do your men gain elan, but your
+opponent will lose VP.
+The options of withdrawal and pursuit can help
+you cut your losses or compound your advantage
+in the campaign. This raises many dilemmas, and
+you must carefully weight the particular circum-
+stances ofthe situation and the remainder ofthe cam-
+paign. Do you risk the lives of your men in a
+last-ditch effort to win the scenario, or do you with-
+draw to see them fight again another day? Once you
+have the scenario won, do you leave it at that or
+are you in a position to go for the jugular with pur-
+suit? Note that six men who are KIA will result in
+the immediate loss of six VP and losses of up to
+another six if they are subsequently replaced. This
+Torch to the Vichy
+The time span for this campaign is 8 November
+1942 through 10 November 1942, during the Allied
+invasion of Africa codenamed "Torch". The
+Americans are attempting to establish a beachhead
+42.43 & 10.2 Note that a Hero card must be used
+to rally a man or double his firepower in an attack;
+thus a Hero card may not be played solely to give
+elan points to a man.
+42.5 & 43.2 These rules conflict, with the first
+asserting that in a Campaign one is under no
+obligation to play with an ASL while the second
+dictates that in a replay DYO scenario one must have
+both a SL and ASL. What then for a replay DYO
+scenario in a Campaign? Our solution was that the
+Campaign rules take precedence. Playing without
+an ASL can be risky, however. Lose the SL and
+your troops are leaderless; the reduction of your
+hand capacity by one card exists for the duration
+of the scenario.
+42.9 You may find that the personal campaign is
+a bit of overkill layered on top of a full roster of
+men. As silly as it may sound, even with a full
+roster, players can become personally attached to
+certain men as they painstakenly improve them over
+a series of scenarios, and can feel it when the guy
+is finally cut down dead in his tracks. Adding this
+extra man can also unbalance some scenarios. We
+recommend playing without this.
+Establishing Campaigns
+An UP FRONT Campaign is defined by a finite
+series of scenarios agreed upon beforehand by the
+two players. While any series could be used, some
+effort in choosing a sound sequence of fair scenarios
+will make the campaign more balanced and exciting.
+The DYO scenarios give the campaign com-
+manders the most flexibility, but also require the
+most difficult command decisons. The opposing OB
+is unknown in its details. Consequently, the com-
+mander must carefully select forces from the roster
+to defeat the enemy and achieve the scenario
+objectives. In order to retain continuity and balance,
+replay DYO (43.2) can be used for most. The cam-
+paign players may also wish to prohibit or restrict
+the use of certain weapons, since these can' have a
+large effect on play balance and significantly
+randomize the outcome. AFVs, IGs and artillery are
+examples of DYO purchases that may unbalance or
+randomize the outcome of a "replayed" scenario.
+On the other hand, these weapons can also be a lot
+of fun.
+Determining which side is the attacker and which
+the defender can be done in one of three ways: I)
+the attacker and defender in each can be pre-
+specified at the start of the campaign; 2) the attacker
+can be the victor of the previous scenario; or 3) the
+attacker can be detennined by "Play Balance Bidding"
+(43.1) if both players wish to take the same role.
+Determination of nationality can be accomplished
+in a similar manner. One player could design the
+campaign while the other chooses the side. Or if
+both want to play the same nationality, play balance
+bidding can be used, with an additional number of
+VP being bid to add to every scenario.
+In crafting a campaign, you may wish to save
+some sort of titanic struggle for the last scenario,
+so that the player who is losing at that point might
+still have a chance to pull out a victory. Too, the
+player who has done the best job of keeping his men
+alive will be rewarded iflarge forces are required.
+In order to add flavor to a campaign, it can be
+worthwhile embedding it in a historical context. You
+can let your imagination run wild in designing cam-
+paigns. If your imagination isn't working too well
+at the moment, then you can borrow ours. What fol-
+lows is but one idea for a campaign, complete with
+historical background:
+42.42 & 42.44 These rules were written before
+DESERT WAR introduced the Italians, and so note
+that Italian Panic values may be one less than their
+Morale values.
+After a Scenario:
+After the battle is over, you tally up elan points
+and then adjust the rank, morale, panic, elan, sur-
+vival and promotion columns of your roster. Your
+mourning for the dead will quickly be replaced by
+the excitement of increasing Morale and Panic
+values of the survivors, and the occasional well-
+earned promotion. The only point to keep in mind
+here: Usually, it is better to increase Morale be-
+fore Panic, if possible.
+Rule Patches
+It seems like the Campaign rules for just about
+any wargame are a bit garbled and confusing. This
+is probably a result of tacking the Campaign Game
+rules on at the end without much time for playtesting
+and rewriting before the game is scheduled to go
+into production. Many of the potential problems
+with the UP FRONT campaign rules stem from the
+rules being geared towards non-DYO scenarios. For,
+DYO scenarios, many of the rules do not apply
+(though this is not explicitly stated). In our opinion,
+DYO scenarios make for the most realistic and in-
+tense Campaign game, and the rules "patches" here
+make DYO campaigns playable as well as clearing
+up some problems with non-DYO campaigns.
+42.1 The following portion of this rule does not
+apply to DYO: "The owning player must use the
+men called for by the scenario if they are still avail-
+able. If not, he must choose other men from his
+roster with the same weapons ... which will fill
+the infantry requirements of the scenarios to be
+played." Instead, the DYO player merely chooses
+from the survivors on his roster or brings in replace-
+ments in accordance with the clarification of 42.41
+(see below).
+42.2 There is a potential loophole with a CPL being
+allowed to be an ASL, and any PFC being allowed
+to be an ASL. By example, a player could always
+replace a PFC for the cost of one Victory Point;
+and thus no one would ever be forced to transfer
+in an ASL (which costs seven VP). This rule should
+be modified to state that transfers must occur prior
+to normal replacements, and so normal replacements
+cannot be used as SLs or ASLs in the scenario on
+which they appear. Too, Rule 42.2 should be slightly
+rewritten, replacing "LMG" with "a weapon other
+than a Machine Pistol, Rifle-equivalent, or Assault
+Rifle" in the last sentence.
+42.41 The rule states, "Whenever a man is killed,
+a check mark is placed in the KIA column. That
+man is unavailable for future use until a scenario
+Force listing of him cannot be satisfied by substi-
+tution of a like-armed man from the roster." The
+following should be added for DYO: In a DYO
+scenario, a man marked KIA is unavailable for
+future use until all available like-armed men have
+been included in the DYO Order ofBattle. This is
+another way of saying that you cannot bring in a
+replacement rifleman until you have placed all the
+remaining riflemen into the current OB; this forces
+the usage of weaker men first. Two purchasing
+strategies that help are changing your troop quality
+(so you don't have to purchase Morale-I men) and
+bringing in the pathetic men as replacements (so that
+you don't have to pay much for them).
+adds up to 12 VP, which is the same as winning
+the scenario. So discretion is the better part of valor
+in the UP FRONT Campaign Game. The threat of
+pursuit may keep you from trying some desperate
+measures that you might attempt in a non-campaign
+scenario, but it does make for a more realistic and
+tense game.
+Event
+Required
+Win Scenario.
+Lost Infantry Gun.
+Lost AFV.
+Per KIA (including Commander Killed
+losses of AFV or IG).
+Per Replacement (not SL, ASL or
+Commissar).
+Required Transfer of SL, ASL or
+Commissar.
+-I
+-7
+12
+-3+-X
+-5+-X
+-I
+Most of your men will only get elan points for
+winning scenarios and being wounded or unpinned
+at the end. Hero cards are a valuable resource in
+the Campaign Game, and you should try to play
+them on men who will benefit most from the three
+extra elan points. It is worthwhile to give Hero cards
+to a Sergeant in hopes of eventually earning him
+a promotion to Staff Sergeant (and increasing the
+player's hand capacity by one)! Because of the elan
+points for killing men by doubled infiltration fire-
+power or close combat, infiltration should be given
+extra consideration when the opportunity presents
+itself. Ifyour men are not valuable and have superior
+CC values, then close combat is a good ifrisky way
+to gain elan points to strengthen your roster, while
+weakening your opponent's roster by outright kill-
+ing of his men. Also, remember that the CCV of
+a man whose morale value has changed must be
+calculated separately as per Rule 20.6. Finally, when
+you know a scenario is about to end, and you have
+nothing better to do, you can always take some pot
+shots to pin your opponent's men; when the last deck
+runs out, he will not be able to rally them and thus
+will not collect two points for each of the men you
+succeeded in pinning.
+Elan points, however, are not an end, but rather
+a means to the real end: Victory Points. Elan points
+improve your troops, giving you an edge over your
+opponent in gaining VP. At the end of the campaign,
+the player with the most Victory Points wins. Mak-
+ing your opponent lose his VP is just as good as
+earning your own. Hence, the key philosophy of
+the campaign is What's bad for your opponent is
+goodfor you, and vice versa. VP for various events
+are shown here (as taken from the rulebook, with
+one line added that was inadvertently omitted
+originally):
+Victory
+Points
+
+--- PAGE 16 ---
+at Arzell near Oran, but are meeting some stiff
+resistance from Vichy French troops. In other parts
+of Africa, the Allies had conferred with the local
+French generals to mitigate any opposition, but not
+so near Oran/Arzell. "Torch to the Vichy" is a short
+campaign with just six scenarios (which is nonethe-
+less long enough for wounded men to return to duty,
+for significant increase and decrease in Morale/
+Panic, and for Staff Sergeants to appear). This cam-
+paign requires the DESERT WAR expansion in
+addition to the original UP FRONT.
+Historical Background:
+Operation "Torch" began on 8 November as the
+Western Allies invaded French North Africa with
+three major thrusts aimed at Casablanca, Oran and
+Algiers. As it happened, the French admiral Darlan
+was in Algiers at the time. He sent a radio message
+to the head of the Vichy government, Marshall
+Petain, asking if he could act on Petain's behalf.
+While awaiting a reply, Darlan ordered a cease-fire
+locally around Algiers.
+However, in other parts of North Africa their
+officers told the Vichy soldiers to hold out. The
+French even successfully counterattacked the beach-
+head at Arzell on 9 November, displacing American
+and British forces.
+On this same day, Darlan
+received from Petain a secret notification of his total
+authority over the use of Vichy French forces in
+Africa. Finally, by 10 November, all the French
+generals had heard of Admiral Darlan's local cease-
+fire and used it as a convenient excuse to stop the
+fighting. The Germans pressured Petain into mak-
+ing a public announcement putting General Nogues
+in charge of the African defense (instead of Darlan);
+however, this did not succeed in superceding the
+secret agreement of the day before.
+Perhaps not coicidentally, on
+11
+November,
+German and Italian forces overran the Vichy bound-
+aries to occupy southern France. The French fleet,
+bottled up by the Germans in the harbor at Toulon,
+was scuttled on 27 November to avoid capture by
+the Axis. On 24 December, Admiral Darlan was
+assassinated, the great mystery of the whole affair.
+The Scenarios:
+In all six "Torch to the Vichy" scenarios, either
+side can purchase DYO forces using the points given
+in the respective scenario. For realism and play
+balance, only the French are permitted to purchase
+artillery and reinforcements (with appropriate DYO
+costs). In addition, since Americans rarely used
+flamethrowers in the European side oftheir struggle,
+the U.S. player cannot purchase the FT man in any
+scenario. In scenarios not explicitly dictating troop
+quality, either side may purchase troops of any
+quality, with the exception that the French player
+may not purchase Partisans. (Changing troop quality
+during a scenario reflects overall fatigue, fighting
+spirit and other factors, rather than transfers of men
+to different branches of service.)
+Scenario 1: Paratroop Drop (Scenario R)-The
+Americans are the attackers. All rules of Scenario
+R are in effect. Desert rules are in effect, except
+that Woods are always removed during playas
+Cower cards and may not be played as Woods/
+Mirage. No AFVs may be purchased; attacker may
+not purchase IGs. Note that Americans are elite,
+and so must add 15 % to DYO total (effectively giv-
+ing them only 264 points to spend).
+[This
+scenario
+should be
+interpreted
+as
+an
+amphibious landing, rather than a true paratroop
+drop. The Americans hit the beaches near Arzell,
+but the Vichy troops were not quite as complacent
+about handing over their positions as at other land-
+ing sites. Desert rules (except the noted Woods
+cards)
+simulate
+beach
+conditions
+nicely.
+And
+Americans may not have IGs, as these are not
+generally available during an amphibious assault.}
+Scenario 2: Meeting of Patrols (Scenario A)-
+Desert and night rules are in effect. AFVs and IGs
+not available to either side. [u. S. and Vichy troops
+bump in the desert outside Oran.}
+Scenario 3: City Fight (Scenario B)-All rules for
+Scenario B are in effect, except AFVs and IGs not
+available. [The French and Americans battle in the
+streets of Oran.}
+Scenario 4: Outpost Line (Scenario L)-Either side
+may be designated attacker. Desert rules are in
+effect; AFVs and IGs are not available. If both wish
+to attack or defend, play balance bidding (43.1) is
+used to determine roles. [Americans and French
+attempt to establish or displace the beachhead at
+Arzell.}
+Scenario 5: Rear Guard (Scenario D)-Either side
+may be designated attacker. Desert rules are in effect
+(except Woods are treated as Cower cards); AFVs
+and IGs are not available. If both wish to attack or
+defend, play balance bidding (43.1) is used to
+determine roles. [The defeated attempt to retreat
+near the beachhead at Arzell.}
+Scenario 6: Mystery Scenario-Defender has 230
+points to spend after scenario is defined. Lowest bid
+for attacking force wins right to attack with that
+amount to spend on crafting his OB. After bid,
+victory conditions are determined as per 43.33; time
+limit as per 43.34. Next, draw RPN, if black then
+desert rules are in effect in toto; another RPN, if
+black, then night rules are in effect. All units avail-
+able for purchase.
+Campaign Rosters
+To play the above campaign, you will need the
+French roster. This appears here, with those for
+the Japanese, British and Italians. [Permission is
+granted to photocopy these roster pages for personal
+use solely.] Some additional information has been
+included on these sheets beyond what is found on
+those in the UP FRONTrulebook (see pages 27-29).
+We have included initial Morale/Panic values, as
+well as ranks, for convenience; just cross these off
+and pencil in changes as they occur. The added fire-
+power tables for each nationality make it easier to
+develop a balanced OB with just the information on
+the roster sheet. Also, artillery and number of cards
+are listed here, since this now varies across nationality
+and troop quality.
+One last thing. There is an apparent mistake on
+Private Lebesque's personality card. On the card,
+he is listed as being Panic-I, but is otherwise
+identical in cost and morale to Pvt. Tardieu and Pvt.
+Corbeil (who both have Panic of "2"). Therefore,
+on the French campaign roster, Lebesque's Panic
+value is shown as "2", which had been listed in
+italics as a reminder (you may want to mark this
+on his card as well).
+Now, enjoy THE GAME.
+COpy SERVICE
+Ifthe reader should need a copy of an article from
+an out-of-stock back issue of The GENERAL,
+The Avalon Hill Game Company does provide
+a photocopying service (black/white only). The
+charge for this service is $1.00 per page, with
+a minimum order of five pages required. Please
+specify the article title, volume and number of
+the issue it appeared in, and the pages on which
+it can be found; the new 25-year GENERAL
+Index is invaluable for this. Standard Avalon Hill
+postage rates must be included to cover the total
+of the order. Maryland residents please also add
+5 % state sales tax.
+19
+
+--- PAGE 17 ---
+ODD MAN IN
+29
+Three-Player UP FRONT
+RNC Draw
+Intelligence Gained
+In all cases, the players must be informed accurately
+about terrain cards to be removed from play, Action
+cards to be treated as Cower, and any special rules
+in play (such as Night). The players can then, at
+last, purchase their forces for the battle.
+While the players are busily sifting through their
+Personality cards and plotting one another's destruc-
+More accurate numbers of enemy personality cards (+/-20%).
+FIre on enemy posltlon vIsible and results gIven SL and ASL
+By Jay Kaufman
+o
+Infantry invisible if in any terrain; terrain card visible. Guns
+indistinguishable from infantry (simply inform of number
+of cards) if in Open. Results of own fire invisible (EXC:
+KIA of vehicles). Vehicles, but not type, present (EXC: in
+Woods). Smoke visible.
+1-2
+Infantry invisible if in -2/-3 terrain; otherwise presence
+but not numbers known. General type of vehicle identifia-
+ble (i.e., AFV. HT, AC, etc.). Multiple Pin/Panic/KIA
+results visible (number given only).
+Rough numbers of enemy personality cards regardless of
+terrain (+1- 50%).
+Entrenchments,
+Flank,
+Encircling.
+Transferring troops visible. Specific vehicle identifiable.
+AFVs identified as CE/BU. Guns identifiable.
+RR
+What is Seen
+Sighting Chart
+Presence/absence of armor. Enemy troop quality.
+Enemy strength (in terms of points). Complete
+victory conditions.
+Presence/absence of armor. Enemy troop quality.
+Complete victory conditions.
+Presence/absence of armor. Complete victory con-
+ditions only if attacking.
+Presence/absence of armor.
+Faulty Intelligence: Misinform the player about the
+quality of enemy troops and victory conditions (read
+the VC of a different scenario). Inform him of other
+conditions without error.
+Faulty Intelligence: Misinform the player about
+enemy strength and presencelabsence of armor. In-
+form him of other conditions without error.
+o
+1-2
+3-4
+Red 6
+5
+Black 6
+UP FRONT seems to have everything going for
+it as a wargame. Excitement, ease of play, one of
+the shortest playing times around, strategy and luck.
+It even has its own peculiar claim to a high level
+of realism with its unpredictability and fog of war.
+However, there is one intractable problem: unlike
+many other wargames, UP FRONT is not versatile
+in the numbers who can enjoy a single game. While
+it is relatively easy to incorporate four players (or
+any other even number) in this game designed for
+two, an odd number presents a near insurmountable
+problem. Whano owS"is,?ur variant for overq0m-
+ing this hurdle and a1!owing"the experienced UF fan
+to take a role when you've that third fellow show
+up for the weekly session
+
+--- PAGE 18 ---
+30
+(9.0) CONCEALMENT:
+Play of Concealment
+cards is never revealed to the firing player.
+(10.0) RALLY: This action is completed secretly
+unless an unpinned enemy group is at RR5.
+(13.3) WIRE: If discarded on a non-existent enemy
+group, the Wire is discarded without revealing this
+fact to either player.
+(14.0) SNIPERS: The fact of a Sniper attack is an-
+nounced to the victim only if the attacked group is
+at RR4 to any enemy group. Results of a Sniper
+attack are only visible to the attacker at RR5. If a
+Sniper Check is successful, the referee places the
+"Sniper Lost" counter in front of the successfully
+checking player; subsequent enemy Sniper cards are
+discarded, causing only a fake draw ofRNC to dis-
+guise the Sniper's loss.
+(16.0) VICTORY DETERMINATION: Unless in-
+dicated on the pre-game Intelligence Chart, players
+are not informed of Victory Conditions until the con-
+clusion of play. The referee must announce the
+breaking of either squad promptly upon its occur-
+rence. At that point, the divider may be removed.
+(17.1; 17.6) FLANKING FIRE & ENCIRCLE-
+MENT: The player attempting such places the
+appropriate counter given him before play on his
+group performing the action and secretly indicates
+to the referee the enemy group that he's moving to
+outflank or encircle. The opponent is informed of
+this action only if any of his groups are close enough
+to observe (usually at RR2) or upon first fire by the
+Flanking/Encircling group upon the affected group
+(even if doubled FP is not necessary to play the Fire
+card).
+(17.7; 17.8) TRANSFERS: The player places his
+Movement card normally, and marks the affected
+personality/group with the Transfer counter given
+him before play. Complete the transfer normally
+(unless fired upon) without informing the enemy
+unless at RR2 (where the referee need only inform
+the other player of the action).
+(19.0) WEAPON MALFUNCTION: In all in-
+stances unless at RR5, the opposing player is not
+informed of such, nor of the result of Repair
+attempts.
+(17.7; 17.8) TRANSFERS: The player places his
+Movement card normally, and marks those affected
+personalities with the Infiltration counter given him
+before play. The referee resolves all attendant
+Morale Checks and InfJltration Checks, and informs
+the player of results. Do not inform the enemy when
+a player attempts infiltration. This fact is revealed
+only when the infiltrators fire or engage in CC.
+(27.0) TARGET ACQUISITION: Flip the group
+counter of the firing group.
+(28.0) AFV: Damage to AFVs short of destruction
+is not revealed to the firing player. Exceptions may
+be made at RR5, but this is left to the discretion
+of the referee.
+(36.0) The player attempting such may mark his
+group only if successful, with the referee resolving
+the action. Except at RR5, this action and its result
+is not revealed to the enemy.
+(40.) ARTILLERY (Optional): As an added bonus,
+use of a referee makes it possible to more realistically
+simulate the actions and effect of artillery. Play of
+Radio cards is always invisible. The artillery mission
+will arrive a random number (RNC) ofturns later;
+it is the referee's responsibility to keep track. All
+RNC draws for malfunction and availability are
+made by the referee. No Concealment cards may
+be played to modify this. If the mission is accepted,
+the firing player indicates the enemy group and
+range chit targeted.
+The referee resolves the fire attack upon arrival,
+drawing an additional RNC for accuracy. On a draw
+of "0-3" the mission is on target; on a "4" it lands
+one range long/short; on a "5", two ranges; on a
+"6", three. The mission is long on a black RNC
+and short on a red RNC. Fire Strength is "5" versus
+any group it falls directly upon, and "2" on any
+adjacent (as determined per 38.51). Results are
+revealed only to the affected player, unless at RR5.
+Example: With German groups A and B at RR2
+to Russian group A and at RR5 to Russian group
+B, the desperate German player calls an artillery
+strike down on Russian Group B. The referee draws
+a black RNC, and then determines that it will impact
+three turns later. Upon that German player turn, the
+referee announces the arrival to both players and
+draws a secret RNC-in this case a red "4", in-
+dicating the artillery falls one range short. If the
+positions of the groups are unchanged, German
+Group B is attacked with F5, and German Group
+A and Soviet Group B suffer F2 attacks.
+(45.4) BANZAI: Banzai groups are immediately
+recognizable as such regardless of range, as is their
+r
+UP FRONT fans will be pleased to hear that their
+favorite game is going nautical. Or at least its
+designer has. Courtney Allen has applied the same
+basic principles used in UP FRONT in his new game
+of contemporary submarine warfare, and the results
+are what you've come to expect from a Courtney
+Allen design-playability and excitement. If you're
+an admirer of his designs as I am (his other credits
+include STORM OVER ARNHEM, BANZAI and
+THUNDER AT CASSINO), you'll be expecting
+another of those riveting action-reaction type games
+for which he is noted. And you won't be disappointed.
+In ATTACK SUB, Courtney has taken playability
+to new heights. The result may be the simplest war-
+game you've ever enjoyed.
+Depending on the
+scenario, each player commands a force ranging
+from a single sub to a nine-ship task force in a battle
+that can span anywhere from ten minutes to two
+hours. What follows is a tense cat-and-mouse game
+as each player strives to gain a "contact" on the
+other strong enough to fire before his own ship
+becomes a target.
+The components consist of 48 ships on 5" x 5.6"
+cards and 128 quality playing cards, plus a few
+markers to keep track of contact levels, malfunc-
+tions and damage aboard ship. Play is simplicity it-
+self with each player either playing one card per
+ship in his turn or discarding. The cards are color-
+coded to aid in the sequence of play (e.g., red cards
+can be played defensively during the opponent's tum
+to negate or modify his plays). Card hand sizes vary
+according to size of force and circumstances. Never-
+theless, nerve-wracking decision points abound (as
+any UP FRONT player will tell you) when it comes
+time to decide whether to play or discard ...
+especially with a destroyer bearing down on you.
+Submarines, as one would expect, enjoy the ad-
+vantage ofstealth-being harder to detect than sur-
+face craft. However, unlike surface ships which pool
+their information and act in concert, submarines
+must operate alone. Surface vessels also enjoy the
+advantage of air power and can launch ASW heli-
+copters whose sonar buoys aid in the detection
+process.
+intended target group (announce both group IDs and
+the range).
+(48.) RANDOM REINFORCEMENTS: The referee
+must inform a player if he becomes eligible for
+Random Reinforcements. The opponent is not in-
+formed.
+This rule is highly recommended for
+"Blind" UP FRONT.
+In conclusion, I think you'll find that three-player,
+"Blind" UP FRONT captures the confusion of low-
+level tactics very well. Not knowing what's out
+there, the players' fears often exaggerate the actual
+danger, or make the players careless and reckless.
+There seem to be two states for them: they are
+desperately short of information, or else everything
+has suddenly become much too obvious. When next
+you've three experienced players, try this version.
+With some effort and good humor all around, it is
+an entertaining way to pass an evening.
+That detection process is the meat of the game
+and the resulting bare-bones portrayal of high-tech
+warfare with low-tech rules is ingenius. Ships search
+for each other with "Sensor" cards which represent
+either "Active" or "Passive" sonar. Active Sonar
+is stronger, but because it reveals information about
+the sender by the very act of its usage, is rarely used
+by submarines-which can often get by with Pas-
+sive Sonar (i.e., listening for the screws of an
+opposing ship). The ping of an Active Sonar sweep
+automatically increases the "contact level" of a
+listening submarine with a Passive Sonar card to
+play. Contact levels are recorded on each ship and
+the resulting evasion, searching, closing and open-
+ing ofranges, locking on of weapons, and attempts
+to shake contact are high drama with life and death
+for an entire ship's complement riding on the quick
+turn of every card. The imagined ping of sonar
+reverberations on an outer hull soon fill the air with
+more dread than the staccato rat-a-tat-tat of an UP
+FRONT player's oft-mimicked MG.
+ATTACK SUB is not a study in nuclear physics
+and basic simplicity is its strength. For quick fun,
+it is hard to beat. Expect it this spring.
+UP FRONT players will also be pleased to hear
+that Courtney is working on a contemporary version
+of his classic tactical combat game. Full details are
+unavailable at the present time, but I can tell you
+that the exciting news about this version is that it
+will have a mapboard. This will eliminate the com-
+plicated concept of Relative Range, and thereby
+make the game far easier for the novice to under-
+stand and play. It will also suspend the disbelief of
+"movable terrain" that so bothered the skeptics.
+Not an expansion module like BANZAI or DESERT
+WAR, the game is envisioned as a stand-alone
+product with its own set of unique Action cards.
+The best news for UP FRONT players though is that
+the system will be compatible with UP FRONT, so
+you can just move your existing wwn squads over
+to the new battlefield. Look for more details on this
+project at a later date.

@@ -1,0 +1,123 @@
+{
+  "game_name": "Up Front",
+  "game_id": "up_front",
+  "data_dir": "data/upfront",
+  "text_dir": "data/up_front_text",
+  "chroma_collection": "up_front-rules-semantic",
+  "rule_index_file": "data/up_front_rule_index.json",
+  "rule_schema": "numeric_decimal",
+  "rule_pattern": "(?:^|\\n)\\s*(\\d{1,2}\\.\\d{1,3}(?:\\.\\d{1,2})?)\\b",
+  "cross_ref_pattern": "\\[(\\d{1,2}\\.\\d{1,3}(?:\\.\\d{1,2})?)\\]|(?:see|See|SEE)\\s+(?:\\[)?(\\d{1,2}\\.\\d{1,3}(?:\\.\\d{1,2})?)(?:\\])?|(?:rule|Rule|RULE)\\s+(\\d{1,2}\\.\\d{1,3}(?:\\.\\d{1,2})?)|EXC:\\s*\\[(\\d{1,2}\\.\\d{1,3}(?:\\.\\d{1,2})?)\\]",
+  "scenario_format": "letter",
+  "scenario_pattern": "(?:^|\\n)\\s*([A-K])[.:\\s]+[A-Z]",
+  "schema_detection_scores": {
+    "chapter_decimal": 3,
+    "numeric_decimal": 51,
+    "outline_parenthetical": 0
+  },
+  "documents": {
+    "UF RuleBook updated.pdf": {
+      "doc_type": "core_rules",
+      "priority": 1,
+      "description": "Official rulebook for Up Front wargame",
+      "size_mb": 4.1,
+      "total_pages": 91,
+      "max_pages": null
+    },
+    "UF_Scenarios_2-4.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.16,
+      "total_pages": 13,
+      "max_pages": null
+    },
+    "UF_Scenarios_2-5.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.16,
+      "total_pages": 13,
+      "max_pages": null
+    },
+    "Up_Front-_Experimental_house_and_variant_rules.pdf": {
+      "doc_type": "variant",
+      "priority": 7,
+      "description": "Variant document",
+      "size_mb": 0.03,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "Up_Front.pdf": {
+      "doc_type": "journal",
+      "priority": 6,
+      "description": "Magazine containing rules and scenarios",
+      "size_mb": 7.23,
+      "total_pages": 18,
+      "max_pages": null
+    },
+    "Up_Front_Errata_Pages.pdf": {
+      "doc_type": "errata",
+      "priority": 3,
+      "description": "Errata document",
+      "size_mb": 0.28,
+      "total_pages": 18,
+      "max_pages": null
+    },
+    "Upfront_Scenarios_1.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenarios document",
+      "size_mb": 0.9,
+      "total_pages": 13,
+      "max_pages": null
+    },
+    "What_is_UpFront.pdf": {
+      "doc_type": "primer",
+      "priority": 9,
+      "description": "Primer document",
+      "size_mb": 0.03,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "origins_87_tournament_rules.pdf": {
+      "doc_type": "tournament",
+      "priority": 7,
+      "description": "Tournament document",
+      "size_mb": 1.67,
+      "total_pages": 3,
+      "max_pages": null
+    },
+    "up-front-rules.pdf": {
+      "doc_type": "unknown",
+      "priority": 9,
+      "description": "Unknown document",
+      "size_mb": 9.65,
+      "total_pages": 36,
+      "max_pages": null
+    }
+  },
+  "glossary": {
+    "ADD": "Flanking",
+    "AFV": "An AFV",
+    "ALL": "There",
+    "ARMOR": "Banzai",
+    "ARMS": "All Japanese",
+    "ASL": "Assistant Squad Leader",
+    "ATR": "An Anti-Tank Rifle",
+    "BOG": "An AFV",
+    "CCV": "Close Combat Value",
+    "CE": "Crew Exposed",
+    "EXIT": "An AFV",
+    "FP": "Weapon Firepower",
+    "GAME": "Although",
+    "GUARD": "Prisoners",
+    "GUNS": "An Assault Gun",
+    "IG": "Infantry Guns",
+    "LMG": "The Bren Gun",
+    "MEN": "When",
+    "PIAT": "The PIAT",
+    "RALLY": "Pinned",
+    "SHOT": "Anytime"
+  }
+}

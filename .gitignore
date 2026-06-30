@@ -1,0 +1,26 @@
+# Ignore all PDF files anywhere in the repository (copyrighted wargaming manuals)
+*.pdf
+
+# Exception: Do NOT ignore PDFs in the insurance policies directory
+!data/policies/
+!data/policies/*.pdf
+
+# Standard Python ignores
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Vector databases and large indexed data
+data/chroma/
+data/chromadb/
+
+# Cache and testing directories
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local databases and backups
+chroma/
+backups/

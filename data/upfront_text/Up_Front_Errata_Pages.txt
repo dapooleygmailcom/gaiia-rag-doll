@@ -1,0 +1,975 @@
+--- PAGE 1 ---
+The Up Front Errata Pages 
+All the errata fit to correct 
+Items preceded by an "*" have been corrected in the 2nd edition. 
+ 
+2.0 Is it necessary to use an RPN for determining the position in a one-man group? 
+A. No. Use an RPN draw only to determine the position of the effect (Sniper, CC Draw, Malfunction, etc.) if there is more than one 
+man in the group. However, see section 19.0, Malfunction for special cases when an RPN is not necessary for a multi-man group. 
+3.1 What are the 'valid' historical match-ups? 
+A. Please refer to the table below: 
+ 
+Nation 
+Germany 
+Japan 
+Italy 
+U.S.A. 
+Britain 
+Russia 
+France 
+Germany 
+– 
+N 
+Y 
+Y 
+Y 
+Y 
+Y 
+Japan 
+N 
+-- 
+N 
+Y 
+Y 
+Y 
+Y 
+Italy 
+Y 
+N 
+-- 
+Y 
+Y 
+Y 
+Y 
+U.S.A. 
+Y 
+Y 
+Y 
+-- 
+N 
+N 
+Y 
+Britain 
+Y 
+Y 
+Y 
+N 
+-- 
+N 
+Y 
+Russia 
+Y 
+Y 
+Y 
+N 
+N 
+-- 
+N 
+France 
+Y 
+Y 
+Y 
+Y 
+Y 
+N 
+-- 
+ 
+*3.3 Add: "Men may switch positions within a group during their player turn but must do so as the sole action of that group for that 
+turn. Such a position switch is included as part of any successful weapon acquisition (18.2) or assistant crew assignment (11.12)."  
+3.6 When a scenario specifies that a certain type of card must be removed from the deck when discarded unused or as a RNC/RPC 
+draw, is it considered a "scenario defined Cower Card?"  
+A. Yes. Example: a Buildings card can never be placed during Prepare for Play in scenario A. 
+CLARIFICATION: Scenario defined cower cards may be freely discarded by the Japanese as are cards that are cower cards for their 
+side. E.g. Snipers and/or minefields as the attacker in scenario C. 
+4.1 In French/Italian scenarios who sets up and plays first in scenarios A, B, & J if no German is played? 
+A. The side with the least DYO points. Failing that, the Axis player, defined as, in order, German, Japanese, Italian, French. 
+VARIANT: Since scenarios A, B and J are meeting engagements, it is unrealistic to assume that the Axis player will always have the 
+"advantage" of first move. If both players agree, each player draws a card and compares card control numbers (the little blue number 
+between 1 and 162). High draw sets up and plays first. 
+4.3 & 14.5 During a multi-card discard, can the player observe the results of one discard before deciding where and/or if to discard 
+another? 
+A. No. Rule 7.3 and 7.32 specifically state that discards are resolved prior to the next turn, not prior to the next discard. 
+Discard Capability, 4.32, 4.33, 14.5 and 44.1 Can nationalities with multi-card discard capability discard two or more wires on a 
+single group in a single turn? 
+A. Yes. 
+Examples: 
+[NOTE: The examples assume that the indicated discards are valid for the scenario and situation (i.e. the discarding side has sniper 
+capability).] 
+Non-moving Group: May discard any number of SNIPERS and/or any number of WIRE cards. 
+Moving Group: May discard one terrain card and/or any number of snipers and/or any number of WIRE cards. Rejecting the terrain 
+does NOT reject the WIRE. If the terrain is accepted and WIRE is not allowed in that type of terrain (e.g. MARSH) then the WIRE is 
+discarded. 
+Two Moving Groups Exchanging Group Letters: Same as a moving group with two additions. If either group rejects a terrain 
+discard, the position exchange is cancelled. If terrain is discarded on one group and accepted, the moving player MUST complete the 
+position exchange by placing the other group in terrain (including open ground) on his next turn. 
+4.4, 5.41 & 7.2 Are the cards drawn for resolution placed on the table, or are they immediately discarded? This is important for 
+determining which and how many cards go into the deck if the resolution spans decks. 
+A. First line of 4.4. They and their Fire card(s) are immediately discarded.  
+Common practice is to leave all cards used in an attack on the table until the attack is resolved, or a draw is needed and the draw pile 
+is empty. In the latter case, use some method to indicate the next PC to be attacked (or other pending action), discard all cards used in 
+the attack to that point, re-shuffle, and then continue the attack. 
+4.5 Refilling one's hand is optional. However, if the decision is made to draw cards, a player MUST draw to a full hand.
+
+--- PAGE 2 ---
+5. Movement. Movement cards not played directly to the discard pile cannot be voluntarily cancelled. 
+5.41 & 7.2 These rules show that placed terrain stays in place until new terrain replaces it. Thus, even though terrain may no longer 
+be usable for TEM due to active movement cards, the terrain cards are left on the board, and not discarded until terrain is finally 
+placed. Specifically, a terrain card remains on the table regardless of the number of movement cards in play on that group.  
+5.51 Relative Range less than 0 is treated as 0 for firepower and To Hit purposes. Actual Relative Range is used to determine if a 
+Group may Retrograde. 
+5.61 Is the Relative Range only decreased by one even if the groups in question are A and D? 
+A. Yes. 
+6.5 May you opt to not resolve fire combat even if the defender did not play a concealment card? 
+A. Yes, but if you fire at even one defender, you must fire at all defenders. 
+6.5 Can you stop the Fire Combat Resolution when you are halfway (or any other point) through a target group (e.g. stop the 
+resolution on the 4th man out of 6 men)? (This would be done to avoid weapon malfunction or to keep the deck from running out.) 
+A. No. 
+6.5 & 25.4 Does the attacker have the option of foregoing the resolution of an ordnance hit after seeing the Final Strength Number? 
+A. No, but the attack can be cancelled after seeing the final "To Hit" number. This includes the play of any concealment. Once the 
+"To Hit" card is drawn, the attack must be completed. 
+7.32 Can a group with pinned men reject terrain? 
+A. Yes. 
+Can a player with multi-card discard capability, discard one terrain card on a group, have it rejected, and still discard another terrain 
+card on the same group in the same turn? 
+A. No. 
+Even if the two were discarded simultaneously? 
+A. No. 
+If you have two Movement cards in play above a terrain card and subsequently reject enough terrain to remove both Movement 
+cards, are you in the terrain card or Open Ground? 
+A. The terrain card. 
+7.32 If a weapon has been dropped in terrain, and you move from that terrain, but subsequently (due to rejecting terrain) you end up 
+returning to that terrain, are the weapons still available for acquisition? 
+A. No. Reference 18.4, the weapon is removed when you play the movement card. 
+Delete 8.532. Rule 17.7 is correct. 
+*8.9 Insert after the first sentence: "Exc: A defending group on a Wall card may subtract only one from the Fire Strength of a mortar 
+or artillery attack." 
+10.2 Can you play a Rally card on a group with no pinned men in order to get it out of your hand? 
+A. No. 
+10.23 Can you rally an AFV and a same range, adjacent group that has an unpinned leader with a "RALLY ALL" card? 
+A. Yes, but only if the AFV is an OT-AFV. 
+10.3 Can you voluntarily rout out an unpinned man? 
+A. No. 
+10.3 & 50.41 Can a surrendered Italian group or parts thereof voluntarily panic prior to being captured? 
+A. No. 
+10.4 The SL is pinned at the end of a player's turn. On his hand refill he draws a hero, which he uses on the SL. Can he now draw a 
+full hand? 
+A. Yes, rule 10.4. 
+10.4 During a Fire attack, can an infiltrator who gets a pinned result play a hero card immediately and keep his infiltration? 
+A. Yes.
+
+--- PAGE 3 ---
+10.4 Can you hero an unpinned man upon drawing a hero just to get another draw? 
+A. No. 
+10.45 Can you hero an unpinned man when the group is not firing, just to get it out of your hand? 
+A. No. 
+10.45 Can a player use a Hero card to double a PC's firepower, even if the extra firepower is not needed in order to play the resultant 
+fire card? 
+A. Yes, especially if playing a campaign game where elan points are being accumulated. However, a player cannot play the Hero 
+card to no effect. 
+10.45 Can you play two Hero cards on the same man simultaneously to triple his firepower if he wasn't already entitled to double 
+firepower? 
+A. No. 
+10.45 & 17.4 Which values for crewed LMGs are used for non-Hero caused doubled firepower?  
+A. The fully crewed value is used for flanking bonuses. The bracketed value is doubled only for Heroes using crewed weapons. 
+11.11 Can a PC whose primary weapon is a crew-served weapon act as a crewman for another crew-served weapon (e.g. a mortar PC 
+act as a crew for a MMG)? 
+A. No. An exception to this would be a man whose primary weapon was a crew served weapon, but is unarmed, and that man 
+transferred into a group with another crew served weapon. 
+11.11 & 17.8 & 18.2 When can a group rearrange their order? Can this be done as the sole action for a group?  
+A. Yes. 
+How about following individual transfer (17.8)? 
+A. No.  
+After crewing/uncrewing a weapon (11.11)?  
+A. Yes, see 11.12.  
+A group may also rearrange its order after a successful weapon acquisition (18.2).  
+Read full text of rule 3.3 and 4.25 
+11.2 The PC who is carrying a radio as a SW, is also a crewman. Can the radio still be used?  
+A. No. 
+11.2 & 14.4 In a two-man group consisting of a crewed weapon whose principal operator is pinned, can the assistant crewman 
+perform a sniper check? 
+A. Yes. He is still armed even though he has no firepower. 
+12.11 & 17.4 Does the simultaneous halving of firepower for Moving Fire and doubled firepower for Flanking Fire leave a Bolt 
+Action Rifle with its normal firepower? 
+A. Yes. 
+13.2 Can ANY AFV place smoke on itself? Or, is an anti-armor Effect number of 4 required? 
+A. To place smoke on self, AFV must be US, British, or German. To place smoke on other group (friendly or enemy), AFV must be 
+US, British, or German AND have boxed FS of 4 or better. 
+13.32 Does a hit by ordnance attacking from Wire also subtract one from its Hit strength? 
+A. No. 
+13.33 & 18.4 Does the playing of a movement card to remove wire cause weapon counters to be lost? Does the play of ARTIFICIAL 
+Terrain remove weapons counters? 
+A. Yes. No. 
+14.2 & 17.8 If a group that a man is transferring to is fired on by a Sniper, is he also a legitimate target for the Sniper? If so, what 
+position is the transferring man considered to occupy?  
+A. Yes. The first position. 
+14.2 May a sniper attack a pinned British Bren Carrier or Wasp? 
+A. Yes.
+
+--- PAGE 4 ---
+14.3 & 33.1 Can a man be wounded as a result of a sniper attack? If yes, would column "7w" of the RNC used to resolve the Sniper 
+Attack be checked -anytime- a man is removed due to the attack? 
+A. Yes. No, a P2-3/K4-6 sniper that affected a pinned man would check for a wound on a RNC draw of 2-3 if the man routed or on 
+an RNC of 4. 
+14.4 & 48.42 If a group is attacked by more than one Sniper, which RNC must it beat in a Sniper Check? 
+A. The lowest absolute value. Example: Against multiple sniper results of a black 2 and a red 4, the affected group would perform a 
+Sniper Check using a value of 2. 
+14.41 The last sentence of 48.4 states "This dual Sniper attack capability can also be used in DYO scenarios where additional snipers 
+are purchased." This seems to be in contradiction to 14.41. Which is correct? 
+A. Both, but treat 48.4 as "in force" for/random reinforcement snipers. A DYO purchased "Double Sniper" is just Sniper insurance -- 
+it takes two successful Sniper checks to eliminate Sniper capability. 
+A Sniper Random Reinforcement does the following: 
+1. Gives ordinary Sniper capability if player does not currently have it (lost it, or not have at start) 
+2. Serves as a Dual Sniper (makes two attacks per Sniper card played) for a player who already has a Sniper. 
+15.1 & 48.3 When reinforcements include an ASL, does he function as an auxiliary ASL, in case of the loss of the original SL or 
+ASL? 
+A. Yes. 
+15.52 Does the increase to Morale and Panic values apply to the Commissar himself? 
+A. No; he is not with an unpinned Commissar. 
+16.2 As it is important to note a breeze card pulled during a player's turn, should all cards played during a player's turn remain on the 
+table and not returned to the deck during re-shuffling at the deck's end (when the player's turn is not complete) and only placed in the 
+discard tray at the end of the player's turn? (This is also important in attacker vs. defender scenarios when the defender wants to run 
+out the deck AND this is especially important if a wire card or stream card were pulled in the attack -- one player may especially 
+want them NOT shuffled into the deck). 
+A. No. When the deck runs out, all cards that will be placed in the discard tray are shuffled into the deck immediately. The attack is 
+then resolved from that point and the game continued. 
+16.3 At the end of the last deck, a player decides to enter close combat. 16.3 states that if the last deck of the game runs out in the 
+resolution of an attack, it is re-shuffled and the attack completed. What is the definition of the "attack" in close combat for these 
+purposes? 
+A. Specifically for the last deck, if the deck runs out during morale checks, the game is over. The "attack" commences when making 
+the RPC check, therefore, from that point forward, should the deck run out, re-shuffle and complete the attack. 
+16.4 So you really mean that no VP's are awarded for moving men at the end of a scenario, even if they are at range chit 5? 
+A. Yes. That is the risk you take when waiting for the relative artificial safety of the end of the deck to move. The rule was 
+deliberately created to limit such unrealistic end-of-game tactics. 
+16.4 Units which are at a negative Range Chit and in Terrain applicable to the scenario being played earn negative points (i.e. reduce 
+the score of the owning player). For example, a group of three men in Scenario B, occupying Buildings terrain at Range Chit -1 
+would yield -3 Victory Points. The same group in scenario B occupying Brush terrain would yield 0 Victory Points. 
+16.42 When a scenario has a Victory Condition that requires you to have some number of unpinned Personality cards in one or more 
+non-infiltrated groups with a ''4'' range chit..." can you also win if some are at RC 5 or greater?  
+A. No. All personality cards must be at the same range chit, as specified in the scenario victory conditions. The scenario victory 
+conditions should be considered implicit. 
+Even in the case of Scenario U, Personality cards fulfilling Victory conditions must be at the same range chit? 
+A. In Scenario U, units may occupy different range chits and claim victory. 
+16.42 Would a Wire card on top of a Wall card negate that Group for Victory Conditions fulfillment if an opposing group exists 
+which is not directly opposite it? 
+A. No. Even if no opposing group was directly opposite it to be affected by the TEM, the Wall card is not reduced to total 
+ineffectiveness and, therefore, can be used to fulfill Victory Conditions. However, a Wall card cannot be used to fulfill Victory 
+Conditions if there are two Wire cards on it. Similarly, an occupied Hill card with its +1 modifier cannot be used to negate the 
+opponent's TEM for purposes of fulfilling Victory Conditions.
+
+--- PAGE 5 ---
+16.5 Two players are both in danger of having their squad broken. During a close combat struggle, the random draw results in a tie, 
+eliminating both combatants, and both squads are broken. Is the game a tie, with both sides losing? If not, how is victory determined? 
+A. It counts as a loss for both players. 
+16.5, 32, 50.41, Broken Squad, Prisoners, and Surrender 
+Prisoners DO count as casualties toward the calculation of a Broken Squad. 
+Groups which have surrendered but have not been captured do not count as casualties toward the calculation of a Broken Squad. 
+ 
+17.1 CLARIFICATION. Flank status is declared at the time the movement card is played, and is conditional based on the position of 
+the groups involved at the time the card is played. 
+17.1 & 17.7 Can you play a Flank card sideways merely to allow you to change terrain or ford a stream without gaining either of 
+those benefits?  
+A. Yes. 
+*17.3 Insert after "other" in the last sentence" "and in which one group may simultaneously flank two adjacent groups." 
+17.3 Is Natural Flanking Fire lost per 17.41-17.44 or just Flanking Fire generated by the play of a Flank card? 
+A. All forms of Flanking Fire are lost by those actions, including a group playing a movement card to encircle. 
+17.3 In the example below, if Red Group B moves up to Range Chit 2, does it have to choose whether to get natural flanking fire on 
+A or C or does it get natural flanking fire on both? 
+BLACK 
+RED 
+A[4] 
+A[0] 
+B[3] 
+B[1] 
+C[4] 
+C[0] 
+Red Group B gets natural flanking fire on both Black groups A and C.  
+Black groups A and C get natural flanking fire on Red group B.  
+17.4 Can ordnance get flanking fire against infantry targets? 
+A. No. 
+17.4 In a group at Relative Range 1 that has flanking fire on an opponent, would a wounded man with a bolt action rifle have a 
+firepower of 1 or 0? 
+A. His firepower would be 1. 
+CLARIFICATION: Perform all halving and doubling of firepower before rounding down fractions. This applies to all modifiers of 
+firepower. 
+17.4 and 28.53 Play of a movement card to attempt Bog Removal is not sufficient to break Flank status. 
+17.44 ADD: Flanking fire is lost if the flanking group completes a lateral group transfer. 
+17.6 This rule states, "To be eligible for Encirclement, the adjacent enemy group must have an opposing group directly in front of it. 
+These two encircling groups do not have to be capable of fire; they merely have to exist." 
+This implies that range doesn't matter.  
+A. Incorrect. In 17.62, the directly opposing group must be at RR2 or closer to the encircled group. 
+This implies that you don't need a functioning weapon.  
+A. Correct. 
+17.6 Rule 17.6 states that the encircling group must play a sideways Movement card "while still at relative range 4" to encircle. Rule 
+17.63 implies that a group does not have to be at Relative Range 4 to encircle, but could be at Relative Range 3, etc., so long as they 
+are behind the target group. These seem contradictory, which is correct? 
+A. There is no contradiction. Encirclement has to occur at Relative Range 4, but the range may change thereafter, still leaving the 
+enemy group encircled. 
+17.6 & 48.33 Are reinforcements, entering in a sideways mode (without the Flanking Fire card of 35.3) at Range Chit 0 and behind 
+an adjacent group A or D, entitled to Flanking Fire advantages? 
+A. Yes. 
+17.6 In the example below, if Black Group A makes a Lateral Group Transfer to B, can it simultaneously encircle RED Group C? 
+BLACK 
+RED 
+A[4] 
+A[0] 
+B[0] 
+C[2] 
+C[2] 
+A. No.
+
+--- PAGE 6 ---
+17.613 Are panic values reduced for purposes of rout resolution? 
+A. No. The Panic value is decreased, not the Rout formula on the back of each man's card. 
+*17.62 Add to end: "or both encircling groups find themselves '"In front of"' the encircled group." 
+17.62 If an encircled group retreats so that both the encircling groups are in front of it, but still closer than Relative Range 1, is the 
+encirclement broken? 
+A. Yes. 
+*17.7 Add to end of 8th sentence: "unless its Lateral Group Transfer did not depend on the success of the other group vacating the 
+area it is moving to." 
+17.7 When making a Lateral Group Transfer, can another Movement card be subsequently played on one of the involved groups in 
+the forward/reverse mode before completing the transfer by play of a Terrain card? 
+A. No. 
+17.7 This rule states that a lateral group transfer is not complete (i.e. the new group chit is not placed) until terrain is placed and 
+accepted. How does that apply in a group exchange? Do both groups need to have terrain placed before the transfer is complete?  
+A. Yes. 
+If one group rejects discarded terrain, is the transfer nullified?  
+A. Yes.  
+Must both groups play terrain in the same turn for the transfers to be effective?  
+A. Yes. ID Chits are exchanged once both groups have ACCEPTED or received new terrain.  
+Example: If either one of the groups rejects terrain, it loses it movement status and the transfer of both groups is canceled. However, 
+if one of the two groups involved in a group exchange has terrain discarded on it, and the terrain is accepted, the other group involved 
+MUST be placed in Terrain (or open ground) during its turn as its sole action for that turn, thereby completing the group exchange. 
+Incorrect Example: If two groups are both making lateral transfers (e.g. group C to D and group B to C) then if the leading group (C) 
+fails it's transfer, then the other group (B) could not transfer either. If C fails, could they try again prior to B completing their transfer, 
+thus allowing both to transfer without B having to play another movement card?  
+A. No, the situation described above is illegal. See 17.7, third sentence: "Such a group ID transfer can occur only if there is no other 
+friendly group in that position at the start of the turn." So B could not go to C until the turn after C became D. 
+17.7 When groups are exchanging positions, could the move be completed when one group plays a terrain card and the other plays a 
+second movement card (assuming the terrain they are leaving is not marsh or stream)? 
+A. No. 
+17.7 If two groups are exchanging positions and one group is completely eliminated before they could place terrain, is the remaining 
+group allowed to go into the new position (assume B and C are in a group exchange, and B is eliminated, can C, on its turn, become 
+B by placing terrain)? 
+A. Yes. 
+17.7 & 17.9 Can a group Z or E be created if the enemy has created such a group via reinforcements?  
+A. Yes. 
+If so, is the "threat" of such a group (e.g. known reinforcements coming in as E later in the game) enough to allow you to create a 
+counter group (E) prior to the entry of the reinforcements?  
+A. No.  
+Clarification: You cannot create a group Z nor a group E except as the result of reinforcements. 
+17.8 Can a man being transferred between stationary groups be affected by a red To Hit RNC draw? 
+A. Yes, as per 25.31, the transferred man is affected the same as the defending target group.  
+17.8 If Groups A & C each transfer a man to Group B simultaneously, can B receive both of them with one action?  
+A. Yes. 
+17.8 This rule uses the term "man" instead of Personality card, but, for completeness, can an IG make and individual transfer?  
+A. Yes, but 34.3 applies.  
+17.8 May a man make an Individual Transfer into or from a group that has a Movement card in play from a previous turn? 
+A. Yes. 
+17.8 When a man is in the process of transferring and the receiving group is fired on, what position does the transferring man occupy
+
+--- PAGE 7 ---
+for purposes of the fire resolution? 
+A. Transferring men are always attacked first. 
+17.8 When an individual transfer takes place, the group receiving the transfer can not be rearranged at that time (3.3). Where then do 
+the transferring men go? Are the placed at the front of the group, at the back, or can they be placed anywhere they want, just so long 
+as the rest of the group order is not changed? 
+A. They can be placed anywhere the owning player wants, just so long as the rest of the group order is not changed. 
+Example: Group A - 5, 7, 2, 10; Group B - 3, 8 (transferring), 11 can become: 
+Group A - (8, 5, 7, 2, 10) or (5, 8, 7, 2, 10) or (5, 7, 8, 2, 10) or (5, 7, 2, 8, 10) or (5, 7, 2, 10, 8). 
+*17.8 Insert in the 5th sentence between "move" and "until": "from that range chit". 
+17.8 & 11.13 Can the holder of a crew-served weapon begin an individual transfer if the weapon is currently crewed? Can the 
+crewman? 
+A. No. No.  
+17.8 & 20.39 If an opposing group wishes to infiltrate a group whose last member is in the act of a transfer, does the infiltration 
+attempt suffer the two-column shift to the right for movement? 
+A. Yes. 
+17.8 Before an Individual Transfer is completed, the opponent places wire on the "sending" group. Since the Transfer was begun 
+when the sending group had no wire, can the transfer still be completed? 
+A. Yes. 
+17.8 Can an individual transfer INTO a group in wire? 
+A. Yes. 
+17.8 If an individual uses a "ford" movement card for an individual transfer out of a stream is the fording automatic? If the individual 
+is fired upon and pinned before he completes the transfer is he returned to the stream? 
+A. Yes. Yes. 
+17.8 Can a Hero be immediately played upon a man just pinned in a transfer, allowing him to continue the transfer? 
+A. Yes. 
+17.8 A man in the act of Individual Transfer may not participate in the Fire Attacks or any other action of the groups he is between, 
+other than to be received by one of those groups, thus ending the Individual Transfer. A man in the act of Individual Transfer is 
+subject to the effects of any attacks made on the groups he is between as if he were a member of both groups. 
+17.8 Can men in the process of Individual Transfer fire? 
+A. No. 
+17.8 Can a transfer be cancelled, returning the transferees to their original group, as that group's sole action, merely by announcing 
+that intention and removing the transfer chit(s)? 
+A. No. 
+17.9 If a new group is being created, can the transferring men be attacked as the new group, even if it has not yet been placed?  
+A. No.  
+17.92 Can the opponent play terrain on the not yet created group, thus creating the group (or not if terrain is refused)? If yes, what 
+happens if the transferring PCs decline the terrain? 
+A. Yes. They are sent back to the original group, and are not still transferring. 
+ 
+*18.1 Insert after 3rd sentence: "Exc: An infiltrator who is eliminated leaves his weapon in the infiltrated group.  
+18.1 & 20.8 Do unposessed weapons remain with captured terrain and thus become subject to future acquisition attempts?  
+A. Yes.  
+18.1 Does the principal operator of a crew-served weapon leave his weapon behind even if the weapon is not currently being served 
+by a crewman?  
+A. Yes.  
+18.2 The primary operator of a crewed weapon is killed, and the crewman is pinned. If another member of the group acquires the
+
+--- PAGE 8 ---
+weapon before the crewman is rallied (and, therefore, able to acquire it automatically), is the crewman still considered to be crewed 
+to the weapon?  
+A. Yes.  
+18.21 May an armed man give his primary and only weapon to an unarmed man?  
+A. No, unless the armed man is wounded.  
+18.21 & 33.3 To clarify these two rules:  
+A pinned man can never be involved in a weapon exchange.  
+Weapon exchanges of primary weapons must involve at least one wounded man.  
+Weapon exchanges of secondary weapons need not involve a wounded man.  
+18.22 Does an assistant crewman still have crewman status when the principal operator of a crew served weapon is KIA in regard to 
+a close combat attack?  
+A. Yes, but be sure to note Rule 20.71.  
+18.4 Does the playing of a movement card to remove wire result in the loss of any unacquired weapons?  
+A. Yes.  
+18.4 Does the play of artificial terrain, i.e. smoke or wire, cause the loss of any unacquired weapons?  
+A. No.  
+19 Weapon Malfunction 
+If an Ordnance weapon is firing using the To Hit process (25.3), and the To Hit RNC is in the range of the malfunction values for that 
+weapon, the Ordnance weapon malfunctions, automatically. 
+If a group is conducting a Fire Attack (6) then ALL weapons in the group are considered to be firing with the following exceptions: 
+ Flamethrowers designated as not firing 
+ Secondary weapons (e.g. Demo Charge, panzerfaust) 
+ Ordnance 
+ Non-firing infiltrators 
+ Weapons of designated assistant crewmen (however, continue reading)  
+If an RNC drawn to resolve the Fire Attack is equal to the malfunction value of only one weapon, that weapon malfunctions 
+automatically, and no RPC is drawn to determine which weapon malfunctions. 
+Example: Japanese Group comprised of R, R, R, LMG. The RNC is a RED 5. The LMG automatically malfunctions, because it is the 
+only weapon with a malfunction value of a RED 5. 
+If the group is comprised of only one armed man, that weapon automatically malfunctions, and no RPC is drawn. 
+Example: In the following four groups: (R; MP; LMG; R, Unarmed Man), no RPC is drawn to determine which weapon 
+malfunctions. 
+If none of the previous cases applies, then an RPC is drawn to determine which position is affected by the malfunction. Do include 
+Unarmed men, and DO NOT include Men transferring. The following results and their impacts are (use the first case that applies): 
+ Unarmed man - no effect. 
+ Man is currently pinned - weapon malfunctions, no effect on FS. 
+ Ordnance weapon or its designated crewman - no effect. Note that an ATR using FP is not considered firing as ordnance, 
+and therefore both the ATR and the crewman are subject to malfunction. 
+ Designated non-firing Flamethrower or Infiltrator - no effect 
+ Designated crewman of a firing MG - no malfunction, continue attack with -1 FS 
+ Weapon with 0 Firepower at the current range - weapon malfunctions, continue attack with -0 FS 
+ Firing weapon malfunctions, and attack continues with one less FS for every 2 FP factors the weapon was contributing to 
+the attack, fractions rounded up.  
+Malfunctioned weapons have a base malfunction number of red 6 regardless of the malfunction number printed on the card. 
+19.13 Does a 5-man group containing an unarmed man check for malfunction under the "5" column?  
+A. Yes. If the unarmed man's position malfunctions, there is no reduction in fire strength. The same process holds for groups with 
+non-firing weapons, such as an unpinned flamethrower beyond Relative Range 5.  
+Japanese LMG Malfunction 19.13, 19.14, 19.2 and 45.52 The Japanese conduct a fire attack with a group including their LMG. A 
+red 5 is drawn as an RNC, and the LMG malfunctions. If in the course of the SAME attack, a second red 5 RNC is drawn, is the 
+LMG removed? Assuming the above attack continues without a red 5/6 RNC being drawn, what if, in a SUBSEQUENT attack, made 
+by this group before the LMG is repaired, another red 5 is drawn. Is the weapon removed?  
+A. No. No. The breakdown number of any malfunctioned weapon is a red 6.  
+19.13 & 19.14 These rules seem contradictory on the malfunction of a weapon of a designated Assistant crewman; which is correct?
+
+--- PAGE 9 ---
+A. Both are. 19.14 refers to already malfunctioned weapons and those of pinned men and takes precedence over 19.13 when either of 
+those conditions exist. In other words, the weapon of a designated Assistant Crewman is safe from malfunction unless he is pinned or 
+that weapon is already malfunctioned.  
+19.15 Does a non-fully crewed LMG (or a captured weapon) automatically malfunction if firing from a group containing only regular 
+rifles on a red "6" RNC?  
+A. No for the LMG. The LMG would automatically malfunction on a red 5 RNC, but if a red 6 is drawn, the question of which 
+weapon will malfunction is resolved normally. A captured weapon would automatically malfunction on a Red 5 or 6, per 20.741. 
+Should there be more than one weapon that malfunctions on a red 5 RNC, then an RPC should be drawn to determine which eligible 
+weapon malfunctions.  
+19.15 If a fully crewed LMG is using its bracketed firepower to fire from a stream, does it malfunction on a red 5 RNC?  
+A. Yes.  
+19.15 When playing a Hero on the German LMG, you double the bracketed firepower. Is the LMG therefore considered to be firing 
+with the bracketed malfunction rates?  
+A. No. However, that same German LMG playing a Hero card while firing from a stream WOULD breakdown on its bracketed 
+malfunction rates.  
+*19.15 EX Delete "or red 6". Add at end: "Should a red 6 be drawn, the question of which weapon may malfunction is resolved 
+normally."  
+19.3 & 20.6 Can more than one repair attempt be made per group per turn or can more than one man drop his infiltrator per group per 
+turn?  
+A. No; "sole action".  
+19.3 Can an AFV repair a weapon while it is stunned?  
+A. No.  
+19.4 If a mortar is eliminated through a failed repair attempt, does the PC still get the stated Firepower at close range? If yes, does the 
+mortar need to be crewed to get that Firepower? Likewise, if at close range with an enemy, can the mortar be uncrewed so as to get 
+both the Firepower of the mortar and that of the ex-crewman?  
+A. You do not get the Firepower form an eliminated mortar. A mortar does not need to be crewed in order to get the stated Firepower 
+at close range.  
+20.2 May a player elect to cancel remaining designated infiltration attempts upon seeing the result of earlier ones?  
+A. No.  
+20.24 & 52.13 Can a man in a Wadi infiltrate normally or only with a Movement card?  
+A. Only with a movement card.  
+20.3 Must the decision to play a Concealed card be made prior to the RPC draw?  
+A. Yes.  
+20.39 The last member of Group A has begun an individual transfer to Group B. An enemy group wishes to infiltrate Group A. When 
+checking for infiltration, does the attempt suffer a two-column shift to the right for movement?  
+A. Yes.  
+20.5 If an infiltrator is KIA, what happens to his weapon?  
+A. The weapon is in his group if he was KIA by a fire/sniper attack. The weapon is in the infiltrated group if he was KIA in Close 
+Combat.  
+*20.51 Insert after "Fire attack": "by his group".  
+20.52 If two friendly groups that have infiltrated a common enemy group enter Close Combat on the same turn, is the Close Combat 
+resolved as one large Close Combat, i.e. simultaneous, or as two separate Close Combats?  
+A. They are resolved as two separate Close Combats.  
+*Add 20.57 An infiltrator may attempt to acquire any unpossessed weapon of the infiltrated group as if it were his own group (18.2), 
+unless that weapon still has a designated assistant crewman.  
+*20.72 Delete "unpinned".
+
+--- PAGE 10 ---
+20.73 An infiltrator enters close combat with a man carrying a demolition charge. The infiltrator defeats his opponent by more than 3,
+allowing him to keep his infiltrator status. Under rule 20.74, he is entitled to the enemy demo charge, but how does he set it off?  
+A. The infiltrator must drop his infiltrator status and re-infiltrate to set off the demo charge. The best way to respond to capturing the 
+weapon in this situation is to decline keeping infiltration status after the Close Combat, even though it could be maintained.  
+*20.74 Add to end of first sentence: "or removing it from play." Add at end: "The man may later voluntarily abandon or destroy his 
+captured weapon only as his group's sole action for the turn."  
+20.74 Can Light Anti-Tank weapons be captured in Close Combat?  
+A. Yes, but the killed man's primary OR secondary weapon may be captured. The other weapon requires an acquisition check on a 
+subsequent turn if possible or applicable.  
+*Add 20.742 If two men eliminated each other in CC their weapons remain in the infiltrated group for possible acquisition - 
+including acquisition by any infiltrator of the group."  
+20.8 When a group is eliminated in CC and its terrain is captured, is the capturing group also entitled to a change of range or Group 
+ID chit?  
+A. No.  
+20.8 Is the last played terrain card of an infiltrated group which has been eliminated while in the act of a double move subject to 
+capture?  
+A. No, because it is occupying Open ground. However, that Open ground could be captured by claiming the first Movement card and 
+flipping it over.  
+20.8 If a group that has infiltrators fires at the infiltrated group using all of the men in the group, thereby losing infiltration, and the 
+enemy group is completely eliminated, are the attackers still considered infiltrators for purposes of terrain capture?  
+A. No.  
+20.9 CLARIFICATION: Berserk status allows CC in situations not normally allowed (i.e. vs. Pillbox or Minefield or from a Pillbox, 
+Wire, Stream or Marsh). No infiltration check is made, and there is neither modification made nor any check taken due to terrain or 
+artificial terrain situations. 
+20.91 & 20.74 Does 20.91 regarding principal operators of crewed weapons take precedence over 20.74?  
+A. Yes; operators of crewed weapons cannot capture weapons.  
+21.1 Men armed with certain weapons are not able to carry secondary weapons, such as a demolition charge. Say a group is made up 
+of a man with a flamethrower and a man carrying a demo charge. The man with the FT is killed. In order for the other man to acquire 
+the flamethrower, he must abandon the demo charge. Rule 45.6 would seem to establish a precedent for this abandonment NOT 
+counting as an action, as would rule 18.21. Does abandonment of a secondary weapon count as a separate action from the attempt to 
+acquire the weapon?  
+A. In this instance, the acquisition of the primary weapon and abandonment of the secondary weapon are simultaneous. However, 
+additional clarification is needed.  
+A primary weapon that does not allow its possessor to carry secondary weapons may not itself be possessed as a secondary weapon. 
+Otherwise, a man abandons his currently possessed secondary weapon when he SUCCESSFULLY ACQUIRES the new secondary 
+weapon. Additionally, a man may acquire a primary weapon that does not allow the possession of secondary weapons only by 
+abandoning ALL currently possessed weapons upon acquiring the new primary weapon. Conversely, a man with a primary weapon 
+that does not allow possession of secondary weapons must acquire the primary and secondary weapons of a killed man as two 
+separate actions.  
+21.2 Does an infiltrator who sets off a Demolition Charge lose its infiltration status?  
+A. Yes - as per normal application of 20.53.  
+21.2 How can a Demo Charge be used with a strength of 8 against an AFV?  
+A. It can't. A Demo Charge can be used versus armored targets only in CC and only as a +4 CC DRM (28.81).  
+21.3 Do Smoke or Fire cards modify a Demo Charge attack?  
+A. Only Smoke cards on the defender's group modify a Demo Charge attack.  
+22.1 Do flamethrower attacks negate the -1 modifier of a defender's entrenchment?  
+A. Yes.  
+22.5 Can each man's boxed value of one (at RR5) be combined with the boxed value of a FT in attacking a pinned Open Topped
+
+--- PAGE 11 ---
+AFV?  
+A. Yes. 22.5 (Last line in parenthesis).  
+22.5 Can a group of rifles and a FT make two attacks vs. an unpinned open topped AFV (assuming the correct fire card(s)), one with 
+their firepower (rifles + FT) vs. the exposed crew using the unboxed defensive values and then the second boxed attack (1 per man + 
+FT) vs. the boxed defense?  
+A. Yes. This is the reference provided in the last sentence of the rule.  
+22.5 Does the FT man also have a 1 boxed firepower in addition to the FT (like riflemen have)?  
+A. No, the FT's firepower is already boxed and that is the boxed firepower available to that personality card at relative range five. It 
+does not get a bonus boxed firepower of "1" at Relative Range 5 per 28.7.  
+22.5 Would a FT man have a boxed fire power of 1 when the FT is malfunctioned or if he is unarmed?  
+A. Yes, and this applies to non-FT men.  
+23.8 Can a pillbox be encircled?  
+A. Yes, but 23.8 overrides the effects of 17.612 (i.e. Flanking Fire Vs a pillbox is obtainable only by 23.7).  
+24.33 Which Flank Armor Defense value is the one to use for a minefield attack?  
+A. The Immobilize defense value.  
+24.33 How does an AFV exit a minefield?  
+A. Minefield attacks versus an AFV are treated the same as if they were against an infantry group, except that it attacks with a base 
+anti-armor strength of 1. The AFV defends with its immobilization Flank Armor Defense.  
+24.6 & 52.11 Are minefield cards removed from the deck in a Desert scenario if rejected by the opponent or accepted and 
+subsequently proved fake?  
+A. No.  
+25.3 Can Ordnance opt not to fire, and just discard the fire card, after seeing all the modifiers (as in a fire attack) after concealment is 
+played (or even if there is no concealment)?  
+A. Yes, this is the same situation described in 6.5. The attack may be called off once the To Hit number is known, but not after 
+drawing the To Hit result.  
+*25.41 Change "normally" to "only".  
+25.5, 25.6 A non-moving piece of ordnance has its "to hit frequency" modified by range, wire and a concealed card to needing a RNC 
+draw of 5 to hit its non-moving target. A red 5 is drawn as the RNC. Does the ordnance malfunction instead of making a hit?  
+A. Yes.  
+25.8 What other AFVs can fire smoke?  
+A. British AFVs with an anti-armor Effect Number of 4 or more can fire smoke.  
+25.8 The Italian AFV #32, the Flamethrower has an anti-armor effect number of 4 or more, but only at Relative Range 5. Can the 
+Italian Flamethrower lay smoke?  
+A. No.  
+25.8 Can an AFV place smoke if its main armament is malfunctioning or broken? 
+A. No. 
+26.3 If a mortar is eliminated (through a failed repair attempt) does the PC still get the stated firepower value at close range?  
+A. No.  
+Likewise if at close range with an enemy, can the mortar be uncrewed so as to get both the FP of the mortar and that of the ex-
+crewman?  
+A. Yes, if the mortar is normally operational.  
+This is a different situation than described in 28.7.  
+27.1 A group just played a movement card sideways to change Group ID and is fired on by ordnance. Is the old (current) ID chit the 
+one acquired, or is the new ID chit acquired (the one the group will become when a terrain card is played) that is acquired?  
+A. Neither! Ordnance cannot gain or maintain acquisition on a moving group.  
+27.1 Says "Only a mortar, IG, or AFV...qualify for Target Acquisition. Is the Japanese Grenade Launcher considered a Mortar for
+
+--- PAGE 12 ---
+acquisition?  
+A. Yes.  
+27.1 & 51.6 Can the two different guns of a Char B1 each acquire a different target and maintain acquisition while the other fires at a 
+different group?  
+A. No.  
+27.2 & 28.43 
+ An AFV loses acquisition when it becomes Buttoned Up 
+ An AFV that is already Buttoned Up may gain acquisition 
+ An AFV that goes from Buttoned Up to Crew Exposed does not lose acquisition  
+*Add 28.32 The TEM of an AFVs current terrain does not affect fire versus the Morale and CE defense value of that AFV. The TEM 
+of an AFVs current terrain does affect the fire strength of a hit against the Armor and Flank defense values of that AFV (EXC: Hull 
+down; 28.92). The movement status of the defender does not alter the Fire Strength of a hit against AFV targets.  
+*28.4 In the 2nd Paragraph, 2nd sentence, delete "also exceeds"; substitute "greater than or equal to".  
+28.43 Does a FT AFV suffer a -1 to the Fire Strength of a FT attack if it has a -1 commander killed chit on it?  
+A. Yes.  
+28.46 Does this flank shot apply to non-ordnance shots when an AFV plays a Sideways Movement card?  
+A. No.  
+28.52-53 These rules never specifically state that a Bogged AFV's movement card (if one is in play) is discarded. Does a Bogged 
+AFV stop moving?  
+A. The AFV's movement card is removed upon entering terrain, before checking for Bog. If the AFV somehow BOGs while moving 
+(i.e., by a wire discard), then yes, the move card is discarded.  
+28.61 Can a Concealed card be played to aid the defense of an AFV or its crew against a non-ordnance attack?  
+A. No.  
+*28.7 EX Delete: "and a red 2 RNC would immobilize it." Substitute "or immobilize it (depending on the color of the next RNC 
+drawn)."  
+28.7 This rule and example are a bit confusing. I think that there are a number of typographical errors in the example (for instance 
+"...they also have an inherent boxed 6 firepower 3..." The number 6 makes no sense in that statement, or I've completely missed 
+something in the rules.  
+A. Correct. Delete "6".  
+When using inherent boxed firepower vs. an open-topped AFV (and also the flamethrower's boxed FP VS. any AFV) do you add the 
+fire strength value of the fire card played to the RNC?  
+A. Yes. The fire strength of the card is both the unboxed fire strength and boxed fire strength.  
+28.7 Can infantry boxed firepower of 1 per man at Relative Range 5 be used against a closed top AFV?  
+A. NO! The rule is explicitly labeled vs. Open-Topped AFVs.  
+28.72 Would an AFV on both sides of an infantry group allow it to deduct 2 from the Fire Strength of any attack made against it?  
+A. No.  
+28.8 Once a man has infiltrated versus an AFV, does he have to play a Movement card or undergo a Morale Check in order to attack 
+that AFV?  
+A. No. Either a Morale Check or Movement card was required for the Infiltration attempt, but once infiltrated, the CC attack occurs 
+immediately with no further requirements.  
+28.81 Would an Open Topped AFV be considered CE (for table 28.81 purposes) even when pinned?  
+A. No.  
+28.81 Can an Open Topped AFV ever be Buttoned Up (i.e. does pinned = buttoned up for table 28.81 purposes)?  
+A. No, the +3 for an OT-AFV applies.  
+28.81 In table 28.81, for the AFV to get the -2 modifier for "adjacent, unpinned infantry at same range", does this mean that the
+
+--- PAGE 13 ---
+entire group must be unpinned or will one man suffice?  
+A. Only one man is necessary to satisfy this condition.  
+28.9 What effect does being Hull Down have on an Infantry Gun being fired on by non-ordnance weapons?  
+A. None, other than the normal application of the terrain card's TEM.  
+29 Can an AFV cancel an overrun attack after a concealed (or of even if no concealed) card is played?  
+A. No.  
+29.2 If an AFV has a functioning FT when doing an overrun attack, does the defender get their terrain modifier?  
+A. No.  
+29.2 Can a FT AFV (or any other AFV) malfunction on an overrun?  
+A. Yes.  
+29.5 After an AFV has overrun an opposite group and then moves through it, could it then play a sideways movement card to 
+encircle it if there is a friendly adjacent group?  
+A. No, rule 20.5, last sentence.  
+ 
+*30.3 Note that an incorrect counter face was shown as the reverse side of the Panzerfaust marker. 
+30.3 Do you need a fire card to fire a Panzerfaust? 
+A: Yes.  
+30.6 Is the rulebook correct in that an ATR IMPROVES its To Hit Frequency when it has Flanking Fire privileges? 
+A. Yes. Note the "-1 Flanking Fire To Hit Modifier" noted on the ATR cards actually improves the To Hit # since a To Hit # of 1 is 
+easier to hit than a To Hit # of 2. 
+32.11 This rule states "A player may capture a prisoner by willingly deducting two from his CCV prior to the resolution of any CC 
+attack." Nowhere does it state when to make the decision to attempt a capture. Does this mean that you can wait until you see the 
+odds and then decide to make take prisoners? If you have 2 on 1, can you try to take the man prisoner, but if you lose, change to 
+normal CC when attacking 1 on 1? 
+A. No! Declarations to attempt to capture prisoners must be made when calculating CC values! That commitment remains throughout 
+the Close Combat. If soldiers A and B attempt to capture enemy soldier Z in Close Combat and soldier A is killed in the first round, a 
+second round is immediately fought, with B attempting to capture soldier Z. 
+32.12, also 10.1 CLARIFICATION: In order to be eligible to capture prisoners through the Rout method (32.12) the capturing group 
+must contain at least one unpinned personality card. 
+32.12 & 16.42 By capturing a man and bringing him into a group, and then stopping in suitable terrain, does the attacker satisfy the 
+Relative Range 5 requirement of the Victory Conditions, if, in so doing, it eliminates the only Relative Range 5 enemy group? 
+A. Yes. Note, this rule is in effect to prevent a player from routing men to avoid victory by the opponent. 
+*32.21 Insert after "firepower": "and CCV". 
+33.1, also 6.53 The rule states a wound can occur when a man routs or when a KIA result occurs with an RNC that exactly matches 
+the minimum KIA value. Take as an example PFC Fox, who has a Morale of 4 and a Panic of 5. Assume Fox is pinned, and an attack 
+occurs with a Final Combat Resolution Number that equals 7. The card also has a "4" under the "7w" column and the card also has a 
+"3" under the "0r" column, which under rule 6.53 means he is removed from play by Panic. What is the status of PFC Fox? 
+A. PFC Fox is eliminated due to Panic, and is worth 2 victory points to his opponent. The wording of the rules take special care here, 
+much like weapon malfunction. To summarize for a PC to be wounded: 
+On his good order side, the Final Combat Resolution Number must equal his KIA value for there to be the possibility of a wound. 
+On his Pinned, non-colored side, a Final Combat Resolution Number exactly equal to the KIA value (generally 9) always yields a 
+possible wound. 
+If the Final Combat Resolution is greater than or equal to the man's Panic value, but less than his KIA value there is also a possibility 
+of a wound. However, the 0r column of the card must first be checked to determine if the man panics or routs. Only if the man Routs 
+is there the possibility of a wound. Panic is only equivalent to a KIA for specific purposes. 
+33.1 Can a man be wounded while voluntarily routing? 
+A. No, but he can be killed. See rule 6.53. 
+33.7 Exactly when during the turn do you check for wounded? At the end? At the start?
+
+--- PAGE 14 ---
+A. The first card of the first full turn of a new deck. 
+Also, if you deplete the deck during the turn of a player with a wounded man, do you check that turn or the next? 
+A. Next turn. 
+34 & 25.1 How does an Infantry Gun repair? 
+A. An IG is ordnance. Therefore, it repairs normally (19.3) using the Repair values on the "Malfunction Ordnance" marker; i.e. black 
+0-6 for Repair, and red 6 for Remove.  
+34 If an IG malfunctions and then becomes inoperative, is the IG card still in play? 
+A. Yes. 
+If so, can it still move normally? 
+A. Yes, but note rules 34.2 and 34.7 
+34.4 CLARIFICATION: 
+An AFV with both a boxed and unboxed attack values may only attack the IG with its unboxed attack value (per 25.42) and, thus, the 
+IG defends against such an attack with its boxed KIA defense values. 
+Mortars and Artillery affect an IG's boxed defense values. 
+IG's attack other IG's per 25.42 and 34.4. 
+Ordnance without an unboxed effect number, and not meeting the conditions of 34.4 is resolved per 44.6. 
+35 When reinforcements or random reinforcements include an ASL, and there is already an ASL in play, does this new ASL function 
+as an "auxiliary" ASL, in case of the loss of the original SL or ASL? 
+A. Yes. 
+35 Reinforcements usually come in at Range Chit 0. If an enemy group has advanced to Range Chit 6, and has an opposing group in 
+front of it, this creates a situation very similar to natural flanking fire and/or encirclement. Are reinforcements, entering in a sideways 
+mode (and without the Flanking Movement card mentioned in 35.3) at Range 0 and BEHIND an adjacent group A or E, entitled to 
+Flanking and/or Encirclement advantages? 
+A. Flanking, yes; Encirclement, no. Encirclement, however, may occur in a future turn. 
+35.2 Is the movement card played in a sideways mode or into the discard pile? 
+A. Into the discard pile. 
+36 A group is entrenched in Brush for a total TEM of -2. Wire is discarded on the group. The Entrenchment Chit says "NA if pinned 
+or in Wire." What is the TEM for the Group? 
+A. The TEM of the Group is -1. Brush is -1, Entrenched is -1, Wire is +1. The statement on the back of the entrenchment chit means 
+not allowed (to entrench) if pinned or in wire, per the first sentence of 36.1. 36.2 specifies the conditions for removal of the 
+Entrenchment chit. 
+37.1 & 43.5 Can Partisans be considered Elite? 
+A. No. 
+38.3 & 38.5 Does a Group whose SL fired a starshell qualify as "Fired Last Turn"?  
+A. No. 
+38.3 If you play a fire card on a group at night, and after seeing the final modified Fire Strength of the attack decide not to fire, is the 
+target group considered "fired on" to get the +1 modification for the purposes of an Observation Attempt? 
+A. No, you decided not to fire! 
+38.5 For starshell purposes, can the ASL take over the SL starshell capability when the SL has routed or is KIA? 
+A. No. 
+38.5 Starshells are stationary. If a Group has a Starshell placed on it, and the Group moves forward or backward, it is not illuminated 
+by that Starshell. 
+38.51 If a group that has a starshell on them plays a movement card and increases its range chit, what becomes of the starshell? What 
+happens if a group has a starshell on them makes a lateral group transfer under the same circumstances? 
+A. In both cases the Starshell stays at the former range chit and is marked with its own range chit. The group is still illuminated by it 
+as are any other groups adjacent and at the same range as the starshell. 
+38.7 What is meant by "observation being necessary for retrograde"?
+
+--- PAGE 15 ---
+A. It means a group cannot perform Retrograde (5.51) unless it has observed an enemy which satisfies the conditions to allow it to 
+Retrograde. 
+39.4 Do paratroops get the +1 firepower if multiple Fire cards are used, some of which have red RNC's? 
+A. No. Note the 1 firepower is for unarmed paratroops only. It is not an additional 1 firepower for armed paratroops. 
+*39.5 Delete: "printed German". 
+39.7 The Morale values of Japanese troops and many nationalities' armor units conflict with the conditions of 39.7. How can this be 
+resolved for DYO purposes? 
+A. DYO pushes many game systems to their design limits and Up Front is no exception. Where armor is concerned, comply with the 
+DYO point cost modifications, and ignore the Morale value contradictions - vehicles retain their printed Morale values (this is in 
+keeping with the designer's stated rationale behind the performance of armor crews in the Designer's Notes). 
+As for troops, when using "Second Line" forces, limit your SL and ASL purchases to the lowest Morale representatives available for 
+that nationality which will comply with the DYO restrictions. Likewise, "Elites" should also be limited to the highest-Morale leaders 
+for that nationality, while complying with DYO restrictions. 
+Thus, the Japanese may only use Sgt. Kodu (#21) for "Second Line" DYO forces; the Italians must use Sgt. Capone (#21) for 
+"Elites". Use of either nation's available Corporals for ASLs is unaffected. 
+*Delete original 41.4 entirely. The original 41.41 became 41.4. A new 41.41 was added as follows: "Fire into a different game must 
+be resolved before attacks from that same game are resolved against the same target." 
+42.42 Can a personality with Morale and Panic values of 7 continue to accumulate Elan points to negate a reduction of his 
+Morale/Panic values caused by Rout? 
+A. No. 
+42.6 & 42.7 If an opposing group fires on a withdrawing group and pins one or more members, is the withdrawing group still able to 
+complete its withdrawal by playing a Terrain card? 
+A. Yes, but the pinned man would not be eligible for Elan Points for surviving the game unpinned. 
+42.72 When an ASL has taken over the squad as per 15.3, is he capable of deciding to pursue? 
+A. Yes. 
+43.0 May Partisans ever receive armor support? 
+A. No. 
+43.2 Does the statement "DYO purchases must include a SL and ASL" apply to all DYO games? 
+A. No, its DYO. 
+43.7 Is the purchase cost of Secondary Weapons 15% more for Elite Troops and 15% less for Second Line Troops? 
+A. Yes. 
+44.6 Change the last sentence to read: ". . . modifiers for wire, hill, or movement) prior to the draw of the RNC to determine its Final 
+Strength." 
+44.8 Does a British FT get the Firepower bonus when attacking infantry by itself? 
+A. Yes. 
+44.8 Does a British FT get the Firepower bonus when attacking an AFV's armored defense values? 
+A. Yes. 
+44.9 This rule states that the British and (via exception) Japanese non-crew served LMGs can only double its firepower with the 
+black RNC Hero card, thus implying that the American BAR can use either Hero card. Specifically "This rule cannot be used for 
+other nationalities (EXC: Japanese)." However, rule 50.6 (DESERT WAR) states "Like all LMGs in the game which are not 
+considered a crew-served weapon, a Hero card can be used to double the LMG's firepower only if the Hero card is also a black 
+RNC." Which rule is correct (as they contradict each other), and how is the BAR handled?  
+A. Both are; nor do they contradict. The BAR is not considered to be an LMG. Either hero card may be used to double its firepower.  
+CLARIFICATION: 
+The American BAR may use both Hero cards, and is not considered an LMG. 
+The British, French, Italian & Japanese LMG ‘s may only use the Black Hero card. 
+The German & Russian LMG’s may use both Hero cards, but doubles its bracketed value.
+
+--- PAGE 16 ---
+45.11 Can the Japanese still discard if they attempt to infiltrate one man (only) using a movement card for the attempt (so as not to 
+take a morale check)? 
+A. Yes. 
+45.11 Can the Japanese still discard if the attempt to infiltrate two (or more) men, all using movement cards? 
+A. Yes. 
+45.11 Can the Japanese still discard if the attempt to infiltrate two or more men and one or more make morale checks while others 
+use movement cards? 
+A. No. 
+45.4 Insert after the third sentence: "However, Banzai may not be declared against an enemy group that is blocked at the time the 
+Banzai is declared." 
+EXAMPLE: 
+BLACK 
+RED 
+A[3] 
+A[0] 
+B[0] 
+B[0] 
+The Japanese player is the red troops. Japanese group A may not declare Banzai versus Enemy group B, because direct movement by 
+Japanese group A to relative range 5 with Enemy group B is blocked by Enemy Group A.  
+45.4 If a group on a Wire card declares Banzai, must they remove the Wire card with their next played Movement card or may they 
+ignore the Wire and move forward? 
+A. Their next Movement card play must be to remove the Wire. 
+45.4 When a Banzai attack is declared, are crewed served weapons uncrewed at that time?  
+A. Yes.  
+Infiltration (20.23) requires loss of crewing, but CC doesn't. If uncrewed I assume then that Heavy Weapons (45.6) are left behind?.  
+A. Correct.  
+45.4 Is the initial sideways Movement card of the Banzai eligible for Terrain placement by an opponent? 
+A. Yes. 
+45.4 
+SITUATION: British Group D is at Range Chit 2, stationary in open ground with a wire card on them. Japanese Group D is at Range 
+Chit 2, and had declared a Banzai the turn before. This turn the Japanese player plays a movement card to Range Chit 3 (Relative 
+Range 5 with the British group). The British on their turn discard a Stream on Japanese Group D. The Japanese then attack in Close 
+Combat from the Stream and fail to defeat all of the British in Group D. 
+If the British counterattack, are the Japanese penalized for being in a stream, or is the modifier for "Attacking in CC" only. 
+A. Yes, the are penalized. 
+Are the modifiers for Stream, Wire and Marsh in this situation for the attacker only? 
+A. No, the modifiers apply to both sides. 
+In the above situation, if the Japanese defeat all the British in the next turn, can they take over the British terrain (Open Ground with 
+Wire on it)? 
+A. Yes. 
+CLARIFICATION: Rule 20.8 should be modified to say, "... is subject to capture by any group currently infiltrating (or Japanese 
+Banzaiing) that..." 
+45.422 May a Japanese man who is the sole survivor of a Banzai Group that has reached Relative Range 5 elect to use a Demo 
+Charge that he possesses, instead of attacking in CC? 
+A. No. 
+What if there are other men in the group, would he have the option of using it? 
+A. No. 
+45.47 The reference to 45.243' should be to 45.423'. 
+45.47 Do the men in the target group of a Banzai attack, on their first turn after the first Close Combat by the Banzai group, need to 
+play a movement card or pass a morale check to perform Close Combat versus the Banzai group? 
+A. No.  
+45.6 This rule states that "heavy" weapons must be crewed in order to play a movement card on that group for any reason, else the
+
+--- PAGE 17 ---
+weapon must be abandonment. If a weapon is "abandoned" but the group does not leave its location (e.g. the movement card was to 
+remove wire) is the weapon still available for acquisition? 
+A. No (18.4).  
+If a group is in the act of moving and a heavy weapon becomes uncrewed (e.g. the crewman is killed) can they still go to terrain w/o 
+crewing the weapon? 
+A. Yes, but the weapon is removed. 
+45.9 & 46.2 Are there different Unit Types for Marines?  
+A. No.  
+46.4 CHANGE: Previous errata deleted. Second sentence of rule should read, "This rule also applies to any nationality and scenario 
+with any combination of two or more BARs/LMGs/MMGs on the same side as such concentration would be unrealistic." 
+47.2 This rule can be misinterpreted as regards the status of Woods cards in a Jungle scenario. In the fifth line, after "Woods card" 
+(the parenthetical reference to "extremely dense jungle"), the word "jungle" should be capitalized, denoting a new type of terrain 
+card, a -3 Woods (Buildings) card. In Jungle scenarios, all -2 Buildings cards are considered to be Woods cards as well. 
+In addition, the following sentence should be inserted at the end of Rule 47.2, after "in a Jungle scenario.": 
+In any Jungle scenario, all Woods cards of any rating, whether printed -2 Woods cards, -2 Buildings cards serving as Woods, or -3 
+Buildings cards serving as Jungle, are considered to be "Jungle" cards for all purposes, especially including calculation of Aggressive 
+Action Victory Points or determination of scenario-specific victory conditions. 
+48.1 It appears that random reinforcements cost 50 points no matter which deck you purchase them for. Is this correct?  
+A. No, normal deck multipliers apply. 
+48.2 If random reinforcements are purchased for the last deck of the game, there is no "free" check for Random Reinforcements at 
+the shuffle of a deck in which the player was eligible for Random Reinforcements. Is this correct? 
+A. This is correct. 
+If so, shouldn't there be a discount for not having the best chance for reinforcements available? 
+A. No, that's the price you pay for buying them so late in the game. 
+48.2 In playing a scenario where Random Reinforcements are available throughout the entire game, a fire attack is made near the end 
+of the first deck. Before the deck ends, a black 6 RNC is drawn and then the deck runs out with a few men left in the fire attack 
+resolution. Is the player with Random Reinforcements now qualified for 2 Random Reinforcement attempts? 
+A. Yes. 
+Can they be made during one turn? 
+A. Yes, all Random Reinforcement checks must be made on the next turn (as in the above situation) or ALL opportunity is lost for 
+receiving Random Reinforcements. 
+Does this apply if two or even three black 6 RNCs are drawn during that attack? 
+A. Yes, and if multiple reinforcements appear, they are combined into one reinforcing group. 
+48.32 If all the men called for by the Random Reinforcement Table are already in the game, can you use a man that is an SL (or an 
+ASL)? 
+A. Yes, and that man could function as the SL if all of the original SL/ASL in the scenario are eliminated. 
+48.33 Do you have to bring in Random Reinforcements into play in the order in which they were obtained? 
+A. Yes. 
+50.41 Add to 3rd sentence after "occurs": "at the end of a turn". Add to 4th sentence after "move": "(nor play terrain)". Add: 
+"(including by snipers)" after "fired upon". 
+ 
+*ACTION CARDS: 
+Change the black 7' under column 9' to a black 1' on card #7. 
+ 
+The Marsh cards should have a TEM of -1, not +1. 
+ 
+All Movement cards with black RNC incorrectly refer to a shift of 2 to the left for an infiltration attempt. This reference should be 2 to 
+the right. Cards #1-3, 5-13, 18, 158 and 159 are affected. 
+ 
+*COUNTERS 
+Two of the ATMM counters contain a misprint on the reverse side they should read "6-0 is EL"; not "1-6 is EL". 
+ 
+PERSONNEL CARDS:
+
+--- PAGE 18 ---
+British: The unpinned CCV value of PFC Shaw (#15) should be 7/4, and his pinned values should be 3/0. 
+ 
+French: The unpinned CCV for Pvt. Rochard (#17) should be 10/5; his pinned values should be 6/1.  
+ 
+German:  
+- *German #23 should be a 'SL' not an 'ASL'. 
+- *German #38 CE-side middle column should be labeled "FT FP"; not "To Hit #". 
+- The pinned CCV of Pvt. Klapp (#27) should be 2/-2, instead of the printed 2/-1. 
+ 
+Italians:  
+- The Personality card and the weapons chit for the Italian ATR have different values. Use the values on the Personality card, but 
+transpose the sets of numbers, using the bracketed numbers for crew-served values, and the unbracketed numbers for uncrewed status. 
+- PFC Napoli (#9) should have an unpinned CCV of 4/3, and a pinned CCV of 0/-1.  
+- The pinned CCV of PFC Leone (#26) should be -2/-1. 
+ 
+Japanese:  
+- Both the unpinned and pinned CCV of Sgt. Okimoto (#1) are misprinted. His unpinned values should be 11/6; his pinned values 7/2.  
+- The pinned and CE flank armor values of #33 differ. The correct CE flank armor values are i: -1/s: 0/K: 1. 
+- The Italian and Japanese ATRs are crew-served weapons. Is there any loss of effectiveness for the firepower aspect of these weapons 
+if they are uncrewed?  
+A. No. 
+- Do they get the 1 firepower factor whether or not they are crewed?  
+A. Yes.  
+ 
+AFVs: 
+- *American #38 should read "CE:9" on the front; not "Button Up". 
+- British AFV #34 should have its name underlined. 
+- British AFV #40's CE- side "0" effect number should be red.  
+- British #42 should be Sexton (i.e. underlined). 
+- Japanese #35 should be Type 1 SP (i.e. underlined). 
+ 
+SCENARIOS 
+- *Replace German #16 in Scenarios B & D with #22. Replace German #16 in C with #9. 
+- Scenario K: The Elite Player may NOT win by Victory Points in the second half of the scenario. 
+- Scenario V has a misprint for the Germans (attacking), as published in the original Banzai rulebook. They should have only 1 LMG; 
+substitute # 8 for #12 . 
+- Scenario W: Are any Buildings cards allowed other than those the defender sets up in? 
+A. No! All Buildings cards are discarded as they appear, as per the normal rules (16.1 and EXAMPLE), as are those the defender sets 
+up in, once he leaves them. 
+- The attacking American squad given for Scenario X should have a point value of 302, not 324  
+(The last two errors were corrected in the charts appearing in the Desert War rulebook).  
+ 
+DESERT WAR OOB Chart Errors:  
+- Italian #2 is armed with a Rifle, not a Machine Pistol. 
+- Japanese #19 is armed with an MP. 
+- There is an erroneous entry for a DC for the Japanese in Scenario La. 
+- United States personality card #12 was omitted off the OOB for Scenario Pa. 
+ 
+NOTES: 
+- Flamethrowers: Sources indicate the Soviet Flamethrower is not an ROKS-2, as it is labeled. Instead it is an ROKS-3. 
+- The graphic for the French flamethrower (the "Lanceflammes P.4") is also incorrect: the weapon had only a single fuel tank, and a 
+very different nozzle.

@@ -1,0 +1,86 @@
+{
+  "game_name": "Home Insurance",
+  "game_id": "home_insurance",
+  "data_dir": "data/policies/",
+  "text_dir": "data/home_insurance_text",
+  "chroma_collection": "home_insurance-rules-semantic",
+  "rule_index_file": "data/home_insurance_rule_index.json",
+  "rule_schema": "keyword_header",
+  "rule_pattern": "(?:^|\\n)([A-Z\\s]{4,})\\n",
+  "cross_ref_pattern": "(?:see|See|SEE)\\s+(?:page\\s+\\d+|[A-Z][a-z]+(?:\\s+[A-Z][a-z]+)*)",
+  "scenario_format": "letter",
+  "scenario_pattern": "(?:^|\\n)\\s*([A-K])[.:\\s]+[A-Z]",
+  "schema_detection_scores": {
+    "chapter_decimal": 0,
+    "numeric_decimal": 0,
+    "outline_parenthetical": 0,
+    "keyword_header": 3
+  },
+  "documents": {
+    "FSR_HomeContentInsPDS.pdf": {
+      "doc_type": "core_rules",
+      "priority": 1,
+      "description": "Product Disclosure Statement for Home & Contents Insurance",
+      "size_mb": 1.01,
+      "total_pages": 82,
+      "max_pages": null
+    },
+    "FSR_HomeContentInsPDS_pre21Dec2025.pdf": {
+      "doc_type": "core_rules",
+      "priority": 1,
+      "description": "Product Disclosure Statement for Home & Contents Insurance",
+      "size_mb": 0.97,
+      "total_pages": 80,
+      "max_pages": null
+    },
+    "POL1388TIO.pdf": {
+      "doc_type": "core_rules",
+      "priority": 1,
+      "description": "Product Disclosure Statement for Home Insurance",
+      "size_mb": 0.68,
+      "total_pages": 92,
+      "max_pages": null
+    },
+    "aami-home-contents-insurance-pds.pdf": {
+      "doc_type": "core_rules",
+      "priority": 1,
+      "description": "Unrelated to game rules or content",
+      "size_mb": 3.76,
+      "total_pages": 104,
+      "max_pages": null
+    },
+    "cba-home-pds.pdf": {
+      "doc_type": "core_rules",
+      "priority": 1,
+      "description": "Product Disclosure Statement for Home Insurance",
+      "size_mb": 5.4,
+      "total_pages": 84,
+      "max_pages": null
+    },
+    "home-and-contents-insurance-pds.pdf": {
+      "doc_type": "core_rules",
+      "priority": 1,
+      "description": "Home and contents insurance policy document with detailed product information",
+      "size_mb": 0.39,
+      "total_pages": 84,
+      "max_pages": null
+    },
+    "home-insurance-ped-current.pdf": {
+      "doc_type": "core_rules",
+      "priority": 1,
+      "description": "Supplementary rules module related to home insurance",
+      "size_mb": 0.06,
+      "total_pages": 4,
+      "max_pages": null
+    },
+    "pds.pdf": {
+      "doc_type": "core_rules",
+      "priority": 1,
+      "description": "Insurance policy document with no apparent wargame rules relevance",
+      "size_mb": 0.56,
+      "total_pages": 34,
+      "max_pages": null
+    }
+  },
+  "glossary": {}
+}

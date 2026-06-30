@@ -1,0 +1,34 @@
+{
+  "total_duration_minutes": 32.29,
+  "overall_total": 50,
+  "overall_faithful": 48,
+  "overall_relevant": 29,
+  "overall_both": 29,
+  "overall_pass_rate": 58.0,
+  "category_stats": {
+    "Fine-Grained": {
+      "total": 15,
+      "faithful": 14,
+      "relevant": 11,
+      "both": 11
+    },
+    "Loose Semantic": {
+      "total": 15,
+      "faithful": 15,
+      "relevant": 14,
+      "both": 14
+    },
+    "Boundary/Edge": {
+      "total": 10,
+      "faithful": 9,
+      "relevant": 4,
+      "both": 4
+    },
+    "Out of Domain": {
+      "total": 10,
+      "faithful": 10,
+      "relevant": 0,
+      "both": 0
+    }
+  }
+}

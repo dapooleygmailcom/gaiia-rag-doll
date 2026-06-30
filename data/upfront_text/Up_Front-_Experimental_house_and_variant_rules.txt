@@ -1,0 +1,98 @@
+--- PAGE 1 ---
+Up Front- Experimental house and variant rules
+Houserules
+Moving Flanking Fire
+12.11 & 17.4 Houserule: when 
+conducting moving Flanking Fire, weapons 
+contribute their moving firepower to the 
+moving group’s total firepower, which total 
+is then doubled for Flanking Fire.
+Individual Transfer
+14.2 & 17.8 Houserule: men who’re 
+Individually Transferring are marked in 
+their current position in the group out of 
+which they’re transferring, being attacked 
+in/retaining that position if the group is 
+attacked and/or they break so that their 
+transfer is cancelled.
+19 Weapon Malfunction
+Houserule: if there is only 1 weapon with 
+usable FP at the given RR, that weapon is 
+the sole firing weapon; it will malfunction 
+without recourse to RPC selection if its 
+malfunction #s are drawn during the 
+resolution of a fire attack (EXC. eg. pinned 
+men’s weapons are always subject to 
+malfunction if their malfunction #s are 
+drawn).
+Variant rules
+V2.4 First player
+Variant: randomly select which side goes 
+first in encounter scenarios. A straight 
+50/50 is good enough (we use an RNC: 
+black- Axis; red- Allied).
+V3.2 & 17.7 Groups with the same ID 
+chit
+Variant: a group can make a Lateral Group 
+Transfer onto the same ID chit as a 
+friendly group if the 2 groups are on 
+different range chits. A group on the same 
+ID chit as a friendly group cannot play a 
+Movement card to advance or retreat to 
+the same range chit as that other group 
+unless: the group is already moving; the 
+group has a Movement card played on it 
+that same turn. Terrain discards abort this 
+manoevure exactly as for transferring 
+groups swapping ID chits.
+V36.3 Entrenching in different terrain 
+types
+Variant: entrenchments can now be placed 
+in Buildings, Gullies and Walls, using the 
+normal rules (36.1) for placement during 
+play. Specific effects of entrenchments in 
+these terrain types are noted below:
+•
+Buildings
+1. TEM: +1 TEM.
+2. INF from: 1 left
+3. INF versus: 1 right
+4. Placement: a group cannot place 
+entrenchments in Buildings during 
+play; they are allocted by SSR.
+•
+Gullies
+1. LOS: a group entrenched on a Gully 
+is not subject to the attack 
+restrictions of 8.2.
+2. TEM: when fired at, a group 
+entrenched on a gully must always 
+claim the entrenchment TEM- and 
+only the entrenchment TEM.
+3. Remove: a group entrenched in a 
+gully may play a Movement card into 
+the discard pile to remove the 
+entrenchments and return to the 
+gully (EXC. not in Wire).
+•
+Walls
+1. LOS: A group  entrenched on a Wall 
+cannot attack or be attacked except 
+by Snipers; mortars and radios; 
+groups on a Hill, or at Relative 
+Range 5 or beyond; and in Close 
+Combat.
+2. TEM: when fired at, a group 
+entrenched on a wall must always 
+claim the entrenchment TEM- and 
+only the entrenchment TEM (EXC. 
+The entrenchment TEM is cumulative 
+with the +1 wall TEM for indirect 
+fire).
+3. Remove: a group entrenched on a 
+Wall may play a Movement card into 
+the discard pile to remove the 
+entrenchments and return to the 
+Wall (EXC. not in Wire).
+Page 1 of 1
+John McLintock

@@ -1,0 +1,8 @@
+{
+  "total_duration_minutes": 321.2,
+  "total_cases": 27,
+  "total_faithful": 24,
+  "total_relevant": 20,
+  "total_perfect": 17,
+  "perfect_pass_rate": 62.96
+}

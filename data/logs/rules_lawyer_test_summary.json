@@ -1,0 +1,46 @@
+{
+  "total_duration_minutes": 247.91,
+  "scores": {
+    "total": 20,
+    "faithful": 18,
+    "relevant": 19,
+    "cited": 17,
+    "perfect": 17,
+    "keyword_hits": 51,
+    "keyword_total": 62
+  },
+  "category_scores": {
+    "direct_rule": {
+      "total": 3,
+      "perfect": 2
+    },
+    "errata_supersession": {
+      "total": 3,
+      "perfect": 3
+    },
+    "cross_reference": {
+      "total": 2,
+      "perfect": 2
+    },
+    "scenario": {
+      "total": 3,
+      "perfect": 2
+    },
+    "concept": {
+      "total": 3,
+      "perfect": 3
+    },
+    "situation": {
+      "total": 3,
+      "perfect": 3
+    },
+    "variant": {
+      "total": 1,
+      "perfect": 1
+    },
+    "multi_hop": {
+      "total": 2,
+      "perfect": 1
+    }
+  }
+}

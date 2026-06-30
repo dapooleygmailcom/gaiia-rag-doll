@@ -1,0 +1,2667 @@
+[
+  {
+    "id": 1,
+    "category": "direct_rule",
+    "query": "What does rule 5.41 say about terrain placement?",
+    "answer": "Rule 5.41 states that placed terrain stays in place until new terrain replaces it [5.41]. According to this rule, even if terrain is no longer usable for Tactical Elasticity Movement (TEM) due to active movement cards, the terrain card remains on the board and is not discarded until new terrain is placed [5.41 & 7.2]. This means a terrain card stays on the table regardless of the number of movement cards in play on that group [5.41 & 7.2].\n\nThere are no errata or Q&A entries superseding this rule based on the provided text.",
+    "context": [
+      [
+        "[Doc: core_rules] [Section: 7.3] [Rule: 7.3]\n7.3 OPPONENT'S TERRAIN PLACEMENT: Any Terrain card other than Open Ground can be placed on\nan opposing group in lieu of a discard (note nationality restrictions on discards; [4.3]). In order to place a\nTerrain card on an opposing group, that group must be currently eligible to receive a Terrain card (i.e. it\nmust have a Movement card in play which is not covered by a Terrain card and does not require\nplacement of a second Movement card before it can leave its present terrain). The player who has just\nhad the Terrain card played against him must then decide to either accept or reject the Terrain card\nplacement (EXC: Stream or Minefield cards can never be rejected) before starting his own turn.",
+        {
+          "doc_type": "core_rules",
+          "cross_refs": "4.3",
+          "source_file": "UF RuleBook updated.pdf",
+          "subsection": "7.3",
+          "content_type": "rule",
+          "rule_number": "7.3",
+          "section_path": "7.3",
+          "priority": 1,
+          "page": 14
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 5.2] [Rule: 5.2]\n5.2 Each group is assumed to occupy the terrain shown on the last Terrain card placed on that group\nunless it has two Movement cards in play (in which case they are in Open Ground). If no Terrain card is\npresent (an occurrence only at game start or upon the entrance of reinforcements), the terrain occupied\nis assumed to be Open Ground. The terrain a group currently occupies is a factor in resolving any fire\nattacks made against that group [6.42], and can occasionally affect attacks [6.41] and movement\n[8.42],[8.53] by that group as well. See also [7.4].",
+        {
+          "content_type": "rule",
+          "source_file": "UF RuleBook updated.pdf",
+          "section_path": "5.2",
+          "page": 7,
+          "doc_type": "core_rules",
+          "rule_number": "5.2",
+          "priority": 1,
+          "subsection": "5.2",
+          "cross_refs": "8.42,6.41,6.42,7.4,8.53"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 5.41] [Rule: 5.41]\n5.41 & 7.2 These rules show that placed terrain stays in place until new terrain replaces it. Thus, even though\nterrain may no logner be usable for TEM due to active movement cards, the terrain cards are left on the board,\nand not discarded until terrain is finally placed. Specifically, a terrain card remains on the table regardless of the\nnumber of movement cards in play on that group.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............",
+        {
+          "doc_type": "core_rules",
+          "page": 8,
+          "content_type": "rule",
+          "section_path": "5.41",
+          "subsection": "5.41",
+          "rule_number": "5.41",
+          "source_file": "UF RuleBook updated.pdf",
+          "priority": 1
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 7.2] [Rule: 7.2]\n7.2 & 5.41 These rules show that placed terrain stays in place until new terrain replaces it. Thus, even though\nterrain may no logner be usable for TEM due to active movement cards, the terrain cards are left on the board,\nand not discarded until terrain is finally placed. Specifically, a terrain card remains on the table regardless of the\nnumber of movement cards in play on that group.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............",
+        {
+          "page": 14,
+          "section_path": "7.2",
+          "subsection": "7.2",
+          "content_type": "rule",
+          "source_file": "UF RuleBook updated.pdf",
+          "rule_number": "7.2",
+          "doc_type": "core_rules",
+          "priority": 1
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 5.3] [Rule: 5.3]\n5.3 Changing the current Terrain card that a group occupies (including placement of a Terrain card on a\ngroup without one) first requires the presence of a placed Movement card above the last occupied\nTerrain card. Since only one Movement or Terrain card may be played in a single group per player turn\n(EXC: [35.4]), it will take at least two turns for a player to change the terrain of a group once play begins\n(assuming the availability of the necessary Terrain and Movement cards, and non-intervention by the\nopponent).",
+        {
+          "section_path": "5.3",
+          "rule_number": "5.3",
+          "doc_type": "core_rules",
+          "subsection": "5.3",
+          "cross_refs": "35.4",
+          "source_file": "UF RuleBook updated.pdf",
+          "content_type": "rule",
+          "page": 7,
+          "priority": 1
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 8.44] [Rule: 8.44]\n8.43 Neither an AFV nor an Infantry Gun may ever enter Marsh terrain.\n8.44 A man in Marsh may not attempt to repair a malfunctioned weapon.\n16\n[EX: A group in the terrain situation shown above is not yet eligible to receive a Terrain card [8.42]. If\nfired upon, the group would not modify the Fire Strength of the attack because the Terrain and\nMovement modifiers nullify each other ([-1] + [+1] = 0). The range number of the group does not change\nyet.]\n[EX: A group in the terrain situation shown above can now receive a Terrain card in future player turns.\nIf fired upon, the group would modify the strength of the attack by +2 ([+1] + [+1] = +2). The range\nnumber of the group does not change because it moved sideways -- neither towards nor away from the\nenemy. Had the second Movement card been placed in an Advance or Retreat mode, the Range\nnumber in his Group Card would have been changed accordingly.]",
+        {
+          "doc_type": "core_rules",
+          "priority": 1,
+          "rule_number": "8.44",
+          "cross_refs": "8.42",
+          "section_path": "8.44",
+          "source_file": "UF RuleBook updated.pdf",
+          "subsection": "8.44",
+          "page": 16,
+          "content_type": "rule"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 8.42] [Rule: 8.42]\n8.42 A new Terrain card cannot be placed on top of a Marsh card until two\nMovement cards (one per turn) have already been placed on top of it. The first\nMovement card placed on top of a Marsh card must be played in the sideways mode and does not\nqualify for any Flanking Fire bonus (although a Flank Movement card played sideways as the second\nMovement on top of a Marsh card does). The direction of movement (advance, retreat, lateral), and\nconsequently the range, is determined solely by the manner in which the second Movement card is\nplaced. Similarly, a man in Marsh terrain may not infiltrate [20.24] unless two Movement cards currently\ncover that Marsh card.",
+        {
+          "source_file": "UF RuleBook updated.pdf",
+          "cross_refs": "20.24",
+          "rule_number": "8.42",
+          "content_type": "rule",
+          "priority": 1,
+          "subsection": "8.42",
+          "doc_type": "core_rules",
+          "page": 15,
+          "section_path": "8.42"
+        }
+      ],
+      [
+        "[Doc: errata] [Section: 5.41] [Rule: 5.41]\n5.41 & 7.2 These rules show that placed terrain stays in place until new terrain replaces it. Thus, even though terrain may no longer\nbe usable for TEM due to active movement cards, the terrain cards are left on the board, and not discarded until terrain is finally\nplaced. Specifically, a terrain card remains on the table regardless of the number of movement cards in play on that group.",
+        {
+          "priority": 3,
+          "subsection": "5.41",
+          "doc_type": "errata",
+          "page": 2,
+          "section_path": "5.41",
+          "content_type": "rule",
+          "source_file": "Up_Front_Errata_Pages.pdf",
+          "rule_number": "5.41"
+        }
+      ]
+    ],
+    "debug": {
+      "game_name": "Up Front",
+      "query_type": "concept",
+      "rule_numbers": [],
+      "num_retrieved": 8,
+      "num_cross_refs": 7
+    },
+    "verdict": "Faithfulness: Yes, Relevancy: Yes, Citation: Yes",
+    "faithfulness": "Yes",
+    "relevancy": "Yes",
+    "citation": "Yes",
+    "keywords_found": [
+      "terrain",
+      "movement"
+    ],
+    "keywords_missing": [
+      "played",
+      "accepted"
+    ],
+    "duration_seconds": 423.86
+  },
+  {
+    "id": 2,
+    "category": "direct_rule",
+    "query": "What is rule 6.1 about fire attacks?",
+    "answer": "The player's question refers to Rule 6.1 about fire attacks, but this specific rule number is not provided in the given rules text. Instead, the relevant information can be found in Rules 4.22, 6.3, 6.4, and related sections which describe how to make a fire attack by playing Fire cards, combining multiple Fire cards for an attack, determining Fire Strength, and applying modifiers based on various conditions such as terrain or movement status [Rules 4.22, 6.3, 6.4, 6.4.1, 13.22].",
+    "context": [
+      [
+        "[Doc: core_rules] [Section: 4.22] [Rule: 4.22]\n4.22 Make a fire attack by playing one or more Fire cards, and selecting the group which is firing and its\ntarget group [6.1].\n6",
+        {
+          "section_path": "4.22",
+          "source_file": "UF RuleBook updated.pdf",
+          "content_type": "rule",
+          "doc_type": "core_rules",
+          "cross_refs": "6.1",
+          "priority": 1,
+          "subsection": "4.22",
+          "rule_number": "4.22",
+          "page": 6
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 6.3] [Rule: 6.3]\n6.3 More than one Fire card may be used by a single group in one fire attack action as long as the firing\ngroup has at least the sum of all required firepower factors for all Fire cards used. However, the Fire\nStrength of all Fire cards used by that group during that turn would have to be added together to form a\ncombined attack.\nWeapon Firepower (FP) at\nvarious relative ranges (RR)\n11\n[EX: To use both of these Fire cards in the same fire attack, eight firepower factors would be required in\nthe firing group. The unmodified Fire Strength of the attack would then be 4.]",
+        {
+          "page": 11,
+          "content_type": "rule",
+          "doc_type": "core_rules",
+          "priority": 1,
+          "subsection": "6.3",
+          "source_file": "UF RuleBook updated.pdf",
+          "section_path": "6.3",
+          "rule_number": "6.3"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 6.4] [Rule: 6.4]\n6.4 FIRE STRENGTH: Once it has been determined that the Fire card(s) can be used, determine the\nfinal Fire Strength of the attack. If the attacking (firing) group is currently moving (has played a\nMovement card with no Terrain card yet placed over it), the Fire Strength of its Fire card(s) is halved\n[12.1].",
+        {
+          "rule_number": "6.4",
+          "source_file": "UF RuleBook updated.pdf",
+          "content_type": "rule",
+          "priority": 1,
+          "subsection": "6.4",
+          "page": 11,
+          "cross_refs": "12.1",
+          "doc_type": "core_rules",
+          "section_path": "6.4"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 22.1] [Rule: 22.1]\n22.1 The Fire Strength of any attack which includes a firing flamethrower is not subject\nto negative modification for the defender's terrain, but is subject to modification for the\nattacker's terrain. Concealed cards, Smoke, and Wire can be used to reduce the Fire\nStrength of most flamethrower attacks. Moving status [12.1] halves the strength of a\nflamethrower attack only if the flamethrower is not providing all the necessary\nfirepower for use of the Fire card used in that attack.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026",
+        {
+          "subsection": "22.1",
+          "page": 44,
+          "doc_type": "core_rules",
+          "content_type": "rule",
+          "priority": 1,
+          "section_path": "22.1",
+          "rule_number": "22.1",
+          "source_file": "UF RuleBook updated.pdf",
+          "cross_refs": "12.1"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 13.22] [Rule: 13.22]\n13.22 An attacking group in Smoke receives a -1 modification to the Fire Strength of any attack it makes.",
+        {
+          "subsection": "13.22",
+          "rule_number": "13.22",
+          "content_type": "rule",
+          "doc_type": "core_rules",
+          "section_path": "13.22",
+          "source_file": "UF RuleBook updated.pdf",
+          "page": 22,
+          "priority": 1
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 47.3] [Rule: 47.3]\n47.3 All Fire attacks (including ordnance and Demolition Charges, but excluding Flamethrowers and\nCC) which occur in a scenario using jungle rules must reduce their Fire Strength by one regardless of\nthe terrain cards in play.",
+        {
+          "subsection": "47.3",
+          "source_file": "UF RuleBook updated.pdf",
+          "priority": 1,
+          "doc_type": "core_rules",
+          "rule_number": "47.3",
+          "content_type": "rule",
+          "section_path": "47.3",
+          "page": 85
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 6.4.1] [Rule: 6.4.1]\n6.4.1 Modify the Fire Strength by adding any modifiers due to the attacker's position (see Wire [13.32],\nStream [8.52], Marsh [8.41], Smoke [13.22], and Elevated Fire [8.31] for examples of Fire Strength\nmodifications due to the attacker's position).",
+        {
+          "priority": 1,
+          "subsection": "6.4.1",
+          "cross_refs": "8.31,8.41,13.32,13.22,8.52",
+          "source_file": "UF RuleBook updated.pdf",
+          "section_path": "6.4.1",
+          "rule_number": "6.4.1",
+          "page": 11,
+          "content_type": "rule",
+          "doc_type": "core_rules"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 6.6] [Rule: 6.6]\n6.6 A defending group can be attacked more than once per turn. It is possible for a Personality card to\nbe pinned by fire from one attacking group, and then panic due to fire from another attacking group. The\nonly restriction is that each group may attack only once per turn, and each group which attacks must do\nso with its own Fire card(s) which it has sufficient firepower to use.\nFire example\nChanges in CCV\nand KIA values,\nwhile pinned\n13\n[EX: The U.S. group depicted above is being attacked with a final modified Fire Strength of 5. The\nAction card facsimiles pictured are the RNC's drawn to resolve combat against the three defenders. Sgt.\nAllen is not affected (5 + -1 = 4 < 5). Pvt Myers is eliminated (5 + 4 = 9 > 8). Pvt Degi panics and is\nremoved (5 + 0 = 5 > 3). However, Pvt Degi is not KIA because the Random Position Number under\ncolumn \"0r\" of the third RNC is > 3 which means he routed safely out of the fire fight.]\n7. TERRAIN & MOVEMENT FIRE ATTACK MODIFIERS",
+        {
+          "source_file": "UF RuleBook updated.pdf",
+          "subsection": "6.6",
+          "priority": 1,
+          "doc_type": "core_rules",
+          "rule_number": "6.6",
+          "section_path": "6.6",
+          "content_type": "rule",
+          "page": 13
+        }
+      ]
+    ],
+    "debug": {
+      "game_name": "Up Front",
+      "query_type": "concept",
+      "rule_numbers": [],
+      "num_retrieved": 8,
+      "num_cross_refs": 5
+    },
+    "verdict": "Faithfulness: No, Relevancy: Yes, Citation: No",
+    "faithfulness": "No",
+    "relevancy": "Yes",
+    "citation": "No",
+    "keywords_found": [
+      "fire card"
+    ],
+    "keywords_missing": [
+      "firepower",
+      "minimum"
+    ],
+    "duration_seconds": 429.27
+  },
+  {
+    "id": 3,
+    "category": "direct_rule",
+    "query": "Explain rule 10.45 about Hero cards.",
+    "answer": "Rule 10.45 states that a Hero card can be used to double the firepower of any one man for one player turn. If the man is already entitled to double firepower, it triples his firepower instead [10.45]. According to errata and rule clarification, if playing in a campaign game where elan points are being accumulated, you can use a Hero card to double a PC's firepower even if the extra firepower is not needed to play the resultant fire card [10.45], [Priority: P3 | Rule: 10.45]. However, a player cannot play the Hero card to no effect [10.45].",
+    "context": [
+      [
+        "[Doc: core_rules] [Section: 10.4] [Rule: 10.4]\n10.4 HERO:\nA Hero card can be played anytime (even during the opponent's turn or\nimmediately upon drawing a Hero card from the Draw pile thus entitling the\nplayer to yet another draw) to rally one pinned man without counting as an Action.\nIf played during the opponent's turn, the card cannot be replaced until the end of\nthe owner's player turn [9.3].\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026",
+        {
+          "content_type": "rule",
+          "doc_type": "core_rules",
+          "page": 19,
+          "priority": 1,
+          "section_path": "10.4",
+          "subsection": "10.4",
+          "source_file": "UF RuleBook updated.pdf",
+          "cross_refs": "9.3",
+          "rule_number": "10.4"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 10.43] [Rule: 10.43]\n10.43 A Hero card could be played on a man who was pinned while attempting to infiltrate or enter CC\n[20.21], thus enabling him to try again in the same turn. The Hero card can be used to both rally a man\nand to simultaneously bestow special heroic powers on him for that turn ([10.44][10.45], [28.81], [33.9]).",
+        {
+          "priority": 1,
+          "rule_number": "10.43",
+          "cross_refs": "10.44,10.45,28.81,20.21,33.9",
+          "section_path": "10.43",
+          "source_file": "UF RuleBook updated.pdf",
+          "page": 20,
+          "doc_type": "core_rules",
+          "content_type": "rule",
+          "subsection": "10.43"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 28.421] [Rule: 28.421]\n28.421 HERO: There are two occasions in which a Hero card can be played on an AFV as other than a\npartial Rally credit. Immediately following any attack which pins an AFV a Hero card can be played to\nnegate that pin result provided the AFV has not suffered a Commander Killed result in the same attack.\nA Hero card can also be played on any Buttoned Up AFV which is neither stunned nor subject to\nCommander Killed penalties to remove the Buttoned Up status. A Hero card played on a stunned AFV\ncounts as the equal of a Rally card. Neither usage counts as an action. A Hero card can never be\nplayed to increase the firepower or To Hit frequency of an AFV.",
+        {
+          "priority": 1,
+          "content_type": "rule",
+          "source_file": "UF RuleBook updated.pdf",
+          "subsection": "28.421",
+          "page": 50,
+          "rule_number": "28.421",
+          "section_path": "28.421",
+          "doc_type": "core_rules"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 10.45] [Rule: 10.45] [Scenario: A]\n10.45 Can a player use a Hero card to double a PC's firepower, even if the extra firepower is not needed in order\nto play the resultant fire card?\nA. Yes, especially if playing a campaign game where elan points are being accumulated. However, a player cannot\nplay the Hero card to no effect.",
+        {
+          "section_path": "10.45",
+          "source_file": "UF RuleBook updated.pdf",
+          "page": 20,
+          "content_type": "qa",
+          "priority": 1,
+          "doc_type": "core_rules",
+          "subsection": "10.45",
+          "scenario": "A",
+          "rule_number": "10.45"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 10.41] [Rule: 10.41]\n10.41 A Hero card cannot be played on an AFV or Infantry Gun except as a partial credit towards\nrallying a pinned or stunned AFV (EXC: [28.421]).",
+        {
+          "section_path": "10.41",
+          "priority": 1,
+          "page": 20,
+          "doc_type": "core_rules",
+          "content_type": "rule",
+          "rule_number": "10.41",
+          "source_file": "UF RuleBook updated.pdf",
+          "subsection": "10.41",
+          "cross_refs": "28.421"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 10.42] [Rule: 10.42]\n10.42 The Hero card cannot be played on an already pinned man that has just been removed by Panic.\nIt must be played before the attack on the pinned man is actually resolved.",
+        {
+          "subsection": "10.42",
+          "section_path": "10.42",
+          "rule_number": "10.42",
+          "priority": 1,
+          "page": 20,
+          "doc_type": "core_rules",
+          "content_type": "rule",
+          "source_file": "UF RuleBook updated.pdf"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 10.45] [Rule: 10.45] [Scenario: A]\n10.45 Can you play two Hero cards on the same man simultaneously to triple his firepower if he wasn't already\nentitled to double firepower?\nA. No.",
+        {
+          "priority": 1,
+          "rule_number": "10.45",
+          "doc_type": "core_rules",
+          "section_path": "10.45",
+          "page": 20,
+          "scenario": "A",
+          "content_type": "qa",
+          "subsection": "10.45",
+          "source_file": "UF RuleBook updated.pdf"
+        }
+      ],
+      [
+        "[Doc: errata] [Section: 10.45] [Rule: 10.45] [Scenario: A]\n10.45 Can a player use a Hero card to double a PC's firepower, even if the extra firepower is not needed in order to play the resultant\nfire card?\nA. Yes, especially if playing a campaign game where elan points are being accumulated. However, a player cannot play the Hero\ncard to no effect.",
+        {
+          "rule_number": "10.45",
+          "content_type": "qa",
+          "doc_type": "errata",
+          "scenario": "A",
+          "section_path": "10.45",
+          "page": 3,
+          "subsection": "10.45",
+          "source_file": "Up_Front_Errata_Pages.pdf",
+          "priority": 3
+        }
+      ]
+    ],
+    "debug": {
+      "game_name": "Up Front",
+      "query_type": "concept",
+      "rule_numbers": [],
+      "num_retrieved": 8,
+      "num_cross_refs": 7
+    },
+    "verdict": "Faithfulness: Yes, Relevancy: Yes, Citation: Yes",
+    "faithfulness": "Yes",
+    "relevancy": "Yes",
+    "citation": "Yes",
+    "keywords_found": [
+      "hero",
+      "firepower",
+      "double"
+    ],
+    "keywords_missing": [],
+    "duration_seconds": 393.39
+  },
+  {
+    "id": 4,
+    "category": "errata_supersession",
+    "query": "Can a player with multi-card discard capability discard one terrain card on a group, have it rejected, and still discard another terrain card on the same group in the same turn?",
+    "answer": "According to Rule 7.32 [UF RuleBook updated.pdf | Priority: P1], a player with multi-card discard capability **cannot** discard one terrain card on a group, have it rejected, and still discard another terrain card on the same group in the same turn. This ruling is further confirmed by the errata for Rule 7.32 [Up_Front_Errata_Pages.pdf | Priority: P3].",
+    "context": [
+      [
+        "[Doc: core_rules] [Section: 7.32] [Rule: 7.32] [Scenario: A]\n7.32 Can a group with pinned men reject terrain?\nA. Yes.\nCan a player with multi-card discard capability, discard one terrain card on a group, have it rejected, and still\ndiscard another terrain card on the same group in the same turn?\nA. No.\nEven if the two were discarded simultaneously?\nA. No.\nIf you have two Movement cards in play above a terrain card and subsequently reject enough terrain to remove\nboth Movement cards, are you in the terrain card or Open Ground?\nA. The terrain card.",
+        {
+          "subsection": "7.32",
+          "scenario": "A",
+          "priority": 1,
+          "content_type": "qa",
+          "page": 14,
+          "doc_type": "core_rules",
+          "section_path": "7.32",
+          "rule_number": "7.32",
+          "source_file": "UF RuleBook updated.pdf"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 14.5] [Rule: 14.5] [Scenario: A]\n14.5 & 4.3 During a multi-card discard, can the player observe the results of one discard before deciding where\nand/or if to discard another?\nA. No. Rule 7.3 and 7.32 specifically state that discards are resolved prior to the next turn, not prior to the next\ndiscard\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............\nDiscard Capability, 14.5, 4.32, 4.33, and 44.1 Can nationalities with multi-card discard capability discard two or\nmore wires on a single group in a single turn?\nA. Yes.\nExamples:\n[NOTE: The examples assume that the indicated discards are valid for the scenario and situation (i.e. the\ndiscarding side has sniper capability).]\nNon-moving Group: May discard any number of SNIPERS and/or any number of WIRE cards.\nMoving Group: May discard one terrain card and/or any number of snipers and/or any number of WIRE cards.\nRejecting the terrain does NOT reject the WIRE. If the terrain is accepted and WIRE is not allowed in that type of\nterrain (e.g. MARSH) then the WIRE is discarded.\nTwo Moving Groups Exchanging Group Letters: Same as a moving group with two additions. If either group\nrejects a terrain discard, the position exchange is cancelled. If terrain is discarded on one group and accepted, the\nmoving player MUST complete the position exchange by placing the other group in terrain (including open ground)\non his next turn.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............",
+        {
+          "scenario": "A",
+          "section_path": "14.5",
+          "subsection": "14.5",
+          "rule_number": "14.5",
+          "priority": 1,
+          "cross_refs": "7.3",
+          "source_file": "UF RuleBook updated.pdf",
+          "content_type": "qa",
+          "doc_type": "core_rules",
+          "page": 25
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 4.3] [Rule: 4.3] [Scenario: A]\nDiscard Capability, 4.32, 4.33, 14.5 and 44.1 Can nationalities with multi-card discard capability discard two or\nmore wires on a single group in a single turn?\nA. Yes.\nExamples:\n[NOTE: The examples assume that the indicated discards are valid for the scenario and situation (i.e. the\ndiscarding side has sniper capability).]\nNon-moving Group: May discard any number of SNIPERS and/or any number of WIRE cards.\nMoving Group: May discard one terrain card and/or any number of snipers and/or any number of WIRE cards.\nRejecting the terrain does NOT reject the WIRE. If the terrain is accepted and WIRE is not allowed in that type of\nterrain (e.g. MARSH) then the WIRE is discarded.\nTwo Moving Groups Exchanging Group Letters: Same as a moving group with two additions. If either group\nrejects a terrain discard, the position exchange is cancelled. If terrain is discarded on one group and accepted, the\nmoving player MUST complete the position exchange by placing the other group in terrain (including open ground)\non his next turn.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............",
+        {
+          "content_type": "qa",
+          "source_file": "UF RuleBook updated.pdf",
+          "priority": 1,
+          "page": 6,
+          "doc_type": "core_rules",
+          "scenario": "A",
+          "section_path": "4.3",
+          "subsection": "4.3",
+          "rule_number": "4.3"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 4.3] [Rule: 4.3] [Scenario: A]\n4.3 & 14.5 During a multi-card discard, can the player observe the results of one discard before deciding where\nand/or if to discard another?\nA. No. Rule 7.3 and 7.32 specifically state that discards are resolved prior to the next turn, not prior to the next\ndiscard\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............\nThe discard capability per nationality is shown in the table below:\nNationality\nDiscard capability\nGerman\nA German player may always discard one (but never more than one) unused card\nfrom his hand, regardless of the number of actions he performed during his player\nturn.\nAmerican\nAn American player may discard up to two unused cards from his hand, but only if he\nperformed no other action during his player turn.\nRussian\nA Russian player may discard any number of unused cards from his hand, but only if\nhe performed no other action during his player turn\nBritish\nA British player may discard up to two unused cards from his hand, but only if he\nperformed no other action during his player turn.\nJapanese\nA Japanese player may discard up to two unused cards from his hand, but only if he\nperformed no other action during his player turn.\nFrench\nA French player may discard up to one unused card from his hand, but only if he\nperformed no other action during his player turn.\nItalian\nAn Italian player may discard up to two unused cards from his hand, but only if he\nperformed no other action during his player turn.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............\nDiscard Capability, 4.32, 4.33, 14.5 and 44.1 Can nationalities with multi-card discard capability discard two or\nmore wires on a single group in a single turn?",
+        {
+          "page": 6,
+          "rule_number": "4.3",
+          "section_path": "4.3",
+          "scenario": "A",
+          "subsection": "4.3",
+          "content_type": "qa",
+          "priority": 1,
+          "cross_refs": "7.3",
+          "doc_type": "core_rules",
+          "source_file": "UF RuleBook updated.pdf"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 7.3] [Rule: 7.3]\n7.3 OPPONENT'S TERRAIN PLACEMENT: Any Terrain card other than Open Ground can be placed on\nan opposing group in lieu of a discard (note nationality restrictions on discards; [4.3]). In order to place a\nTerrain card on an opposing group, that group must be currently eligible to receive a Terrain card (i.e. it\nmust have a Movement card in play which is not covered by a Terrain card and does not require\nplacement of a second Movement card before it can leave its present terrain). The player who has just\nhad the Terrain card played against him must then decide to either accept or reject the Terrain card\nplacement (EXC: Stream or Minefield cards can never be rejected) before starting his own turn.",
+        {
+          "content_type": "rule",
+          "source_file": "UF RuleBook updated.pdf",
+          "priority": 1,
+          "subsection": "7.3",
+          "section_path": "7.3",
+          "page": 14,
+          "cross_refs": "4.3",
+          "doc_type": "core_rules",
+          "rule_number": "7.3"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 24.3] [Rule: 24.3]\n24.3 A Minefield card can be placed on an opposing group in lieu of a discard\n[4.3]. In order to place a Minefield card on an opposing group, that group must be\ncurrently eligible to receive a Terrain card (i.e. it must have a Movement card in\nplace, uncovered by another Terrain or Wire card, or two Movement cards in the\ncase of movement out of a Marsh. Unlike most other Terrain cards, a Minefield\ncard cannot be rejected by the recipient.",
+        {
+          "section_path": "24.3",
+          "priority": 1,
+          "content_type": "rule",
+          "subsection": "24.3",
+          "page": 45,
+          "source_file": "UF RuleBook updated.pdf",
+          "rule_number": "24.3",
+          "cross_refs": "4.3",
+          "doc_type": "core_rules"
+        }
+      ],
+      [
+        "[Doc: errata] [Section: 7.32] [Rule: 7.32] [Scenario: A]\n7.32 Can a group with pinned men reject terrain?\nA. Yes.\nCan a player with multi-card discard capability, discard one terrain card on a group, have it rejected, and still discard another terrain\ncard on the same group in the same turn?\nA. No.\nEven if the two were discarded simultaneously?\nA. No.\nIf you have two Movement cards in play above a terrain card and subsequently reject enough terrain to remove both Movement\ncards, are you in the terrain card or Open Ground?\nA. The terrain card.",
+        {
+          "doc_type": "errata",
+          "section_path": "7.32",
+          "content_type": "qa",
+          "subsection": "7.32",
+          "priority": 3,
+          "rule_number": "7.32",
+          "scenario": "A",
+          "page": 2,
+          "source_file": "Up_Front_Errata_Pages.pdf"
+        }
+      ],
+      [
+        "[Doc: errata] [Section: 4.3] [Rule: 4.3] [Scenario: A]\n4.3 & 14.5 During a multi-card discard, can the player observe the results of one discard before deciding where and/or if to discard\nanother?\nA. No. Rule 7.3 and 7.32 specifically state that discards are resolved prior to the next turn, not prior to the next discard.\nDiscard Capability, 4.32, 4.33, 14.5 and 44.1 Can nationalities with multi-card discard capability discard two or more wires on a\nsingle group in a single turn?\nA. Yes.\nExamples:\n[NOTE: The examples assume that the indicated discards are valid for the scenario and situation (i.e. the discarding side has sniper\ncapability).]\nNon-moving Group: May discard any number of SNIPERS and/or any number of WIRE cards.\nMoving Group: May discard one terrain card and/or any number of snipers and/or any number of WIRE cards. Rejecting the terrain\ndoes NOT reject the WIRE. If the terrain is accepted and WIRE is not allowed in that type of terrain (e.g. MARSH) then the WIRE is\ndiscarded.\nTwo Moving Groups Exchanging Group Letters: Same as a moving group with two additions. If either group rejects a terrain\ndiscard, the position exchange is cancelled. If terrain is discarded on one group and accepted, the moving player MUST complete the\nposition exchange by placing the other group in terrain (including open ground) on his next turn.",
+        {
+          "scenario": "A",
+          "doc_type": "errata",
+          "section_path": "4.3",
+          "subsection": "4.3",
+          "cross_refs": "7.3",
+          "page": 1,
+          "rule_number": "4.3",
+          "source_file": "Up_Front_Errata_Pages.pdf",
+          "priority": 3,
+          "content_type": "qa"
+        }
+      ]
+    ],
+    "debug": {
+      "game_name": "Up Front",
+      "query_type": "concept",
+      "rule_numbers": [],
+      "num_retrieved": 8,
+      "num_cross_refs": 3
+    },
+    "verdict": "Faithfulness: Yes, Relevancy: Yes, Citation: Yes",
+    "faithfulness": "Yes",
+    "relevancy": "Yes",
+    "citation": "Yes",
+    "keywords_found": [
+      "no"
+    ],
+    "keywords_missing": [],
+    "duration_seconds": 602.72
+  },
+  {
+    "id": 5,
+    "category": "errata_supersession",
+    "query": "Can you stop Fire Combat Resolution partway through a target group?",
+    "answer": "No, according to Rule 6.5 [UF RuleBook updated.pdf | Priority: P1], you cannot stop Fire Combat Resolution partway through a target group. This is explicitly stated in both the base rule and confirmed by errata [Up_Front_Errata_Pages.pdf | Priority: P3].",
+    "context": [
+      [
+        "[Doc: core_rules] [Section: 6.5] [Rule: 6.5] [Scenario: A]\n6.5 Can you stop the Fire Combat Resolution when you are halfway (or any other point) through a target groupt\n(e.g. stop the resolution on the 4th man out of 6 men)? (This would be done to avoid weapon malfunction or to\nkeep the deck from running out.)\nA. No.",
+        {
+          "priority": 1,
+          "source_file": "UF RuleBook updated.pdf",
+          "subsection": "6.5",
+          "section_path": "6.5",
+          "content_type": "qa",
+          "scenario": "A",
+          "page": 11,
+          "doc_type": "core_rules",
+          "rule_number": "6.5"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 41.4] [Rule: 41.4]\n41.4 Fire between groups of different games is always conducted at Relative Range 0 regardless of the\nrange number in play for the respective groups.  Overrun and infiltration are not allowed between forces\nof different games.  Sniper attacks and Flanking Fire are allowed between forces of different games.",
+        {
+          "subsection": "41.4",
+          "source_file": "UF RuleBook updated.pdf",
+          "priority": 1,
+          "doc_type": "core_rules",
+          "rule_number": "41.4",
+          "page": 65,
+          "content_type": "rule",
+          "section_path": "41.4"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 20.1] [Rule: 20.1]\n20.1 When an infantry group starts its player turn at Relative Range 5 to any directly opposite or\nadjacent group, the possibility of entering into hand-to-hand combat exists. Close Combat (hereafter\nreferred to as CC) is entered into and resolved differently from Fire attacks. The opposing group must\nbe infiltrated before any CC attacks can be attempted.",
+        {
+          "subsection": "20.1",
+          "rule_number": "20.1",
+          "section_path": "20.1",
+          "page": 38,
+          "content_type": "rule",
+          "source_file": "UF RuleBook updated.pdf",
+          "priority": 1,
+          "doc_type": "core_rules"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 5.7] [Rule: 5.7]\n5.7 BLOCKING POSITIONS: A group may not move forward if, in so doing, the Relative Range between\nit and its like-named (directly opposite) opposing group would exceed 5 (EXC: AFV, [29.5]). In order to\n10\nmove further forward, the opposite group whose Range number blocks a further advance would have to\nretreat or be eliminated.\nA [1]\nB [5] [1]\nC [2]\nA [-1]\nC [3]\n[EX: Black Group A and Red Group A are at Relative Range 0, and Red Group B has been eliminated.\nBlack Group B has reached range number 5, but was still not at Relative Range 5 with Red Group A so\nit moved to range number 6. They are now at Relative Range 5 (6 + -1 = 5). Note that Black group B has\nmoved past Red Group C (i.e. Red Group C is between Black Groups B and C). Neither Group C may\nmove forward until the other retreats or is eliminated. The Relative Range between Black Group A and\nRed Group C is actually 3, not 4, due to the two groups not being opposite or directly adjacent. The\nRelative Range between Black Group B and Red Group C is 1 (6 + 3 = 9; 10 - 9 = 1).]\n6. FIRE ATTACKS\n6.1A player must have a least one Fire card in his hand to perform a fire attack. In addition, the group\nperforming the attack must have a combined total of at least the minimum number of firepower factors\nrequired to use that card. Each Fire card has an FP (firepower) number in the upper middle of the\nillustration which is the minimum number of firepower factors needed to use that Fire card. Separate\ngroups may not combine their firepower factors in order to qualify to use a Fire card. A group may fire at\nany opposing group provided it has sufficient firepower at its current Relative Range to that group to use\nits Fire card.",
+        {
+          "content_type": "rule",
+          "doc_type": "core_rules",
+          "priority": 1,
+          "source_file": "UF RuleBook updated.pdf",
+          "cross_refs": "29.5",
+          "page": 10,
+          "section_path": "5.7",
+          "subsection": "5.7",
+          "rule_number": "5.7"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 6.5] [Rule: 6.5]\n6.5 FIRE COMBAT RESOLUTION: After seeing the final modified Fire Strength of any attack, it is the\nattacker's option whether or not he wishes to resolve that attack or just discard his played Fire card(s)\n(which still constitutes an Action taken). To resolve an attack repeat the following procedure for each\nman in the target group in sequence. Draw the top card from the Draw pile and add the final Fire\nStrength of the attack to the RNC. If the RNC is black, add it to the modified attack strength to obtain the\nFinal Combat Resolution Number. If the RNC is red, subtract it from the modified attack strength to\nobtain the Final Combat Resolution Number. Compare the Final Combat Resolution Number with the\ndefence values of the Personality card under attack. The Final Combat Resolution Number is only\ncompared to the morale (MOR) defence value currently exposed on the card, or the panic (PAN)\ndefence value(s) if the man is pinned [3.52].\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............",
+        {
+          "rule_number": "6.5",
+          "content_type": "rule",
+          "source_file": "UF RuleBook updated.pdf",
+          "page": 11,
+          "priority": 1,
+          "subsection": "6.5",
+          "cross_refs": "3.52",
+          "section_path": "6.5",
+          "doc_type": "core_rules"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 41.56] [Rule: 41.56]\n41.56 The transfer group itself never blocks fire possibilities [41.4] between boards, although the terrain\nit occupies may.  A transfer group on the LOS divider card is subject to fire from any group in either\nadjacent game, and may also make such attacks \u2013 but always at Relative Range 0.",
+        {
+          "content_type": "rule",
+          "rule_number": "41.56",
+          "doc_type": "core_rules",
+          "source_file": "UF RuleBook updated.pdf",
+          "subsection": "41.56",
+          "priority": 1,
+          "page": 65,
+          "cross_refs": "41.4",
+          "section_path": "41.56"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 23.7] [Rule: 23.7]\n23.7 The occupants of a Pillbox cannot fire at (or be fired on by) a group behind it (i.e. occupying range\nnumber 6). However, once behind a Pillbox, an adjacent group could \"retreat\" back to range number 5\nand still be considered \"behind\" the Pillbox. An adjacent group behind a Pillbox at range number 5\nattacks the Pillbox with Flanking Fire. The occupants of the Pillbox can attack an adjacent group behind\nthem at range number 5 only after halving the Fire Strength (fractions rounded down) of any Fire card(s)\nthey play.",
+        {
+          "subsection": "23.7",
+          "content_type": "rule",
+          "page": 45,
+          "rule_number": "23.7",
+          "source_file": "UF RuleBook updated.pdf",
+          "doc_type": "core_rules",
+          "section_path": "23.7",
+          "priority": 1
+        }
+      ],
+      [
+        "[Doc: errata] [Section: 6.5] [Rule: 6.5] [Scenario: A]\n6.5 Can you stop the Fire Combat Resolution when you are halfway (or any other point) through a target group (e.g. stop the\nresolution on the 4th man out of 6 men)? (This would be done to avoid weapon malfunction or to keep the deck from running out.)\nA. No.",
+        {
+          "scenario": "A",
+          "doc_type": "errata",
+          "content_type": "qa",
+          "priority": 3,
+          "rule_number": "6.5",
+          "section_path": "6.5",
+          "source_file": "Up_Front_Errata_Pages.pdf",
+          "subsection": "6.5",
+          "page": 2
+        }
+      ]
+    ],
+    "debug": {
+      "game_name": "Up Front",
+      "query_type": "concept",
+      "rule_numbers": [],
+      "num_retrieved": 8,
+      "num_cross_refs": 3
+    },
+    "verdict": "Faithfulness: Yes, Relevancy: Yes, Citation: Yes",
+    "faithfulness": "Yes",
+    "relevancy": "Yes",
+    "citation": "Yes",
+    "keywords_found": [
+      "no"
+    ],
+    "keywords_missing": [],
+    "duration_seconds": 460.45
+  },
+  {
+    "id": 6,
+    "category": "errata_supersession",
+    "query": "Does the attacker have the option of foregoing the resolution of an ordnance hit after seeing the Final Strength Number?",
+    "answer": "No, the attacker does not have the option of foregoing the resolution of an ordnance hit after seeing the Final Strength Number. According to Rule 6.5 and 25.4 [as confirmed by errata], once the \"To Hit\" card is drawn, the attack must be completed. The attack can only be cancelled after seeing the final \"To Hit\" number but not after drawing it. [Priority: P1 | Rule: 6.5]",
+    "context": [
+      [
+        "[Doc: core_rules] [Section: 25.4] [Rule: 25.4] [Scenario: A]\n25.4 & 6.5 Does the attacker have the option of foregoing the resolution of an ordnace hit after seeing the Final\nStrength Number?\nA. No, but the attack can be cancelled after seeing the final \"To Hit\" number. This includes the play of any\nconcealment. Once the \"To Hit\" card is drawn, the attack must be completed.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026...........",
+        {
+          "section_path": "25.4",
+          "scenario": "A",
+          "doc_type": "core_rules",
+          "page": 47,
+          "priority": 1,
+          "subsection": "25.4",
+          "content_type": "qa",
+          "rule_number": "25.4",
+          "source_file": "UF RuleBook updated.pdf"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 6.5] [Rule: 6.5] [Scenario: A]\n6.5 & 25.4 Does the attacker have the option of foregoing the resolution of an ordnace hit after seeing the Final\nStrength Number?\nA. No, but the attack can be cancelled after seeing the final \"To Hit\" number. This includes the play of any\nconcealment. Once the \"To Hit\" card is drawn, the attack must be completed.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.............",
+        {
+          "source_file": "UF RuleBook updated.pdf",
+          "content_type": "qa",
+          "scenario": "A",
+          "rule_number": "6.5",
+          "priority": 1,
+          "section_path": "6.5",
+          "subsection": "6.5",
+          "page": 11,
+          "doc_type": "core_rules"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 19.12] [Rule: 19.12]\n19.12 ORDNANCE: An ordnance weapon [25.5] malfunctions automatically if, in resolving its To Hit\npossibility, a red 5 or red 6 RNC (EXC: ATR) is drawn. A red 5 or red 6 RNC drawn during the resolution\nof an already attained hit does not create a malfunction.",
+        {
+          "section_path": "19.12",
+          "subsection": "19.12",
+          "rule_number": "19.12",
+          "doc_type": "core_rules",
+          "content_type": "rule",
+          "priority": 1,
+          "source_file": "UF RuleBook updated.pdf",
+          "cross_refs": "25.5",
+          "page": 35
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 25.5] [Rule: 25.5]\n25.5 MALFUNCTION: Ordnance weapons malfunction [19.12] only if they draw a red 5 (EXC: ATR) or\nred 6 RNC when attempting To Hit -- not during the resolution of a hit. Some ordnance weapons which\nare more prone to a malfunction do so when drawing a red 4, red 5, or red 6 when attempting to hit.\n[EX: PFC Towle is at Relative Range 4 to the moving target group and because he lacks a crewman to\nload his bazooka [30.2] he must use the bracketed TO HIT numbers to gain a hit. The first RNC drawn is\na black 0 resulting in a hit. Note that had it been a red 0, the shot would have missed because the target\ngroup is moving. The Fire strength of the hit is 2 (Effect Number [2] + To Hit Number drawn [0] = 2),\nwhich, despite modifications remains a 2 (2 {Fire Strength] - 1 [Brush] + 1 [Movement] = 2). The second\nRNC drawn is a black 6 which kills Wolff (2 + 6 > 8). The third RNC drawn is a red 1 which leaves\nSchultz unaffected (2 - 1 = 1 < 2).]",
+        {
+          "section_path": "25.5",
+          "cross_refs": "19.12,30.2",
+          "doc_type": "core_rules",
+          "priority": 1,
+          "content_type": "rule",
+          "rule_number": "25.5",
+          "subsection": "25.5",
+          "page": 47,
+          "source_file": "UF RuleBook updated.pdf"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 25.3] [Rule: 25.3] [Scenario: A]\n25.3 Can Ordnance opt not to fire, and just discard the fire card, after seeing all the modifiers (as in a fire attack)\nafter concealment is played (or even if there is no concealment)?\nA. Yes, this is the same situation described in 6.5. The attack may be called off once the To Hit number is known,\nbut not after drawing the To Hit result.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026..........",
+        {
+          "priority": 1,
+          "subsection": "25.3",
+          "content_type": "qa",
+          "source_file": "UF RuleBook updated.pdf",
+          "rule_number": "25.3",
+          "page": 46,
+          "doc_type": "core_rules",
+          "scenario": "A",
+          "section_path": "25.3"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 40.22] [Rule: 40.22]\n40.22 Vs AFV's: Artillery attacks only the non-armored defence values of an AFV because artillery is not\na boxed weapon. However, if the artillery draws a black 6 RNC to resolve its attack on that AFV (black 5\nor black 6 if the AFV is OT), it has scored a Critical Hit on that AFV instead of affecting the non-armored\ndefence values of that AFV. A Critical Hit achieved with a black 6 RNC immobilizes the target AFV; a\nCritical Hit achieved with a black 5 RNC destroys an OT AFV.",
+        {
+          "page": 64,
+          "priority": 1,
+          "content_type": "rule",
+          "section_path": "40.22",
+          "subsection": "40.22",
+          "rule_number": "40.22",
+          "doc_type": "core_rules",
+          "source_file": "UF RuleBook updated.pdf"
+        }
+      ],
+      [
+        "[Doc: errata] [Section: 6.5] [Rule: 6.5] [Scenario: A]\n6.5 & 25.4 Does the attacker have the option of foregoing the resolution of an ordnance hit after seeing the Final Strength Number?\nA. No, but the attack can be cancelled after seeing the final \"To Hit\" number. This includes the play of any concealment. Once the\n\"To Hit\" card is drawn, the attack must be completed.",
+        {
+          "scenario": "A",
+          "page": 2,
+          "content_type": "qa",
+          "source_file": "Up_Front_Errata_Pages.pdf",
+          "doc_type": "errata",
+          "section_path": "6.5",
+          "rule_number": "6.5",
+          "subsection": "6.5",
+          "priority": 3
+        }
+      ],
+      [
+        "[Doc: errata] [Section: 25.3] [Rule: 25.3] [Scenario: A]\n25.3 Can Ordnance opt not to fire, and just discard the fire card, after seeing all the modifiers (as in a fire attack) after concealment is\nplayed (or even if there is no concealment)?\nA. Yes, this is the same situation described in 6.5. The attack may be called off once the To Hit number is known, but not after\ndrawing the To Hit result.\n*25.41 Change \"normally\" to \"only\".",
+        {
+          "scenario": "A",
+          "subsection": "25.3",
+          "section_path": "25.3",
+          "page": 11,
+          "doc_type": "errata",
+          "priority": 3,
+          "rule_number": "25.3",
+          "source_file": "Up_Front_Errata_Pages.pdf",
+          "content_type": "qa"
+        }
+      ]
+    ],
+    "debug": {
+      "game_name": "Up Front",
+      "query_type": "concept",
+      "rule_numbers": [],
+      "num_retrieved": 8,
+      "num_cross_refs": 4
+    },
+    "verdict": "Faithfulness: Yes, Relevancy: Yes, Citation: Yes",
+    "faithfulness": "Yes",
+    "relevancy": "Yes",
+    "citation": "Yes",
+    "keywords_found": [
+      "no",
+      "cancelled",
+      "to hit"
+    ],
+    "keywords_missing": [],
+    "duration_seconds": 565.31
+  },
+  {
+    "id": 7,
+    "category": "cross_reference",
+    "query": "When can a group rearrange their order? What rules govern this?",
+    "answer": "A group can rearrange its order under several circumstances according to the rules:\n\n1. As a sole action for a group at any time [Rule 17.8].\n2. After crewing/uncrewing a weapon [Rules 11.11 & 11.12], though this requires adhering to Rule 4.25.\n3. After a successful weapon acquisition [Rules 18.2].\n\nHowever, following an individual transfer (Rule 17.8), the group receiving the transfer cannot rearrange at that time.\n\nAdditionally, if there is no specific timing restriction provided in these rules for rearrangement, it can be done as a sole action of that group during its player turn [Rules 3.3 and 4.25].\n\nThere are no errata entries that contradict or modify these points within the given text.",
+    "context": [
+      [
+        "[Doc: core_rules] [Section: 17.8] [Rule: 17.8] [Scenario: A]\n17.8 & 11.11 & 18.2 When can a group rearrange their order? Can this be done as the sole action for a group?\nA. Yes.\nHow about following individual transfer (17.8)?\nA. No.\nAfter crewing/uncrewing a weapon (11.11)?\nA. Yes, see 11.12.\nA group may also rearrange its order after a successful weapon acquisition (18.2).\nRead full text of rule 3.3 and 4.25\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............",
+        {
+          "rule_number": "17.8",
+          "priority": 1,
+          "source_file": "UF RuleBook updated.pdf",
+          "page": 32,
+          "subsection": "17.8",
+          "section_path": "17.8",
+          "doc_type": "core_rules",
+          "scenario": "A",
+          "cross_refs": "11.12,3.3",
+          "content_type": "qa"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 18.2] [Rule: 18.2] [Scenario: A]\n18.2 & 11.11 & 17.8 When can a group rearrange their order? Can this be done as the sole action for a group?\nA. Yes.\nHow about following individual transfer (17.8)?\nA. No.\nAfter crewing/uncrewing a weapon (11.11)?\nA. Yes, see 11.12.\nA group may also rearrange its order after a successful weapon acquisition (18.2).\nRead full text of rule 3.3 and 4.25\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............",
+        {
+          "priority": 1,
+          "rule_number": "18.2",
+          "section_path": "18.2",
+          "scenario": "A",
+          "source_file": "UF RuleBook updated.pdf",
+          "doc_type": "core_rules",
+          "content_type": "qa",
+          "cross_refs": "11.12,3.3",
+          "page": 34,
+          "subsection": "18.2"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 11.11] [Rule: 11.11] [Scenario: A]\n11.11 & 17.8 & 18.2 When can a group rearrange their order? Can this be done as the sole action for a group?\nA. Yes.\nHow about following individual transfer (17.8)?\nA. No.\nAfter crewing/uncrewing a weapon (11.11)?\nA. Yes, see 11.12.\nA group may also rearrange its order after a successful weapon acquisition (18.2).\nRead full text of rule 3.3 and 4.25\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............",
+        {
+          "subsection": "11.11",
+          "page": 20,
+          "rule_number": "11.11",
+          "section_path": "11.11",
+          "scenario": "A",
+          "content_type": "qa",
+          "cross_refs": "11.12,3.3",
+          "source_file": "UF RuleBook updated.pdf",
+          "priority": 1,
+          "doc_type": "core_rules"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 17.8] [Rule: 17.8] [Scenario: A]\n17.8 When an individual transfer takes place, the group receiving the transfer can not be rearranged at that time\n(3.3). Where then do the transferring men go? Are the placed at the front of the group, at the back, or can they be\nplaced anywhere they want, just so long as the rest of the group order is not changed?\nA. They can be placed anywhere the owning player wants, just so long as the rest of the group order is not\nchanged.\nExample: Group A - 5, 7, 2, 10; Group B - 3, 8 (transferring), 11 can become:\nGroup A - (8, 5, 7, 2, 10) or (5, 8, 7, 2, 10) or (5, 7, 8, 2, 10) or (5, 7, 2, 8, 10) or (5, 7, 2, 10, 8).\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............",
+        {
+          "doc_type": "core_rules",
+          "priority": 1,
+          "section_path": "17.8",
+          "source_file": "UF RuleBook updated.pdf",
+          "rule_number": "17.8",
+          "page": 33,
+          "content_type": "qa",
+          "subsection": "17.8",
+          "scenario": "A"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 5.6.2] [Rule: 5.6.2]\n5.6.2 When dealing with group card ranges > 5 or < 0, players by mutual consent could readjust the\nranges of every group at the end of each deck during the resulting shuffle. Readjust by reducing positive\nrange numbers and increasing negative range numbers by an equal amount so as to maintain the same\nRelative Range between groups.\n[EX: Black Group A is at range number 6, Black Group B is at range number 3, and Black Group C is at\nrange number 0, Red Group A is at range number -2, and Red Group B is at range number -3.\nA [6]\nB [3]\nC [0]\nA [-2]\nB [-3]\nThe range numbers should be adjusted by two to: (Black) A:4, B:1, C:-2; (Red) A:0, B:-1.]\nA [4]\nB [1]\nC [-2]\nA [0]\nB [-1]",
+        {
+          "source_file": "UF RuleBook updated.pdf",
+          "subsection": "5.6.2",
+          "section_path": "5.6.2",
+          "content_type": "rule",
+          "priority": 1,
+          "doc_type": "core_rules",
+          "page": 9,
+          "rule_number": "5.6.2"
+        }
+      ],
+      [
+        "[Doc: errata] [Section: 11.11] [Rule: 11.11] [Scenario: A]\n11.11 & 17.8 & 18.2 When can a group rearrange their order? Can this be done as the sole action for a group?\nA. Yes.\nHow about following individual transfer (17.8)?\nA. No.\nAfter crewing/uncrewing a weapon (11.11)?\nA. Yes, see 11.12.\nA group may also rearrange its order after a successful weapon acquisition (18.2).\nRead full text of rule 3.3 and 4.25",
+        {
+          "cross_refs": "11.12,3.3",
+          "rule_number": "11.11",
+          "subsection": "11.11",
+          "scenario": "A",
+          "page": 3,
+          "source_file": "Up_Front_Errata_Pages.pdf",
+          "priority": 3,
+          "content_type": "qa",
+          "doc_type": "errata",
+          "section_path": "11.11"
+        }
+      ],
+      [
+        "[Doc: errata] [Section: 17.8] [Rule: 17.8] [Scenario: A]\n17.8 When an individual transfer takes place, the group receiving the transfer can not be rearranged at that time (3.3). Where then do\nthe transferring men go? Are the placed at the front of the group, at the back, or can they be placed anywhere they want, just so long\nas the rest of the group order is not changed?\nA. They can be placed anywhere the owning player wants, just so long as the rest of the group order is not changed.\nExample: Group A - 5, 7, 2, 10; Group B - 3, 8 (transferring), 11 can become:\nGroup A - (8, 5, 7, 2, 10) or (5, 8, 7, 2, 10) or (5, 7, 8, 2, 10) or (5, 7, 2, 8, 10) or (5, 7, 2, 10, 8).\n*17.8 Insert in the 5th sentence between \"move\" and \"until\": \"from that range chit\".",
+        {
+          "priority": 3,
+          "content_type": "qa",
+          "page": 7,
+          "scenario": "A",
+          "section_path": "17.8",
+          "subsection": "17.8",
+          "rule_number": "17.8",
+          "doc_type": "errata",
+          "source_file": "Up_Front_Errata_Pages.pdf"
+        }
+      ],
+      [
+        "[Doc: errata] [Section: 17.7] [Rule: 17.7] [Scenario: A]\n17.7 If two groups are exchanging positions and one group is completely eliminated before they could place terrain, is the remaining\ngroup allowed to go into the new position (assume B and C are in a group exchange, and B is eliminated, can C, on its turn, become\nB by placing terrain)?\nA. Yes.",
+        {
+          "section_path": "17.7",
+          "rule_number": "17.7",
+          "page": 6,
+          "content_type": "qa",
+          "subsection": "17.7",
+          "doc_type": "errata",
+          "source_file": "Up_Front_Errata_Pages.pdf",
+          "scenario": "A",
+          "priority": 3
+        }
+      ]
+    ],
+    "debug": {
+      "game_name": "Up Front",
+      "query_type": "concept",
+      "rule_numbers": [],
+      "num_retrieved": 8,
+      "num_cross_refs": 2
+    },
+    "verdict": "Faithfulness: Yes, Relevancy: Yes, Citation: Yes",
+    "faithfulness": "Yes",
+    "relevancy": "Yes",
+    "citation": "Yes",
+    "keywords_found": [
+      "3.3",
+      "4.25",
+      "11.12",
+      "18.2",
+      "rearrange"
+    ],
+    "keywords_missing": [],
+    "duration_seconds": 552.42
+  },
+  {
+    "id": 8,
+    "category": "cross_reference",
+    "query": "How does lateral distance affect relative range? Include the related blocking rules.",
+    "answer": "Lateral distance affects relative range as follows:\n\nAccording to Rule 5.6.1 [UF RuleBook updated.pdf | Priority: P1], if two groups are neither directly opposite (same lettered groups) nor adjacent (B is adjacent to A and C; A is not adjacent to C, D, or E), the Relative Range between them is decreased by one (to a minimum of 0).\n\nAdditionally, Rule 5.6 [UF RuleBook updated.pdf | Priority: P1] states that lateral movement does not change the position of any group relative to another or their Relative Ranges except possibly in the case of Lateral Group Transfer as detailed in Rules 17.7 and its scenarios [UF RuleBook updated.pdf].\n\nRegarding blocking rules, Rule 5.7 [UF RuleBook updated.pdf | Priority: P1] clarifies that a group may not move forward if doing so would cause the Relative Range between it and its like-named (directly opposite) opposing group to exceed 5, unless an exception such as AFVs applies.\n\nErrata for Rule 5.6.1 [Up_Front_Errata_Pages.pdf | Priority: P3] confirms that even in cases where groups are not directly adjacent or opposite (e.g., A and D), the Relative Range is only decreased by one if they are laterally positioned, confirming the rule's application.",
+    "context": [
+      [
+        "[Doc: core_rules] [Section: 5.6.1] [Rule: 5.6.1]\n5.6.1 LATERAL DISTANCE: The Relative Range is further decreased by one (to a minimum of 0) if the\ngroups in question are neither directly opposite (same lettered groups) or adjacent (B is adjacent to A\nand C; A is not adjacent to C, D, or E).\nA\nB\nC\nD\nE\nA\nB\nC\nD\nE\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............",
+        {
+          "subsection": "5.6.1",
+          "priority": 1,
+          "section_path": "5.6.1",
+          "page": 9,
+          "content_type": "rule",
+          "doc_type": "core_rules",
+          "rule_number": "5.6.1",
+          "source_file": "UF RuleBook updated.pdf"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 5.6] [Rule: 5.6]\n5.6 RELATIVE RANGE: The actual distance between any two opposing groups is determined by adding\ntheir respective ranges together. If the sum of their range numbers is > 5, that sum is subtracted from 10\nto achieve the true Relative Range between the groups. The range number 5 (black or red) can be\nexceeded when needed, by flipping the group card to its opposite side.\n9\nFor players who have trouble grasping the Relative Range concept, the following chart is provided.\nRELATIVE RANGE CHART\nGroup X at Range No -5 -4 -3 -2 -1 0 1 2 3 4 5 6\n-1\n0 0 0 0 0 0 0 1 2 3 4 5\n0\n0 0 0 0 0 0 1 2 3 4 5 4\n1\n0 0 0 0 0 1 2 3 4 5 4 3\n2\n0 0 0 0 1 2 3 4 5 4 3 2\n3\n0 0 0 1 2 3 4 5 4 3 2 1\n4\n0 0 1 2 3 4 5 4 3 2 1 0\n5\n0 1 2 3 4 5 4 3 2 1 0 0\nGroup Y at range number\n6\n1 2 3 4 5 4 3 2 1 0 0 0",
+        {
+          "rule_number": "5.6",
+          "doc_type": "core_rules",
+          "content_type": "rule",
+          "section_path": "5.6",
+          "priority": 1,
+          "subsection": "5.6",
+          "page": 9,
+          "source_file": "UF RuleBook updated.pdf"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 5.4] [Rule: 5.4]\n5.4 Movement cards are also used to change the relative distance between opposing groups. Each\nMovement card can be placed head up (with the \"+1\" at the top of the illustration) to represent an\nAdvance (forward) movement, or turned upside down to represent a Retreat (reverse movement), or\nsideways to represent lateral movement.\nForward movement\nRetreat movement\nLateral movement\nBy playing a Movement card in the forward mode the group is moving in a relative direction toward the\nopposing player, and increasing its range number on their Group Card (by moving the wooden marker)\nwhile often decreasing the actual distance between it and the opponent's groups. Playing a Movement\ncard in the reverse mode simulates the group moving in a direction away from the opposing player, thus\ndecreasing its range number, while usually increasing the actual distance between it and opposing\ngroups. Placing the card sideways signifies that the group is moving laterally to the opposing player\nwithout actually changing its range. Note that moving laterally in this manner does not change the\n8\nposition of any group relative to another or their Relative Ranges except possibly in the case of Lateral\nGroup Transfer (see [5.61] & [17.7]).",
+        {
+          "rule_number": "5.4",
+          "cross_refs": "5.61,17.7",
+          "page": 8,
+          "doc_type": "core_rules",
+          "subsection": "5.4",
+          "section_path": "5.4",
+          "priority": 1,
+          "source_file": "UF RuleBook updated.pdf",
+          "content_type": "rule"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 5.7] [Rule: 5.7]\n5.7 BLOCKING POSITIONS: A group may not move forward if, in so doing, the Relative Range between\nit and its like-named (directly opposite) opposing group would exceed 5 (EXC: AFV, [29.5]). In order to\n10\nmove further forward, the opposite group whose Range number blocks a further advance would have to\nretreat or be eliminated.\nA [1]\nB [5] [1]\nC [2]\nA [-1]\nC [3]\n[EX: Black Group A and Red Group A are at Relative Range 0, and Red Group B has been eliminated.\nBlack Group B has reached range number 5, but was still not at Relative Range 5 with Red Group A so\nit moved to range number 6. They are now at Relative Range 5 (6 + -1 = 5). Note that Black group B has\nmoved past Red Group C (i.e. Red Group C is between Black Groups B and C). Neither Group C may\nmove forward until the other retreats or is eliminated. The Relative Range between Black Group A and\nRed Group C is actually 3, not 4, due to the two groups not being opposite or directly adjacent. The\nRelative Range between Black Group B and Red Group C is 1 (6 + 3 = 9; 10 - 9 = 1).]\n6. FIRE ATTACKS\n6.1A player must have a least one Fire card in his hand to perform a fire attack. In addition, the group\nperforming the attack must have a combined total of at least the minimum number of firepower factors\nrequired to use that card. Each Fire card has an FP (firepower) number in the upper middle of the\nillustration which is the minimum number of firepower factors needed to use that Fire card. Separate\ngroups may not combine their firepower factors in order to qualify to use a Fire card. A group may fire at\nany opposing group provided it has sufficient firepower at its current Relative Range to that group to use\nits Fire card.",
+        {
+          "rule_number": "5.7",
+          "section_path": "5.7",
+          "page": 10,
+          "content_type": "rule",
+          "source_file": "UF RuleBook updated.pdf",
+          "doc_type": "core_rules",
+          "subsection": "5.7",
+          "cross_refs": "29.5",
+          "priority": 1
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 5.5] [Rule: 5.5]\n5.5 All groups start at Relative Range 0 from all opposing groups. This is signified by placing the\nwooden marker at range number 0 on the group card before the start of play. Each time a group plays a\nMovement card in the Advance mode, it is increasing its range number in the Group Card by one (the\nwooden marker moves from range 0 to range 1 as per below illustration). Should a group play a\nMovement card in the Retreat mode, the range is similarly decreased by one.\nBefore\nAfter \u201cforward\u201d movement",
+        {
+          "subsection": "5.5",
+          "priority": 1,
+          "rule_number": "5.5",
+          "section_path": "5.5",
+          "content_type": "rule",
+          "page": 8,
+          "source_file": "UF RuleBook updated.pdf",
+          "doc_type": "core_rules"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 5.51] [Rule: 5.51]\n5.51 Relative Range less than 0 is treated as 0 for firepower and To Hit purposes. Actual Relative Range is used to\ndetermine if a Group may retrograde.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............",
+        {
+          "rule_number": "5.51",
+          "doc_type": "core_rules",
+          "content_type": "rule",
+          "priority": 1,
+          "source_file": "UF RuleBook updated.pdf",
+          "page": 8,
+          "section_path": "5.51",
+          "subsection": "5.51"
+        }
+      ],
+      [
+        "[Doc: errata] [Section: 5.51] [Rule: 5.51]\n5.51 Relative Range less than 0 is treated as 0 for firepower and To Hit purposes. Actual Relative Range is used to determine if a\nGroup may Retrograde.",
+        {
+          "content_type": "rule",
+          "rule_number": "5.51",
+          "doc_type": "errata",
+          "section_path": "5.51",
+          "subsection": "5.51",
+          "priority": 3,
+          "source_file": "Up_Front_Errata_Pages.pdf",
+          "page": 2
+        }
+      ],
+      [
+        "[Doc: errata] [Section: 5.61] [Rule: 5.61] [Scenario: A]\n5.61 Is the Relative Range only decreased by one even if the groups in question are A and D?\nA. Yes.",
+        {
+          "rule_number": "5.61",
+          "content_type": "qa",
+          "scenario": "A",
+          "page": 2,
+          "priority": 3,
+          "section_path": "5.61",
+          "subsection": "5.61",
+          "source_file": "Up_Front_Errata_Pages.pdf",
+          "doc_type": "errata"
+        }
+      ]
+    ],
+    "debug": {
+      "game_name": "Up Front",
+      "query_type": "concept",
+      "rule_numbers": [],
+      "num_retrieved": 8,
+      "num_cross_refs": 6
+    },
+    "verdict": "Faithfulness: Yes, Relevancy: Yes, Citation: Yes",
+    "faithfulness": "Yes",
+    "relevancy": "Yes",
+    "citation": "Yes",
+    "keywords_found": [
+      "decreased",
+      "one",
+      "adjacent"
+    ],
+    "keywords_missing": [
+      "5.61"
+    ],
+    "duration_seconds": 851.24
+  },
+  {
+    "id": 9,
+    "category": "scenario",
+    "query": "What are the special rules for Scenario A: Meeting of Patrols?",
+    "answer": "The provided rules do not contain specific special rules for Scenario A: Meeting of Patrols. [Scenario: A] only lists the scenario title without detailed special rules. Therefore, I cannot provide the special rules for this scenario based on the given information.",
+    "context": [
+      [
+        "[Doc: core_rules] [Section: 38.2] [Rule: 38.2]\n38.2 OBSERVATION: In order for a group to attack or infiltrate at night, it must first \"detect\"\nthe target group. Each group may attempt to detect only one specific opposing group. If\nsuccessful, it may then fire on that group or take any other action it could normally take in a\ndaylight scenario. If unsuccessful, it may not take any other action including CC during that\nturn. An observation attempt counts as an Action taken only if fails to detect an enemy group. Note that\na group in a Gully could not attempt observation unless it were at Relative Range 5, sighting for a mortar,\nor attempting to sight a group on a Hill (and vice versa as regards sighting a group in a Gully).",
+        {
+          "doc_type": "core_rules",
+          "page": 61,
+          "source_file": "UF RuleBook updated.pdf",
+          "priority": 1,
+          "rule_number": "38.2",
+          "section_path": "38.2",
+          "subsection": "38.2",
+          "content_type": "rule"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 2.4] [Rule: 2.4]\n2.4 SCENARIOS: All scenarios are composed of seven basic component parts: Type, Forces, Action\nDeck Composition, Special Rules, Victory Conditions, Time Limit, and a declaration of the player who\nmust form his groups, place terrain, and play first. Players should remember that although most\nscenarios list forces for each of the seven nationalities in the game, each scenario is usually played by\nonly two nationalities at a time. In addition, all scenarios which do not depict some type of meeting\nengagement will list two forces for each player; one to be used if that player takes the offensive role, and\nthe other to be used if he plays the defensive role. Defensive forces are listed inside a barbed wire\nentangled rectangle. A player never uses both forces in the same scenario. Scenarios with assigned\noffensive and defensive forces actually have four different variations of the same theme; meeting\nengagement scenarios only two. Adjustments to the Action card deck are listed after the (\n)\nsymbol. The player who must form his groups, place terrain, and play first is shown after the \"1st\"\nsymbol. A bayonet (\n) after the \"1st\" symbol indicates that the side with the offensive role\nmust play first; a barbed wire entanglement symbolizes the defensive side. The number following the\nsand timer symbol      (           ) indicates the number of complete plays through the Action Deck which\ncomprise the scenario Time Limit.\n3. PREPARE TO PLAY",
+        {
+          "section_path": "2.4",
+          "source_file": "UF RuleBook updated.pdf",
+          "rule_number": "2.4",
+          "priority": 1,
+          "content_type": "rule",
+          "page": 3,
+          "doc_type": "core_rules",
+          "subsection": "2.4"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 20.52] [Rule: 20.52] [Scenario: A]\n20.52 If two friendly groups that have infiltrated a common enemy group enter Close Combat on the same turn, is\nthe Close Combat resolved as one large Close Combat, i.e. simultaneous, or as two separate Close Combats?\nA. They are resolved as two separate Close Combats.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026...........",
+        {
+          "rule_number": "20.52",
+          "source_file": "UF RuleBook updated.pdf",
+          "scenario": "A",
+          "priority": 1,
+          "doc_type": "core_rules",
+          "subsection": "20.52",
+          "page": 40,
+          "section_path": "20.52",
+          "content_type": "qa"
+        }
+      ],
+      [
+        "[Doc: scenarios] [Section: Scenario A] [Scenario: A]\nA:  MEETING OF PATROLS",
+        {
+          "priority": 8,
+          "scenario": "A",
+          "doc_type": "scenarios",
+          "source_file": "Upfront_Scenarios_1.pdf",
+          "content_type": "scenario_rule",
+          "section_path": "Scenario A",
+          "page": 1,
+          "subsection": "A"
+        }
+      ],
+      [
+        "[Doc: scenarios] [Section: Scenario E] [Scenario: E]\nE:  ARMORED RECON  PATROL",
+        {
+          "scenario": "E",
+          "content_type": "scenario_rule",
+          "subsection": "E",
+          "page": 3,
+          "section_path": "Scenario E",
+          "priority": 8,
+          "doc_type": "scenarios",
+          "source_file": "Upfront_Scenarios_1.pdf"
+        }
+      ],
+      [
+        "[Doc: scenarios] [Section: Scenario E] [Scenario: E]\nE: ARMORED RECON PATROL\nAttacker Set Up and Move first\nRemove the first four Buildings to be discarded\nunused or as a RPC/RNC draw.\nSPECIAL RULES:\nVICTORY CONDITIONS:\n3\n1-9, 11, 31\n(10 men, AFV, 366 pts.)\n1, 2, 4-10, 33\n(9 men, AFV, 333 pts.)\n1, 2, 4-6, 8-10, 35\n(8 men, AFV, 370 pts.)\n1, 2, 4-9, 30\n(8 men, AFV, 370 pts.)\n1-9, 11-15, 35\n(14 men, AFV, 370 pts.)\n1, 2, 4-7, 9-13, 37\n(11 men, AFV, 364 pts.)\n1-12, 23, 31\n(13 men, AFV, 365 pts.)\nDEFENDER:\nDYO: 241\nA:\nB:\nF:\nG:\nI:\nJ:\nR:\nATTACKER:\nDYO: 370\nE.1: The Pillbox and Minefield cards are treated as Cower cards.\nThe first player to have at least four unpinned Personality cards in one or more\nnon-infiltrated groups at Range Chit 4 occupying any Terrain which will reduce\nthe Fire Strength of an attack against them is the winner. If neither player\naccomplishes this by the time limit, the defending player wins.\n1-12\n(12 men, 236 pts.)\n1-10\n(10 men, 239 pts.)\n1-18\n(18 men, 235 pts.)\n1-13\n(13 men, 233 pts.)\n1-15\n(15 men, 241 pts.)\n1-10, 13, 22\n(12 men, 274 pts.)\n1, 2, 6-12\n(9 men, 277 pts.)",
+        {
+          "page": 3,
+          "source_file": "UF_Scenarios_2-4.pdf",
+          "doc_type": "scenarios",
+          "scenario": "E",
+          "content_type": "scenario_rule",
+          "section_path": "Scenario E",
+          "priority": 8,
+          "subsection": "E"
+        }
+      ],
+      [
+        "[Doc: scenarios] [Section: Scenario: K] [Scenario: K]\nhands or in play on their groups are discarded. The four Buildings removed from play in\nthe first part of the scenario remain out of play. The Elite force reforms his groups at\nrange chit 0 using only those of his original men (including those who safely routed\naway) not lost by KIA results. The other player then forms new groups at range chit 0\nusing all of his original men. Both players are now dealt full hands and begin Preparation\nfor Play Terrain placement. The scenario then continues normally.\nK.3: Any Sniper capability or weapons lost in the first part of the scenario is regained at\nthe start of the second part of the scenario, even if carried in the form of a weapon chit\nin place of the normal printed weaponry of a Personnel card. Number of men for a squad\nbreak of the Elite force is determined by the size of the squad at the start of the second\npart. Any wounds of men in the Elite force carry over to the second part. Weapons\ncaptured in the first part cannot be used in the second part.\nThe first player to have at least four unpinned Personality cards in one or more non-\ninfiltrated groups at Range Chit 4 occupying any Terrain which will reduce the Fire\nStrength of an attack against them is the winner of that particular scenario segment.\nThe Elite force must win both scenario segments to win the game. The defending player\nwins if he wins either segment or by avoiding the Elite force victory conditions. Victory\nPoints are not counted in this scenario.\nL.1: The defender may start any or all of his groups entrenched and therefore\nis not subject to terrain placement by the attacking player during Preparation\nfor Play.\nL.2: The Pillbox and Minefield cards are treated as Cower cards.\nThe attacking player wins if at any time he has at least four unpinned\nPersonality cards in one or more non-infiltrated groups at Range Chit 5\noccupying any Terrain which will reduce the Fire Strength of an attack\nagainst them. The defending player wins by avoiding the attacker's\nVictory Conditions.",
+        {
+          "content_type": "rule",
+          "page": 6,
+          "source_file": "UF_Scenarios_2-4.pdf",
+          "scenario": "K",
+          "doc_type": "scenarios",
+          "priority": 8,
+          "subsection": "K",
+          "section_path": "Scenario: K"
+        }
+      ]
+    ],
+    "debug": {
+      "game_name": "Up Front",
+      "query_type": "concept",
+      "rule_numbers": [],
+      "num_retrieved": 7,
+      "num_cross_refs": 0
+    },
+    "verdict": "Faithfulness: Yes, Relevancy: No, Citation: No",
+    "faithfulness": "Yes",
+    "relevancy": "No",
+    "citation": "No",
+    "keywords_found": [],
+    "keywords_missing": [
+      "pillbox",
+      "minefield",
+      "cower"
+    ],
+    "duration_seconds": 457.55
+  },
+  {
+    "id": 10,
+    "category": "scenario",
+    "query": "What cards are treated as Cower cards in Scenario C for the attacker?",
+    "answer": "In Scenario C, Sniper cards are treated as Cower cards for the attacker [3.6 (errata)]. Additionally, Minefield cards are also considered Cower cards unless allocated to the defending player at the outset by the scenario or Victory Condition Table [43.6]. According to Rule 2.22, any card defined by a scenario as unusable is considered a Cower card for that player.",
+    "context": [
+      [
+        "[Doc: core_rules] [Section: 3.6] [Rule: 3.6] [Scenario: A]\n3.6 When a scenario specifies that a certain type of card must be removed from the deck when discarded unused or\nas a RNC/RPC draw, is it considered a \"scenario defined Cower Card?\"\nA. Yes. Example: a Buildings card can never be placed during Prepare for Play in scenario A.\nCLARIFICATION: Scenario defined cower cards may be freely discarded by the Japanese as are cards that are\ncower cards for their side. e.g. Snipers and/or minefields as the attacker in scenario C.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............\nRange numbers\nWooden marker\n5\nA typical set up for Scenario A.\nGerman sets up in two Groups (A and\nB). American sets up in three Groups\n(A,B and C). All groups start at range\nnumber zero)\n4. SEQUENCE OF PLAY",
+        {
+          "scenario": "A",
+          "rule_number": "3.6",
+          "section_path": "3.6",
+          "page": 5,
+          "priority": 1,
+          "doc_type": "core_rules",
+          "subsection": "3.6",
+          "content_type": "clarification",
+          "source_file": "UF RuleBook updated.pdf"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 2.22] [Rule: 2.22]\n2.22: COWER CARD: Any card defined by a scenario as unusable by one or both players is considered\na Cower card for that player. A Cower card has no value to its owner (other than inverted use as an\nOpen Ground Terrain card; see [8.1]). It nonetheless must be counted as part of the owner's hand until it\ncan be legally discarded [4.3] per that player's discard capability.\n[EX: Action card #130 is always a Cower card for the Russian and Italian player (the Russian and Italian\nsymbols are absent), but can be used as a Smoke card by the German, US, British and French players.]",
+        {
+          "subsection": "2.22",
+          "rule_number": "2.22",
+          "content_type": "rule",
+          "doc_type": "core_rules",
+          "page": 2,
+          "section_path": "2.22",
+          "priority": 1,
+          "cross_refs": "8.1,4.3",
+          "source_file": "UF RuleBook updated.pdf"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 45.12] [Rule: 45.12]\n45.12: COWER DISCARD: Regardless of the number of actions taken or cards discarded in a turn, the\nJapanese player may always discard printed or scenario-defined Cower cards in excess of his normal\ndiscard capability for that turn by showing the Cower cards to his opponent prior to discarding them.\nRemember that those cards are to be removed from the deck after their initial discard or used as a\nRNC/RPC are deemed \"scenario-defined Cower Cards\", as are Sniper cards for a player who has no\nSniper capability.\n82",
+        {
+          "source_file": "UF RuleBook updated.pdf",
+          "page": 82,
+          "section_path": "45.12",
+          "subsection": "45.12",
+          "doc_type": "core_rules",
+          "content_type": "rule",
+          "rule_number": "45.12",
+          "priority": 1
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 43.6] [Rule: 43.6]\n43.6 SNIPERS: Minefield, and Pillbox cards are always treated as Cower cards unless allocated to the\ndefending player at the outset by the scenario in play or the Victory Condition Table.  Snipers are always\nallocated to the defending player.   The attacking player in a DYO scenario may purchase use of the\nSniper cards, but he may never use Minefield or Pillbox cards as anything other than a Cower\ncard.  Note that a player may also purchase \u201cinsurance\u201d for his Sniper capability in the form of a second\nSniper which enables him to continue using Sniper cards until he has suffered two successful Sniper\nChecks.  Sniper capability costs 35 points.  Double Sniper capability costs an additional 15 points.",
+        {
+          "page": 71,
+          "source_file": "UF RuleBook updated.pdf",
+          "subsection": "43.6",
+          "section_path": "43.6",
+          "content_type": "rule",
+          "rule_number": "43.6",
+          "doc_type": "core_rules",
+          "priority": 1
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 24.1] [Rule: 24.1]\n24.1 Minefield cards are a specialized form of Terrain card used in only a few\nscenarios. In most games they are treated as Cower cards for one or both\nnationalities [2.22].",
+        {
+          "doc_type": "core_rules",
+          "rule_number": "24.1",
+          "section_path": "24.1",
+          "priority": 1,
+          "page": 45,
+          "subsection": "24.1",
+          "source_file": "UF RuleBook updated.pdf",
+          "cross_refs": "2.22",
+          "content_type": "rule"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 35.4] [Rule: 35.4] [Scenario: H]\n35.4 Reinforcements always enter play in Open Ground unless the owner simultaneously plays a\nMovement, Concealed, and Terrain card. The Terrain card is placed on the group, and the Movement\nand Concealed cards are placed in the Discard tray (regardless of nationality discard limits). This is the\nonly instance in which a player can play both a Terrain and Movement card on the same group in the\nsame turn. When using this option, a player may take no other action or discard any other card during\nhis player turn.\n[STOP! You have read all that is necessary to play Scenario H. Before proceeding further, we suggest\nyou play Scenario H until you feel comfortable with the rules presented thus far.]\n36. ENTRENCHMENTS",
+        {
+          "source_file": "UF RuleBook updated.pdf",
+          "priority": 1,
+          "section_path": "35.4",
+          "scenario": "H",
+          "page": 60,
+          "subsection": "35.4",
+          "doc_type": "core_rules",
+          "content_type": "rule",
+          "rule_number": "35.4"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 37.6] [Rule: 37.6] [Scenario: I]\n37.6 BOOBY TRAPS: A partisan player may play a Booby trap card (in the way\nMinefield is used) except that it only attacks one man and only when it is discarded\non a moving group [24.31]. Immediately after resolving its attack, the Booby trap\ncard is removed from play -- it does not count as a Terrain card.\n[EX: When you play the \u201cPartisan\u201d scenario, replace the Minefiled cards with the\nBooby trap cards)\n[STOP! You have read all that is necessary to play Scenario I. Before proceeding further, we suggest\nyou play Scenario I until you feel comfortable with the rules presented thus far.]\n38. NIGHT",
+        {
+          "scenario": "I",
+          "section_path": "37.6",
+          "priority": 1,
+          "doc_type": "core_rules",
+          "rule_number": "37.6",
+          "cross_refs": "24.31",
+          "content_type": "rule",
+          "page": 61,
+          "subsection": "37.6",
+          "source_file": "UF RuleBook updated.pdf"
+        }
+      ],
+      [
+        "[Doc: errata] [Section: 3.6] [Rule: 3.6] [Scenario: A]\n3.6 When a scenario specifies that a certain type of card must be removed from the deck when discarded unused or as a RNC/RPC\ndraw, is it considered a \"scenario defined Cower Card?\"\nA. Yes. Example: a Buildings card can never be placed during Prepare for Play in scenario A.\nCLARIFICATION: Scenario defined cower cards may be freely discarded by the Japanese as are cards that are cower cards for their\nside. E.g. Snipers and/or minefields as the attacker in scenario C.",
+        {
+          "source_file": "Up_Front_Errata_Pages.pdf",
+          "scenario": "A",
+          "doc_type": "errata",
+          "page": 1,
+          "rule_number": "3.6",
+          "subsection": "3.6",
+          "priority": 3,
+          "content_type": "clarification",
+          "section_path": "3.6"
+        }
+      ]
+    ],
+    "debug": {
+      "game_name": "Up Front",
+      "query_type": "concept",
+      "rule_numbers": [],
+      "num_retrieved": 8,
+      "num_cross_refs": 5
+    },
+    "verdict": "Faithfulness: Yes, Relevancy: Yes, Citation: Yes",
+    "faithfulness": "Yes",
+    "relevancy": "Yes",
+    "citation": "Yes",
+    "keywords_found": [
+      "minefield",
+      "sniper",
+      "attacker",
+      "cower"
+    ],
+    "keywords_missing": [],
+    "duration_seconds": 548.97
+  },
+  {
+    "id": 11,
+    "category": "scenario",
+    "query": "What are the victory conditions for Scenario B: City Fight?",
+    "answer": "The victory conditions for Scenario B: City Fight are that the player with the most Victory Points (VPs) at the end of the time limit is the winner [42.8, 16.4]. Territorial VPs are awarded only to those men occupying Buildings terrain, while casualty VPs are awarded normally [Scenarios UF_Scenarios_2-5.pdf, Section B: Scenario B].",
+    "context": [
+      [
+        "[Doc: core_rules] [Section: 41.8] [Rule: 41.8]\n41.8 VICTORY CONDITIONS: The team which has won the most individual scenarios is the winner.  If\nthe teams win an equal number of scenarios, the team having recorded the most casualty Victory Points\nis the winner.  Note that a team game can consist of any number of games being played side by side\nusing any mixture of scenarios.  For play balance purposes, the best method is to allow one team to\nselect the scenarios being played in each game, and to allow the other team to select the side it wishes\nto play.",
+        {
+          "section_path": "41.8",
+          "doc_type": "core_rules",
+          "page": 66,
+          "rule_number": "41.8",
+          "subsection": "41.8",
+          "priority": 1,
+          "content_type": "rule",
+          "source_file": "UF RuleBook updated.pdf"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 42.8] [Rule: 42.8]\n42.8 VICTORY CONDITIONS: The winner of the Campaign Game is that side having the most\nCampaign Game Victory Points.  Campaign Game Victory Points are awarded as follows:\nVICTORY POINTS\nEVENT REQUIRED\n12\nWon Scenario\n-3 + -X\nLost Infantry Gun\n-5 + -X\nLost AFV\n-1\nPer KIA (including Commander Killed losses of AFV or IG)\n-7\nRequired Transfer of SL, ASL, or Commissar\nX= Number of Victory Points equal to boxed Effect Number of AFV or IG",
+        {
+          "page": 69,
+          "content_type": "rule",
+          "source_file": "UF RuleBook updated.pdf",
+          "section_path": "42.8",
+          "rule_number": "42.8",
+          "doc_type": "core_rules",
+          "priority": 1,
+          "subsection": "42.8"
+        }
+      ],
+      [
+        "[Doc: scenarios] [Section: Scenario B] [Scenario: B]\nB: CITY FIGHT\nAxis Set Up and Move first\nRemove the first four Woods to be discarded unused\nor as a RPC/RNC draw.\nSPECIAL RULES:\nB.1: The Pillbox, Minefield and Marsh cards are treated as Cower cards.\nVICTORY CONDITIONS:\n3\nA:\nB:\nF:\nG:\nI:\nJ:\nR:\nThe player with the most Victory Points (16.4) at the end of the time limit is the winner.\nHowever, territorial Victory Points are awarded only to those men occupying\nBuildings terrain. Victory Points for casualties (including men removed due to rout.)\nare awarded normally.\n\u00a92023, Richard Irving               UPFRONT Scenarios 2.5\n\u00a92023, Richard Irving               UPFRONT Scenarios 2.5\nRULES REVIEW:\n21:  Demolition Charges.\n1-8, 10, 12\n(10 men, 200 pts.)\n1, 4-7. 9. 12. 22\n(8 men, 198 pts.)\n1, 3-6, 8-10, 19, 22\n(10 men, 197 pts.)\n3-5, 8-10, 23, 24\n(8 men, 199 pts.)\n1, 3, 5-7, 9-16, 19, 22\n(15 men, 200 pts.)\n4-8, 11-13, 21, 25, 27\n(11 men,. 200 pts.)",
+        {
+          "subsection": "B",
+          "page": 2,
+          "content_type": "scenario_rule",
+          "doc_type": "scenarios",
+          "scenario": "B",
+          "section_path": "Scenario B",
+          "priority": 8,
+          "source_file": "UF_Scenarios_2-5.pdf"
+        }
+      ],
+      [
+        "[Doc: scenarios] [Section: Scenario B] [Scenario: B]\nB:  CITY FIGHT\nAxis Set Up and Move first\nAxis Set Up and Move first\n3\n3\nRemove the first five Buildings to be discarded unused\nor as a RPC/RNC draw.\nRemove the first four Woods to be discarded unused\nor as a RPC/RNC draw.\nSPECIAL RULES:\nSPECIAL RULES:\nVICTORY CONDITIONS:\nVICTORY CONDITIONS:\nA.1: The Pillbox and Minefield cards are treated as Cower cards.\nB.1: The Pillbox, Minefield and Marsh cards are treated as Cower cards.\nThe first player to have at least four unpinned Personality cards in one or more\nnon-infiltrated groups at Range Chit 4 occupying any Terrain which will reduce\nthe Fire Strength of an attack against them is the winner.\nThe player with the most Victory Points (16.4) at the end of the time limit is the winner.\nHowever, territorial Victory Points are awarded only to those men occupying\nBuildings terrain.  Victory Points for casualties (including men removed due to rout.)\nare awarded normally.\nB:\nB:\nF:\nF:\nG:\nG:\nI:\nI:\nJ:\nJ:\nR:\nR:\n1-12\n(12 men, 240 pts.)\n1-9, 11, 21, 22, DC\n(12 men, 298 pts.)\n1-10\n(10 men, 242 pts.)\n1-12\n(12 men, 236 pts.)\n2-9, 11, 12, 18, 20, 21, DC\n(13 men, 313 pts.)\n1-10\n(10 men, 239 pts.)\n1-4, 6, 9, 10, 17, 18, 22, DC\n(10 men, 309 pts.)\n1-18\n(18 men, 235 pts.)\n2-21, 23, 24, DC\n(22 men, 304 pts.)\n1-13\n(13 men, 236 pts.)\n1-15\n(15 men, 241 pts.)\n2-9, 11, 12, 15,\n22-24, 26, DC\n(15 men, 310 pts.)\nDYO: 241\nDYO: 314\nA:\nA:\n1-7, 16-18, DC\n(10 men, 310 pts.)\n1-10, 18-20, DC\n(13 men, 308 pts.)\n\u00a9 2005, Richard Irving",
+        {
+          "page": 2,
+          "scenario": "B",
+          "source_file": "Upfront_Scenarios_1.pdf",
+          "subsection": "B",
+          "content_type": "qa",
+          "priority": 8,
+          "doc_type": "scenarios",
+          "section_path": "Scenario B"
+        }
+      ],
+      [
+        "[Doc: scenarios] [Section: Scenario I] [Scenario: I]\nI: PARTISANS\nGerman Set Up and Move first\n3\nRemove the first six Buildings to be discarded unused\nor as a RPC/RNC draw.\nSPECIAL RULES:\nVICTORY CONDITIONS:\nI.1: The Pillbox cards are treated as a Cower card.\nI.2: The German player must treat Sniper and Minefield cards as Cower cards.\nThe Partisan player must use Minefields as Booby Traps (37.6)\nThe German player wins automatically if at least half of his force reaches\nrange chit 5 and he has more Victory Points than the Partisan.  In the scenario,\nVictory Points are only awarded for casualties and for the range chits occupied\nby the Partisan at game end per rule 16.4. The Partisan player wins by\navoiding the German Victory Conditions.\nB:\nF:\nG:\nI:\nJ:\nR:\n1, 5, 6, 8-12, 27\n(9 men, 144 pts.)\n1-10\n(10 men, 239 pts.)\n1, 3-10, 28\n(10 men, 142 pts.)\nDYO: 143\nDYO: 239\nA:\nATTACKER:\nDEFENDER:",
+        {
+          "section_path": "Scenario I",
+          "page": 5,
+          "doc_type": "scenarios",
+          "subsection": "I",
+          "content_type": "scenario_rule",
+          "cross_refs": "16.4",
+          "source_file": "Upfront_Scenarios_1.pdf",
+          "scenario": "I",
+          "priority": 8
+        }
+      ],
+      [
+        "[Doc: scenarios] [Section: Scenario: H] [Scenario: H]\nH. ARMORED ADVANCE\nAttacker Set Up and Move first\nRemove the first four Buildings to be discarded\nunused or as a RPC/RNC draw.\nSPECIAL RULES:\nVICTORY CONDITIONS:\n3\n1-10, 37\n(10 men, AFV, 598 pts.)\n1-12, 17, 18, 33\n(14 men, AFV, 560 pts.)\n3-10, 23, 24, 42\n(10 men, AFV, 596 pts.)\n1-20, 32, 34\n(20 men, 2xAFV, 583 pts.)\n1-11, 18, 20, 33, DC\n(13 men, AFV, 611pts.)\n1, 6-15, 21, 28, 32\nR: 37\n(13 / 1, AFV, 601 pts.)\nDEFENDER:\nDYO: 465\nA:\nB:\nF:\nG:\nI:\nJ:\nR:\nATTACKER:\nDYO: 601\n1, 3-8, 29\nR; 2, 9-12, 20, 24\n(8 / 7 men, 467 pts.)\n3, 5, 8-10, 23, 28\nR: 2, 4, 6, 17, PF\n(7 / 4 men, 464 pts.)\n1, 3-8,15-18, 23, 30\nR: 2, 9-14, 29\n(13 / 8 men, 454 pts.)\n1-6, 18-20, 29, 2xATMM\nR: 12-15, 28\n(10 / 5 men, 441 pts.)\n2-8, 12,18, 20, 26, 29, 2xATMM\nR: 22-25, ATMM\n(12 / 4 men, 451 pts.)\nG.1: The defending player is given a Buildings card with a TEM of -3 for\nplacement during Preparation for Play in addition to his normal hand.\nG.2: Only the player on defense may use Sniper cards to make Sniper\nattacks. The attacker must use them as Cower cards.\nG.3: The Pillbox, Marsh, and Minefield cards are treated as Cower cards.\nThe attacker must have twice as many Victory Points as the defender at the\nend of the time limit. In this scenario, territorial Victory Points are awarded\nonly to those men occupying Buildings terrain. Casualty Victory Points are\nawarded normally. The defending player wins by avoiding the attacking\nplayer.s Victory Conditions.\nH.1: Reinforcements are eligible to enter anytime after one deck of Action\ncards has been used.\nH.2: Treat Pillbox and Minefield as Cower cards. The attacking player must\nalso treat Sniper cards as Cower cards.\nH.3: The defending player gets at least one functioning Terrain card to use\nduring Preparation for Play. If he has none in his hand at start, he draws cards\nuntil he gets one. All other cards drawn in this process are returned to deck\nand reshuffled.\nThe attacking player wins if at any time he has at least five unpinned\nPersonality cards in one or more non-infiltrated groups at Range Chit 5",
+        {
+          "page": 4,
+          "section_path": "Scenario: H",
+          "scenario": "H",
+          "content_type": "scenario_rule",
+          "doc_type": "scenarios",
+          "subsection": "H",
+          "source_file": "UF_Scenarios_2-4.pdf",
+          "priority": 8
+        }
+      ]
+    ],
+    "debug": {
+      "game_name": "Up Front",
+      "query_type": "concept",
+      "rule_numbers": [],
+      "num_retrieved": 6,
+      "num_cross_refs": 2
+    },
+    "verdict": "Faithfulness: Yes, Relevancy: Yes, Citation: Yes",
+    "faithfulness": "Yes",
+    "relevancy": "Yes",
+    "citation": "Yes",
+    "keywords_found": [
+      "victory points",
+      "buildings",
+      "time limit"
+    ],
+    "keywords_missing": [],
+    "duration_seconds": 635.94
+  },
+  {
+    "id": 12,
+    "category": "concept",
+    "query": "How does the Japanese discard phase work compared to the American discard phase?",
+    "answer": "The Japanese discard phase differs from the American phase as follows:\n\n1. **Discard Capability**:\n   - The Japanese player can discard up to two unused cards per turn but only if they have performed no other action during their player turn [45.1].\n   - An American player may also discard up to two unused cards, but again only under the condition that no actions were taken in that turn [Rule not explicitly cited but implied from the table].\n\n2. **Exception for Movement Cards**:\n   - The Japanese can play Movement cards without affecting their discard capability for that turn [45.11]. This means they can still make discards even if they use a Movement card.\n   - There is no similar exception noted for American players regarding Movement cards.\n\n3. **Cower Card Discard Exception**:\n   - The Japanese player may always discard Cower cards in excess of their normal discard capability by showing the Cower cards to their opponent before discarding them [45.12].\n\nThese rules outline how the Japanese have unique provisions that allow for more flexibility compared to other nationalities like Americans when it comes to discards and Movement card usage.",
+    "context": [
+      [
+        "[Doc: core_rules] [Section: 45.12] [Rule: 45.12]\n45.12: COWER DISCARD: Regardless of the number of actions taken or cards discarded in a turn, the\nJapanese player may always discard printed or scenario-defined Cower cards in excess of his normal\ndiscard capability for that turn by showing the Cower cards to his opponent prior to discarding them.\nRemember that those cards are to be removed from the deck after their initial discard or used as a\nRNC/RPC are deemed \"scenario-defined Cower Cards\", as are Sniper cards for a player who has no\nSniper capability.\n82",
+        {
+          "content_type": "rule",
+          "page": 82,
+          "rule_number": "45.12",
+          "priority": 1,
+          "subsection": "45.12",
+          "source_file": "UF RuleBook updated.pdf",
+          "section_path": "45.12",
+          "doc_type": "core_rules"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 45.11] [Rule: 45.11]\n45.11 FREE MOVEMENT: The Japanese may play Movement cards in any capacity without affecting their\ndiscard capability for that turn. In other words, play of a Movement card by the Japanese counts as an\naction for the group it is played on, but does not count as an action that would prohibit the Japanese\nfrom making a discard during that turn.\n..................................................................................................................................................................................",
+        {
+          "doc_type": "core_rules",
+          "content_type": "rule",
+          "rule_number": "45.11",
+          "subsection": "45.11",
+          "source_file": "UF RuleBook updated.pdf",
+          "section_path": "45.11",
+          "priority": 1,
+          "page": 81
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 45.1] [Rule: 45.1]\n45.1 HAND CAPACITY: Japanese Line Troops have a four card hand capacity with a maximum\ndiscard capability of two cards per turn, but discards are possible only in those turns in which no action\nis performed (EXC: [45.11] & [45.12]).",
+        {
+          "cross_refs": "45.12,45.11",
+          "source_file": "UF RuleBook updated.pdf",
+          "subsection": "45.1",
+          "section_path": "45.1",
+          "page": 81,
+          "priority": 1,
+          "content_type": "rule",
+          "rule_number": "45.1",
+          "doc_type": "core_rules"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 45.11] [Rule: 45.11] [Scenario: A]\n45.11 Can the Japanese still discard if they attempt to infiltrate one man (only) using a movement card for the\nattempt (so as not to take a morale check)?\nA. Yes.",
+        {
+          "subsection": "45.11",
+          "doc_type": "core_rules",
+          "scenario": "A",
+          "priority": 1,
+          "rule_number": "45.11",
+          "page": 81,
+          "section_path": "45.11",
+          "source_file": "UF RuleBook updated.pdf",
+          "content_type": "qa"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 4.3] [Rule: 4.3] [Scenario: A]\n4.3 & 14.5 During a multi-card discard, can the player observe the results of one discard before deciding where\nand/or if to discard another?\nA. No. Rule 7.3 and 7.32 specifically state that discards are resolved prior to the next turn, not prior to the next\ndiscard\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............\nThe discard capability per nationality is shown in the table below:\nNationality\nDiscard capability\nGerman\nA German player may always discard one (but never more than one) unused card\nfrom his hand, regardless of the number of actions he performed during his player\nturn.\nAmerican\nAn American player may discard up to two unused cards from his hand, but only if he\nperformed no other action during his player turn.\nRussian\nA Russian player may discard any number of unused cards from his hand, but only if\nhe performed no other action during his player turn\nBritish\nA British player may discard up to two unused cards from his hand, but only if he\nperformed no other action during his player turn.\nJapanese\nA Japanese player may discard up to two unused cards from his hand, but only if he\nperformed no other action during his player turn.\nFrench\nA French player may discard up to one unused card from his hand, but only if he\nperformed no other action during his player turn.\nItalian\nAn Italian player may discard up to two unused cards from his hand, but only if he\nperformed no other action during his player turn.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............\nDiscard Capability, 4.32, 4.33, 14.5 and 44.1 Can nationalities with multi-card discard capability discard two or\nmore wires on a single group in a single turn?",
+        {
+          "priority": 1,
+          "rule_number": "4.3",
+          "source_file": "UF RuleBook updated.pdf",
+          "page": 6,
+          "content_type": "qa",
+          "doc_type": "core_rules",
+          "cross_refs": "7.3",
+          "section_path": "4.3",
+          "subsection": "4.3",
+          "scenario": "A"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 45.31] [Rule: 45.31]\n45.31: BROKEN SQUAD: Unlike other nationalities, the Japanese do not automatically lose when they\nhave lost more than half of their Personality cards due to KIA and/or Rout [16.5]. A Japanese force\ndoes not break until it has lost at least 75% of its Personality cards (i.e. 10 out of 13 cards in the\naverage scenario).",
+        {
+          "page": 82,
+          "priority": 1,
+          "rule_number": "45.31",
+          "section_path": "45.31",
+          "doc_type": "core_rules",
+          "content_type": "rule",
+          "subsection": "45.31",
+          "cross_refs": "16.5",
+          "source_file": "UF RuleBook updated.pdf"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 48.22] [Rule: 48.22]\n48.22 No discards are allowed during a player turn in which Random Reinforcement is attempted except\nfor the Japanese free Cower card discard capability.",
+        {
+          "subsection": "48.22",
+          "content_type": "rule",
+          "doc_type": "core_rules",
+          "source_file": "UF RuleBook updated.pdf",
+          "priority": 1,
+          "page": 86,
+          "section_path": "48.22",
+          "rule_number": "48.22"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 45.42] [Rule: 45.42]\n45.42 MOVEMENT EFFECT: Once a Banzai attack is declared, the Japanese may take no action with\nthat group other than Close Combat or the play of Movement cards in a forward or sideways mode for\nas long as the Banzai attack is in effect. Furthermore, the Japanese player may not play a Movement\ncard on any other group unless he has already played a Movement card on the Banzai group during that\nturn, or the Banzai group is currently engaged in Close Combat                                                         .",
+        {
+          "subsection": "45.42",
+          "doc_type": "core_rules",
+          "content_type": "rule",
+          "priority": 1,
+          "source_file": "UF RuleBook updated.pdf",
+          "section_path": "45.42",
+          "page": 83,
+          "rule_number": "45.42"
+        }
+      ]
+    ],
+    "debug": {
+      "game_name": "Up Front",
+      "query_type": "concept",
+      "rule_numbers": [],
+      "num_retrieved": 8,
+      "num_cross_refs": 6
+    },
+    "verdict": "Faithfulness: Yes, Relevancy: Yes, Citation: Yes",
+    "faithfulness": "Yes",
+    "relevancy": "Yes",
+    "citation": "Yes",
+    "keywords_found": [
+      "japanese",
+      "american",
+      "discard"
+    ],
+    "keywords_missing": [],
+    "duration_seconds": 543.61
+  },
+  {
+    "id": 13,
+    "category": "concept",
+    "query": "How does relative range work in Up Front?",
+    "answer": "Relative range in Up Front works as follows:\n\n1. **Base Relative Range Calculation**: The initial distance between two opposing groups is determined by adding their respective ranges together [5.6]. If the sum of these ranges exceeds 5, you subtract it from 10 to get the true Relative Range.\n\n2. **Adjustments Based on Group Status**:\n   - If a group observing another group is in a Buttoned Up AFV status, the current Relative Range is modified by subtracting one [38.31].\n   \n3. **Lateral Distance Adjustment**: The Relative Range decreases by one (minimum 0) if the groups are neither directly opposite nor adjacent according to their positions on the battlefield grid [5.6.1].\n\n4. **Initial Position and Movement**:\n   - Groups start at a Relative Range of 0 from all opposing groups [5.5].\n   - Moving forward increases the range number, while moving backward decreases it.\n\n5. **Firepower Considerations**: For firepower and To Hit purposes, any Relative Range less than 0 is treated as 0 [5.51].\n\nNote: The errata for rules 5.51 and 5.61 confirms that relative ranges are adjusted as described above, with no changes to the primary effects mentioned in these rules.",
+    "context": [
+      [
+        "[Doc: core_rules] [Section: 5.6] [Rule: 5.6]\n5.6 RELATIVE RANGE: The actual distance between any two opposing groups is determined by adding\ntheir respective ranges together. If the sum of their range numbers is > 5, that sum is subtracted from 10\nto achieve the true Relative Range between the groups. The range number 5 (black or red) can be\nexceeded when needed, by flipping the group card to its opposite side.\n9\nFor players who have trouble grasping the Relative Range concept, the following chart is provided.\nRELATIVE RANGE CHART\nGroup X at Range No -5 -4 -3 -2 -1 0 1 2 3 4 5 6\n-1\n0 0 0 0 0 0 0 1 2 3 4 5\n0\n0 0 0 0 0 0 1 2 3 4 5 4\n1\n0 0 0 0 0 1 2 3 4 5 4 3\n2\n0 0 0 0 1 2 3 4 5 4 3 2\n3\n0 0 0 1 2 3 4 5 4 3 2 1\n4\n0 0 1 2 3 4 5 4 3 2 1 0\n5\n0 1 2 3 4 5 4 3 2 1 0 0\nGroup Y at range number\n6\n1 2 3 4 5 4 3 2 1 0 0 0",
+        {
+          "source_file": "UF RuleBook updated.pdf",
+          "rule_number": "5.6",
+          "page": 9,
+          "doc_type": "core_rules",
+          "subsection": "5.6",
+          "content_type": "rule",
+          "priority": 1,
+          "section_path": "5.6"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 38.31] [Rule: 38.31]\n38.31 For purposes of observation, the current Relative Range is modified by -1 if the observing group is\na Buttoned Up AFV.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026...........",
+        {
+          "priority": 1,
+          "content_type": "rule",
+          "rule_number": "38.31",
+          "subsection": "38.31",
+          "source_file": "UF RuleBook updated.pdf",
+          "section_path": "38.31",
+          "doc_type": "core_rules",
+          "page": 62
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 5.6.1] [Rule: 5.6.1]\n5.6.1 LATERAL DISTANCE: The Relative Range is further decreased by one (to a minimum of 0) if the\ngroups in question are neither directly opposite (same lettered groups) or adjacent (B is adjacent to A\nand C; A is not adjacent to C, D, or E).\nA\nB\nC\nD\nE\nA\nB\nC\nD\nE\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............",
+        {
+          "page": 9,
+          "priority": 1,
+          "source_file": "UF RuleBook updated.pdf",
+          "content_type": "rule",
+          "doc_type": "core_rules",
+          "section_path": "5.6.1",
+          "subsection": "5.6.1",
+          "rule_number": "5.6.1"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 5.5] [Rule: 5.5]\n5.5 All groups start at Relative Range 0 from all opposing groups. This is signified by placing the\nwooden marker at range number 0 on the group card before the start of play. Each time a group plays a\nMovement card in the Advance mode, it is increasing its range number in the Group Card by one (the\nwooden marker moves from range 0 to range 1 as per below illustration). Should a group play a\nMovement card in the Retreat mode, the range is similarly decreased by one.\nBefore\nAfter \u201cforward\u201d movement",
+        {
+          "subsection": "5.5",
+          "doc_type": "core_rules",
+          "priority": 1,
+          "source_file": "UF RuleBook updated.pdf",
+          "rule_number": "5.5",
+          "page": 8,
+          "content_type": "rule",
+          "section_path": "5.5"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 5.51] [Rule: 5.51]\n5.51 Relative Range less than 0 is treated as 0 for firepower and To Hit purposes. Actual Relative Range is used to\ndetermine if a Group may retrograde.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............",
+        {
+          "page": 8,
+          "priority": 1,
+          "section_path": "5.51",
+          "source_file": "UF RuleBook updated.pdf",
+          "rule_number": "5.51",
+          "content_type": "rule",
+          "subsection": "5.51",
+          "doc_type": "core_rules"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 5.61] [Rule: 5.61] [Scenario: A]\n5.61 Is the Relative Range only decreased by one even if the groups in question are A and D?\nA. Yes.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............",
+        {
+          "scenario": "A",
+          "section_path": "5.61",
+          "page": 9,
+          "priority": 1,
+          "source_file": "UF RuleBook updated.pdf",
+          "rule_number": "5.61",
+          "subsection": "5.61",
+          "content_type": "qa",
+          "doc_type": "core_rules"
+        }
+      ],
+      [
+        "[Doc: errata] [Section: 5.51] [Rule: 5.51]\n5.51 Relative Range less than 0 is treated as 0 for firepower and To Hit purposes. Actual Relative Range is used to determine if a\nGroup may Retrograde.",
+        {
+          "source_file": "Up_Front_Errata_Pages.pdf",
+          "priority": 3,
+          "section_path": "5.51",
+          "rule_number": "5.51",
+          "doc_type": "errata",
+          "content_type": "rule",
+          "page": 2,
+          "subsection": "5.51"
+        }
+      ],
+      [
+        "[Doc: errata] [Section: 5.61] [Rule: 5.61] [Scenario: A]\n5.61 Is the Relative Range only decreased by one even if the groups in question are A and D?\nA. Yes.",
+        {
+          "rule_number": "5.61",
+          "subsection": "5.61",
+          "page": 2,
+          "doc_type": "errata",
+          "content_type": "qa",
+          "source_file": "Up_Front_Errata_Pages.pdf",
+          "section_path": "5.61",
+          "scenario": "A",
+          "priority": 3
+        }
+      ]
+    ],
+    "debug": {
+      "game_name": "Up Front",
+      "query_type": "concept",
+      "rule_numbers": [],
+      "num_retrieved": 8,
+      "num_cross_refs": 0
+    },
+    "verdict": "Faithfulness: Yes, Relevancy: Yes, Citation: Yes",
+    "faithfulness": "Yes",
+    "relevancy": "Yes",
+    "citation": "Yes",
+    "keywords_found": [
+      "range",
+      "movement",
+      "0",
+      "5"
+    ],
+    "keywords_missing": [],
+    "duration_seconds": 431.75
+  },
+  {
+    "id": 14,
+    "category": "concept",
+    "query": "What is a Personality card and what information does it contain?",
+    "answer": "A Personality card represents individual soldiers or an Infantry Gun (IG) with its crew [2.1, 34.1]. Each Personality card contains the following information:\n- Defense values\n- Rank\n- Card number\n- Soldier name\n- Nationality symbol\n- Weapon firepower and type\n- Close combat value\n- Weapon malfunction numbers\n- Points D.Y.O.\n- Leader type (SL or ASL)\n- Pinned values (if applicable) [2.3]\n\nAdditionally, when a Personality card is pinned, it flips sideways to show its panic (PAN) value for defense [6.52].",
+    "context": [
+      [
+        "[Doc: core_rules] [Section: 2.3] [Rule: 2.3]\n2.3 CARD REPRESENTATION: There are numerous types of Personality cards, but in the Basic Game\nwe will limit ourselves to those representing single men. An example is illustrated below.\nDefense values\nRank\nPersonality card number\nSoldier name\nNationality symbol\nWeapon firepower\nWeapon\nClose combat value\nWeapon malfunction number\nWeapon repair numbers\nPoints D.Y.O. (do your own)\nLeader type (SL or ASL)\nPinned values\n(in red)\nRank symbol\n3",
+        {
+          "section_path": "2.3",
+          "subsection": "2.3",
+          "priority": 1,
+          "page": 3,
+          "source_file": "UF RuleBook updated.pdf",
+          "content_type": "rule",
+          "rule_number": "2.3",
+          "doc_type": "core_rules"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 6.52] [Rule: 6.52]\n6.52 PINNED: If the Personality card has an exposed Morale value < the Final Combat Resolution\nNumber, the Personality card is pinned unless eliminated by [6.51]. A pinned Personality card is flipped\nsideways (to represent the pinned status). While pinned, he defends with the panic (PAN) value(s).\nWhile pinned, CC (close combat value) and KIA values, change accordingly as shown in the red letters\nto the left side of the personality card.\nFire Strength\nFire Power\n12",
+        {
+          "subsection": "6.52",
+          "page": 12,
+          "priority": 1,
+          "content_type": "rule",
+          "cross_refs": "6.51",
+          "section_path": "6.52",
+          "doc_type": "core_rules",
+          "source_file": "UF RuleBook updated.pdf",
+          "rule_number": "6.52"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 6.51] [Rule: 6.51]\n6.51 KIA: If the personality card has an exposed KIA value < the Final Combat Resolution Number, the\nPersonality card is eliminated and removed from play (see also [18.1]).",
+        {
+          "subsection": "6.51",
+          "page": 11,
+          "doc_type": "core_rules",
+          "section_path": "6.51",
+          "rule_number": "6.51",
+          "source_file": "UF RuleBook updated.pdf",
+          "cross_refs": "18.1",
+          "content_type": "rule",
+          "priority": 1
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 2.21] [Rule: 2.21]\n2.21 SPLIT ACTIONS: Some Action cards are divided in two parts, separating two different actions by\nnationality. A player may use this card only for the action listed on his side of the card as indicated by\nthe nationality symbol(s) printed on that side of the card. If the same nationality is listed on both sides,\nthe card may be used for either action, but not both.\nAction card\nPersonality card\nPersonality card\n2\n[EX: Action card #159 can be used as a Rally 1 card by all nationalities (except Italians), but as a\nMovement card by the Russians and Japanese only].",
+        {
+          "priority": 1,
+          "content_type": "rule",
+          "doc_type": "core_rules",
+          "source_file": "UF RuleBook updated.pdf",
+          "page": 2,
+          "subsection": "2.21",
+          "rule_number": "2.21",
+          "section_path": "2.21"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 28.1] [Rule: 28.1]\n28.1 An AFV card represents not only the depicted Armored Fighting Vehicle, but all of the men which\nman that AFV as well. AFV cards are treated the same as Personality cards except as otherwise\nspecified below.",
+        {
+          "page": 49,
+          "section_path": "28.1",
+          "rule_number": "28.1",
+          "content_type": "rule",
+          "priority": 1,
+          "doc_type": "core_rules",
+          "subsection": "28.1",
+          "source_file": "UF RuleBook updated.pdf"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 2.1] [Rule: 2.1]\n2.1 CARD TYPES: There are two types of cards in the game. The regulation-sized playing cards which\ncreate the flow of play are called Action Cards. The other cards are a representative sample of the\nactual men and Armoured Fighting Vehicles which engaged in WWII combat and are called Personality\ncards. A player's forces are composed of certain Personality cards which engage in combat and\nmanoeuvre through the medium of the Action cards.",
+        {
+          "content_type": "rule",
+          "page": 1,
+          "rule_number": "2.1",
+          "section_path": "2.1",
+          "priority": 1,
+          "doc_type": "core_rules",
+          "source_file": "UF RuleBook updated.pdf",
+          "subsection": "2.1"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 34.1] [Rule: 34.1]\n34.1 An Infantry Gun (hereafter referred to as IG) is a form of Personality card\nrepresenting an ordnance weapon and its entire multi-man crew. The inherent crew of\nan IG is inseparable from the weapon and shares its fate. Other personalities may not\nman an IG, nor may its crew acquire and use other weapons.",
+        {
+          "page": 59,
+          "section_path": "34.1",
+          "subsection": "34.1",
+          "content_type": "rule",
+          "source_file": "UF RuleBook updated.pdf",
+          "doc_type": "core_rules",
+          "priority": 1,
+          "rule_number": "34.1"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 32.12] [Rule: 32.12]\n32.12, also10.1. CLARIFICATION: In order to be eligible to capture prisoners through the Rout method (32.12)\nthe capturing group must contain at least one unpinned personality card.",
+        {
+          "priority": 1,
+          "section_path": "32.12",
+          "content_type": "rule",
+          "source_file": "UF RuleBook updated.pdf",
+          "doc_type": "core_rules",
+          "subsection": "32.12",
+          "page": 57,
+          "rule_number": "32.12"
+        }
+      ]
+    ],
+    "debug": {
+      "game_name": "Up Front",
+      "query_type": "concept",
+      "rule_numbers": [],
+      "num_retrieved": 8,
+      "num_cross_refs": 3
+    },
+    "verdict": "Faithfulness: Yes, Relevancy: Yes, Citation: Yes",
+    "faithfulness": "Yes",
+    "relevancy": "Yes",
+    "citation": "Yes",
+    "keywords_found": [
+      "firepower",
+      "panic"
+    ],
+    "keywords_missing": [
+      "man",
+      "morale"
+    ],
+    "duration_seconds": 364.95
+  },
+  {
+    "id": 15,
+    "category": "situation",
+    "query": "Can you hero an unpinned man when the group is not firing, just to get it out of your hand?",
+    "answer": "No, according to Rule 10.45 [Doc: core_rules] and its errata [Doc: errata], you cannot play a Hero card on an unpinned man when the group is not firing just to get it out of your hand.",
+    "context": [
+      [
+        "[Doc: core_rules] [Section: 10.45] [Rule: 10.45] [Scenario: A]\n10.45 Can you hero an unpinned man when the group is not firing, just to get it out of your hand?\nA. No.",
+        {
+          "content_type": "qa",
+          "source_file": "UF RuleBook updated.pdf",
+          "scenario": "A",
+          "page": 20,
+          "priority": 1,
+          "subsection": "10.45",
+          "doc_type": "core_rules",
+          "rule_number": "10.45",
+          "section_path": "10.45"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 20.22] [Rule: 20.22]\n20.22 An unpinned man may attempt to infiltrate without having to pass a Morale Check by playing a\nMovement card directly into the Discard pile (does not count as a Discard). The Movement card does\nnot alter the range of the group, transform moving status onto that individual, nor have any other effect\non the remainder of the group, and can be played even though other members of the same group may\nbe pinned. The player may play as many Movement cards as he has unpinned men with which to\nattempt infiltration.",
+        {
+          "rule_number": "20.22",
+          "priority": 1,
+          "section_path": "20.22",
+          "source_file": "UF RuleBook updated.pdf",
+          "page": 38,
+          "subsection": "20.22",
+          "doc_type": "core_rules",
+          "content_type": "rule"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 10.4] [Rule: 10.4]\n10.4 Can you hero an unpinned man upon drawing a hero just to get another draw?A. No.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............\n20",
+        {
+          "page": 20,
+          "doc_type": "core_rules",
+          "rule_number": "10.4",
+          "section_path": "10.4",
+          "subsection": "10.4",
+          "priority": 1,
+          "content_type": "rule",
+          "source_file": "UF RuleBook updated.pdf"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 29.42] [Rule: 29.42]\n29.42 Any other AFV attacking an unpinned man would be immediately immobilized if it drew a red 6 as\nits Overrun attack resolution RNC. Note that a Hero card could be played immediately prior to an\nOverrun attack to rally a pinned man and also qualify a red 4 [10.44], red 5, or red 6 RNC for\nimmobilization or elimination of an OT AFV (or a red 5 or red 6 for immobilization of other AFV's) during\nits attack on that man.",
+        {
+          "priority": 1,
+          "page": 55,
+          "content_type": "rule",
+          "rule_number": "29.42",
+          "subsection": "29.42",
+          "section_path": "29.42",
+          "source_file": "UF RuleBook updated.pdf",
+          "cross_refs": "10.44",
+          "doc_type": "core_rules"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 10.43] [Rule: 10.43]\n10.43 A Hero card could be played on a man who was pinned while attempting to infiltrate or enter CC\n[20.21], thus enabling him to try again in the same turn. The Hero card can be used to both rally a man\nand to simultaneously bestow special heroic powers on him for that turn ([10.44][10.45], [28.81], [33.9]).",
+        {
+          "rule_number": "10.43",
+          "subsection": "10.43",
+          "priority": 1,
+          "cross_refs": "10.44,10.45,28.81,20.21,33.9",
+          "section_path": "10.43",
+          "source_file": "UF RuleBook updated.pdf",
+          "doc_type": "core_rules",
+          "content_type": "rule",
+          "page": 20
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 10.42] [Rule: 10.42]\n10.42 The Hero card cannot be played on an already pinned man that has just been removed by Panic.\nIt must be played before the attack on the pinned man is actually resolved.",
+        {
+          "source_file": "UF RuleBook updated.pdf",
+          "content_type": "rule",
+          "section_path": "10.42",
+          "rule_number": "10.42",
+          "subsection": "10.42",
+          "page": 20,
+          "doc_type": "core_rules",
+          "priority": 1
+        }
+      ],
+      [
+        "[Doc: errata] [Section: 10.45] [Rule: 10.45] [Scenario: A]\n10.45 Can you hero an unpinned man when the group is not firing, just to get it out of your hand?\nA. No.",
+        {
+          "content_type": "qa",
+          "priority": 3,
+          "scenario": "A",
+          "source_file": "Up_Front_Errata_Pages.pdf",
+          "doc_type": "errata",
+          "rule_number": "10.45",
+          "section_path": "10.45",
+          "page": 3,
+          "subsection": "10.45"
+        }
+      ],
+      [
+        "[Doc: errata] [Section: 10.4] [Rule: 10.4] [Scenario: A]\n10.4 Can you hero an unpinned man upon drawing a hero just to get another draw?\nA. No.",
+        {
+          "doc_type": "errata",
+          "content_type": "qa",
+          "subsection": "10.4",
+          "section_path": "10.4",
+          "priority": 3,
+          "scenario": "A",
+          "source_file": "Up_Front_Errata_Pages.pdf",
+          "rule_number": "10.4",
+          "page": 3
+        }
+      ]
+    ],
+    "debug": {
+      "game_name": "Up Front",
+      "query_type": "concept",
+      "rule_numbers": [],
+      "num_retrieved": 8,
+      "num_cross_refs": 7
+    },
+    "verdict": "Faithfulness: Yes, Relevancy: Yes, Citation: Yes",
+    "faithfulness": "Yes",
+    "relevancy": "Yes",
+    "citation": "Yes",
+    "keywords_found": [
+      "no"
+    ],
+    "keywords_missing": [],
+    "duration_seconds": 340.34
+  },
+  {
+    "id": 16,
+    "category": "situation",
+    "query": "If a group has pinned men, can they reject terrain?",
+    "answer": "Yes, a group with pinned men can reject terrain. [7.32]",
+    "context": [
+      [
+        "[Doc: core_rules] [Section: 7.32] [Rule: 7.32] [Scenario: A]\n7.32 Can a group with pinned men reject terrain?\nA. Yes.\nCan a player with multi-card discard capability, discard one terrain card on a group, have it rejected, and still\ndiscard another terrain card on the same group in the same turn?\nA. No.\nEven if the two were discarded simultaneously?\nA. No.\nIf you have two Movement cards in play above a terrain card and subsequently reject enough terrain to remove\nboth Movement cards, are you in the terrain card or Open Ground?\nA. The terrain card.",
+        {
+          "content_type": "qa",
+          "rule_number": "7.32",
+          "subsection": "7.32",
+          "scenario": "A",
+          "doc_type": "core_rules",
+          "priority": 1,
+          "page": 14,
+          "source_file": "UF RuleBook updated.pdf",
+          "section_path": "7.32"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 10.21] [Rule: 10.21]\n10.21 Up to the number of men indicated on the Rally card may be returned to normal status. The player\nhas the choice of which of his Personality cards will remain pinned if his Rally card is insufficient to\nreturn all the pinned men in a group to normal. If his played Rally card is sufficient to rally all the men in\nthat group, they must all be rallied; a player cannot choose to use less Rally capacity than he has played\nso as to intentionally leave a man pinned.",
+        {
+          "source_file": "UF RuleBook updated.pdf",
+          "rule_number": "10.21",
+          "subsection": "10.21",
+          "priority": 1,
+          "doc_type": "core_rules",
+          "page": 19,
+          "section_path": "10.21",
+          "content_type": "rule"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 10.12] [Rule: 10.12]\n10.12 A group containing any pinned man may not place a Movement card (even to remove Wire),\nalthough it may usually play a Terrain card over an already placed Movement card. However, individual\nmen within a group containing a pinned man may play Movement cards directly into the Discard tray for\n1ST draw\n2ND draw\n3RD draw\n19\nmovement of single Personnel cards in the form of Individual Transfer [17.8], infiltration attempts, or CC\nentry.",
+        {
+          "page": 19,
+          "section_path": "10.12",
+          "priority": 1,
+          "cross_refs": "17.8",
+          "subsection": "10.12",
+          "content_type": "rule",
+          "source_file": "UF RuleBook updated.pdf",
+          "rule_number": "10.12",
+          "doc_type": "core_rules"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 7.3] [Rule: 7.3]\n7.3 OPPONENT'S TERRAIN PLACEMENT: Any Terrain card other than Open Ground can be placed on\nan opposing group in lieu of a discard (note nationality restrictions on discards; [4.3]). In order to place a\nTerrain card on an opposing group, that group must be currently eligible to receive a Terrain card (i.e. it\nmust have a Movement card in play which is not covered by a Terrain card and does not require\nplacement of a second Movement card before it can leave its present terrain). The player who has just\nhad the Terrain card played against him must then decide to either accept or reject the Terrain card\nplacement (EXC: Stream or Minefield cards can never be rejected) before starting his own turn.",
+        {
+          "subsection": "7.3",
+          "doc_type": "core_rules",
+          "section_path": "7.3",
+          "source_file": "UF RuleBook updated.pdf",
+          "page": 14,
+          "content_type": "rule",
+          "rule_number": "7.3",
+          "priority": 1,
+          "cross_refs": "4.3"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 16.41] [Rule: 16.41]\n16.41 Pinned men, and immobilized, bogged, or pinned AFV's are not eligible for Victory Points for\neither side.",
+        {
+          "rule_number": "16.41",
+          "source_file": "UF RuleBook updated.pdf",
+          "subsection": "16.41",
+          "section_path": "16.41",
+          "content_type": "rule",
+          "priority": 1,
+          "doc_type": "core_rules",
+          "page": 27
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 4.23] [Rule: 4.23]\n4.23 Reverse the status of pinned men by playing a Rally card on their group [10.2]. Only one such card\ncan be played as a single action per group per turn.",
+        {
+          "source_file": "UF RuleBook updated.pdf",
+          "content_type": "rule",
+          "subsection": "4.23",
+          "rule_number": "4.23",
+          "section_path": "4.23",
+          "doc_type": "core_rules",
+          "priority": 1,
+          "page": 6,
+          "cross_refs": "10.2"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 10.11] [Rule: 10.11]\n10.11 Pinned men may not use their firepower to add to their group's total firepower.",
+        {
+          "content_type": "rule",
+          "subsection": "10.11",
+          "page": 18,
+          "section_path": "10.11",
+          "source_file": "UF RuleBook updated.pdf",
+          "doc_type": "core_rules",
+          "priority": 1,
+          "rule_number": "10.11"
+        }
+      ],
+      [
+        "[Doc: errata] [Section: 7.32] [Rule: 7.32] [Scenario: A]\n7.32 Can a group with pinned men reject terrain?\nA. Yes.\nCan a player with multi-card discard capability, discard one terrain card on a group, have it rejected, and still discard another terrain\ncard on the same group in the same turn?\nA. No.\nEven if the two were discarded simultaneously?\nA. No.\nIf you have two Movement cards in play above a terrain card and subsequently reject enough terrain to remove both Movement\ncards, are you in the terrain card or Open Ground?\nA. The terrain card.",
+        {
+          "scenario": "A",
+          "doc_type": "errata",
+          "content_type": "qa",
+          "section_path": "7.32",
+          "priority": 3,
+          "subsection": "7.32",
+          "page": 2,
+          "rule_number": "7.32",
+          "source_file": "Up_Front_Errata_Pages.pdf"
+        }
+      ]
+    ],
+    "debug": {
+      "game_name": "Up Front",
+      "query_type": "concept",
+      "rule_numbers": [],
+      "num_retrieved": 8,
+      "num_cross_refs": 6
+    },
+    "verdict": "Faithfulness: Yes, Relevancy: Yes, Citation: Yes",
+    "faithfulness": "Yes",
+    "relevancy": "Yes",
+    "citation": "Yes",
+    "keywords_found": [
+      "yes"
+    ],
+    "keywords_missing": [],
+    "duration_seconds": 320.22
+  },
+  {
+    "id": 17,
+    "category": "situation",
+    "query": "Can a PC whose primary weapon is a crew-served weapon act as a crewman for another crew-served weapon?",
+    "answer": "No, according to Rule 11.11 [as updated by errata], a PC whose primary weapon is a crew-served weapon cannot act as a crewman for another crew-served weapon, except in the case where the man is unarmed and transfers into a group with another crew served weapon. [Source: Up_Front_Errata_Pages.pdf | Priority: P3 | Rule: 11.11]",
+    "context": [
+      [
+        "[Doc: core_rules] [Section: 11.11] [Rule: 11.11] [Scenario: A]\n11.11 Can a PC whose primary weapon is a crew-served weapon act as a crewman for another crew-served\nweapon (e.g. a mortar PC act as a crew for a MMG)?\nA. No. An exception to this would be a man whose primary weapon was a crew served weapon, but is unarmed,\nand that man transferred into a group with another crew served weapon.",
+        {
+          "page": 20,
+          "doc_type": "core_rules",
+          "content_type": "qa",
+          "scenario": "A",
+          "priority": 1,
+          "section_path": "11.11",
+          "rule_number": "11.11",
+          "source_file": "UF RuleBook updated.pdf",
+          "subsection": "11.11"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 17.8] [Rule: 17.8] [Scenario: A]\n17.8 & 11.13 Can the holder of a crew-served weapon begin an individual transfer if the weapon is currently\ncrewed? Can the crewman?\nA. No. No.",
+        {
+          "content_type": "qa",
+          "doc_type": "core_rules",
+          "page": 33,
+          "priority": 1,
+          "scenario": "A",
+          "section_path": "17.8",
+          "rule_number": "17.8",
+          "subsection": "17.8",
+          "source_file": "UF RuleBook updated.pdf"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 11.2] [Rule: 11.2] [Scenario: A]\n11.2 The PC who is carrying a radio as a SW, is also a crewman. Can the radio still be used?\nA. No.",
+        {
+          "subsection": "11.2",
+          "rule_number": "11.2",
+          "section_path": "11.2",
+          "doc_type": "core_rules",
+          "scenario": "A",
+          "content_type": "qa",
+          "priority": 1,
+          "source_file": "UF RuleBook updated.pdf",
+          "page": 21
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 20.23] [Rule: 20.23]\n20.23 A crewman may abandon his crew status [11.13] and attempt to infiltrate as part of the same\naction. Likewise, a man whose weapon is a flamethrower or a Secondary Weapon may wish to abandon\nit as a hindrance when he attempts to infiltrate. Any man whose listed weapon is a MMG or mortar and\nwishes to attempt to infiltrate must abandon that weapon as part of the same action. In all three cases,\nthe weapon/crew status is not automatically regained upon failure to infiltrate or their return from\ninfiltration; it must be reacquired as a separate action.",
+        {
+          "section_path": "20.23",
+          "doc_type": "core_rules",
+          "cross_refs": "11.13",
+          "source_file": "UF RuleBook updated.pdf",
+          "page": 38,
+          "content_type": "rule",
+          "subsection": "20.23",
+          "rule_number": "20.23",
+          "priority": 1
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 11.13] [Rule: 11.13] [Scenario: A]\n11.13 & 17.8 Can the holder of a crew-served weapon begin an individual transfer if the weapon is currently\ncrewed? Can the crewman?\nA. No. No.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............",
+        {
+          "section_path": "11.13",
+          "rule_number": "11.13",
+          "content_type": "qa",
+          "scenario": "A",
+          "priority": 1,
+          "page": 21,
+          "doc_type": "core_rules",
+          "source_file": "UF RuleBook updated.pdf",
+          "subsection": "11.13"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 18.22] [Rule: 18.22]\n18.22 ASSISTANT CREWMEN: A crew-served weapon cannot be acquired by any man other than the\nassistant crewman unless the assistant is pinned. An assistant crewman's acquisition attempt of the\nweapon he was crewing is automatically successful, although that acquisition still counts as an Action\ntaken by that group. Once the assistant crewman acquires sole possession of the crew-served weapon,\nhe must abandon his own weapon and ceases to be the assistant crewman.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026...........",
+        {
+          "subsection": "18.22",
+          "section_path": "18.22",
+          "priority": 1,
+          "page": 35,
+          "source_file": "UF RuleBook updated.pdf",
+          "rule_number": "18.22",
+          "content_type": "rule",
+          "doc_type": "core_rules"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 18.1] [Rule: 18.1] [Scenario: A]\n18.1 Does the principal operator of a crew-served weapon leave his weapon behind even if the weapon is not\ncurrently being served by a crew man?\nA. Yes.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026...........",
+        {
+          "page": 34,
+          "section_path": "18.1",
+          "source_file": "UF RuleBook updated.pdf",
+          "scenario": "A",
+          "doc_type": "core_rules",
+          "subsection": "18.1",
+          "rule_number": "18.1",
+          "content_type": "qa",
+          "priority": 1
+        }
+      ],
+      [
+        "[Doc: errata] [Section: 11.11] [Rule: 11.11] [Scenario: A]\n11.11 Can a PC whose primary weapon is a crew-served weapon act as a crewman for another crew-served weapon (e.g. a mortar PC\nact as a crew for a MMG)?\nA. No. An exception to this would be a man whose primary weapon was a crew served weapon, but is unarmed, and that man\ntransferred into a group with another crew served weapon.",
+        {
+          "source_file": "Up_Front_Errata_Pages.pdf",
+          "subsection": "11.11",
+          "scenario": "A",
+          "page": 3,
+          "content_type": "qa",
+          "priority": 3,
+          "doc_type": "errata",
+          "rule_number": "11.11",
+          "section_path": "11.11"
+        }
+      ]
+    ],
+    "debug": {
+      "game_name": "Up Front",
+      "query_type": "concept",
+      "rule_numbers": [],
+      "num_retrieved": 8,
+      "num_cross_refs": 2
+    },
+    "verdict": "Faithfulness: Yes, Relevancy: Yes, Citation: Yes",
+    "faithfulness": "Yes",
+    "relevancy": "Yes",
+    "citation": "Yes",
+    "keywords_found": [
+      "no",
+      "unarmed"
+    ],
+    "keywords_missing": [
+      "exception"
+    ],
+    "duration_seconds": 270.64
+  },
+  {
+    "id": 18,
+    "category": "variant",
+    "query": "Are there any variant or house rules for Up Front?",
+    "answer": "There are indeed variant rules and house rules for Up Front as indicated in [Source: Up_Front-_Experimental_house_and_variant_rules.pdf | Priority: P7]. Specific examples include Moving Flanking Fire [12.11], Individual Transfer [14.2 & 17.8], Weapon Malfunction [19], First Player Selection Variant [V2.4], Groups with the same ID chit [V3.2 & 17.7], and Entrenching in different terrain types [V36.3].",
+    "context": [
+      [
+        "[Doc: core_rules] [Section: 49.1] [Rule: 49.1]\n49.1 Although UP FRONT is designed as a competitive game for two players or teams, it can be\nmodified to allow entertaining solitaire play with only a few slight changes to the existing rules of play.",
+        {
+          "section_path": "49.1",
+          "source_file": "UF RuleBook updated.pdf",
+          "content_type": "rule",
+          "doc_type": "core_rules",
+          "rule_number": "49.1",
+          "subsection": "49.1",
+          "priority": 1,
+          "page": 87
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 42.9] [Rule: 42.9]\nFRONT, is quite playable in the course of a few evening\u2019s play.]\nOur sample Campaign Game consists of playing Scenarios A, B, D, E, F, G, H, C, & L in that order.  If\nthe next scenario to be played is not a Meeting Engagement, the player with the most Victory Points at\nthe conclusion of the last played scenario is the attacking force.  Should the two players be tied in\nVictory Points, the player who won the last scenario, is the attacking force.\n43. DESIGN YOUR OWN\nYou can \u201cDesign Your Own\u201d scenarios for Up Front in several different ways.  Three easy methods are\nrecommended here.  All use a tabulation of the Point Values printed on each Personnel card to\naccommodate a purchase of forces equal to or less than a given number of DYO points.  In addition,\nspecial capabilities such as Snipers, Elite forces, and certain secondary weapons can be purchased to\naugment a player\u2019s forces.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026...........",
+        {
+          "content_type": "rule",
+          "section_path": "42.9",
+          "priority": 1,
+          "source_file": "UF RuleBook updated.pdf",
+          "subsection": "42.9",
+          "doc_type": "core_rules",
+          "page": 69,
+          "rule_number": "42.9"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 28.5] [Rule: 28.5]\n28.5 MOVEMENT RESTRICTIONS: An AFV may never enter Marsh. Placement of Marsh on an AFV\nduring Prepare for Play [3.6] is not allowed. However, an opponent may play a Marsh card on a moving\nAFV so that the AFV will be forced to change its forward or reverse move to a sideways move, or\nremove its sideways move altogether [7.32].",
+        {
+          "cross_refs": "7.32,3.6",
+          "section_path": "28.5",
+          "page": 51,
+          "content_type": "rule",
+          "source_file": "UF RuleBook updated.pdf",
+          "priority": 1,
+          "rule_number": "28.5",
+          "subsection": "28.5",
+          "doc_type": "core_rules"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 37.3] [Rule: 37.3]\n37.3 MOVEMENT: All Movement cards played sideways by the partisan player are assumed to have\nautomatic Ford capability. Partisans may also exit a Marsh card after playing only one sideways\nMovement card.",
+        {
+          "doc_type": "core_rules",
+          "section_path": "37.3",
+          "priority": 1,
+          "rule_number": "37.3",
+          "source_file": "UF RuleBook updated.pdf",
+          "subsection": "37.3",
+          "page": 61,
+          "content_type": "rule"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 41.1] [Rule: 41.1]\n41.1 UP FRONT can be played between teams of two or more players, although a second game is\nrequired for each two additional players.",
+        {
+          "doc_type": "core_rules",
+          "rule_number": "41.1",
+          "subsection": "41.1",
+          "content_type": "rule",
+          "priority": 1,
+          "section_path": "41.1",
+          "page": 64,
+          "source_file": "UF RuleBook updated.pdf"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 44.4] [Rule: 44.4]\n44.4 TROOP TYPES: Airborne are British Elite Troops. Airborne may take one action and still\ndiscard one card, or take no actions and still discard two cards. Home Guard are British Second Line\ntroops. Home Guard troops have a maximum discard capability of one per turn, and only in thos turns in\nwhich they take no action.",
+        {
+          "rule_number": "44.4",
+          "subsection": "44.4",
+          "page": 80,
+          "section_path": "44.4",
+          "source_file": "UF RuleBook updated.pdf",
+          "content_type": "rule",
+          "priority": 1,
+          "doc_type": "core_rules"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 13.5] [Rule: 13.5]\n13.5 Open Ground may be placed beneath a Wire or Smoke card and above a Movement card by the\nmoving player so as to eliminate his group's Moving status, yet leave the Wire and/or Smoke in play.",
+        {
+          "doc_type": "core_rules",
+          "section_path": "13.5",
+          "page": 23,
+          "subsection": "13.5",
+          "rule_number": "13.5",
+          "source_file": "UF RuleBook updated.pdf",
+          "priority": 1,
+          "content_type": "rule"
+        }
+      ],
+      [
+        "[Doc: variant] [Section: Variant] [Rule: 12.11]\nUp Front- Experimental house and variant rules\nHouserules\nMoving Flanking Fire\n12.11 & 17.4 Houserule: when\nconducting moving Flanking Fire, weapons\ncontribute their moving firepower to the\nmoving group\u2019s total firepower, which total\nis then doubled for Flanking Fire.\nIndividual Transfer\n14.2 & 17.8 Houserule: men who\u2019re\nIndividually Transferring are marked in\ntheir current position in the group out of\nwhich they\u2019re transferring, being attacked\nin/retaining that position if the group is\nattacked and/or they break so that their\ntransfer is cancelled.\n19 Weapon Malfunction\nHouserule: if there is only 1 weapon with\nusable FP at the given RR, that weapon is\nthe sole firing weapon; it will malfunction\nwithout recourse to RPC selection if its\nmalfunction #s are drawn during the\nresolution of a fire attack (EXC. eg. pinned\nmen\u2019s weapons are always subject to\nmalfunction if their malfunction #s are\ndrawn).\nVariant rules\nV2.4 First player\nVariant: randomly select which side goes\nfirst in encounter scenarios. A straight\n50/50 is good enough (we use an RNC:\nblack- Axis; red- Allied).\nV3.2 & 17.7 Groups with the same ID\nchit\nVariant: a group can make a Lateral Group\nTransfer onto the same ID chit as a\nfriendly group if the 2 groups are on\ndifferent range chits. A group on the same\nID chit as a friendly group cannot play a\nMovement card to advance or retreat to\nthe same range chit as that other group\nunless: the group is already moving; the\ngroup has a Movement card played on it\nthat same turn. Terrain discards abort this\nmanoevure exactly as for transferring\ngroups swapping ID chits.\nV36.3 Entrenching in different terrain\ntypes\nVariant: entrenchments can now be placed\nin Buildings, Gullies and Walls, using the\nnormal rules (36.1) for placement during\nplay. Specific effects of entrenchments in\nthese terrain types are noted below:\n\u2022\nBuildings\n1. TEM: +1 TEM.\n2. INF from: 1 left\n3. INF versus: 1 right\n4. Placement: a group cannot place\nentrenchments in Buildings during\nplay; they are allocted by SSR.",
+        {
+          "source_file": "Up_Front-_Experimental_house_and_variant_rules.pdf",
+          "doc_type": "variant",
+          "rule_number": "12.11",
+          "content_type": "rule",
+          "priority": 7,
+          "section_path": "Variant",
+          "page": 1
+        }
+      ]
+    ],
+    "debug": {
+      "game_name": "Up Front",
+      "query_type": "concept",
+      "rule_numbers": [],
+      "num_retrieved": 8,
+      "num_cross_refs": 4
+    },
+    "verdict": "Faithfulness: Yes, Relevancy: Yes, Citation: Yes",
+    "faithfulness": "Yes",
+    "relevancy": "Yes",
+    "citation": "Yes",
+    "keywords_found": [
+      "variant",
+      "house",
+      "experimental"
+    ],
+    "keywords_missing": [],
+    "duration_seconds": 453.09
+  },
+  {
+    "id": 19,
+    "category": "multi_hop",
+    "query": "In Scenario C, the attacker has Sniper cards treated as Cower cards. What does the base Sniper rule say, and how does this scenario modify it?",
+    "answer": "In Scenario C, if the attacker has Sniper cards treated as Cower cards, this is an exception to the base rules. Normally, per Rule 43.6 [43.6], Minefield and Pillbox cards are only treated as Cower cards unless otherwise specified by the scenario or Victory Condition Table. However, in Scenario C, the attackers' Sniper cards are explicitly designated as Cower cards.\n\nThis scenario-specific rule overrides the base rules for this particular setup, treating all instances of attacking with Sniper cards as merely discarding them to reduce movement rather than performing an attack action [43.6].",
+    "context": [
+      [
+        "[Doc: core_rules] [Section: 43.6] [Rule: 43.6]\n43.6 SNIPERS: Minefield, and Pillbox cards are always treated as Cower cards unless allocated to the\ndefending player at the outset by the scenario in play or the Victory Condition Table.  Snipers are always\nallocated to the defending player.   The attacking player in a DYO scenario may purchase use of the\nSniper cards, but he may never use Minefield or Pillbox cards as anything other than a Cower\ncard.  Note that a player may also purchase \u201cinsurance\u201d for his Sniper capability in the form of a second\nSniper which enables him to continue using Sniper cards until he has suffered two successful Sniper\nChecks.  Sniper capability costs 35 points.  Double Sniper capability costs an additional 15 points.",
+        {
+          "rule_number": "43.6",
+          "section_path": "43.6",
+          "subsection": "43.6",
+          "source_file": "UF RuleBook updated.pdf",
+          "doc_type": "core_rules",
+          "content_type": "rule",
+          "page": 71,
+          "priority": 1
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 14.4] [Rule: 14.4]\n14.4 SNIPER CHECK: The defending player, as the first and sole action of the\ngroup fired on by the Sniper in the immediately following player turn, may attempt\nto locate and remove the Sniper with a Sniper Check provided it has an armed\n(not secondary weapons), unpinned man in that group. (A CE AFV or unpinned\n25\nInfantry Gun will also suffice). A Sniper Check is attempted by drawing a RNC, and is successful only if\nthat RNC is both black and > the RNC (ignoring color) drawn by the Sniper when resolving his attack. If\nthe Sniper check is successful, all Sniper cards henceforth held by the opponent are treated as Cower\ncards. This is the only way a Sniper can be attacked and does not require the use of a Fire card, but\ndoes count as an Action taken by that group. Elimination of a Sniper is never considered in determining\nVictory Points or Scenario Victory Conditions.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............",
+        {
+          "doc_type": "core_rules",
+          "priority": 1,
+          "rule_number": "14.4",
+          "section_path": "14.4",
+          "subsection": "14.4",
+          "source_file": "UF RuleBook updated.pdf",
+          "content_type": "rule",
+          "page": 25
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 14.2] [Rule: 14.2]\n14.2 Playing a Sniper card allows the player to attack one opposing card in a\ngroup of his choice regardless of the terrain occupied by that group. If the target\ngroup is a multu-Personnel card group, the card to be attacked in that group is\ndetermined by a RPC draw (see [14.6]). A Sniper may attack an AFV [28.431]\nonly if it is CE.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026..",
+        {
+          "doc_type": "core_rules",
+          "rule_number": "14.2",
+          "priority": 1,
+          "subsection": "14.2",
+          "content_type": "rule",
+          "cross_refs": "28.431,14.6",
+          "section_path": "14.2",
+          "page": 24,
+          "source_file": "UF RuleBook updated.pdf"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 14.1] [Rule: 14.1]\n14.1 Unless a Scenario Special Rule designates Sniper cards as being playable\nonly by a particular side in that scenario, any player with a Sniper card may play it\nprovided he does so as a discard. Thus, an American or Russian player make\ntake no other action during a turn in which they make a Sniper attack; a German\nplayer may make no other discards during a turn in which he makes a Sniper\nattack.",
+        {
+          "section_path": "14.1",
+          "page": 24,
+          "rule_number": "14.1",
+          "content_type": "rule",
+          "doc_type": "core_rules",
+          "priority": 1,
+          "subsection": "14.1",
+          "source_file": "UF RuleBook updated.pdf"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 48.4] [Rule: 48.4]\n48.4 SNIPER: A Sniper Reinforcement can be used to regain a lost Sniper capability, or used to\ngain Sniper capability for a player who did not start the scenario with that capability. If the player still has\na Sniper capability when he gains a Sniper reinforcement, he may attack twice for each Sniper card he\nplays (or three times if he gains sniper reinforcement twice, etc). Multiple sniper attacks using the same\nSniper card must draw a separate RPC to determine the recipient of each attack (unless there is only\none card in the only attacked group). This dual Sniper attack capability can also be used in DYO\nscenarios where additional snipers are purchased.",
+        {
+          "page": 87,
+          "doc_type": "core_rules",
+          "priority": 1,
+          "source_file": "UF RuleBook updated.pdf",
+          "rule_number": "48.4",
+          "content_type": "rule",
+          "section_path": "48.4",
+          "subsection": "48.4"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 37.4] [Rule: 37.4]\n37.4 SNIPERS: A partisan player does not lose his ability to play Sniper cards until after the German\nhas made two successful Sniper checks; each after different Sniper attacks.",
+        {
+          "rule_number": "37.4",
+          "priority": 1,
+          "section_path": "37.4",
+          "doc_type": "core_rules",
+          "page": 61,
+          "subsection": "37.4",
+          "source_file": "UF RuleBook updated.pdf",
+          "content_type": "rule"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 48.42] [Rule: 48.42]\n48.42 A successful Sniper Check [14.4] eliminates only one sniper, not a player's entire multiple sniper\ncapability. Each group attacked by a sniper is still allowed the option of only one Sniper Check as its\nsole action for that turn regardless of the number of times it was attacked by one or more Sniper cards\nduring that turn.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026...........................................",
+        {
+          "section_path": "48.42",
+          "doc_type": "core_rules",
+          "rule_number": "48.42",
+          "content_type": "rule",
+          "source_file": "UF RuleBook updated.pdf",
+          "subsection": "48.42",
+          "priority": 1,
+          "page": 87,
+          "cross_refs": "14.4"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 14.41] [Rule: 14.41] [Scenario: A]\n14.41 The last sentence of 48.4 states \"This dual Sniper attack capability can also be used in DYO scenarios where\nadditional snipers are purchased.\" This seems to be in contradiction to 14.41. Which is correct?\nA. Both, but treat 48.4 as \"in force\" for/random reinforcement snipers. A DYO purchased \"Double Sniper\" is just\nSniper insurance -- it takes two successful Sniper checks to eliminate Sniper capability.\nA Sniper Random Reinforcement does the following:\n1. Gives ordinary Sniper capability if player does not currently have it (lost it, or not have at start)\n2. Serves as a Dual Sniper (makes two attacks per Sniper card played) for a player who already has a Sniper.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............",
+        {
+          "priority": 1,
+          "content_type": "qa",
+          "source_file": "UF RuleBook updated.pdf",
+          "subsection": "14.41",
+          "section_path": "14.41",
+          "rule_number": "14.41",
+          "doc_type": "core_rules",
+          "page": 25,
+          "scenario": "A"
+        }
+      ]
+    ],
+    "debug": {
+      "game_name": "Up Front",
+      "query_type": "concept",
+      "rule_numbers": [],
+      "num_retrieved": 8,
+      "num_cross_refs": 4
+    },
+    "verdict": "Faithfulness: No, Relevancy: Yes, Citation: No",
+    "faithfulness": "No",
+    "relevancy": "Yes",
+    "citation": "No",
+    "keywords_found": [
+      "sniper",
+      "cower",
+      "scenario c",
+      "attacker"
+    ],
+    "keywords_missing": [],
+    "duration_seconds": 432.72
+  },
+  {
+    "id": 20,
+    "category": "multi_hop",
+    "query": "What is the full rule for crewed weapons including how Heroes interact with crewed LMGs?",
+    "answer": "The full rule for crewed weapons, including how Heroes interact with crewed LMGs, is as follows:\n\n10.45 & 17.4 [updated.pdf P1] states that \"the fully crewed value is used for flanking bonuses. The bracketed value is doubled only for Heroes using crewed weapons.\" Additionally, Rule 50.6 [updated.pdf P1] clarifies that a Hero card can double an LMG's firepower only if the Hero card is also a black RNC.\n\nThis means that non-Hero caused doubled firepower uses the fully crewed weapon value as per flanking bonuses, while Heroes using crewed weapons would use the bracketed values for doubling firepower. The errata [Up_Front_Errata_Pages.pdf P3] confirms this rule without any changes or exceptions.",
+    "context": [
+      [
+        "[Doc: core_rules] [Section: 10.45] [Rule: 10.45] [Scenario: A]\n10.45 & 17.4 Which values for crewed LMGs are used for non-Hero caused doubled firepower?\nA. The fully crewed value is used for flanking bonuses. The bracketed value is doubled only for Heroes using\ncrewed weapons.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............\n11. CREW SERVED WEAPONS",
+        {
+          "source_file": "UF RuleBook updated.pdf",
+          "scenario": "A",
+          "section_path": "10.45",
+          "content_type": "qa",
+          "page": 20,
+          "rule_number": "10.45",
+          "subsection": "10.45",
+          "priority": 1,
+          "doc_type": "core_rules"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 17.4] [Rule: 17.4] [Scenario: A]\n17.4 & 10.45 Which values for crewed LMGs are used for non-Hero caused doubled firepower?\nA. The fully crewed value is used for flanking bonuses. The bracketed value is doubled only for Heroes using\ncrewed weapons.\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............",
+        {
+          "rule_number": "17.4",
+          "subsection": "17.4",
+          "content_type": "qa",
+          "scenario": "A",
+          "page": 30,
+          "priority": 1,
+          "section_path": "17.4",
+          "source_file": "UF RuleBook updated.pdf",
+          "doc_type": "core_rules"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 33.3] [Rule: 33.3]\n33.3 CREWED WEAPONS: A wounded man may be a designated assistant crewman to a crewed\nweapon with no detrimental effects to that weapon's performance. An unpinned, wounded man who is\nthe principal operator of a crewed weapon may exchange weapons with his unpinned assistant\ncrewman as the sole action of that group for that turn [11.13].\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026...........",
+        {
+          "source_file": "UF RuleBook updated.pdf",
+          "section_path": "33.3",
+          "page": 58,
+          "content_type": "rule",
+          "doc_type": "core_rules",
+          "rule_number": "33.3",
+          "subsection": "33.3",
+          "cross_refs": "11.13",
+          "priority": 1
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 30.2] [Rule: 30.2]\n30.2 CREWED WEAPONS: Bazookas and Panzerschrecks are crew-served weapons.\nIf an assigned, unpinned assistant crewman is not present the weapon must use the\nbracketed To Hit frequency [11.1] when it fires and is more subject to malfunction [19.15]. Bazookas and\nPanzerschrecks may be used against any kind of target -- using respective basic Effect Numbers for\narmored and non-armored targets.",
+        {
+          "priority": 1,
+          "content_type": "rule",
+          "cross_refs": "19.15,11.1",
+          "rule_number": "30.2",
+          "source_file": "UF RuleBook updated.pdf",
+          "doc_type": "core_rules",
+          "section_path": "30.2",
+          "page": 55,
+          "subsection": "30.2"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 50.6] [Rule: 50.6]\n50.6 LMG: Like all LMGs in the game which are not considered a crew-served weapon, a Hero card\ncan be used to double the LMG's firepower only if the Hero card is also a black RNC.",
+        {
+          "content_type": "rule",
+          "priority": 1,
+          "page": 88,
+          "rule_number": "50.6",
+          "subsection": "50.6",
+          "doc_type": "core_rules",
+          "section_path": "50.6",
+          "source_file": "UF RuleBook updated.pdf"
+        }
+      ],
+      [
+        "[Doc: core_rules] [Section: 18.2] [Rule: 18.2] [Scenario: A]\n18.2 The primary operator of a crewed weapon is killed, and the crew man is pinned. If another member of the\ngroup acquires the weapon before the crewman is rallied (and, therefore, able to acquire it automatically), is the\ncrew man still considered to be crewed to the weapon?\nA. Yes\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026............",
+        {
+          "page": 34,
+          "section_path": "18.2",
+          "subsection": "18.2",
+          "scenario": "A",
+          "source_file": "UF RuleBook updated.pdf",
+          "doc_type": "core_rules",
+          "priority": 1,
+          "rule_number": "18.2",
+          "content_type": "qa"
+        }
+      ],
+      [
+        "[Doc: errata] [Section: 10.45] [Rule: 10.45] [Scenario: A]\n10.45 & 17.4 Which values for crewed LMGs are used for non-Hero caused doubled firepower?\nA. The fully crewed value is used for flanking bonuses. The bracketed value is doubled only for Heroes using crewed weapons.",
+        {
+          "priority": 3,
+          "content_type": "qa",
+          "rule_number": "10.45",
+          "subsection": "10.45",
+          "page": 3,
+          "source_file": "Up_Front_Errata_Pages.pdf",
+          "doc_type": "errata",
+          "scenario": "A",
+          "section_path": "10.45"
+        }
+      ],
+      [
+        "[Doc: errata] [Section: 18.2] [Rule: 18.2] [Scenario: A]\n18.2 The primary operator of a crewed weapon is killed, and the crewman is pinned. If another member of the group acquires the\nweapon before the crewman is rallied (and, therefore, able to acquire it automatically), is the crewman still considered to be crewed\nto the weapon?\nA. Yes.",
+        {
+          "subsection": "18.2",
+          "source_file": "Up_Front_Errata_Pages.pdf",
+          "page": 8,
+          "priority": 3,
+          "doc_type": "errata",
+          "section_path": "18.2",
+          "rule_number": "18.2",
+          "content_type": "qa",
+          "scenario": "A"
+        }
+      ]
+    ],
+    "debug": {
+      "game_name": "Up Front",
+      "query_type": "concept",
+      "rule_numbers": [],
+      "num_retrieved": 8,
+      "num_cross_refs": 5
+    },
+    "verdict": "Faithfulness: Yes, Relevancy: Yes, Citation: Yes",
+    "faithfulness": "Yes",
+    "relevancy": "Yes",
+    "citation": "Yes",
+    "keywords_found": [
+      "crewed",
+      "hero",
+      "bracketed",
+      "doubled",
+      "17.4"
+    ],
+    "keywords_missing": [],
+    "duration_seconds": 407.87
+  }
+]

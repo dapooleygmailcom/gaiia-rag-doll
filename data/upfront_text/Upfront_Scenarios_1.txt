@@ -1,0 +1,1313 @@
+--- PAGE 1 ---
+A:  MEETING OF PATROLS
+B:  CITY FIGHT
+Axis Set Up and Move first
+Axis Set Up and Move first
+3
+3
+Remove the first five Buildings to be discarded unused
+or as a RPC/RNC draw.
+Remove the first four Woods to be discarded unused
+or as a RPC/RNC draw.
+SPECIAL RULES:
+SPECIAL RULES:
+VICTORY CONDITIONS:
+VICTORY CONDITIONS:
+A.1: The Pillbox and Minefield cards are treated as Cower cards.
+B.1: The Pillbox, Minefield and Marsh cards are treated as Cower cards.
+The first player to have at least four unpinned Personality cards in one or more
+non-infiltrated groups at Range Chit 4 occupying any Terrain which will reduce
+the Fire Strength of an attack against them is the winner.
+The player with the most Victory Points (16.4) at the end of the time limit is the winner.
+However, territorial Victory Points are awarded only to those men occupying
+Buildings terrain.  Victory Points for casualties (including men removed due to rout.)
+are awarded normally.
+B:
+B:
+F:
+F:
+G:
+G:
+I:
+I:
+J:
+J:
+R:
+R:
+1-12
+(12 men, 240 pts.)
+1-9, 11, 21, 22, DC
+(12 men, 298 pts.)
+1-10
+(10 men, 242 pts.)
+1-12
+(12 men, 236 pts.)
+2-9, 11, 12, 18, 20, 21, DC
+(13 men, 313 pts.)
+1-10
+(10 men, 239 pts.)
+1-4, 6, 9, 10, 17, 18, 22, DC
+(10 men, 309 pts.)
+1-18
+(18 men, 235 pts.)
+2-21, 23, 24, DC
+(22 men, 304 pts.)
+1-13
+(13 men, 236 pts.)
+1-15
+(15 men, 241 pts.)
+2-9, 11, 12, 15,
+22-24, 26, DC
+(15 men, 310 pts.)
+DYO: 241
+DYO: 314
+A:
+A:
+1-7, 16-18, DC
+(10 men, 310 pts.)
+1-10, 18-20, DC
+(13 men, 308 pts.)
+© 2005, Richard Irving
+
+--- PAGE 2 ---
+C:  ASSAULTING A FORTIFICATION
+D: REAR GUARD ACTION
+Attacker Set Up and Move first
+Attacker Set Up and Move first
+3
+3
+Remove the first Stream and first four Buildings to be
+discarded unused or as a RPC/RNC draw.
+Remove the first four Buildings to be
+discarded unused or as a RPC/RNC draw.
+SPECIAL RULES:
+SPECIAL RULES:
+VICTORY CONDITIONS:
+VICTORY CONDITIONS:
+C.1: The defending player receives the Pillbox card prior to setup (23.2) in
+addition to his normal allotment of Action cards and places it on his Group B.
+Preparation for Play terrain placement then begins normally.
+C.2: The Minefield and Sniper  cards are treated as Cower cards if held by the
+attacking player. They can be used only by the defender. Treat all Marsh
+cards as Cower cards.
+D.1: The Sniper  cards are treated as Cower cards if held by the attacking
+player. They can be used as Sniper attacks only by the defender.
+D.2: The Pillbox and Minefield cards are treated as Cower cards.
+The attacking player wins by eliminating all Personality cards in the Pillbox
+or if the Pillbox is vacated. The defending player wins by avoiding the
+attacker’s Victory Conditions.
+The attacking player wins immediately if he has five unpinned Personality cards
+in one or more non-infiltrated groups in terrain which will reduce the Fire
+Strength of an attack against it, at Relative Range 5 to any defending group.
+The attacking player also wins if he can reduce the defending player to one group
+while losing less men than the defender.  If the attacking player has not fulfilled
+either of these victory conditions by scenario end, the defending player wins.
+B:
+B:
+F:
+F:
+G:
+G:
+I:
+I:
+J:
+J:
+R:
+R:
+1-8, 10, 12
+(10 men, 200 pts.)
+3, 4, 6-9, 17,18, 20, 27
+(10 men, 236 pts.)
+1-9, 12, 16, 25, DC
+(12 men, 362 pts.)
+1, 2, 4-12, 17, 19, 24, 28
+(15 men, 316 pts.)
+1, 3-6, 8-10, 19, 22
+(10 men, 197 pts.)
+2-4, 6-10, 20, 21
+(10 men, 237 pts.)
+1-12, 14, 17, DC
+(14 men, 339 pts.)
+2-12, 19-21, 23, 25
+(16 men, 318 pts.)
+3-5, 8-10, 23, 24
+(8 men, 199 pts.)
+2, 4, 6, 8-10, 12, 23
+(8 men, 237 pts.)
+1, 3-6, 9, 10, 14, 17, 24, DC
+(10 men, 366 pts.)
+2-10, 18, 22, 23, 25
+(13 men, 314 pts.)
+1, 3, 5-7, 9-16, 19, 22
+(15 men, 200 pts.)
+1-19, 26, DC
+(20 men, 318 pts.)
+2-21, 23-25
+(23 men, 289 pts.)
+1, 2, 4-7, 9-11,
+14, 15, 24, 25
+(13 men, 199 pts.)
+2-7, 12-14, 23-26
+(13 men, 238 pts.)
+3, 5, 6, 9,11, 12, 16, 17,
+19, 20, 22-26, DC
+(15 men, 369 pts.)
+3-12, 19, 20, 23-28
+(18 men, 293 pts.)
+DYO: 200
+DYO: 238
+DYO: 369
+DYO: 319
+A:
+A:
+ATTACKER:
+ATTACKER:
+DEFENDER:
+DEFENDER:
+1-18
+(18 men, 235 pts.)
+1, 3-7, 9, 10, 15, 19,
+22, 23, 25
+(13 men, 313 pts.)
+3-5, 9, 15, 17, 21, 22
+(8 men, 235 pts.)
+1-15, 23
+(16 men, 313 pts.)
+1-8, 10, 18. 20
+(11 men, 239 pts.)
+1, 3-6, 9-10, 14 17, 22, DC
+(10 men, 366 pts.)
+1, 4-7. 9. 12. 22
+(8 men, 198 pts.)
+1, 2, 4-10, 12, 16-18, DC
+(13 men, 370 pts.)
+4-8, 11-13, 21, 25, 27
+(11 men,. 200 pts.)
+© 2005, Richard Irving
+
+--- PAGE 3 ---
+E:  ARMORED RECON  PATROL
+F:  INFANTRY’S IRON FIST
+Attacker Set Up and Move first
+Attacker Set Up and Move first
+3
+3
+Remove the first four Buildings to be discarded unused
+or as a RPC/RNC draw.
+Remove the first four Buildings to be discarded unused
+or as a RPC/RNC draw.
+SPECIAL RULES:
+SPECIAL RULES:
+VICTORY CONDITIONS:
+VICTORY CONDITIONS:
+E.1: The Pillbox and Minefield cards are treated as Cower cards.
+F.1: The Pillbox and Minefield cards are treated as Cower cards.
+The first player to have at least four unpinned Personality cards in one or more
+non-infiltrated groups at Range Chit 4 occupying any Terrain which will reduce
+the Fire Strength of an attack against them is the winner.  If neither player
+accomplishes this by the time limit, the defending player wins.
+The first player to have at least four unpinned Personality cards in one or more
+non-infiltrated groups at Range Chit 4 occupying any Terrain which will reduce
+the Fire Strength of an attack against them is the winner.  If neither player
+accomplishes this by the time limit, the defending player wins.
+B:
+B:
+F:
+F:
+G:
+G:
+I:
+I:
+J:
+J:
+R:
+R:
+1-12
+(12 men, 240 pts.)
+1-10, 13, 22
+(12 men, 274 pts.)
+1-9, 11, 31
+(10 men, AFV, 366 pts.)
+3-9, 11, 18, 20, 32
+(10 men, AFV, 431 pts.)
+1-10
+(10 men, 242 pts.)
+1, 2, 6-12
+(9 men, 277 pts.)
+1, 2, 3-10, 33
+(9 men, AFV, 333 pts.)
+4, 6-8, 12, 21, 22, 25, 32
+(8 men, AFV, 490 pts.)
+1-12
+(12 men, 236 pts.)
+1-11, 18, DC
+(12 men, 281 pts.)
+1, 2, 4-6, 8-10, 35
+(8 men, AFV, 370 pts.)
+3, 5-10, 19, 21, 22, 32
+(10 men, AFV, 468 pts.)
+1-10
+(10 men, 239 pts.)
+3-10, 23, 24, 2xPF
+(10 men, 279 pts.)
+1, 2, 4-9, 30
+(8 men, AFV, 370 pts.)
+3-7, 9, 23, 24, 31
+(8 men, AFV, 471 pts.)
+1-18
+(18 men, 235 pts.)
+3-7, 9, 10, 12-19,
+21, 22, 28, DC
+(18 men, 282 pts.)
+1-9, 11-15, 35
+(14 men, AFV, 370 pts.)
+3-15, 18, 21, 22, 33
+(16 men, AFV, 446 pts.)
+1-13
+(13 men, 236 pts.)
+1-13, 28, 3xATMM
+(14 men, 274 pts.)
+1, 2, 4-7, 9-13, 37
+(11 men, AFV,  364 pts.)
+3-10, 20, 21, 25, 32
+(11 men, AFV,  467 pts.)
+1-15
+(15 men, 241 pts.)
+1-15, 18, 3xATMM
+(16 men, 274 pts.)
+1-12, 23, 31
+(13 men, AFV,  365 pts.)
+3-12, 19, 26, 28, 40
+(13 men, AFV,  466 pts.)
+DYO: 241
+DYO: 279
+DYO: 370
+DYO: 471
+A:
+A:
+ATTACKER:
+ATTACKER:
+DEFENDER:
+DEFENDER:
+© 2005, Richard Irving
+
+--- PAGE 4 ---
+G:  BLOCK CLEARING
+H: ARMORED ADVANCE
+Defender Set Up and Move first
+Attacker Set Up and Move first
+3
+3
+Remove the first four Woods to be discarded unused
+or as a RPC/RNC draw.
+Remove the first four Buildings to be discarded unused
+or as a RPC/RNC draw.
+SPECIAL RULES:
+SPECIAL RULES:
+VICTORY CONDITIONS:
+VICTORY CONDITIONS:
+G.1: The defending player is given a Buildings card with a TEM of -3 for
+placement during Preparation for Play in addition to his normal hand.
+G.2:  Only the player on defense may use Sniper cards to make Sniper
+attacks. The attacker must use them as Cower cards.
+G.3: The Pillbox, Marsh, and Minefield cards are treated as Cower cards.
+H.1:  Reinforcements are eligible to enter anytime after one deck of Action
+cards has been used.
+H.2: Treat Pillbox and Minefield as Cower cards. The attacking player must
+also treat Sniper cards as Cower cards.
+H.3: The defending player gets at least one functioning Terrain card to use
+during Preparation for Play.  If he has none in his hand at start, he draws cards
+until he gets one. All other cards drawn in this process are returned to deck
+and reshuffled.
+The attacker must have twice as many Victory Points as the defender at the
+end of the time limit.  In this scenario, territorial Victory Points are awarded
+only to those men occupying Buildings terrain.  Casualty Victory Points are
+awarded normally. The defending player wins by avoiding the attacking
+player’s Victory Conditions.
+B:
+B:
+F:
+F:
+G:
+G:
+I:
+I:
+J:
+J:
+R:
+R:
+3-8, 13, 18, 20, 22, 23, 27
+(12 men, 287 pts.)
+3-8, 18, 29
+R:  9, 11-13, 20
+(8 / 5 men, 458 pts.)
+3-9, 18, 20, 25, 34
+(10 men, AFV, 660 pts.)
+3-5, 7-9, 11,12, 18,
+20, 23, 25, 41
+(12 men, AFV, 593 pts.)
+1, 2, 6, 8-10,12, 17, 18, 20
+(9 men, 288 pts.)
+1-4, 17, 18, 27
+R:  6-9, 24, 26
+(7 / 6 men, 461 pts.)
+12, 15-19, 21, 22, 42
+(8 men, AFV, 536 pts.)
+1-10, 37
+(10 men, AFV, 598 pts.)
+1-9, 11, 15, 16, DC
+(12 men, 287 pts.)
+1, 3-8, 29
+R;  2, 9-12, 20, 24
+(8 / 7 men, 467 pts.)
+2-10, 15, 16, 21, 34
+(12 men, AFV, 556 pts.)
+1-12, 17, 18, 33
+(14 men, AFV, 560 pts.)
+1-5, 7, 9, 10, 17, 18, 2xPF
+(10 men, 288 pts.)
+3, 5, 8-10, 23, 28
+R:  2, 4, 6, 17, PF
+(7 / 4 men, 464 pts.)
+1, 8-10, 12, 18, 22, 24, 40
+(8 men, AFV, 663 pts.)
+3-10, 23, 24, 42
+(10 men, AFV, 596 pts.)
+1-4, 6-16, 23, 24, 28, DC
+(18 men, 285 pts.)
+1, 3-8,15-18, 23, 30
+R:  2, 9-14, 29
+(13 / 8 men, 454 pts.)
+2-18, 21, 34
+(18 men, AFV, 446 pts.)
+1-20, 32, 34
+(20 men, 2xAFV, 583 pts.)
+1-11, 20, 26, 28, 3xATMM
+(14 men, 284 pts.)
+1-6, 18-20, 29, 2xATMM
+R:  12-15, 28
+(10 / 5 men, 441 pts.)
+1-12, 18-20, 35
+(15 men, AFV,  544pts.)
+1-11, 18, 20, 33, DC
+(13 men, AFV,  611pts.)
+2-10, 12, 18, 22-26
+3xATMM
+(16 men, 288 pts.)
+2-8, 12,18, 20, 26, 29, 2xATMM
+R:  22-25, ATMM
+(12 / 4 men, 451 pts.)
+2-9, 12, 13, 24-26, 34
+(13 men, AFV,  665 pts.)
+1, 6-15, 21, 28, 32
+R: 37
+(13 / 1, AFV,  601 pts.)
+DYO: 288
+DYO: 465
+DYO: 665
+DYO: 601
+A:
+A:
+ATTACKER:
+ATTACKER:
+DEFENDER:
+DEFENDER:
+The attacking player wins if at any time he has at least five unpinned Personality
+cards in one or more non-infiltrated groups at Range Chit 5 occupying any Terrain
+which will reduce the Fire Strength of an attack against them. The defending
+player wins by avoiding the attacker’s Victory Conditions.
+© 2005, Richard Irving
+
+--- PAGE 5 ---
+I: PARTISANS
+German Set Up and Move first
+3
+Remove the first six Buildings to be discarded unused
+or as a RPC/RNC draw.
+SPECIAL RULES:
+VICTORY CONDITIONS:
+I.1: The Pillbox cards are treated as a Cower card.
+I.2: The German player must treat Sniper and Minefield cards as Cower cards.
+The Partisan player must use Minefields as Booby Traps (37.6)
+The German player wins automatically if at least half of his force reaches
+range chit 5 and he has more Victory Points than the Partisan.  In the scenario,
+Victory Points are only awarded for casualties and for the range chits occupied
+by the Partisan at game end per rule 16.4. The Partisan player wins by
+avoiding the German Victory Conditions.
+B:
+F:
+G:
+I:
+J:
+R:
+1, 5, 6, 8-12, 27
+(9 men, 144 pts.)
+1-10
+(10 men, 239 pts.)
+1, 3-10, 28
+(10 men, 142 pts.)
+DYO: 143
+DYO: 239
+A:
+ATTACKER:
+DEFENDER:
+J:  FREE FOR ALL
+Set Up and Move in order shown at right.
+# of players + 1
+Remove the first four Buildings to be discarded unused
+or as a RPC/RNC draw.
+SPECIAL RULES:
+VICTORY CONDITIONS:
+J.1: This is a game for more than 2 players, everyone playing for themselves.
+Encirclement and moving to a range chit other than 0 to 5 is not allowed.
+Players need not set up their groups opposite to each other because any
+player can fire at any other.  No group blocks the movement of another.
+Walls are -1 TEM to all incoming attacks. All of the J.1 special rules
+are ignored in favor of the normal two player rules when only two players
+are remaining.
+J.2: The Pillbox  card is treated as a Cower card. Night rules are in effect.
+The first player to have at least four unpinned Personality cards in one or more
+non-infiltrated groups at Range Chit 4 occupying any Terrain which will reduce
+the Fire Strength of an attack against them is the winner.  However, players
+who cause casualties should keep the removed Personnel cards of their
+opponents as a reminder of Victory Points earned (16.4) should the Victory
+Conditions not be met.
+B:
+F:
+G:
+I:
+J:
+R:
+1-12
+(12 men, 240 pts.)
+1-10
+(10 men, 242 pts.)
+1-12
+(12 men, 236 pts.)
+1-10
+(10 men, 239 pts.)
+1-18
+(18 men, 235 pts.)
+1-13
+(13 men, 236 pts.)
+1-15
+(15 men, 241 pts.)
+DYO: 241
+A:
+© 2005, Richard Irving
+
+--- PAGE 6 ---
+K:  ELITE TROOPS ON THE ATTACK
+Attacker Set Up and Move first
+4
+Remove the first four Buildings to be discarded unused
+or as a RPC/RNC draw.
+SPECIAL RULES:
+VICTORY CONDITIONS:
+K.1: The Pillbox and Minefield cards are treated as Cower cards.
+K.2:  Play stops immediately as soon as the Elite player can claim victory against defense
+force. The Action Deck is not shuffled. All cards currently in the players’ hands or in play
+on their groups are discarded. The four Buildings removed from play in the first part of
+the scenario remain out of play. The Elite force reforms his groups at range chit 0 using
+only those of his original men (including those who safely routed away) not lost by KIA
+results. The other player then forms new groups at range chit 0 using all of his original
+men.  Both players are now dealt full hands and begin Preparation for Play Terrain
+placement. The scenario then continues normally.
+K.3: Any Sniper capability or weapons lost in the first part of the scenario is regained at
+the start of the second part of the scenario, even if carried in the form of a weapon chit
+in place of the normal printed weaponry of a Personnel card.  Squad size is determined
+by the size of the squad at the start of the second part. Any wounds of men in the Elite
+force carry over to the second part.  Weapons captured in the first part cannot be used in
+the second part.
+The first player to have at least four unpinned Personality cards in one or more non-
+infiltrated groups at Range Chit 4 occupying any Terrain which will reduce the Fire
+Strength of an attack against them is the winner of that particular  scenario segment.
+The Elite force must win both scenario segments to win the game. The defending player
+wins if he wins either segment or by avoiding the Elite force victory conditions. Victory
+Points are not counted in this scenario.
+B:
+F:
+G:
+I:
+J:
+R:
+1, 2, 4-8, 10-12, 19, 26
+(12 men, 186 pts.)
+3-5, 7-9, 11, 12,
+17, 18, 20, 21
+(12 men, 316 pts.)
+5, 9, 10, 12, 15,
+16, 18, 19, 21 ,22
+(10 men, 188 pts.)
+1, 3, 4, 6, 15-18, 22, 24
+(10 men, 319 pts.)
+1-6, 8-12, 15
+(12 men, 194 pts.)
+2-4, 6-12, 15-17, 21
+(14 men, 320 pts.)
+3-5, 7-10, 22-24
+(10 men, 182 pts.)
+1-5, 10, 15, 19, 26, 27
+(10 men, 319 pts.)
+1, 3-7, 9-17, 20, 22, 23
+(18 men, 187 pts.)
+2-18, 21, 23, 24
+(20 men, 287 pts.)
+6-13, 15, 19, 21, 25-27
+(14 men, 186 pts.)
+1-4, 6, 10-15, 18-20
+(14 men, 308 pts.)
+1, 4-7, 9-11, 13-15,
+20-22, 28
+(15 men, 182 pts.)
+2-8, 12, 13, 20, 22-26
+(15 men, 314 pts.)
+DYO: 187 (twice)
+DYO: 320
+A:
+ATTACKER: (Elite)
+DEFENDER: (2nd Line)
+L:  OUTPOST LINE
+Attacker Set Up and Move first
+3
+Remove the first five Buildings to be discarded unused
+or as a RPC/RNC draw.
+SPECIAL RULES:
+VICTORY CONDITIONS:
+L.1: The defender may start nay or all of his groups entrenched and therefore
+is not subject to terrain placement by the attacking player during Preparation
+for Play.
+L.2: The Pillbox and Minefield cards are treated as Cower cards.
+B:
+F:
+G:
+I:
+J:
+R:
+1, 2, 4-8, 15, 28
+(9 men, 317 pts.)
+3-8, 10-12, 18-23, 40
+(15 men, AFV, 512 pts.)
+1, 2, 5, 6, 8, 13, 23
+(7 men, 319 pts.)
+1-10, 12, 15,16, 34,
+DC, radio
+(13 men, AFV, 511 pts.)
+3-7, 13, 22, 23, 25
+(9 men, 318 pts.)
+1-12, 19, 24, 35, radio
+(14 men, AFV, 518 pts.)
+4, 9, 10, 13, 23-25
+(7 men, 316 pts.)
+1-10, 15, 17, 22, 46, radio
+(13 men, AFV, 516 pts.)
+1-14, 16-18, 25, 27
+(19 men, 317 pts.)
+1-20, 23, 24, 33, radio
+(22 men, AFV, 471 pts.)
+1, 2, 4-8, 16, 23, 25
+(10 men, 311 pts.)
+1-15, 18, 19, 23, 24,
+36, radio
+(19 men, AFV,  509 pts.)
+2, 5, 10-16, 18,
+26, 27, radio
+(12 men, 313 pts.)
+2-15, 20, 23, 26,
+28, 32, radio
+(18 men, AFV,  514 pts.)
+DYO: 317
+DYO: 516
+A:
+ATTACKER:
+DEFENDER:
+The attacking player wins if at any time he has at least four unpinned Personality
+cards in one or more non-infiltrated groups at Range Chit 5 occupying any
+Terrain which will reduce the Fire Strength of an attack against them. The
+defending player wins by avoiding the attacker’s Victory Conditions.
+© 2005, Richard Irving
+
+--- PAGE 7 ---
+M:  PATROL
+Axis Set Up and Move first
+3
+Remove the first five Buildings to be discarded unused
+or as a RPC/RNC draw.
+SPECIAL RULES:
+VICTORY CONDITIONS:
+M.1: The Pillbox and Minefield cards are treated as Cower cards.
+The first player to have at least four unpinned Personality cards in one or more
+non-infiltrated groups at Range Chit 4 occupying any Terrain which will reduce
+the Fire Strength of an attack against them is the winner.
+B:
+F:
+G:
+I:
+J:
+R:
+3-5, 7, 9, 11, 12, 42, 43
+(9 men, 224 pts.)
+3-5, 7, 9, 11, 12, 42, 43
+(9 men, 224 pts.)
+1, 3-9, 11, 12, 19, 20, 44
+(9 men, 302 pts.)
+1-10
+(10 men, 242 pts.)
+1-10
+(10 men, 242 pts.)
+1-12
+(12 men, 236 pts.)
+1-12
+(12 men, 236 pts.)
+3-8, 17, 18, 21,22
+(10 men, 250 pts.)
+1-10
+(10 men, 239 pts.)
+1-18
+(18 men, 235 pts.)
+1-13
+(13 men, 236 pts.)
+1-13
+(13 men, 236 pts.)
+1-14, 23
+(15 men, 303 pts.)
+1-11, 18, 19
+(13 men, 248 pts.)
+1-15
+(15 men, 241 pts.)
+DYO: 241
+A:
+N:  JUNGLE MEETING ENGAGEMENT
+Axis Set Up and Move first
+3
+No cards are removed from the Action Deck..
+SPECIAL RULES:
+VICTORY CONDITIONS:
+N.1: The Pillbox and Minefield cards are treated as Cower cards.
+N.2:  Jungle Rules (47) are in effect.
+The player with the most Victory Points (16.4) at the end of the time limit is the winner.
+However, territorial Victory Points are awarded only to those men occupying
+Jungle terrain.  Victory Points for casualties (including men removed due to rout.)
+are awarded normally.
+B:
+B:
+F:
+J:
+DYO: 241
+A:
+A:
+ALTERNATE SET UPS vs. Japanese
+© 2005, Richard Irving
+
+--- PAGE 8 ---
+O:  ASSAULTING A PILLBOX
+Attacker Set Up and Move first
+3
+No cards are removed from the Action Deck..
+SPECIAL RULES:
+VICTORY CONDITIONS:
+O.1:  Jungle Rules are in effect.
+O.2: The defending player receives the Pillbox card prior to setup (23.2) in
+addition to his normal allotment of Action cards and places it on his Group B.
+Preparation for Play terrain placement then begins normally.
+O.3: The Minefield and Sniper  cards are treated as Cower cards  if
+held by the attacking player. They can be used only by the defender.
+The attacking player wins by eliminating all Personality cards in the Pillbox
+or if the Pillbox is vacated. The defending player wins by avoiding the
+attacker’s Victory Conditions.
+B:
+J vs. A:
+J vs. B:
+5, 7-9, 15, 42, 53
+(10 men, 261 pts.)
+2, 4-8,13,21
+(7 men, 270 pts.)
+1-9 11, 12, 16, 19, DC
+(13 men, 401 pts.)
+4-12, 16, 20, 21, 25
+(13 men, 271 pts.)
+4-11, 16, 21, 25
+(11 men, 244 pts.)
+1-12, 17-19, DC
+(15 men, 360 pts.)
+1-9 14, DC
+(10 men, 354 pts.)
+DYO: 270
+DYO: 360
+A:
+ATTACKER:
+DEFENDER:
+P:  EVACUATION
+Defender Set Up and Move first
+3
+Remove the first four Buildings to be
+discarded unused or as a RPC/RNC draw.
+SPECIAL RULES:
+VICTORY CONDITIONS:
+P.1: The Pillbox and Minefield cards are treated as Cower cards.
+P.2: The defender must set up in three or four groups, all of which start at
+Range Chit 2.  Following placement of terrain, the defending player must
+draw a RNC for each of his own men; the man drawing the lowest RNC
+(red RNC’s are considered negative values) is considered wounded
+(Defender choice in case of tie.)  Reshuffle the deck including all RNC’s
+drawn to determine wounds, but excluding the players’ dealt hands and
+placed terrain. All wound rules are in effect except the need to draw a
+Black RNC at the start of each new deck (33.7) A wounded man may not
+individually transfer to another group unless he is the only member of
+his group.
+The attacking player wins immediately if he has four unpinned Personality cards
+to Range Chit 5 in one or more non-infiltrated groups in terrain which will reduce
+the Fire Strength of an attack against them.. The defending player wins by
+avoiding the attacking player’s Victory Conditions, or automatically if has at
+least two of his originally wounded men of his originally wounded men in
+unpinned groups in terrain that will reduce the Fire Strength of any attack
+against them at Relative Range 0 to all attacking groups.
+B:
+F:
+G:
+I:
+J:
+J vs. A:
+R:
+3-5, 7, 9, 11, 12, 42, 43
+(9 men, 224 pts.)
+1, 3-9, 11, 12, 19, 20, 44
+(13 men, 302 pts.)
+DYO: 242
+DYO: 236
+A:
+A vs. J:
+ATTACKER:
+DEFENDER:
+1-18
+(18 men, 235 pts.)
+1-18
+(18 men, 235 pts.)
+1-12
+(12 men, 240 pts.)
+1-12
+(12 men, 240 pts.)
+1-10
+(10 men, 242 pts.)
+1-10
+(10 men, 242 pts.)
+1-12
+(12 men, 236 pts.)
+1-12
+(12 men, 236 pts.)
+1-10
+(10 men, 239 pts.)
+1-10
+(10 men, 239 pts.)
+1-15
+(15 men, 241 pts.)
+1-15
+(15 men, 241 pts.)
+1-13
+(13 men, 236 pts.)
+1-14, 23
+(15 men, 303 pts.)
+1-13
+(13 men, 236 pts.)
+© 2005, Richard Irving
+
+--- PAGE 9 ---
+Q:  DELAYING ACTION
+3
+No cards are removed from the Action Deck.
+SPECIAL RULES:
+VICTORY CONDITIONS:
+Q.1: The Pillbox and Minefield cards are treated as Cower cards .for both
+players. The Sniper, Wire and Stream cards are considered Cower cards
+for the attacking playe; they may be played normally by the defender.
+Q.2: The defending player may set up entrenched in applicable terrain.
+Q.3:  Jungle rules (47) are in effect when Japanese are the Axis side.
+The attacking player wins immediately if he has fiver unpinned Personality cards
+in one or more non-infiltrated groups in terrain which will reduce  the Fire
+Strength of an attack against them, at Relative Range 5 to any denfending
+grroup. The defending player wins by avoiding the attacking player’s
+Victory Conditions.
+B:
+F:
+G:
+I:
+J:
+J vs. A:
+R:
+3-5, 7, 9, 11, 12, 42, 43
+(9 men, 224 pts.)
+DYO: 224
+DYO: 313
+A:
+A vs. J:
+ATTACKER:
+DEFENDER:
+1-12
+(12 men, 240 pts.)
+1-12, 17, 19, 28, 44
+(15 men, 388 pts.)
+1-8
+(8 men, 222 pts.)
+3-8, 17, 19, 21-25
+(13 men, 333 pts.)
+2, 4, 6, 8-10, 23, 23
+(8 men, 237 pts.)
+2-10, 18, 22,  23, 25
+(13 men, 314 pts.)
+2-7, 12-14, 23-26
+(13 men, 238 pts.)
+1-15,  22, 23, 27
+(18 men, 303 pts.)
+1-11
+(11 men, 219 pts.)
+1-14, 23
+(15 men, 303 pts.)
+1-15, 23
+(16 men, 313 pts.)
+R:  PARATROOP DROP
+Attacker Set Up and Move first
+3
+Remove the first five Buildings to be
+discarded unused or as a RPC/RNC draw.
+SPECIAL RULES:
+VICTORY CONDITIONS:
+R.1: The Pillbox and Minefield cards are treated as Cower cards
+R.2: The attacker must set up in four groups with no more than four men per group. The four
+Group ID are then drawn randomly from a cup and placed one to a group from left to right; after
+which the attacker’s groups are rearranged on the table accordingly so as to set up opposite their
+opponent’s like-named groups. Two of each of the following range chits are then placed in a cup:
+-1/0, 0/1, 2/3, 4,5. The defender then draws one range chit at a time randomly from the cup and
+places it instantly on the attacker’s group of his choice before drawing another chit. The attacker
+then draws an RNC todetermine which side of the range chit is placed face up:  Black RNC indicates
+the higher is number is placed face up, Red RNC indicates the lower number is placed face up.
+The process is repeated for the remaining three attacking groups, after which terrain may be
+placed normally.
+R.3: All members of paratroop group which sets up in Woods terrain must make a Morale (20.21)
+prior to the start of play.  Failure of the Morale Check in this case results in a Wound--not a pin result.
+R.4: The Paratroop player may not set up with any LMG already crewed, nor can he play a
+Concealed card during the defender’s first turn.
+R.5: The attackers are paratroops (not marines) and are entitled to their respective  nationality’s
+Elite status capabilities (39)
+The attacking player wins at the end of his turn if he has at least five unpinned
+men (including SL or ASL) in one non-inilftrated group at range chit 3, 4, or 5 in
+terrain which will reduce the Fire Strength of an attack against it. The defender
+wins by avoiding the attacker’s Victory Conditions.
+B:
+F:
+G:
+I:
+J:
+R:
+1-12
+(12 men, 240 pts.)
+2-5, 7-9, 11, 17, 18, 26, 27
+(12 men, 303 pts.)
+1-12
+(12 men, 236 pts.)
+1-10
+(10 men, 239 pts.)
+1-10
+(10 men, 242 pts.)
+1-6, 10, 17, 18, 22
+(13 men, 314 pts.)
+2-14, 16, 18, 21
+(16 men, 262 pts.)
+2-9, 11-12, 22-26
+(15 men, 297 pts.)
+DYO: 239
+DYO: 304
+A:
+ATTACKER:
+DEFENDER:
+1-18
+(18 men, 235 pts.)
+1, 3-6, 8, 9, 17, 18, 22
+(10 men, 299 pts.)
+1-13
+(13 men, 236 pts.)
+Defender Set Up and Move first
+1-15
+(15 men, 241 pts.)
+© 2005, Richard Irving
+
+--- PAGE 10 ---
+S: JUNGLE ASSAULT
+Attacker Set Up and Move first
+3
+No cards are removed from the Action Deck.
+SPECIAL RULES:
+VICTORY CONDITIONS:
+S.1: Treat the Pillbox and Minefield as Cower cards.
+S.2:  Jungle Rules are in effect.
+S.3: The defender may start with all of his groups in applicable terrain
+entrenched and is mot subject to terrain placement by the attacking player
+during Preparation for Play.
+The attacking player wins immediately if he has four unpinned Personality
+cards in one or more non-infiltrated groups at Range chit 5 in terrain which
+will reduce the Fire Strength against them. The defender wins by avoiding
+the attacker’s Victory Conditions.
+B:
+J:
+4, 5, 7-9, 11, 15, 42, 43
+(9 men, 293 pts.)
+1, 2, 4-10, 13
+(10 men, 295 pts.)
+1-5, 7-9, 11, 12, 16, 17, 19
+(13 men, 358 pts.)
+4-13, 16, 21, 25
+(13 men, 261 pts.)
+1-14, 22, 23, 27
+(17 men, 379 pts.)
+1, 3-8, 14, 16, 22,23
+(11 men, 360 pts.)
+DYO: 295
+DYO: 379
+A:
+ATTACKER:
+DEFENDER:
+T:  ARMOR  PATROL
+Attacker Set Up and Move first
+3
+Remove the first four Buildings to be discarded unused
+or as a RPC/RNC draw.
+SPECIAL RULES:
+VICTORY CONDITIONS:
+T.1: The Pillbox and Minefield cards are treated as Cower cards.
+The first player to have at least four unpinned Personality cards in one or more
+non-infiltrated groups at Range Chit 4 occupying any Terrain which will reduce
+the Fire Strength of an attack against them is the winner.  If neither player
+accomplishes this by the time limit, the defending player wins.
+B:
+F:
+G:
+I:
+J:
+R:
+3-5, 7, 9, 11, 12, 42, 43
+(9 men, 224 pts.)
+7-9, 11, 19, 31, 42, 43
+(7 men, AFV, 327 pts.)
+1-10
+(10 men, 242 pts.)
+1-6, 8, 9, 34
+(8 men, AFV, 321 pts.)
+1-12
+(12 men, 236 pts.)
+1-3, 5, 6,8-11, 35
+(9 men, AFV, 421 pts.)
+1-10
+(10 men, 239 pts.)
+4-9, 23, 24, 30
+(8 men, AFV, 360 pts.)
+1-18
+(18 men, 235 pts.)
+1-4, 6-16, 18, 31
+(14 men, AFV, 315 pts.)
+1-13
+(13 men, 236 pts.)
+1-11, 37
+(11 men, AFV,  354 pts.)
+1-15
+(15 men, 241 pts.)
+1-12, 23, 31
+(13 men, AFV,  379 pts.)
+DYO: 236
+DYO: 326
+A:
+ATTACKER:
+DEFENDER:
+© 2005, Richard Irving
+
+--- PAGE 11 ---
+U:  ARMOR
+Attacker Set Up and Move first
+3
+Remove the first four Buildings to be discarded unused
+or as a RPC/RNC draw.
+SPECIAL RULES:
+VICTORY CONDITIONS:
+U.1: The Pillbox and Minefield cards are treated as Cower cards.
+The first player to have at least four unpinned Personality cards in one or more
+non-infiltrated groups at Range Chit 4 or 5 occupying any Terrain which will
+reduce the Fire Strength of an attack against them is the winner.  If neither
+player accomplishes this by the time limit, the defending player wins.
+B:
+B vs G:
+F:
+G:
+I:
+J vs. A:
+J:
+R:
+1-9, 11-13, 19
+(13 men, 326 pts.)
+1-5, 7-9, 11, 12, 19, 32
+(11 men, AFV, 461 pts.)
+1-9, 20
+(10 men, 296 pts.)
+3-8, 17, 20-22, 33
+(10 men, AFV, 455 pts.)
+3-8, 21, 22, 32
+(8 men, AFV, 515 pts.)
+6, 7, 15-24, 27, DC
+(13 men, 287 pts.)
+1-10,18, 19, 24, 34
+(13 men, AFV, 462 pts.)
+3-10, 23, 24, 2xPF
+(10 men, 279 pts.)
+1-8, 31
+(8 men, AFV, 476 pts.)
+1-19, 28, DC
+(18 men, 297 pts.)
+1-20, 32
+(20 men, AFV, 460 pts.)
+1-14, 28, 3xATMM
+(15 men, 287 pts.)
+1-12, 23, 32
+(13 men, AFV,  525 pts.)
+1-11, 32
+(11 men, AFV,  464 pts.)
+1-15, 18, 3xATMM
+(16 men, 274 pts.)
+1, 3-12, 21, 28, 33
+(13 men, AFV,  494 pts.)
+DYO: 236
+DYO: 326
+A:
+ATTACKER:
+DEFENDER:
+V:  AMBUSH
+5
+Remove the first four Buildings to be discarded unused or
+as a RNC / RPC draw.
+SPECIAL RULES:
+VICTORY CONDITIONS:
+V.1: The Pillbox and Minefield cards are treated as Cower cards.
+V.2: The Attacking force is considered Elite and entitled to use Elite
+troop capabilities (39). Any listed man with a Morale of 1 becomes a
+Morale 2. All others retain their printed values.
+V.3: The defender may receive Random Reinforcements throughout
+the game
+The attacking player wins by breaking the defending player’s squad (16.5).
+Note that each arrival of reinforcements (other than snipers) increases the
+size of the defending “squad” and makes it that much more difficult to break.
+The defender wins by avoiding the attacker’s Victory Conditions.
+B:
+F:
+G:
+I:
+J:
+R:
+Against all others:
+3-8, 11-13, 16-20, 44
+(15 men, 491 pts.)
+DYO: 459
+DYO: 495
+A:
+ATTACKER:
+DEFENDER:
+Against all others:
+1-9
+(9 men, 459 pts.)
+Against German:
+4, 5, 7-9, 13, 16-23
+(14 men, 451 pts.)
+1-7
+(7 men, 457 pts.)
+1-6, 14-17, 20, 24
+(12 men, 489 pts.)
+1-7
+(7 men, 451 pts.)
+1-6, 8, 11, 14, 15, 19, 27
+(12 men, 425 pts.)
+1-12
+(12 men, 471 pts.)
+2-9, 11-15, 17, 18,
+26, 27, 2xDC
+(15 men, 493 pts.)
+1-10
+(10 men, 459 pts.)
+1-15. 17. 23, 28, DC
+(18 men, 492 pts.)
+Attacker Set Up and Move first
+Against Japanese:
+1-5, 7-9, 11, 12
+(10 men, 481 pts.)
+1-4, 6-12. 14-17, 20, 25, DC
+(17 men, 485 pts.)
+1-9
+(9 men, 456 pts.)
+3-18, 22-26, 28, 2xDC
+(23 men, 485 pts.)
+1-16
+(16 men, 458 pts.)
+© 2005, Richard Irving
+
+--- PAGE 12 ---
+W:  SURPRISE ATTACK
+X:  SURROUNDED
+Attacker Set Up and Move first
+Defender Set Up first and Attacker Move first
+3
+3
+Remove ALL Buildings to be discarded unused
+or as a RPC/RNC draw.
+Remove first five Buildings to be discarded unused
+or as a RPC/RNC draw.
+(unless Jungle Rules are in effect, see X.2)
+SPECIAL RULES:
+SPECIAL RULES:
+VICTORY CONDITIONS:
+VICTORY CONDITIONS:
+W.1: The Pillbox and Minefield cards are treated as Cower cards.
+W.2: The defender may set up all of his groups in Buildings prior to set up
+by using the first buildings revealed by a random search through the deck
+sufficient to house all of the defender’s groups.  Preparation for then begins
+normally.  Once these buildings cards are vacated, they are removed from
+play.
+W.3: The defender starts play with all but one Morale 3 rifleman pinned.
+He may not rally any of these men until he is fired upon or survives a DC
+attack, or until the subsequent turn after he makes an attack of his own.
+He may rally men with a Hero card at any time.
+W.4: The defender may make no sniper attacks until he has rallied
+someone without the use of a Hero card. A sniper attack would constitute
+fire upon the defender and allow him to rally his men.
+X.1: The Pillbox and Minefield cards are treated as Cower cards.
+X.2:  Jungle rules (47) are in effect for all Japanese vs. US / British scenario variations.
+In Jungle scenarios, no cards are removed from the Action Deck.
+X.3:  Red RNC Movement cards are NOT required to use Retrograde movement (5.51)
+X.4: The defender sets up first using Range chits 0. The attacker must then divide his
+Personnel cards into two “forces” with two or more groups in each force. Any side with
+two or more LMG’s must start them in separate forces.  One force of the attacker’s
+choice is set up with Range chits 0, while the other force must be set up with Range
+chits 10 (5+5).  In this scenario, the attacker may have two groups with the same identity
+letter as long as the defender starts at range chit between them;  in fact, the attacker
+MUST set up with two group A’s and two Group B’s (use the Group ID counters from
+another nationality not in the scenario.)
+X.5:  Note the defender does not start the game technically “encircled” as per 17.6.
+Such encirclement status is only incurred per 17.6 or if a group is a Relative Range 5
+to adjacent (or directly opposite) groups both behind and in front of it.  However, only
+one group (in front or behind) is necessary to qualify as the “directly opposite” group
+necessary for Flanking Fire.
+The attacking player wins immediately by occupying an equal or greater
+number of Buildings cards than are currently occupied by the defender.
+The defender wins by avoiding the attacker’s Victory Conditions.
+The attacking player wins immediately by breaking the defending squad
+(16.5) The defender wins by avoiding the attacker’s Victory Conditions
+B:
+B:
+F:
+F:
+G:
+G:
+I:
+I:
+J:
+J:
+J vs. A:
+J vs. A:
+R:
+R:
+3-5, 7, 9, 11, 12, 42, 43
+(9 men, 224 pts.)
+3-5, 7, 9, 11, 12, 42, 43
+(9 men, 224 pts.)
+1, 3-9, 11, 12, 19, 20, 44
+(13 men, 302 pts.)
+1, 3-9, 11, 12, 19, 20, 44
+(13 men, 302 pts.)
+DYO: 242
+DYO: 232
+DYO: 236
+DYO: 317
+A:
+A:
+A vs. J:
+A vs. J:
+ATTACKER:
+ATTACKER:
+DEFENDER:
+DEFENDER:
+1-18
+(18 men, 235 pts.)
+1-16, 18
+(17 men, 230 pts.)
+1-18
+(18 men, 235 pts.)
+1-20, 23-26
+(24 men, 316 pts.)
+1-12
+(12 men, 240 pts.)
+1-11
+(11 men, 229 pts.)
+1-12
+(12 men, 240 pts.)
+1-12, 27, 28
+(14 men, 312 pts.)
+1-10
+(10 men, 242 pts.)
+1-9
+(9 men, 232 pts.)
+1-10
+(10 men, 242 pts.)
+1-10, 16, 23
+(12 men, 312 pts.)
+1-12
+(12 men, 236 pts.)
+1-12, 18, 19, 23, 26
+(16 men, 318 pts.)
+1-12
+(12 men, 236 pts.)
+1-4, 6-12
+(11 men, 232 pts.)
+1-10
+(10 men, 239 pts.)
+1-4, 6-10
+(9 men, 231 pts.)
+1-10
+(10 men, 239 pts.)
+1-10, 22, 25
+(12 men, 310 pts.)
+1-15
+(15 men, 241 pts.)
+1-14
+(15 men, 231 pts.)
+1-15
+(15 men, 241 pts.)
+1-15, 22, 27, 28
+(18 men, 316 pts.)
+1-13
+(13 men, 236 pts.)
+1-12
+(12 men, 226 pts.)
+1-15, 22
+(16 men, 300 pts.)
+1-15
+(15 men, 259 pts.)
+1-13
+(13 men, 236 pts.)
+1-15, 18, 22
+(17 men, 317 pts.)
+© 2005, Richard Irving
+
+--- PAGE 13 ---
+Up Front Scenario cards
+by Richard Irving
+rri12@sbcglobal.net
+This file contains scenario rules and rosters for the Avalon Hill game, Up Front in a convenient format.  It
+includes all errata and published scenario variations in Up Front, Banzai & Desert War.
+Notes:
+-  British & Japanese squads in scenarios B, C & D are shaded. These squads were not officially published
+by Avalon Hill. They appear in Bruce Wigdor’s Internet Up Front (IUF) program.  (see
+www.wargameroom.com)
+- American card #44 is the extra BAR card (morale 2, Panic 3) used in several Banzai scenarios.
+- Andy Maly’s errata has been incorporated into the scenarios.
+-  Scenario J, Free for All, has been extended to allow more than 3 players.  If played with 3, it matches the
+originally published scenario.   (Since Up Front is essentially a two player game, I have never played this
+scenario and it has not been playtested.)
+- These cards were originally designed on Coral Draw 8.0 and may be converted to Adobe .pdf format.
+-  Please report any errors, omission and typos to rri12@sbcglobal.net. Thanks.
+Up Front, Banzai & Desert War are copyright 1983, 1984 and 1989 by The Avalon Hill Game Company.
+Currently copyright by Hasbro, Inc. and under license to Multi Man Publishing, Inc.
+These cards are produced without permission.
+© 2005, Richard Irving
