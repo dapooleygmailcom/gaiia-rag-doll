@@ -1,0 +1,164 @@
+{
+  "game_name": "Renegade Legion",
+  "game_id": "renegade_legion",
+  "data_dir": "data/rl",
+  "text_dir": "data/rl_text",
+  "chroma_collection": "renegade_legion-rules-semantic",
+  "rule_index_file": "data/renegade_legion_rule_index.json",
+  "rule_schema": "keyword_header",
+  "rule_pattern": "(?:^|\\n)([A-Z\\s]{4,})\\n",
+  "cross_ref_pattern": "(?:see|See|SEE)\\s+(?:page\\s+\\d+|[A-Z][a-z]+(?:\\s+[A-Z][a-z]+)*)",
+  "scenario_format": "numeric",
+  "scenario_pattern": "(?:^|\\n)\\s*(?:Scenario\\s+|ASL\\s+)?(\\d+)[.:\\s]+",
+  "chunk_size": 4000,
+  "chunk_overlap": 200,
+  "schema_detection_scores": {
+    "chapter_decimal": 0,
+    "numeric_decimal": 3,
+    "outline_parenthetical": 0,
+    "keyword_header": 29
+  },
+  "documents": {
+    "2nd-ACR.pdf": {
+      "doc_type": "supplement",
+      "priority": 5,
+      "description": "Unknown document",
+      "size_mb": 2.17,
+      "total_pages": 47,
+      "max_pages": null
+    },
+    "Interceptor_Overlays.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenario-specific rules or cards",
+      "size_mb": 8.58,
+      "total_pages": 10,
+      "max_pages": null
+    },
+    "Interceptor_Player_Aid_1.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Rules module for Interceptor game mechanics",
+      "size_mb": 0.36,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "Interceptor_Player_Aid_2.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Interceptor Player Aid for Renegade Legion game",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "Interceptor_and_Leviathan_Skies.pdf": {
+      "doc_type": "supplement",
+      "priority": 5,
+      "description": "Unknown document",
+      "size_mb": 7.41,
+      "total_pages": 2,
+      "max_pages": null
+    },
+    "Leviathan_Template_Update.pdf": {
+      "doc_type": "errata",
+      "priority": 2,
+      "description": "Official errata: supersedes base Leviathan rules for damage template application",
+      "size_mb": 0.5,
+      "total_pages": 5,
+      "max_pages": null
+    },
+    "Orbital_Allocation_Charts_and_1_inch_Planetary_Counters.pdf": {
+      "doc_type": "supplement",
+      "priority": 2,
+      "description": "Supplementary rules module for orbital allocation and planetary counters",
+      "size_mb": 12.23,
+      "total_pages": 4,
+      "max_pages": null
+    },
+    "RL-Int_Sheet.pdf": {
+      "doc_type": "supplement",
+      "priority": 6,
+      "description": "Unknown document",
+      "size_mb": 0.07,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "TOG_Grav_Vehicles.pdf": {
+      "doc_type": "supplement",
+      "priority": 5,
+      "description": "Unknown document",
+      "size_mb": 5.62,
+      "total_pages": 4,
+      "max_pages": null
+    },
+    "interceptor-2e-nc.pdf": {
+      "doc_type": "core_rules",
+      "priority": 1,
+      "description": "Main rulebook for the INTERCEPTOR game",
+      "size_mb": 3.8,
+      "total_pages": 59,
+      "max_pages": null
+    },
+    "pdfcoffee.com_128283435-renegade-legion-renegade-fighter-briefing-pdf-free.pdf": {
+      "doc_type": "supplement",
+      "priority": 5,
+      "description": "Unknown document",
+      "size_mb": 5.34,
+      "total_pages": 49,
+      "max_pages": null
+    },
+    "pdfcoffee.com_renegade-legion-centurion-rulebook-pdf-free.pdf": {
+      "doc_type": "core_rules",
+      "priority": 1,
+      "description": "Main rulebook for the Renegade Legion Centurion wargame",
+      "size_mb": 1.98,
+      "total_pages": 47,
+      "max_pages": null
+    },
+    "pdfcoffee.com_renegade-legion-distant-firepdf-pdf-free.pdf": {
+      "doc_type": "core_rules",
+      "priority": 1,
+      "description": "Unknown document",
+      "size_mb": 13.49,
+      "total_pages": 73,
+      "max_pages": null
+    },
+    "pdfcoffee.com_renegade-legion-legionnairepdf-pdf-free.pdf": {
+      "doc_type": "core_rules",
+      "priority": 1,
+      "description": "Unknown document",
+      "size_mb": 19.85,
+      "total_pages": 182,
+      "max_pages": null
+    },
+    "pdfcoffee.com_renegade-legion-prefect-pdf-free.pdf": {
+      "doc_type": "core_rules",
+      "priority": 1,
+      "description": "Unknown document",
+      "size_mb": 3.63,
+      "total_pages": 63,
+      "max_pages": null
+    },
+    "pdfcoffee.com_renegade-legion-tog-fighter-briefingpdf-pdf-free.pdf": {
+      "doc_type": "supplement",
+      "priority": 5,
+      "description": "Unknown document",
+      "size_mb": 5.96,
+      "total_pages": 49,
+      "max_pages": null
+    }
+  },
+  "glossary": {
+    "DAP": "DOGFIGHT ARMOUR PIERCING MISSILE",
+    "DFM": "DEAD-FIRE MISSILE CLUSTER",
+    "EP": "Energy Point",
+    "FIRE": "Ships",
+    "HELL": "GRAVITIC EFFECT MISSILE",
+    "ICB": "Internal Component Block",
+    "POINT": "INTERNAL OR EXTERNAL",
+    "RIS": "RADIATION INTENSITY SEEKING MISSILE",
+    "SOT": "SAFE OPERATING THRUST",
+    "SSS": "SCANNER SILHOUETTE SEEKING MISSILE",
+    "TOT": "TIME-ON-TARGET SYNCHRONIZER SYSTEM"
+  }
+}

@@ -1,0 +1,1830 @@
+--- PAGE 1 [OCR] ---
+RENEGADE
+LEGION
+TM
+FASA
+OOAPO
+FIGHTER BRICFING
+
+--- PAGE 2 [OCR] ---
+TOG FIGHTER BRIEFING
+Design
+Stuart Johnson
+Ron Oldham
+James Woods
+Sam Lewis
+Development
+Sam Lewis
+Edtorial Staff
+Editor-/n-Chief
+L.Ross BabcockIll
+SeniorEditor
+Donna Ippolito
+Editor
+Todd Huettel
+EditorialAssistant
+C.R.Green
+Production Staff
+Production Manager
+Jordan K.Weisman
+Art Director
+Dana Knutson
+Cover Arn
+David R.Deitrick
+Ship Design and lustration
+David R.Deitrick
+Typesetting
+Patrice A. Jones
+Tara Gallagher
+Layout
+Tara Gallagher
+Pasteup
+Dana Knutson
+Renegade Legion and TOG are trademarks of FASA Corparation.
+Published by FASA Corporation
+Copyright1987FASA Corporation.
+P.O.Box 6930
+All Rights Reserved. Printed in the United States of America.
+Chicago,IL 60680
+
+--- PAGE 3 [OCR] ---
+TABLE OF CONTENTS
+PREFACE
+LIGHTFIGHTERS
+Funda.
+Ludicrum Secundus
+Manubalista
+10
+Sasum
+12
+Telum
+MEDIUM FIGHTERS
+16
+Cuspis
+16
+CWTP
+18
+Defensor
+20
+Fulman
+22
+Idis ...
+Onagri
+26
+Sica..
+28
+Tormenta
+30
+HEAVY FIGHTERS
+32
+Arcubalista
+32
+Arcus
+Ictus
+36
+Legati
+38
+Sercuris
+Spatha
+CORVETTE
+Pharetra
+WEAPONSSYSTEMS
+46
+Autoloading Hard Polnt
+46
+Mass Driver Gatling
+Thorium Plasma Projector
+Cone Laser
+
+--- PAGE 4 [OCR] ---
+Classified
+RM7-9-36830
+TOG Naval Threat Brieting
+Shannedam Courty
+(Fighter classes)
+PREFACE
+This manual is designed to familiarize newly assigned Commonwealth and Renegadenaval personnel
+with unique TOG fighter classes that they will be engaging in the Shannedam County thealer of operations
+Background Infomation and a Combat Evaluation is given for each of the crafi described. One TOG
+Corvette is deseribed. This Corveute is commonly used to transport a squadron of lmperial fighlers
+Additional informaton on new weapons systems recently introduced into the TOG inventory is also
+given.
+Fightersareclassified inthefollowingmanner,asperOSTAG255.
+Light:Power plant rated at 0-1500
+Medjum Power plantrated at 1S01-2000
+Heay:Power plant rated at 2001-2500
+Deployment figures are for the Shannedam County theater of operations only as per ISA 2o88
+Provisions of this publication are the subject ot Interstellar Standardization Agrecrnents 2002. 2003
+Changes to this manual should be keyed to the page and line of text in which the changes are
+recomimended,Gtve reasons foreach suggested revision.
+This publicalion supersedes RM 7-8-76829
+
+--- PAGE 5 [OCR] ---
+888
+UTT
+
+--- PAGE 6 [OCR] ---
+FUNDA
+Type:LightFighter
+Mass: 74
+Cost:2,106.200
+Shields:
+Bow
+Engines:
+50
+Right
+40
+Right Engine Rating
+750
+Left
+40
+Lefi Engine Rating
+750
+Weapons:
+Stern
+Range
+Location
+2-3
+4-6
+7-10
+Type
+10
+Armor:
+Thrust:
+11-15
+Bow
+50
+1.5/5Laser
+Bow
+None
+High Thrust Modification
+Left
+Bow
+EPC14
+14
+30
+RWing
+Right
+30
+Hard Point
+StreamLining:Yes
+Lwing
+Stem
+Hard Point
+50
+AntiGrav:No
+
+--- PAGE 7 [OCR] ---
+Background:
+TheFunda is the resultof the Aquilo Corporatian's attempttodevelop a ship toreplacetheLancea.Aquilo began thisproject in 6824,on its own initiative and without any TOG R&Dfinancing.
+Three years and over S billion talents later,Aquilo submitted a prototype Funda to the Imperial Navy for reviewBy this time,however,the review board was also evaluating the Arcubalista.
+six years on the project. Furthermore, the Imperial Navy needad the Arcubalista,and did not want to see some inex pensive, privately designed ship muddying up the normal procurement process.
+Aquilowaspolitelytold"'no."
+Though the Aquilo directors admited that the Arcvba/ista was marginally superior to the Funda, the Funda was vastly less expensive and thus fit in with the TOG's new high-low design
+philosophy quite well. For every Arcuhalista purchased, ToG could procure one-and-a-half Fundas, As total rejection of the Fwnda would mean bankruptcy for Aquilo,the company's directors
+called in every political favor they had With the support of Spectabiles Senator Sunmee Lee, Aquilo was able to persuade the Imperial Navy to order a small quantity of Fundas for combat
+cvaluation.
+Currently, Commonwealth Royal Navy Intelligence reports one Funda flight operating in the Yols system, Renegade Intelligence has not been able to confim this report.
+Combat Evaluation:
+The Funda is a good light fighter whose speed and survivability are similar to the Cheetah's, To save weight and to reduce production costs, the designers have mounted it with short-range,
+but powerful weapons. The craff's design makes no provision for high-thrust modifications, and so its maximum acceleration is Io Gs. When confronting Fundas, it is recommended that pilots
+keeptheengagementrangeat60+kilometers.
+
+--- PAGE 8 [OCR] ---
+LUDICRUM SECUNDUS
+isuodeam
+Shields:
+Type: Light Fighter
+Bow
+50
+Mass:86
+Right
+Laseratnge
+Range
+30
+Cost:1.810.400
+7-10
+2-35
+4-6
+Type
+pogLocation
+30
+Left
+11-15
+Bow
+S/2 Lasere:
+50
+Stem
+Enginest
+Lwing
+1.5/5 Laser
+Armor!
+Center Engine Rating
+RWing
+1.5/5Laser
+50
+Bow
+Hard PointMuosBow
+40
+Left
+Thrust:
+Right
+40
+High Thrust Modification
+50
+(w/Lasers Replaced)
+Streamlining: No
+AntiGrav: Yes
+
+--- PAGE 9 [OCR] ---
+Background:
+The Ludicrum Secundus is aderivativeof the TOG Navy's bigh-acceleration trainer known as the Ladacrn Pririus.The training version has no shields oroffensive armament, andcan achieve
+accelerations in excess of 13 Gs. The Primws is known as a forgiving crafi-highly stable, easily maintained, and an excellent platform for training pilots in High-G maneuvers. The Secundus
+adds shields and replaces thelow-powertraining lasers with a powerfularray of short-rangelasers.
+In 6827, a deep-raiding squadron of Cheetaks fron the 115Ist Interceptor Wing ambushed six Ludicriem Prinuses.The Cheetah squadron destroyed five Prirmuses and captured one ship
+intact, along with four of the trainee pilots. In 6s29, the 115l st attempted to repeat this feat As the Cheetahs closed in, the supposedly unamed trainers turned on their adversaries and opened
+up with a devastating barrage of laserfire.One Cheetah was crippled immediately.The Renegade squadron commanderquickly broke off theengagement,but not before the TOG squadron managed
+todestroyonemoreCheetah.
+One high-acceleration training flight is located on Zama, Current intelligence reports indicate that at least one of the squadrons is equipped with Ludicrum Secunduses, while the other three
+squadronsareissued LudicrumPrimuses,
+Combat Evaluation:
+The Ludicrum Secunidas is visually indistinguishable from the Primius. Only by observing the acceleration can a pilot tell the two ships apart. The Secundus's main weakness is its short-
+range weapons. Within a range of 45 kilometers, the Secandrs is able to project as much firepower as a Spicrluam. Beyond 45 kilameters, the ship's wing-mounted lasers have no effect, and so
+fnendly pilots need only be concemed about the 5/2 laser mounted in the bow. Recommended engagement ranges against both the Prinas and the Secundus are 6o + kilometers.
+
+--- PAGE 10 [OCR] ---
+MANUBALISTA
+isuodeam
+Range
+7-10
+Location
+2-3
+4-6
+1115
+R/Wing
+5/2 Laser
+LiWing
+5/2 Laser
+Type: Light Fighter
+TPP-9
+Mass: 80
+Lawing
+Hard Point
+Cost:2.327.300
+R/Wing
+Hard Point
+Bow
+Hard Point
+Engines:
+Center Eng ine Rating
+450
+Right Engine Rating
+500
+Left Engine Rating
+500
+Thrust:
+10
+Shields
+High Thrust Modification
+Armor
+Bow
+50
+Bow
+(w/Lasers removed)
+50
+Left
+Right
+40
+40
+Right
+40
+Left
+Streamlining:Yes
+40
+Stem
+50
+Stem
+50
+AntiGrav: No
+10
+
+--- PAGE 11 [OCR] ---
+Background:
+The Manubalisia was placed into production as a result of the delays in the Telun project Because those delays were preventing construction of a test platform for the Thorium Plasma
+Projector, and the Mass Driver Gailing system, the TCG military began to cast about for another suitable test bed for these new weapon systems. Most of the major aeronautic firms could not
+design aship within the year time-limit thatthe Board needed Standard procedure called for at least two ycars ofdesign andcomputer-simulation testing before the first prototype could be delivered.
+However,there was one small firm,founded by Retired Commodore Frazer Graf, that promised delivery of a prototype light fighter armed with a small TPP, within six months ofa signed contract.
+TOG was desperate enough to try anything, Besides, Commodore Graf had a reputation for achieving the impossible. On Saguntum lll, he had led the 324lst Strike Legion fighter wing to a
+singlehanded defeat of ithe 12lst Common wealth Legion.
+Foregoing computer-generated solutians and accepled design procedures, Commodore Graf designed a totally new fighter based solely on his 4O years experience as a combat pilot. As
+promised, he Marubalista prototype was ready within six months. To the amazement ofeveryone except Commodore Graf,the Marahalista was free of the minor flaws and glitches that plague
+most prototypes. Testing was accelerated, and in 6s27,the Marubalista, virtually unchanged from the prototype, was issued to varigus Imperial Navy light squadrons..
+Friendly forces have encountered squadrons equipped with Mamzbalistas at Wuj and Rolunitu Pairs of Manubalistars are also reportedly assigned to protect small installations on Yols and
+Ve'Fros.
+OOELRO.CTIEOO
+Combat Evaluation:
+mission.Engagementatlongrange(io5+kilometers)isihepreferred formofattack
+
+--- PAGE 12 [OCR] ---
+SAXUM
+Shields:
+Bow
+50
+Right
+30
+Left
+30
+Stem
+50
+Armor:
+Bow
+60
+Left
+30
+Right
+30
+Stem
+60
+isuodea
+Rangc
+Type
+2-3
+Location
+10
+46
+11-15
+R/Wing
+3/1
+Thrust:
+Engines:
+Type: Light Pighter
+3/1
+Center Engine Rating
+450
+High Thrust Modification
+None
+Mass: 75
+NPC9
+Bow
+Right Engine Rating
+450
+Cost:2.081.300
+Lwing
+Left Engine Rating
+Streamlining: Yes
+Hard Point
+450
+R/Wing
+Hard Point
+AntiGrav: No
+Hard Point
+12
+
+--- PAGE 13 [OCR] ---
+Background:
+The Saccrt is the Lancea's predecessor.First introduced in 6790, the fighter is still found in second-line and
+reserve squadrons of the TOG Imperial Navy and Legicns.
+In the last years of the KessRith war,Rear-Admiral Whitworth Armstrong was appointed to command the
+Imperial Navy War College, though he had never seen conbat or even been assigned to an active war theater.
+Armstrong was a brilliant mathematician, who had developed a superb linear programming model that.vastly
+improved the TOG logistical distribution system early in his career. Later, he was instrumental in developing an
+Artificial Intelligence CAI) strategic-level simulation model foroptimizing TOG attack plans against the KessRith Empire. This model was unique in addressing the normal military and economic
+aspecis of the campaign as well as racial and sociological characteristics of the KessRith. Through use of this program, TOG strategists were able to correctly predict the KessRith's use of suicide
+tactics,and thus allowed TOG to plan and implemenl proper defensive measures months before the actual start of the campaign.
+Rear-Admiral Armstrong believed fervently in the superiority of computer modeling lo solve all problems, When the Imperial Navy asked the War College to study and recommend
+specifications fora new light fighter, Armstrong immediately began to program his beloved computer.Heanalyzed tens ofthousandsof battles and thousands of currentdesigns and mission profiles.
+When he submited his findings to the Procurement Board, it was not the 1oo-page report they had expected, but a detailed plan for the fighter, plus a flight manual, a complete dissertation on
+its proper tactical use, and the programming needed to recode three existing robotic manufacturing facilities to begin immediate production. Those facilities were converted in short order, and
+soon Saxunswererollingofftheline
+Despite Arnstrong's brilliance, the Saxumt proved to be a disappointment. First, minor problems in constructionquality beg an to crop up. Also, its acceleration was low for a light fighter.
+especially in comparison to its relatively light armament. Removing the lasers did not significantly increase its thrust, and pilots complained that it"flew like a rock" in atmosphere. Within three
+years of the Saxan's introduction, the Imperial Navy began to look for a new lighi fighter.
+Three Saxum squadrons are reported operating as part of a reserve replenishment group near Pisae, This group is responsible for protecting convoys traveling to and from Trader's Paradise.
+alongwithproviding emergency logistical supporh
+CombatEvaluation:
+The Saxuam's armor and shielding is slightly superior to that of the Lancea, but its offensive weaponry and acceleration are inferior. Pilots are advised to close in as quickly as possible. One
+or two hits should be enough to penetrate the thin armor and to cripple the Saxum.
+
+--- PAGE 14 [OCR] ---
+TELUM
+Type: Light Fighter
+Mass: 121
+Shields!
+Cost:2396.800
+Bow
+50
+40
+Right
+Engines:
+Range
+Left
+40
+750
+Right Engine Rating
+Type lbas Location
+Stem
+50
+750
+Left Engine Rating
+2-34-6007-1011-15
+Bow
+MDCG
+R/wing
+16
+Armor:
+TPP-16
+Thrust:
+Lwing
+Bow
+70
+TPP-16
+16
+None
+High Thrust Modification
+R/Wing
+Hard Point
+Left
+50
+Lwing
+Right
+Hard Point
+50
+Streamlining:Yes
+Stem
+70
+Bow
+Hard Point
+AntiGrav:No
+o o beEnn n g dg D dod h  o wo o
+
+--- PAGE 15 [OCR] ---
+Background:
+Globetech Weapon Systems
+had been producing replacement parts for the Verutum for SO years, as a result of acquiring a small production facility for those parts
+at the time of Almach Shipyards
+liquidation.The Telum project began in 6824 when the TOG Procurement Board needed a combat testing platform (a fully operational
+fighier to test new weapons in actual
+combat) to test Globetech's Thorium Plasma Projector and the Mass-Driver Gatling for the Verutum. Having developed these two new
+wcapons, however, Globetech wished to
+verlically integrate its operations to produce entire fighters rather than just sub-components.
+Once the ICS and the Imperial Navy
+had given their blessings, Globetech began lo modify the existing Verufam by installing larger engines, stretching the airframe, increasing
+the armor, and mounting two TPPs and one MDC-G. Unfortunately, the Globetech engineers made so many design errors that the Telum fell further and further behind schedule. The delay in
+the Telum program also slowed down introduction of the TPP and MDC-G into Imperial service.The delays became so interminable that the Imperial Navy finally decided to mount the TPP and
+MDC-Gs on two other fighters for combat testing rather than to wait for the Telum to finally make its debut. It was not until five years later that the first Telum came off the assembly line in 6829.
+Two to six Teham squadrons are now operating in the Shannedam County.Renegade Intelligence has confirmed sitings of the craft at Rolunitru, Wuj, and possibly Thapsus. Commonwealth
+Royal Intelligencereports anadditional siting at lal.
+Combat Evaluation:
+Even medium fighters will find the Tehur to be a dan gerous cpponent Though its acceleration is relatively low,it is well within the minimum necessary for combateffectiveness.The craft's
+armor and shielding protection are roughly cquivalent to that of the Space Gall The TPP has a limited effective range, but can easily undercut large segments of armor at close range.The MDC-
+G provides additionalclose-infirepower, while at the same time giving effective anti-missile protection. It is possible to negate the MDC- G's effectiveness by swarming the fighter with multiple
+missiles or by launching missiles in such a manner that the Telum cannot bring the MDC-G to bear in time.
+15
+
+--- PAGE 16 [OCR] ---
+CUSPIS
+Shields
+Bow
+60
+Right
+50
+Left
+50
+Stern
+60
+Armor
+Bow
+90
+Left
+70
+Right
+70
+Stern
+06
+Range
+7-10
+4-6
+Tspe
+Location
+11-15
+R/Wing
+5/4Laser
+Type: Medium Fighter
+LWing
+5/4 Laser
+Thrust:
+Mass: 141
+16
+NPC 16
+Hieh Thrust Modification
+Cost:3.033.100
+Bow
+14
+(w/Lasers replaced)
+EPC14
+R/Wing
+Hard Point
+Engines:
+LWing
+Hard Point
+Streamlining No
+Right Engine Rating
+1000
+M08
+AntliGrav:Yes
+Hard Pont
+Lefi Engine Rating
+1000
+16
+
+--- PAGE 17 [OCR] ---
+Background:
+Introduced in 6789, the Cuspis was originally intended to use the ill-fated NPC/EPC weapon
+designed for the Verutum. In fact,the original Cuspis was to have been merelya larger version of the
+Veruturn, with upgraded armor and larger engines.
+At the time of the discovery of the Almach conspiracy, the development of the Cuspis had already
+reached a fairly advanced stage. Rather than cancel the project, the Naval Procurement Board decided to
+continue, but made modifications in the basic airframe so that the Cuspis could easily accept a standard
+NPC and EPC.Theresulting fighter was much stubbier than the Verwrum.
+Even thoughthe ship is not capable of full-atmosphereoperations,it was given a unique twin tail con-
+figuration This bridged tail provides a level of atmospheric stability not normally found in anti-gravy ships
+Another interesting feature is its recessed bow hard point, When the bow missile is to be fired,it is lowered to
+clear fuselage, locked onto its target, and then released.Though early reports indicated this mechanism's tendency
+to jam, current modifications seem to have corrected the shortcoming.
+At last report, the 302ist Interceptor Wing is the only unit operating the Cuspis in any numbers. Current estimates suggest that at least 36 and no more than 72 of the class are attached to
+the 3021st.
+Combat Evaluation:
+Despite being a dated fighter, the Cuspis has not outlived its usefulness. Its weapons pack a powerful punch at all ranges, and its armor is heavy for a fighter of iis class. Many TOG pilots
+compareit quite favorably to the Spiculum. Engagementranges for this class should be at 90+ kilometers. Friendly pilots should also utilize trans-atmosphere engagement tactics against this class.
+17
+
+--- PAGE 18 [OCR] ---
+CWTP
+Shields:
+Bow
+50
+Right
+40
+Left
+40
+wa Larb n or bn=m nno ar
+Stern
+50
+Armor!
+Bow
+70
+Left
+50
+Right
+50
+Stem
+70
+Type: Medium Fighter
+Masst 153
+Cost: 2.704.200
+Weapons:
+Engines:
+Range
+4-6
+Center Engine Rating
+11-15
+1800
+Type
+Localion
+LAWing
+5/4 Laser
+Thrst:
+R/Wing
+5/4 Laser
+16
+12
+High Thrust Modification
+Cone Laser
+LWing
+(w/Lasersreplaced)
+Hard Point
+RWng
+Hard Point
+Streanlining: No
+Hard Point
+LWing
+AntiGrav: No
+RWing
+Hard Point
+18
+
+--- PAGE 19 [OCR] ---
+Background:
+Because of Globetech's delay in completing its design for a combat test platform for the TPP and MDC-G, the Prccurement Board decided to
+develop its own combat weapons testing platform (CwTPy. Rather than building a totally new fighter or using a currently operational fighter, the
+Board looked toa class that had been mothballed for4O years.
+In 6750, the original CWTP had been a TOG Imperial Navy standard medium fighter.At that time,it carried an array of 7.5/S lasers and a centrally mounted mass-driver cannon.By the end
+of the KessRith campaign,the CWTP became totally phased out of service,replaced by the more modern twin-and triple-engine fighters. Though many of the fighters were broken up for scrap.
+a significant number still remained in reserve storage depots throughout the galaxy.
+The Board brcught the CWTP out of storage and refurbished it. To give the craft some reliable weapons, S/4 lasers weremounted on the wing s and a large numberofhard points were installed.S itac.)
+Testing platforms normally reserve the central weapons position for mounting the weapons system to be evaluated.
+One squadron of CwTP's is currently atiached to the Death Express. The central weapons position usually mounts the new cone laser system, but recent debriefings have also revealed the luin
+installation of MDC-Gs, mass drivers, and large lasers, Ar least one of the hard points is rumored to be camying evaluation equipment rather than missiles or ECM pods.
+Combat Evaluation:
+The CWTP was chosen for its reliable engine and ease af mainlenance. The lack of streamlining or anti-grav systems allows the ship to carry more shields and armor.This, of course, gives
+the CWTP a better chance of surviving an attack, lowering the risk thar the enemy will capture the prototype weapons systems. To further lower the risk of the new weapons falling intoff igt
+Commonwealth hands, the CWTP always flies with a heavy TOG escort and against targets that are expected to be lightly defended.In encounters with the CWTP,friendly pilots should endeavor
+to cripple rather than destroy the craft. Flash messages direct lo Royal or Renegade Intelligence are required of any pilots sighting a CW7P. Pilots must also immediately record and report the
+velocity and vectors of all crippled CWTPs.
+
+--- PAGE 20 [OCR] ---
+DEFENSOR
+Shields:
+Bow
+60
+Right
+50
+Left
+Type: Medium Fighter
+50
+Stern
+60
+Mass: 182
+Weapons!
+Cost:2.984.700
+Range
+4-617-10
+Location
+2-3
+Type
+11-15
+Engines:
+RWing
+7.5/2Lascr
+900
+Righi Engine Rating
+L/Wing
+7.5/2 Laser
+Left Engine Rating
+006
+EPC9
+16
+5hiom L/Wing
+udNPC16
+Thrust:
+Armoc:
+NPC16nR/Wing
+16
+Bow
+None
+100
+High Thrust Modification
+MDC-GEOR
+Bow
+Left
+80
+Bow
+Hard Point
+Right
+80
+Streamlining: Yes
+Bow
+Hard Point
+Stem
+AntiGrav: No
+100
+20
+
+--- PAGE 21 [OCR] ---
+Background:
+The Defensor is the oldest fighter in active TOG service, First produced in 6650, the ship's basic design has changed lintle in the past 175 years.
+One reason why the Imperial Navy has not taken the ship out of service is because a squadron of such ships is credited with saving the life of Cacsar Ivanolo Buntari. During the Terran riots
+that occurred after the bombing of the Senate in 668o, many military units refused orders to fire into the crowds of unarmed civilians demanding a retun to the old Republic. Units that refused
+their orders were, in tum, gunned down by loyalist units, One of those rebellious units was the 82nd Heavy Infantry Legion. Instead of trying to suppress the rioters, the 182nd marched on New
+Rome with the intention of capturing Buntari and resioring the Republic. In a pitched battle against a loyalist Practorian Guard Legion, the 182nd was able to break through the hasty defenses
+and to send a cohort of heavy arnor loward the ruined capital. Reserve Praetorian units were on their way,but the is2nd's armor would reach the capital well before any help could arrive.
+One loyalist squadron of Defensors were scrambled. They came screaming in on the lead rebel column and shattered it. Ground fire destroyed two of the craft, but the Defensors managed
+to slow the rebel advance enough that the rest of the squadron could land in New Rome before the column reorganized, Caesar Buntari crammed himself into the cockpit of one of the ships, and
+they rocketed away. A squadron of ground support fighters from the 82nd intercepted them, however. In the ensuing dogfight, three Defensors were shot down, but the fourth ship, carrying the
+cowering Caesar,made orbitand docked witha loyalist warship.
+The loyalists defeated the 182nd later in the day, summarily beheading all survivors and publicly executing Prefect Simon Constantin, the unit's commander. The pilots of the Defensor
+squadron were decorated, and all Praetorian units were thereafter issued Defensors as their primary fighter. Though Praetorian units eventually exchanged their Defersors for more modem craft.
+cach Praetorian fighter wing still retains an extra squadron of Defenisors to commemorate the ship's role in the formation of the Terran Overlord Government.
+The only Defensors now operating in Shannedam County are attached to the 149th Praetorian Guard Legion on Thapsus. The I49th serves as the TOG theater reserve for the county. The
+Defensors in Shannedam County have recently replaced their MDC Bsfor MDC-Gs.
+CombatEvaluation:
+The Defensor is a fair medium fighter, well-suited to either an attack or a point defense role. Its shielding and armor are beavier than normal, resulting in lower acceleration, Overall, its
+weaponry is not as powerful as a Space Gul's, but it has superior long-range capabilities. Tactics recommended for engaging Defensors are rear approaches resulting in flank and stem attacks
+alcloserange,orfronlalengagementsatl5kilometers
+21
+
+--- PAGE 22 [OCR] ---
+FULMAN
+bnuAan
+Bin hn os 5
+Type: Medium Fighter
+Mass: 132
+Cost:2.596,100
+Shields:
+Bow
+Engines:
+006
+40
+Right
+Right Engine Rating
+suodeaM
+Left Engine Rating
+900
+Left
+40
+Ranpe
+2.3
+Type
+Location
+Stem
+50
+15
+RWing
+5/4Laser.
+Thrust:
+LWing
+5/4Laser
+High Thrust Modification
+Armor
+Bow
+MDCG
+90
+Bow
+(w/Lasers Replaced)
+688
+Bow
+Left
+Hard Point
+Lwing
+Right
+Hard Point
+StreamLining! Yes
+R/wing
+Hard Point
+Stem
+AntiGrav: No
+22
+
+--- PAGE 23 [OCR] ---
+Background:
+The Fufmidn is a new medium fighter just issued to the TOG Imperial Navy for limited combat evaluation. Best described as a down-rated
+Spiculum, the Fulman is slightly less effective in thrust and arnor,but about the same in weapons.
+Though the Spiculam is one of the best fighters in the TOG inventory, deploying it in low-threat environments or for garrison duties is not cost-
+effective.A cheaper fighter can carry out such missions just as effectively,a philosophy that has recently led TOG to adopt a high-low procurement
+policy, This policy calls for units scheduled exclusively for garrison duty to be issued the less expensive equipment, while units destined for active
+combat zones would receive the more expensive, more effective high-tech equipment. The Fuiman was to be the first of the low-side medium fighiers.
+The Fulmian was still under development when the Procurement Board was trying to find a test platform for the MDc-G, which was originally to have been tested on the Telum. Because
+the Telum program was beset with delays, the MDC-G was mounted in the Fulman's bow, and the fighter's engines upgraded from ScD to 9oo. These modifications have driven the Fulman's
+cost back up to the Spiculum's range, totally invalidating the high-low philosophy that had originally spurred the Fu/ntan's development.
+Fuimans are currently reported operating in flight strength in the 302Ist Interceptor Wing.
+oaihoMainffTrHH
+Combat Evaluation:
+From a defensive viewpoint, the Fuian is roughly equivalent to the Penetrator. Its offensive firepower falls roughly between that of a Space Gull and a Penetrator. Short-range firepower
+is impressive,as is its anti-missile ability.Recommended engagement range is 6O+kilomelers.
+23
+
+--- PAGE 24 [OCR] ---
+IDIS
+Type: Medium Fighter
+Mass:114
+Cost:2.821,650
+Weapons:
+Engines:
+Shields:
+60
+850
+Bow
+Range
+Right Engine Rating
+50
+Location
+7-10
+Right
+2-3
+4-6
+11
+Tpe
+Left Engine Rating
+850
+-15
+R/Wing
+Left
+5/3Laser
+LWing
+5/3Laser
+Stem
+60
+Thrust:
+18
+Bow
+EPC18
+Armor!
+High Thrust Modification
+Bow
+18
+Bow
+EPC18
+(w/Lasers Replaced)
+50
+Bow
+Left
+Hard Point
+50
+R/Wing
+Right
+Hard Poirt
+Streamlining: No
+LWing
+Stern
+60
+Hard Point
+AntiGrav: Yes
+24
+
+--- PAGE 25 [OCR] ---
+Background:
+The ldis is a medium fighter assigned to perform fleet strike missions,and it was produced in the wakeof Imperial Navy studies of the Penetraztor. In reviewing the Penetrator's performance,
+the Imperial Navy concluded that the ship's lack of lasers significantly reduced its combateffectiveness. They recommended construction of a new fighter to be equipped with lasers and EPCs
+to increase the chances of undercutting large segments of armor. Combined with a large missile load, this weapons mix would make the Idis more effective than the Perietrator.
+The Idis entered service in 6812, and has been a moderately effective strike fighter. Its weapons mix is very powerful, but its EPCs are effective only at short range. This means that the Idis
+mustexpose itself tomore accurate defensive fire from its target thandoesthe Penetrator.Against well-defendedsites, the /dis is ata disadvantage in encounters with its Commonwealthcounterpart.
+ldis squadrons operatewith Io27th CarrierFighter Wing and have been assigned patrol duties on Olisipio
+Combat Evaluation:
+The Idis is not as effective as the Penetraior, Its shielding and armor are lighter, and cannot operate effectively in atmosphere, Its heavy missile load reflects curreni TOG tactical doctrine.
+making the fighter effective against lightly defended installations, Recent advances in anti-missile technology will reduce the ldrs's effectivenes, however. Recommended engagement ranges
+against the Idis are 105+ kilometers.
+25
+
+--- PAGE 26 [OCR] ---
+ONAGRI
+Shields:
+Armor:
+50
+100
+Right
+50
+Left
+80
+50
+Left
+Right
+08
+Sterm
+50
+Stern
+90
+Weapons:
+Type: Medium Fighter
+Range
+Mass:140
+Type
+Location
+23
+4-6m7-1011-15
+R/Wing
+540
+Cost:2.344.450
+3/4Laser 
+R/Wing
+3/4Lasernto
+400
+3/4Laserm
+LWing
+Engines:
+1900
+Center Engine Rating
+3/4LaserobamL/Wingid6
+54
+Hard Point ba L/Wing
+Thrust:
+R/Wing
+Hard Point
+None
+High Thrust Modification
+LiWing
+Hard Point
+dm
+Hard Point
+Rwing
+Streamlining: Yes nfSinscuhos fliw cgotomtod ttimain-tmt almbon
+Hard Point
+M08
+AntiGrav: No
+Hard Point
+M08
+26
+
+--- PAGE 27 [OCR] ---
+Background:
+The Onagrt is the personification of the TOG Imperial Navy's
+recent swing toward missile armaments. Following standard TOG
+procurement and development procedures for new fighters, the
+Onagri entered limited production at the same time as the Spiculum.
+Both ships were then issued to various combat units, while members
+of the Imperial Navy Procurement Board evaluated their perform-
+ances. The Board found that while the Onagri was superior to the
+Spicu/um in strike and ground-attack missions,its sloweracceleration
+and ligher secondary armaments placed the Ondgri at a disadvantage
+in sustained dogfights and interception missions, The Board recom-
+mended that the Spiculu be chosen for full-scale production and the
+Oragni be issued only to squadrons assigned exclusively to strike
+missions.
+Onagris operated primarily in squadron and flight strength
+aboard fleet-class carriers, and in direct support of ground Legions.
+Na known unit in the Shannedam County area currently operates the
+Onagri, but unsubstantiated reports suggest that at least one group of
+Ona gri will soon transfer into the area to reinforce the TOG Legions
+fighting on Defiance.
+Combat Evaluation:
+Defensively.the Onagri is similar to the Spiculum, with its
+slightly heavier shielding and armor offset by a moderate decrease in
+acceleration. The Onagri can carry a heavy ordnance load, however.
+Ships without ECM or Safeguard systems should not attempt head-on
+engagementswiththis craft
+27
+
+--- PAGE 28 [OCR] ---
+SICA
+Type: Medium Fighter
+Mass:112
+Cost:2.196.800
+Shields:
+Bow
+Engines:
+50
+40
+Right
+1600
+Center Engine Rating
+Weapons:
+Left
+40
+Stern
+50
+Range
+Thrust:
+7-10
+Type
+4-6
+Location
+2-3
+11-15
+High Thrust Modification mmmu 8
+Armor:
+L/Wing
+7.5/1
+70
+Bow
+(w/Lasersreplaced)
+R/Wing
+7.5/1
+60
+Left
+Bow
+60
+18
+Right
+EPC18
+Streamlining: Yes
+70
+Bow
+Hard Point
+Stem
+AntiGrav: No
+28
+
+--- PAGE 29 [OCR] ---
+Background:
+The Sica is an obsolete medium fighter nearing the cnd of its operational usefulness. Though the ship distinguished
+itselfduring the KessRith campaign, itiseven more famous as the victim of one of themost successful industrial sabotage
+operations in Renegadehistory.
+In 6740, the Sica had just entered general production. To eliminate transport problems, the 7.S/1 laser crystals were
+mined. grown, and assembled in an orbital factory adjacent to the fighter assembly complex. One of the fighter company
+employees,Sandra Reese,was a sen ior gualitycontrol supervisor anda Renegade agent.Assignedto supervise Sicaquality
+control. Reese began a subtle and ingenious sabotage campaign.During one of her inspections of the laser crystal growing
+ats,she contaminated the froth with a compound that became part of the finished laser crystal, When subjected over time
+to intense laser light, the compound caused numerous flaws and fractures in the crystal. It took multiple exposures before
+the flaws appeared in the lasers, however, which was often months after the fighters were delivered to their units. Units
+assigned to active combal areas were constantiy reporting laser failures, while units in non-combat areas had little or no
+laser problems.After the Sica was grounded and an investigation begun,Imperial Security discovered the contamination
+and took"correctiveaction"against the company.
+This did not stop Sandra Reese, however. Once the ships were flying again, she reprogrammed a robotic spot welder
+to inadequately weld one joint along a high-stress strut, and then reprogrammed the inspection robot to ignore the faulty
+weld. One month later, the Sica was grounded once more, this time for unexplained structural failures in combat.
+Unfortunately for Sandra Reese, the subsequent IS investigation revealed her activities, She was captured and slowly
+tortured to death, She is credited by the Renegade Navy with more fighter kills than any other person.
+Sica units are reported operating in squadron-strength on Ciria and Mavinav. Ground forces on Gustaviv's Regret
+have reporled that Sicas are providing ground support for Imperial forces. If these reports are true, then second-line
+Imperial forces may have secretly landed on the planet.
+Combat Effecliveness:
+The Sica is an under-armed and under-powered fighter. Its offensive armament is inferior to most ships of its class.
+and its relatively high acceleration does not sufficiently compensate for this disadvantage. Recommended engagement
+range is 30+ kilometers.
+29
+
+--- PAGE 30 [OCR] ---
+TORMENTA
+Shields
+Bow
+80
+Weapons:
+Right
+Range
+4-6
+7-10
+2-3
+Type
+Location
+Left
+50
+11-15
+Type: Medium Fightert
+R/Wing
+7.5/2
+Stem
+Mass:159
+LWing
+7.5/2
+Thrust:
+Armor
+Cost:3.144.700
+R/Wing
+7.5/1
+100
+High Thnust Modification
+None
+ido
+LWing
+7.5/1
+Left
+70
+Engine:
+20
+Right
+Bow
+16
+70
+NPC 20
+1000
+Right Engine Rating
+Streamlining: No
+Stem
+Bow
+100
+Hard Point
+1000
+Left Engine Rating
+AntiGrav: No
+30
+
+--- PAGE 31 [OCR] ---
+Background:
+When the corporate conglomerate LeBaron Manufacturing began to face serious economic difficulties, the TOG government had to step in, LeBaron employed over ten million people
+throughout the Mochov District, and the survival of many smaller companies and planeis would also have been threatened. If LeBaron were forced to liquidate, the whole district could have been
+plunged intoan economic chaos lasting fordecades.
+To prevent such a disaster, several lllustrus Senators succeeded in replacing LeBaron's president with Leo Blackdon, a tough-minded businessman who would do whatever necessary to save
+recessionin someareasof theDistrict,total economic collapsehad beenaverted.
+Having tightened the company's belt, Blackdon tumed next to improving the profitability of each operating division, starting with LeBaron AeroSpace, manufacturers of fighter aircraft.
+By lobbying his friends in the Imperial Senate, Blackdon managed to secure from the Imperial Navy a single source contract for a heavy fighter, without going through the normal procurement
+process.
+Once LeBaron's new and inexperienced design department came up with a fighter that required a minimum of retooling, the assembiy lines geared up and began to turn out the Tormentd.
+a mediocre fighterwithaveragecapabilities.
+The Tormenta is assigned to fleet operations exclusively. The 99 Ist Carrier Fighter Wing includes at least one, and possibly two, Tormenta squadrons.
+Combat Evaluatlon:
+The Tormenta is a poor-to-average heavy fighter. Because it is under-powered for its class, the acceleration is low in comparison to its weaponry. From a defensive viewpoint, its armor is
+moderately better than an Avenger's,while its shields are roughly equivalentto a F/urtering Petal's.To its disadvantage,the Tormeata is incapableofatmospheric operations, though its deployment
+rarely brings it close to an atmosphere, Optimal engagement range is 15 to 45 kilometers. The bow-mounted NPC is very powerful and should be respected.
+IVETHAA
+
+--- PAGE 32 [OCR] ---
+ARCUBALISTA
+Type: Heavy Fighier
+Mass: 96
+Cost:3.266.550
+Engines:
+Shields:
+Bow
+60
+850
+Right Engine Rating
+Right
+850
+Left Engine Rating
+tihnsewsWeaponss
+Left
+50
+Center Engine Rating
+800
+Stern
+50
+13
+Thrust:
+Range nwoa :
+Location
+2-34-6
+Type
+7-1011-15
+14
+High Thrust Modification
+Armor:
+R/Wing
+32dno3
+5/2Laser
+Bow
+60
+(w/Lasers Replaced)
+q =l 3e 21
+sul louoglt 5/2Lasero8L/Wingol5
+caainLeft
+d50
+Bowdniolo
+Right
+50
+Streamlining: Yes
+Ssnia otul Hard Point
+BowmigOmor0ol0i
+ryStern-
+50
+AntiGrav:No
+HTtsndol ee oi2l Hard Point
+32
+
+--- PAGE 33 [OCR] ---
+Background:
+The Arcabatista is the product of a six-year joint development
+effori between the Imperial Navy and Nitor AeroSpace. Originally
+conceived as an inexpensivehigh-acceleration courierfor fleet-to-planet
+liaison work, the Arcubalista project has become a bloated pork barrel
+for Nitor and various members of the Imperial Naval Procurement
+Board TheArcubalista's missionprofile has been chan ged four times to
+justify the gold plating given this light fighter. In contrast to the
+Marriobarbulus case, various Senators of all ranks have seriously
+criticized the Procurement Board's actions. Pressure has been so intense
+that the Board has had to approve the low-cost Funda for limited
+production. The Funda is currently being evaluated for many of
+the same missions thal the Arcwbalista was intended to per-
+fom. In all likelihood, the Furda will enter general produc-
+tion as a low-cost light fighter, while the Arcubalista will
+see limited service as a reconnaissance/anti-recon craft
+in the most active combat zones, Whether either craft
+Combat Evaluation:
+will replace the effective and numerous Lancea is
+The Arcidbatisia is a heavy fighter deployed in traditional light fighter missions. From a design
+still debatable.
+standpoint, the Arcubalista has sacrified its weaponry for acceleration. It has better shielding than a
+Only one sighting.near Grosianus, of the
+Gladius, armor equal to thatof theMarricbarbu/us,and its three massive engines put out more power
+Arcubatista has been reported so far.Ren-
+than an Avenger, With 13 Gs of acceleration, the Arcwbalista is a potentially unstoppable opponent.
+egade Intelligence agents on Thapsus claim that an entire group of
+For all its speed and armor, however, the fighter is woefully under-armed. If given a chance, it will
+Arcubalistas will soon be deployed. but Royal Intelligence is not
+sufficiently confident of their source to give this report much credence.
+defensive abilities give it a high degree of success with such tactics, but to harm a reasonably well-
+prolected opponent, the pilot will have to carry out many attacks. SsS missiles are the best weapon
+to use when engag ing an Arcabafistd, Other missiles are not as potent because the Arcubalista can
+outrun them.o1
+33
+
+--- PAGE 34 [OCR] ---
+ARCUS
+Weapons:
+Type: Heavy Fighter
+Location!
+Range
+Mass: 231
+Type
+Turrel#
+7-10
+2-3
+04-6
+11-15
+Cost:4.022.100
+R/Wing
+7.5/5
+Shields:
+L/Wing
+6.
+7.5/5
+70
+Bow
+Engines:
+Bow
+MDC8
+Right
+70
+Right Engine Rating 1200
+Bow
+8 8ot8om
+MDC8
+Left
+70
+Left Engine Rating1200
+10953
+EPC9s0
+70
+Stern
+OSH
+NPC9m
+69
+Thrust::gnb botwmin
+Armor:
+3/4aEouem
+100
+Bow
+None
+High Thrust Modification
+Hard Point
+Left
+100
+Bow
+Hard Point
+Right
+100
+Streamlining:Yes
+Hard Point
+Stern
+AntiGrav: No
+
+--- PAGE 35 [OCR] ---
+Background:
+The Arcus is a standard ground attack and atmospheric superiority fighter, and was first introduced in 6805. The Arcus is assigned only to Imperial Legion fighter wings, and has never been
+reportedattachedtoaNaval fighterwing.
+Arcus units are well-trained in planetary and near-planetary operations, but are notoriously poor in deep-space operations. Most Imperial Navy tacticians blame this on the TOG Legions"
+supposedly lower standards for recruiting pilots. In reality, the problen is more likely the result of inier-scrvice rivalry. Deep-space fighter operations demand a very experienced controller to
+vector the fighters onto an interception course with the target. The Imperial Navy refuses to allow the TOG Legions the necessary equipment or facilities to properly train their ground personnel
+in such procedures. By charter,the Imperial Navy is responsible for all operations in deep space. In near-orbit, they share responsibility with the Legions, while the Legions are solely responsible
+for operations within a planetary atmosphere, The Navy argues that giving the Legions equipment to control dcep-space operations violates this charter.
+The resultis that the Arcas and other Imperial Legion fighiers must switch to Navy controllers when operating in deep-space. Because the Legion pilot is unfamiliar with his new controller's
+Dperating procedures, and vice versa, it seriously affects the effective execution of highly exacting tactical operations such as deep-space interception. As a result, the Arcus is only encountered
+inpointdefenseandgroundattackroles.
+Arcus squadrons are attached to Imperial Legions fighting on Defiance, Wuj, Rolunitru, and Messana.
+Combat Evaluation:
+Most fighters as heavy as the Arcus utilize an anti-grav drive for atmospheric maneuvering, but the Arcus is unique among them jn being streamlined. This allows it to carrry more armor
+and weightthan other heavy fighters, while at the same time not adversely affecting its mission profiles, As the Arcus operates primarily in or near an atmosphere, its streamlining makes it effective
+in bothatmosphericsuperiorityandground-attackroles.
+The Arcus is also unique in replacing its turret-mounted NPC and EPC rather than its lasers with the High Thrust Modification. Because the NPC and EPC are ineffective weapons for ground
+attacks, the additional hard points allow a 66 percent increase in useful ordnance load without seriously affecting the Arcus's atmospheric superiority mission. In many cases, the NPC and EPC
+are notmounted in the ship unless it is assigned to point defense ofan orbital facility.
+Unless mission requirements demand that friendly pilots actively engage the Arcus within an atmosphere, they should atternpt to engage this heavy fighter only out of atmosphere.
+35
+
+--- PAGE 36 [OCR] ---
+ICTUS
+haod shi iil bh ni e 3ttgpl ithngo.I ta hood ot ws En
+Type: Heavy Fighter
+Mass:181
+Cost: 3.586.900
+Engines:
+Shields:
+70
+Bow
+1100
+Weapons:
+Right Engine Rating
+60
+1100
+Left Engine Rating
+Right
+Range
+60
+Left
+2-3
+7510
+Type
+60
+46
+Location
+Stem
+11-15
+Thrust:
+R/Wing
+10
+7.5/6Laser
+Armor:
+High Thrust Modification
+LWing
+10
+7.5/6 Laser
+100
+Bow
+(with 7.5/6 lasersreplaced)
+7.5/5 Laser
+100
+Left
+Bow
+7.5/5 Laser
+Right
+100
+Streamlining: Yes
+Bow
+100
+Hard Point
+Stem
+AntiGrav: No
+36
+
+--- PAGE 37 [OCR] ---
+Background:
+In 6922, the TOG military decided to attempt modifications
+on the Spicuium to create a heavy attack fighter. They were
+hoping to come up with an easily produced variant that
+Combat Evaluation:
+could utilize all or most of the logistical and ground
+The Ictus has only one hard point, which implies
+support for a Spiculam. Many Spicufumr variants
+were explored, including models with multiple
+rather than missile altacks--a direct contradiction of
+laser systems,larger engines, and in-
+standard TOG fighter doctrine. In combat, Ietus squad-
+creased shielding.The project engineers
+rons are generally more willing than either Mary or
+soon ran into a stumbling block that
+Gladius squadrons to exchange blows and to engage in
+slowed down the pace of the project, however.
+dogfights. The Ierus is a dangerous opponent. High-
+The Spiculurra was so finely tuned that no modifi-
+speed passes attacking the sides and rear are recom-
+cations could be made without significantly changing
+mended It is not recommended that pilots engage in
+the ship. Just upgrading the engines required major stren gthening of the basic airframe. It was not until four years after
+stugging matches with this ship s olyn utuyla
+the start of the project that the design group submitted a final prototype for consideration: the lerus.
+008
+As a result of its numerous modifications, the Ictus bears little outward resemblance to the Spiculuni. Intenally
+however, many of the control components and basic airframe structures are the same. In fact, the cockpit is an exact
+are not as grear as expected.
+etus squadrons are common throughout the Shannedam County area, replacing the Martiobarbuluas as the
+primary single-seat heavy fighter. Most have been reported operating in conjunction with Spiculums in mixed flights.
+37
+
+--- PAGE 38 [OCR] ---
+LEGATI
+Type: Heavy Fighier
+Weapons:
+Mass: 230
+Location
+Range
+Cost:4.611.000
+Type
+Turrel #
+2-34-62
+Shields:
+7-10011-15
+7.5/3
+70
+Engines:
+Bow
+7.5/3
+Right
+60
+176a54m3
+Center Engine Rating
+800
+NPC16u1suam1hnius4.uns9b16
+Left
+60
+Right Engine Rating
+800
+70
+Stern
+NPC16alog m,1hmino4b9uoa161n0
+Lefi Engine Rating
+800
+Hard Pointil 
+Bow ost 18ll io7 nt= le 6 d: o 5t 
+7.574
+Armor:
+Thrust:
+R/Wing , 7ontmos 6rshiPv 5/uuov24:t lo ns
+S/4nrdc
+100
+Bow
+None
+High Thrust Modification
+LWing765x54
+574
+Left
+100
+EPC 14 m L/Wing147om3 2no
+Right
+100
+Streamlining: No
+EPC14iaqRWing14mo7i3/d=1nm
+Stern
+100
+AntiGrav: Yes
+38
+
+--- PAGE 39 [OCR] ---
+Background:
+An older TOG design, the Legari was onginally intended to perforn strike missions, but it has also proven itself as a good space-superiority fighter.
+The Legar's dogfighting abilities were first discovered in 6795.Two newly equipped Legari squadrons were en route to attack a small Renegade supply
+base, when two mixed Renegade heavy squadrons intercepted them. The TOG squadrons sheared off at long range, using their NPCs to enga ge the incoming
+Renegades. Before the Renegade fighters could close to effective range,they had lost four of their number. Close in, the Reneg ade squadrons did better,butthe Legati's immense shields and armor
+allowed them to give out more damage than they received. When the Renegade squadrons disengaged, the remaining Legaris were able to complete their mission with enough destructive vigor
+todestroythesupplybase.
+The Legari's cost and overly complex mechanisms have been its downfall. At one point an average of 25 percent of all Legaris were generally not available for combat operations because
+ofmaintenance problems.The Imperial Navy began to withdraw the Legati from front-line service in 6820,replacing it with the more reliable Gladius.Currently.only one reserveflight, stationed
+on VeFros,isknowntobeequippedwiththeLeeani.
+Combat Evaluation:
+target with long-range fire, the fighter can then use its forward-mounted weaponry to finish off its victim.
+The Legati's vulnerablility is its sluggish acceleration.Friendly fighters should maneuver behind it andcloseto within 1Skilometers. This tactic minimizes retum fire from the Legati's turet.
+and should optimizethealtacker'sownweapons.
+39
+
+--- PAGE 40 [OCR] ---
+SERCURIS
+Type: Heavy Fighter
+Mass:140
+Cost:4.022.100
+Weapons:
+Engine:
+650
+Center Engine Rating
+opsdsuleLocation
+ Eptgmo's loru  Rangevoesl sdE.
+700
+Right Engine Rating
+Type
+Turret#
+Jeveinod
+1m2-34-671011-15
+Left Engine Rating
+700
+R/Wing
+7.5/2Laser
+6qq5doi4a31vn2
+Lwing
+7.5/2Laser
+Thrust:
+7.5/2Laser
+Shlelds:
+High Thrust Modification
+Armor:
+m6o5n43T
+7.5/2Laser
+Bow
+60
+Bow
+100
+(with 7.5/2 lasers removed)
+Bowort n 18aut 9ol og3-umot r3w 2m
+EPC18
+Left80
+Right 50
+BowdiOavOonO
+Hard Point
+Leftf50
+Right
+80
+Streamlining: No
+Bows0
+0t0n0
+Hard Point
+oneb
+Stern100
+Stern60
+AntiGrav:Yes
+40
+
+--- PAGE 41 [OCR] ---
+Background:
+The Sercuris is another new heavy fighier recently fielded by the TOG Imperial Navy. The ship is inferior to the Spatha, but the Naval Procurement Board is concermed about the political
+reliability of the workers at Incingo Spaceyards, the Sparha manufacturer. Production of the Sercuris was ordered to ensure an uninterrupted supply of heavy fighters should problems arise at
+the Spatha plant.
+When the Sereiris was initially issuedtocombat squadrons,m any pilots were impressed with its massive armor.powerful shields,and the fact that the ship's acceleration is as impressive as its firepower.
+There are, nevertheless, significant problems with the design, The turret's fire-control system is so limited that the Sercaris can mount only two weapon systems there instead of the traditional five. At
+4.Ooo,oo0 talents per copy.the Sercuris is also expensive to construct, cven exceeding the cost of the comparable Avenger.
+It appears that TOG deploys the Sercaris as an interceptor to protect vulnerable orbital and deep-space installations.Royal Intelligence believes that at least one Sercuris squadron is assigned
+in a point defense/interceptor role for the VLCA in the Ciria system. Renegade Intelligence believes that this unit is present in flight strength.
+CombatEvaluation:
+Though theSercuris is a powerful fighter,it is a moreeasilydefeated opponentthan cithera Spatha oreven a Gledius.The Sereuris's turreted weapons haveexcellentrange and power,but havedifficulty
+locking onto a target at long range.Flank and rear engagements at 6O+ kilomeiers are recommended.
+
+--- PAGE 42 [OCR] ---
+SPATHA
+Type: Heavy Fighter
+isuodam
+Mass:228
+Location
+Range
+Cost:4.420.000
+2-34-67-10
+Type
+Bow
+1212
+MDC 12
+121
+Shields:
+Engines:
+80
+Bow
+7.5/5
+um R/Wingtid9ob-8 ch7awo62u5
+Center Engine Rating
+800
+asdEL/Wing
+7.5/5
+Right 60
+odl g  alol 8 g mai7 la; sal 6 hovg
+800
+Right Engine Rating
+H76V5
+Left
+60
+574
+Left Engine Rating
+800
+70
+Stem
+52
+diaaArmor!
+NA
+Thrust:
+100
+5/2
+Bow
+High Thrust Modification
+None
+5/2
+100
+Left
+Hard Pointals R/WingllO
+Right 100
+Streamliningi No
+Hard PointwL/Wingg 0
+Stem 100
+AntiGravYes
+42
+
+--- PAGE 43 [OCR] ---
+Background:
+After faring poorly in many encounters with Fliefterine Peral and Avenger fighters, the TOG military decided to commission a new heavy fighter. Ironically.
+the design they finally chose had been submitted by Incingo Spaceyards, a TOG-owned firm that is managed and operated by KessRith plebeians and slaves, Many of
+the fim 's competitors protested vigorously that such an important defense project should not be awarded to such a politically unreliable company. However, the Sparha
+design was so superior to the other proposals that even the normally racist Imperial Navy could not deny its outstanding performance. At last report, the facility manufacturing the Spatha is under
+close scrutiny by the IS & ES. Rumor has it that the number of Lictors present exceeds the number of workers by a ratio of 2 to I.
+In the Shannedam County area, at least one flight of the si6th Strike Legion has been equipped with the Spatha. Other fighter wings attached to support various ground Legions have also
+been receiving the design, The Sparha currently operales in conjunction with the Gladiaus, but it is not known whether this is a tactical decision or due merely to lack of enough Spathas to fill
+out a flight. A recent attack by such a mixed group resulted in the complete destruction of a Commonwealth manufacturing center.
+CombatEvaluation:
+Defensively and offensively, the Spatha is similar to the Flurtering Petal. Its bow shields are stronger,however, indicating a primary strike role against installations. Its missile load is light.
+From a tactical point of yiew, heavy fighters should atempt to close with the Spatha. Lighter fighters should use their superior speed to maintain a distance of at least 165 kilometers.
+43
+
+--- PAGE 44 [OCR] ---
+PHARETRA
+Shields:
+Bow
+Variable
+Variable
+Right Front
+Variable
+Right Rear
+Variable
+Lefi Front
+Left Rear
+Variable
+Stem
+Variable
+Armor:
+150
+Bow
+120
+Right Front
+Right Rear
+120
+Left Front
+120
+Left Rear- t:
+120
+Type: Corvette
+Allocatable Power.
+415
+150
+Stemenz
+Streamlin ng
+No
+Mass:2143
+AntiGrav:
+Weapons:
+Cost: 17.439.000
+Location/
+Power
+Range
+Crew:
+7-10
+Usage
+Turret #
+4-6
+1115
+Type
+2-3
+Passengers:
+Engines:
+12 (6 pilots, 6 technicians)
+20
+5/6 Laser
+9500
+Fighier Bay
+Center Engine Rating
+6 130-ton fighters
+5/6Laser
+FIL Capable:
+Yes
+naunal Cargo:
+817
+100 tons
+Thrust:
+Automatice Hard Point  diptrsfO
+Rear
+Turret Hex.
+
+--- PAGE 45 [OCR] ---
+Background:
+In 6894, the TOG Imperial Naval Procurement Board sent design specifications for a Corvette to Edo, a well-known manufacturer of small cargo ships. The project coordinator,Jubal Promi.
+inforned Edo that several other fims were already submitting designs and that competition would be stiff. The Corvette project also had the highest possible security classification. Jubal said
+that the Procurement Board could not reveal the names of the other competing firms, and threatened Edo and its employees with harsh penalties if the project's security were compromised.
+The design specifications called for an FTL ship capable of carry ing six Spiculuns and with enough crew space to transport the additional pilots and maintenance technicians. The ship would
+also need enoughextra ordnance to allow the fighters to launch at least threefully-armed sorties, Thrust, defensive anmament, and shields nceded to be strong enough to allow the ship to survive
+an attack by a squadron of Cheetahs for a period long enough io reach T-space velocity.
+representatives ofa betler offer by a competitor. Edo slowly lowered their bid price to the bone, and then some. Finally, Promi adjudged Edo's bid to be competitive enough that he would submit
+the design to the Naval Procurement Board.
+After review of the design, Edo was awarded the contract and the Pharerra was placed into production. The financial sirain on the company was so enormous, however, that Edo began to
+leeter on the edge of bankruptcy. The Edo executives were forced to ask the Imperial Navy to renegotiate their bid price or else go out of business. During these negotiations, they leamed that
+Promi had lied, and that there had never been any ather bidders for the Corvette project. Promi had used the project's high-security classification to manipulate Edo to lower its bid for the Pharetra.
+As a result, the firm was able to inerease the cost of the ship enough to stay solvent. Promi was lightdy reprimanded for unethical behavior, and then promoted to project coordinator for the Zeus
+Class battlecruiser project.
+The Pharetra is the standard sq uadron carrier used throughout the Shannedam County. In most eases, the Pharerra Class ships carry only medium fighters, with other ships carrying the light
+fighters,However,some reporis indicate that Pharetras are being assigned to carry Arcwbalista recon squadrons.
+Combat Evaluation:
+The Pharetra is not as well-protected as a standard Corvete.Its armoris light,defensive weaponry limited,and alloc atable powereven lower. Moreover,its acceleration is sluggish.A Pharetra
+should be a relatively easy kill for any mediun or heavy fighter squadron. Tactical deployments of the Pharetra can mitigate these problens, however. Maintaining its 27,OoO+ kilometer per
+hour velocity.the Pharetra jumps into the system and then enters a high-speed parabolic orbit around the sun. The fighters are launched for the mission and then retum to the carrier when the
+job is completed. This tactic makes it difficult, if not impossible, to intercept the camier. Friendly fighters must detect the Pharera, calculate its orbit, and then vector into an intercepting orbit
+at a velocity similar to the Pharetroall before the enemy fighters have completed their mission and the carrier has recovered them. Even if the friendly fighters achieve a successful intercept,
+the Pharetra can easily avoid destruction by immediately jumping into T-space.
+
+--- PAGE 46 [OCR] ---
+WEAPONSYSTEMS
+NEWLYDEPLOYEDWEAPON SYSTEMSINSHANNEDAMCOUNTY
+AUTOLOADINGHARDPOINT
+AUTOLOADINGHARD POINTWEAPONTABLE
+Range
+7-10
+Tonnage
+115
+Power
+4-6
+2-3
+Cost
+NA
+NA
+NA
+100
+NA
+NA
+300.000
+Missiles are devastating weapons whose one real limitaticn is that only a small number can be externally mounted The
+Autoloading Hard Point is designed to overcome this problem,at least in larger, patrol-class craft and installations. Rather than
+having each missile mounted on an individual hard point, this weapon uses the same launcher for all the missiles, The missiles
+are stored in an internal ammo bay and are individually fed up to the hard point through a complex loading mechanism, Once
+the launcher is clear, the next missile takes its place.
+Both the TOG military and the Commonwealth/Renegade forces are currently using Autoloading Hard Point systems.
+Game Use:
+Each Autoloading Hard Point has a magazine that holds ten missiles of any type. Prior to the start of the game, the player
+should note the number and type of missiles carried. The missiles can be fired in any sequence during the game. One missile may
+be launched from the Auto Hard Point per turm,up to a total of ten missiles.
+Ifthe Auto Hard Pointis destroyed,eachremaining missile in themagazine explodes withaforce equal to itsnormal damage.
+This damage is resolved as nonmal intemal damage. cNo ship is likely to remain operational after absorbing 4O or more points
+of damage,however.)
+
+--- PAGE 47 [OCR] ---
+MASSDRIVERGATLING
+MDCGWEAPONSTABLE
+Range
+2-3
+4-6
+7-10
+11-15
+Tonnage
+Power
+Cost
+24
+120.000
+The Mass Driver Garling is a TOG weapan system designed to perform the same functions as the Safeguard system.Instead
+of the mini-laser system used by TOG ground forces, the MDCG uses a multiple-barrel mass driver with a darnage profile similar
+tothat of a conventional MDC-8.Whenengaging amissile,the MDCG throws outacloudofhigh-velocity slugsinto the missile's
+path. When not engaging a missile, the MDC G can function as a normal offensive weapon, though its range is greatly curtailed.
+The MDC G has a restricted firing arc, and does not scan a full 360-degree arc. The pilot is ex pected to maneuver his ship into
+a position that allows the MDC G's fire control equipment lo acquire the missile, As Commonwealth and Renegade fighters do
+not depend primarily on missiles, this tactical limitation is viewed as an acceptable trade-off for the MDC G's offensive
+capabilities.
+The perfomance characteristics of the MDC G aresim larto thaseof the Safeguard-2 system.Like the Safeguard, the MDC
+G can engage multiple targets, but cannot function when the ship's ECM systems are operating, Unlike the Safeguard system.
+multiple MDC Gs can be used simultancously against missiles, as long as the weapons do not scan the same firing arc.
+Only the TOG military deploys the MDC G system.
+Game Use:
+MDCGMISSILEHITTABLE
+#of Incoming Missiles Engaged
+To-Hit Number
+42
+In the Cornbat Phase of the tum,the MDCG may make a nomal attack against ships or it may engage missiles that have
+cntered the hex that the shipoccupies.
+After all missiles havemoved,but before their attacks areresolved,a ship with an MDC G system may engage any missiles
+in its hex, subject to the firing restrictions listed below.The MDC G Missle Hit Table gives the To-Hit number fara successful
+attack against themissiles,basedonthetotalmumberengaged.The playermayalwayschoosetoengagefewerthan themaximum
+number of missiles attacking him, He may even decide not to use the system at all. He must make a separate To-Hit Roll for
+each targeted missile. If the result is cqual to or less than the To-Hit Number, the missile is destroyed. Surviving missiles may
+make a normal attack (This is the only time that damage is not taken simultaneously.)
+The MDCG may only engage missiles that have entered from the hexside that it covers. Bow-mounted weapons cover the
+front arc.Left and right-wingor side-mounted weapons cover the left and rightsides.respectively.Rear-mounted MDCGscover
+the rear arc.Turret-mounted MDC Gs cover the front arc if pointed farward, the rear are if pointed aft, and the appropriate left
+or right arc if pointed to the left or right side of the ship.
+No matter how many MDC Gs there are to a side, only ane MDCG may engage a group of missiles cntering that side. If
+two or more MDC Gs are mounted on a ship,each one may engage a different group of missiles approaching from a different
+side. For example,if three missiles enter the ship's front side and one enters from the rear side, a bow-mounted MDC G may
+attack the group of three that have entered from the front. If the ship has no MDC G covering the rear, that missile may not be
+engaged.However,an aft-facing MDC Gmay engagethat single missile.
+If the MDC G will not engage any missiles in a turn, it may then serve as a normal offensive weapon system during the
+Combat Phase.An-MDC G uses the samedamage lemplate as an MD-B.
+
+--- PAGE 48 [OCR] ---
+THORIUMPLASMAPROIECTOR
+IPPWEAPONSTABLE
+Range*
+Tonnage
+11-15
+4-67-10
+Power
+Cost
+2-3
+30
+TPP-9
+120,000
+15
+55
+TPP-16
+219,000
+23
+2016
+85
+TPP-20
+338.000
+(DamageTemplate isa reversed NPCtemplate)
+Recent experiments in EPC technologies have resulted in the development of the Thorium Plasma Projector (TPP). The
+new weapon superheats thorium to a plasma and then accelerates the plasma to high spceds before firing it at a target. Like an
+EPC bolt,the plasma boils off armorin large sectians.Unlike an EPC,thethorium plasma penetrates the armor before dispersing.
+causing conicalcavitiesinside the armorplating. Becausethe plasmadisperses and cools overrelatively shortdistances,the TPP
+is exclusively a short-range weapon. Compared to the damage that it does, the TPP is a light-weight weapon, Its energy
+consurnption is quite high, however. restricting its use to larger, better-powered craft.
+Both the Commonwealth/Renegade forces and the TCG military deploy the TPP system.
+CONELASER
+CONELASERWEAPONTABLE
+Range
+Tonnage
+Power
+7-10
+11-15
+4-6
+Cost
+2-3
+35
+35
+15
+12
+The Cone Laser is a 7.S/6laser that fires a beam modulaled an a frequency differing from the standard.This modulation
+increases the beam's shon range penetrating power,but accelerales beam attenuation over longer ran ges, The modulation
+CL12
+CL15
+CL8
+alsocreates a uniquedamageprofile, When the beam strikes amor plating,the amor starts to vaporize.The vaporized armoriflalirilM Orxl
+then refracts the beam into a conical shape.The Cone Laser isa superb weapon for undercutting armor,butitis alsoamassiveytt cgfa
+and power-hungry system.
+Only theTOGmilitary deploys theConeLaser.
+aailhda
+48
+
+--- PAGE 49 [OCR] ---
+ATTENTION RENEGADES!
+ICTUSCOMHATIEVALUATION:
+The Ictus has only one hard point, which implies tactical deploy
+ment optimizing energy weapons attacks rather than missile
+attacks a direct contradiction of standard TOG fighter
+doctrine. In combat Ictus sguadrons are generally
+more willing than cither Marty or Gladius souadrons to
+exchange blows and to engage in dogfighits
+The Ictus is a dangerous opponent.
+High-speed passes attacking the sides
+and rear arerecommended.It is
+not recomnended that
+pilots engage in slug-
+ing chatches with
+this ship.
+wanhand henaeadgiins
+amdsupporteratr fronmstmperaiavyinloShannd.meuonrganaiatn
+Knowing Tnm aipabilieseampranily lmprowelhipdhaneelorcnmonwgiluh-velne
+113405705301
+RNEBIEENRNAELHNJNTRHHPRCrOdLMFOTAN
+LSBN1-55560-058-1 FASA800

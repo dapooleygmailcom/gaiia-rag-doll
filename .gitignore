@@ -24,3 +24,5 @@ htmlcov/
 # Local databases and backups
 chroma/
 backups/
+
+*.log

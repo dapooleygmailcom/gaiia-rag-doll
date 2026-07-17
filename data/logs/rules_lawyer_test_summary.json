@@ -1,12 +1,12 @@
 {
-  "total_duration_minutes": 247.91,
+  "total_duration_minutes": 365.71,
   "scores": {
     "total": 20,
-    "faithful": 18,
-    "relevant": 19,
-    "cited": 17,
+    "faithful": 19,
+    "relevant": 18,
+    "cited": 19,
     "perfect": 17,
-    "keyword_hits": 51,
+    "keyword_hits": 50,
     "keyword_total": 62
   },
   "category_scores": {

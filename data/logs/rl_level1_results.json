@@ -1,0 +1,309 @@
+[
+  {
+    "id": "C-R-01",
+    "system": "centurion",
+    "difficulty": "EASY",
+    "query": "Can a dismounted infantry squad mount a vehicle, and what happens to their movement?",
+    "grade": "FAITHFUL",
+    "reason": "The AI's answer is correct but uses slightly different wording and expands on the reference answer with additional details that are not explicitly stated in the query or the required keywords. It includes a citation.",
+    "keywords_found": [
+      "infantry",
+      "mount",
+      "vehicle",
+      "movement phase"
+    ],
+    "has_citation": true,
+    "required_keywords": [
+      "infantry",
+      "mount",
+      "vehicle",
+      "movement phase"
+    ],
+    "expected_source_hint": "centurion",
+    "source_found": true,
+    "errata_priority": false,
+    "elapsed_s": 380.4,
+    "num_retrieved": 8,
+    "num_cross_refs": 0,
+    "query_type": "concept",
+    "answer_snippet": "A dismounted infantry squad can mount a vehicle during its Movement Phase if the vehicle is present in the same hex and has a velocity of 0 [Doc: core_rules | Section: If a dismounted infantry squad begins its Movement Phase in]. Once mounted, the infantry squad moves with the vehicle but cannot fir"
+  },
+  {
+    "id": "C-R-02",
+    "system": "centurion",
+    "difficulty": "MEDIUM",
+    "query": "What happens when a Centurion unit becomes suppressed?",
+    "grade": "CITED",
+    "reason": "The AI correctly states that it cannot provide an answer based on the given text, but there is a lack of information from the sources to accurately determine the effects of suppression on a Centurion unit. The response does not include required keywords and lacks the exact phrasing or content needed for EXACT/FAITHFUL grading.",
+    "keywords_found": [
+      "suppression"
+    ],
+    "has_citation": true,
+    "required_keywords": [
+      "suppression",
+      "suppressed",
+      "fire"
+    ],
+    "expected_source_hint": "centurion",
+    "source_found": true,
+    "errata_priority": false,
+    "elapsed_s": 254.3,
+    "num_retrieved": 8,
+    "num_cross_refs": 0,
+    "query_type": "concept",
+    "answer_snippet": "The provided documents do not contain information about what happens when a Centurion unit becomes suppressed. Therefore, I cannot provide an answer based on the given text."
+  },
+  {
+    "id": "C-R-03",
+    "system": "centurion",
+    "difficulty": "EASY",
+    "query": "What are Thrust Points (TP) used for in Centurion grav vehicles?",
+    "grade": "EXACT",
+    "reason": "The AI's answer precisely matches the reference answer, includes all required keywords, and provides a citation.",
+    "keywords_found": [
+      "thrust points",
+      "velocity",
+      "increase",
+      "decrease"
+    ],
+    "has_citation": true,
+    "required_keywords": [
+      "thrust points",
+      "velocity",
+      "increase",
+      "decrease"
+    ],
+    "expected_source_hint": "centurion",
+    "source_found": true,
+    "errata_priority": false,
+    "elapsed_s": 432.6,
+    "num_retrieved": 8,
+    "num_cross_refs": 0,
+    "query_type": "concept",
+    "answer_snippet": "Thrust Points (TP) for Centurion grav vehicles are used to increase or decrease the vehicle\u2019s velocity during a turn. They can be spent at the beginning of a movement phase to accelerate and at the end to decelerate, provided that these actions do not exceed the vehicle's total Thrust Points [Doc: c"
+  },
+  {
+    "id": "C-R-04",
+    "system": "centurion",
+    "difficulty": "HARD",
+    "query": "Does being in a hull-down position provide protection in Centurion?",
+    "grade": "EXACT",
+    "reason": "The AI's answer is exact to the reference answer, providing all necessary information including keywords and a proper citation.",
+    "keywords_found": [
+      "hull-down",
+      "protection",
+      "turret"
+    ],
+    "has_citation": true,
+    "required_keywords": [
+      "hull-down",
+      "protection",
+      "turret"
+    ],
+    "expected_source_hint": "centurion",
+    "source_found": true,
+    "errata_priority": false,
+    "elapsed_s": 439.2,
+    "num_retrieved": 8,
+    "num_cross_refs": 0,
+    "query_type": "concept",
+    "answer_snippet": "Being in a hull-down position does provide protection in Centurion. A unit that is grounded in a crater created by digging cannons is considered to be hull down. This provides a To-Hit Modifier of -2 for any shots at the vehicle, offering significant defensive advantages [Source: pdfcoffee.com_reneg"
+  },
+  {
+    "id": "I-R-01",
+    "system": "interceptor",
+    "difficulty": "EASY",
+    "query": "How is the Safe Operating Thrust (SOT) of an Interceptor pilot calculated?",
+    "grade": "EXACT",
+    "reason": "The AI's answer is an exact match to the reference answer, including all required keywords and a citation.",
+    "keywords_found": [
+      "SOT",
+      "average",
+      "piloting skill",
+      "thrust",
+      "rounding up"
+    ],
+    "has_citation": true,
+    "required_keywords": [
+      "SOT",
+      "average",
+      "piloting skill",
+      "thrust",
+      "rounding up"
+    ],
+    "expected_source_hint": "interceptor",
+    "source_found": true,
+    "errata_priority": false,
+    "elapsed_s": 261.2,
+    "num_retrieved": 8,
+    "num_cross_refs": 0,
+    "query_type": "concept",
+    "answer_snippet": "The Safe Operating Thrust (SOT) of an Interceptor pilot is calculated by averaging the ship\u2019s Thrust Rating and the pilot's Piloting Skill Level, then rounding up. [Doc: core_rules] [Section: The Safe Operating Thrust is the average of the]"
+  },
+  {
+    "id": "I-R-02",
+    "system": "interceptor",
+    "difficulty": "MEDIUM",
+    "query": "What happens if a pilot fails an SOT roll in Interceptor?",
+    "grade": "FAITHFUL",
+    "reason": "The answer is correct but uses slightly different wording, particularly in describing the consequences of failing an SOT roll and the process for regaining control. It does not fully match the reference's exact phrasing.",
+    "keywords_found": [
+      "fail",
+      "random movement table",
+      "thrust points"
+    ],
+    "has_citation": true,
+    "required_keywords": [
+      "fail",
+      "random movement table",
+      "thrust points"
+    ],
+    "expected_source_hint": "interceptor",
+    "source_found": true,
+    "errata_priority": false,
+    "elapsed_s": 291.9,
+    "num_retrieved": 8,
+    "num_cross_refs": 0,
+    "query_type": "concept",
+    "answer_snippet": "If a pilot fails an SOT roll in Interceptor, the effects are relatively minor because only a small number of Thrust Points must be spent on the Random Movement Table. The pilot then needs to regain control by rolling less than or equal to their Piloting Skill Level [Doc: core_rules | Section: The ef"
+  },
+  {
+    "id": "I-R-03",
+    "system": "interceptor",
+    "difficulty": "HARD",
+    "query": "What does it mean when an Interceptor ship is Seriously Out of Control (SOC)?",
+    "grade": "CITED",
+    "reason": "The AI's answer does not match the reference answer and lacks specific keywords. The AI mentions 'seriously out of control' but does not provide an accurate definition or include all required keywords.",
+    "keywords_found": [
+      "seriously out of control"
+    ],
+    "has_citation": false,
+    "required_keywords": [
+      "seriously out of control",
+      "damage",
+      "maneuvering functions"
+    ],
+    "expected_source_hint": "interceptor",
+    "source_found": true,
+    "errata_priority": false,
+    "elapsed_s": 361.3,
+    "num_retrieved": 8,
+    "num_cross_refs": 0,
+    "query_type": "concept",
+    "answer_snippet": "The term \"Seriously Out of Control (SOC)\" is not explicitly defined in the provided sections from the document collection \"Renegade Legion.\" The closest relevant concept might be when a ship takes damage to its Ship Destroyed row or loses critical systems, which can lead to difficulties such as bein"
+  },
+  {
+    "id": "I-R-04",
+    "system": "interceptor",
+    "difficulty": "EASY",
+    "query": "How are Interceptor Control Boards (ICBs) scaled for larger ships?",
+    "grade": "FAITHFUL",
+    "reason": "The AI's answer is correct and includes all required keywords, but it adds specific scaling examples which were not present in the reference answer. The citation format also differs slightly from the query requirements.",
+    "keywords_found": [
+      "scaling",
+      "tons",
+      "ICB"
+    ],
+    "has_citation": true,
+    "required_keywords": [
+      "scaling",
+      "tons",
+      "ICB"
+    ],
+    "expected_source_hint": "interceptor",
+    "source_found": true,
+    "errata_priority": false,
+    "elapsed_s": 286.1,
+    "num_retrieved": 8,
+    "num_cross_refs": 0,
+    "query_type": "concept",
+    "answer_snippet": "For larger ships in INTERCEPTOR, Interceptor Control Boards (ICBs) are scaled proportionately to make handling them easier. The number of boxes on an ICB is determined by a scale factor based on ship tonnage. For example:\n\n1. Determine the result of the scaling procedure which could vary from 1/1 sc"
+  },
+  {
+    "id": "L-R-01",
+    "system": "leviathan",
+    "difficulty": "MEDIUM",
+    "query": "What happens in Leviathan if a Missile Silo is destroyed before missiles are launched?",
+    "grade": "EXACT",
+    "reason": "The AI's answer matches the reference answer precisely, includes all required keywords and provides a specific citation to the Leviathan_Template_Update.pdf document.",
+    "keywords_found": [
+      "silo",
+      "destroyed",
+      "points",
+      "lost"
+    ],
+    "has_citation": true,
+    "required_keywords": [
+      "silo",
+      "destroyed",
+      "points",
+      "lost"
+    ],
+    "expected_source_hint": "leviathan",
+    "source_found": true,
+    "errata_priority": true,
+    "elapsed_s": 25.6,
+    "num_retrieved": 4,
+    "num_cross_refs": 0,
+    "query_type": "concept",
+    "answer_snippet": "If a Missile Silo is destroyed before missiles are launched in Leviathan, 50 points of missiles are lost for each box destroyed [Source: Leviathan_Template_Update.pdf | Rule: Interior Components]."
+  },
+  {
+    "id": "L-R-02",
+    "system": "leviathan",
+    "difficulty": "HARD",
+    "query": "How is fighter recovery affected if both Flight Decks on a Leviathan are damaged?",
+    "grade": "EXACT",
+    "reason": "The AI's answer precisely matches the reference answer and correctly cites the Leviathan_Template_Update.pdf.",
+    "keywords_found": [
+      "flight deck",
+      "damaged",
+      "recover",
+      "4 times"
+    ],
+    "has_citation": true,
+    "required_keywords": [
+      "flight deck",
+      "damaged",
+      "recover",
+      "4 times"
+    ],
+    "expected_source_hint": "leviathan",
+    "source_found": true,
+    "errata_priority": true,
+    "elapsed_s": 24.6,
+    "num_retrieved": 2,
+    "num_cross_refs": 0,
+    "query_type": "concept",
+    "answer_snippet": "If both Flight Decks on a Leviathan are damaged, the ship takes 4 times as long to recover fighters. Additionally, no fighters can be recovered if both decks are completely destroyed [Source: Leviathan_Template_Update.pdf | Section: Interior Components]."
+  },
+  {
+    "id": "P-R-01",
+    "system": "prefect",
+    "difficulty": "EASY",
+    "query": "Can more than one Task Force end the Movement Phase in the same hex in Prefect?",
+    "grade": "EXACT",
+    "reason": "The AI's answer is an exact match to the reference answer, includes all required keywords and has a citation.",
+    "keywords_found": [
+      "task force",
+      "movement phase",
+      "one",
+      "hex"
+    ],
+    "has_citation": true,
+    "required_keywords": [
+      "task force",
+      "movement phase",
+      "one",
+      "hex"
+    ],
+    "expected_source_hint": "prefect",
+    "source_found": true,
+    "errata_priority": false,
+    "elapsed_s": 350.6,
+    "num_retrieved": 8,
+    "num_cross_refs": 0,
+    "query_type": "concept",
+    "answer_snippet": "No more than one Task Force may end the Movement Phase in any one hex. [Doc: core_rules] [Section: No more than one Task Force may end the Movement Phase] This rule is explicitly stated and there are no contradictions or amendments provided in the given text that would supersede this rule.\n\nThis tex"
+  }
+]

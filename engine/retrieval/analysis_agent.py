@@ -12,7 +12,7 @@ def extract_filters(query):
     Return ONLY a JSON object with keys 'price_max' and 'rating_min'. If not mentioned, set the value to null.
     User Query: "{query}"
     """
-    response = ollama.generate(model="qwen2.5:7b", prompt=prompt, format="json")
+    response = ollama.generate(model="qwen2.5:14b", prompt=prompt, format="json")
     response_text = response['response'].strip()
     
     try:
@@ -93,7 +93,7 @@ def generate_rag_response(query):
     Answer:
     """
     
-    response = ollama.generate(model="qwen2.5:7b", prompt=prompt)
+    response = ollama.generate(model="qwen2.5:14b", prompt=prompt)
     answer = response['response'].strip()
     return answer, context
 

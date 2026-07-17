@@ -1,0 +1,1948 @@
+--- PAGE 1 [OCR] ---
+5302
+RENEGADE
+LEGION
+TM
+FASA
+FIGHTER BAIEFING
+
+--- PAGE 2 [OCR] ---
+RENEGADE FIGHTER BRIEFING
+Design
+Jim Brunk
+Blaine Pardoe
+Sam Lewis
+Stuart Johnson
+Ron Oldham
+James Woods
+Development
+Sam Lewis
+Playtesters
+Bob Oswald
+Ira Boucher
+Jerry Stenson
+Editorial Staff
+Ednor-In-Chef
+L.Ross Babcock lll
+Senor Editor
+Donna Ippolito
+Edftor
+Todd Huettel
+EditorialAssisiant
+C.R.Green
+Production Staff
+Production Manaeer
+Jordan K.Weisman
+Ar Director
+Dana Knutson
+Cover Art
+David R.Deitrick
+Ship Desien and lustration
+David R.Deitrick
+Typesewing
+Patrice A, Jones
+Tara Gallagher
+Lawu
+Tara Gallagher
+Pasteup
+Dana Knutson
+Renegade Legion and TOG are trademarks of FASA Corporaticn.
+Published by FASA Corporation
+Copyright@19B8FASACorporation
+P.0.Box 6930
+All Rights Reserved. Printed in the United Stales of America.
+Chicago.IL 60680
+
+--- PAGE 3 [OCR] ---
+TABLEOFCONTENTS
+PREFACE
+LIGHTFIGHTERS
+Bumblebce
+Falcon
+Shield
+10
+Ventura
+12
+MIEDIUMFIGHTERS
+14
+Corsair
+.14
+Devil
+16
+Hawk
+81
+Kala Cator (Hand that Stnkes)
+20
+Kenderson
+22
+Peacekeeper
+24
+Ramrod
+26
+Stinger
+28
+HEAVY FIGHTERS
+30
+Defender
+30
+Defiant
+32
+Gaul
+Perforator
+36
+Punisher
+38
+Slingshot
+40
+Warspite
+42
+CORVETTE
+Solstice
+WEAPONSSYSTEMS
+46
+Autoloading Hard Point
+46
+Safe Guard Anti-Missile System
+Thorium Plasma Projector
+48
+Laser/EPC Combination
+48
+
+--- PAGE 4 [OCR] ---
+Fighter Opposition Briefing
+Shannedam County
+Secret
+Copy Number:195467209
+PTAHO3OLRAT
+Issued To:
+Issue Date:
+Issuer's Initials:
+Issuee's Initials:
+PREFACE
+The following brieing is classified as sEcReT, per General Lictor Order 345-
+Q.s67.bi Misuse of thia information ia a ccurt-martial offense punishable y 15
+standard years of rard labor or by mandatory assignnent to a volunteer assault unit.
+All personnel are to read and study this manual. Fail ure to do so is a violation of standing orders, and offenders are
+subject to non judicial punishment.
+This briefing manual is being issued in order to familiarize newly assigned naval fighter personnel with 20 unique
+opposition fighter classes thal they willencounter in the Shannedam County thealer of operations. A general background
+briefing is given fot each of the crafi described and all known or expected deployments in the county.
+Additional information on new weapons systems recently introduced into the opposition's inventory is also given.
+Fighters are classified in the following manner,as perISo 567s.n
+Light:powerplantratedato-15oo
+Medium:powerplantratedat150l-2000
+Heavy=powerplantratedat2001-2500
+All briefing materials have been assembled by the Internal Security Division, Infomation and opinions given herein
+are assigned an accuracy raring of 95%,except where otherwise noted.
+
+--- PAGE 5 [EMPTY] ---
+
+--- PAGE 6 [OCR] ---
+BUMBLEBEE
+Type: Light Fighter
+Mass: 69
+Cost: 2.000,300
+Engines:
+Right Engine Rating
+700
+Lefi Engine Rating
+700
+Thrust:
+10
+High Thrust Modification
+(w/LasersReplaced)
+Streamlining: Nn
+AntiGrav:Yes
+Shields:
+Bow
+Right
+30
+Left
+30
+Stern
+40
+Armor:
+Bow
+50
+Left
+BUMBLE BEEAFTVIEW
+Right
+Stern
+Weapons:
+Range
+Type
+Location
+-10
+11-15
+R/Wing
+5/lLaser
+LWing
+5/1 Laser
+EPC9
+Bow
+Bow
+Hard Point
+
+--- PAGE 7 [OCR] ---
+Briefing:
+The Commonwealth realizes that they have a fine light fighter in the Cheetah. Unfortunalely, ton for ton.
+it is also the most expensive fighter in production. In 6828, the Joint Commonwealth/Renegade Fighter
+Operation Board issued Specification #345.876-0, which called for a low-cost light fighter able to perform
+long-range in-system patrols and high-speed interception missions. After carefully reviewing several designs,
+theJCRFOBchosetheBambhleBee.
+The Bee, as it is known to its pilots. is so named because ofits unusual shape. Unlike most fighiers, which
+are usually sleek and streamlined, the Bee is barrel-shaped. The reason for this shape is that the fighier mounts
+an anti-gravity unit rather than being streamlined for atmospheric conditions.
+The barrel shape of the Bee belies its speed, which is equal to that of a Cheeah. The Bee reduces its cost
+by carrying fewer and lighter weapon systems than the Cheetak, but this also reduces its overall combat
+Shannedam CountyDeployment:
+effectiveness, The Bee carries two S/l light lasers. one EPC 9, and one hard point. lis shielding and armor are
+Confirimed Deployment
+average for its size, which means that it is vulnerable to medium ar heavy weapons.
+Deiop: 2 Squadrons
+Even though the Bee mounts fewer weapons than the Chtecfah.the Commonwcalth felt that the trade-off
+Tiven:3Squadrons
+was acceptable.At a lower cost per unii.the Com monwealth can deploy more ofthese fighters tothe front.The
+Unconfirmed Deployment
+Commonwealth has started to use the Bee in long-range patrol and fast interceptor units throughoul the
+345th Commonwealth CarrierWing:2to3Squadrons
+Shannedam County.
+
+--- PAGE 8 [OCR] ---
+FALCON
+Type Light Fighter
+Mass: 83
+Cost:2.019.100
+Engines!
+Right Engine Rating
+750
+Left Enginc Rating
+750
+Thrust:
+Streamlining: Yes
+AntiGrav: No
+Shields:
+Bow
+60
+NPC9
+Right
+20
+Left
+20
+Stern
+60
+Armor:
+Bow
+Ot
+Left
+30
+Right
+Stem
+40
+Weapons:
+Range
+Type
+4-6
+7-10
+2-3
+Location
+11-15
+NPC9
+R/Wing
+LWing
+NPC9
+Hard Point
+
+--- PAGE 9 [OCR] ---
+Briefing:
+Falcon light fighters patrol many of the border systems of the Commonwealth and are also popular with the Renegade Legions as a light attack fighter. In its original version, this craft was equipped
+with anti-grav atmospheric systems rather than sireamlining.This changed afier 6824, however.when the Fafcon's anti-grav units were removed in favor of streamlining to allow the ship to operate more
+effectively in anatmosphere.Yery few of the original model still exist in Renegade or Commonwealth inventories.
+The Fafcon is popular with pilots assigned to space-strike squadrons, such as those on carrier groups, The stronger-than-average forward shielding of this light fighter allows it to accelerate directly
+toward a targe, to fire its NPCs at 60 to 90 kilometers, and then to execute a I8o-degreetumn that presents its strong rear shields to any retum fire.The Falcon's major weaknesses are the lack of short-range
+weapons, limited hard points, and its almost non-existent side shielding and armor. This lack of variety limits the craft's missions almost exclusively to space-strike roles.
+Falcoa squadrons normally operate with the Peneiratormedium fighier. Together,the two types of crafi support a variety of weapons and work well in consort. Tactically, the Falcons and Penetrators
+may engage a target at 90 and 10s kilometers, respectively. Afier weakening the target, the Penetrators will close in to 15 kilometers while the Falcons provide a fighter screen to delay any TOG
+reinforcements,
+Intelligence reports indicate that production ofa modified version of the vessel has been temporarily shelved.This version (the Fakcon / would increase the side armor. introduce slightly larger engines.
+andaddanEpC-14lothefighter'sammaments.
+Shannedam CountyDeployment:
+Confirmed Deployment
+203lstStrikeLegion:2Squadrons
+Unconfirmed Deployment
+Caralis:3 Squadrons
+Wuj:I to S Squadrons
+
+--- PAGE 10 [OCR] ---
+SHIELD
+Type:Light Fighter
+as5:70
+C0s1:1.866.200
+Enginesi
+Right Engine Rating
+700
+Left Engine Rating
+002
+Thrust:
+10
+High Thrust Modification
+(w/LaserReplaced)
+LASERDEPLOYEDONSHIELD
+Streamlining: Yes
+AntiGrav:No
+Shields:
+Bow
+40
+Right
+30
+Left
+30
+Stern
+40
+Armor:
+60
+Bowu li
+30
+Left
+30
+Righi
+Stem
+60
+isuodeam
+Range
+Type
+2-3
+4-6
+Location
+7.5/2Laser
+Bow
+Bow
+Hard Point
+L/Wing
+Hard Point
+R/Wing
+Hard Point
+10
+
+--- PAGE 11 [OCR] ---
+Briefing:
+In the six years since TOG has introduced the Lewced
+light fighter, the Commcnwealth and Renegade military
+have failed to produce a cheap fast fighter with
+enough speed to defend Isell against recon-
+naissance passes of Lcwicea through a system
+oragainstits deploymentinso-called tast
+raids. Ina fast raid.Lanceg fighters jump
+in-system with their mothership,and then
+accelcrate toward a vulnerable Common-
+wealch planet or installation. Their intention
+is to draw out the system 's defending fighters.
+and they almost always succeed. As the defending fighters move in, the Lamceus lock onto them at long range,
+fire their missiles,and then turn back to the mothership.With five or mpre missiles targeted cn each Common-
+wealth opponent, the Common wealth normally loses one or two of their number in such fastraids. Moreover.
+the Lapiced s superior acceleration prevents the defenders frcm catching the raiders to retaliate. In cases where
+theLaricecs fail todraw out the defenders,they will fire a spread of missiles at the installation,damaging it with
+no loss to their own ships. The only fighter fast enough to counter the Lancea is the Cheerak, but it is too
+Shannedam County Deployment:
+expensive for use in garrison forces, which has given the Laacea frec reign to crush the enemies of TOG.
+In responseto the Lancca,the Commonwealth has recently unveiled their newest fighterdesign,the Shieild.
+Confirmed Deployment
+The Shield carries a 7.5/2 heavy laser and three hard points The 7.5/2 laser allows the Shield to engage ships
+Tiven: I Squadron
+at long rangecffectiveby,whilethe three hard poinis provide some of thetactical flexibility the Commonwealth
+Moshelle: I Sguadron
+military has bcen lacking.Becauseit is less expensive than the CheetahtheShieldcan beassigned inreasonable
+Tubanos:ISquadron
+numbers to Commonwealth planetary defense forces to end the devastating Lancea raids.
+Rilus V: Sguadron
+The Commonwealth deploysthe Shield primarily on three types of missions. Thefirst of these is anti-recon.
+New Janos: 1 Sguadron
+with many Commonwealth squadrons on anti-recon orhigh-speed detenseassignments beingre-equipped with
+Unconfirmed Deplovment
+the Sareld. The second mission type is the Commanwealth nuisanceraid. Finally,the Shield performs ground-
+Henders:1 Squadron
+atack missions in support of Commonwealth ground forces. In contrast to other Commonwealth fighiers, the
+Mala:I Squadron
+Shieid'sthree hard points allow it to lift a reasonable ordnance load without having toremove its wing-mounted
+Gustaviv's Regret:3 Squadrons assignedas ground support
+34Sth Commonwealth Carrier Wing:I Squadron
+weupons.
+
+--- PAGE 12 [OCR] ---
+VENTURA
+Type: Light Fighter
+Mass: 101
+Cost:1.674.600
+Engines:
+MDC 8
+CenterEngincRating
+1200
+Thrust:
+Streamlining: Yes
+AntiGrav: No
+Shields:
+Bow
+60
+Right
+40
+Lefi
+40
+Stem
+Armor:
+60
+Bow
+Left
+50
+Right
+50
+Stem
+60
+Weapons!
+Range
+4-6
+7-10
+Type
+Location
+2-3
+11-15
+R/Wing
+5/lLaser
+LWing
+5/1 Laser
+Bow
+MDC8
+R/Wing
+Hard Point
+LWing
+Hard Point
+12
+
+--- PAGE 13 [OCR] ---
+Briefing:
+Many in the Imperial Navy consider the Veniara to be a slow-moving target just waiting to get shot. In a war where sound taclical doctrine dictates that light fighters must utilize high acceleration
+to survive,the Venfarra is the slowest of the Commonwealth's light fighters. Intelligence sources state that most veteran Commonwealth pilots prefer even an older fighter such as the Guardian to piloting
+a Venrura, whose controls they find to be sluggish and slow.
+Despite the opinion of veterans, this fighter is popular with pilots just starting their combat careers with the traitorous Renegade Legion. Because of its heavy shielding and armor-almost unheard
+of in such a small class fighterthe Vetara offers even the greenest pilot enough protection to safely break off an engagement. Indeed,the Renegade Legion has begun to assign its green pilots to Ventura
+Class ships to reduce the number of lost pilots. (This same heavy shield protection is such a power drain thal it slows the vessel to tactically unacceptable levels, however.)
+Because the Ventara lacks the speed accepted as the norm for light fighters, it has been ruled outofcarrier duty.and restricted mostly to planetary defense missions, TOG pilots believe that the Verurd
+Renegade Naval Command claims that this is to give the new recruits a chance to learn from the veteran pilots, but it is obvious that they are using the new recruits as bait.
+Shannedam County Deployment:
+Confirmed Deployment
+NewJanos:IFlight
+Unconfirmed Deplovment
+Mala:1to 3Sguadrons
+13
+
+--- PAGE 14 [OCR] ---
+CORSAIR
+Type: Med um Fighter
+Mass: 123
+Cost:3.067.900
+Engines:
+Right Engine Rating
+1000
+Left Engine Rating
+1000
+Thrust:
+High Thrust Modification
+(w/Lasers Replaced)
+Streamliningi Yes
+AntiGravNo
+Shlelds:
+Bow
+Right
+30
+Left
+30
+ECM POD
+Stern
+40
+Armor
+Bow
+70
+Left
+60
+ANN
+Right
+60
+Siem
+70
+tsuodeam
+Range
+Type
+Location
+4-6
+7-10
+2-3
+11-15
+R/Wing
+7.5/2 Laser
+L/wing
+7.5/2 Laser
+L/Wing
+18
+EPC18
+R/Wing
+18
+EPC18
+Hard Point
+14
+
+--- PAGE 15 [OCR] ---
+Briefing:
+Time and again. Commonwealth fighters of all classes bave suffered heavy losses
+against the superior speed and firepower of the rug ged Saicirfum. The Corsair is a feeble
+aitemptto redressthat balance.
+Designed in 6826 the Corsairmounts an almosiexact copy af the Spiclia's twin
+Promethium 1ooo fusion engines, The Promethium engin: has a narrow profile, but is
+relatively compact longitudinally.With these dimensions,the Spvcafani is thin enough to
+be a difficul target to lock onto, while still being short enough to fit into a standard I50.
+ton fighter bay.
+The Commonwealth propaganda apparatus has claimed thal a Renegade commando
+team managed to steal the plans for the Promethium engine during an assault on the TOG
+factory.This team was supposedly aided by members of the planet's indigcnous popula
+tion. All these claims are obvious lies, however. First of all,the engine production facility
+is so many thousands of light years from the Commonwealth border that traitorous
+Renegadeunits could never operate thatfar from their bases without being destroyed by the
+TOG Navy. Furthermore, all lifeforms ruled by the beneficent TOG be they citizens.
+plebeians, or slaveshave recognized the superiority of our form pf govermment.Though
+Shannedam County Deployment:
+a major fire occured in the factory at the time of the supposed raid, there was no attack. In
+Confirmed Deployment
+reality,the Commomwealth had to piece together the des igns for the Promethium engines
+203istStrikeLegion:IFlight
+from the wrecks of the pitifully few Spiciums that their military has managed to destroy.
+Unconfirmed Deplotment
+The Corsdiritself has bothaccelerationand firepower equivalcntlothe Spiculm.The
+369th Naram FighterWing:Ito 2Flighis
+short-range firepower is greatly enhanced by the twin heavy EPCs mounted in the bow.
+Kukulak:4Sguadrons
+although this firepower is gained at the expense of armor. The Corsair carries ten tons less
+Ope Diar:IFlighi
+amor than the Sprcu/ar.
+Rolunitru:2to5Squadrans
+15
+
+--- PAGE 16 [OCR] ---
+DEVIL
+Type: Medium Fighter
+Mass: 142
+Cost:3.030.700
+Engines:
+Right Engine Rating
+1000
+Left Engine Rating
+1000
+Thrust:
+Streamlining: No
+AntiGrav: Yes
+Shields:
+Bow
+50
+Right
+50
+Left
+50
+Stem
+Armor:
+Bow
+60
+Left
+60
+Right
+60
+Stern
+60
+isuodeam
+Range
+-15
+4-6
+7-10
+Type
+2-3
+Location
+R/Wing
+5/lLaser
+SAFEGUARD-1
+LAWing
+5/Laser
+EPC14
+10
+10
+10
+MDCIO
+Safeguard-1
+Bow
+Bow
+Hard Point
+GELTOTE
+16
+
+--- PAGE 17 [OCR] ---
+Brlefing:
+08
+The Dewl is a medium fighter that private Commcnwealth conpanies are supplying to the military forces of Trader's Paradise.
+Because this world has a limited industrial capacity, its faciories concentrate on the production of consumer goods for the indigenous
+population and on exportable. high value/low mass items such as industrial grade diamonds and luxury foodstuffs. Military equipment
+fortheplanetary forces mustusually be imported
+Until recently,the TOG military had supplied Trader's Paradise with its military hardware needs. The Impenial Navy and Legions
+have also supplied officers to train the native troops to use the equ pment and to oversee its tactical deployment. In many cases, TOG
+officers lent their experise to these back ward people by aclually commanding the fighter squadrons protecting the planet, These
+Shannedam CountyDeployment:
+arrangements ensured the proper handling of the weapons and that they woud not be used against TOG forces.
+Confirmed Deploy ment
+In 6821.some native soldiers nominally commanded by TOG officers carried out an abortive military coup on Trader's Paradise!
+Trader's Paradise: I Group
+This led to all TOG military advisors being ex pelled from the planet. The Lictors were able to prove conclusively that the rebellion
+was a Renegade plot, but to no avail. In retal iation for the expuksion.TOG halted the export of military hardware to Trader's Paradise,
+Unconfirmed Deployment
+Into thevoid camethe greedy merchants of the Cammonwealth
+None
+The Dewil is designed for easy maintenance so that the primitive and simple-minded native technicians of Trader's Paradise can
+service the fighter. Most components are modulized, and a basic self-testing program in the ship's computer can identify any faulty
+module and recommend its replacement. It is interesting that the Common wealth has mounted the Safeguard anti-missile system on
+the Devtt. This is a sub le attempt to fill up the fighter with a tactically useless weapons system and degrade the ship's performance.
+because the Dewil s most common enemy. Renegade Legion pirates,rarely use missiles.
+17
+
+--- PAGE 18 [OCR] ---
+HAWK
+Type:MediumiFighter
+Ma5s: 203
+Cost: 2.569.450
+Engines:
+Center Eng ne Rating
+1550
+Thrust:
+Streamlining: Yes
+AntiGrav:No
+RIS MISSILE
+Shields:
+Bow
+60
+Right
+Len
+50
+Stem
+60
+Armor:
+90
+Left
+60
+Right
+60
+Sterm
+80
+Weapons:
+Range
+7-10
+1-15
+Location
+Type
+2-3
+4-6
+RAWing
+5/2Laser
+Lwing
+5/2 Laser
+LWing
+10
+10
+10
+10
+MDCI0
+R/Wing
+10
+10
+10
+10
+MDCIO
+Bow
+Safeguard-2
+Bow
+Hard Point
+Bow
+Hard Point
+18
+
+--- PAGE 19 [OCR] ---
+Briefing:
+The Hawk is currently being deployed in a point-defense role as a replace-
+mert for the Gardran. The Guardian, which was desiened in sheer desperation.
+shows all the flaws one might espect from such a heritage, The Commonwealth
+Navy expects the Hawk to correct those flaws and to provide it with a viable
+defensive fighter.
+The Hawt has replaced theGuardian's EPCs with themorepenetrating mass
+driver cannons.The Hank alsomounts two hard points,allowing the ship tocarry
+twice the Gudrdian's ordnance load Unlike the Gardia. the Hamk does not
+depend on an ECM pod for missile defense,as its Safeguard anti-missile system
+provides missile counter measures. This arrangement frees up a valuable hard
+point to carry offensive, rather than defensive, weapons.
+Shannedam County Deployment:
+The Hank's improvements on the Gaardian have ncl come cheaply.how.
+Confirmed Deplovmeni
+ever. Total production costs are 5o percent higher, and the fiehter's tonnage has
+Tiven: 2 Squadrons broken down into Pairs defending various orbital installations
+almost doubled, Despite the Hawk's improvcments, in does not rectify the
+Novuta: I Squadron deferding VLCA
+cAl LAl
+Guardian's primary flaw, which is poor acceleration. Pulling only 4 Gs, the
+Unconfirmed Deployment
+Hav'k is a difficult, sometimes impossible,fighter to deploy tactically,and so
+New Janos: Varlous Pairs assigned to orbital installations
+19
+
+--- PAGE 20 [OCR] ---
+KATA CATOR
+(HANDTHATSTRIKES)
+Type: Medium Fighter
+Mass:120
+Cost:2.864.750
+HUMANOID COCKPIT
+Engines:
+Right Engine Rating
+006
+Left Engine Rating
+900
+Thrust:
+High Thrust Modification
+(w/Lasers Replaced)
+Streamlining:Yes
+AntiGrav:No
+Shields:
+Right
+Left
+Stem
+50
+Armor:
+Bow
+70
+Left
+50
+Righi
+50
+Stem
+60
+Range
+7-10
+Type
+2-3
+Location
+4-6
+R/Wing
+7.5/2 Laser
+L/Wing
+7.5/2Laser
+16
+TPP-16
+Bow
+16
+Bow
+TPP-16
+Bow
+Hard Point
+20
+
+--- PAGE 21 [OCR] ---
+Briefing:
+The Kara Caior (literally.the Hand or Limbl that Strikesiis a Baufrin design
+that the ICRFOB is currentlyevaluating for fleet deployiment.Like the KessRith's
+Flrierine Pelal the Hand's design reflects the Baufrin's strong belief in the self-
+sufficiencyand sanctityoftheextended familyunit,orhive.Thsbeliefisexpressed
+in Baufrin military doctrine by an unworkable, decentralized command structure
+and equipment that is expected to perform all tasks equally well. As a resuli, the
+race's military force is totally unsuited for modem combel The fact that the
+Renegade iraitors tned to defend Messana by deploying full Legions of Baufrin
+a race thai best serves Caesar as slavesshows how desperate wus their attempt.
+The Hanidmounts twoof the newly deployed Thorium Plasma Projectors,along
+with two standard 7.5/2 lasers.Acceleration,shielding.and armor areequivalentto
+the Pemeirator s. Because the Baufrin average only abcut ane meter in height, a
+special version of the Hgnd is manufactured for their use. The model piloted by
+Baufrin s cquipped with a canopy that is flush with the ship's outer hull, and the
+cockpit is modified to their physical characteristics, Hands for use by other races
+have a mcre distinctive canopy that protrudes slightly from the fighter's hull.
+Shannedam County Deployment:
+Confirmed Deployment
+Messana:2 to 5 Squadrons operating in support of ground troops
+Unconfirmed Deplosment
+Mashoona:1 to 2 Squadrons
+21
+
+--- PAGE 22 [OCR] ---
+KENDERSON
+Type: Medium Fighter
+Mass: 145
+Cost:2949.750
+Engines:
+Right Engine Rating
+900
+Left Engine Rating
+006
+Thrust:
+High Thrust Modification
+(w/3/5 Lasers Replaced)
+Streamlining:No
+AntiGrav:Yes
+Shields:
+Bow
+60
+Right
+40
+Left
+40
+Stem
+50
+Armor:
+Bow
+80
+Left
+50
+Right
+50
+Stern
+70
+Weapons:
+SSS MISSILE
+Range
+Type
+2-3
+4-6
+Location
+7-10
+11-15
+R/Wing
+5/4 Laser
+L/Wing
+5/4 Laser
+R/Wing
+3/5 Laser
+3/5 Laser
+LAwing
+MDCS
+Bow
+R/Wing
+Hard Point
+L/Wing
+Hard Point
+22
+
+--- PAGE 23 [OCR] ---
+Briefing:
+The Kenderson is named for the Commonwealth general who lost Saguntum lll to the 324 Ist TOG Strike Legion.
+When first deployed, in 6827. the Kenderson was issued to the 7777th Defense Squadron, operating out of Henders in
+Shannedam County. Within three months. TOG military intelligence was able to procure one of these fighters in pristine
+condition.
+One of the pilots assigned to the 7777th, Donald Recman, was a refugee from Wuj. though his family still lived in
+an Imperial liberated zone of the planet where the IS easily localed them.After EA agents on Henders informed Recman
+that his family was safely under the Lictor's protection on Wuj and that they wished him to rejoin them, Recman, joyful
+about the news of his family's safety,artanged to have his Keaderson 'crippled in his nextengagement with the TOG
+Navy. His Kenderson was then transferred to the TOG Pharera Class corvette. While the corvete's fighter squadron
+bravely fought a rear-guard action against the Commonwealth fighters, the corvette entered T-space. Recman was
+reunited with his family and the Imperial Military received an intelligence bonanza.Two months later,the whole Recm an
+Shannedam County Deployment:
+family died in a tragic fire in their home,Arson was suspected
+The Kenderson is a typical example of Commonwealth fighter technology.Its avionics and computercantrols are not
+Confirmed Deployment
+up to TOG standards and the workmanship is not as precise as that of TOG fighters. However,many of the manufacluring
+Henders:IFlighi
+techniques and electronic components were unusual enough to be of some minor interest to TOG military suppliers, It
+Unconfirmed Deployment
+is not true that the CwrP's new fire control systems or computers are ex act copies of the Kenderson's.
+Tubanos:2to3Squadrons
+23
+
+--- PAGE 24 [OCR] ---
+PEACEKEEPER
+Type: Medium Fighter
+Mass:140
+Cost:3.056.300
+Engines:
+Right Engine Rating
+1000
+Leff Engine Rating
+1000
+Thrust:
+Higeh Thrust Modfication
+(w/5/4 Lasers Replaced)
+Streamlining: No
+AntiGrav:Yes
+Shields:
+Bow
+60
+Right
+60
+Left
+Stem
+60
+Armor:
+Bow
+100
+TGMMKI
+Left
+08
+Right
+80
+Stem
+100
+Weapons:
+Range
+Type
+Location
+2-3
+11-15
+7-10
+4-6
+R/Wing
+7.5/3Laser
+LWing
+7.5/3Laser
+5/4 Laser
+R/Wing
+5/4 Laser
+LWing
+L/Wing
+Hard Point
+Hard Point
+R/Wing
+24
+
+--- PAGE 25 [OCR] ---
+Briefing:
+The follpwing brlefing, Like sll informa-
+tion in this pablication, is ciasaifled as
+SecRET,oerGenera1Lictororder345-o.567.b.
+Miause of this inforaticn is a court-rartlal
+offense and puntshable by ls standard yeara
+of hard labor or mandatory assigrment to a
+volunteer assault unit.
+In 6sio, Archikeleustes Danielle Quabela of the Imperial Navy was assigned to evaluate a new prototype fighter before
+its approval forlimitedcombatdeployment.Quabela,however,was secretly in league withagentsofthetraitorous Renegade
+Shannedam County Deployment:
+Legion. Violating the trust of both Caesar and the Senale. she fled with the prototype to rendezvous with a Renegade spy
+Confirmed Deployinent
+ship that was hovering in the system.Evading the righteous wrarh of the TOG escorting fighters, she and her ill-gotten booty
+672nd:2 Squadrons
+fled to Commonwealth space. Archikeleustes Danielle Quabela was sentenced in absetia to death, and under the legal
+Unconfirmed Deployment
+precedent of Vebero Puer, her immediate family was put to death.
+NewJanos:Ito 2 Squadrons
+Moreover.the Lictor was able to prove that a conspiracy existed betwcen the prototype's manufacturer, Quabela, and
+Caralis:2to 3Squadrons
+the Commonwealth. As a result of this expose, of the manufacturing facilities were conpletely razed and the TOG
+Procurement Board canceled all production contracis for the craft
+The so-called Pedcekeeper is a copy of that stolen prctotype Still in use with many traitorous Renegade Legion units.
+the Peacekeeper is a symbol of the deserers' inability to best the TOG technologically or morally.
+25
+
+--- PAGE 26 [OCR] ---
+RAMROD
+Type: Medium Fighter
+Mass: 112
+Cost: 2.460.400
+Engines:
+Center Engine Rating
+2000
+Thrust:
+Streamlining: Yes
+AntiGrav No
+Shields:
+50
+Right
+40
+Left
+40
+Stem
+50
+Armor:
+Bow
+50
+Left
+Right
+Siem
+50
+EPC 14
+tsuodeam
+Range
+Type
+Location
+46
+7-10
+11-15
+3/5 Laser
+Bow
+EPC14
+Bow
+Bow
+Hard Point
+26
+
+--- PAGE 27 [OCR] ---
+Briefing:
+The Commonwealth began construction ofthe Ramrod Class of medium fighters just as the Imperial TOG forces began their victonious drive
+on Shannedam County.This fighter went from the design slage to actual deployment in the remarkable record time of 36 weeks. This speed was
+achieved al a heavy cost, however. The quality of workmanship on the criginal batch af Rarurocs was poor, al best One example wts a major
+design defect in the cockpitatmospheric controls thal cost the lives of several dozen pilots. Within ten weeks of is initial deployment, the fighier
+had been recalled for majormodifications of several critical systems,adding to the cost and slowing production.Despite the repairs,the fighier's
+Shannedam CountyDeployment:
+reputatian as a "Yorkie"became established within the Renegade Legions. [EDITOR'S NOTE:"Yarkie"refers to an ancient 2Oth-centuryf
+Confirmed Deployment
+weaponssystem namcd"'theSergeantYork."
+672nd:2 Squadrons
+The Ranurod is being slowly phased out of service, and replaced by the more popular Cheetah. The fighter is ofien described as a"hotbox,"
+Unconfirmed Deployment
+because its tiny cockpit is wedged betwcen the craft's powerful single engine and its high-powered CAM-J EPC. The bow-mounted hard point
+Tubanos:2io.5.Squadrons
+provides limited missile fire-capability and normally carries an ECM pod, As a backup to the EPC, the Ranirod mounts a powerful but short-
+ranged laser.
+27
+
+--- PAGE 28 [OCR] ---
+STINGER
+Type: Medium Fighter
+Mass: 143
+Cost:2.973.400
+Engines:
+Right Engine Rating
+Lefi Engine Rating
+Thrust:
+High Thrust Modificalion
+(w/Lasers Replaced)
+Streamlining: Yes
+AntiGrav: No
+Shieldst
+Right
+Left
+50
+Stem
+60
+Armor:
+Bow
+90
+Lefi
+80
+Right
+80
+Stem
+90
+Weapons:
+STINGERFRONT VIEW
+Range
+Type
+Location
+2-3
+4-6
+710
+11-15
+7.5/2Laser
+R/Wing
+7.5/2 Laser
+LWing
+Lwing
+EPC14
+14
+EPC14
+RWing
+14
+Safeguard-2
+Hard Point
+R/Wing
+LWing
+Hard Point
+Hard Point
+Bow
+28
+
+--- PAGE 29 [OCR] ---
+Briefing:
+With over 65 percent of Shannedan County's strategic raw material reserves in the hands of Imperial forces, the Commonwealth has suffered a terrible blow to its ability to manufacture
+war materials. In response, remaining local arms manufacturers began the Sringer program as an attempt to produce a medium fighter using non-strategic materials such as plastics, ceramics, and
+nickel/iron steel. Gullel & Garsh, Inc., the prime contractor, was suecessful in achieving this objective. Eighry-five percent of the Sringer's airfrane is constructed of these common materials.
+while the electronic and computer components utilize silicon chips instead of bio-molecular processors whenever possible, The EPC barrel is plated with chromium rather than stress-aligned
+titanium, Only the laser systems seem to have escaped the engineers unconstrained mania for using substandard materials.
+These substitute materials have caused operational and logistical problems for Sringer units, The EPC barrels, for example, become pitted and bumt out after So firings, and so must be
+constantly replaced. The ship is also bulky in comparison to its tonnage, with some reports indicating that it is unable o fit into a standard 1o-ton fighter bay.Finally,technicians for theSringer
+must be retrained in obsolescent silicon chip technology.Though the cost ofthe substitute raw materialsfor the craft is lower,the manufacturing process is more complex, which makes theStinger
+as costly as a craft built from more conventional ma terials.
+The Shinger s very existence proves that the Imperial forces hare driven the Commonwealth economy in Shannedam County to its knces. Soon,all of Shannedam County and the Alaric Grand
+Dukedom will be liberated from the oppression that they sufter under the Renegade traitors and their Commonwealth masters.
+Shannedam County Deployment:
+Confirmed Deployment
+Moshelle:3Squadrons
+Rilus V: I Squadron in point defense role at factory
+Unconfirmed Deployment
+Rolunitru:2to 5Squadrons
+672nd:1Squadron
+29
+
+--- PAGE 30 [OCR] ---
+DEFENDER
+Type:Heavy Fighter
+661558N
+Cosl:3.575.400
+Engines:
+Right Engine Rating
+1200
+Lefi EngineRating
+1200
+Thrust:
+StreamliningYes
+AntiGrav: No
+Shields:
+70
+Righi
+60
+Left
+60
+Stem
+70
+Armor:
+80
+Lef
+70
+Right
+70
+MDC12
+Stem
+80
+Range
+Type
+4-6
+7-10
+Location
+2-3
+1115
+R/Wing
+5/2Laser
+LAWing
+5/2Laser
+12
+Bow
+12
+12
+12
+MDC12
+Bow
+12
+12
+12
+12
+MDC12
+Bow
+Hard Point
+30
+
+--- PAGE 31 [OCR] ---
+Briefing:
+First introduced in 6720,the Defender is one of the
+oldest heavy fighters still in active use by either TOG cr
+the Commonwealth. In anming the crafi.the Deferder 's
+designers had bypassed the then-new EPC and NPC classes
+of heavy weapons in favor of the older, but more reliable.
+mass driver cannons.
+Mounting the two largest mass driver cannons
+available.and backed up with two S/2 medium lasers.
+the Defender packs a considerable punch. That much
+firepower would normally result in less armor or shielding.
+but the Defender has considerable armor on all sides and its
+shielding remains some of the best ever mounted on a fighter.
+Shannedam County Deployment:
+This rugged design found its way onto many Commonwealth worlds.primarily
+Confirmed Deplovment
+in a planetary-defense role Whcn hostilities broke out berween TOG and the Common-
+Rilus V:1 Flight
+wealth in 6723, the Royal Navy had a large supply of Defenderson hand.Agreat number
+Mashoona:1Reenforced Flight
+have been lost over thc ycars,but the Commonwealith has decided io keep this ancient fighter
+345th CarrierWing:1Squadron
+in production.
+Unconfirmed Deployment
+Within the past six months, however, there has been a move lo discontinue production of the Defender. The Imperial
+OpeDiar:I Squadron in Defense of VLCA
+Navy 's missile tactics and the newly introduced Spicahan have exploited thc Defender's inherent wcakness., Because its
+Defiance:314th Heavy Reserve Squadron
+acceleration is too low to allow the craft to maneuvereffectively against the Spicalanm,the Defender's mass driver cannons
+(possiblydetached fromthe345th)
+cannot do the damage necessary to quickly disable its TOG opponent. The Spicularr, however, is easily able to overcome
+the Defender s armor with missile and heavy laser fire.It is open to speculation whether or not this fighter will finally be
+retired, but if the Commonwealth military wishes to delay the inevicable, they would be well advised to do so.
+31
+
+--- PAGE 32 [OCR] ---
+DEFIANT
+Typet Heavy Fighter
+Mass: 174
+Cos: 4.234.450
+Engines:
+Center Engine Rating
+900
+Right Engine Rating
+800
+Left Engine Rating
+800
+Thrust:
+High Thrust Modification
+(w/Lasers Remaved)
+Streamlining: Yes
+AntiGrav:No
+Shields:
+Bow
+Right
+Lef
+Stem
+60
+Armor:
+100
+EPC18
+Lefi
+70
+Right
+Stern
+06
+IsuodBaM
+Range
+Type
+7-10
+Location
+11-15
+RWing
+7.5/5Laser
+LWing
+7.5/5 Laser
+Bow
+Safeguard-3
+18
+EPC18
+Bow
+18
+Bow
+EPC18
+Bow
+Hard Point
+32
+
+--- PAGE 33 [OCR] ---
+Briefing:
+The Defiarr was the result of a call by the JCRFOB for a fighter to counter the deployment of the large numbers of TOG missile-
+amed fighters.Designed by Reliant Industries, the Dejiar cariesthe new Safeguard anti-missile system.The Safeguard is a navalized
+version of a ground vehicle-mounted anti-missile system. Besides having the new Safeguard system, the Defanr also carries two EPC
+18 heavyweapons and two7.5/5heavylasers.
+In its combat debut in 6828 against the TOG Imperial Navy.the Defiaf performed very well.Single missiles launched at the enemy
+Shannedam County Deployment:
+fighter resulted in the the majority of the TOG missiles being destroyed by the Safeguard system, Based on this initial, but fleeting.
+Confirmed Deployment
+success the Defianr was rushed uptofront line fighter squadrons.Initially.Commonwealth fighier losses due to missiles were very low.
+369thNaramFighterWing:1Flight
+However, by simply changing tactics the TOG Impenal Navy has redressed the balance.
+672nd:3Squadrons
+The Safeguard system, unlike the MDC-G, is incapahle of being used against targets other than missiles, and so the Defiant is
+Unconfirmed Deployment
+underarmed for its class. Additionally, the Safeguard targeting computer is incapable of effectively handling multiple incoming
+Kukulak:5to.6Squadrons
+missiles, and attempis to do so lead to the total shurting down of all offensive weapons, as the Safeguard pre-cmpts the targeting
+Defiance: 2 Squadrons
+computerfor its ownnceds.Gladias squadrons are now ordered tolaunch fourorfive missiles at one Defianr.Martiobarbalssquadrons
+Caralis: I Squadron
+are to engage Defiant targets at lo5 + kilometers with laser and MDC fire. Thesetactics insure the success of Imperial forces over the
+Defiant.
+33
+
+--- PAGE 34 [OCR] ---
+GAUL
+Type: Heavy Fighter
+Mass: 215
+C0st:3.724.500
+Engines:
+Right Engine Raling
+1250
+Lef Engine Rating
+1250
+Thrust:
+Streamlining: No
+AnliGrav: Yes
+Shields:
+Bow
+60
+Right
+40
+Left
+Sterm
+Armor:
+Left
+Right
+Stem
+80
+GAULWINGMECHANISM
+Weapons:
+Location
+Range
+4-6
+Type
+7-10
+2.3
+Turret#
+11-15
+3/6 Laser
+NPC16
+BHMSO
+R/Wing
+10
+10
+10
+10
+MDC10
+LWing
+10
+10
+MDC10
+Bow
+Hard Point
+34
+
+--- PAGE 35 [OCR] ---
+Briefing:
+The Gal heavy fighter is a favonite among the intercepior pilots of the traitorous Renegade Legions and the
+Commonwealth Navy. It is named after the berbaric tribe that fought against the original Roman Empire for years before
+being subdued, and its name is a calculated insuli hurled at Caesar.
+The folding/variable wing design of the Gaul pruvides it excellent atmospheric handling capabilities and minimizes
+its overall dimension for ease of transportation. TOG pilots often refer to it as "The Vulture" because of the traditional
+flapping cf these wings that the Renegade Legion pilots perforn afier a successful engagement. The variable wings are
+often used to reconfigure the ship's profile to cause it lo register on TOG long range scanning equipment as a Spate Gull.
+Shannedam County Deplovments:
+Many cxperienced TOG fighters have closed in to eng age what they thought was a Space Gull only to discover the more
+Confirmed Deployment
+heavily armed and armored Gaul waiting in ambush. Starting in 6832. all fighters will have their scanners repregramed
+Kukulak: 1Flight
+to foil this tactic.
+Lnconfirmed Deployment
+The Gaul is most commonly found among the carrier atack groups, operating as Combal Air Patrol or in a system
+369thNaram FighterWing:2to3Squadrons
+patrol capacily.
+35
+
+--- PAGE 36 [OCR] ---
+PERFORATOR
+Type: Heay Fighter
+Mass:148
+Cost: 3.547.050
+Engines:
+Righi Engine Rating
+1200
+Left Engine Raling
+1200
+Thrust:
+High Thrust Modification
+(w/5/4 Lasers Replaced)
+Streamliningt no
+AntiGrav: yes
+Shields:
+M08
+Right
+Left
+Stem
+60
+Armor:
+Bow
+90
+Left
+Right
+70
+S4LASERONPERFORATOR
+Stern
+80
+Weapons:
+Range
+4-6
+11-15
+2-3
+7-10
+Type
+Location
+R/Wing
+7.5/5 Laser
+L/Wing
+7.5/5Laser
+Bow
+5/4 Laser
+Bow
+5/4 Laser
+36
+
+--- PAGE 37 [OCR] ---
+Briefing:
+They had analyzednumerous fightercngagements over the past four years and had foundadisturbing trend, In6s2oit took approximately three
+minulesfor Commonwealth fighters to scoreappreciable internaldamageon the TOG fighters.By6s27,thistimelimit had risentofiveminutes.
+They supposed that the reason for this degradation was not that the Imperial Navy had upgraded the defensive systems of its fighters, or that
+the Imperial pilots were better, but rather that with the iniroduction of the Spicu/um overall maneuverability of TOG fighters had increased.
+Shannedam County Deployment:
+The JCRFOB was very disturbed by this trend. In order to ccunter it, the Board issued a Specification that called for a new fighter that could
+Confirmed Deployment
+damage the internal components of a TOG fighter with one, or at most two. passes.
+203lst Strike Legion:1 Squadron attached
+The new fighter's name is the Perforator. Its acceleration is very high for a heavy fighter and its defensive systems are good, but it appears
+Unconfirmed Deploymentuircl
+to be somewhatunderarmed.The Perforataris armed exclusively with lasers,two 7.S/5 heavy lasers and two 5/4 medium lasers.This weapons
+None
+mix insures that internal hits are achieved rapidly, but without another weapons system, it is unlikely that a single killing blow can be quickly t
+achieved.
+The JCRFOB has deployed several squadrons of Perforators, cne of which is operating in the Shannedam County area.These squadrons
+are to test the ship's effectiveness and to develop new tacties thal can maxinize the effectiveness of the ship's non-traditional weapons mix.
+Th is experiment is doomed to fail since the premise that led to the Perforarar's construction is false. The increase in engagement times is the
+result of Imperial Navy pilots being vastly superior to the Commonwealth or Renegade cannon fodder.
+37
+
+--- PAGE 38 [OCR] ---
+PUNISHER
+Typet Heavy Fighier
+Mass:186
+Cos:4.108.600
+Engines:
+Right Engine Rating
+1200
+Left Engine Rating
+1200
+Thrust:
+High Thrust Modification
+(w/Lasers Replaced)
+Sireamlining: Yes
+AntiGrav:No
+Shields:
+Bow
+Right
+Lef
+Stem
+Armor:
+Bow
+90
+Lef
+80
+Right
+80
+Stem
+06
+MMWULEPC18
+Weapons:
+Range
+Type
+Location
+2-3
+7-10
+4.6
+11-15
+7.5/6Laser
+R/Wing
+L/Wing
+10
+7.5/6Laser
+R/Wing
+18
+EPC18
+L/Wing
+EPC 18
+18
+Bow
+Hard Poin!
+Bow
+4/18
+2/3
+13
+39
+LEPC18
+38
+
+--- PAGE 39 [OCR] ---
+Brlefing:
+The Puwnisher. so named due to its supposed ability to deal out heavy damage. was designed especially to carry the LEPC The LEPC is
+a merger of S/l lighu laser and an EPC heavy weapons systen.The LEPC fires intermixed laser and EPC pulses out of a common barrel The
+laser pulse penetrates into the target's armor and then the EPC bolt enters the cavity just created by the laser, blowing out large segments of
+armor. While the design is fine in theory.often the timing between the laser and EPC pulses is off and the EPCbolt is stopped by the flickering
+Shannedam County Deployment:
+shields,resulting in a very inefficientweapons system.
+Confirmed Deploviment
+Secondary armamentconsist of two 7.5/6 heavy lasers alang withtsvo Krytac-designed EPC 18s.ThePuaisheralso carries averagearmor
+1i5Ist Interceptor Wing:1 Flight
+for its weight and mounts good shielding.especially to the fron. The Panisher's acceleration is a linle lower than most Commonwealth heavy
+203Ist Strike Legion: 2 Squadrons
+fighters, but not enough to seriously affect the combat perfomance of the crafi.
+Unconfirmed Deployment
+Afier the Puzisiher had becn deployed in combat For a few months, it was reported that the fighter would mysteriously break oft
+Tiven: Sguadron
+engagements for no apparent reason. Intelligence sources also reported that many Punisher squadrons had been grounded, An investigation
+Mala:1 to 2 Squadrons
+by the EA was staried todctenmine the reason for these cccurrences.Imperial agents discovered that the Krytac EPCshad a tendency to oerhear
+and fuse into useless slag during periods of susiained firing. All the Punishers had been grounded io be refitted with a more reliable EPC Is
+weapons sysiem. The agent's repon was not disseminated to Wing commanders in time to be of military use to them, but this incident
+underscores the superiority of the TOG military-industrial complex, a superiority that will overwhelm all opposition.
+39
+
+--- PAGE 40 [OCR] ---
+SLINGSHOT
+Type:HeavyFighter
+Mass:156
+Cost:3.382.300
+Engines:
+Right Engine Ratng
+1200
+Left Engine Rating
+1200
+Thrust:
+Streamlining:Yes
+AntiGrav: Na
+Shields:
+Bow
+70
+Right
+60
+Left
+60
+Stern
+Armor:
+Bow
+100
+Left
+60
+Right
+60
+DFM POD
+Stem
+100
+Range
+Type
+Location
+2.3
+7-10
+11-15
+7.5/6Laser
+R/Wing
+7.5/6 Laser
+LAing
+10
+Hard Point
+L/Wing
+LAWing
+Hard Point
+LAWing
+Hard Point
+Hard Point
+LAWing
+Hard Point
+R/Wing
+R/Wing
+Hard Point
+R/Wing
+Hard Point
+R/Wing
+Hard Point
+40
+
+--- PAGE 41 [OCR] ---
+Briefing:
+The first reported use of the Singshor was in 6827, by the 72Ist Interceplor Wing.The TOG Imperial Navy had deployed three new squadrons ofGladius fighters to their sector and the 72Ist was taking
+heavy losses due to missile fire. After losing three wingnen to TOG missiles, Flight Sergeant Jonatha Jenkins made an unauthorized field modification to herAvenger. With the help of her ground crew.
+she stripped out the Avenger's Mass Drivers and EPCs and jury-rig ged it to carry eight missiles, Excess power was shunted to the shields. She also replaced her S/4 lasers with a pair of 7.5/6s, stolen from
+a Peedsurs Corvette that was in dry dock. On her next mission, Flight Sergeant Jenkins was crediled with three Gladius kills.
+Rather than being disciplined for her unauthorized modificarions or her thefts,Flight Sergeant Jenkins was commended and theS/ingshar design forwarded to the Joint Commonwealth/Renegade Fighter
+Operations Board (JCRFOB).The JCRFOB evaluated the new modification and has placed it into general production.
+The Slingshor mounts eight hard points, one more than the Giadius. It also camies two 7.S/6 heavy lasers as secondary weapons. The Sfingshor is as well-armored as an Avenger and has an increased
+shield flicker rate. While the Singshor cannot quite match the acceleration of the Spiculim, it can exceed the acceleration of the Gladius.The Stingshor has a disadvantage, however. Once the missiles are
+expended, the Stingeshor can only defend itseif with its two heavy lasers, Like the Imperial Navy,the Commonwealth has deemed that this disadvantage is more than compensated for by the increased short
+term firepower. It is doubtful that the Common wealth Navy will be able to tactically deploy the Stingshor in an effective manner. Commonwealth missile doctrine is tactically unsound and in all likelihood
+Slinigshor squadrons will be poorly used by their Commonwealth and Renegade commanders.
+Shannedam County Deployment:
+Confirmed Deployment
+Henders:1Flight (attachedto the72lstInterceptorWing)
+Wuj:2 Squadrons
+Unconfirmed Deplosment
+Tubanos: Group
+NewJanos:Ito3Squadrons
+Mashoona:I Squadron
+
+--- PAGE 42 [OCR] ---
+WARSPITE
+Type:Heavy fighter
+Mass:153
+Cost:3.507.600
+Engines:
+1250
+Right Engine Rating
+Lefi Engine Rating
+1250
+Thrust:
+Streamlining: Yes
+Antiray:No
+Shields:
+Bow
+70
+Right
+50
+Left
+50
+Stern
+60
+Armor:
+Bow
+100
+Left
+90
+Right
+90
+Stem
+100
+Weapons:
+Location
+Range
+Type
+Turret#
+2-3
+4-6
+7-10
+1115
+Bow
+1.5/6Laser
+KESSRITH COCKPITMODULE
+EPC9
+R/Wing
+LWing
+EPC9
+7.5/5 Laser
+Hard Point
+Bow
+Hard Point
+Bow
+Hard Point
+42
+
+--- PAGE 43 [OCR] ---
+Briefing:
+Introduced in 68ol, the Warspite heavy fighter gained its notoriety not because of its combat ability, but due to its then-new engine linking system. The Warspite's designers came up with a vast
+improvement cver the standard linking systems of the day and the TOG military wanted to examine a functional copy. i.e. capture an intact Warspite Fighter.
+Numerous raids were led on several key installations by ground forces in an effort to capture a Warspire. While the raids were a success, they did not achieve their objective The secrets of the Warspite
+remained just that for nearly eight years, until the Lictor was able to bribe a Commonwealth pilot into surrendering his fighter intact. Now the linking system is standard on all fighters of both sides.
+There was another innovation introduced with the Warspire that has become standard in Commonwealth fighters.The Warspite's cockpit comes in module form so that the ship can be quickly
+reconfigured to allow t to be operated by various races. These modules take less than two hours to exchange and make the Warspite a popular fighter with multi-racial units. Imperial Navy doctrine is such
+that multi-racial units are not found below the Flight levcl, and so no such expensive modification needs to be made.
+Many veterans on both sides consider the Warspite s day passed. Many altack squadrons havereplaced their Warspires with Na'Crka fogaka orAvengerclass fighters. But at least one Renegade Legion
+unit, the 199th Fighter Wing, still utilizes the Warspire as their primary attack weapon. Combined with fast moving Cheerahs and Falcovis, their wing maintains a higher kill ratio than comparable units
+stationed in the same area,kill ratios almost approaching that of the average TOG fighter wing.
+Shannedam County Deplovment:
+Confirmed Deployment
+19gthStrikeLegion:5SquadronsAttachedtoFighterWing
+Unconfirmed Deploy ment
+Gustaviv'sRegrer:3to4Squadrons
+43
+
+--- PAGE 44 [OCR] ---
+SOLSTICE
+Type: Corvette
+Ma5s:2877
+Cost:24.111.950
+Engines:
+Center Engine Rating
+000t
+Right Engine Rating
+4500
+Left Engine Rating
+4500
+Thrust:
+Allocatable Power:
+Streamlining: No
+AntiGrav: Yes
+Crew:6
+Fighter Bay:6 175-tcn fighiers
+Passengers: 12 (6 pilots and 6 technicans)
+FTL Capable: Yes
+Cargo:50
+Turret Hex:Rear
+Shields:
+Bow
+Variable
+Right Front
+Variable
+Right Rear
+Variable
+Left Front
+Variable
+Left Rear
+Variable
+Variable
+Armor:
+110
+Bow
+AUTOLOADING HARD POINT
+Right Front
+90
+Right Rear
+100
+Left Front
+90
+Lefi Rear
+100
+Stem
+100
+Weapons:
+Power
+Location!
+Type
+Usage
+Turret#
+2-3
+4-6
+7-12
+MDC1O
+10
+10
+10
+10
+MDC1O
+10
+10
+10
+10
+10
+Automatic Hard Point
+Safeguard-3
+25
+bow
+44
+
+--- PAGE 45 [OCR] ---
+Briefing:
+The Soistice is a Corvetle Class ship assigned to provide FTL capabilities to Commonwealth
+and Renegade raiding squadrons. The So/srice carries up to six 175-ton fighters, and provides
+limited maintenance and replenishment facilities. These facilities allow the squadron to fly
+up to three full sorties before returning to a supply depot or ship.
+The Solstice is rommally deployed in the same manner as the Imperial Navy Pharetra.
+The Soistice enters the outer edges of the system. launches its fighters, and
+then recovers them and jumps out, after the fighters have completed their
+mission. Defensively, the Soistice has poorer protectton than the Pharetra,
+but it can carry heavier fighters and its offensive armameni
+is marginally better. Recently all of the Sofstice class ships
+have been retrofitted with the Safeguard anti-missile sysicm
+There has been one Commonwealth raid utilizing
+the Soisrce that did not follow this patem.
+Becausc of the level of Commonwealth
+propaganda about this incident the following
+authorized briefing is given.
+When Ancona fell to the Imperial Forces
+in 68 l, many Renegade terrorist and political
+agitators attempted to formulate an active underground
+movement against the newly installed civilian govcmment.
+Exercising extreme diligence, IS agents were able to root out 75
+of these so-called freedom fighters. These prisoners Were inter-
+rogated and held on an orbicing station for transshipment to re-
+education centers. These centers would provide the prisoners an opportunity to learn first-hand about TOG justice
+The prisoners never were able to get thatexperience.Two Sa/srice class corvetes and one assaultescort came jumping
+Shannedam County Deployment:
+out of T-Space only two standard diameters away fron the planet. The corvettes launched two squadrons of Averneers,while
+Confirmed Deployment
+the escon launched six assaulr boats. They then skimmed the atmosphcre to reduce their velocity. One Sofsrice lost control
+203Ist Strike Legion: 1 Squadron
+while bouncing cff the atmosphere. As the crew abandoned their docmed ship.the most unfortunate occurrence in the action
+369th Naram Fighter Wing:1 Squadron
+happened. The abandoned ship tumbled into the orbiting facilicy and ruptured the station's outer hull. The fighter squadron
+15Ist Interceptor Wing:2 Squadrons
+based on the station was destroyed in their bays. The assault boats full of Renegade pirates landed and murdered the stunned
+Uncofirmed Deployment
+station crew, The remaining Commonwealth fighters covered the transfer of the prisoners to the escort. By this time, the
+672nd1to 2Squadrons
+vengeful TOG Navy came sweeping down on the pitifully small naiding party.In thefierce action that followed, the Imperial
+fighters were able to drive off the invaders, and quickly recaplured the station before the pirates could destroy it. The
+Commonwealth lost three fighters and one Solsrice in the actian, while the TOG Imperial Fleetlost only twelve fighters,only
+six of which were shotdown direcily by Commonwealthforces.This is hardlythe victory that the Commomwealithhasclaimed
+that it was.
+45
+
+--- PAGE 46 [OCR] ---
+WEAPONSYSTEMS
+NEWWEAPONSYSTEMSUTILIIZEDINSHANNEDAMCOUNTY
+AUTOLOADINGHARDPOINT:
+AUTOLOADINGHARDPOINTWEAPONSTABLE
+Tonnage
+4-6
+7-10511-15
+2.3
+Power
+Cost
+NA
+NA
+NA
+NA
+NA
+100
+300.000
+Missiles are devastating weapons. Their major limitation is that only a small number can be externally mounted. The Autoloading Hard Point is designed to mitigate this problem, at least in larger
+patrol class craft and installations. Rather than having each miss le mcunted on an individual hard point, the same launcher is used for all of the missiles., The missiles are stored in an internal ammo bay
+and are indiv idually fed into the hard point through a connplex load ng mechanism. Once the launcher is clear, the next missile takes its place.
+Currently both the TOG military and the CommonwealthyRenegade forces aredeploying Autoloading Hard Point systems.
+Game Use:
+Each Auto Hard Point has a magazine that holds ten missiles of any type. The player should note the aumber and type of missiles camicd prior to the start of the game. The missiles can be fired in any
+sequence during the game.One missile may be launched from he Auto Hard Point pertum, up to a total of ten missiles.
+If the Auto Hard Point is destroyed, each remaining missile in the magazine explodes with a force equal to its normal damage. This damage is resolved as normal internal damage (note that no ship
+is likely to absorb 4o or more points of damage and still cperate).
+After all missiles have been expended, the magazinc may be reloaded at an installation. It takes 2o game turns to reload the magazine. A mag azine may not be partially reloaded.
+46
+
+--- PAGE 47 [OCR] ---
+SAFEGUARDANTI-MISSILESYSTEM:
+SAFEGUARDANTI-MISSILESYSTEMWEAPONSTABLE
+Range
+2-3
+Tonnage
+7.10
+4-6
+Power
+11-15
+Cost
+NA
+10
+Safeguard-1
+NA
+NA
+10
+NA
+NA
+100.000
+NA
+NA
+Safeguard-2
+NA
+NA
+NA
+16
+160.000
+NA
+24
+24
+NA
+NA
+NA
+NA
+Safeguard-3
+240.000
+NA
+NA
+NA
+30
+30
+NA
+Safeguard-4
+NA
+The Safeguard anti-missile system is the Commonwealth's answer lo the cver-increasing deployment of missiles in the TOG military. Based on  ground-point defense system, the Safeguard is an
+autonomous weapon system that continuously scans the immediate area around the ship or fighter.If a missile is delected, a mini-laser is automatically brought to bear and engages the incoming threat.
+Because the system is totally under computer guidance, it can engage mulriple targets with varying degrees of success.
+There are problems with the Safeguard system. Safeguard ties directly into the ship's own fire control computer and overrides the normal weapon targeting process. Thus, for every missile that the
+system engages, the pilot is unabke to activate a like number of oftensive systems. Secondly. the Safeguard system cannot operate in an active ECM environment, so more traditional ECM measures cannot
+be used in con unction with an active system, nor can multiple systems be used because of signal interference. Finally, the laser is so low-powered it can only puncture the thin skin of a missile, not the
+massivearmor ofa fighter. Thus, the system is purely defensive in nalure.
+However,the Safeguard is a flexible and effective system.Manufactured with module components, the Safeguard comes in four standard configurations of increasing effectiveness, cach with higher
+Only Renegade and Commonwealth forces have deployed the Safeguard anti-missile system.
+Game Use:
+SAFEGUARDTO-HITNUMBFR
+Number of Incoming Missiles Engaged
+Type
+Safeguard-1
+Safeguard -2
+Safeguard-3
+Safeguard-4
+Afier all missiles have moved, but before their attacks are resolved, a ship with a Safeguard system may engage any missiles atacking it. The above chart gives the To-Hit number for a successful
+attack against each missile based on the type of Safeguard systen it has: The player may always choose to eng age fewer than the maximum number of missiles attacking him He may even decide not to
+use the system at all. Each targeted missile is rolled for separately. If the To-Hit number or less is rolled, the missile is destroyed. S urviving missiles may make a normal attack. (This is the only time that
+damage is not taken simultancously)
+For each missile engaged in a turm. the player loses the ahility to fire one weapon system during the combat segment of the turn. Thus. if ihe Safeguard sysiem engaged cwo targets, the pilot could only
+fire three weapons that tum not five.
+No ECM missiles or ECM pods may be used by the ship during the tum that the Safeguard system was used.
+The Safeguard system cannot be used to attack any other targels, Only one Safeguard System may be carried per ship. Installations may have one system per hex, but it defends only that hex.s on!
+47
+
+--- PAGE 48 [OCR] ---
+THORIUMPLASMAPROIECTOR
+THORIUMPLASMAPROIECTORWEAPONSTABLE
+Ran ge
+Power
+406
+7010
+2-3
+Tonnage
+Cost
+TPP-9
+120.000
+TPP-16
+219.000
+TPP-20
+20
+16
+23
+338.000
+(DamageTemplateisa reversed NPtemplate)
+Recent ex periments in EPC technologies have resulied in the development of the Thorium Plasma Proiector tor TPPyThenew weapon superheats thorium to a plasma and then accelerates the plasma
+to high speeds before firing it al a target. Like an EPC bolt. the plasma boils off armor in large sections. Unlike an EPC the Thorium plasma penetrates the amor before dispersing.causing conical cavities
+inside of the anmor plating. The plasma disperses and cools over relatively short distances, so the TPP is exclusively a short range weapan.
+Both the Cominonwealth/Renegadeforces and theTOG military deploythe TPPsystem.
+LASER/EPCCOMBINATION
+LASEREPCWEAPONSTABLE
+Range
+2-3
+4-6
+7-10
+11-15
+Power
+Tonnage
+Cost
+LEPC-9
+479
+3/5
+1/0
+40
+120.000
+LEPC-14
+23
++1/
+55
+20
+219.000
+LEPC-18
+2/3
+4/18
+379
+66
+24
+338.000
+(Damage Templale:First number is laser damage,second number is EPC damage.which is resolved only if the laser hin)
+Most weapons do not posses sufficient power to penetrate armor with one shot.Multiple weapon hits tear away patches of armor and finally expose the delicate inner structure of the spacecraft to attack.
+If a pilot is very lucky,allof his follow-up shots will hit in the same area and penetration is quickly achieved, Unlucky pilots have their shots scatter all over the surface of the larget.
+A Laser/EPC Combo aitempts to combine the high penetrating abilities of the laser with the lateral damage profiles of the EPC.The mechanism is quite simple in concept, The laser bolt is fired first
+and immediately behind it an EPC beam is projected.The laser drives a passage through the armor,which the EPC beam enters. The EPC then sirikes the bottom of the column and undercuts all of the armor
+above it In this manner.large chunks of a ship's amor are delached and floatoff into space.
+There are problems with the Laser/EPC, The first is thal in the face of active shields the EPC bolt might be blocked even though the laser gets through. Secondly, the targeting and synchronization
+mechanisms are complex and require a great deal of power.and so the system weighs more and consumes more powerthan the two systems separately.Finally, because of engineering constraints, designers
+have only been able tomeld the three standard EPCs with a S/l lascra
+Only Commonwealth/Renegadeforces have deployed theLaser/EPCweapons system.
+Game Use:
+To use a LEPC, the player must make two To-Hit Rolls for the weapon. If the first roll is equal to or greater than the modified To-Hit number, the laser hits and does damage normally. The second
+To-Hit roll determines whether the EPC bolt successfully followed up the laser. If the roll is successful, the EPC will automatically hit the same column of the armor diagram as the laser did, If the roll
+is unsuccessful, the EPC portion of the weapon missed. If the laser shot missed, the EPC shot automatically misses.
+For construction and weapons firing purposes, the LEPC is considered io be one weapons system.
+48
+
+--- PAGE 49 [OCR] ---
+ATTENTION IMPERIAL PILOTS!
+The Kata Cator mounts two 7.5/2 lasers and two Thorium Plasma
+Projectors (TPP-16) as well as one missile catrying hard point.
+This highly maneuverable medium fighter can do enormous
+damage at close range. There is a high-thrust variant of
+this fighter that does not ount the two lasers, but can
+maneuver closer to engage its powerful TPP-16s.
+It is recommended that the Kata Cator
+beengaged at maximum range
+using NPCs and missiles.
+In moeatenois ohinuoheecons orocsar.theconmonwealh
+Rseussnoodegans
+skild oc mito Ineliedinn teok are Teuan Oar lurd
+Giovement ntgdce brilies ion lgulese ne
+Cogoweuh ighiersa h corecieand s mew
+95119
+PEGASUS
+80
+3405705302
+HENFUADECTNRPNEAUCOONUNUHICPPIORA HNOE
+IS8N155560-0611FASA800

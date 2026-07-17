@@ -49,7 +49,7 @@ def run_qualitative():
     
     reviews = "\n".join(results["documents"][0])
     prompt = f"Analyze the following Airbnb reviews for Newtown and summarize the primary positive themes and any negative complaints.\n\nReviews:\n{reviews}\n\nSummary Analysis:"
-    res = ollama.generate(model="qwen2.5:7b", prompt=prompt)
+    res = ollama.generate(model="qwen2.5:14b", prompt=prompt)
     print(res["response"].strip())
 
 def run_decision_making():
@@ -79,7 +79,7 @@ def run_decision_making():
         context += f"- Neighborhood: {md['neighborhood']} (Price: ${md['price']}, Rating: {md['rating']}). Review: {results['documents'][0][i]}\n"
         
     prompt = f"You are an investment travel advisor. Based ONLY on the following affordable listings (under $150), which specific neighborhood would you recommend prioritizing for a romantic getaway, and why?\n\nListings:\n{context}\n\nExecutive Recommendation:"
-    res = ollama.generate(model="qwen2.5:7b", prompt=prompt)
+    res = ollama.generate(model="qwen2.5:14b", prompt=prompt)
     print(res["response"].strip())
 
 if __name__ == "__main__":

@@ -1209,20 +1209,69 @@ def parse_datasheet(lines):
     return " ".join(lines)
 
 
+
+def normalise_ocr_spaced_text(text):
+    """
+    Fix OCR-spaced letters in scanned rulebook PDFs.
+
+    Scanned PDFs (pdfcoffee RL books) separate every letter with a space.
+    Multi-word headers use double-spaces as word boundaries:
+        'S U P P R E S S I O N'        -> 'SUPPRESSION'
+        'H U L L  D O W N'             -> 'HULL DOWN'
+        'P I L O T S  A N D  C R E W'  -> 'PILOTS AND CREW'
+        'I N T E R C E P T O R'        -> 'INTERCEPTOR'
+
+    Algorithm per line:
+      1. Split on 2+ consecutive spaces - each part is a potential word group.
+      2. Within each part, check if it is entirely single uppercase letters
+         separated by single spaces (regex: ^([A-Z] )*[A-Z]$).
+      3. If so, collapse by removing the spaces.
+      4. If ALL parts in the line were collapsible, rejoin with ' '.
+         Otherwise leave the line untouched (avoids mangling normal prose).
+    """
+    import re as _re
+    spaced_group_re = _re.compile(r'^(?:[A-Z] )*[A-Z]$')
+
+    def try_collapse(part):
+        stripped = part.strip()
+        if spaced_group_re.match(stripped):
+            return stripped.replace(' ', '')
+        return None  # not collapsible
+
+    result_lines = []
+    for line in text.split('\n'):
+        # Split on 2-or-more spaces to find potential word groups
+        parts = _re.split(r'  +', line)
+        collapsed = [try_collapse(p) for p in parts]
+        if all(c is not None for c in collapsed):
+            # Every part was a spaced-letter group - join into normalised words
+            result_lines.append(' '.join(c for c in collapsed if c))
+        else:
+            result_lines.append(line)
+
+    return '\n'.join(result_lines)
+
+
 def chunk_keyword_header(text, source_file, doc_type, priority, profile, patterns):
     """
     Chunker for games without numbered rules (like Warhammer 40k).
     Uses visual formatting heuristics (ALL CAPS headers, title casing) to chunk.
     """
     chunks = []
+    # --- OCR normalisation (RL scans have spaced letters in headers) ---
+    text = normalise_ocr_spaced_text(text)
+
     lines = text.split("\n")
 
     current_header = None
     current_section = doc_type.replace("_", " ").title()
     accumulated_lines = []
     current_page = 1
-    
+
     edition = profile.get("edition")
+
+    # Chunk size: read from profile (RL uses 4000, others default to 2500)
+    max_chunk_chars = profile.get("chunk_size", 2500)
 
     # Loose header pattern: All caps or Title Case, 4-60 chars, no periods at the end.
     header_pattern = re.compile(r"^([A-Z][A-Za-z0-9\s&\-]{3,60})$")
@@ -1261,8 +1310,8 @@ def chunk_keyword_header(text, source_file, doc_type, priority, profile, pattern
         if stripped:
             accumulated_lines.append(stripped)
 
-        # Force split on large chunks
-        if len(" ".join(accumulated_lines)) > 2500:
+        # Force split on large chunks (uses profile chunk_size; default 2500)
+        if len(" ".join(accumulated_lines)) > max_chunk_chars:
             split_pt = _find_split_point(accumulated_lines)
             if split_pt > 0:
                 chunk = _build_chunk_generic(
@@ -1292,6 +1341,10 @@ def route_chunk_generic(text, source_file, doc_info, profile, patterns):
     """
     doc_type = doc_info["doc_type"]
     priority = doc_info["priority"]
+
+    # For keyword_header games (like RL), normalise OCR-spaced text on ALL doc types
+    if profile.get("rule_schema") == "keyword_header":
+        text = normalise_ocr_spaced_text(text)
 
     rule_chunk_types = {
         "core_rules", "core_rules_v1", "errata", "scenario_errata",
