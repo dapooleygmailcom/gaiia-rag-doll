@@ -1,0 +1,66 @@
+{
+  "entity_type": "vehicle",
+  "attributes": [
+    "Type",
+    "Maximum Thrust"
+  ],
+  "grids": [
+    "Front Armor",
+    "Left Armor",
+    "Right Armor",
+    "Stern Armor",
+    "Turret Armor",
+    "Bottom Armor",
+    "Internal Components"
+  ],
+  "collections": [
+    "Weapons",
+    "Missiles"
+  ],
+  "definitions": {
+    "Weapons": {
+      "type": "array",
+      "items": {
+        "properties": {
+          "Name": {"type": "string"},
+          "Location": {"type": "string"},
+          "Damage": {"type": "string"},
+          "Range": {"type": "string"}
+        }
+      }
+    },
+    "Missiles": {
+      "type": "array",
+      "items": {
+        "properties": {
+          "Type": {"type": "string"},
+          "Count": {"type": "integer"}
+        }
+      }
+    },
+    "ArmorGrid": {
+      "type": "object",
+      "properties": {
+        "SF": {"type": "integer"},
+        "Width": {"type": "integer"},
+        "Depth": {"type": "integer"}
+      }
+    },
+    "InternalGrid": {
+      "type": "object",
+      "properties": {
+        "Width": {"type": "integer"},
+        "Columns": {
+          "type": "array",
+          "description": "An array of exactly 'Width' columns, where each column is an array of string component names going from top to bottom. E.g., Columns[0] is the leftmost column's internal boxes.",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
