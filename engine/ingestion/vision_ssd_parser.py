@@ -29,6 +29,8 @@ I am also providing you with the expected JSON Ontology for this game:
 Please extract all data from this PDF and populate a JSON object that strictly adheres to this ontology.
 For grids (like Armor), try to infer the SF (Size Factor) and the dimensions (Width, Depth) by counting the boxes.
 For weapons, extract the tables completely.
+CRITICAL WARNING: Pay extreme attention to weapon calibers. Do not confuse '150mm' with '50mm'. Look closely at the scanned text.
+CRITICAL WARNING: Pay extreme attention to the Range column. Do not hallucinate ranges. A Gauss cannon often has Range 15. Make sure you extract the exact Range printed on the sheet.
 
 Output ONLY the raw JSON object."""
 

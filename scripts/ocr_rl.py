@@ -29,6 +29,7 @@ OCR_TARGETS = [
     "pdfcoffee.com_renegade-legion-legionnairepdf-pdf-free.pdf",
     "pdfcoffee.com_renegade-legion-prefect-pdf-free.pdf",
     "pdfcoffee.com_renegade-legion-tog-fighter-briefingpdf-pdf-free.pdf",
+    "pdfcoffee.com_renegade-legion-centurion-rulebook-pdf-free.pdf",
 ]
 
 # Pause between pages (seconds) — keeps CPU load low

@@ -1,0 +1,45 @@
+# Renegade Legion Core Tables Supplement
+
+This document contains cleanly formatted core tables from the Renegade Legion: Centurion rulebook. It is injected into the semantic RAG index to ensure perfect retrieval of matrices and stats that standard OCR struggles with.
+
+## Range-to-Hit Table
+These base to-hit numbers assume a Gunnery Skill of 4 for all vehicle gunners. 
+- Range 1: Base To-Hit Number 12
+- Range 2-3: Base To-Hit Number 11
+- Range 4-6: Base To-Hit Number 10
+- Range 7-10: Base To-Hit Number 9
+- Range 11-15: Base To-Hit Number 8
+- Range 16-20: Base To-Hit Number 7
+- Range Off-board: Base To-Hit Number 6
+
+## Terrain Combat Modifiers Table
+Terrain affects the probability of a successful shot because it makes a hit more difficult. The terrain modifier for the target's hex lowers the base to-hit number by the amount listed below.
+- Clear: No modifier
+- Road: No modifier (Negates Terrain Effects for Movement)
+- Light Woods: -1 To-Hit Modifier
+- Heavy Woods: -2 To-Hit Modifier (Provides cover)
+- Hull Down: -2 To-Hit Modifier (A crater conceals a large portion of the lower hull and provides a large defensive advantage)
+
+## Damage Templates
+The templates are die-cut block shapes. When applying a template, the narrowest point is always in the middle with equal wider columns on each side.
+The numbers below are comma-delimited rows, representing the width in columns. The first number represents the top row (the row that hits the armor first).
+- MDC 12 = 5, 3, 3, 1
+- MDC 10 = 5, 3, 1, 1
+- MDC 8 = 5, 3
+- TVLG = 1, 1, 1, 5, 5
+- SMLM = 9, 5, 3, 1
+- APDS 25mm = 1, 3, 1
+- APDS 50mm = 1, 3, 3
+- APDS 100mm = 1, 3, 3, 5
+- APDS 150mm = 1, 3, 3, 5, 3
+- APDS 200mm = 1, 3, 5, 7, 5, 3
+- Hammerhead 25mm = 1, 1, 3
+- Hammerhead 50mm = 1, 1, 1, 3
+- Hammerhead 100mm = 1, 1, 1, 1, 5
+- HEAP 25mm = 1, 1, 1, 1
+- HEAP 50mm = 3, 1, 1, 1
+- HEAP 100mm = 3, 3, 1, 1, 1
+- HEAP 150mm = 5, 3, 3, 1, 1, 1, 1
+- HEAP 200mm = 5, 5, 3, 3, 1, 1, 1, 1
+
+Lasers do not have a varying width block template. A laser inflicts its entire damage straight down a single column. For example, a 15 Damage Laser is 1 column wide and 15 rows deep.

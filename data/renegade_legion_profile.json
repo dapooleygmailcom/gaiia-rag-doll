@@ -10,18 +10,24 @@
   "cross_ref_pattern": "(?:see|See|SEE)\\s+(?:page\\s+\\d+|[A-Z][a-z]+(?:\\s+[A-Z][a-z]+)*)",
   "scenario_format": "numeric",
   "scenario_pattern": "(?:^|\\n)\\s*(?:Scenario\\s+|ASL\\s+)?(\\d+)[.:\\s]+",
-  "chunk_size": 4000,
-  "chunk_overlap": 200,
   "schema_detection_scores": {
     "chapter_decimal": 0,
-    "numeric_decimal": 3,
+    "numeric_decimal": 9,
     "outline_parenthetical": 0,
-    "keyword_header": 29
+    "keyword_header": 801
   },
   "documents": {
-    "2nd-ACR.pdf": {
+    "core_tables_supplement.txt": {
       "doc_type": "supplement",
-      "priority": 5,
+      "priority": 1,
+      "description": "Cleanly formatted core tables (Range-to-Hit, Terrain, Damage) to override OCR garble",
+      "size_mb": 0.01,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "2nd-ACR.pdf": {
+      "doc_type": "unknown",
+      "priority": 9,
       "description": "Unknown document",
       "size_mb": 2.17,
       "total_pages": 47,
@@ -30,7 +36,7 @@
     "Interceptor_Overlays.pdf": {
       "doc_type": "scenarios",
       "priority": 8,
-      "description": "Scenario-specific rules or cards",
+      "description": "Scenario card or pack related document",
       "size_mb": 8.58,
       "total_pages": 10,
       "max_pages": null
@@ -38,54 +44,54 @@
     "Interceptor_Player_Aid_1.pdf": {
       "doc_type": "supplement",
       "priority": 8,
-      "description": "Rules module for Interceptor game mechanics",
+      "description": "Player aid document containing tables and charts for the Renegade Legion game",
       "size_mb": 0.36,
       "total_pages": 1,
       "max_pages": null
     },
     "Interceptor_Player_Aid_2.pdf": {
-      "doc_type": "supplement",
-      "priority": 8,
-      "description": "Interceptor Player Aid for Renegade Legion game",
+      "doc_type": "variant",
+      "priority": 7,
+      "description": "Supplementary rules module for Renegade Legion wargame",
       "size_mb": 0.1,
       "total_pages": 1,
       "max_pages": null
     },
     "Interceptor_and_Leviathan_Skies.pdf": {
-      "doc_type": "supplement",
-      "priority": 5,
+      "doc_type": "unknown",
+      "priority": 9,
       "description": "Unknown document",
       "size_mb": 7.41,
       "total_pages": 2,
       "max_pages": null
     },
     "Leviathan_Template_Update.pdf": {
-      "doc_type": "errata",
-      "priority": 2,
-      "description": "Official errata: supersedes base Leviathan rules for damage template application",
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Rules update and alteration for Renegade Legion: Leviathan",
       "size_mb": 0.5,
       "total_pages": 5,
       "max_pages": null
     },
     "Orbital_Allocation_Charts_and_1_inch_Planetary_Counters.pdf": {
       "doc_type": "supplement",
-      "priority": 2,
-      "description": "Supplementary rules module for orbital allocation and planetary counters",
+      "priority": 8,
+      "description": "Supplementary rules module for orbital allocation charts and planetary counters",
       "size_mb": 12.23,
       "total_pages": 4,
       "max_pages": null
     },
     "RL-Int_Sheet.pdf": {
-      "doc_type": "supplement",
-      "priority": 6,
+      "doc_type": "unknown",
+      "priority": 9,
       "description": "Unknown document",
       "size_mb": 0.07,
       "total_pages": 1,
       "max_pages": null
     },
     "TOG_Grav_Vehicles.pdf": {
-      "doc_type": "supplement",
-      "priority": 5,
+      "doc_type": "unknown",
+      "priority": 9,
       "description": "Unknown document",
       "size_mb": 5.62,
       "total_pages": 4,
@@ -94,14 +100,14 @@
     "interceptor-2e-nc.pdf": {
       "doc_type": "core_rules",
       "priority": 1,
-      "description": "Main rulebook for the INTERCEPTOR game",
+      "description": "The main/primary rulebook for the INTERCEPTOR game",
       "size_mb": 3.8,
       "total_pages": 59,
       "max_pages": null
     },
     "pdfcoffee.com_128283435-renegade-legion-renegade-fighter-briefing-pdf-free.pdf": {
-      "doc_type": "supplement",
-      "priority": 5,
+      "doc_type": "unknown",
+      "priority": 9,
       "description": "Unknown document",
       "size_mb": 5.34,
       "total_pages": 49,
@@ -110,54 +116,644 @@
     "pdfcoffee.com_renegade-legion-centurion-rulebook-pdf-free.pdf": {
       "doc_type": "core_rules",
       "priority": 1,
-      "description": "Main rulebook for the Renegade Legion Centurion wargame",
+      "description": "Main rulebook for Renegade Legion Centurion",
       "size_mb": 1.98,
       "total_pages": 47,
       "max_pages": null
     },
     "pdfcoffee.com_renegade-legion-distant-firepdf-pdf-free.pdf": {
-      "doc_type": "core_rules",
-      "priority": 1,
+      "doc_type": "unknown",
+      "priority": 9,
       "description": "Unknown document",
       "size_mb": 13.49,
       "total_pages": 73,
       "max_pages": null
     },
     "pdfcoffee.com_renegade-legion-legionnairepdf-pdf-free.pdf": {
-      "doc_type": "core_rules",
-      "priority": 1,
+      "doc_type": "unknown",
+      "priority": 9,
       "description": "Unknown document",
       "size_mb": 19.85,
       "total_pages": 182,
       "max_pages": null
     },
     "pdfcoffee.com_renegade-legion-prefect-pdf-free.pdf": {
-      "doc_type": "core_rules",
-      "priority": 1,
+      "doc_type": "unknown",
+      "priority": 9,
       "description": "Unknown document",
       "size_mb": 3.63,
       "total_pages": 63,
       "max_pages": null
     },
     "pdfcoffee.com_renegade-legion-tog-fighter-briefingpdf-pdf-free.pdf": {
-      "doc_type": "supplement",
-      "priority": 5,
+      "doc_type": "unknown",
+      "priority": 9,
       "description": "Unknown document",
       "size_mb": 5.96,
       "total_pages": 49,
+      "max_pages": null
+    },
+    "rl_activator(pilus)_medium_ground_apc.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Rules for Renegade Legion APCs",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_agitator_medium_ground_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Detailed vehicle stat card for Renegade Legion",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_bak_h_matha_heavy_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 5,
+      "description": "Rules module for a specific Renegade Legion unit",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_bata_revo(hammerhead)_light_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Rules for a specific vehicle type in the Renegade Legion wargame",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_bata_revo(wolverine)_light_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Light Grav Tank specific rules and stats",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_bit_nak_val(catapult)_medium_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Rulebook for the Renegade Legion's medium-grav tank",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_chktal_nor(graceful_death)_light_grav_tank.pdf": {
+      "doc_type": "scenarios",
+      "priority": 7,
+      "description": "Scenario-specific rules for Renegade Legion light grav tank",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_commando_medium_ground_apc.pdf": {
+      "doc_type": "supplement",
+      "priority": 2,
+      "description": "Rules and stats for a specific vehicle type",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_constructor_grav_engineering_vehicle.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Renegade Legion: Grav Engineering Vehicle rules module",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_crusader_heavy_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 5,
+      "description": "Detailed rules and characteristics for the Crusader Heavy Grav Tank in Renegade Legion",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_cyclone_light_ground_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 7,
+      "description": "Detailed stats for a specific vehicle in Renegade Legion game",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_deliverer_heavy_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Detailed statistics and armor layout for the Renegade Legion's Deliverer Heavy Grav Tank",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_deliverer_mk1_heavy_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 3,
+      "description": "Detailed specifications for a specific vehicle type in the Renegade Legion game",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_dominator_heavy_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Dominator Heavy Grav Tank stat sheet or rules module",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_eliminator(cincinnatus)_heavy_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 5,
+      "description": "Detailed stat card for Renegade Legion heavy grav tank",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_eradicator_grav_antiair_vehicle.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Detailed rules for the Eradicator grav antiair vehicle",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_fauchard_medium_ground_apc.pdf": {
+      "doc_type": "supplement",
+      "priority": 7,
+      "description": "Medium APC rules for Renegade Legion wargame",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_forger_grav_engineering_vehicle.pdf": {
+      "doc_type": "supplement",
+      "priority": 5,
+      "description": "Rules for a specific vehicle in the Renegade Legion game",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_halberd_heavy_ground_apc.pdf": {
+      "doc_type": "supplement",
+      "priority": 7,
+      "description": "Rules for the Halberd Heavy Ground APC in Renegade Legion",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_harasser_medium_ground_apc.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Rules for the Harasser Medium Ground APC in Renegade Legion",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_jaguar_medium_ground_apc.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Vehicle stats and rules for the Renegade Legion Jaguar medium ground APC",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_liberator_medium_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 5,
+      "description": "Medium grav tank rules for Renegade Legion",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_liberator_mk2c_medium_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Rules for the Renegade Legion Liberator Mk2c medium grav tank",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_nah_tikal(viper)_light_grav_apc.pdf": {
+      "doc_type": "supplement",
+      "priority": 1,
+      "description": "Light grav APC rules for Renegade Legion wargame",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_nah_tikal_mk1a(rattlesnake)_light_grav_apc.pdf": {
+      "doc_type": "supplement",
+      "priority": 7,
+      "description": "RL Nah Tikal MK1A(Rattlesnake) Light Grav APC stats and rules",
+      "size_mb": 0.11,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_pedden_grav_artillery_piece.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Grav artillery piece rules supplement for Renegade Legion",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_procurator_heavy_ground_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Detailed stat sheet for a heavy ground tank in the Renegade Legion",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_ranger_light_ground_apc.pdf": {
+      "doc_type": "supplement",
+      "priority": 5,
+      "description": "Vehicle stats and equipment for the Renegade Legion",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_scamp_light_ground_tank.pdf": {
+      "doc_type": "scenarios",
+      "priority": 8,
+      "description": "Scenario-specific rules or data for Renegade Legion",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_scorpion_medium_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Rules module for specific vehicle",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_seeker_light_grav_vehicle.pdf": {
+      "doc_type": "supplement",
+      "priority": 3,
+      "description": "Rules for Renegade Legion seeker light grav vehicle",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_skymaster_heavy_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Detailed stats for the Renegade Legion Skymaster Heavy Grav Tank",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_spartius_medium_grav_apc.pdf": {
+      "doc_type": "supplement",
+      "priority": 7,
+      "description": "Medium Grav APC rules for Renegade Legion wargame",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_spartius_mk1a_medium_grav_apc.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Armour and protection values for Renegade Legion vehicle",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_sterling_heavy_ground_tank.pdf": {
+      "doc_type": "scenarios",
+      "priority": 7,
+      "description": "Sterling Heavy Ground Tank stat card for Renegade Legion scenario",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_trojan_horse_medium_grav_apc.pdf": {
+      "doc_type": "supplement",
+      "priority": 5,
+      "description": "Rules for a specific vehicle type in Renegade Legion",
+      "size_mb": 0.11,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_vindicator_light_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Detailed stats and characteristics for the Vindicator Light Grav Tank",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "rl_whirlwind_light_ground_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 7,
+      "description": "Detailed rules for Whirlwind light ground tank unit",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_aeneas_light_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Detailed specifications for the Aeneas Light Grav Tank vehicle",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_aeneas_mk7_light_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 2,
+      "description": "Vehicle specification data for Renegade Legion game",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_alcibiades_light_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Detailed specifications for the Alcibiades light grav tank unit",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_alcys_medium_ground_apc.pdf": {
+      "doc_type": "supplement",
+      "priority": 7,
+      "description": "Rules for the Alcys medium ground APC in Renegade Legion",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_augustus_heavy_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Vehicle stat sheet for a specific model",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_cestus_heavy_ground_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 5,
+      "description": "Detailed rules module for specific vehicle type",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_clodius_light_ground_apc.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Detailed vehicle stats and specifications for the Clodius Light APC",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_crassus_heavy_ground_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 7,
+      "description": "Vehicle rules document",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_ferox_rex_heavy_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 5,
+      "description": "Renegade Legion vehicle stat sheet for a specific heavy grav tank model",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_hasta_light_ground_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Rules module for Renegade Legion light ground tank",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_hercules_grav_engineering_vehicle.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Rules module for Renegade Legion, specifically covering Grav Engineering Vehicle",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_horatius_medium_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Rules module for the Renegade Legion's Horatius medium grav tank",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_horatius_mk3_medium_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Detailed stats for Renegade Legion vehicle",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_hydarnis_medium_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Medium grav tank specifications and stats",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_hypapsis_medium_grav_apc.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Tog Hypapsis Medium Grav APC specifications and stats",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_jupiter_light_ground_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Rules for the Jupiter Light Ground Tank in Renegade Legion",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_kershaw_medium_ground_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Vehicle specifications document for Renegade Legion medium ground tank",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_labienus_medium_grav_apc.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Detailed rules module for medium grav APCs in Renegade Legion",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_lepidus_medium_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Detailed statistics and data for a specific vehicle type",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_lupis_light_grav_apc.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Detailed information on the Tog Lupis Light Grav APC",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_lupis_mk12_light_grav_apc.pdf": {
+      "doc_type": "supplement",
+      "priority": 5,
+      "description": "Detailed breakdown of vehicle specifications",
+      "size_mb": 0.11,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_nisus_light_grav_vehicle.pdf": {
+      "doc_type": "supplement",
+      "priority": 3,
+      "description": "Detailed vehicle specifications and upgrades",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_octavian_heavy_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 5,
+      "description": "Detailed vehicle stats and characteristics for the Renegade Legion game",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_pallas_medium_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Detailed specification for a specific vehicle model",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_pompey_grav_artillery_vehicle.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Rules module for Renegade Legion grav artillery vehicle",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_reginus_heavy_ground_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 7,
+      "description": "Detailed stat sheet for a specific Renegade Legion heavy ground tank",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_remus_grav_engineering_vehicle.pdf": {
+      "doc_type": "supplement",
+      "priority": 5,
+      "description": "Rules module for Grav Engineering Vehicle in Renegade Legion",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_romulus_medium_grav_apc.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Vehicle stats and rules supplement for Renegade Legion",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_romulus_mk5_medium_grav_apc.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Rules module for Tog Romulus Mk5 medium grav APC",
+      "size_mb": 0.11,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_scipio_grav_antiair_vehicle.pdf": {
+      "doc_type": "supplement",
+      "priority": 7,
+      "description": "Rules module for Renegade Legion anti-air vehicle",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_stades_grav_scout_vehicle.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Rules module for specific vehicle",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_stratos_air_defense_vehicle.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Rulebook for Renegade Legion air defense vehicle",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_trajan_heavy_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 5,
+      "description": "Renegade Legion Tog Trajan Heavy Grav Tank vehicle stat sheet",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_trajan_mk4_heavy_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 1,
+      "description": "Detailed breakdown of specific Renegade Legion tank model",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_vespasian_light_grav_tank.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Tog Vespasian light grav tank stats and characteristics",
+      "size_mb": 0.1,
+      "total_pages": 1,
+      "max_pages": null
+    },
+    "tog_vindicta_medium_ground_apc.pdf": {
+      "doc_type": "supplement",
+      "priority": 8,
+      "description": "Rules for the Medium Ground APC in Renegade Legion",
+      "size_mb": 0.1,
+      "total_pages": 1,
       "max_pages": null
     }
   },
   "glossary": {
     "DAP": "DOGFIGHT ARMOUR PIERCING MISSILE",
-    "DFM": "DEAD-FIRE MISSILE CLUSTER",
     "EP": "Energy Point",
-    "FIRE": "Ships",
-    "HELL": "GRAVITIC EFFECT MISSILE",
+    "EWALL": "Kessrith Only",
     "ICB": "Internal Component Block",
     "POINT": "INTERNAL OR EXTERNAL",
     "RIS": "RADIATION INTENSITY SEEKING MISSILE",
-    "SOT": "SAFE OPERATING THRUST",
+    "SOT": "Safe Operating Thrust",
     "SSS": "SCANNER SILHOUETTE SEEKING MISSILE",
     "TOT": "TIME-ON-TARGET SYNCHRONIZER SYSTEM"
   }
