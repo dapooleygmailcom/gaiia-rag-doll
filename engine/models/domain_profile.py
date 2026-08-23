@@ -183,6 +183,16 @@ class DomainProfile(BaseModel):
             return self.parsing_grammar.cross_ref_pattern
         return self.cross_ref_pattern
 
+    def get_carrier_for_document(self, fname: str) -> Optional[str]:
+        """Resolve publisher or carrier name for a document registered in the profile."""
+        if self.documents and fname in self.documents:
+            doc_meta = self.documents[fname]
+            if hasattr(doc_meta, "carrier") and doc_meta.carrier:
+                return doc_meta.carrier
+            elif isinstance(doc_meta, dict) and doc_meta.get("carrier"):
+                return doc_meta.get("carrier")
+        return None
+
 
 def load_domain_profile(profile_path: str) -> DomainProfile:
     """Load and validate a domain profile from a JSON file."""
@@ -193,3 +203,21 @@ def load_domain_profile(profile_path: str) -> DomainProfile:
         data = json.load(f)
         
     return DomainProfile.model_validate(data)
+
+
+def get_carrier_for_doc(fname: str, profile: Optional[DomainProfile] = None) -> str:
+    """Resolve carrier/publisher name from DomainProfile metadata, with fallback."""
+    if profile is None:
+        default_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../data/home_insurance_profile.json"))
+        if os.path.exists(default_path):
+            profile = load_domain_profile(default_path)
+            
+    if profile:
+        carrier = profile.get_carrier_for_document(fname)
+        if carrier:
+            return carrier
+
+    # Fallback to stem of filename
+    base_name = os.path.splitext(os.path.basename(fname))[0]
+    return base_name
+

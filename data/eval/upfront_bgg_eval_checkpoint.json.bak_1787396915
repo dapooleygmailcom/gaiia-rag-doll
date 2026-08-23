@@ -1,0 +1,322 @@
+{
+  "last_updated": "2026-08-22T20:53:39.038490",
+  "total_evaluated": 10,
+  "total_in_suite": 404,
+  "results": [
+    {
+      "id": "bgg_uf_3720028",
+      "overall_index": 1,
+      "timestamp": "2026-08-22T20:42:23.341543",
+      "title": "Need help resolving squad composition with random scenario system",
+      "query": "Need help resolving squad composition with random scenario system: Using the random scenario system spreadsheet from files section we drew Japanese vs Russian playing scenario O. Not sure how to resolve Japanese and Russian squad composition? There are instructions on the back of Banzai rules and there is the scenario setup card in Vassal which give different suggestions. Scenario O on Vassal setup card and Banzai rules doesn't list the Russian side and if you look at scenario C the Japanese side is different.  \n\nEdit: If you decide to use the scenario C squad compositions you then need to decide whether to use the Scenario C or O special rules? Probably simplest to just say it's scenario C instead of O and be done with it.",
+      "intent": "scenario",
+      "expected_rules": [],
+      "retrieved_rules": [],
+      "rule_hit": null,
+      "hits": [],
+      "rule_recall": null,
+      "latency_seconds": 88.86,
+      "generated_answer": "ERROR: name '_extract_hierarchy_from_rule' is not defined",
+      "ground_truth_answer": "Using the random scenario system spreadsheet from files section we drew Japanese vs Russian playing scenario O. Not sure how to resolve Japanese and Russian squad composition? There are instructions on the back of Banzai rules and there is the scenario setup card in Vassal which give different suggestions. Scenario O on Vassal setup card and Banzai rules doesn't list the Russian side and if you look at scenario C the Japanese side is different.  \n\nIf it is the spreadsheet I designed, I'm sorry missed that Russians cannot appear in O.   (I did catch there was no French match up.)\n\nBut you can do any of these things;\n-  Redraw the scenario while still keeping the Jv.R nationality match up.\n-   Simply play Scenario C, instead.  Yes, they C & O are both Pillbox scenarios but they have very different OOBs and mixing an Attacker from one against a Defender from the other would likely be extremely imbalanced. \n-  The selection system is more to suggest a random Scenario, not force the players to play an unsatisfying game;  whether due to imbalance, playing a scenario beyond the players experience level, playing a \"bad\" Scenario/nationality, etc.  Feel free to redraw any or all of the selection to get scenario both players will enjoy.",
+      "debug": {
+        "distilled_question": null,
+        "hyde_clause": null,
+        "query_type": null,
+        "rule_numbers": null,
+        "sub_queries": null,
+        "num_retrieved": 0,
+        "num_parent_expansions": 0,
+        "num_cooccurrence_expansions": 0,
+        "num_cross_refs": 0
+      },
+      "error": "name '_extract_hierarchy_from_rule' is not defined"
+    },
+    {
+      "id": "bgg_uf_3713707",
+      "overall_index": 2,
+      "timestamp": "2026-08-22T20:43:45.297245",
+      "title": "Lateral group transfer question",
+      "query": "Lateral group transfer question: In the General Vol 21 Number 1 scenario A series replay, on turn 5 the American plays a sideways movement card on his group C \"as a Lateral Group Transfer\". But given the German player only has groups at identity chit A and B isn't this illegal? Rule 17.7 first sentence says \"... directly opposite an opposing group ...\"\n\nThe rule states the player announces the intention to perform a lateral group transfer so presumably if the player doesn't make the announcement at the time of playing the movement card sideways he can't subsequently do so on a future turn (using that same played movement card) even if the necessary conditions still exist to make such a move? \n\nWhere a game is played without aid of voice or text chat I guess you might agree that a lateral group transfer announcement was accompanied by putting down the new group identity chit in the adjacent column and taken away if the attempt failed.\n\nI wonder whether having declared the intention to lateral group transfer a player can change their mind? \n\nEdit: Looking through past posts I see I have broached this issue before! See https://boardgamegeek.com/thread/1342845/article/35597336#35597336 where no conclusion was reached :)",
+      "intent": "scenario",
+      "expected_rules": [
+        "17.7"
+      ],
+      "retrieved_rules": [],
+      "rule_hit": false,
+      "hits": [],
+      "rule_recall": 0.0,
+      "latency_seconds": 81.95,
+      "generated_answer": "ERROR: name '_extract_hierarchy_from_rule' is not defined",
+      "ground_truth_answer": "In the General Vol 21 Number 1 scenario A series replay, on turn 5 the American plays a sideways movement card on his group C \"as a Lateral Group Transfer\". But given the German player only has groups at identity chit A and B isn't this illegal? Rule 17.7 first sentence says \"... directly opposite an opposing group ...\"\n\nNo, it says \"A group capable of movement can change its group identity and thereby its position directly opposing an enemy group....\"  All it is saying if you move group from B to C, the directly opposing group would now be C--if it exists.  If the opponent  does not have a Group C, then there would be no directly opposing group to your Group C.  (Just like there would be if each side set up with a different number of groups at start.)\n\nIt is not stating a requirement, but a change of status of \"directly opposing\" groups.\n\nThe rule states the player announces the intention to perform a lateral group transfer so presumably if the player doesn't make the announcement at the time of playing the movement card sideways he can't subsequently do so on a future turn (using that same played movement card) even if the necessary conditions still exist to make such a move? \n\nCorrect, if the intention to change a group's ID is not made when playing the movement cards, when group enters terrain, the same Group ID remains.  Very common if you want to get into better terrain.\n\nWhere a game is played without aid of voice or text chat I guess you might agree that a lateral group transfer announcement was accompanied by putting down the new group identity chit in the adjacent column and taken away if the attempt failed.\n\nA common technique in ftf play is to place the new ID on the Movement card until new terrain is accepted or rejected (which would cancel the transfer).\n\nI wonder whether having declared the intention to lateral group transfer a player can change their mind? \n\nI would say no per errata on Rule 5:  Movement cards not played directly to the discard pile cannot voluntarily be cancelled.  (Just like you can't rotate a Movement card from advancing to sideways because you change your mind about advancing.)\n\nEdit: Looking through past posts I see I have broached this issue before! See https://boardgamegeek.com/thread/1342845/article/35597336#35597336 where no conclusion was reached :)\n\nNo big deal, that thread started 11 years ago and you added your question 5 years after that.",
+      "debug": {
+        "distilled_question": null,
+        "hyde_clause": null,
+        "query_type": null,
+        "rule_numbers": null,
+        "sub_queries": null,
+        "num_retrieved": 0,
+        "num_parent_expansions": 0,
+        "num_cooccurrence_expansions": 0,
+        "num_cross_refs": 0
+      },
+      "error": "name '_extract_hierarchy_from_rule' is not defined"
+    },
+    {
+      "id": "bgg_uf_3679123",
+      "overall_index": 3,
+      "timestamp": "2026-08-22T20:45:26.224838",
+      "title": "Prisoners/guarding (32)",
+      "query": "Prisoners/guarding (32): Taking a deep dive into rules I never see used in the games I've played of UF.  \n\nFrom a re-formatted rule book that embeds the Q/A.  \n\n32.12 & 16.42 By capturing a man and bringing him into a group, and\nthen stopping in suitable terrain, does the attacker satisfy the Relative\nRange 5 requirement of the Victory Conditions, if, in so doing, it\neliminates the only Relative Range 5 enemy group?\nA. Yes. Note, this rule is in effect to prevent a player from routing men\nto avoid victory by the opponent.\n\n---\n\nI don't understand the answer.  Players can't rout men of their own volition that I know of.  I could see someone voluntarily panic one of their PCs to eliminate a RR5 situation.  Is that what it's talking about?\n---\n\nPrisoners, once taken, are placed\nbeneath the card of any one man in the capturing\ngroup of the capturing player's choice. That man\nmay be pinned, wounded, or even unarmed but he\nmay not be the designated assistant crewman for any weapon.\n\n---\n\nIt's not \"that man may NOT be pinned\"  Pinned PCs can actually do something?  The only thing is guarding?\n\n--\n\nIf the designated assistant crewman is the only possible choice...\n\n--\n\nHow is that possible?  Who is he crewing for if he's the only choice?\n\n--\n\nA player may change guards automatically as the sole Action of a group for that turn provided\nthe new guard is not currently pinned.\n\n--\n\nThe 2nd paragraph says yes for pinned PCs as guards and the last says no.  I see there's a, very, slight difference in the initiation of the guard duty between the two but I don't see the point.",
+      "intent": "scenario",
+      "expected_rules": [
+        "16.42",
+        "32.12"
+      ],
+      "retrieved_rules": [],
+      "rule_hit": false,
+      "hits": [],
+      "rule_recall": 0.0,
+      "latency_seconds": 100.92,
+      "generated_answer": "ERROR: name '_extract_hierarchy_from_rule' is not defined",
+      "ground_truth_answer": "Taking a deep dive into rules I never see used in the games I've played of UF.  \n\nThis is a rare situation.  It would only matter in a rear guard action scenarios (\"X unpinmed men at RR5 (not Range Chit 4/5)\") with all men in the group are pinned.\n\nPrisoners, in general, are often forgotten about--I saw it once or twice in CC to get 5VP in a city fight.\n\nFrom a re-formatted rule book that embeds the Q/A.  \n\n32.12 & 16.42 By capturing a man and bringing him into a group, and\nthen stopping in suitable terrain, does the attacker satisfy the Relative\nRange 5 requirement of the Victory Conditions, if, in so doing, it\neliminates the only Relative Range 5 enemy group?\nA. Yes. Note, this rule is in effect to prevent a player from routing men\nto avoid victory by the opponent.\n\n---\n\nI don't understand the answer.  Players can't rout men of their own volition that I know of.  I could see someone voluntarily panic one of their PCs to eliminate a RR5 situation.  Is that what it's talking about?\n\nYes.  You cannot simply rout a man.   You can voluntarily panic a pinned man. but there would be chance he dies rather than routs/captured at RR5.  Nor can you voluntarily rout unpinned men.\n\nIt is an attempt to prevent a spoil sport play when an Attacker reaches RR5 and only needs to reach good terrain or rally pinned men and the Defender voluntarily panics to eliminate that group.  At least the man could be captured (if he didn't KIA) preserving the justified win.  But obviously if he did KIA. this rule doesn't fix the problem.\n\nAt least it is VERY unlikely to come up:  It would be a late game desperation move by the defender who otherwise is not close to breaking his squad in Scenarios D or Q.\n\nPrisoners, once taken, are placed\nbeneath the card of any one man in the capturing\ngroup of the capturing player's choice. That man\nmay be pinned, wounded, or even unarmed but he\nmay not be the designated assistant crewman for any weapon.\n\n---\n\nIt's not \"that man may NOT be pinned\"  Pinned PCs can actually do something?  The only thing is guarding?\n\nYes, that is what it says--even though it says should the guard be eliminated, his prisoners must be reassigned to an unpinned man.  (I have a feeling Courtney Allen and Don Greenwood may have been hemming and hawing on this rule.)\n\n--\n\nIf the designated assistant crewman is the only possible choice...\n\n--\n\nHow is that possible?  Who is he crewing for if he's the only choice?\n\nGood, then this rule would NEVER come up!  (See what I wrote above!)\n\n--\n\nA player may change guards automatically as the sole Action of a group for that turn provided\nthe new guard is not currently pinned.\n\n--\n\nThe 2nd paragraph says yes for pinned PCs as guards and the last says no.  I see there's a, very, slight difference in the initiation of the guard duty between the two but I don't see the point.  \n\nAlso, per errata, unpinned man must be in the capturing group in order to capture during a rout.\n\nIf you want to play with a house rule that says \"Pinned men cannot be assigned to guard prisoners, but they can retain that role if later pinned\", I don't think most opponents would object.  And that seems to fix the holes you found. (re: crewman and reassignment.)\n\nAs I said above, prisoners do not come up frequently:\n-  You have get groups at RR5, which happens infrequently in the first place.\n-  The players in that situation are usually more concerned with CC to eliminate the group or winning the scenario.\n-  And unless the scenario is going to be determined by victory points (Only can happen in Scenarios A, B, G, J, M,  N.), the attacker would rather not take a prisoner at all--if only to avoid fp/To Hit penalties.  And rule 32.12 allows the \"capturing\" player to not take a prisoner if otherwise able, leaving the enemy man to rout instead.",
+      "debug": {
+        "distilled_question": null,
+        "hyde_clause": null,
+        "query_type": null,
+        "rule_numbers": null,
+        "sub_queries": null,
+        "num_retrieved": 0,
+        "num_parent_expansions": 0,
+        "num_cooccurrence_expansions": 0,
+        "num_cross_refs": 0
+      },
+      "error": "name '_extract_hierarchy_from_rule' is not defined"
+    },
+    {
+      "id": "bgg_uf_3675113",
+      "overall_index": 4,
+      "timestamp": "2026-08-22T20:46:33.884534",
+      "title": "Confused about lateral flanking fire",
+      "query": "Confused about lateral flanking fire: 17.1 LATERAL FLANKING FIRE: Flanking Fire can originate at any Relative Range from a group whose last placed \"Flank\" Movement card was played sideways and remains in play at the end of the turn in which it was played\n\nDoes the flanking unit suffers from moving fire penalty? Does flanking stop once the flanking unit enters some terrain? \ud83d\ude15",
+      "intent": "clarification",
+      "expected_rules": [
+        "17.1"
+      ],
+      "retrieved_rules": [],
+      "rule_hit": false,
+      "hits": [],
+      "rule_recall": 0.0,
+      "latency_seconds": 67.66,
+      "generated_answer": "ERROR: name '_extract_hierarchy_from_rule' is not defined",
+      "ground_truth_answer": "17.1 LATERAL FLANKING FIRE: Flanking Fire can originate at any Relative Range from a group whose last placed \"Flank\" Movement card was played sideways and remains in play at the end of the turn in which it was played\n\nDoes the flanking unit suffers from moving fire penalty? Does flanking stop once the flanking unit enters some terrain? \ud83d\ude15\n\nThe moving penalty applies to the flanking group.  Play of terrain in the flanking group does not remove the flank condition",
+      "debug": {
+        "distilled_question": null,
+        "hyde_clause": null,
+        "query_type": null,
+        "rule_numbers": null,
+        "sub_queries": null,
+        "num_retrieved": 0,
+        "num_parent_expansions": 0,
+        "num_cooccurrence_expansions": 0,
+        "num_cross_refs": 0
+      },
+      "error": "name '_extract_hierarchy_from_rule' is not defined"
+    },
+    {
+      "id": "bgg_uf_3645496",
+      "overall_index": 5,
+      "timestamp": "2026-08-22T20:48:20.753458",
+      "title": "AFV questions (stun effect, etc.)",
+      "query": "AFV questions (stun effect, etc.): Background:  I have been playing Up Front for over 40 years, but I never liked AFV's and so avoided them.  Now I'm trying to use them more, and this has raised some questions that I didn't have to think about before.\n\nIs a stunned, non-OT AFV forced to button up?  I think I had always assumed the answer was \"yes\", but re-reading the rules yesterday, I wasn't sure.  The clearest rule I can find is 28.45, which says, \"A stun result flips any CE AFV card over to its Pinned/Button Up side.\"\n\nWell, that is ambiguous.  It says it's only referring to CE AFVs, but then it mentions a Buttoned Up side, which a CE AFV does not have.  I think on the whole that I would find it odd that regular AFV's don't button up when stunned when OT AFV's do, but that's not much of a guide to go on.\n\nI'd like to follow this up with a dumb question about boxed attacks.  I'm pretty sure I understand them, but they seem weird, so I just wanted to verify.  In brief:  when you shoot a boxed effect number against an AFV, you know exactly what's going to happen if you hit.  You simply add your boxed number to your relative range, and compare that to the defending AFV's numbers.  (There are exceptions for rifleman using inherent boxed FP at range 5 and for LATW.)  This feels weird to me because everything else in Up Front is accompanied by massive amounts of randomness, so for a hit's result to be absolutely known (with the possible exception of an immobilization or stun in case they have the same effect number) seems incongruous.  I just want to make sure I'm getting it right.",
+      "intent": "clarification",
+      "expected_rules": [
+        "25.4",
+        "26.5",
+        "28.3",
+        "28.43",
+        "28.431",
+        "28.45",
+        "6.5"
+      ],
+      "retrieved_rules": [],
+      "rule_hit": false,
+      "hits": [],
+      "rule_recall": 0.0,
+      "latency_seconds": 106.87,
+      "generated_answer": "ERROR: name '_extract_hierarchy_from_rule' is not defined",
+      "ground_truth_answer": "Couple of things - about getting AFVs to button up, one way for infantry to reduce the threat of an AFV is to fire at it with small arms, hoping to get a hit equal to or higher than its Morale value, which forces it to button up.  This is covered by 28.3:\n\nAn AFV card has two Armor defense values printed on each side of the card plus a Morale and CE Defense value on the front of the card. The Armor and Flank defense values represent the armored defense strength and is listed on both sides of the card; only attacks using solely boxed firepower or boxed \"Effect Numbers\" apply to this value. The MORALE and CE values are affected only by unboxed attack values.\n\nThis is how mortars can attack AFVs (and they have a small chance of damaging the vehicle as well [26.5]).  AT guns have the choice of firing AP - the process the OP referred to in his second question, which attacks the Armor/Flank values - or HE, which attacks the Morale value as above.  The HE attack is only possible, of course, when the vehicle is CE, or in the case of an OT vehicle if it is not already Pinned (except for one or two really weedy AFVs like the British Bren Carrier, which has a Panic value and can thus be attacked when Pinned).\n\nAnd moving on to the OPs second question, you were right to feel that there should be a random element is resolving an AP hit - and there is!  25.4 says:\n\nOnce a hit has been obtained, the strength of that hit is determined by adding the To Hit Random Number on the RNC just drawn to the Effect Number listed on the ordnance card. (EXC: IG/AFV ordnance firing at an AFV target does not add the To Hit Random Number just drawn; instead it adds a number equal to the Relative Range between the firer and the target.)  The color of the RNC has no effect; all numbers are added. Having now determined the total strength of the attack (after modification for terrain and/or movement), it is resolved separately for each target in the defending group by drawing a new RNC and adding any black number or subtracting any red number drawn as per a normal fire attack [6.5]. \n\nSo the Hit process establishes first whether a hit has been obtained, and secondly how damaging it is: for HE, the RNC on the To Hit card is used (provided a 0 would have hit, reflecting how close the HE round actually landed), and for AP a hit is a hit, but the RR is added to reflect increased penetration at closer ranges.  This gives you the base hit strength; then, in both cases, you draw an RNC for each target.  Firing at an AFV, of course, there is only one target, but you still draw an RNC.\n\nSo, a Panther (s7,i8,k9) rumbles up to RR4 to a plucky British 6-pdr (FE 3).  If the AT gun gets a hit, its base Hit Strength will be 3+4=7, and then it hopes the RNC will be at least 0, and preferably a black 2 or better to get a kill.\n\nDon't forget, also, that unlike small arms and HE fire against an AFV, terrain does affect the resolution.  So if the AFV is in Brush, the Hit Strength is reduced by 1.  I suppose this reflects the possibility of the round being deflected or slowed by intervening obstacles.\n\nHope all that helps!  Oh, and Snipers are good, too.",
+      "debug": {
+        "distilled_question": null,
+        "hyde_clause": null,
+        "query_type": null,
+        "rule_numbers": null,
+        "sub_queries": null,
+        "num_retrieved": 0,
+        "num_parent_expansions": 0,
+        "num_cooccurrence_expansions": 0,
+        "num_cross_refs": 0
+      },
+      "error": "name '_extract_hierarchy_from_rule' is not defined"
+    },
+    {
+      "id": "bgg_uf_3645331",
+      "overall_index": 6,
+      "timestamp": "2026-08-22T20:49:22.405618",
+      "title": "Can you use a radio while moving?",
+      "query": "Can you use a radio while moving?: Pretty self-explanatory.  It definitely does not seem right, but I don't see any indication in the rules that you're not allowed to call in artillery while your group is moving, or any penalty for trying to get battery access, so I have to conclude that you can do it just as if you weren't moving.  I'm hoping someone will be able to prove me wrong, however.",
+      "intent": "clarification",
+      "expected_rules": [
+        "41.7"
+      ],
+      "retrieved_rules": [],
+      "rule_hit": false,
+      "hits": [],
+      "rule_recall": 0.0,
+      "latency_seconds": 61.64,
+      "generated_answer": "ERROR: name '_extract_hierarchy_from_rule' is not defined",
+      "ground_truth_answer": "Nothing I can spot by searching the pdf version for \"radio\".  There is no mention of prohibiting a moving group from using a radio card in 40. ARTILLERY or in 41.7 RADIO CONTACT.",
+      "debug": {
+        "distilled_question": null,
+        "hyde_clause": null,
+        "query_type": null,
+        "rule_numbers": null,
+        "sub_queries": null,
+        "num_retrieved": 0,
+        "num_parent_expansions": 0,
+        "num_cooccurrence_expansions": 0,
+        "num_cross_refs": 0
+      },
+      "error": "name '_extract_hierarchy_from_rule' is not defined"
+    },
+    {
+      "id": "bgg_uf_3629431",
+      "overall_index": 7,
+      "timestamp": "2026-08-22T20:50:42.119436",
+      "title": "Rules don't explicitly tell you when you lose Natural Flanking Fire?",
+      "query": "Rules don't explicitly tell you when you lose Natural Flanking Fire?: I imagine it's as simple as you are no longer in the conditions for it and therefore don't have it.  The 17.4 section only refers to Flanking Fire.  It's specifying that specific rule.  Not the Natural one as far as I can tell.  \n\nFF is lost when the flanking group plays a movement but that would be an odd condition for NFF since it wouldn't necessarily break the conditions needed for NFF.  I guess then can a group currently at NFF play, say, a lateral movement card, thereby not changing range chit, thereby maintaining the conditions for NFF and still enjoy the benefits of double fire power?  Which now has me remembering discussions on do you double first or halve first and if halve first do you still round down before doubling.... \n\nWait a minute... upon further inspection... 17.3 (NFF) still speicifcally calls it Flanking Fire.  So the 17.4 losing conditions do apply to NFF?  Removing wire and failing to Ford a stream would make you lose NFF?  But how would one regain NFF as you're still in the exact same conditions to qualify for it?  But... the condition for NFF is moving forward to RR4 (chits 6) from RR5.  That seems to be it.  Moving forward.  So stopping at RR4 (6 on chits) you lose it as you no longer are moving? I know over thinking it but...",
+      "intent": "clarification",
+      "expected_rules": [
+        "17.3",
+        "17.4"
+      ],
+      "retrieved_rules": [],
+      "rule_hit": false,
+      "hits": [],
+      "rule_recall": 0.0,
+      "latency_seconds": 79.71,
+      "generated_answer": "ERROR: name '_extract_hierarchy_from_rule' is not defined",
+      "ground_truth_answer": "Flanking is a complicated rule.\n\nGaining Natural Flanking is a result of moving from RR5 to \"RR6\" per 17.3.. (I prefer \"RR6\" to \"RR4 but behind the target group\".)\n\nLosing any form of Flanking occurs under 17.4X, specifically:\n-  Flanking group has a movement or Wire played on it.  (but not Terrain--needed to get doubled FP without 1/2FP for moving.)\n-  Flanked group has terrain, even if rejected.\n-  Flanked group has a Movement played on it, even temporarily to remove Wire or failed Ford attempt.\n-  Front group eliminated or changes ID chit/completes a lateral group \"transfer\".\n\nGaining flanking (either naturally or via a Flank card) places a Flank Fire chit.  Losing Flanking removes the Flank Fire chit.  The presence of the ***chit*** determines doubled FP for flanking.\n\nOnce, natural flanking is lost  it would be difficult to regain. (retreat to RR5 and advance back to RR6) But, when in a natural Flanking position (i.e. RR6) (whether Flanking was lost or not), that group can Encircle on a later turn (if the Front group is at RR2 to the Flanked group), by playing a sideways Movement cards on the Flanking group.\n\nAnd always double/halve all FP before rounding down.",
+      "debug": {
+        "distilled_question": null,
+        "hyde_clause": null,
+        "query_type": null,
+        "rule_numbers": null,
+        "sub_queries": null,
+        "num_retrieved": 0,
+        "num_parent_expansions": 0,
+        "num_cooccurrence_expansions": 0,
+        "num_cross_refs": 0
+      },
+      "error": "name '_extract_hierarchy_from_rule' is not defined"
+    },
+    {
+      "id": "bgg_uf_3623562",
+      "overall_index": 8,
+      "timestamp": "2026-08-22T20:51:33.515825",
+      "title": "Keeping Infiltrator status after a CC",
+      "query": "Keeping Infiltrator status after a CC: I think I understand the infiltration and the CC rules but one sentence has me puzzled under 20.73: \"However, if he already has infiltrator status he may keep it to use in any subsequent CC or normal Fire attack against the infiltrated group only if he has defeated his last CC opponent by 3 or more in the resolution of their CC\".\n\nThe bolded part is mine and is the one that is confusing me. I didn't see a situation where a CC attacker would not be infiltrated?",
+      "intent": "clarification",
+      "expected_rules": [
+        "20.39",
+        "20.73",
+        "20.9",
+        "20.91",
+        "45.4",
+        "45.422"
+      ],
+      "retrieved_rules": [],
+      "rule_hit": false,
+      "hits": [],
+      "rule_recall": 0.0,
+      "latency_seconds": 51.39,
+      "generated_answer": "ERROR: name '_extract_hierarchy_from_rule' is not defined",
+      "ground_truth_answer": "I think I understand the infiltration and the CC rules but one sentence has me puzzled under 20.73: \"However, if he already has infiltrator status he may keep it to use in any subsequent CC or normal Fire attack against the infiltrated group only if he has defeated his last CC opponent by 3 or more in the resolution of their CC\".\n\nThe bolded part is mine and is the one that is confusing me. I didn't see a situation where a CC attacker would not be infiltrated?\n\nYou are correct, the attacker man in CC will be an infiltrator.  As pointed out above, a man in the defending group could be infiltrating the attacking group (or a different attacking group also at RR5), and rule covers those situations.  \n\nNote, it is more difficult to infiltrate from a group which has been infiltrated by their opponent (20.39)\n\nThere might be others, but what pops to mind is 20.9 Berserk, and (although it was likely not considered when 20.73 was written), 45.4 BANZAI.\n\nKeeping infiltration status would not apply to Banzai or Berserk, because in neither case is the man an infiltrator.  (20.91, 45.422)",
+      "debug": {
+        "distilled_question": null,
+        "hyde_clause": null,
+        "query_type": null,
+        "rule_numbers": null,
+        "sub_queries": null,
+        "num_retrieved": 0,
+        "num_parent_expansions": 0,
+        "num_cooccurrence_expansions": 0,
+        "num_cross_refs": 0
+      },
+      "error": "name '_extract_hierarchy_from_rule' is not defined"
+    },
+    {
+      "id": "bgg_uf_3623559",
+      "overall_index": 9,
+      "timestamp": "2026-08-22T20:52:16.954188",
+      "title": "Killed SL",
+      "query": "Killed SL: If your SL is killed or panics, you draw one less card \"during that game turn\". So if my opponent kills it during his turn (which I would expected is the most frequent case), the ASL will take over during my turn and I will not be penalized, right?\n\nI just think it's weird that such a dramatic death does not entail a one-shot penalty.",
+      "intent": "clarification",
+      "expected_rules": [
+        "15.2",
+        "4.1",
+        "4.5"
+      ],
+      "retrieved_rules": [],
+      "rule_hit": false,
+      "hits": [],
+      "rule_recall": 0.0,
+      "latency_seconds": 43.43,
+      "generated_answer": "ERROR: name '_extract_hierarchy_from_rule' is not defined",
+      "ground_truth_answer": "Unfortunately, I find no definition for Game Turn vs Player Turn, but the implication here is that 1 Game Turn = 2 consecutive Player Turns. Also, as you note, it would be weird if there was no penalty...so inflict the penalty.\n\n4. SEQUENCE OF PLAY\n4.1 The game begins with the player specified by the scenario taking his\nplay first. [In Design Your Own (henceforth referred to as DYO) scenarios\nthe player having spent less point on the construction of his force gets to\nmove first with ties resolved by RNC draw.] When he is finished, the\nopposing player takes his turn. Player turns are then alternated until one\nof the participants achieves his Victory Conditions as required by the\nscenario in play or the Time Limit expires.\n\n15.2 Should a player's SL be pinned at the end of his turn, or have just\nbeen removed by a KIA or PANIC result during that game turn, that player\nmay only draw enough cards to restore the number of cards in his hand\n[4.5] to one less than the number he is usually allotted.\n\nP.S. We blew the dust off this recently to have two of us teach two others, and I noticed players (we two \"veterans\" included) had trouble remembering to short the hand by a card due to 15.2, so I had us park a regular card deck's JOKER under each SL to help us remember. If the SL was \"15.2-ed\", then that Joker was picked up into the SL-possessor's hand as a reminder that it was causing hand capacity problems. The card would get parked under the ASL if required. An additional bonus was that it also made it easier for the opponent to spot the SL's group, speeding the game up slightly during targetting choices.",
+      "debug": {
+        "distilled_question": null,
+        "hyde_clause": null,
+        "query_type": null,
+        "rule_numbers": null,
+        "sub_queries": null,
+        "num_retrieved": 0,
+        "num_parent_expansions": 0,
+        "num_cooccurrence_expansions": 0,
+        "num_cross_refs": 0
+      },
+      "error": "name '_extract_hierarchy_from_rule' is not defined"
+    },
+    {
+      "id": "bgg_uf_3616976",
+      "overall_index": 10,
+      "timestamp": "2026-08-22T20:53:39.038457",
+      "title": "Snipers 14.5; We're supposed to \"in lieu of discard\" all of the cards before resolving any?",
+      "query": "Snipers 14.5; We're supposed to \"in lieu of discard\" all of the cards before resolving any?: 14.5 If, in the course of a multi-card discard, two or more Sniper and/or\nMinefield attacks are played on the same group resulting in the\nelimination of the only target in that group, the discarding player may\nalternate his selection of a target group for any discards yet to be\nresolved.\n\nThe wording sure seems to suggest if, say, you're Russia and you go nuts with 4 \"in lieu of discards\" and it's 3 Snipers and a minefield you're supposed to pre-designate where each one is going.  If not then what's the point of this rule?  This also makes no sense if you first did the snipers and eliminated the only group that had a movement card on it therefore making your minefield discard ineligible.  So... what's this rule really talking about?",
+      "intent": "clarification",
+      "expected_rules": [
+        "14.5",
+        "7.3",
+        "7.32"
+      ],
+      "retrieved_rules": [],
+      "rule_hit": false,
+      "hits": [],
+      "rule_recall": 0.0,
+      "latency_seconds": 82.08,
+      "generated_answer": "ERROR: name '_extract_hierarchy_from_rule' is not defined",
+      "ground_truth_answer": "14.5 If, in the course of a multi-card discard, two or more Sniper and/or\nMinefield attacks are played on the same group resulting in the\nelimination of the only target in that group, the discarding player may\nalternate his selection of a target group for any discards yet to be\nresolved.\n\nThe wording sure seems to suggest if, say, you're Russia and you go nuts with 4 \"in lieu of discards\" and it's 3 Snipers and a minefield you're supposed to pre-designate where each one is going.  If not then what's the point of this rule?  This also makes no sense if you first did the snipers and eliminated the only group that had a movement card on it therefore making your minefield discard ineligible.  So... what's this rule really talking about?\n\nThe point of the rule is you have only have the right to retarget a sniper or Minefield if it's target group ends up empty before resolution.  You cannot do that with other active discards (Terrain, Wire)\n\nIn a discard that includes wires & 2 snipers, you to predesignate where all three cards go.  Now, let's say you put them same single man group:\n-  The wire will go on the group.\n-  If the first sniper eliminates the group, you can retarget the 2nd sniper and the Wire (and any terrain or movement cards) will be sent to the discard pile.\n-  If the second sniper eliminates the group, the Wire and any terrain or movement will go to the discard pile.\n\nThis rule prevents per errata (see 7.3 & 7.32) for example resolving a Sniper and NOW that a man is pinned, putting the Wire on that group.  Or the Sniper NOW eliminated the group, you could NOW send the Wire to a different group.",
+      "debug": {
+        "distilled_question": null,
+        "hyde_clause": null,
+        "query_type": null,
+        "rule_numbers": null,
+        "sub_queries": null,
+        "num_retrieved": 0,
+        "num_parent_expansions": 0,
+        "num_cooccurrence_expansions": 0,
+        "num_cross_refs": 0
+      },
+      "error": "name '_extract_hierarchy_from_rule' is not defined"
+    }
+  ]
+}

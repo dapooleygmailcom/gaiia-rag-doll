@@ -222,7 +222,8 @@ def generate_report(results, total_duration):
 """
     for res in results:
         status_emoji = "✅ PASSED" if res["status"] == "PASSED" else "❌ FAILED"
-        report += f"| {res['name']} | {res['type'].upper()} | {status_emoji} | {res['return_code']} | {res['duration']:.1f}s | [{os.path.basename(res['log_file'])}](file:///{os.path.abspath(res['log_file']).replace(os.sep, '/')}) |\n"
+        log_rel_path = res['log_file'].replace(os.sep, '/')
+        report += f"| {res['name']} | {res['type'].upper()} | {status_emoji} | {res['return_code']} | {res['duration']:.1f}s | [{os.path.basename(res['log_file'])}]({log_rel_path}) |\n"
 
     report += "\n" + additional_info
     

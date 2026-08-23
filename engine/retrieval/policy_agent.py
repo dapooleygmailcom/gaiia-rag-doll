@@ -283,12 +283,13 @@ def compare_policies(query, carriers=None, profile_path=None):
     Synthesize a comparative answer using Qwen 2.5:14b based on retrieved context.
     """
     profile = None
+    from engine.models.domain_profile import load_domain_profile
     if profile_path and os.path.exists(profile_path):
-        from engine.models.domain_profile import load_domain_profile
         profile = load_domain_profile(profile_path)
     else:
-        from engine.ingestion.ingest_policies import get_default_policy_profile
-        profile = get_default_policy_profile()
+        default_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../data/home_insurance_profile.json"))
+        if os.path.exists(default_path):
+            profile = load_domain_profile(default_path)
 
     print(f"Analyzing comparative query: '{query}'")
     if carriers:

@@ -212,11 +212,6 @@ class UniversalIngestionEngine:
                     
             elif route == "POLICY_HIERARCHICAL":
                 print("[Router] Activating HIERARCHICAL POLICY & LEGAL PIPELINE...")
-                try:
-                    from engine.ingestion.ingest_policies import extract_section_chunks
-                    # ...
-                except Exception:
-                    pass
                 return profile
                 
             elif route == "SCANNED_OCR":

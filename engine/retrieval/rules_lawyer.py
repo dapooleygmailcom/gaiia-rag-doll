@@ -706,9 +706,12 @@ def load_game_profile(profile_path):
     with open(profile_path, "r", encoding="utf-8") as f:
         profile = json.load(f)
 
+    game_name = profile.get("game_name") or profile.get("domain_name", "Unknown Domain")
+    game_id = profile.get("game_id") or profile.get("domain_id", "generic")
+
     _game_config = {
-        "game_name": profile["game_name"],
-        "game_id": profile.get("game_id", "generic"),
+        "game_name": game_name,
+        "game_id": game_id,
         "chroma_collection": profile["chroma_collection"],
         "rule_index_file": profile["rule_index_file"],
         "cooccurrence_graph_file": profile.get("cooccurrence_graph_file"),
@@ -723,7 +726,7 @@ def load_game_profile(profile_path):
     _active_cooccurrence_graph = None
     _active_section_tree = None
 
-    print(f"[Game Profile Loaded] {profile['game_name']} — "
+    print(f"[Game Profile Loaded] {game_name} — "
           f"collection={profile['chroma_collection']}")
     return _game_config
 

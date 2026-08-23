@@ -1,0 +1,123 @@
+{
+  "domain_name": "Glamour & Visual Publication Archive",
+  "domain_id": "visual_media",
+  "pipeline_mode": "VISUAL_MEDIA",
+  "data_dir": "data/PB",
+  "chroma_collection": "rag-doll-visual-catalog",
+  "documents": {
+    "Playboys_Vixens_2006-08_09.pdf": {
+      "doc_type": "pictorial_magazine",
+      "priority": 1,
+      "edition": "2006-08_09",
+      "publication": "Playboy Special Editions",
+      "magazine_title": "Playboy's Vixens",
+      "issue_date": "August/September 2006",
+      "description": "Playboy's Vixens August/September 2006 issue scan"
+    }
+  },
+  "structured_extraction": {
+    "target_schema": {
+      "publication_metadata": {
+        "publication": "string",
+        "magazine_title": "string",
+        "issue_date": "string",
+        "year": "integer",
+        "cover_girl": "string",
+        "cover_taglines": ["string"]
+      },
+      "page_type": "Cover | Table_of_Contents | Feature_Pictorial | Feature_Article | Structured_Grid_Directory | Advertisement | Reader_Letters | Editorial_Masthead | Back_Cover | Other",
+      "page_number": "integer",
+      "model_name": "string",
+      "is_cover_girl": "boolean",
+      "physical_attributes": {
+        "hair_color": "string",
+        "hair_style": "string",
+        "eye_color": "string",
+        "height": "string",
+        "weight_lbs": "integer | null",
+        "bodily_dimensions": "string",
+        "natural_status": "Natural | Enhanced | Unspecified",
+        "was_playmate": "boolean",
+        "playmate_details": "string | null",
+        "title_awards": ["string"]
+      },
+      "presentation_and_styling": {
+        "pose": "Standing | Reclining | Kneeling | Sitting | Arched_Back | Close_Up | Dynamic_Action | All_Fours | Lying_Down | Other",
+        "pose_description": "string",
+        "nudity_level": "Swimwear | Lingerie | Topless | Full Nude | Costume | Covered | Artistic",
+        "grooming": "Shaved | Trimmed | Natural | Unspecified",
+        "wardrobe": "string"
+      },
+      "visual_setting_and_theme": {
+        "primary_theme": "string",
+        "setting_description": "string",
+        "color_palette": "string",
+        "lighting": "string",
+        "tags": ["string"]
+      },
+      "production_and_credits": {
+        "photographer": "string | null",
+        "shooting_location": "string | null",
+        "hair_and_makeup": "string | null"
+      },
+      "structured_directory_entry": {
+        "bio_text": "string | null",
+        "career_goals": "string | null",
+        "trivia_quotes": ["string"],
+        "cross_referenced_pages": ["integer"]
+      },
+      "marketing_and_promotions": {
+        "ad_category": "Subscription | Casting_Call | Magazine_Promotion | Product_Service | Contest | null",
+        "promoted_publication_or_brand": "string | null",
+        "casting_locations": ["string"],
+        "referenced_models_or_celebrities": ["string"],
+        "summary": "string | null"
+      },
+      "table_of_contents_data": {
+        "toc_entries": [
+          {
+            "model_name": "string",
+            "page_start": "integer",
+            "page_end": "integer",
+            "thumbnail_path": "string | null"
+          }
+        ]
+      },
+      "visual_narrative": "string",
+      "ocr_text": "string"
+    },
+    "vlm_extraction_hints": [
+      "Classify page archetype accurately: Cover, Table_of_Contents, Feature_Pictorial, Structured_Grid_Directory (bio cards/stats), Advertisement, Reader_Letters, Editorial_Masthead, or Back_Cover.",
+      "Extract and classify body pose explicitly: Standing, Reclining, Kneeling, Sitting, Arched_Back, Close_Up, Dynamic_Action, All_Fours, or Lying_Down.",
+      "Separate cover headlines/slogans ('The Power of Seduction', 'Will Straighten More Than Your Tie') from wardrobe descriptions.",
+      "Extract bodily dimensions, height, weight, and title awards from bio cards/directory grids or text captions.",
+      "Identify photographer and shooting locations from photo credits or masthead.",
+      "Identify cross-publication references and casting call cities in advertisements."
+    ]
+  },
+  "ontology": {
+    "entity_types": ["Model", "Publication", "Photographer", "FeatureSection", "Advertiser", "ShootingLocation"],
+    "glossary": {
+      "PMOY": "Playmate of the Year",
+      "PMOM": "Playmate of the Month",
+      "TOC": "Table of Contents",
+      "SE": "Special Editions",
+      "Coed": "Cyber Club Coed of the Week / Month"
+    }
+  },
+  "agent_persona": {
+    "role": "Visual Media & Periodical Publication Archive Assistant",
+    "citation_format": "[{magazine_title}, Issue {issue_date}, Page {page_number}, {model_name}]",
+    "query_intents": [
+      "model_lookup",
+      "pose_search",
+      "visual_attribute_filter",
+      "theme_filter",
+      "vital_stats_filter",
+      "photographer_filter",
+      "cross_publication_search",
+      "ad_and_casting_search",
+      "spread_search"
+    ]
+  }
+}

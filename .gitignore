@@ -1,31 +1,59 @@
-# Ignore all PDF files anywhere in the repository (copyrighted wargaming manuals)
+# Copyrighted PDFs / Large Document Binaries
 *.pdf
-
-# Exception: Do NOT ignore PDFs in the insurance policies directory
-!data/policies/
 !data/policies/*.pdf
 
-# Standard Python ignores
+# Python bytecode and caches
 __pycache__/
 *.py[cod]
 *$py.class
-venv/
-.env
+*.so
+.Python
 
-# Vector databases and large indexed data
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Environment configurations
+.env
+.env.local
+.env.*.local
+
+# Vector databases and runtime indexed artifacts
 data/chroma/
 data/chromadb/
+chroma/
 data/logs/
 data/entities/
+backups/
 
-# Cache and testing directories
+# Visual Media & Scanned Magazine Assets
+data/PB/
+data/images/
+
+# Testing and coverage caches
 .pytest_cache/
 .coverage
 htmlcov/
+.tox/
 
-# Local databases and backups
-chroma/
-backups/
+# Scratch & temporary runtime outputs
+scratch/
+rag_output_*.json
+run_rag_query*.py
+*.log
+*.tmp
+*.html
 
-*.
+# IDE and OS metadata
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# State events
 state/event_log/*

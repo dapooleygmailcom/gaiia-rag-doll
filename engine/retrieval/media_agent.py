@@ -272,10 +272,10 @@ class MediaAgent:
             raw_spread_path = meta.get("spread_image_path", "")
             raw_thumb_path = meta.get("thumbnail_path", "")
             
-            # Format file URI for Windows clickable links
-            img_uri = "file:///" + raw_img_path.replace("\\", "/") if raw_img_path else "#"
-            spread_uri = "file:///" + raw_spread_path.replace("\\", "/") if raw_spread_path else None
-            thumb_uri = "file:///" + raw_thumb_path.replace("\\", "/") if raw_thumb_path else None
+            # Format normalized path for markdown links
+            img_uri = raw_img_path.replace("\\", "/") if raw_img_path else "#"
+            spread_uri = raw_spread_path.replace("\\", "/") if raw_spread_path else None
+            thumb_uri = raw_thumb_path.replace("\\", "/") if raw_thumb_path else None
             
             cover_badge = " 🌟 [Cover Girl]" if is_cover else ""
             issue_label = f" ({issue_date})" if issue_date else ""

@@ -183,6 +183,13 @@ RULES_TEST_CASES = [
         "expected_keywords": ["crewed", "hero", "bracketed", "doubled", "17.4"],
         "expected_rule": "10.45"
     },
+    {
+        "id": 21,
+        "category": "multi_hop",
+        "query": "Quote: 17.1 LATERAL FLANKING FIRE: Flanking Fire can originate at any Relative Range from a group whose last placed \"Flank\" Movement card was played sideways and remains in play at the end of the turn in which it was played. Does the flanking unit suffer from moving fire penalty? Does flanking stop once the flanking unit enters some terrain?",
+        "expected_keywords": ["moving fire", "halved", "doubled", "17.4", "17.41", "terrain"],
+        "expected_rule": "17.41"
+    },
 ]
 
 

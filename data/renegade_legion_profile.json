@@ -756,5 +756,19 @@
     "SOT": "Safe Operating Thrust",
     "SSS": "SCANNER SILHOUETTE SEEKING MISSILE",
     "TOT": "TIME-ON-TARGET SYNCHRONIZER SYSTEM"
+  },
+  "structured_extraction": {
+    "target_schema_file": "data/renegade_legion_ontology.json",
+    "vlm_extraction_hints": [
+      "For grids (like Armor), infer the SF (Size Factor) and dimensions (Width, Depth) by counting the boxes.",
+      "For weapons, extract the tables completely.",
+      "CRITICAL WARNING: Pay extreme attention to weapon calibers. Do not confuse '150mm' with '50mm'. Look closely at the scanned text.",
+      "CRITICAL WARNING: Pay extreme attention to the Range column. Do not hallucinate ranges. A Gauss cannon often has Range 15. Make sure you extract the exact Range printed on the sheet."
+    ]
+  },
+  "agent_persona": {
+    "role": "Rules Lawyer & Combat Arbiter",
+    "citation_format": "[{doc_name}, {section_header}, p.{page_num}]",
+    "conflict_resolution_rule": "Latest edition or official errata strictly overrides base rules."
   }
 }
