@@ -254,10 +254,42 @@ def search_policies(query, carriers=None, n_results=5):
         print(f"Failed to query ChromaDB for policies: {e}")
         return "Error querying policy database."
 
-def compare_policies(query, carriers=None):
+def build_policy_comparison_prompt(profile, query, context):
+    """Construct dynamic comparative analysis prompt from DomainProfile."""
+    role = profile.agent_persona.role if (profile and profile.agent_persona and profile.agent_persona.role) else "expert insurance analyst"
+    domain_name = profile.name if profile else "Home & Contents Insurance"
+    citation_fmt = profile.agent_persona.citation_format if (profile and profile.agent_persona) else "[Carrier, Page X, Section: Y]"
+
+    prompt = f"""You are an {role} for "{domain_name}".
+Analyze and compare the provided policy extracts below to answer the user's comparison question.
+
+CRITICAL INSTRUCTIONS:
+1. Organize your response clearly. Where applicable, use a Markdown table to compare features, limits, and exclusions across the carriers/entities.
+2. Cite the source document, page numbers, and specific section names for EVERY detail you include using format: {citation_fmt}
+3. If the information is present in a SUPPORTING CROSS-REFERENCE section, note that you traced the reference.
+4. If the information is not present in the extracts for a carrier, explicitly state "Not mentioned in provided extracts".
+
+Retrieved Policy Extracts:
+{context}
+
+User Comparison Question: {query}
+
+Detailed Side-by-Side Comparison:"""
+    return prompt
+
+
+def compare_policies(query, carriers=None, profile_path=None):
     """
-    Query the policies in ChromaDB and use Llama3 to generate a comparative analysis.
+    Synthesize a comparative answer using Qwen 2.5:14b based on retrieved context.
     """
+    profile = None
+    if profile_path and os.path.exists(profile_path):
+        from engine.models.domain_profile import load_domain_profile
+        profile = load_domain_profile(profile_path)
+    else:
+        from engine.ingestion.ingest_policies import get_default_policy_profile
+        profile = get_default_policy_profile()
+
     print(f"Analyzing comparative query: '{query}'")
     if carriers:
         print(f"Filtering by carriers: {carriers}")
@@ -272,22 +304,7 @@ def compare_policies(query, carriers=None):
     if context == "No matching policy documents found.":
         return "I could not find any matching policy details to compare.", context
         
-    prompt = f"""
-    You are an expert insurance analyst. Analyze and compare the provided Home & Contents policy extracts below to answer the user's comparison question.
-    
-    CRITICAL INSTRUCTIONS:
-    1. Organize your response clearly. Where applicable, use a Markdown table to compare features, limits, and exclusions across the carriers.
-    2. Cite the source document, page numbers, and specific section names for EVERY detail you include (e.g., "AAMI Page 12, Section: Exclusions").
-    3. If the information is present in a SUPPORTING CROSS-REFERENCE section, note that you traced the reference (e.g., "Allianz Page 40 referencing Page 33").
-    4. If the information is not present in the extracts for a carrier, explicitly state "Not mentioned in provided extracts".
-    
-    Retrieved Policy Extracts:
-    {context}
-    
-    User Comparison Question: {query}
-    
-    Detailed Side-by-Side Comparison:
-    """
+    prompt = build_policy_comparison_prompt(profile, query, context)
     
     try:
         response = ollama.generate(model="qwen2.5:14b", prompt=prompt)

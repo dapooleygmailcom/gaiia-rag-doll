@@ -18,6 +18,27 @@ FILENAME_TO_CARRIER = {
     "POL1388TIO.pdf": "TIO"
 }
 
+_default_policy_profile = None
+
+def get_default_policy_profile():
+    global _default_policy_profile
+    if _default_policy_profile is None:
+        from engine.models.domain_profile import load_domain_profile
+        prof_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../data/home_insurance_profile.json"))
+        if os.path.exists(prof_path):
+            _default_policy_profile = load_domain_profile(prof_path)
+    return _default_policy_profile
+
+def get_carrier_for_doc(fname, profile=None):
+    """Resolve carrier/publisher name from DomainProfile metadata, with fallback."""
+    if profile is None:
+        profile = get_default_policy_profile()
+    if profile and profile.documents and fname in profile.documents:
+        doc_meta = profile.documents[fname]
+        if doc_meta.carrier:
+            return doc_meta.carrier
+    return FILENAME_TO_CARRIER.get(fname, os.path.splitext(fname)[0])
+
 def setup_vector_db():
     print("Initializing ChromaDB at:", CHROMA_DB_DIR)
     client = chromadb.PersistentClient(path=CHROMA_DB_DIR)

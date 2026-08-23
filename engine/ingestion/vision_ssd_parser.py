@@ -1,40 +1,85 @@
+"""
+Vision-Assisted Entity & Diagram Record Sheet Parser — Gaiia RAG Doll.
+
+Extracts structured JSON from complex diagrammatic record sheets (e.g. wargame vehicle SSDs,
+engineering schematics) using Vision LLMs guided dynamically by DomainProfile Meta-Contracts.
+"""
+
 import os
+import re
 import json
 import base64
-from google import genai
-from google.genai import types
+from typing import Optional, List, Dict, Any
 
-def parse_ssd_pdf(pdf_path, ontology_path):
-    # Ensure API key is set
+try:
+    from google import genai
+    from google.genai import types
+except ImportError:
+    genai = None
+    types = None
+
+
+def build_ssd_extraction_prompt(ontology: Dict[str, Any], hints: Optional[List[str]] = None, domain_name: str = "wargame") -> str:
+    """
+    Construct a dynamic extraction prompt tailored to the target ontology and domain extraction hints.
+    """
+    hints_text = ""
+    if hints:
+        hints_text = "\n" + "\n".join(f"- {h}" for h in hints) + "\n"
+
+    prompt = f"""You are a structured data extraction agent for "{domain_name}".
+I am providing you with a PDF / image of an entity record sheet or schematic.
+
+Expected JSON Ontology Schema:
+{json.dumps(ontology, indent=2)}
+
+Field-specific extraction guidelines and validation warnings:{hints_text}
+Please extract all data from this document and populate a JSON object that strictly adheres to this ontology schema.
+Output ONLY the raw JSON object matching the ontology:"""
+    return prompt
+
+
+def parse_ssd_pdf(pdf_path: str, ontology_path: Optional[str] = None, profile_path: Optional[str] = None) -> Optional[Dict[str, Any]]:
+    """
+    Parse a record sheet PDF using a Vision LLM driven by the domain ontology and profile hints.
+    """
     if "GEMINI_API_KEY" not in os.environ:
         raise ValueError("GEMINI_API_KEY environment variable not set.")
-    
-    # Initialize the client
-    client = genai.Client()
+    if genai is None:
+        raise ImportError("google-genai library is not installed.")
 
-    # Load the ontology
-    with open(ontology_path, "r", encoding="utf-8") as f:
-        ontology = json.load(f)
+    ontology: Dict[str, Any] = {}
+    hints: List[str] = []
+    domain_name: str = "entity specification"
 
-    # Read the PDF file
+    if profile_path and os.path.exists(profile_path):
+        from engine.models.domain_profile import load_domain_profile
+        profile = load_domain_profile(profile_path)
+        domain_name = profile.name
+        if profile.structured_extraction:
+            hints = profile.structured_extraction.vlm_extraction_hints
+            if profile.structured_extraction.target_schema:
+                ontology = profile.structured_extraction.target_schema
+            elif profile.structured_extraction.target_schema_file:
+                schema_file = profile.structured_extraction.target_schema_file
+                if os.path.exists(schema_file):
+                    with open(schema_file, "r", encoding="utf-8") as f:
+                        ontology = json.load(f)
+
+    if not ontology and ontology_path and os.path.exists(ontology_path):
+        with open(ontology_path, "r", encoding="utf-8") as f:
+            ontology = json.load(f)
+
+    if not ontology:
+        raise ValueError("No ontology schema provided for SSD parsing.")
+
     with open(pdf_path, "rb") as f:
         pdf_data = f.read()
 
-    print(f"Parsing {pdf_path} using Vision LLM...")
+    print(f"Parsing {pdf_path} using Vision LLM for {domain_name}...")
+    prompt = build_ssd_extraction_prompt(ontology, hints=hints, domain_name=domain_name)
 
-    prompt = f"""You are a data extraction agent. I am providing you with a PDF of a wargame entity sheet (like a vehicle record sheet).
-I am also providing you with the expected JSON Ontology for this game:
-{json.dumps(ontology, indent=2)}
-
-Please extract all data from this PDF and populate a JSON object that strictly adheres to this ontology.
-For grids (like Armor), try to infer the SF (Size Factor) and the dimensions (Width, Depth) by counting the boxes.
-For weapons, extract the tables completely.
-CRITICAL WARNING: Pay extreme attention to weapon calibers. Do not confuse '150mm' with '50mm'. Look closely at the scanned text.
-CRITICAL WARNING: Pay extreme attention to the Range column. Do not hallucinate ranges. A Gauss cannon often has Range 15. Make sure you extract the exact Range printed on the sheet.
-
-Output ONLY the raw JSON object."""
-
-    # We use gemini-2.5-pro for vision tasks
+    client = genai.Client()
     response = client.models.generate_content(
         model='gemini-2.5-pro',
         contents=[
@@ -47,13 +92,10 @@ Output ONLY the raw JSON object."""
     )
 
     output = response.text.strip()
-    
-    import re
     json_match = re.search(r'\{.*\}', output, re.DOTALL)
     if json_match:
         try:
             parsed = json.loads(json_match.group())
-            # Save the entity
             basename = os.path.basename(pdf_path).replace(".pdf", "")
             out_file = f"data/entities/{basename}.json"
             os.makedirs(os.path.dirname(out_file), exist_ok=True)
@@ -65,10 +107,17 @@ Output ONLY the raw JSON object."""
             print(f"Failed to parse JSON from Vision LLM: {e}")
     else:
         print("Failed to extract JSON from response.")
-        
+    return None
+
+
 if __name__ == "__main__":
     import sys
     if len(sys.argv) < 3:
-        print("Usage: python vision_ssd_parser.py <pdf_path> <ontology_path>")
+        print("Usage: python vision_ssd_parser.py <pdf_path> <ontology_path_or_profile_path>")
         sys.exit(1)
-    parse_ssd_pdf(sys.argv[1], sys.argv[2])
+    
+    arg = sys.argv[2]
+    if arg.endswith("_profile.json"):
+        parse_ssd_pdf(sys.argv[1], profile_path=arg)
+    else:
+        parse_ssd_pdf(sys.argv[1], ontology_path=arg)

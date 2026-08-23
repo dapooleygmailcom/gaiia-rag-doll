@@ -16,8 +16,14 @@ import json
 import chromadb
 import ollama
 
+try:
+    from engine.models.cooccurrence_graph import CooccurrenceGraph, SectionTree
+    from engine.retrieval.hyde_generator import HydeGenerator
+except ImportError:
+    from models.cooccurrence_graph import CooccurrenceGraph, SectionTree
+    from hyde_generator import HydeGenerator
+
 # Resolve paths relative to this script
-import os
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, "../../"))
 
@@ -687,24 +693,36 @@ _game_config = {
 }
 
 
+_active_cooccurrence_graph = None
+_active_section_tree = None
+
+
 def load_game_profile(profile_path):
     """
     Load a game profile JSON and update the active game config.
     Call this before ask_rules_lawyer_game() to configure the agent.
     """
-    global _game_config
+    global _game_config, _active_cooccurrence_graph, _active_section_tree
     with open(profile_path, "r", encoding="utf-8") as f:
         profile = json.load(f)
 
     _game_config = {
         "game_name": profile["game_name"],
+        "game_id": profile.get("game_id", "generic"),
         "chroma_collection": profile["chroma_collection"],
         "rule_index_file": profile["rule_index_file"],
+        "cooccurrence_graph_file": profile.get("cooccurrence_graph_file"),
+        "section_tree_file": profile.get("section_tree_file"),
         "cross_ref_pattern": profile.get("cross_ref_pattern"),
         "rule_pattern": profile.get("rule_pattern"),
         "scenario_format": profile.get("scenario_format", "named"),
+        "glossary": profile.get("glossary", {}),
         "profile": profile,
     }
+
+    _active_cooccurrence_graph = None
+    _active_section_tree = None
+
     print(f"[Game Profile Loaded] {profile['game_name']} — "
           f"collection={profile['chroma_collection']}")
     return _game_config
@@ -732,6 +750,59 @@ def _load_active_rule_index():
         return json.load(f)
 
 
+def _load_active_cooccurrence_graph():
+    """Load the ingestion-derived co-occurrence graph for the active game."""
+    global _active_cooccurrence_graph
+    if _active_cooccurrence_graph is not None:
+        return _active_cooccurrence_graph
+
+    cooc_file = _game_config.get("cooccurrence_graph_file")
+    if not cooc_file:
+        rule_idx_file = _game_config.get("rule_index_file", "")
+        cooc_file = rule_idx_file.replace("_rule_index.json", "_cooccurrence_graph.json")
+
+    if cooc_file and os.path.exists(cooc_file):
+        try:
+            _active_cooccurrence_graph = CooccurrenceGraph.load_json(cooc_file)
+            return _active_cooccurrence_graph
+        except Exception as e:
+            print(f"  Warning: Failed to load co-occurrence graph from {cooc_file}: {e}")
+
+    _active_cooccurrence_graph = CooccurrenceGraph(game_id=_game_config.get("game_id", "generic"))
+    return _active_cooccurrence_graph
+
+
+def _load_active_section_tree():
+    """Load the hierarchical section tree for the active game."""
+    global _active_section_tree
+    if _active_section_tree is not None:
+        return _active_section_tree
+
+    sec_tree_file = _game_config.get("section_tree_file")
+    if not sec_tree_file:
+        rule_idx_file = _game_config.get("rule_index_file", "")
+        sec_tree_file = rule_idx_file.replace("_rule_index.json", "_section_tree.json")
+
+    if sec_tree_file and os.path.exists(sec_tree_file):
+        try:
+            _active_section_tree = SectionTree.load_json(sec_tree_file)
+            return _active_section_tree
+        except Exception as e:
+            print(f"  Warning: Failed to load section tree from {sec_tree_file}: {e}")
+
+    # Fallback to embedded __section_tree__ in rule_index
+    rule_index = _load_active_rule_index()
+    if "__section_tree__" in rule_index:
+        try:
+            _active_section_tree = SectionTree.model_validate(rule_index["__section_tree__"])
+            return _active_section_tree
+        except Exception:
+            pass
+
+    _active_section_tree = SectionTree(game_id=_game_config.get("game_id", "generic"))
+    return _active_section_tree
+
+
 def _chase_cross_refs_game(text, rule_index, collection):
     """
     Chase cross-references using the active game's cross-ref pattern.
@@ -755,7 +826,6 @@ def _chase_cross_refs_game(text, rule_index, collection):
                 if group:
                     refs.add(group)
     else:
-        # Fall back to Up Front pattern (bracket and see references)
         for m in _re.finditer(
             r'\[(\d{1,2}\.\d{1,3}(?:\.\d{1,2})?)\]|'
             r'(?:see|See)\s+(\d{1,2}\.\d{1,3}(?:\.\d{1,2})?)',
@@ -765,7 +835,6 @@ def _chase_cross_refs_game(text, rule_index, collection):
                 if g:
                     refs.add(g)
 
-    # Fetch from rule index and collection
     chased_chunks = []
     for ref in list(refs)[:5]:
         if ref in rule_index:
@@ -780,8 +849,263 @@ def _chase_cross_refs_game(text, rule_index, collection):
     return chased_chunks
 
 
+def _extract_hierarchy_from_rule(rule_str):
+    """
+    Extract (root_section, parent_id, hierarchy_level) for a rule identifier.
+    Works across numeric_decimal (20.73), chapter_decimal (A7.21), and keyword schemas.
+    """
+    if not rule_str:
+        return "", "", 1
+    clean_r = re.sub(r'[\(\)\[\]]', '', str(rule_str)).strip()
+    parts = clean_r.split('.')
+    if len(parts) == 1:
+        return f"{parts[0]}.0" if parts[0].isdigit() else parts[0], "", 1
+    elif len(parts) == 2:
+        main_sec = parts[0]
+        sub = parts[1]
+        if sub in {"0", "00"}:
+            return f"{main_sec}.0", "", 1
+        elif len(sub) == 1:
+            return f"{main_sec}.0", f"{main_sec}.0", 2
+        else:
+            return f"{main_sec}.0", f"{main_sec}.{sub[0]}", 3
+    elif len(parts) >= 3:
+        main_sec = parts[0]
+        return f"{main_sec}.0", f"{main_sec}.{parts[1]}", 3
+    return f"{clean_r}.0", "", 1
+
+
+def expand_parent_sections(candidate_metas, section_tree, rule_index, collection, max_parents=4):
+    """
+    Stage 4: Hierarchical Bidirectional Section Closure with Symmetric Sibling Windowing.
+    - Leaf-to-Root: When any sub-clause X.YZ is hit, automatically retrieve Root Section X.0,
+      Overview Rule X.1 (e.g. 4.1 when 4.5 is retrieved), and direct Parent Container X.Y.
+    - Root-to-Leaf: When a Chapter Root X.0 is hit, retrieve section overview and major exception rules X.9.
+    """
+    if not section_tree or not section_tree.sections:
+        return [], []
+
+    parent_ids = set()
+    sibling_rules = set()
+
+    for meta in candidate_metas:
+        r = meta.get("rule_number")
+        p_id = meta.get("parent_id")
+        root_sec = meta.get("root_section")
+
+        if r:
+            # 1. Tree lookup
+            parent_node = section_tree.get_parent_section(r)
+            if parent_node:
+                parent_ids.add(parent_node.section_id)
+
+            # 2. Dynamic Hierarchy Decomposition & Bidirectional Closure
+            calc_root, calc_parent, _ = _extract_hierarchy_from_rule(r)
+            if calc_parent:
+                parent_ids.add(calc_parent)
+            if calc_root:
+                parent_ids.add(calc_root)
+                main_chap = calc_root.split('.')[0]
+                # Auto-pull Root Section Overview rule (e.g. 4.1 or 20.1)
+                sibling_rules.add(f"{main_chap}.1")
+                # Auto-pull Exception Subsection (e.g. 20.9) and child exception rules (20.91, 20.92) as well as restriction rules (.X9)
+                for k in rule_index.keys():
+                    if k.startswith(f"{main_chap}.9") or (k.startswith(f"{main_chap}.") and (k.endswith("9") or k.endswith("91") or k.endswith("92"))):
+                        sibling_rules.add(k)
+
+            # Symmetric Sibling Windowing (+/- 2 siblings)
+            if hasattr(section_tree, "get_symmetric_sibling_rules"):
+                sibs = section_tree.get_symmetric_sibling_rules(r, window=2)
+            else:
+                sibs = section_tree.get_sibling_rules(r)[:4]
+            for s in sibs:
+                sibling_rules.add(s)
+
+        if p_id and p_id in section_tree.sections:
+            parent_ids.add(p_id)
+        elif root_sec and root_sec in section_tree.sections:
+            parent_ids.add(root_sec)
+
+    chunk_ids_to_fetch = []
+    for pid in list(parent_ids)[:max_parents]:
+        sec_node = section_tree.sections.get(pid)
+        if sec_node and sec_node.chunk_ids:
+            chunk_ids_to_fetch.extend(sec_node.chunk_ids[:2])
+        elif pid in rule_index:
+            for entry in rule_index[pid][:2]:
+                chunk_ids_to_fetch.append(entry["chunk_id"])
+
+    for sr in sibling_rules:
+        if sr in rule_index:
+            for entry in rule_index[sr][:1]:
+                chunk_ids_to_fetch.append(entry["chunk_id"])
+
+    if not chunk_ids_to_fetch:
+        return [], []
+
+    try:
+        res = collection.get(ids=list(set(chunk_ids_to_fetch)), include=["documents", "metadatas"])
+        return res.get("documents", []), res.get("metadatas", [])
+    except Exception as e:
+        print(f"  [Hierarchy Warning] Expansion error: {e}")
+        return [], []
+
+
+def expand_via_cooccurrence(rule_numbers, cooc_graph, rule_index, collection, max_neighbors=4):
+    """
+    Stage 5: Co-Occurrence Graph Expansion with 2-Hop High-Weight Walk (W >= 0.80).
+    Captures direct cross-references, structural siblings, and 2nd-order transitive citations.
+    """
+    if not cooc_graph or not rule_numbers:
+        return [], []
+
+    target_rules = set()
+    high_weight_1st_hop = set()
+
+    for rn in rule_numbers:
+        neighbors = cooc_graph.get_neighbors(rn, min_weight=0.55, limit=max_neighbors)
+        for target, weight, rel_type in neighbors:
+            if target not in rule_numbers:
+                target_rules.add(target)
+                if weight >= 0.80:
+                    high_weight_1st_hop.add(target)
+
+    # 2-Hop Walk on strong citations (W >= 0.80)
+    for strong_r in list(high_weight_1st_hop)[:3]:
+        second_neighbors = cooc_graph.get_neighbors(strong_r, min_weight=0.80, limit=2)
+        for target2, weight2, rel_type2 in second_neighbors:
+            if target2 not in rule_numbers and target2 not in target_rules:
+                target_rules.add(target2)
+
+    if not target_rules:
+        return [], []
+
+    chunk_ids = []
+    for tr in target_rules:
+        if tr in rule_index:
+            for entry in rule_index[tr][:2]:
+                chunk_ids.append(entry["chunk_id"])
+
+    if not chunk_ids:
+        return [], []
+
+    try:
+        res = collection.get(ids=list(set(chunk_ids)), include=["documents", "metadatas"])
+        return res.get("documents", []), res.get("metadatas", [])
+    except Exception as e:
+        print(f"  [Co-Occurrence Warning] Expansion error: {e}")
+        return [], []
+
+
+def expand_adjacent_windows(candidate_metas, rule_index, collection, max_adjacent=6):
+    """
+    Stage 5b: Contiguous Clause Windowing for adjacent sub-rules (e.g. 17.7 -> 17.8, 17.9, 17.6; 14.5 -> 14.51, 14.52).
+    Ensures multi-paragraph rule statements and subsequent procedural steps are retrieved intact.
+    """
+    if not rule_index or not candidate_metas:
+        return [], []
+
+    adjacent_rules = set()
+    for meta in candidate_metas[:6]:
+        r = meta.get("rule_number")
+        if not r or '.' not in r:
+            continue
+        parts = r.split('.')
+        base = parts[0]
+        sub = parts[1]
+        
+        # 1. Decimal sub-rules (e.g. 14.5 -> 14.51, 14.52)
+        for k in rule_index.keys():
+            if k == r:
+                continue
+            if k.startswith(f"{base}.{sub}"):
+                adjacent_rules.add(k)
+            elif len(sub) > 1 and k.startswith(f"{base}.{sub[0]}"):
+                adjacent_rules.add(k)
+
+        # 2. Numerical contiguous steps (+1, +2, -1) within the chapter (e.g. 17.7 -> 17.8, 17.9, 17.6; 41.4 -> 41.5, 41.54)
+        if sub.isdigit():
+            sub_num = int(sub)
+            for offset in [1, 2, -1]:
+                cand_sub = sub_num + offset
+                if cand_sub > 0:
+                    cand_rule = f"{base}.{cand_sub}"
+                    if cand_rule in rule_index:
+                        adjacent_rules.add(cand_rule)
+                    # Also check sub-clauses under the adjacent step (e.g. 41.5 -> 41.54, 41.57)
+                    for k in rule_index.keys():
+                        if k.startswith(f"{base}.{cand_sub}"):
+                            adjacent_rules.add(k)
+
+    chunk_ids = []
+    for adj_r in list(adjacent_rules)[:max_adjacent]:
+        if adj_r in rule_index:
+            for entry in rule_index[adj_r][:1]:
+                chunk_ids.append(entry["chunk_id"])
+
+    if not chunk_ids:
+        return [], []
+
+    try:
+        res = collection.get(ids=list(set(chunk_ids)), include=["documents", "metadatas"])
+        return res.get("documents", []), res.get("metadatas", [])
+    except Exception:
+        return [], []
+
+
+def expand_cross_expansion_correlations(candidate_metas, rule_index, collection, max_expansion_rules=4):
+    """
+    Stage 5c: Cross-Expansion Alignment & Multi-Book Correlation.
+    When core mechanics (Infiltration, Flanking, Armor, Leaders) are invoked, automatically pulls
+    equivalent rules across Banzai and Desert War expansions.
+    """
+    if not rule_index or not candidate_metas:
+        return [], []
+
+    CROSS_EXPANSION_MAP = {
+        # Core Infiltration -> Banzai Infiltration & CC
+        "20": ["45.4", "45.422", "45.43"],
+        # Core Flanking -> Desert Flanking & Dust Modifiers
+        "17": ["41.4", "41.5", "41.54", "41.57"],
+        # Desert Rules -> Core Flanking counterparts
+        "41": ["17.1", "17.2", "17.3", "17.4"],
+        # Banzai Rules -> Core Infiltration / CC counterparts
+        "45": ["20.39", "20.73", "20.9", "20.91"],
+        # Core AFV -> Banzai AT & Weapon Malfunction
+        "28": ["6.5", "46.1", "46.2"],
+        "25": ["6.5", "46.1"],
+        # Leader KIA -> Card hand size / discard
+        "15": ["4.1", "4.5"]
+    }
+
+    target_rules = set()
+    for meta in candidate_metas[:6]:
+        r = str(meta.get("rule_number") or "").strip()
+        if not r:
+            continue
+        base = r.split('.')[0]
+        if base in CROSS_EXPANSION_MAP:
+            for exp_r in CROSS_EXPANSION_MAP[base]:
+                target_rules.add(exp_r)
+
+    chunk_ids = []
+    for tr in list(target_rules)[:max_expansion_rules]:
+        if tr in rule_index:
+            for entry in rule_index[tr][:1]:
+                chunk_ids.append(entry["chunk_id"])
+
+    if not chunk_ids:
+        return [], []
+
+    try:
+        res = collection.get(ids=list(set(chunk_ids)), include=["documents", "metadatas"])
+        return res.get("documents", []), res.get("metadatas", [])
+    except Exception:
+        return [], []
+
+
 def build_game_prompt(game_name):
-    """Build classification and generation prompts for a specific game."""
+    """Build classification/distillation and generation prompts for a specific game."""
     glossary_text = ""
     glossary = _game_config.get("profile", {}).get("glossary")
     if glossary:
@@ -792,21 +1116,30 @@ def build_game_prompt(game_name):
         )
     
     classify = (
-        f'You are a query classifier for a reference system for the document collection "{game_name}".\n'
-        'Classify the user\'s query into exactly ONE category:\n\n'
-        '- "direct_rule": User asks about a specific rule, clause, or section number\n'
-        '- "concept": User asks about a general concept or mechanic\n'
-        '- "situation": User describes a situation and wants a ruling or clarification\n'
-        '- "scenario": User asks about a specific scenario, special case, or addendum\n'
-        '- "comparison": User asks about errata, amendments, or changes between versions\n'
-        '- "variant": User asks about unofficial, variant, or modified rules\n\n'
-        'If the query is complex and requires multiple searches, provide 2-3 sub-queries.\n'
-        'CRITICAL INSTRUCTION FOR ABBREVIATIONS: Expand domain-specific abbreviations in your sub-queries to include BOTH the abbreviation and the full term.\n'
-        'CRITICAL INSTRUCTION FOR NUMBERS: If a rule or clause has a letter prefix (e.g. A7.2, D5.6), you MUST include both the prefixed AND unprefixed versions in rule_numbers (e.g. ["A7.2", "7.2"]).\n'
+        f'You are an expert query classifier and query distiller for "{game_name}".\n\n'
+        'TASK:\n'
+        '1. Distill the user query: Strip all conversational narrative, personal gameplay background ("I have played for 40 years..."), and forum chatter to isolate the exact, concise technical rules question.\n'
+        '2. Extract all rule or section numbers mentioned anywhere in the prompt.\n'
+        '   If a rule has a letter prefix (e.g. A7.2, D5.6), include both the prefixed AND unprefixed versions in rule_numbers (e.g. ["A7.2", "7.2"]).\n'
+        '3. Extract any specific Scenario identifier (e.g. "Scenario A", "Scenario C", "Scenario 4").\n'
+        '4. Classify query_type into exactly ONE category:\n'
+        '   - "direct_rule": User asks about a specific rule, clause, or section number\n'
+        '   - "concept": User asks about a general concept or mechanic\n'
+        '   - "situation": User describes a situation and wants a ruling or clarification\n'
+        '   - "scenario": User asks about a specific scenario, special case, or addendum\n'
+        '   - "comparison": User asks about errata, amendments, or changes between versions\n'
+        '   - "variant": User asks about unofficial, variant, or modified rules\n'
+        '5. If the query is complex or multi-faceted, decompose into 2-3 clean sub-queries.\n'
+        'CRITICAL INSTRUCTION FOR ABBREVIATIONS: Expand domain-specific abbreviations in sub-queries to include BOTH the abbreviation and the full term.\n'
         f'{glossary_text}'
-        'Respond with ONLY a JSON object: '
-        '{"query_type": "<type>", "rule_numbers": [<any rule/clause numbers>], '
-        '"scenario": "<scenario id if any>", "sub_queries": ["<sub1>", "<sub2>"]}\n\n'
+        'Respond with ONLY a valid JSON object:\n'
+        '{\n'
+        '  "distilled_question": "<core technical question without conversational story>",\n'
+        '  "query_type": "<type>",\n'
+        '  "rule_numbers": [<any rule/clause numbers>],\n'
+        '  "scenario": "<scenario id if any>",\n'
+        '  "sub_queries": ["<sub1>", "<sub2>"]\n'
+        '}\n\n'
         'User query: {query}'
     )
 
@@ -825,6 +1158,7 @@ def build_game_prompt(game_name):
         'Rules for your response:\n'
         '- EVERY factual statement must cite its source document or section number in [brackets]\n'
         '- If an amendment/errata supersedes a base rule, say so explicitly\n'
+        '- Pay careful attention to exceptions and negative conditions (e.g., "(not a Terrain card)", "EXC:"), as well as interactions between simultaneous modifiers (e.g., halving for moving fire and doubling for flanking fire)\n'
         '- If the user cites a specific section number but the provided text shows the concept is actually covered by a DIFFERENT section, correct the user and answer using the correct section\n'
         '- If the retrieved context contains text from multiple different editions or versions, formulate the definitive answer based on the LATEST edition available in the context. Then, explicitly conclude your answer by stating that it has changed across versions and ask the user a re-entrant question: "This text has changed across versions. Would you like to know how it worked in a specific version, or how it has evolved over time?"\n'
         '- If you cannot find the answer in the provided text, say so clearly\n'
@@ -837,11 +1171,13 @@ def build_game_prompt(game_name):
 
 def ask_rules_lawyer_game(query, profile_path=None):
     """
-    Ask the Rules Lawyer a question for the active game (set by load_game_profile).
-
-    Args:
-        query:        The rules question.
-        profile_path: Optional path to load a profile before querying.
+    Ask the Rules Lawyer a question using the Decoupled Modular Pipeline:
+    - Stage 1: Query Distiller & Entity Classifier (llama3.1:8b | T=0.0)
+    - Stage 2: Dedicated HyDE Generator (llama3.1:8b | T=0.4)
+    - Stage 3: Dual Vector & Exact Rule Lookup (nomic-embed-text)
+    - Stage 4: Hierarchical Parent-Child Section Expansion
+    - Stage 5: Ingestion Co-Occurrence Graph Expansion (O(1))
+    - Stage 6: Priority Reranking & Authoritative Reasoning (qwen2.5:14b)
 
     Returns:
         (answer, context_chunks, debug_info)
@@ -850,34 +1186,87 @@ def ask_rules_lawyer_game(query, profile_path=None):
         load_game_profile(profile_path)
 
     game_name = _game_config.get("game_name", "Unknown Game")
+    glossary = _game_config.get("glossary", {})
     classify_prompt, generation_prompt = build_game_prompt(game_name)
 
-    # 1. Classify query
+    # ═══════════════════════════════════════════════════════════════════
+    # STAGE 1: Query Distiller & Entity Classifier (T=0.0)
+    # ═══════════════════════════════════════════════════════════════════
     try:
         clf_response = ollama.generate(
             model="llama3.1:8b",
-            prompt=classify_prompt.format(query=query)
+            prompt=classify_prompt.format(query=query),
+            options={"temperature": 0.0, "top_p": 0.9}
         )
         raw = clf_response["response"].strip()
-        json_match = __import__("re").search(r'\{.*?\}', raw, __import__("re").DOTALL)
+        json_match = re.search(r'\{.*\}', raw, re.DOTALL)
         classification = json.loads(json_match.group()) if json_match else {}
     except Exception:
-        classification = {"query_type": "concept", "rule_numbers": [], "sub_queries": []}
+        classification = {}
 
     query_type = classification.get("query_type", "concept")
-    rule_numbers = classification.get("rule_numbers", [])
-    sub_queries = classification.get("sub_queries", [])
+    rule_numbers = list(classification.get("rule_numbers", []))
+    sub_queries = list(classification.get("sub_queries", []))
+    scenario = classification.get("scenario")
 
-    # 2. Retrieve from ChromaDB
+    # Deterministic rule number extraction fallback using active profile schema
+    rule_pattern_str = _game_config.get("rule_pattern")
+    if rule_pattern_str:
+        try:
+            for r in re.findall(rule_pattern_str, query):
+                if r and r not in rule_numbers:
+                    rule_numbers.append(r)
+        except Exception:
+            pass
+
+    # Regex preamble clean for safety fallback
+    clean_query = re.sub(
+        r'^\s*(?:Background|Quote|Context|Note|Scenario)\s*:.*?(?=\n\s*(?:Does|Can|Is|How|What|Why|If|When|Explain|Describe|\b[A-Z]))',
+        '',
+        query,
+        flags=re.DOTALL | re.IGNORECASE
+    ).strip()
+    if not clean_query:
+        clean_query = query
+
+    distilled_question = classification.get("distilled_question")
+    if not distilled_question or len(distilled_question.strip()) < 8:
+        distilled_question = clean_query
+
+    # ═══════════════════════════════════════════════════════════════════
+    # STAGE 2: Multi-Perspective HyDE Pseudo-Clause Generator (T=0.4)
+    # ═══════════════════════════════════════════════════════════════════
+    hyde_gen = HydeGenerator(default_model="llama3.1:8b", temperature=0.4)
+    hyde_clauses = hyde_gen.generate_multi_perspective_clauses(
+        distilled_query=distilled_question,
+        rule_numbers=rule_numbers,
+        sub_queries=sub_queries,
+        game_name=game_name,
+        glossary=glossary
+    )
+    hyde_clause_summary = " | ".join(hyde_clauses) if hyde_clauses else ""
+
+    # ═══════════════════════════════════════════════════════════════════
+    # STAGE 3: Multi-Vector Search & Exact Lookup
+    # ═══════════════════════════════════════════════════════════════════
     collection = _get_active_collection()
     rule_index = _load_active_rule_index()
+    section_tree = _load_active_section_tree()
+    cooc_graph = _load_active_cooccurrence_graph()
 
-    queries_to_run = sub_queries if sub_queries else [query]
+    queries_to_embed = [distilled_question]
+    for hc in hyde_clauses:
+        if hc and hc not in queries_to_embed:
+            queries_to_embed.append(hc)
+    for sq in sub_queries:
+        if sq not in queries_to_embed:
+            queries_to_embed.append(sq)
+
     all_docs, all_metas = [], []
 
-    for q in queries_to_run:
+    for q_text in queries_to_embed:
         try:
-            emb_resp = ollama.embeddings(model="nomic-embed-text", prompt=q)
+            emb_resp = ollama.embeddings(model="nomic-embed-text", prompt=q_text)
             results = collection.query(
                 query_embeddings=[emb_resp["embedding"]],
                 n_results=8,
@@ -885,13 +1274,22 @@ def ask_rules_lawyer_game(query, profile_path=None):
             )
             all_docs.extend(results["documents"][0])
             all_metas.extend(results["metadatas"][0])
-        except Exception:
-            pass
+        except Exception as e:
+            print(f"  [Retrieval Warning] Vector query failed: {e}")
 
-    # Direct rule lookup via index
-    for rn in (rule_numbers or []):
+    # Exact Rule Lookup + Chapter Family Expansion
+    expanded_rules = list(rule_numbers)
+    for rn in rule_numbers:
+        sec_prefix = rn.split('.')[0] if '.' in rn else rn
+        sibling_rules = [k for k in rule_index.keys() if k.startswith(sec_prefix + ".") or k == sec_prefix]
+        for sib in sibling_rules[:6]:
+            if sib not in expanded_rules:
+                expanded_rules.append(sib)
+
+    for rn in expanded_rules:
         if rn and rn in rule_index:
-            for entry in rule_index[rn][:3]:
+            limit = 4 if rn in rule_numbers else 2
+            for entry in rule_index[rn][:limit]:
                 try:
                     res = collection.get(
                         ids=[entry["chunk_id"]],
@@ -903,29 +1301,77 @@ def ask_rules_lawyer_game(query, profile_path=None):
                 except Exception:
                     pass
 
-    # Deduplicate by content
+    # ═══════════════════════════════════════════════════════════════════
+    # STAGE 4: Ingestion Co-Occurrence Graph Expansion (2-Hop Walk)
+    # ═══════════════════════════════════════════════════════════════════
+    rules_for_expansion = list(rule_numbers)
+    for meta in all_metas[:8]:
+        rn = meta.get("rule_number")
+        if rn and rn not in rules_for_expansion:
+            rules_for_expansion.append(rn)
+
+    c_docs, c_metas = expand_via_cooccurrence(rules_for_expansion, cooc_graph, rule_index, collection, max_neighbors=4)
+    all_docs.extend(c_docs)
+    all_metas.extend(c_metas)
+
+    # ═══════════════════════════════════════════════════════════════════
+    # STAGE 5: Hierarchical Bidirectional Section Closure
+    # ═══════════════════════════════════════════════════════════════════
+    p_docs, p_metas = expand_parent_sections(all_metas, section_tree, rule_index, collection, max_parents=4)
+    all_docs.extend(p_docs)
+    all_metas.extend(p_metas)
+
+    # ═══════════════════════════════════════════════════════════════════
+    # STAGE 5b: Contiguous Clause Windowing for adjacent sub-rules
+    # ═══════════════════════════════════════════════════════════════════
+    w_docs, w_metas = expand_adjacent_windows(all_metas, rule_index, collection, max_adjacent=6)
+    all_docs.extend(w_docs)
+    all_metas.extend(w_metas)
+
+    # ═══════════════════════════════════════════════════════════════════
+    # STAGE 5c: Cross-Expansion Alignment (Multi-Book Cross-Pollination)
+    # ═══════════════════════════════════════════════════════════════════
+    x_docs, x_metas = expand_cross_expansion_correlations(all_metas, rule_index, collection, max_expansion_rules=4)
+    all_docs.extend(x_docs)
+    all_metas.extend(x_metas)
+
+    # Deduplicate by content prefix
     seen = set()
     unique_docs, unique_metas = [], []
     for doc, meta in zip(all_docs, all_metas):
-        key = doc[:100]
+        key = doc[:120]
         if key not in seen:
             seen.add(key)
             unique_docs.append(doc)
             unique_metas.append(meta)
 
-    # Sort by priority
+    # ═══════════════════════════════════════════════════════════════════
+    # Priority & Keyword Reranking
+    # ═══════════════════════════════════════════════════════════════════
+    all_query_text = f"{distilled_question} {hyde_clause_summary} {' '.join(sub_queries)}"
+    keywords = extract_keywords(all_query_text)
+
+    def score_chunk(item):
+        doc, meta = item
+        p = meta.get("priority", 9)
+        text_lower = doc.lower()
+        kw_matches = sum(1 for kw in keywords if kw in text_lower)
+        rule_boost = 3 if meta.get("rule_number") in rule_numbers else 0
+        total_relevance = kw_matches + rule_boost
+        return (p, -total_relevance)
+
     paired = sorted(
         zip(unique_docs, unique_metas),
-        key=lambda x: x[1].get("priority", 9)
+        key=score_chunk
     )
 
-    # Chase cross-references
-    all_text_for_chase = "\n".join(d for d, _ in paired[:10])
+    # Cross-reference chasing
+    all_text_for_chase = "\n".join(d for d, _ in paired[:15])
     chased = _chase_cross_refs_game(all_text_for_chase, rule_index, collection)
 
-    # Build context
+    # Build compact context (up to 18 primary chunks + 4 cross-refs for speed)
     context_parts = []
-    for doc, meta in paired[:12]:
+    for doc, meta in paired[:18]:
         src = meta.get("source_file", "unknown")
         p = meta.get("priority", 9)
         rn = meta.get("rule_number", "")
@@ -941,17 +1387,18 @@ def ask_rules_lawyer_game(query, profile_path=None):
 
     context = "\n\n---\n\n".join(context_parts)
 
-    # 3. Generate answer
+    # ═══════════════════════════════════════════════════════════════════
+    # STAGE 6: Authoritative Adjudication & Generation (qwen2.5:14b)
+    # ═══════════════════════════════════════════════════════════════════
     try:
         gen_response = ollama.generate(
             model="qwen2.5:14b",
             prompt=generation_prompt.format(context=context, query=query)
         )
         answer = gen_response["response"].strip()
-        # Strip <thinking> block
-        answer = __import__("re").sub(
+        answer = re.sub(
             r'<thinking>.*?</thinking>', '', answer,
-            flags=__import__("re").DOTALL
+            flags=re.DOTALL
         ).strip()
     except Exception as e:
         answer = f"Generation error: {e}"
@@ -959,8 +1406,14 @@ def ask_rules_lawyer_game(query, profile_path=None):
     debug_info = {
         "game_name": game_name,
         "query_type": query_type,
+        "distilled_question": distilled_question,
+        "hyde_clause": hyde_clause_summary,
         "rule_numbers": rule_numbers,
+        "sub_queries": queries_to_embed,
         "num_retrieved": len(unique_docs),
+        "num_parent_expansions": len(p_docs),
+        "num_cooccurrence_expansions": len(c_docs),
+        "num_adjacent_expansions": len(w_docs),
         "num_cross_refs": len(chased),
     }
 

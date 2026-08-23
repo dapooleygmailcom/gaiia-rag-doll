@@ -9,17 +9,31 @@ Chunking is rule-number-aware, preserving Q&A blocks and cross-references.
 """
 
 import os
+import sys
 import re
 import json
 import fitz  # PyMuPDF
 import chromadb
 import ollama
 
+# Ensure project root is in sys.path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+try:
+    from engine.models.cooccurrence_graph import CooccurrenceGraph, SectionTree
+except ImportError:
+    from models.cooccurrence_graph import CooccurrenceGraph, SectionTree
+
 DATA_DIR = "data/upfront"
 TEXT_DIR = "data/upfront_text"
 CHROMA_DB_DIR = "data/chroma"
 CHROMA_COLLECTION = "upfront-rules-semantic"
 RULE_INDEX_FILE = "data/upfront_rule_index.json"
+COOCCURRENCE_GRAPH_FILE = "data/upfront_cooccurrence_graph.json"
+SECTION_TREE_FILE = "data/upfront_section_tree.json"
 
 # ═══════════════════════════════════════════════════════════════════
 # Document Classification
@@ -537,9 +551,35 @@ def chunk_core_rules(text, source_file):
 # Chunk Builder & Helpers
 # ═══════════════════════════════════════════════════════════════════
 
+def _extract_hierarchy_from_rule(rule_str):
+    """
+    Extract (root_section, parent_id, hierarchy_level) for a rule identifier.
+    Works across numeric_decimal (20.73), chapter_decimal (A7.21), and keyword schemas.
+    """
+    if not rule_str:
+        return "", "", 1
+    clean_r = re.sub(r'[\(\)\[\]]', '', str(rule_str)).strip()
+    parts = clean_r.split('.')
+    if len(parts) == 1:
+        return f"{parts[0]}.0" if parts[0].isdigit() else parts[0], "", 1
+    elif len(parts) == 2:
+        main_sec = parts[0]
+        sub = parts[1]
+        if sub in {"0", "00"}:
+            return f"{main_sec}.0", "", 1
+        elif len(sub) == 1:
+            return f"{main_sec}.0", f"{main_sec}.0", 2
+        else:
+            return f"{main_sec}.0", f"{main_sec}.{sub[0]}", 3
+    elif len(parts) >= 3:
+        main_sec = parts[0]
+        return f"{main_sec}.0", f"{main_sec}.{parts[1]}", 3
+    return f"{clean_r}.0", "", 1
+
+
 def _build_chunk(lines, source_file, doc_type, priority, section_path,
                  subsection, rule_number, page, scenario=None):
-    """Build a chunk dictionary with full metadata."""
+    """Build a chunk dictionary with full metadata including hierarchical section context."""
     text = '\n'.join(lines)
     
     # Extract rule numbers mentioned in the text
@@ -563,6 +603,9 @@ def _build_chunk(lines, source_file, doc_type, priority, section_path,
     detected_scenarios = detect_scenario(text)
     if not scenario and detected_scenarios:
         scenario = detected_scenarios[0]
+
+    # Hierarchical tagging
+    root_section, parent_id, hierarchy_level = _extract_hierarchy_from_rule(primary_rule)
     
     # Build the enriched text with section context header
     header = f"[Doc: {doc_type}] [Section: {section_path}]"
@@ -581,6 +624,9 @@ def _build_chunk(lines, source_file, doc_type, priority, section_path,
         "content_type": content_type,
         "page": page,
         "priority": priority,
+        "root_section": root_section,
+        "parent_id": parent_id,
+        "hierarchy_level": hierarchy_level,
     }
     
     # ChromaDB metadata must be flat — store rule_number and scenario as strings
@@ -598,7 +644,10 @@ def _build_chunk(lines, source_file, doc_type, priority, section_path,
         "metadata": metadata,
         "rule_number": primary_rule,
         "cross_refs": cross_refs,
-        "all_rule_numbers": rule_numbers
+        "all_rule_numbers": rule_numbers,
+        "root_section": root_section,
+        "parent_id": parent_id,
+        "hierarchy_level": hierarchy_level
     }
 
 
@@ -742,6 +791,138 @@ def build_rule_index(all_chunks):
     return index
 
 
+def build_section_tree(all_chunks, game_id="generic"):
+    """Build a SectionTree representing the document section hierarchy and rule mappings."""
+    tree = SectionTree(game_id=game_id)
+    for chunk_id, chunk in all_chunks.items():
+        meta = chunk.get("metadata", {})
+        rule_num = chunk.get("rule_number")
+        root_sec = meta.get("root_section", "")
+        sec_path = meta.get("section_path", "")
+        parent_id = meta.get("parent_id", "")
+        doc_type = meta.get("doc_type", "core_rules")
+        priority = meta.get("priority", 1)
+
+        if root_sec:
+            tree.add_section(
+                section_id=root_sec,
+                title=sec_path or root_sec,
+                parent_id=None,
+                level=1,
+                doc_type=doc_type,
+                priority=priority
+            )
+        if parent_id and parent_id != root_sec:
+            tree.add_section(
+                section_id=parent_id,
+                title=parent_id,
+                parent_id=root_sec,
+                level=2,
+                doc_type=doc_type,
+                priority=priority
+            )
+        if rule_num:
+            eff_parent = parent_id or root_sec or "0.0"
+            tree.register_rule(rule_id=rule_num, parent_section_id=eff_parent, chunk_id=chunk_id)
+    return tree
+
+
+def build_ingestion_cooccurrence_graph(all_chunks, rule_index, glossary=None, section_tree=None, game_id="generic"):
+    """
+    Build a rich, document-derived CooccurrenceGraph purely from document contents during ingestion:
+    1. Cross-reference directed citations (W=1.0 forward, W=0.75 reciprocal).
+    2. SectionTree structural siblings & parent-child links (W=0.75).
+    3. Glossary & specialized entity co-occurrence across distinct chapters (PMI scoring W in [0.45, 0.85]).
+    """
+    graph = CooccurrenceGraph(game_id=game_id)
+
+    # 1. Cross-reference edges
+    for chunk_id, chunk in all_chunks.items():
+        src_rule = chunk.get("rule_number")
+        cross_refs = chunk.get("cross_refs", [])
+        if src_rule and cross_refs:
+            for ref in cross_refs:
+                if ref != src_rule:
+                    graph.add_edge(src_rule, ref, weight=1.0, relation_type="cross_reference")
+                    graph.add_edge(ref, src_rule, weight=0.75, relation_type="cross_reference_reciprocal")
+
+    # 2. Structural sibling edges via SectionTree
+    if section_tree:
+        for sec_id, sec_node in section_tree.sections.items():
+            child_rules = sec_node.child_rules
+            if len(child_rules) > 1:
+                for i, r1 in enumerate(child_rules):
+                    for r2 in child_rules[i + 1:]:
+                        graph.add_bidirectional_edge(r1, r2, weight=0.75, relation_type="structural_sibling")
+
+    # 3. Glossary & Domain Entity Co-Occurrence (PMI)
+    domain_terms = set()
+    if glossary and isinstance(glossary, dict):
+        for term, expansion in glossary.items():
+            if len(term) >= 2:
+                domain_terms.add(term.lower())
+            if expansion and len(expansion) > 3:
+                for token in re.findall(r'\b[A-Za-z]{4,}\b', expansion.lower()):
+                    if token not in {"there", "when", "although", "this", "that", "with", "from", "must", "have"}:
+                        domain_terms.add(token)
+
+    entity_pattern = re.compile(
+        r'\b(?:Squad Leader|Close Combat|Flanking Fire|Moving Fire|Relative Range|Morale Check|Buttoned Up|Open Topped|Infiltrator|Sniper|Minefield|Radio|Smoke|Rally|Pinning|Armored Vehicle|AFV|LATW|Ordnance|Discard|Action Phase)\b',
+        re.IGNORECASE
+    )
+
+    rule_terms = {}
+    rule_chapters = {}
+    for chunk_id, chunk in all_chunks.items():
+        r = chunk.get("rule_number")
+        if not r:
+            continue
+        text = chunk.get("text", "").lower()
+        if r not in rule_terms:
+            rule_terms[r] = set()
+
+        for term in domain_terms:
+            if term in text:
+                rule_terms[r].add(term)
+
+        for m in entity_pattern.findall(chunk.get("text", "")):
+            rule_terms[r].add(m.lower())
+
+        root_sec = chunk.get("metadata", {}).get("root_section", "")
+        if root_sec:
+            rule_chapters[r] = root_sec
+
+    rules_list = list(rule_terms.keys())
+    for i, r1 in enumerate(rules_list):
+        chap1 = rule_chapters.get(r1, r1.split('.')[0] if '.' in r1 else r1)
+        terms1 = rule_terms[r1]
+        if len(terms1) < 2:
+            continue
+
+        for r2 in rules_list[i + 1:]:
+            chap2 = rule_chapters.get(r2, r2.split('.')[0] if '.' in r2 else r2)
+            if chap1 == chap2:
+                continue
+
+            terms2 = rule_terms[r2]
+            if len(terms2) < 2:
+                continue
+
+            shared = terms1 & terms2
+            if len(shared) >= 2:
+                union = terms1 | terms2
+                jaccard = len(shared) / len(union) if union else 0.0
+                if jaccard >= 0.12 or len(shared) >= 3:
+                    weight = min(0.85, 0.45 + (jaccard * 0.35) + (len(shared) * 0.05))
+                    graph.add_bidirectional_edge(
+                        r1, r2, weight=round(weight, 3),
+                        relation_type="glossary_pmi",
+                        shared_terms=sorted(list(shared))[:5]
+                    )
+
+    return graph
+
+
 def ingest_all(dry_run=False):
     """
     Main ingestion pipeline.
@@ -848,32 +1029,36 @@ def ingest_all(dry_run=False):
         print(f"     Indexed: {len(chunks)} chunks")
     
     if not dry_run:
-        # Build and save rule number index
+        # Build and save rule number index, section tree, and cooccurrence graph
         print(f"\n{'='*70}")
-        print("Building rule-number lookup index...")
+        print("Building rule-number lookup index & hierarchy tree...")
         rule_index = build_rule_index(all_chunks)
+        section_tree = build_section_tree(all_chunks, game_id="upfront")
+        cooc_graph = build_ingestion_cooccurrence_graph(all_chunks, rule_index, section_tree=section_tree, game_id="upfront")
+
+        # Embed section tree into rule index
+        rule_index["__section_tree__"] = section_tree.model_dump()
         
         with open(RULE_INDEX_FILE, "w", encoding="utf-8") as f:
             json.dump(rule_index, f, indent=2)
         
-        print(f"  Rule numbers indexed: {len(rule_index)}")
+        cooc_graph.save_json(COOCCURRENCE_GRAPH_FILE)
+        section_tree.save_json(SECTION_TREE_FILE)
+
+        print(f"  Rule numbers indexed: {len(rule_index) - 1}")
+        print(f"  Section nodes indexed: {len(section_tree.sections)}")
+        print(f"  Co-occurrence graph edges: {sum(len(edges) for edges in cooc_graph.adjacency.values())}")
         print(f"  Saved to: {RULE_INDEX_FILE}")
+        print(f"  Saved to: {COOCCURRENCE_GRAPH_FILE}")
+        print(f"  Saved to: {SECTION_TREE_FILE}")
         
         # Print top-level stats
         print(f"\n{'='*70}")
         print("INGESTION COMPLETE")
         print(f"  Total chunks indexed: {total_indexed}")
-        print(f"  Unique rule numbers: {len(rule_index)}")
+        print(f"  Unique rule numbers: {len(rule_index) - 1}")
         print(f"  ChromaDB collection: {CHROMA_COLLECTION}")
         print(f"  Rule index: {RULE_INDEX_FILE}")
-        
-        # Show some sample rule lookups
-        print(f"\n  Sample rule index entries:")
-        sample_rules = list(rule_index.keys())[:5]
-        for r in sample_rules:
-            entries = rule_index[r]
-            sources = [f"{e['doc_type']}(P{e['priority']})" for e in entries[:3]]
-            print(f"    Rule {r}: {', '.join(sources)}")
     else:
         print(f"\n{'='*70}")
         print("DRY RUN COMPLETE")
@@ -980,6 +1165,9 @@ def _build_chunk_generic(lines, source_file, doc_type, priority,
         header += f" [Scenario: {scenario}]"
     enriched_text = f"{header}\n{text}"
 
+    # Hierarchical tagging
+    root_section, parent_id, hierarchy_level = _extract_hierarchy_from_rule(primary_rule)
+
     # Metadata
     metadata = {
         "doc_type": doc_type,
@@ -988,6 +1176,9 @@ def _build_chunk_generic(lines, source_file, doc_type, priority,
         "content_type": content_type,
         "page": page,
         "priority": priority,
+        "root_section": root_section,
+        "parent_id": parent_id,
+        "hierarchy_level": hierarchy_level,
     }
     if primary_rule:
         metadata["rule_number"] = primary_rule
@@ -1004,6 +1195,9 @@ def _build_chunk_generic(lines, source_file, doc_type, priority,
         "rule_number": primary_rule,
         "cross_refs": cross_refs,
         "all_rule_numbers": rule_numbers,
+        "root_section": root_section,
+        "parent_id": parent_id,
+        "hierarchy_level": hierarchy_level,
     }
 
 
@@ -1544,21 +1738,47 @@ def ingest_game(profile_path, dry_run=False):
         print(f"     Indexed: {len(chunks)} chunks")
 
     if not dry_run:
-        # Build rule index
+        # Build rule index, section tree, and cooccurrence graph
         print(f"\n{'=' * 70}")
-        print("Building rule-number lookup index...")
+        print("Building rule-number lookup index & hierarchy tree...")
         rule_index = build_rule_index(all_chunks)
+        
+        game_id = profile.get("game_id", "generic")
+        glossary = profile.get("glossary", {})
+        section_tree = build_section_tree(all_chunks, game_id=game_id)
+        cooc_graph = build_ingestion_cooccurrence_graph(all_chunks, rule_index, glossary=glossary, section_tree=section_tree, game_id=game_id)
+
+        # Embed section tree into rule index
+        rule_index["__section_tree__"] = section_tree.model_dump()
 
         with open(rule_index_file, "w", encoding="utf-8") as f:
             json.dump(rule_index, f, indent=2)
 
-        print(f"  Rule numbers indexed: {len(rule_index)}")
-        print(f"  Saved: {rule_index_file}")
+        # Determine cooccurrence graph path
+        cooc_path = profile.get("cooccurrence_graph_file")
+        if not cooc_path:
+            cooc_path = rule_index_file.replace("_rule_index.json", "_cooccurrence_graph.json")
+            if cooc_path == rule_index_file:
+                cooc_path = f"data/{game_id}_cooccurrence_graph.json"
+
+        sec_tree_path = rule_index_file.replace("_rule_index.json", "_section_tree.json")
+        if sec_tree_path == rule_index_file:
+            sec_tree_path = f"data/{game_id}_section_tree.json"
+
+        cooc_graph.save_json(cooc_path)
+        section_tree.save_json(sec_tree_path)
+
+        print(f"  Rule numbers indexed: {len(rule_index) - 1}")
+        print(f"  Section nodes indexed: {len(section_tree.sections)}")
+        print(f"  Co-occurrence graph edges: {sum(len(edges) for edges in cooc_graph.adjacency.values())}")
+        print(f"  Saved rule index: {rule_index_file}")
+        print(f"  Saved co-occurrence graph: {cooc_path}")
+        print(f"  Saved section tree: {sec_tree_path}")
 
         print(f"\n{'=' * 70}")
         print(f"INGESTION COMPLETE — {game_name}")
         print(f"  Total chunks: {total_indexed}")
-        print(f"  Unique rules: {len(rule_index)}")
+        print(f"  Unique rules: {len(rule_index) - 1}")
         print(f"  Collection:   {profile['chroma_collection']}")
     else:
         print(f"\n{'=' * 70}")

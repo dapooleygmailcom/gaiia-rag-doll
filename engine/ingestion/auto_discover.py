@@ -609,6 +609,8 @@ def discover(data_dir, game_name, game_id=None, use_llm=True, output_path=None):
         "text_dir": f"data/{game_id}_text",
         "chroma_collection": f"{game_id}-rules-semantic",
         "rule_index_file": f"data/{game_id}_rule_index.json",
+        "cooccurrence_graph_file": f"data/{game_id}_cooccurrence_graph.json",
+        "section_tree_file": f"data/{game_id}_section_tree.json",
         "rule_schema": schema["name"],
         "rule_pattern": schema["rule_pattern"],
         "cross_ref_pattern": schema["cross_ref_pattern"],
