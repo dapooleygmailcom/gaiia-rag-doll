@@ -11,29 +11,29 @@ Unlike standard RAG pipelines that split text purely by arbitrary character coun
 ```mermaid
 flowchart TD
     subgraph Ingestion Pipeline ["📥 Ingestion & Graph Derivation Pipeline"]
-        A[Document / PDF / Rulebook / Scan] --> B[Schema-Aware Chunker]
-        B --> C1[Hierarchy Decomposition<br/>root_section, parent_id, level]
-        B --> C2[Explicit Citation Linker<br/>Cross-reference extraction]
-        B --> C3[Co-occurrence Derivation<br/>Slide-window & paragraph affinity]
-        C1 --> D[(ChromaDB Vector Store)]
-        C1 --> E[(Rule & Exact Index)]
-        C1 --> F[(Section Tree Hierarchy JSON)]
-        C2 & C3 --> G[(Co-occurrence Graph JSON<br/>121k+ Weighted Edges)]
+        A["Document / PDF / Rulebook / Scan"] --> B["Schema-Aware Chunker"]
+        B --> C1["Hierarchy Decomposition<br/>root_section, parent_id, level"]
+        B --> C2["Explicit Citation Linker<br/>Cross-reference extraction"]
+        B --> C3["Co-occurrence Derivation<br/>Slide-window & paragraph affinity"]
+        C1 --> D[("ChromaDB Vector Store")]
+        C1 --> E[("Rule & Exact Index")]
+        C1 --> F[("Section Tree Hierarchy JSON")]
+        C2 & C3 --> G[("Co-occurrence Graph JSON<br/>121k+ Weighted Edges")]
     end
 
     subgraph Query Pipeline ["🔍 6-Stage Decoupled Retrieval Pipeline"]
-        Q[User Query / Scenario] --> S1[Stage 1: Distillation & Entity Extraction<br/>T=0.0 — llama3.1:8b]
-        S1 --> |Distilled Technical Query| S2[Stage 2: Multi-Perspective HyDE<br/>T=0.4 — Primary & Secondary Clauses]
-        S1 --> |Extracted Rule Citations| S3[Stage 3: Multi-Vector & Exact Index Lookup<br/>nomic-embed-text]
+        Q["User Query / Scenario"] --> S1["Stage 1: Distillation & Entity Extraction<br/>T=0.0 — llama3.1:8b"]
+        S1 --> |Distilled Technical Query| S2["Stage 2: Multi-Perspective HyDE<br/>T=0.4 — Primary & Secondary Clauses"]
+        S1 --> |Extracted Rule Citations| S3["Stage 3: Multi-Vector & Exact Index Lookup<br/>nomic-embed-text"]
         S2 --> S3
         
-        S3 --> S4[Stage 4: Ingestion Graph 2-Hop Walk<br/>O(1) Transitive Citations W >= 0.80]
-        S4 --> S5[Stage 5: Hierarchical Section Closure<br/>Bidirectional Root + Exception Subsections]
-        S5 --> S5b[Stage 5b: Contiguous Sibling Windowing<br/>Symmetric +/- K Decimal Sibling Sub-Rules]
-        S5b --> S5c[Stage 5c: Cross-Expansion Alignment<br/>Core <-> Expansion Multi-Book Bridge]
+        S3 --> S4["Stage 4: Ingestion Graph 2-Hop Walk<br/>O(1) Transitive Citations W >= 0.80"]
+        S4 --> S5["Stage 5: Hierarchical Section Closure<br/>Bidirectional Root + Exception Subsections"]
+        S5 --> S5b["Stage 5b: Contiguous Sibling Windowing<br/>Symmetric +/- K Decimal Sibling Sub-Rules"]
+        S5b --> S5c["Stage 5c: Cross-Expansion Alignment<br/>Core &lt;-&gt; Expansion Multi-Book Bridge"]
         
-        S5c --> S6[Stage 6: Authoritative Adjudicator<br/>qwen2.5:14b — Strict Cited Synthesis]
-        S6 --> Out[Authoritative Ruling with Exact Rule Citations]
+        S5c --> S6["Stage 6: Authoritative Adjudicator<br/>qwen2.5:14b — Strict Cited Synthesis"]
+        S6 --> Out["Authoritative Ruling with Exact Rule Citations"]
     end
 ```
 
@@ -212,16 +212,16 @@ When ingesting visual magazines, pictorial spreads, fashion lookbooks, or art ar
 
 ```mermaid
 flowchart LR
-    PDF[Visual Magazine PDF] --> Prof[DocumentProfiler<br/>Image Area >= 35%]
-    Prof --> Rast[Page Rasterizer<br/>PyMuPDF 150 DPI]
-    Rast --> VLM[Vision Model Analysis<br/>llama3.2-vision / VLM]
-    VLM --> Schema[Structured Scene Metadata JSON]
-    Schema --> Synth[Multi-Attribute Vector Text Synthesis]
-    Synth --> Chroma[(ChromaDB Visual Vectors)]
+    PDF["Visual Magazine PDF"] --> Prof["DocumentProfiler<br/>Image Area >= 35%"]
+    Prof --> Rast["Page Rasterizer<br/>PyMuPDF 150 DPI"]
+    Rast --> VLM["Vision Model Analysis<br/>llama3.2-vision / VLM"]
+    VLM --> Schema["Structured Scene Metadata JSON"]
+    Schema --> Synth["Multi-Attribute Vector Text Synthesis"]
+    Synth --> Chroma[("ChromaDB Visual Vectors")]
     
-    Q[Conversational Visual Query] --> Parse[parse_query_intent<br/>Extracts Filters & Themes]
+    Q["Conversational Visual Query"] --> Parse["parse_query_intent<br/>Extracts Filters & Themes"]
     Parse --> Chroma
-    Chroma --> Agent[MediaAgent<br/>Multi-Attribute Ranked Results]
+    Chroma --> Agent["MediaAgent<br/>Multi-Attribute Ranked Results"]
 ```
 
 ### Key Capabilities:
