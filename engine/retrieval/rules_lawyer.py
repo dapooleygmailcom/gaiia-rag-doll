@@ -878,18 +878,19 @@ def _extract_hierarchy_from_rule(rule_str):
     return f"{clean_r}.0", "", 1
 
 
-def expand_parent_sections(candidate_metas, section_tree, rule_index, collection, max_parents=4):
+def expand_parent_sections(candidate_metas, section_tree, rule_index, collection, max_parents=6):
     """
-    Stage 4: Hierarchical Bidirectional Section Closure with Symmetric Sibling Windowing.
+    Stage 4: Hierarchical Bidirectional Section Closure with Symmetric Sibling and Child Windowing.
     - Leaf-to-Root: When any sub-clause X.YZ is hit, automatically retrieve Root Section X.0,
       Overview Rule X.1 (e.g. 4.1 when 4.5 is retrieved), and direct Parent Container X.Y.
-    - Root-to-Leaf: When a Chapter Root X.0 is hit, retrieve section overview and major exception rules X.9.
+    - Root-to-Leaf: When a Chapter Root or Section X.Y is hit, retrieve all child rules (X.Y1, X.Y2, X.Y3).
     """
     if not section_tree or not section_tree.sections:
         return [], []
 
     parent_ids = set()
     sibling_rules = set()
+    child_rules = set()
 
     for meta in candidate_metas:
         r = meta.get("rule_number")
@@ -902,19 +903,36 @@ def expand_parent_sections(candidate_metas, section_tree, rule_index, collection
             if parent_node:
                 parent_ids.add(parent_node.section_id)
 
+            # Direct section node check for child rules
+            sec_node = section_tree.sections.get(r) or section_tree.sections.get(f"{r}.0")
+            if sec_node:
+                for cr in sec_node.child_rules:
+                    child_rules.add(cr)
+
             # 2. Dynamic Hierarchy Decomposition & Bidirectional Closure
             calc_root, calc_parent, _ = _extract_hierarchy_from_rule(r)
             if calc_parent:
                 parent_ids.add(calc_parent)
+                p_sec = section_tree.sections.get(calc_parent)
+                if p_sec:
+                    for cr in p_sec.child_rules:
+                        sibling_rules.add(cr)
             if calc_root:
                 parent_ids.add(calc_root)
                 main_chap = calc_root.split('.')[0]
                 # Auto-pull Root Section Overview rule (e.g. 4.1 or 20.1)
                 sibling_rules.add(f"{main_chap}.1")
-                # Auto-pull Exception Subsection (e.g. 20.9) and child exception rules (20.91, 20.92) as well as restriction rules (.X9)
+                # Auto-pull Exception Subsection (e.g. 20.9) and child exception rules
                 for k in rule_index.keys():
                     if k.startswith(f"{main_chap}.9") or (k.startswith(f"{main_chap}.") and (k.endswith("9") or k.endswith("91") or k.endswith("92"))):
                         sibling_rules.add(k)
+
+            # Sub-rule prefix expansion from rule_index (e.g. B27.1 -> B27.11, B27.12, B27.13)
+            parts = r.split('.')
+            base = parts[0]
+            for k in rule_index.keys():
+                if k.startswith(f"{r}") or k.startswith(f"{base}.1") or k.startswith(f"{base}.2"):
+                    child_rules.add(k)
 
             # Symmetric Sibling Windowing (+/- 2 siblings)
             if hasattr(section_tree, "get_symmetric_sibling_rules"):
@@ -933,14 +951,19 @@ def expand_parent_sections(candidate_metas, section_tree, rule_index, collection
     for pid in list(parent_ids)[:max_parents]:
         sec_node = section_tree.sections.get(pid)
         if sec_node and sec_node.chunk_ids:
-            chunk_ids_to_fetch.extend(sec_node.chunk_ids[:2])
+            chunk_ids_to_fetch.extend(sec_node.chunk_ids[:4])
         elif pid in rule_index:
             for entry in rule_index[pid][:2]:
                 chunk_ids_to_fetch.append(entry["chunk_id"])
 
-    for sr in sibling_rules:
+    for sr in list(sibling_rules)[:12]:
         if sr in rule_index:
-            for entry in rule_index[sr][:1]:
+            for entry in rule_index[sr][:2]:
+                chunk_ids_to_fetch.append(entry["chunk_id"])
+
+    for cr in list(child_rules)[:16]:
+        if cr in rule_index:
+            for entry in rule_index[cr][:2]:
                 chunk_ids_to_fetch.append(entry["chunk_id"])
 
     if not chunk_ids_to_fetch:
@@ -1152,16 +1175,19 @@ def build_game_prompt(game_name):
         '<thinking>\n'
         'Before answering, work through:\n'
         '1. Which sections directly address this question?\n'
-        '2. Do any errata, amendments, or Q&A entries supersede the base text?\n'
-        '3. Are there cross-references that affect the answer?\n'
-        '4. What is the authoritative final answer?\n'
+        '2. Identify and audit all preconditions, exception clauses ("EXC:"), and negative prerequisites (e.g. "Provided it has not already been...").\n'
+        '3. If the user asks a leading question ("...correct?" or "Can X do Y?"), verify whether the scenario facts meet or violate the rule\'s requirements. Do NOT assume the user\'s premise is true.\n'
+        '4. Do any errata, amendments, or Q&A entries supersede the base text?\n'
+        '5. What is the authoritative final answer?\n'
         '</thinking>\n\n'
         'DOCUMENTS:\n{context}\n\n'
         'QUESTION: {query}\n\n'
         'Rules for your response:\n'
         '- EVERY factual statement must cite its source document or section number in [brackets]\n'
+        '- Pay careful attention to exceptions and negative conditions (e.g., "Provided it has not already been eliminated", "EXC:", "unless")\n'
+        '- When the user asks a leading question (e.g. "Can I do X, correct?"), do not simply agree. Verify all conditions in the rule text against the facts.\n'
+        '- If a rule states "Provided it has not already been eliminated", and the unit was already eliminated in the scenario, state clearly that the unit cannot perform the action and why.\n'
         '- If an amendment/errata supersedes a base rule, say so explicitly\n'
-        '- Pay careful attention to exceptions and negative conditions (e.g., "(not a Terrain card)", "EXC:"), as well as interactions between simultaneous modifiers (e.g., halving for moving fire and doubling for flanking fire)\n'
         '- If the user cites a specific section number but the provided text shows the concept is actually covered by a DIFFERENT section, correct the user and answer using the correct section\n'
         '- If the retrieved context contains text from multiple different editions or versions, formulate the definitive answer based on the LATEST edition available in the context. Then, explicitly conclude your answer by stating that it has changed across versions and ask the user a re-entrant question: "This text has changed across versions. Would you like to know how it worked in a specific version, or how it has evolved over time?"\n'
         '- If you cannot find the answer in the provided text, say so clearly\n'

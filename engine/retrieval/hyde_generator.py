@@ -43,10 +43,20 @@ class HydeGenerator:
 
         glossary_hint = ""
         if glossary:
-            relevant_terms = {
-                k: v for k, v in glossary.items()
-                if k.lower() in distilled_query.lower() or any(term in distilled_query.lower() for term in v.lower().split())
-            }
+            relevant_terms = {}
+            for k, v in glossary.items():
+                if isinstance(v, str):
+                    v_text = v
+                elif isinstance(v, dict):
+                    v_text = " ".join(str(sub_k) for sub_k in v.keys())
+                elif isinstance(v, (list, tuple, set)):
+                    v_text = " ".join(str(item) for item in v)
+                else:
+                    v_text = str(v)
+
+                if k.lower() in distilled_query.lower() or any(term in distilled_query.lower() for term in v_text.lower().split()):
+                    relevant_terms[k] = v
+
             if relevant_terms:
                 glossary_hint = f"Domain Terminology to Incorporate: {json.dumps(relevant_terms)}\n"
 

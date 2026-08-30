@@ -1201,7 +1201,7 @@ def _build_chunk_generic(lines, source_file, doc_type, priority,
     }
 
 
-def chunk_rules_generic(text, source_file, doc_type, priority, patterns):
+def chunk_rules_generic(text, source_file, doc_type, priority, patterns, profile=None):
     """
     Generic rule-boundary chunker driven by a compiled rule pattern.
     Splits on rule number headers detected by the profile regex.
@@ -1210,10 +1210,18 @@ def chunk_rules_generic(text, source_file, doc_type, priority, patterns):
     chunks = []
     lines = text.split("\n")
 
+    # Detect initial chapter from filename if chapter_decimal (e.g. A15-A16vB.pdf -> A, B7-B8vB.pdf -> B, D5-D8vB.pdf -> D)
+    current_chapter = None
+    fname_match = re.match(r"^([A-Z])\d+", source_file)
+    if fname_match:
+        current_chapter = fname_match.group(1).upper()
+
     current_rule = None
     current_section = doc_type.replace("_", " ").title()
     accumulated_lines = []
     current_page = 1
+
+    is_chapter_decimal = bool(profile and profile.get("rule_schema") == "chapter_decimal")
 
     for line in lines:
         # Track page markers
@@ -1222,16 +1230,40 @@ def chunk_rules_generic(text, source_file, doc_type, priority, patterns):
             current_page = int(page_match.group(1))
             continue
 
-        # Detect rule number at start of line
-        # Try matching the rule pattern at line start
         stripped = line.strip()
+
+        # If chapter_decimal schema, detect chapter markers on page/headers:
+        # e.g. "CHAPTER A", "CHAPTER B", "A. INFANTRY", "B. TERRAIN", "C. GUNS", "D. VEHICLES", "E. MISCELLANEOUS", "G. PTO"
+        if is_chapter_decimal:
+            chap_match = re.match(
+                r"^(?:CHAPTER\s+([A-Z])|([A-Z])\.\s+[A-Z\s]{4,}|(?:CHAPTER\s+)?([A-Z])\s*[-–—]\s*[A-Z\s]+)",
+                stripped,
+                re.IGNORECASE
+            )
+            if chap_match:
+                current_chapter = (chap_match.group(1) or chap_match.group(2) or chap_match.group(3)).upper()
+            else:
+                # Also check footer/header markers like "D24", "A10", "B5" alone on line
+                footer_match = re.match(r"^([A-Z])\d{1,3}$", stripped)
+                if footer_match:
+                    current_chapter = footer_match.group(1).upper()
+
+        # Detect rule number at start of line
         rule_match = patterns["rule"].match(stripped)
         if not rule_match:
             # Try anchored version: does line start with a rule number?
             rule_match = re.match(r"^([A-Z]?\d{1,2}\.\d{1,4}(?:\.\d{1,2})?)\s", stripped)
 
         if rule_match:
-            new_rule = rule_match.group(1)
+            raw_rule = rule_match.group(1)
+            # If chapter_decimal and rule starts with digits (e.g. "23.5") but we know current_chapter (e.g. "A"):
+            if is_chapter_decimal and not raw_rule[0].isalpha() and current_chapter:
+                new_rule = f"{current_chapter}{raw_rule}"
+            else:
+                new_rule = raw_rule
+                if is_chapter_decimal and new_rule[0].isalpha():
+                    current_chapter = new_rule[0].upper()
+
             if accumulated_lines and len(" ".join(accumulated_lines)) >= 80:
                 chunk = _build_chunk_generic(
                     accumulated_lines, source_file, doc_type, priority,
@@ -1552,7 +1584,7 @@ def route_chunk_generic(text, source_file, doc_info, profile, patterns):
     if rule_schema == "keyword_header" and doc_type in rule_chunk_types:
         return chunk_keyword_header(text, source_file, doc_type, priority, profile, patterns)
     elif doc_type in rule_chunk_types:
-        return chunk_rules_generic(text, source_file, doc_type, priority, patterns)
+        return chunk_rules_generic(text, source_file, doc_type, priority, patterns, profile=profile)
     elif doc_type in scenario_types:
         return chunk_scenarios_generic(text, source_file, doc_type, priority, profile, patterns)
     else:
