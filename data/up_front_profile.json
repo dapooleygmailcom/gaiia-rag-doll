@@ -8,6 +8,8 @@
   "cooccurrence_graph_file": "data/up_front_cooccurrence_graph.json",
   "section_tree_file": "data/up_front_section_tree.json",
   "rule_schema": "numeric_decimal",
+  "extract_tables": true,
+  "ocr_normalize": true,
   "rule_pattern": "(?:^|\\n)\\s*(\\d{1,2}\\.\\d{1,3}(?:\\.\\d{1,2})?)\\b",
   "cross_ref_pattern": "\\[(\\d{1,2}\\.\\d{1,3}(?:\\.\\d{1,2})?)\\]|(?:see|See|SEE)\\s+(?:\\[)?(\\d{1,2}\\.\\d{1,3}(?:\\.\\d{1,2})?)(?:\\])?|(?:rule|Rule|RULE)\\s+(\\d{1,2}\\.\\d{1,3}(?:\\.\\d{1,2})?)|EXC:\\s*\\[(\\d{1,2}\\.\\d{1,3}(?:\\.\\d{1,2})?)\\]",
   "scenario_format": "letter",
@@ -88,15 +90,16 @@
       "description": "Tournament document",
       "size_mb": 1.67,
       "total_pages": 3,
-      "max_pages": null
+      "max_pages": null,
+      "ocr_required": true
     },
     "up-front-rules.pdf": {
       "doc_type": "unknown",
       "priority": 9,
-      "description": "Unknown document",
+      "description": "Superseded 1983 edition scan",
       "size_mb": 9.65,
       "total_pages": 36,
-      "max_pages": null
+      "max_pages": 0
     }
   },
   "glossary": {
@@ -120,6 +123,12 @@
     "MEN": "When",
     "PIAT": "The PIAT",
     "RALLY": "Pinned",
-    "SHOT": "Anytime"
+    "SHOT": "Anytime",
+    "faction": "nationality side player",
+    "factions": "nationalities sides players",
+    "hand size": "full hand cards dealt 3.5",
+    "cards in hand": "full hand cards dealt nationality 3.5",
+    "hand": "full hand 3.5",
+    "nationality": "German American Russian British Japanese French Italian full hand 3.5"
   }
 }

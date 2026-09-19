@@ -1,0 +1,48 @@
+{
+  "game_name": "Albedo Erma Felna EDF",
+  "game_id": "albedo_rpg",
+  "pipeline_mode": "RULEBOOK_TECHNICAL",
+  "data_dir": "data/misc",
+  "text_dir": "data/misc_text",
+  "chroma_collection": "albedo-rpg-rules-semantic",
+  "rule_index_file": "data/albedo_rpg_rule_index.json",
+  "cooccurrence_graph_file": "data/albedo_rpg_cooccurrence.json",
+  "section_tree_file": "data/albedo_rpg_section_tree.json",
+  "rule_schema": "keyword_header",
+  "rule_pattern": "(?:^|\\n)([A-Z][A-Za-z0-9\\s&\\-]{3,60})(?:\\n|$)",
+  "cross_ref_pattern": "(?:see|See|SEE)\\s+(?:page\\s+\\d+|[A-Z][a-z]+(?:\\s+[A-Z][a-z]+)*)",
+  "scenario_format": "named",
+  "scenario_pattern": "(?:^|\\n)\\s*([A-Z][A-Z\\s]+)\\n",
+  "ocr_required": true,
+  "extract_tables": true,
+  "glossary": {
+    "EDF": "Extra-Planetary Defense Force",
+    "ILR": "Independent Lapine Republic",
+    "STR": "Strength",
+    "CON": "Constitution",
+    "DEX": "Dexterity",
+    "INT": "Intelligence",
+    "WIL": "Willpower",
+    "PER": "Perception",
+    "CHR": "Charisma",
+    "AOB": "Area of Battle",
+    "ROF": "Rate of Fire"
+  },
+  "agent_persona": {
+    "role": "Albedo RPG Rules Arbiter — Erma Felna EDF 2nd Edition",
+    "citation_format": "[ALBEDO, {section}]",
+    "conflict_resolution_rule": "2nd Edition supersedes 1st Edition. Designer notes in sidebars are advisory only and do not override main rule text.",
+    "query_intents": ["direct_rule", "concept", "situation", "comparison", "variant"],
+    "custom_instructions": "This is a science-fiction anthropomorphic RPG set in the Erma Felna EDF universe. Character stats: STR, CON, DEX, INT, WIL, PER, CHR. Combat uses d10 rolls vs. Hit Difficulty value. Weapon penetration is compared against armour absorption ratings. Injuries use a wound location table (d100). Range bands: Point Blank, Short, Medium, Long, Extreme. Morale checks use WIL attribute. Vehicles use separate armour facings."
+  },
+  "documents": {
+    "pdfcoffee.com_albedo-2nd-edition-compressed-pdf-free.pdf": {
+      "doc_type": "core_rules",
+      "priority": 1,
+      "description": "Albedo Erma Felna EDF 2nd Edition complete rulebook — 178-page scanned bitmap",
+      "total_pages": 178,
+      "ocr_required": true,
+      "extract_tables": true
+    }
+  }
+}

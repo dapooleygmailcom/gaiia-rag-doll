@@ -1,0 +1,100 @@
+{
+  "domain_name": "High-Fashion & Luxury Editorial Archive",
+  "domain_id": "fashion_media",
+  "pipeline_mode": "FASHION_EDITORIAL",
+  "data_dir": "data/HB",
+  "chroma_collection": "rag-doll-visual-catalog",
+  "documents": {
+    "Harpers_Bazaar_April_2015_USA.pdf": {
+      "doc_type": "fashion_periodical",
+      "priority": 1,
+      "edition": "2015-04",
+      "publication": "Hearst Communications",
+      "magazine_title": "Harper's Bazaar USA",
+      "issue_date": "April 2015",
+      "description": "Harper's Bazaar April 2015 USA issue scan featuring Julianne Moore, Morgane Polanski, Carolyn Murphy, Terry Richardson, Camilla Akrans"
+    }
+  },
+  "structured_extraction": {
+    "target_schema": {
+      "publication_metadata": {
+        "publication": "string",
+        "magazine_title": "string",
+        "issue_date": "string",
+        "year": "integer",
+        "cover_girl": "string",
+        "cover_taglines": ["string"]
+      },
+      "page_type": "Cover | Table_of_Contents | Feature_Pictorial | Feature_Article | Stockist_Directory | Advertisement | Reader_Letters | Editorial_Masthead | Back_Cover | Other",
+      "page_number": "integer",
+      "story_title": "string | null",
+      "model_name": "string | null",
+      "is_cover_girl": "boolean",
+      "production_and_credits": {
+        "photographer": "string | null",
+        "fashion_editor_stylist": "string | null",
+        "hair": "string | null",
+        "makeup": "string | null",
+        "manicure": "string | null",
+        "shooting_location": "string | null"
+      },
+      "presentation_and_styling": {
+        "pose": "Standing | Reclining | Kneeling | Sitting | Arched_Back | Close_Up | Dynamic_Action | Lying_Down | Other",
+        "pose_description": "string",
+        "scene_environment": "string",
+        "wardrobe": "string",
+        "accessories": ["string"]
+      },
+      "fashion_items": [
+        {
+          "designer": "string",
+          "item": "string",
+          "cut_and_details": "string | null",
+          "color": "string | null",
+          "price_usd": "number | null",
+          "stockist_ref": "string | null"
+        }
+      ],
+      "visual_narrative": "string",
+      "ocr_text": "string"
+    },
+    "vlm_extraction_hints": [
+      "Classify page archetype dynamically: Cover, Table_of_Contents (Highlights, Fashion News, Cover Looks), Feature_Pictorial (fashion editorial well), Stockist_Directory ('Where to Buy'), Advertisement (luxury fashion, cosmetics, fragrances), Editorial_Masthead, or Back_Cover.",
+      "Identify overlapping visual attributes shared across periodicals: model/celebrity subject, body pose (Standing, Reclining, Sitting, Close_Up), scene environment (studio backdrop, interior, outdoor architectural), lighting, and color palette.",
+      "Extract garments, cuts, materials, and accessories (e.g. trench coat, gown, blazer, scarf, clutch, jewellery, lingerie, pumps) along with designer brands (Givenchy, Chanel, Dior, Saint Laurent, Gucci, Fendi) and prices from captions or shopping directories.",
+      "Identify creative credits: photographer, fashion editor/stylist, hair stylist, and makeup artist."
+    ]
+  },
+  "ontology": {
+    "entity_types": [
+      "ModelOrCelebrity",
+      "DesignerBrand",
+      "Photographer",
+      "FashionEditorStylist",
+      "Garment",
+      "Accessory",
+      "Publication",
+      "Issue"
+    ],
+    "glossary": {
+      "TOC": "Table of Contents",
+      "Where to Buy": "Authoritative back-of-book stockist & price directory",
+      "Fabulous at Every Age": "Recurring multi-generational styling section",
+      "The Buzz": "Culture, art, and entertainment editorial preview"
+    }
+  },
+  "agent_persona": {
+    "role": "High-Fashion & Periodical Publication Archive Assistant",
+    "citation_format": "[{magazine_title}, Issue {issue_date}, Page {page_number}, {model_name}]",
+    "query_intents": [
+      "model_lookup",
+      "designer_filter",
+      "wardrobe_accessory_search",
+      "photographer_filter",
+      "price_constraint_search",
+      "pose_search",
+      "editorial_story_search",
+      "ad_lookup"
+    ]
+  }
+}

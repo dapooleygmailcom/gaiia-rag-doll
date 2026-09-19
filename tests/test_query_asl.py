@@ -249,6 +249,26 @@ ASL_TEST_CASES = [
             "Tests the agent's ability to reason about the authority stack itself."
         )
     },
+
+    # ─── Category 9: BGG Forum Questions & Sequence of Play ───
+    {
+        "id": 21,
+        "category": "situation",
+        "query": (
+            "when resolving Defensive First Fire against a moving unit (unit A) that spends 2 MF to enter a hex in LOS of 2 enemy units (B and C), what is the correct resolution?\n"
+            "- Unit B uses First Fire, then Unit C uses First Fire, then both Unit can use Subsequent First Fire to fire on the 2nd MF spent\n"
+            "- Unit B uses First Fire and then its Subsequent First Fire, then Unit C uses First Fire and then its Subsequent First Fire\n"
+            "- a mix of the 2"
+        ),
+        "expected_keywords": ["mix", "First Fire", "Subsequent First Fire", "order"],
+        "expected_rule": "A8.1",
+        "notes": (
+            "BGG thread 3759227: There is no mandatory ordering of DFF from different units/fire groups "
+            "within a single MF expenditure. Defending units may declare and resolve their allowed attacks "
+            "in any order desired (a mix of the 2), one attack at a time."
+        ),
+        "source_url": "https://boardgamegeek.com/thread/3759227/first-fire-and-subsequent-first-fire-sequence"
+    },
 ]
 
 
@@ -319,10 +339,66 @@ def print_test_summary():
         print(f"  ERROR: {e}")
 
 
+def run_single_test(test_id):
+    """Run a specific test case through the Rules Lawyer retrieval engine."""
+    import sys
+    sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+    from engine.retrieval import rules_lawyer
+
+    matching = [tc for tc in ASL_TEST_CASES if tc.get("id") == test_id]
+    if not matching:
+        print(f"Error: No test case found with ID {test_id}")
+        return
+
+    tc = matching[0]
+    print(f"Loading ASL Profile (data/asl_profile.json)...")
+    rules_lawyer.load_game_profile("data/asl_profile.json")
+
+    print("\n" + "=" * 70)
+    print(f"RUNNING ASL TEST CASE #{tc['id']} [{tc.get('category')}]")
+    if tc.get("source_url"):
+        print(f"Source URL: {tc.get('source_url')}")
+    print("=" * 70)
+    print(f"QUERY:\n{tc['query']}\n")
+    print("=" * 70)
+
+    start_t = time.time()
+    ans, ctx, dbg = rules_lawyer.ask_rules_lawyer_game(tc["query"])
+    elapsed = round(time.time() - start_t, 2)
+
+    print(f"\nAGENT ANSWER ({elapsed}s):")
+    print("-" * 70)
+    print(ans)
+    print("-" * 70)
+
+    print("\nDEBUG INFO:")
+    print(f"Query Type: {dbg.get('query_type')}")
+    print(f"Retrieved Chunks: {dbg.get('num_retrieved')}")
+    print(f"Cross Refs: {dbg.get('num_cross_refs')}")
+    print(f"Extracted Rules: {dbg.get('extracted_rules')}")
+
+    print("\nTOP RETRIEVED SOURCES:")
+    for idx, (doc, meta) in enumerate(ctx[:10], 1):
+        rn = meta.get("rule_number") or meta.get("rule_id", "N/A")
+        src = meta.get("source_file", "unknown")
+        p = meta.get("priority", "N/A")
+        header = doc.split("\n")[0] if isinstance(doc, str) else ""
+        print(f"[{idx}] Rule: {rn} | Source: {src} | Priority: {p} | Header: {header[:60]}")
+
+
 if __name__ == "__main__":
-    print_test_summary()
-    # Save as JSON for reference
-    os.makedirs("data/logs", exist_ok=True)
-    with open("data/logs/asl_test_cases.json", "w", encoding="utf-8") as f:
-        json.dump(ASL_TEST_CASES, f, indent=2)
-    print(f"\nTest cases saved to data/logs/asl_test_cases.json")
+    import argparse
+    parser = argparse.ArgumentParser(description="ASL Rules Lawyer Test Cases")
+    parser.add_argument("--run", type=int, help="Run a specific test case ID through the Rules Lawyer")
+    args = parser.parse_args()
+
+    if args.run:
+        run_single_test(args.run)
+    else:
+        print_test_summary()
+        # Save as JSON for reference
+        os.makedirs("data/logs", exist_ok=True)
+        with open("data/logs/asl_test_cases.json", "w", encoding="utf-8") as f:
+            json.dump(ASL_TEST_CASES, f, indent=2)
+        print(f"\nTest cases saved to data/logs/asl_test_cases.json")
+

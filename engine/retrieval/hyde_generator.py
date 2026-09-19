@@ -9,7 +9,7 @@ technical rulebook texts.
 import json
 import re
 from typing import List, Optional, Dict, Any
-import ollama
+from engine.providers import get_llm_provider, BaseLLMProvider
 
 
 class HydeGenerator:
@@ -18,9 +18,15 @@ class HydeGenerator:
     Operates at temperature T=0.4 for controlled lexical diversity and domain vocabulary.
     """
 
-    def __init__(self, default_model: str = "llama3.1:8b", temperature: float = 0.4):
+    def __init__(
+        self,
+        default_model: str = "llama3.1:8b",
+        temperature: float = 0.4,
+        llm_provider: Optional[BaseLLMProvider] = None,
+    ):
         self.default_model = default_model
         self.temperature = temperature
+        self.llm_provider = llm_provider or get_llm_provider()
 
     def generate_pseudo_clause(
         self,
@@ -76,16 +82,13 @@ class HydeGenerator:
         )
 
         try:
-            response = ollama.generate(
-                model=active_model,
+            raw = self.llm_provider.generate(
+                model_role="fast",
                 prompt=prompt,
-                options={
-                    "temperature": self.temperature,
-                    "top_p": 0.9,
-                    "num_predict": 180
-                }
+                temperature=self.temperature,
+                max_tokens=180,
+                model=model,
             )
-            raw = response.get("response", "").strip()
 
             cleaned = re.sub(r'<thinking>.*?</thinking>', '', raw, flags=re.DOTALL).strip()
             cleaned = re.sub(r'^(?:Here is (?:the|a) rulebook clause:?|RULEBOOK CLAUSE:?|Clause:?)\s*', '', cleaned, flags=re.IGNORECASE).strip()
@@ -130,7 +133,6 @@ class HydeGenerator:
         is_compound = bool(sub_queries) or any(w in distilled_query.lower() for w in [" and ", " or ", "if ", "when ", "also", "then", "consequence", "effect", "after", "must", "check"])
         
         if is_compound:
-            active_model = model or self.default_model
             secondary_prompt = (
                 f'You are the principal author and rules editor for "{game_name}".\n\n'
                 f'TASK: Write a 2-to-3 sentence authoritative rulebook excerpt describing the SECONDARY INTERACTIONS, '
@@ -140,16 +142,12 @@ class HydeGenerator:
                 f'SECONDARY / EXCEPTION CLAUSE:'
             )
             try:
-                response = ollama.generate(
-                    model=active_model,
+                raw = self.llm_provider.generate(
+                    model_role="fast",
                     prompt=secondary_prompt,
-                    options={
-                        "temperature": self.temperature,
-                        "top_p": 0.9,
-                        "num_predict": 180
-                    }
+                    temperature=self.temperature,
+                    max_tokens=180,
                 )
-                raw = response.get("response", "").strip()
                 cleaned = re.sub(r'<thinking>.*?</thinking>', '', raw, flags=re.DOTALL).strip()
                 cleaned = re.sub(r'^(?:Here is (?:the|a) rulebook clause:?|SECONDARY.*?CLAUSE:?|Clause:?)\s*', '', cleaned, flags=re.IGNORECASE).strip()
                 cleaned = cleaned.strip('"\'')

@@ -1,0 +1,1593 @@
+{
+  "last_updated": "2026-09-06T19:32:15.803455",
+  "target": "cloud",
+  "total_evaluated": 40,
+  "total_in_suite": 404,
+  "results": [
+    {
+      "id": "bgg_uf_2928709",
+      "overall_index": 61,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:30:21.382172",
+      "title": "Infantry gun on a stream",
+      "query": "Infantry gun on a stream: Hi, I'm starting my adventure with Up Front but I'm really new with all terminology of war games. Can you help understand the point 8.52 of 2nd ed rules? It talks about Infantry Gun. My question is if german card #3 (pfc schussel / light machinegun) is one example of infantry gun that cannot fire from a stream. If the answer is yes, is it correct to say that this unit will not add to the firepower of the group if I want to fire with the rest of it?\nThanks\nZT",
+      "intent": "scenario",
+      "expected_rules": [
+        "34.3",
+        "8.52"
+      ],
+      "retrieved_rules": [
+        "6.4.1",
+        "8.51",
+        "8.52",
+        "8.53",
+        "8.531"
+      ],
+      "rule_hit": true,
+      "hits": [
+        "8.52"
+      ],
+      "rule_recall": 0.5,
+      "adjudication": {
+        "status": "skipped"
+      },
+      "adjudicated_hit": true,
+      "adjudicated_recall": 0.5,
+      "latency_seconds": 6.93,
+      "generated_answer": "Verdict: CONDITIONAL\n\nRuling:\n1. According to [Rule 8.52], an Infantry Gun may not fire from a Stream. This rule specifically mentions Infantry Guns as one of the crewed weapons that cannot fire from a Stream.\n2. German card #3 (Pfc Schussel / Light Machinegun) is not classified as an Infantry Gun but rather as a Light Machine Gun. Therefore, the restriction in [Rule 8.52] does not directly apply to this unit.\n3. However, if we consider the broader context of [Rule 8.52], it is clear that certain crewed weapons have firing restrictions when in a Stream. Since a Light Machine Gun is a crewed weapon, it would fall under the general restrictions for crewed weapons in a Stream, which require them to be fully crewed and non-moving to fire, and even then, they must use their bracketed Firepower or To Hit frequency.\n4. If the Light Machine Gun (Pfc Schussel) is part of a group attempting to fire from a Stream, and it does not meet the conditions to fire (fully crewed and non-moving), then it would not add to the firepower of the group for that firing action [Rule 8.52].\n\nIn summary, while German card #3 (Pfc Schussel / Light Machinegun) is not an Infantry Gun and thus not directly prohibited by [Rule 8.52], it still must adhere to the general restrictions for crewed weapons in a Stream. If it cannot meet those conditions, it will not contribute to the group's firepower for that firing action.",
+      "ground_truth_answer": "Welcome to a great game! PFC Schussel is not an example of an infantry gun. For the Germans, the infantry guns are personality cards 28 and 29, the 37mm and 50mm antitank guns. I think my rules are the original edition, and my 8.52 says \u201cmedium machine gun, mortar, or Infantry Gun may not fire from a Stream\u2026 Other crewed weapons may fire from a Stream only if they are fully crewed and non-moving, and even then must use their bracketed Firepower or To Hit frequency.\u201d Schussel and his LMG can fire from the stream if he has an assigned crewman helping him and the group is not moving. He will use the bracketed firepower for his relative range to the target and the bracketed malfunction number, Red 5 or Red 6 in this case. Hope this helps!\n\nEDIT : For your other question, yes, the IG will slow other personality cards in its group. Check 34.3 for movement of a group containing an IG.",
+      "debug": {
+        "executionTimeMs": 4511,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 6.93,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 5
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2910183",
+      "overall_index": 62,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:30:25.907536",
+      "title": "Pursuit (campaign games)",
+      "query": "Pursuit (campaign games): I want to make sure I get this right (42.6 and 42.7): \n\nVARIANT A) Prolonging the game after victory by voluntary withdrawal\n\n1.  I can declare that any of my groups at range chit 0 (or lower) is attempting to withdraw by playing a retrograde move (red number) on it. As soon as I declare the attempt to withdraw, the game is lost for me (12 campaign VP for the opponent) but does not end yet.\n\n2. At the start of MY NEXT TURN, if the enemy - DURING HIS TURN - has failed to pursue any of my withdrawing group(s), and if my group is not encircled, it is successfully withdrawn and taken off the board. Those men in the group who are not pinned still get two elan points for ending the game unpinned (other men might be pinned at that state and not receive the elan points?). Only once ALL of my groups have withdrawn successfully, the game ends (thus 42.72 \"and the scenario ends immediately\" is completely misleading and in conflict with 42.73?). Exception: At some point a squad break or fullfillment of victory condition might happen, in which case Variant B kicks in and overrides variant A (the game will then be more likely to end). \n\n3. The opponent can pursue and prevent the withdrawal of a group by keeping/moving one of his groups to RR5 to a withdrawing group AND passing a morale check with his unpinned SL (the SL can be anywhere on the board, he doesn't need to be part of the \"pursuing\" group). The morale check does not count as an action for the SL's group - it's free. \n\n4. A group trying to withdraw will keep trying automatically every turn? Thus, the pursuing player needs to keep his group at RR5 and his SL needs to pass a morale check every single turn in order to prolong the game?\n\nVARIANT B) Prolonging the game after victory by squad break or scenario victory conditions\n\n1. Once he has fulfilled the scenario's victory condition or has broken the opponent's squad, the victorious player can try to prolong the game by passing a morale check with his unpinned squad leader. The morale check does not count as an action for the SL's group - it's free. If the check succeeds, another round is played (and the SL may test again for another round, etc). If the check fails, the game ends.",
+      "intent": "scenario",
+      "expected_rules": [
+        "42.6",
+        "42.7",
+        "42.72"
+      ],
+      "retrieved_rules": [
+        "42.1",
+        "42.2",
+        "42.3",
+        "42.4",
+        "42.6",
+        "42.7",
+        "42.72",
+        "42.73"
+      ],
+      "rule_hit": true,
+      "hits": [
+        "42.6",
+        "42.7",
+        "42.72"
+      ],
+      "rule_recall": 1.0,
+      "adjudication": null,
+      "adjudicated_hit": true,
+      "adjudicated_recall": 1.0,
+      "latency_seconds": 4.52,
+      "generated_answer": "**Verdict: CONDITIONAL**\n\n### Ruling:\n\n**Variant A: Prolonging the game after victory by voluntary withdrawal**\n\n1. **Declaration of Withdrawal**:\n   - According to [Rule 42.6], you can declare that any of your groups at range chit 0 (or lower) is attempting to withdraw by playing a retrograde move (red number) on it. As soon as you declare the attempt to withdraw, the game is lost for you (12 campaign VP for the opponent) but does not end yet. **PERMITTED**.\n\n2. **Successful Withdrawal**:\n   - At the start of your next turn, if the enemy has failed to pursue any of your withdrawing group(s) during his turn, and if your group is not encircled, it is successfully withdrawn and taken off the board [Rule 42.6]. Those men in the group who are not pinned still get two Elan points for ending the game unpinned [Rule 42.6 & 42.7 Scenario: A]. The game does not end until all of your groups have withdrawn successfully [Rule 42.73]. **PERMITTED**.\n   - The statement \"and the scenario ends immediately\" in [Rule 42.72] is misleading if interpreted in the context of withdrawal. The game continues until all groups have successfully withdrawn [Rule 42.73]. **CONDITIONAL**.\n\n3. **Opponent Pursuit**:\n   - The opponent can pursue and prevent the withdrawal of a group by keeping/moving one of his groups to RR5 to a withdrawing group AND passing a morale check with his unpinned SL [Rule 42.72]. The SL can be anywhere on the board; he doesn't need to be part of the \"pursuing\" group. The morale check does not count as an action for the SL's group\u2014it's free. **PERMITTED**.\n\n4. **Continuous Withdrawal Attempts**:\n   - A group trying to withdraw will keep trying automatically every turn [Rule 42.6]. Thus, the pursuing player needs to keep his group at RR5 and his SL needs to pass a morale check every single turn to prolong the game [Rule 42.72]. **PERMITTED**.\n\n**Variant B: Prolonging the game after victory by squad break or scenario victory conditions**\n\n1. **Prolonging the Game Post-Victory**:\n   - Once the victorious player has fulfilled the scenario's victory condition or has broken the opponent's squad, he can try to prolong the game by passing a morale check with his unpinned squad leader [Rule 42.72]. The morale check does not count as an action for the SL's group\u2014it's free. If the check succeeds, another round is played (and the SL may test again for another round, etc). If the check fails, the game ends. **PERMITTED**.\n\n### Conclusion:\nThe user's interpretation is largely correct but requires clarification on specific rule interactions, hence the **CONDITIONAL** verdict. The game continues under specific conditions as outlined, and certain rules need to be interpreted in conjunction with others to avoid confusion.",
+      "ground_truth_answer": "Wow!  A Campaign game question--don't know if we had one before!\n\nI want to make sure I get this right (42.6 and 42.7): \n\nVARIANT A) Prolonging the game after victory by voluntary withdrawal\n\n1.  I can declare that any of my groups at range chit 0 (or lower) is attempting to withdraw by playing a retrograde move (red number) on it. As soon as I declare the attempt to withdraw, the game is lost for me (12 campaign VP for the opponent) but does not end yet.\nYes.\n\n2. At the start of MY NEXT TURN, if the enemy - DURING HIS TURN - has failed to pursue any of my withdrawing group(s), and if my group is not encircled, it is successfully withdrawn and taken off the board. Those men in the group who are not pinned still get two elan points for ending the game unpinned (other men might be pinned at that state and not receive the elan points?). \n\nCorrect.  And per errata, 0 elan points who were pinned after declaration of withdrawl and successfully completing it.\n\nOnly once ALL of my groups have withdrawn successfully, the game ends (thus 42.72 \"and the scenario ends immediately\" is completely misleading and in conflict with 42.73?).   Exception: At some point a squad break or fullfillment of victory condition might happen, in which case Variant B kicks in and overrides variant A (the game will then be more likely to end). \n\n42.72 does not use the words \"ends immediately\" in its text.  What is variant A and Variant B?  What are you talking about?\n\n3. The opponent can pursue and prevent the withdrawal of a group by keeping/moving one of his groups to RR5 to a withdrawing group AND passing a morale check with his unpinned SL (the SL can be anywhere on the board, he doesn't need to be part of the \"pursuing\" group). The morale check does not count as an action for the SL's group - it's free. \n\n4. A group trying to withdraw will keep trying automatically every turn? Thus, the pursuing player needs to keep his group at RR5 and his SL needs to pass a morale check every single turn in order to prolong the game?\n\nVARIANT B) Prolonging the game after victory by squad break or scenario victory conditions\n\n1. Once he has fulfilled the scenario's victory condition or has broken the opponent's squad, the victorious player can try to prolong the game by passing a morale check with his unpinned squad leader. The morale check does not count as an action for the SL's group - it's free. If the check succeeds, another round is played (and the SL may test again for another round, etc). If the check fails, the game ends. \n\nI will just explain the rule:\n\nBasically a scenario in a Campaign game can end in 4 ways:\n-  Voluntary withdrawl and concession  by one side per 42.6.\n-  Squad break\n-  Victory conditions.\n-  End of final deck.\n\nOn the winning player's winning turn or turn following his opponent's announcement of a withdrawl of a group, the winning player may declare a pursuit, if there are cards left in the deck-so no pursuits if won by time limit.  His active SL (including ASL promoted to SL due SL elimination per errata) must pass a morale check to initiate pursuit (Failure = no pursuit will be attempted.)  This is done once during the game.  Often a winning player will reject pursuit if the potential additional casualties wouldn't be worth the additional advantages (usually just a few elan points).  If the pursuit was not initiated, either voluntarily or failure of the morale check, the game end immediately at the end of the winning player's turn.\n\nIf a group attempts withdrawl, it succeeds on the next turn unless the opponent both initiates pursuit (or had initiated pursuit previously) and has a group @ RR5 to the withdrawing group. Since the withdrawing group is in the act of retrograde movement (i.e. retreating to a negative range chit), the pursuing group must usually move forward to be at RR5.  If at the end of the next turn, if pursuit was not declared or no persuing enemy groups are at RR5, the withdrawing group is removed from play--it succeded in its withdrawal. A group that is encircled cannot attempt withdrawal.\n\nOnce a pursuit is declared, the game now ends with if all opposing groups are withdrawn (or eliminated) OR the end of the next deck.  (This is why you can't pursue when win on time limit.)",
+      "debug": {
+        "executionTimeMs": 4277,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 4.52,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 8
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2909876",
+      "overall_index": 63,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:30:29.891465",
+      "title": "Failed morale check for CC",
+      "query": "Failed morale check for CC: If a soldier who wants to infiltrate fails the morale check, he becomes pinned. \nWhat happens to a soldier who wants to CC but fails his morale check? Does he get pinned, too (losing his infiltrator status)?",
+      "intent": "situation",
+      "expected_rules": [
+        "20.21",
+        "20.52"
+      ],
+      "retrieved_rules": [
+        "10.1",
+        "10.2",
+        "10.3",
+        "10.4",
+        "2.1",
+        "2.2"
+      ],
+      "rule_hit": false,
+      "hits": [],
+      "rule_recall": 0.0,
+      "adjudication": {
+        "status": "skipped"
+      },
+      "adjudicated_hit": false,
+      "adjudicated_recall": 0.0,
+      "latency_seconds": 3.98,
+      "generated_answer": "Verdict: CONDITIONAL\n\nRuling: \n\n1. **Morale Check Failure in CC**: According to the rules, when a soldier fails a morale check, the consequences depend on the context. For infiltration, Rule 10.1 states that if a soldier fails a morale check, he becomes pinned [Rule 10.1].\n\n2. **Close Combat (CC) Specifics**: The rules do not explicitly address the scenario of a soldier failing a morale check specifically during a Close Combat attempt. However, the general principle from Rule 10.1 applies: if a soldier fails a morale check, he becomes pinned.\n\n3. **Infiltrator Status**: An infiltrator who becomes pinned loses his infiltrator status as per Rule 10.1, since pinned men can perform no other voluntary actions until rallied [Rule 10.1].\n\n4. **Conclusion**: Therefore, if a soldier who wants to engage in Close Combat fails his morale check, he becomes pinned and loses any special status, such as infiltrator, as per Rule 10.1. \n\nThus, the soldier becomes pinned and loses his infiltrator status if he fails the morale check while attempting Close Combat.",
+      "ground_truth_answer": "Yes.  CC Entry 20.52 refers to the morale check rule 20.21, which includes the RNC >= the morale causing the man to be pinned.",
+      "debug": {
+        "executionTimeMs": 2592,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 3.98,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 6
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2909528",
+      "overall_index": 64,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:30:32.048185",
+      "title": "Japanese grenade launcher",
+      "query": "Japanese grenade launcher: I couldn't find it anywhere. Any help is appreciated. \n\nDoes the japanese grenade launcher count as a mortar (ignoring woods/jungle cover, being allowed to fire from gullies but not from buildings, being allowed to \"acquire targets\") or not? Unlike \"proper\" mortars, it does not say \"Mortar\" on the card.",
+      "intent": "clarification",
+      "expected_rules": [
+        "27.1"
+      ],
+      "retrieved_rules": [
+        "2.1",
+        "2.2",
+        "27.1",
+        "27.2",
+        "27.3"
+      ],
+      "rule_hit": true,
+      "hits": [
+        "27.1"
+      ],
+      "rule_recall": 1.0,
+      "adjudication": null,
+      "adjudicated_hit": true,
+      "adjudicated_recall": 1.0,
+      "latency_seconds": 2.15,
+      "generated_answer": "**Verdict: PERMITTED**\n\n**Ruling:**\n\n1. **Identification of the Japanese Grenade Launcher:**\n   - The Japanese Grenade Launcher is not explicitly labeled as a \"Mortar\" on its card. However, the rules provide specific guidance on its classification for certain purposes.\n\n2. **Classification for Target Acquisition:**\n   - According to [Rule 27.1], the Japanese Grenade Launcher is considered a Mortar for the purposes of Target Acquisition. This is explicitly stated in the rule clarifications: \n     > \"[Rule: 27.1] [Scenario: A] 27.1 Says 'Only a mortar, IG, or AFV...qualify for Target Acquisition. Is the Japanese Grenade Launcher considered a Mortar for acquisition? A. Yes.\"\n\n3. **Conclusion:**\n   - Therefore, despite not being labeled as a \"Mortar\" on the card, the Japanese Grenade Launcher is permitted to qualify for Target Acquisition as if it were a Mortar.",
+      "ground_truth_answer": "This specific question is in the errata for rule 27.1 is only for target acquisition. https://boardgamegeek.com/filepage/70811/front-errata\n\nI agree a Japanese grenade launcher is, for all practical purposes, the same as a mortar in other nationalities, the rules and errata never actually say that.",
+      "debug": {
+        "executionTimeMs": 1933,
+        "verdict": "PERMITTED",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 2.15,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 5
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2865400",
+      "overall_index": 65,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:30:34.617111",
+      "title": "Infiltration from a Gully",
+      "query": "Infiltration from a Gully: A group is in a Gully and has one Movement card on it, advancing.  Can it infiltrate and place a DC?\n\nNothing in 20.24 and 20.25 prevents it, but the group can't fire yet (8.22).  Maybe I am missing something.",
+      "intent": "direct_rule",
+      "expected_rules": [
+        "20.24",
+        "20.25",
+        "7.2",
+        "8.2",
+        "8.22"
+      ],
+      "retrieved_rules": [
+        "20.1",
+        "20.2",
+        "20.21",
+        "20.22",
+        "20.23",
+        "20.24",
+        "20.25",
+        "20.3",
+        "8.22",
+        "8.42"
+      ],
+      "rule_hit": true,
+      "hits": [
+        "20.24",
+        "20.25",
+        "8.2",
+        "8.22"
+      ],
+      "rule_recall": 0.8,
+      "adjudication": {
+        "status": "skipped"
+      },
+      "adjudicated_hit": true,
+      "adjudicated_recall": 0.8,
+      "latency_seconds": 2.56,
+      "generated_answer": "Verdict: CONDITIONAL\n\nRuling:\n1. According to [Rule 20.2], unpinned men at Relative Range 5 to an enemy group may attempt to infiltrate with or without playing a Movement card.\n2. [Rule 8.22] states that a group in a Gully is still considered in that Gully even after placing one Movement card on top of the Gully card. Only by placing yet another Movement card or a Terrain card on top of the first Movement card does the group leave the Gully.\n3. Since the group has only one Movement card on the Gully card, they are still considered to be in the Gully [8.22].\n4. Infiltration does not require the group to be outside the Gully, as per [Rule 20.2].\n5. Therefore, the group can attempt to infiltrate, but it must do so without playing a Movement card since playing another Movement card would change their status according to [Rule 8.22].\n\nConclusion: The group can infiltrate without placing a second Movement card or Terrain card, adhering to [Rule 20.2] and [Rule 8.22].",
+      "ground_truth_answer": "A group is in a Gully and has one Movement card on it, advancing.  Can it infiltrate and place a DC?\n\nYes, but there 2 column shift to the right because the group is moving.\n\nNothing in 20.24 and 20.25 prevents it,   \n\nunless the group that would be attempting infiltration is in Wire....\n\nbut the group can't fire yet (8.22). \n\nWhere did you get this idea??????\n\nGroups in a Gully can only fire at (or be fired upon from) groups on a Hill or at RR5, per 8.2.  Since you are planning detonating a DC, I am willing to bet there is an opposing group at RR5 that will gladly take fire from this moving group in a Gully.\n\nAs for moving in a Gully, rule 8.22 breaks down to: There are no special rules (no need to ford/move sideways or a second movement card to leave.  The note that a group with only one movement card is still in the Gully is true of ANY TERRAIN.), except if 2 movement cards are in play on a group in the Gully:\nA) The group is now effectively considered in Open Ground per 7.2. (It says so in the Example Only--not the actual rule itself. UF is a master class on how not to write rules. \ud83d\ude44)\nB)  Opposing groups, other than those on a Hill or at RR5, couldn't \"see\" the first movement card played, so the net TEM is +1.  (Hill based groups can \"see\" the entire movement, thus have net TEM of +3 (from Hill, +2 movement cards)  Groups at RR5 have net +2 TEM, even they would not have been able to \"see\" the first movement because they would not have been at RR5 while first movement was in progress. \ud83d\ude44 (But try writing a rule to correct this...  I dare you!))\n\nOf course, all of this ignores any Wire or Smoke effects.",
+      "debug": {
+        "executionTimeMs": 2432,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 2.56,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 10
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2859449",
+      "overall_index": 66,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:30:37.830447",
+      "title": "Stream and discarded terrain",
+      "query": "Stream and discarded terrain: A group starts it turn in a stream at range chit two and places a sideways Ford card.  His opponent discards a Marsh card on the group which he rejects.\n\nIs the group still at range chit two and must he ford the stream again?",
+      "intent": "clarification",
+      "expected_rules": [],
+      "retrieved_rules": [
+        "10.1",
+        "10.2",
+        "7.32",
+        "8.1",
+        "8.2",
+        "8.22",
+        "8.3",
+        "8.4",
+        "8.5"
+      ],
+      "rule_hit": null,
+      "hits": [],
+      "rule_recall": null,
+      "adjudication": null,
+      "adjudicated_hit": null,
+      "adjudicated_recall": null,
+      "latency_seconds": 3.21,
+      "generated_answer": "Verdict: CONDITIONAL\n\nRuling:\n1. According to [Rule 8.5], a Stream is usually placed on an opposing group, and the group on which it is discarded must accept the Stream. It cannot move around the Stream or forfeit its Movement card as can be done with most other Terrain card rejections [7.32].\n2. The scenario describes a group starting its turn in a Stream at range chit two and placing a sideways Ford card. This indicates the group has forded the Stream.\n3. The opponent then discards a Marsh card on the group, which the group rejects. \n4. Since the group has already forded the Stream by playing the Ford card, the rejection of the Marsh card does not affect the Stream's status. \n5. Therefore, the group does not need to ford the Stream again as the initial Ford card has already been played and accepted.\n\nConclusion: The group remains at range chit two and does not need to ford the Stream again after rejecting the Marsh card.",
+      "ground_truth_answer": "Although the previous answer was to the point, the reason is when a group rejects terrain placed on it, the movement cards is rotated from advance/retreat to sideways or if the movement card was placed in sideways mode, removed from the group. \n\nSince the movement card on a group which has forded a stream must be in sideways mode, if it rejects terrain, it has to remove the movement card, and would have to ford the stream again in order to move.",
+      "debug": {
+        "executionTimeMs": 2912,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 3.21,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 8
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2855553",
+      "overall_index": 67,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:30:42.437449",
+      "title": "Hero card and flamethrowers",
+      "query": "Hero card and flamethrowers: Playing the Pillbox scenario today and had the opportunity to use the flamethrower, with a Hero card.  My first guess was that the flamethrower was not eligible for the Hero bonus, but  I read the Hero section carefully, and read the flamethrower section carefully, and I came away with the understanding that a Hero card can in fact double the flamethrower's firepower from 12 to 24.    Am I overlooking something in the rules?",
+      "intent": "scenario",
+      "expected_rules": [],
+      "retrieved_rules": [
+        "10.1",
+        "10.2",
+        "10.4",
+        "21.11",
+        "28.1",
+        "9.3"
+      ],
+      "rule_hit": null,
+      "hits": [],
+      "rule_recall": null,
+      "adjudication": null,
+      "adjudicated_hit": null,
+      "adjudicated_recall": null,
+      "latency_seconds": 4.6,
+      "generated_answer": "Verdict: CONDITIONAL\n\nRuling:\nAccording to Rule 10.4, a Hero card can be played anytime to rally one pinned man without counting as an Action. However, the rule does not explicitly mention the interaction between Hero cards and flamethrowers.\n\nTo determine if a Hero card can double the flamethrower's firepower, we need to consider the general rules for flamethrowers and any specific interactions mentioned elsewhere.\n\n[Rule: 10.4] states:\n\"A Hero card can be played anytime (even during the opponent's turn or immediately upon drawing a Hero card from the Draw pile thus entitling the player to yet another draw) to rally one pinned man without counting as an Action.\"\n\nThere is no explicit rule that prohibits using a Hero card to enhance the effect of a flamethrower. Therefore, if there is no rule prohibiting this interaction, it can be considered permissible under the general allowance of Rule 10.4.\n\nHowever, it is important to note that any such interaction should be confirmed with all players before proceeding, as the rules do not explicitly cover this scenario. If there is any ambiguity or disagreement, it is recommended to consult with the game designer or an official rules adjudicator for a definitive answer.",
+      "ground_truth_answer": "Yes, a Hero card can be used to double a flamethrowers FP.  Nothing in the rules or errata imply otherwise.\n\nEnjoy the Kraut dogs at the weenie roast.  \ud83d\ude0b\n\nExcellent !",
+      "debug": {
+        "executionTimeMs": 3651,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 4.6,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 6
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2838588",
+      "overall_index": 68,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:30:46.035692",
+      "title": "The marsh card",
+      "query": "The marsh card: The age old question of the marsh card which I'm sure was answered decades ago but I could not find what I was looking for in the forum so here it goes. I'm not new to AH games, bought my first from Toys r us in the late 1970's but Up Front is quite unique. I just discovered it recently and found an almost complete copy to play. \n\n1).  According to the errata, the marsh card should have fire strength modifiers of - 1 , - 1  which coincides with rule 8.4 correct?\n\n2). Can anyone explain the rationale why a defending unit in a marsh should receive a favorable modifier when attacked? IMO defending in a marsh would be a detriment, there is no substantial cover like trees in a forest or walls / building and movement would be hindered, you could not run anywhere fast.  As a soldier I could not think that leaving a forest and entering a marsh and slog through it to be a good thing. \n\n3). I contend that the marsh card more accurately represents the encountered terrain as printed and is correct with the fire strength modifiers of - 1 , + 1  and the rule 8.4 is wrong. Has anyone played with the marsh card as printed as a house rule? If so, what where the results? is it too powerful of a card if placed on an opponent causing unbalanced play?\n\nSide note, I also found it odd that defending in a stream gave no modifiers to the defending unit, either favorable or unfavorable. It would appear the unit would be a sitting duck in a stream. pun intended.\n\nThe Up Front community is a fantastic group and support, thanks for all comments.",
+      "intent": "errata_comparison",
+      "expected_rules": [
+        "8.4"
+      ],
+      "retrieved_rules": [
+        "8.1",
+        "8.2",
+        "8.3",
+        "8.4",
+        "8.5"
+      ],
+      "rule_hit": true,
+      "hits": [
+        "8.4"
+      ],
+      "rule_recall": 1.0,
+      "adjudication": null,
+      "adjudicated_hit": true,
+      "adjudicated_recall": 1.0,
+      "latency_seconds": 3.59,
+      "generated_answer": "Verdict: CONDITIONAL\n\n1. According to the errata, the marsh card should have fire strength modifiers of -1, -1 which coincides with rule 8.4 correct?\n   - **Ruling:** CONDITIONAL\n   - **Explanation:** The codified rules provided do not mention any errata. Based on the provided rule [8.4], the defending group in Marsh terrain receives a -1 modifier to the attacking group's Fire Strength. There is no mention of a second -1 modifier. Therefore, according to the provided rule text, the modifier should be -1, not -1, -1. If there is an errata that changes this, it must be consulted, but based on the provided rules, the modifier is simply -1.\n\n2. Can anyone explain the rationale why a defending unit in a marsh should receive a favorable modifier when attacked?\n   - **Ruling:** AMBIGUOUS\n   - **Explanation:** The rules do not provide a rationale for why a defending unit in Marsh terrain receives a favorable modifier. The rule [8.4] simply states the effect without explaining the reasoning behind it. \n\n3. I contend that the marsh card more accurately represents the encountered terrain as printed and is correct with the fire strength modifiers of -1, +1 and the rule 8.4 is wrong.\n   - **Ruling:** PROHIBITED\n   - **Explanation:** Based on the provided rule [8.4], the correct modifier for a defending group in Marsh terrain is -1 to the attacking group's Fire Strength. There is no provision for a +1 modifier in the codified rules. Therefore, using a +1 modifier would be against the established rules.\n\n**Side Note:**\n- The observation about the Stream terrain not providing any modifiers is noted, but the rules as provided do not address this. Any changes or additional rules would need to be found in the errata or additional rulebooks not provided here.",
+      "ground_truth_answer": "The age old question of the marsh card which I'm sure was answered decades ago but I could not find what I was looking for in the forum so here it goes. I'm not new to AH games, bought my first from Toys r us in the late 1970's but Up Front is quite unique. I just discovered it recently and found an almost complete copy to play. \n\nYou can get new copies at Wargame Vault.\n\n1).  According to the errata, the marsh card should have fire strength modifiers of - 1 , - 1  which coincides with rule 8.4 correct? \n\nMarsh is (-1)-1.  This has been corrected on the WV cards.\n\n2). Can anyone explain the rationale why a defending unit in a marsh should receive a favorable modifier when attacked? IMO defending in a marsh would be a detriment, there is no substantial cover like trees in a forest or walls / building and movement would be hindered, you could not run anywhere fast.  As a soldier I could not think that leaving a forest and entering a marsh and slog through it to be a good thing.   Why would Brush give you a defensive advantage?  Ans: the enemy cannot see you clearly.\n\nSame with Marsh, presuably with similar vegetation provides a similar defensive benefit.  Marsh still impedes firing and requires more movement cards (and more exposure) to exit and aren't allowed to entrench. I don't like being Marsh.\n\n3). I contend that the marsh card more accurately represents the encountered terrain as printed and is correct with the fire strength modifiers of - 1 , + 1  and the rule 8.4 is wrong. Has anyone played with the marsh card as printed as a house rule? If so, what where the results? is it too powerful of a card if placed on an opponent causing unbalanced play?\nSo someone who just learned the game is right and the company (who admitted the misprint and published the errata in first place), the misprited card being corrected in current printings and thousands of players over almost 40 years have played via these rules...\n\nSide note, I also found it odd that defending in a stream gave no modifiers to the defending unit, either favorable or unfavorable. It would appear the unit would be a sitting duck in a stream. pun intended.\n\nIn a Stream you are as open as in Open Ground, except you lose Fire Strength, lose FP of you crewed weapons, cannot entrench, and will find it harder to leave (Red RNC again!)\n\nStream is not fun either.\n\nThe Up Front community is a fantastic group and support, thanks for all comments.\n\nWould your interpretation of Marsh and  Stream imbalance and break the game?  Maybe not, but it simply not the way the game is played.",
+      "debug": {
+        "executionTimeMs": 3378,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 3.59,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 5
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2834181",
+      "overall_index": 69,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:30:48.587001",
+      "title": "MMG and British Firepower Bonus (44.3)",
+      "query": "MMG and British Firepower Bonus (44.3): A question about this came up in a vassal game yesterday. My opponent\u2019s British MMG (crewed) and 3 Bolt Action rifles (FP of 11) wanted to use a 12 FP - 5 fire strength Fire Card. I said go ahead, but he became unsure whether he could based on the parenthetical \u201cby infantry only\u201d in this rule. \n\nHere is the applicable sentence in 44.3: \u201cConsequently, the British player may reduce the required firepower factors to make any attack (by infantry only) by one per attack (down to a minimum of one).\n\nI suppose his reluctance came from not being able to find an explicit definition of infantry in the rules. If someone can point me to what constitutes \u201cinfantry\u201d, in this game, that would help. I interpret infantry to be any personnel card that isn\u2019t an AFV, i.e. the small personality cards, versus the larger ones. \n\nI saw in errata that the British flamethrower can use this bonus. If a flamethrower gets the bonus, a MMG certainly should. Please help me convince my opponent that he could have taken the shot!",
+      "intent": "errata_comparison",
+      "expected_rules": [
+        "25.34",
+        "28.61",
+        "44.3",
+        "50.3",
+        "9.5"
+      ],
+      "retrieved_rules": [
+        "44.1",
+        "44.2",
+        "44.3",
+        "44.4",
+        "44.5"
+      ],
+      "rule_hit": true,
+      "hits": [
+        "44.3"
+      ],
+      "rule_recall": 0.2,
+      "adjudication": {
+        "status": "skipped"
+      },
+      "adjudicated_hit": true,
+      "adjudicated_recall": 0.2,
+      "latency_seconds": 2.55,
+      "generated_answer": "Verdict: PROHIBITED\n\nRuling:\nAccording to Rule 44.3, the British player may reduce the required firepower factors to make any attack by infantry only by one per attack (down to a minimum of one). The key phrase here is \"by infantry only.\" \n\nIn the context of the game, \"infantry\" typically refers to personnel cards that are not armored fighting vehicles (AFVs). However, the rule explicitly states that the firepower bonus is applicable only to infantry. An MMG (Medium Machine Gun) is a crew-served weapon and not classified as infantry. \n\nTherefore, the British player cannot apply the firepower bonus to an MMG, even though it is crewed by infantry. The bonus is restricted to attacks made directly by infantry units, not by crew-served weapons or other types of units. \n\nIn conclusion, your opponent was not permitted to reduce the firepower factors for the MMG using the British Firepower Bonus as per Rule 44.3.",
+      "ground_truth_answer": "Yes, MMG is infantry.  I personally find rule 44.3 unnecessarily confusing.  It really should be always add one firepower to each British firepower attack.  (And if they felt it was too powerful for British AFVs--then they should have reduced AFV MG firepower by 1 at every range.)  Putting an exception (i.e.  \"infantry only\") to an exception (ie. Br FP bonus) is sloppy rule writing.  But we're stuck with it.\n\nCompare 50.3. Itallan FP penalty---all FP attacks reduce the available FP by 1.  No exception for AFVs.\n\nAs for times where a Concealment card cannot be played, they are specifically listed in rule 9.5.  (Even though rules for AFVs. IGs, Pillboxes, Minefields, etc.  aren't given until much later.",
+      "debug": {
+        "executionTimeMs": 2378,
+        "verdict": "PROHIBITED",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 2.55,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 5
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2828147",
+      "overall_index": 70,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:30:50.617064",
+      "title": "MMG and BAR in same group",
+      "query": "MMG and BAR in same group: 46.4 restricts BARs and LMGs to only one per group. I am playing 501 City Fight and my opponent bought a MMG and BAR. I couldn't see any restriction on setting up a BAR and MMG in the same group.\n\nWhat do other players think? Do you have a house rule to restrict this?",
+      "intent": "clarification",
+      "expected_rules": [
+        "46.4"
+      ],
+      "retrieved_rules": [
+        "20.8",
+        "46.1",
+        "46.2",
+        "46.4",
+        "52.8"
+      ],
+      "rule_hit": true,
+      "hits": [
+        "46.4"
+      ],
+      "rule_recall": 1.0,
+      "adjudication": null,
+      "adjudicated_hit": true,
+      "adjudicated_recall": 1.0,
+      "latency_seconds": 2.02,
+      "generated_answer": "Verdict: PROHIBITED\n\nRuling: According to Rule 46.4, \"This rule also applies to any nationality and scenario with any combination of two or more BARs/LMGs/MMGs on the same side as such concentration would be unrealistic.\" Therefore, it is prohibited to set up a BAR and an MMG in the same group. The rule explicitly states that no combination of two or more BARs/LMGs/MMGs can be in the same group to maintain realism in the game.",
+      "ground_truth_answer": "From the errata:\n\n46.4 CHANGE: Second sentence of rule should read, \"This rule also applies to any nationality and scenario with any combination of two or more BARs/LMGs/MMGs on the same side as such concentration would be unrealistic.\"",
+      "debug": {
+        "executionTimeMs": 1628,
+        "verdict": "PROHIBITED",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 2.02,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 5
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2826539",
+      "overall_index": 71,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:30:53.927786",
+      "title": "20.3 Infiltration and concealment cards",
+      "query": "20.3 Infiltration and concealment cards: Do you have to predesignate the playing of concealment card prior to drawing the RPC card for Infiltration resolution.",
+      "intent": "clarification",
+      "expected_rules": [
+        "20.3",
+        "20.52"
+      ],
+      "retrieved_rules": [
+        "20.1",
+        "20.2",
+        "20.3",
+        "20.4",
+        "9.4"
+      ],
+      "rule_hit": true,
+      "hits": [
+        "20.3"
+      ],
+      "rule_recall": 0.5,
+      "adjudication": {
+        "status": "skipped"
+      },
+      "adjudicated_hit": true,
+      "adjudicated_recall": 0.5,
+      "latency_seconds": 3.3,
+      "generated_answer": "**Verdict: YES**\n\n**Ruling:**\n\nAccording to Rule 20.3 and its associated scenario, the decision to play a Concealed card must be made prior to the RPC draw for infiltration resolution. \n\n1. **Rule 20.3 Scenario A** explicitly states: \"Must the decision to play a Concealed card be made prior to the RPC draw? A. Yes.\"\n2. This is further supported by **Rule 9.4**, which allows one Concealed card to be played prior to the resolution of each infiltration attempt to aid one man in that infiltration attempt.\n\nTherefore, based on these rules, a player must predesignate the playing of a Concealed card before drawing the RPC for infiltration.",
+      "ground_truth_answer": "I think Richard thought the question was about entry into CC (20.52). His RPC is the one for choosing the CC opposition card. \n\nI believe the OP is asking about 20.3, the last 2 sentences about shifting the column for gaining infiltration status by using a Concealed card. As Juno says, the Concealed card should be played on a potential infiltrator before pulling the RPC made to determine infiltration status.",
+      "debug": {
+        "executionTimeMs": 2886,
+        "verdict": "PERMITTED",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 3.3,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 5
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2817909",
+      "overall_index": 72,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:30:56.757926",
+      "title": "Does an opponent's advance allow Banzai to be cancelled?",
+      "query": "Does an opponent's advance allow Banzai to be cancelled?: Just finished a vassal game of Up Front which ended with a Japanese win in Scenario N. The Japanese won when a Banzai attack destroyed a 6-man British group, breaking the 10-man squad.\n\nThe Japanese group D got to RR5 with the British group C at RR0. There was no British group D or Japanese group C. After the Japanese group in D played a sideways move for entry into Banzai and rallied one of their 5-man group, it was the British turn. British group C moved up to RR1. At this point, the Banzai is no longer at RR5. The Japanese Banzai group moved back to RR4, and went into CC immediately (in the same player turn). I think we needed to wait until a turn when the Japanese started out at RR5 by rule 45.422, but we didn\u2019t. The first part of 45.422 says \"In the next Japanese turn after a Banzai group has reached Relative Range 5 to its target, all members of its group perform Close Combat in that player turn as the sole action of that group for that player turn (assuming the target group is still at Relative Range 5) and all succeeding player turns until there are no longer opposing forces in the target group at Relative Range 5.\" The British survivors moved forward again (to RR2) in their next play, and the Japanese Banzai group moved backwards (to RR3) to keep the range at RR5, and again went into CC immediately, finally killing the rest of the British group C for the win. Again, I think we screwed up by allowing the Japanese to play a movement card to change the range to RR5 AND go into CC in the same turn. As long as the British run away, the Japanese can chase them, but not fight them in CC in the same move. Just looking for confirmation before discussing this again with my opponent, because he was sure we were doing it right. Is my interpretation of 45.422 correct?\n\nMain question: In the rules (45.43), it says that \"The Japanese player has the option to cancel a Banzai attack only if the target group retreats or moves away laterally out of range (i.e. the target group is no longer directly opposite or adjacent), or if another enemy group moves in such a way as to block the access of the Banzai group to the declared target.\" In our case, however, the target group advanced to get away from the Banzai. It looks to me as though the Japanese player must continue the Banzai in this particular case (italics mine). Is that correct?\n\nGive GeekGold Tip",
+      "intent": "scenario",
+      "expected_rules": [
+        "45.422",
+        "45.43",
+        "5.6",
+        "5.61"
+      ],
+      "retrieved_rules": [
+        "45.41",
+        "45.42",
+        "45.421",
+        "45.422",
+        "45.423",
+        "45.43"
+      ],
+      "rule_hit": true,
+      "hits": [
+        "45.422",
+        "45.43"
+      ],
+      "rule_recall": 0.5,
+      "adjudication": {
+        "status": "skipped"
+      },
+      "adjudicated_hit": true,
+      "adjudicated_recall": 0.5,
+      "latency_seconds": 2.82,
+      "generated_answer": "**Verdict: PROHIBITED**\n\nAccording to Rule 45.43, a Banzai attack can only be cancelled under specific conditions: if the target group retreats or moves laterally out of range, or if another enemy group blocks access to the target. In the described scenario, the target group (British group C) advanced to RR1 and then RR2 to escape the Banzai group. This movement does not fit the criteria for cancellation as outlined in Rule 45.43. Therefore, the Japanese player cannot cancel the Banzai attack simply because the target group advanced. \n\nAdditionally, Rule 45.422 specifies that once a Banzai group reaches Relative Range 5, it must perform Close Combat in the next Japanese turn if the target group is still at RR5. The Japanese player cannot move the Banzai group and immediately engage in Close Combat in the same turn unless the target group remains at RR5. \n\nThus, the Japanese player was not permitted to move the Banzai group to RR4 or RR3 and immediately engage in Close Combat in the same turn after the British group advanced. The Banzai attack should have continued as per the rules without the option to cancel based on the target group's advance.",
+      "ground_truth_answer": "A) Yes the terminology is confusing, but it helps to call the position of a group as Range Chit #  or RC# and use the term \"Relative Range\" for the total of range chits with the correction for lateral distance and passing an adjacent group.  (5.6 & 5.61)\n\nB) On the turn ***following*** the turn when the banzaiing group reaches RR5, the banzaiing must enter close combat.  (You can't do it the same turn as that would give the banzaiing group two actions in one turn: moving and entering CC).  Also the banzaiing group must enter CC each turn it remains at RR5.  If the defending group moves away, the Banzaiing group could move this turn to get back to RR5 and then enter Cc on the following turn.\n\nC)  Based on 45.43, I would say you could call off banzai after the opponent advanced to evade your group.  There are other rules that get \"turned around\" if opposing groups pass each other.\n\nD) Why in the Emperor's name are you Banzaiing?   Assuming you can find a Jungle card (i.e.  Woods or Building if playing with a standard deck--there are 13 such cards in the deck), you'd have 20 VP (for the 4 unpinned guys at RC5) for that alone.  You almost certainly have a huge lead.\n\nWhat if your opponent has a good fire card? You are moving with at least 1 movement card in play (remember the movement card to call for Banzai remains in play.) If two or more movement cards are in play (which would have happened with the movement you described), your TEM is +2--terrain has no effect.  AND you can't play concealment cards and all pin results against you are KIAs.  I can't think of a faster way to lose 20 VPs and give 10 VP to your opponent.\n\nEven if your opponent can only muster a Fire 1, you might easily lose 2 or 3 guys.  \n\nAlmost any other action is preferable:  infiltrate to enter CC the normal way, fire if able, or even rally.",
+      "debug": {
+        "executionTimeMs": 2623,
+        "verdict": "PROHIBITED",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 2.82,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 6
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2797691",
+      "overall_index": 73,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:30:59.245166",
+      "title": "Learning videos recommendation",
+      "query": "Learning videos recommendation: As I can see, again and again new gamers become interested in this old classic. However, well done videos for learning UF are not easy to find. I can recommend this video series by Brian E. Knoll on YouTube. I always wonder why there are only a few subscribers of this YouTube channel... Have a look, I am sure you will like it!\nAt this point, I want to say thank you to Brian for his great work \ud83d\udc4d",
+      "intent": "clarification",
+      "expected_rules": [],
+      "retrieved_rules": [],
+      "rule_hit": null,
+      "hits": [],
+      "rule_recall": null,
+      "adjudication": null,
+      "adjudicated_hit": null,
+      "adjudicated_recall": null,
+      "latency_seconds": 2.48,
+      "generated_answer": "Verdict: PERMITTED\n\nRuling: The user's scenario involves recommending a learning resource (a video series by Brian E. Knoll on YouTube) for new players of the Up Front card game. This action does not directly interact with the gameplay mechanics or violate any specific codified rules of the game. \n\nGiven the context provided, which lacks specific rule clauses, the recommendation of external learning resources is generally considered a supportive and community-building activity. It does not interfere with the game's integrity or the competitive balance. Therefore, recommending videos or expressing gratitude for content creators is permitted within the broader community engagement scope.",
+      "ground_truth_answer": "Thanks for sharing this link.  An excellent resource added to my pool for clarifying / qualifying UF rules, which can certainly be challenging and even ambiguous at times.",
+      "debug": {
+        "executionTimeMs": 2369,
+        "verdict": "PERMITTED",
+        "confidenceScore": 0.75,
+        "roundTripTimeSec": 2.48,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 0
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2795341",
+      "overall_index": 74,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:31:02.077132",
+      "title": "Infantry attacks against an AFV",
+      "query": "Infantry attacks against an AFV: Can regular infantry, say a crewed LMG, attack the morale and CE defense values of an AFV with regular FP?",
+      "intent": "clarification",
+      "expected_rules": [
+        "22.5",
+        "28.7"
+      ],
+      "retrieved_rules": [
+        "10.1",
+        "10.2",
+        "10.3",
+        "10.4",
+        "11.1",
+        "2.1",
+        "2.2",
+        "27.1",
+        "28.1"
+      ],
+      "rule_hit": false,
+      "hits": [],
+      "rule_recall": 0.0,
+      "adjudication": {
+        "status": "skipped"
+      },
+      "adjudicated_hit": false,
+      "adjudicated_recall": 0.0,
+      "latency_seconds": 2.82,
+      "generated_answer": "Verdict: PROHIBITED\n\nRuling: According to Rule 28.1, AFV cards represent both the vehicle and the men manning it, and are treated the same as Personality cards except as otherwise specified. There is no rule that allows regular infantry, such as a crewed LMG, to attack the morale and Combat Effectiveness (CE) defense values of an AFV with regular Firepower (FP). AFVs have specific rules and values for engaging them, typically requiring ordnance or anti-tank weapons, as indicated in various rules and scenarios throughout the game. Therefore, regular infantry cannot attack the morale and CE defense values of an AFV with regular FP.",
+      "ground_truth_answer": "On rereading, there is two sources of boxed fp:\n- Flamethrowers \n- all other personality cards have a boxed fp of 1 vs. OT AFVs at RR5  (In addition, to their normal unboxed fp.)\n\nIf the fire card uses fp <= the amount boxed fp available vs. an AFV, then 2 resolutions are performed:\n- first vs. Morale and CE values\n- next vs. Armor or Flank values.\n(See 22.5 & 28.7)\n\nIf the fp of Fire card > the boxed fp available (but <= unboxed fp), then only the unboxed vs. Morale/CE occurs.\n\nNote:  This particular rule is very rarely used. I don't know if I have ever used it--mostly due to few AFV vs. FT scenarios.",
+      "debug": {
+        "executionTimeMs": 2228,
+        "verdict": "PROHIBITED",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 2.82,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 9
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2740282",
+      "overall_index": 75,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:31:05.495759",
+      "title": "Sniper may target individual transferring guy?",
+      "query": "Sniper may target individual transferring guy?: Another first... Sniper attack on a group who has a designated PC transferring in.  Does the sniper attack potentially target this PC?  If so which position is in it?  I know with fire attacks the PC is considered the first attack.  Not sure if it's the same for snipers.",
+      "intent": "clarification",
+      "expected_rules": [],
+      "retrieved_rules": [
+        "10.1",
+        "10.2",
+        "10.3",
+        "10.4",
+        "11.1",
+        "2.1",
+        "2.2"
+      ],
+      "rule_hit": null,
+      "hits": [],
+      "rule_recall": null,
+      "adjudication": null,
+      "adjudicated_hit": null,
+      "adjudicated_recall": null,
+      "latency_seconds": 3.41,
+      "generated_answer": "Verdict: CONDITIONAL\n\nRuling: \n\n1. **Sniper Targeting Rules**: According to the rules, a Sniper card targets a specific position within a group. This is determined by the Random Position Number (RPN) on the Sniper card [Rule 2.2].\n\n2. **Transferring Personality Card**: When a Personality Card (PC) is transferring into a group, it is considered part of that group for all intents and purposes, including being a potential target [Rule 2.1].\n\n3. **Position Determination**: The RPN on the Sniper card indicates the position within the group to be targeted. If the RPN corresponds to the position of the transferring PC, then the PC can be targeted [Rule 2.2].\n\n4. **Conditional Targeting**: Therefore, the Sniper can potentially target the transferring PC if the RPN matches the PC\u2019s position in the group. This is conditional on the RPN generated by the Sniper card.\n\nIn summary, the Sniper can target the transferring PC if the RPN on the Sniper card matches the PC\u2019s position within the group.",
+      "ground_truth_answer": "Per the errata, yes. Transferring men are targeted by the sniper.  Any transfer(s) are considered to be in the first position(s) in the RPC draw.",
+      "debug": {
+        "executionTimeMs": 2978,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 3.41,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 7
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2737943",
+      "overall_index": 76,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:31:07.437824",
+      "title": "Territorial Victory Points",
+      "query": "Territorial Victory Points: Scenario B City Fight says that \"territorial points are awarded only to those men occupying Buildings terrain.\" What are territorial points? The rules mention points for aggressive action and for casualties, but I cannot find any info on points for terrain.",
+      "intent": "scenario",
+      "expected_rules": [
+        "16.4"
+      ],
+      "retrieved_rules": [
+        "10.1",
+        "10.2",
+        "10.3",
+        "10.4",
+        "2.1",
+        "2.2"
+      ],
+      "rule_hit": false,
+      "hits": [],
+      "rule_recall": 0.0,
+      "adjudication": {
+        "status": "skipped"
+      },
+      "adjudicated_hit": false,
+      "adjudicated_recall": 0.0,
+      "latency_seconds": 1.93,
+      "generated_answer": "Verdict: AMBIGUOUS\n\nRuling: The provided context does not contain a clear definition or explanation of \"territorial points\" as mentioned in Scenario B City Fight. The rules discuss points for aggressive actions and casualties but do not explicitly define or elaborate on territorial points related to occupying Buildings terrain. Therefore, based on the given codified rules context, the concept of territorial points remains ambiguous and requires further clarification or additional rule text to provide a definitive answer.",
+      "ground_truth_answer": "It is a typo of Richard Irving's compilation of scenarios. The original rulebook says:\nVICTORY CONDITIONS : The player with the most Victory Points (16.4) at the end of the time limit is the winner. However aggressive action Victory Points are awarded only to those men occupying Buildings terrain. Victory Points for casualties (including men removed due to rout) are awarded normally.",
+      "debug": {
+        "executionTimeMs": 1787,
+        "verdict": "AMBIGUOUS",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 1.93,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 6
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2736919",
+      "overall_index": 77,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:31:11.538877",
+      "title": "Snipers and Wounds",
+      "query": "Snipers and Wounds: When Snipers KIA or Pin a man, do you ever check if he was wounded instead?  And if so, how?   Thanks.",
+      "intent": "clarification",
+      "expected_rules": [],
+      "retrieved_rules": [
+        "10.1",
+        "10.2",
+        "10.3",
+        "10.4",
+        "2.1",
+        "2.2"
+      ],
+      "rule_hit": null,
+      "hits": [],
+      "rule_recall": null,
+      "adjudication": null,
+      "adjudicated_hit": null,
+      "adjudicated_recall": null,
+      "latency_seconds": 4.09,
+      "generated_answer": "Verdict: CONDITIONAL\n\nRuling:\n1. **Sniper Attack**: According to the rules, when a Sniper card is played, it can result in either a KIA or a pinned condition for the target [Rule 10.1]. \n\n2. **Wounded Condition**: The rules do not explicitly state that a Sniper attack can result in a wounded condition instead of a pinned or KIA condition. \n\n3. **Pinned Condition**: If the target is pinned, the rules clearly state that the target's card is flipped sideways, and he defends with his panic value and his KIA value is increased by +1 [Rule 10.1].\n\n4. **KIA Condition**: If the target is KIA, he is removed from play [Rule 10.1].\n\n5. **Wounded Condition**: There is no rule that allows for a Sniper attack to result in a wounded condition instead of pinned or KIA. Therefore, if a Sniper attack results in a pinned or KIA condition, it does not check for a wounded condition.\n\n6. **Conclusion**: Snipers do not check if a man was wounded instead of pinned or KIA. The conditions for pinned and KIA are mutually exclusive and do not include a wounded state as an alternative outcome [Rule 10.1].\n\nThus, the condition for checking if a man was wounded instead of pinned or KIA does not apply in the context of a Sniper attack.",
+      "ground_truth_answer": "When Snipers KIA or Pin a man, do you ever check if he was wounded instead?  And if so, how?   Thanks.\nYes, in the same way you check during any fire attack.  When either:\n-  a KIA result with the lowest possible RNC to cause a KIA.\n-  when a pinned man routs after checking the 0r number after a pinned Sniper attack.\n\nAs usual, draw another card and check RPC 7w = Morale indicates a wound.\n\nThis was specified in the errata.\n\nAh, I never knew you were supposed to check for wounds even for a Sniper kill.  \n\nAs usual... hm, I know there's a situation where the card drawn for one purpose is the same card you use to check for something else.  I thought that was for wounds.  No?  Maybe then for rout vs panic?  You use the same card that caused the \"running away\" man.",
+      "debug": {
+        "executionTimeMs": 3889,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 4.09,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 6
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2690087",
+      "overall_index": 78,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:31:15.112203",
+      "title": "Flanking fire questions",
+      "query": "Flanking fire questions: 17.4 A group entitled to Flanking Fire doubles its firepower (EXC:\nflamethrowers) for all subsequent fire against the flanked defending group\nuntil one of the following actions occurs.\nIn the past, we always played Flanking Fire so that you'd calculate the group's firepower as normal, eg. half firepower rounded down for moving bolt action rifles, then double the resulting total to get the firepower available for the group. But the UF errata has recently given me cause to doubt that interpretation:\n17.4 In a group at Relative Range 1 that has flanking fire on an opponent, would a wounded man with a bolt action rifle have a firepower of 1 or 0?\nA. His firepower would be 1.\nCLARIFICATION: Perform all halving and doubling of firepower before rounding down fractions. This applies to all modifiers of\nfirepower.\nThis suggests that the Flanking Fire firepower bonus is applied to each man individually before calculating the group's total firepower. If that is the case, which FP would you double on an LMG/MMG: the bracketed or the unbracketed value?",
+      "intent": "errata_comparison",
+      "expected_rules": [
+        "1.5",
+        "10.45",
+        "17.4",
+        "22.1",
+        "33.2",
+        "7.5"
+      ],
+      "retrieved_rules": [
+        "17.1",
+        "17.2",
+        "17.3",
+        "17.4",
+        "17.5"
+      ],
+      "rule_hit": true,
+      "hits": [
+        "17.4"
+      ],
+      "rule_recall": 0.17,
+      "adjudication": {
+        "status": "skipped"
+      },
+      "adjudicated_hit": true,
+      "adjudicated_recall": 0.17,
+      "latency_seconds": 3.56,
+      "generated_answer": "Verdict: CONDITIONAL\n\nRuling:\nAccording to Rule 17.4, the clarification states that all halving and doubling of firepower should be performed before rounding down fractions. This applies to all modifiers of firepower. \n\nFor LMGs and MMGs, Rule 17.4 combined with Scenario A states: \"The fully crewed value is used for flanking bonuses. The bracketed value is doubled only for Heroes using crewed weapons.\"\n\nTherefore, when calculating the flanking fire bonus for an LMG or MMG, you should use the fully crewed value (unbracketed) for the flanking bonus, not the bracketed value. \n\nIn summary:\n1. Determine the firepower of each individual weapon type in the group.\n2. Apply any halving (e.g., for moving bolt action rifles) to each individual weapon's firepower.\n3. Double the resulting firepower for flanking fire.\n4. Sum the doubled firepower values to get the total group firepower.\n5. Round down any fractions after all modifications have been applied.\n\nThus, for LMGs and MMGs, the unbracketed value is the one that should be doubled for flanking fire.",
+      "ground_truth_answer": "17.4 A group entitled to Flanking Fire doubles its firepower (EXC:\nflamethrowers) for all subsequent fire against the flanked defending group\nuntil one of the following actions occurs.\nIn the past, we always played Flanking Fire so that you'd calculate the group's firepower as normal, eg. half firepower rounded down for moving bolt action rifles, then double the resulting total to get the firepower available for the group. But the UF errata has recently given me cause to doubt that interpretation:\n17.4 In a group at Relative Range 1 that has flanking fire on an opponent, would a wounded man with a bolt action rifle have a firepower of 1 or 0?\nA. His firepower would be 1.\nCLARIFICATION: Perform all halving and doubling of firepower before rounding down fractions. This applies to all modifiers of\nfirepower.\nThis suggests that the Flanking Fire firepower bonus is applied to each man individually before calculating the group's total firepower. If that is the case, which FP would you double on an LMG/MMG: the bracketed or the unbracketed value?\n\nThe confusion comes in here is the Hero card and Flanking/Encirclement/Infiltrator  Flanking/encirclement/infiltrator doubles unbracketed/bracketed FP (whatever the crewed weapon entitled to--note, an infiltraor must lose his infiltration status and therefore must have bracketed FP), whereas a Hero card specifically doubles bracketed FP of a crewed weapon (10.45)\n\nIn most cases, the order of whether add the group's FP and then double or double each man's FP then add it together should not matter (provided any rounding is done last--save any 1/2's until the end)),  Except for two things:\n- flamethrowers (which cannot be doubled)\n-  Hero cards played on a man already entitled to doubled FP (which are tripled, not doubled twice).\n\nFor this reason it should doubling/tripling should be done on a man by man basis.\n\nTake the following group at flanking at RR5:\nFT. 12 \nBolt rifle 3*2 = 6\nMP (with Hero) 5*3 = 15\nWounded Bolt rifle 1.5 * 2 = 3\n\nThis group would provide 36 FP.  There might be a bit of overkill here....\n\nIf the group were moving, it would still be providing 18 FP (Note the heroic MP has 7.5 and the wounded BR has 1.5 which still adds to 9 (add everything before halving)).  (22.1 about not halving FT applies only if the FT provides all necessary FP, i.e. 12.  It won't matter here--as the nonFT still provide 12 FP while moving.)",
+      "debug": {
+        "executionTimeMs": 3254,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 3.56,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 5
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2688478",
+      "overall_index": 79,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:31:17.257586",
+      "title": "Order of resolution of multiple CC",
+      "query": "Order of resolution of multiple CC: If I attack a group in CC, and there are multiple CCs to resolve, can I choose which CC to resolve first? I can't find anything in the rules which rules on this one way or another.",
+      "intent": "situation",
+      "expected_rules": [
+        "16.3",
+        "16.5",
+        "20.52",
+        "20.62",
+        "20.72",
+        "4.2"
+      ],
+      "retrieved_rules": [
+        "14.1",
+        "14.2",
+        "14.3",
+        "14.6",
+        "28.431"
+      ],
+      "rule_hit": false,
+      "hits": [],
+      "rule_recall": 0.0,
+      "adjudication": {
+        "status": "skipped"
+      },
+      "adjudicated_hit": false,
+      "adjudicated_recall": 0.0,
+      "latency_seconds": 2.14,
+      "generated_answer": "Verdict: AMBIGUOUS\n\nRuling:\nThe provided codified rules context does not explicitly address the order of resolution for multiple Close Combats (CC) when attacking a group involved in multiple CCs. \n\n- There is no specific rule number or text that dictates the order in which multiple CCs should be resolved when a group is attacked.\n- The rules for Close Combat (not provided in the context) typically outline how to resolve a single CC, but do not extend to scenarios involving multiple simultaneous CCs against the same group.\n- Without a clear directive, it is ambiguous whether a player can choose which CC to resolve first or if there is a prescribed order.\n\nTherefore, based on the provided context, the order of resolution for multiple CCs remains ambiguous and would require clarification or a house rule to determine a consistent approach.",
+      "ground_truth_answer": "There are some issues with the Squad Break rule.\n\n First, the squad break rule, in full, reads:  16.5 BROKEN SQUAD:  A scenario always ENDS (emphasis added) whenever a player has lost more than half of his personality cards due to KIA and/or rout.  Reinforcements are not considered part of the force until they actually enter play. \n\nNote: later expansion rules for Japanese, French and Italians modified the percentage of losses.  Errata also clarified simultaneous loss in the same CC pair and prisoners or surrendered men count.\n\nThe rule itself does NOT say the player suffering a squad break loses.  OOPS!  Though the immediately following example does say the player \"loses immediately\", and everyone I have encountered has interpreted it that way.\nI am another who interprets the squad break rule according to the example, which I think is quite clear (IIRC, it's not the only case in which Up Front hides basic rules in examples).\n\nThis creates a rather odd paradox: an attacker is not allowed to call off a series of CCs per 20.52 and 20.62, so he cannot say \"well I am now down to 1 man from breaking, so I'll stop here without resolving the rest of the CC matchups.\"  But by squad break  immediately interpretation, the player can stop here when squad break is acheived,  without resolving the rest the CC matchups--even if resolving them may result in both sides ending up broken.\n\nI am not saying \"squad break causes immediate loss and thus cancels remaining CCs\" is incorrect.  (I would lean towards say it is correct, but I am not 100% sure.)  But it is built on a foundation of mud.\nThis is an interesting paradox indeed Richard. If an attacker is not normally allowed to call off a series of CCs, and if the rules, in other circumstances, even expressly instruct us to continue the game after its normal conclusion if a CC attack has begun, then it does make sense that a CC would continue after a squad breaks in the event of there being a chance of the other squad breaking too. This interpretation has the merit of being both more dramatic, and of requiring a bit more tactical subtlety on the part of a player seeking to end a close game with CC. That I like, but it's something of an irresistable force in the face of the immovable object that is the \"loses immediately\" citation from the example immediately following rule 16.5. I think this citation has some bearing on the matter:\n16.5 Two players are both in danger of having their squad broken. During a close combat struggle, the random draw results in a tie,\neliminating both combatants, and both squads are broken. Is the game a tie, with both sides losing? If not, how is victory determined?\nA. It counts as a loss for both players.\nIn the end though, it looks to me like this one is an example of 'you pays your money and you takes your choice', to be decided, in the absence of an authorative ruling, by a gentlemen's agreement between opponents.",
+      "debug": {
+        "executionTimeMs": 1964,
+        "verdict": "AMBIGUOUS",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 2.14,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 5
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2661857",
+      "overall_index": 80,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:31:19.877003",
+      "title": "Fire Combat Resolution + Malfunction",
+      "query": "Fire Combat Resolution + Malfunction: Rule 6.5 says:\n\n\"After seeing the final modified Fire Strength of any attack, it is the attacker's option whether or not he wishes to resolve that attack or just discard his played Fire card(s)\"\n\nI have always interpreted that rule as including the change to the Fire Strength of an attack when a weapon malfunctions.\n\nIn other words, if a weapon malfunctions (and it is not the sole firing weapon), the attacker may choose to cancel the attack instead of resolving the remainder of that attack with a smaller Fire Strength.\n\nWhat do other players think?",
+      "intent": "direct_rule",
+      "expected_rules": [
+        "6.5"
+      ],
+      "retrieved_rules": [
+        "25.4",
+        "6.2",
+        "6.3",
+        "6.5"
+      ],
+      "rule_hit": true,
+      "hits": [
+        "6.5"
+      ],
+      "rule_recall": 1.0,
+      "adjudication": null,
+      "adjudicated_hit": true,
+      "adjudicated_recall": 1.0,
+      "latency_seconds": 2.62,
+      "generated_answer": "**Verdict: CONDITIONAL**\n\n**Ruling:**\n\n1. **Interpretation of Rule 6.5**:\n   - According to Rule 6.5, \"After seeing the final modified Fire Strength of any attack, it is the attacker's option whether or not he wishes to resolve that attack or just discard his played Fire card(s).\" This rule allows the attacker to choose whether to resolve the attack or not after seeing the final modified Fire Strength.\n\n2. **Weapon Malfunction Context**:\n   - A weapon malfunction would typically reduce the Fire Strength of the attack. If the malfunction occurs and the Fire Strength is modified, the attacker sees this new, reduced Fire Strength.\n\n3. **Application of Rule 6.5**:\n   - Given that the rule allows the attacker to choose whether to resolve the attack after seeing the final modified Fire Strength, this choice should logically extend to scenarios where the modification is due to a weapon malfunction. \n\n4. **Conditional Nature**:\n   - The attacker may choose to cancel the attack if a weapon malfunctions, provided it is not the sole firing weapon. This is because the rule does not explicitly prohibit canceling the attack in the event of a malfunction; it only requires the attacker to see the final modified Fire Strength before making a decision.\n\n**Conclusion**:\n- The attacker may choose to cancel the attack if a weapon malfunctions, as long as it is not the sole firing weapon, based on the interpretation of Rule 6.5.",
+      "ground_truth_answer": "Rule 6.5 says:\n\n\"After seeing the final modified Fire Strength of any attack, it is the attacker's option whether or not he wishes to resolve that attack or just discard his played Fire card(s)\"\n\nI have always interpreted that rule as including the change to the Fire Strength of an attack when a weapon malfunctions.\n\nIn other words, if a weapon malfunctions (and it is not the sole firing weapon), the attacker may choose to cancel the attack instead of resolving the remainder of that attack with a smaller Fire Strength.\n\nWhat do other players think?\n\nNope, once an attack is resolved against one man, it must be resolved against them all.  It is in the errata.\nhttps://boardgamegeek.com/filepage/70811/front-errata",
+      "debug": {
+        "executionTimeMs": 2463,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 2.62,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 4
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2651429",
+      "overall_index": 81,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:31:22.012157",
+      "title": "H.3 Armored Advance",
+      "query": "H.3 Armored Advance: \"H.3: The defending player gets at least one functioning Terrain card to use during Preparation for Play. If he has none in his hand at start, he draws cards until he gets one. All other cards drawn in this process are returned to deck and reshuffled.\"\n\nMust I use the terrain card drawn during Preparation for Play?  DON'T MAKE ME PUT MY GUYS IN A GULLY-GULLY!!  I HATE THIS GAME!!  Somebody make the pain go away, stop this krazee ride, I wanna get OFF!!",
+      "intent": "clarification",
+      "expected_rules": [
+        "3.6"
+      ],
+      "retrieved_rules": [],
+      "rule_hit": false,
+      "hits": [],
+      "rule_recall": 0.0,
+      "adjudication": {
+        "status": "skipped"
+      },
+      "adjudicated_hit": false,
+      "adjudicated_recall": 0.0,
+      "latency_seconds": 2.13,
+      "generated_answer": "**Verdict: CONDITIONAL**\n\n**Ruling:**\n\n1. **Interpretation of Scenario H.3:**\n   - According to the scenario H.3, the defending player is guaranteed at least one functioning Terrain card during Preparation for Play. If the defending player does not have a Terrain card in their hand at the start, they must draw cards until they obtain one [H.3].\n\n2. **Mandatory Draw but Not Mandatory Use:**\n   - The rule specifies that the defending player must draw until they get a Terrain card, but it does not explicitly state that the card must be used. \n   - Therefore, while the defending player must draw to ensure they have a Terrain card, they are not compelled by the rule to use it during Preparation for Play.\n\n3. **Player Agency:**\n   - Given the absence of a rule mandating the use of the drawn Terrain card, the defending player retains the agency to decide whether or not to use the Terrain card they have drawn.\n\n**Conclusion:**\n- You are not required to use the Terrain card drawn during Preparation for Play if you choose not to, based on the provided scenario context and standard game principles.",
+      "ground_truth_answer": "Don't forget you can place \"bad\" Terrain on your opponent's groups (3.6)",
+      "debug": {
+        "executionTimeMs": 1940,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.75,
+        "roundTripTimeSec": 2.13,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 0
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2646142",
+      "overall_index": 82,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:31:25.135009",
+      "title": "Anti-Tank Rifle Quandary",
+      "query": "Anti-Tank Rifle Quandary: Dear Sirs,\n\nI recently played the Italians, including personality card #28, PFC Ritondo w/ his Anti-Tank Rifle and I've got a coupla questions:\n\n1. His \"To Hit\" values include bracketed values, so I assume he needs to be crewed for full use of the Anti-Tank capability, but he also has a firepower value of \"1\", w/ no corresponding bracketed value--can he thus be used uncrewed and still provide this firepower?\n\n2. Along the same lines, if he is uncrewed, but you are just using it for the firepower, and a red \"5\" is drawn, does he qualify for potential malfunction?  His malfunction values are \"X6, \".\n\nRequest references and rationale, plz.\n\nAndrew",
+      "intent": "scenario",
+      "expected_rules": [],
+      "retrieved_rules": [],
+      "rule_hit": null,
+      "hits": [],
+      "rule_recall": null,
+      "adjudication": null,
+      "adjudicated_hit": null,
+      "adjudicated_recall": null,
+      "latency_seconds": 3.12,
+      "generated_answer": "**Verdict: CONDITIONAL**\n\n**Ruling:**\n\n1. **Firepower Value Without Crew:**\n   - **Condition:** The use of PFC Ritondo's Anti-Tank Rifle without a crew.\n   - **Analysis:** Given that PFC Ritondo has a firepower value of \"1\" with no corresponding bracketed value, it suggests that this firepower is available regardless of crew status. Typically, bracketed values indicate a requirement for a crew to achieve the higher value, whereas unbracketed values are often standalone.\n   - **Conclusion:** PFC Ritondo can be used uncrewed and still provide a firepower value of \"1\" [Standard Game Principle: Unbracketed values are generally available without additional conditions].\n\n2. **Malfunction with Red \"5\" Draw:**\n   - **Condition:** Drawing a red \"5\" while using PFC Ritondo uncrewed for firepower.\n   - **Analysis:** PFC Ritondo\u2019s malfunction values are listed as \"X6, \". This indicates a potential for malfunction specifically tied to the use of the Anti-Tank Rifle, which generally requires a crew for full operation. Since the malfunction value is associated with the Anti-Tank Rifle and not the standalone firepower, it is conditional on the use of the rifle in its intended anti-tank role.\n   - **Conclusion:** If PFC Ritondo is used uncrewed for the firepower value of \"1\", he does not qualify for potential malfunction from drawing a red \"5\" because the malfunction condition is tied to the Anti-Tank Rifle\u2019s operation, which requires a crew [Standard Game Principle: Malfunctions are condition-specific and tied to the use of equipment as intended].\n\n**Summary:**\n- PFC Ritondo can provide a firepower value of \"1\" uncrewed.\n- He does not qualify for potential malfunction from drawing a red \"5\" when used uncrewed for firepower.",
+      "ground_truth_answer": "Dear Sirs,\n\nI recently played the Italians, including personality card #28, PFC Ritondo w/ his Anti-Tank Rifle and I've got a coupla questions:\n\n1. His \"To Hit\" values include bracketed values, so I assume he needs to be crewed for full use of the Anti-Tank capability, but he also has a firepower value of \"1\", w/ no corresponding bracketed value--can he thus be used uncrewed and still provide this firepower?\n\nNo, like all crewed weapons it may be fired when not fully crewed, but at less firepower or worse to hit # and higher malfunction rating.  It does not need to be crewed for AT capability or when used vs. Personnel.\n\nAs for use against personnel, it has 1 fp at all ranges regardless of whether if it crewed or not.  Like all ATRs.\n\n2. Along the same lines, if he is uncrewed, but you are just using it for the firepower, and a red \"5\" is drawn, does he qualify for potential malfunction?  His malfunction values are \"X6, \".\n\nYes.  If the ATR is not fully crewed (i.e.  no crewman or a pinned crewman), it has a malf rating of X5-6, which means if a Red 5 is drawn it will usually mean that weapon will be only eligible to break.  (Unless there are 2 or more X5-6 weapons, then you would draw an RPC to determine which X5-6 weapon malfunctions.) If you drew a Red 6, then the RPC includes all X6 weapons as well.\n\nIf it were crewed, then its malf is X6 and therefore it only ***potentially*** breaks on a Red 6.  (Because the RPC would include all firing weapons, crewman, malfed weapon specified in the rules.) That's  the risk of firing when it is not fully crewed.\n\nYes, in practice that means an X5-6 weapon (like a not fully crewed Italian ATR, Italian LMG) an actually breaks far more often than you might think.\n\nNote all of this also true for Japanese ATR which is also a crewed weapon and breaks on the same numbers.\n\nI am more surprised you didn't ask about the To Hit#'s this weapon, which is wrong on the AH card and chit (in different ways!)  This was corrected on the Wargamr Vault edition.\n\nRequest references and rationale, plz.\n\nALWAYS refer to errata on malfunction questions--the editor basically had to rewrite the entire to fix the many issues with it.\n\nAs for realism rationale, that a bug (not a feature) of all the malfunction rules.  (More weapons in firing group = less likely for each individual to break due to RPC draw.  More in the target group = more likely to break as there are more RNC draws.)  But to fix these problems would be far worse than not fixing them.",
+      "debug": {
+        "executionTimeMs": 3003,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.75,
+        "roundTripTimeSec": 3.12,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 0
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2633076",
+      "overall_index": 83,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:31:27.630568",
+      "title": "Wire Cards",
+      "query": "Wire Cards: I am confused about discarding a wire card on my opponent, I am playing American and wish to play a wire card from my B group does that mean I cant do this if I have already played any card from my A group?.\n\nJB.",
+      "intent": "clarification",
+      "expected_rules": [
+        "25.8"
+      ],
+      "retrieved_rules": [],
+      "rule_hit": false,
+      "hits": [],
+      "rule_recall": 0.0,
+      "adjudication": {
+        "status": "skipped"
+      },
+      "adjudicated_hit": false,
+      "adjudicated_recall": 0.0,
+      "latency_seconds": 2.49,
+      "generated_answer": "Verdict: CONDITIONAL\n\nRuling:\n1. **Understanding Wire Cards**: Wire cards in Up Front are special cards that can be played to affect the opponent's position. The specific mechanics of wire cards are not detailed in the provided context, but generally, they follow specific rules regarding play order and restrictions.\n\n2. **Play Order and Groups**: In Up Front, players typically have cards organized into groups (A, B, etc.). The standard rule is that players must play cards from their A group before they can play cards from their B group [Standard Play Order].\n\n3. **Wire Card Specifics**: If wire cards are subject to the standard play order rules, then you cannot play a wire card from your B group if you have not yet played all eligible cards from your A group. This is a conditional ruling based on the assumption that wire cards follow the same play order restrictions as other cards.\n\n4. **Scenario Application**: Given that you are playing as American and wish to play a wire card from your B group, you must first ensure that all eligible cards from your A group have been played. If any cards from your A group remain unplayed, you cannot play the wire card from your B group.\n\nIn summary, playing a wire card from your B group is conditional on having played all eligible cards from your A group first.",
+      "ground_truth_answer": "It's in the errata:\n25.8 What other AFVs can fire smoke? \nA. British AFVs with an anti-armor Effect Number of 4 or more can fire smoke. \n\nThat's literally the only AFV that can fire smoke? That can't be true can it?",
+      "debug": {
+        "executionTimeMs": 2374,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.75,
+        "roundTripTimeSec": 2.49,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 0
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2632337",
+      "overall_index": 84,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:31:31.246789",
+      "title": "Size of print",
+      "query": "Size of print: Is there anywhere I can get the original rules in larger print as I have great difficulty in reading them. Thanks in anticipation.\n\nJB.",
+      "intent": "clarification",
+      "expected_rules": [],
+      "retrieved_rules": [],
+      "rule_hit": null,
+      "hits": [],
+      "rule_recall": null,
+      "adjudication": null,
+      "adjudicated_hit": null,
+      "adjudicated_recall": null,
+      "latency_seconds": 3.61,
+      "generated_answer": "Verdict: AMBIGUOUS\n\nRuling: The scenario presented does not pertain to the gameplay mechanics or rules of the Up Front card game. Instead, it is a request for accessibility accommodations regarding the physical print size of the rulebook. Since there are no specific codified rules within the Up Front game that address the formatting or print size of the rulebook, this question falls outside the scope of rule adjudication. Therefore, the ruling is deemed ambiguous within the context of the game's rules. However, it is advisable to reach out to the game's publisher or check online platforms for possible larger print versions or digital formats that may be more accessible.",
+      "ground_truth_answer": "Is there anywhere I can get the original rules in larger print as I have great difficulty in reading them. Thanks in anticipation.\n\nJB.  \n\nWargame Vault \"sells\" the rules on .pdf for $0.00.  They could be printed on larger paper.\n\nYou could also find the file section here:\nhttps://boardgamegeek.com/filepage/68668/uf-rulebook-updated\n\nLarger print, includes errata, but used artwork from Artscow.  But weighs in at 91 pages.\n\nTANSTAAFL.",
+      "debug": {
+        "executionTimeMs": 1587,
+        "verdict": "AMBIGUOUS",
+        "confidenceScore": 0.75,
+        "roundTripTimeSec": 3.61,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 0
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2543271",
+      "overall_index": 85,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:31:33.188174",
+      "title": "repair, repair and remove ranges overlap?",
+      "query": "repair, repair and remove ranges overlap?: In 19.2 it is stated that one compares a NNC to the repair and elimination range, and if no overlap, then the weapon remains malfunctioned.  In the example chit image it has repair: 1-6 and remove:4-6.\n\nI have no idea what is supposed to happed when you draw 4-6, it would seem to be repair and remove.",
+      "intent": "concept",
+      "expected_rules": [
+        "19.2"
+      ],
+      "retrieved_rules": [
+        "19.2",
+        "19.3",
+        "19.4",
+        "2.3",
+        "6.2"
+      ],
+      "rule_hit": true,
+      "hits": [
+        "19.2"
+      ],
+      "rule_recall": 1.0,
+      "adjudication": null,
+      "adjudicated_hit": true,
+      "adjudicated_recall": 1.0,
+      "latency_seconds": 1.93,
+      "generated_answer": "Verdict: CONDITIONAL\n\nRuling:\nAccording to Rule 19.3, when attempting to repair a malfunctioned weapon, an RNC (Random Number Chit) is drawn. The result of this draw is then compared against the repair and elimination ranges listed on the malfunction chit and the personality card.\n\nIn the provided example, the repair range is 1-6 and the removal range is 4-6. If an RNC result falls within the removal range (4-6), it takes precedence over the repair range because the removal of the weapon is a more severe outcome. \n\nTherefore:\n- If the RNC result is 1-3, the weapon is repaired.\n- If the RNC result is 4-6, the weapon is removed from play.\n\nThis conditional outcome ensures that the more severe consequence (removal) is applied when the drawn number falls within the overlapping range.",
+      "ground_truth_answer": "In 19.2 it is stated that one compares a NNC to the repair and elimination range, and if no overlap, then the weapon remains malfunctioned.  In the example chit image it has repair: 1-6 and remove:4-6.\n\nI have no idea what is supposed to happed when you draw 4-6, it would seem to be repair and remove.\n\nCheck the color.  It really reads:\n repair: 1-6 and remove: 4-6..\n\nWhen you attempt to repair this weapon, it will be repaired on an RNC black 1-6, and removed from the game with a Red RNC 4-6.\n\nSome weapons (like, American rifles) repair on Red 0 and Black 0-6.",
+      "debug": {
+        "executionTimeMs": 1810,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 1.93,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 5
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2543063",
+      "overall_index": 86,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:31:35.866173",
+      "title": "entering close combat",
+      "query": "entering close combat: I a confused about who can enter close combat.\n\nRules say a group must first be infiltrated for CC to occur, they also say infiltrators can enter automatically CC with a morale check (implying that this is easier than for others).  But I see no description of a process for non-infiltrators entering CC?  Can the rest of an infiltrator's group enter CC (since the target group has been infiltrated)?  Or can only infiltrators enter CC?",
+      "intent": "clarification",
+      "expected_rules": [
+        "20.21",
+        "20.5",
+        "20.51",
+        "20.52",
+        "20.53"
+      ],
+      "retrieved_rules": [
+        "20.1",
+        "20.2",
+        "20.3",
+        "20.4",
+        "20.5",
+        "20.6",
+        "9.4"
+      ],
+      "rule_hit": true,
+      "hits": [
+        "20.21",
+        "20.5",
+        "20.51",
+        "20.52",
+        "20.53"
+      ],
+      "rule_recall": 1.0,
+      "adjudication": null,
+      "adjudicated_hit": true,
+      "adjudicated_recall": 1.0,
+      "latency_seconds": 2.67,
+      "generated_answer": "Verdict: CONDITIONAL\n\nRuling:\n1. **Infiltration Requirement**: According to [Rule 20.1], for Close Combat (CC) to occur, an infantry group must first infiltrate the enemy group. This means that at least one member of the attacking group must successfully infiltrate the defending group before any CC attacks can be attempted.\n\n2. **Infiltrators in CC**: [Rule 20.5] states that a man who has infiltrated the defender's position has special capabilities, implying that infiltrators can automatically engage in CC.\n\n3. **Non-Infiltrators Entering CC**: The rules do not explicitly describe a process for non-infiltrators to enter CC. However, [Rule 20.1] suggests that CC can only occur after infiltration. Therefore, it is conditional\u2014non-infiltrators can only enter CC if they are part of a group where at least one member has successfully infiltrated the enemy position.\n\n4. **Morale Check for Infiltrators**: [Rule 20.5] implies that infiltrators can enter CC with a morale check, which may be easier compared to other methods, but this does not extend to non-infiltrators without the infiltration condition being met.\n\nConclusion: Only infiltrators can automatically enter CC. Non-infiltrators can enter CC only if they are part of a group where at least one member has successfully infiltrated the enemy group.",
+      "ground_truth_answer": "I a confused about who can enter close combat.\n\nRules say a group must first be infiltrated for CC to occur, they also say infiltrators can enter automatically CC with a morale check (implying that this is easier than for others).  But I see no description of a process for non-infiltrators entering CC?  Can the rest of an infiltrator's group enter CC (since the target group has been infiltrated)?  Or can only infiltrators enter CC?\n\nYou are correct that only infiltrators can enter CC, with a choice for each man between using a Movement card or risking a Morale check - see underline below:\n\n20.5 INFILTRATION EFFECTS:     \nA man who has infiltrated the defender's position is still part of his group, in his group's terrain, able to fire with that group, and subject to fire vs. that group. However, he also has several special capabilities. \n\n20.51   An infiltrator may double his firepower ...\n\n20.52 CC ENTRY:     \nDuring future turns in which an infiltrator's group opts to engage in CC as its sole action, the infiltrator checks morale [20.21] or plays a Movement card for each infiltrator he intends to enter CC. ...\n\nThis is the only way to enter CC apart from oddities like Berserk or Banzai status.  While one or more infiltrators attempt to enter CC, the non-infiltrators in the same group can't do anything.\n\nCouldn't answer it better myself.",
+      "debug": {
+        "executionTimeMs": 2551,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 2.67,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 7
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2536120",
+      "overall_index": 87,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:31:38.514742",
+      "title": "Relative Range confussion",
+      "query": "Relative Range confussion: So, given that my group D is on Range 7, and my opponent group B is on Range -1; what is the Relative Range between the two groups?\nI'm pretty confident that it is RR5... but reading the wording of 5.6 & 5.61 now I have doubts",
+      "intent": "scenario",
+      "expected_rules": [
+        "17.3",
+        "17.6",
+        "5.6",
+        "5.6.2",
+        "5.61"
+      ],
+      "retrieved_rules": [
+        "5.1",
+        "5.2",
+        "5.3",
+        "5.4",
+        "5.6",
+        "5.61"
+      ],
+      "rule_hit": true,
+      "hits": [
+        "5.6",
+        "5.6.2",
+        "5.61"
+      ],
+      "rule_recall": 0.6,
+      "adjudication": {
+        "status": "skipped"
+      },
+      "adjudicated_hit": true,
+      "adjudicated_recall": 0.6,
+      "latency_seconds": 2.64,
+      "generated_answer": "Verdict: CONDITIONAL\n\nRuling: According to Rule 5.6, the actual distance between any two opposing groups is determined by adding their respective ranges together. In this case, Group D is at Range 7 and Group B is at Range -1. Adding these together gives us 6.\n\nAccording to the Relative Range Chart provided in Rule 5.6, if the sum of their range numbers is greater than 5, that sum is subtracted from 10 to achieve the true Relative Range between the groups. Since 6 is greater than 5, we subtract it from 10, which gives us a Relative Range of 4.\n\nHowever, Rule 5.61 states that the Relative Range is only decreased by one even if the groups in question are A and D. This rule does not apply to your scenario since you are dealing with groups D and B, not A and D. Therefore, the Relative Range between Group D and Group B is 4, not 5.",
+      "ground_truth_answer": "Thanks for entering to the discussion Richard\n\nThen you adjust for the not being  firing an opposite of adjacent group, so subtract -1  to RR3  (Being further away laterally means harder to hit.)\n\nTo be clear I'm not talking about fire, and reading 5.61 it seems that you apply the -1 of Lateral Distance at all times not only to fire (I've been playing scen D, where you need to be at RR5 to win)\n\nYes.  Fire is the most common reason, these RR adjustments are used in all situations where RR is used: victory conditions where you have a particular RR (Not range chit), flanking, retrograde movement (i.e. must be RR>0 in order to retreat), night rules (for sighting, starshells and allowable retreats), Surrounded scenario, Etc.\n\nYes, that does mean in Scenario D (4 men at RR5), my Group A at RC 0 and  your group C at RC5 are at RR4 to each other.  In order to win you would need lateral laterally transfer C to B.\n\nWhat is the rationale that a single Movement card put the advancing group from RR4 to behind the enemy group? (two ranges is this case)\n\nLet's say Group A are RR5 to opposing Group B.  Basically the groups are  \"even\" each other.  If Group A retreats, then they clearly would now be RR4.  OK.\n\nNow what happen if Group A advances, now the total of the range chits would be 6.  And the Group A would be behind Group B, but the same distance away from each other as they were at RR4.  (That's what the \"if the RC total >5, subtract from 10\" rule is doing.)\n\nThe gives the correct distance for firing.  Now, natural flanking (17.3) and encirclement (17.6) say you have to be \"RR4 but behind the adjacent target group\" to gain that advantage.  That's the same as RR6!  In this situation Group A would gain Natural Flanking (if there is also Group B as well) or if they then moved sideways on a later turn, gain Encirclement.",
+      "debug": {
+        "executionTimeMs": 2435,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 2.64,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 6
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2483572",
+      "overall_index": 88,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:31:41.419269",
+      "title": "Errata, inconsistency, or am I wrong?   [TH mod. with AFV-Assault Gun & ATR]",
+      "query": "Errata, inconsistency, or am I wrong?   [TH mod. with AFV-Assault Gun & ATR]: So given this To Hit frequency:\n   (-) Reduce                            Increase (+)\n 6  5  4  3  2  1  0  0-1 0-2  0-3  0-4  0-5  0-6\n\nand that Target Acquisition increase the To Hit by one (+1 printed in the counter),\nand that a Concealment card reduce the To Hit by the printed amount in the card (-1,-2,-3)\n\n- The printed modifiers on the AFV Assault Gun of +1 TH vs. moving target and +2 TH for bogged/immobilized, should be -1 and -2 instead?\n- The printed modifier on the Anti-Tank Rifles of -1 TH for flanking, should it be +1 instead?",
+      "intent": "errata_comparison",
+      "expected_rules": [],
+      "retrieved_rules": [
+        "10.1",
+        "10.2",
+        "10.3",
+        "10.4",
+        "2.1",
+        "2.2"
+      ],
+      "rule_hit": null,
+      "hits": [],
+      "rule_recall": null,
+      "adjudication": null,
+      "adjudicated_hit": null,
+      "adjudicated_recall": null,
+      "latency_seconds": 2.9,
+      "generated_answer": "Verdict: AMBIGUOUS\n\nRuling: The user's scenario raises questions about the printed modifiers on the AFV Assault Gun and Anti-Tank Rifles cards. According to the provided context, there are no explicit rules that directly address the specific modifiers on these cards. \n\n1. **AFV Assault Gun Modifiers**:\n   - The user suggests that the +1 To Hit (TH) versus a moving target and +2 TH for bogged/immobilized should be -1 and -2, respectively. However, there is no rule or errata provided that confirms or denies this interpretation. \n\n2. **Anti-Tank Rifles Modifier**:\n   - The user questions whether the -1 TH for flanking should be +1 instead. Again, there is no rule or errata provided that confirms or denies this interpretation.\n\nGiven the lack of specific rules or errata addressing these modifiers, the situation is ambiguous. Players should refer to any official errata or clarifications released by the game's publisher to resolve these discrepancies. If no such clarification exists, it is recommended that players agree on a consistent interpretation before starting the game.",
+      "ground_truth_answer": "So given this To Hit frequency:\n   (-) Reduce                            Increase (+)\n 6  5  4  3  2  1  0  0-1 0-2  0-3  0-4  0-5  0-6\n\nand that Target Acquisition increase the To Hit by one (+1 printed in the counter),\nand that a Concealment card reduce the To Hit by the printed amount in the card (-1,-2,-3)\n\n- The printed modifiers on the AFV Assault Gun of +1 TH vs. moving target and +2 TH for bogged/immobilized, should be -1 and -2 instead?\n\nCorrect, a moving target or being stuck makes it harder to hit.  So they should -1 & -2. At least they got ALL of the cards wrong.  Note: The BOG and Immobilized chits do say \"Asssault Gun: -2 To Hit\"\ud83e\udd74\n\n- The printed modifier on the Anti-Tank Rifles of -1 TH for flanking, should it be +1 instead?\nCorrect.  But at least there is an excuse.  ATR have To Hit #'s so bad, when flanking, they improve their TH# from 4 to 3.  Math says that's -1, but in Up Frontese it is +1.  (Assault Guns, except the lamentable Bren Carrier, don't have that excuse.)",
+      "debug": {
+        "executionTimeMs": 2773,
+        "verdict": "AMBIGUOUS",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 2.9,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 6
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2479530",
+      "overall_index": 89,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:31:44.611644",
+      "title": "I'm so bad at maths (and english)",
+      "query": "I'm so bad at maths (and english): Beck is part of a firegroup firing at RR5, so he contributes 0 FP when his weapon breaks.\n\nThe rulebook (19.11) tells us to substract -1 FS for every 2FP Beck (or fraction thereof) previously contributed by the weapon.\n\nNow, I know that \"half of his FP (rounded up)\" would be 0. \n\nBut I'm not sure if that is the same than \"-1 FS for every 2FP\".\n\nI guess 0 is not even a fraction of 2.\n\nWould I be correct assuming the FS is not reduced when that weapon breaks?\n\n---\nI've read a errata doc in the files section that clarifies this. But I've also found some ancient threads here stating the opposite. So I'm asking for additional clarification.",
+      "intent": "errata_comparison",
+      "expected_rules": [
+        "19.11"
+      ],
+      "retrieved_rules": [
+        "19.11",
+        "19.12",
+        "19.13",
+        "19.14",
+        "19.15"
+      ],
+      "rule_hit": true,
+      "hits": [
+        "19.11"
+      ],
+      "rule_recall": 1.0,
+      "adjudication": null,
+      "adjudicated_hit": true,
+      "adjudicated_recall": 1.0,
+      "latency_seconds": 3.19,
+      "generated_answer": "Verdict: PERMITTED\n\nRuling: \n\n1. Beck is part of a firegroup firing at Relative Range 5 (RR5), where his weapon contributes 0 Firepower (FP) [context].\n2. According to Rule 19.13, when a weapon malfunctions, the Fire Strength (FS) is reduced by -1 for every two Firepower factors (or fraction thereof) previously contributed by the malfunctioned weapon [Rule 19.13].\n3. Beck's weapon contributes 0 FP. Half of 0 FP (rounded up) is still 0 [context].\n4. Since 0 is not a fraction of 2, it does not meet the condition for reducing the FS by -1 [context].\n5. Therefore, the Fire Strength is not reduced when Beck's weapon breaks [Rule 19.13].\n\nThus, it is PERMITTED to assume that the FS is not reduced when Beck's weapon breaks.",
+      "ground_truth_answer": "You have a few issues here (but I think you got most of them right), let's just go through them.\n\nBeck is part of a firegroup firing at RR5, so he contributes 0 FP when his weapon breaks.\n\nRR0 means both sides are at their starting point, i.e. very far away from each other.  RR5 means right next to the enemy group.  I am sure you meant RR0.\n\nThe rulebook (19.11) tells us to substract -1 FS for every 2FP Beck (or fraction thereof) previously contributed by the weapon.\n\nNow, I know that \"half of his FP (rounded up)\" would be 0. \n\nBut I'm not sure if that is the same than \"-1 FS for every 2FP\". \n\nCorrect.  It works out the same way Only thing to note is any fractions are rounded up:  If the weapon were providing 1 FP, the FS would be reduced by 1.  Providing 2fp, reduce FS by 1.  Providing 3fp, reduce FS by 2.  Etc \n\nI guess 0 is not even a fraction of 2.\n0 divided by 2 = 0\n\nWould've I be correct assuming the FS is not reduced when that weapon breaks?  \nThe fire strength of the attack is not affected if the weapon was providing 0fp.  Also if the weapon is already broken (in which case, the man becomes unarmed) or the man is unarmed.  Or a non firing ordnance weapon (or its crewman), infiltrator or flamethrower.\n\nThe exception is if the assistant crewman of a MG is selected--no weapon breaks and the FS is reduced by 1 for \"bobbling\" the ammo belt.\n\n---\nI've read a errata doc in the files section that clarifies this. But I've also found some ancient threads here stating the opposite. So I'm asking for additional clarification.\n\nGood!  The errata is the way to go.  Certainly on all malfunction issues.",
+      "debug": {
+        "executionTimeMs": 3050,
+        "verdict": "PERMITTED",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 3.19,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 5
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2475533",
+      "overall_index": 90,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:31:47.416886",
+      "title": "Infiltration to an opposing Group \u00bfCan I enter CC to an adjacent group?",
+      "query": "Infiltration to an opposing Group \u00bfCan I enter CC to an adjacent group?: With my group A I successfully infiltrated some men to the opposing enemy Group A.\nI know that an infiltrator only may double his firepower vs the group A (20.51). But can he enter CC to an adjacent enemy Group B? Or to enter CC, the infiltrator must lose first his INF status and then attempt an infiltration vs Group B?",
+      "intent": "direct_rule",
+      "expected_rules": [
+        "20.51"
+      ],
+      "retrieved_rules": [
+        "19.13",
+        "20.1",
+        "20.3",
+        "20.51",
+        "20.52",
+        "20.53",
+        "20.532"
+      ],
+      "rule_hit": true,
+      "hits": [
+        "20.51"
+      ],
+      "rule_recall": 1.0,
+      "adjudication": null,
+      "adjudicated_hit": true,
+      "adjudicated_recall": 1.0,
+      "latency_seconds": 2.8,
+      "generated_answer": "Verdict: CONDITIONAL\n\nRuling:\n1. According to [Rule 20.1], an infantry group can enter Close Combat (CC) when it is at Relative Range 5 to any directly opposite or adjacent group, provided the opposing group is infiltrated.\n2. [Rule 20.53] states that an infiltrator loses his infiltrator status if he fires. This implies that while an infiltrator has infiltrator status, he cannot fire.\n3. [Rule 20.52] specifies that during future turns, an infiltrator's group can opt to engage in CC as its sole action. This means that an infiltrator can enter CC without losing his infiltrator status first.\n4. Therefore, an infiltrator can enter CC with an adjacent enemy group (Group B) without losing his infiltrator status first, provided he does not fire. If he fires, he loses his infiltrator status and can no longer benefit from the doubled firepower against the infiltrated group (Group A).\n\nIn summary, an infiltrator can enter CC with an adjacent enemy group (Group B) as long as he does not fire, thus maintaining his infiltrator status and the benefits associated with it.",
+      "ground_truth_answer": "With my group A I successfully infiltrated some men to the opposing enemy Group A.\nI know that an infiltrator only may double his firepower vs the group A (20.51). But can he enter CC to an adjacent enemy Group B? Or to enter CC, the infiltrator must lose first his INF status and then attempt an infiltration vs Group B?\n\nIf you have a man infiltrated in Group A, you can enter CC or double FP  or attempt acquisition of a dropped enemy weapon vs. Group A.\n\nIn order to enter CC against group B or acquire a dropped enemy weapon in group B, that infiltrator would have drop his Infiltration status and re-infiltrate in Group B.\n\nIf Group A (with an infiltrator in Enemy Group A) fired at another enemy group, the infiltrator may choose not to fire (thus not counting his FP) or the infiltrator may fire at the other group at regular FP, in which case he will lose his infiltrator status.",
+      "debug": {
+        "executionTimeMs": 2589,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 2.8,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 7
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2460694",
+      "overall_index": 91,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:31:49.634566",
+      "title": "Flanking Fire and Movement Penalty",
+      "query": "Flanking Fire and Movement Penalty: Please help clarify.\nIf I play a \u201cflank\u201d movement card, do I still receive the normal Fire Strength penalty?\nThe result is, FP is doubles (flanking), FS is halved (moving)?\n\nI don\u2019t see in the rules were this is explicitly addressed. \nThank you",
+      "intent": "clarification",
+      "expected_rules": [],
+      "retrieved_rules": [
+        "10.1",
+        "10.2",
+        "10.3",
+        "10.4",
+        "2.1",
+        "4.23"
+      ],
+      "rule_hit": null,
+      "hits": [],
+      "rule_recall": null,
+      "adjudication": null,
+      "adjudicated_hit": null,
+      "adjudicated_recall": null,
+      "latency_seconds": 2.21,
+      "generated_answer": "Verdict: AMBIGUOUS.\n\nRuling:\nThe rules provided do not explicitly address the interaction between flanking fire and movement penalties. \n\n1. **Flanking Fire**: Typically, flanking fire would double the Fire Points (FP) of the attacking unit [not explicitly cited but a common game mechanic].\n\n2. **Movement Penalty**: Moving while firing usually halves the Fire Strength (FS) of the attacking unit [also a common game mechanic, not explicitly cited].\n\n3. **Combination of Effects**: The rules do not provide a clear directive on how these two mechanics interact when they occur simultaneously. \n\nGiven the absence of explicit rule text addressing this scenario, the interaction remains ambiguous and would require a house rule or mutual agreement between players to resolve.",
+      "ground_truth_answer": "Please help clarify.\nIf I play a \u201cflank\u201d movement card, do I still receive the normal Fire Strength penalty?\nThe result is, FP is doubles (flanking), FS is halved (moving)?\n\nI don\u2019t see in the rules were this is explicitly addressed. \nThank you\n\nYes, movement penalties apply on on a flanking group when are moving.  \n\nBUT, the Flank chit is not removed when the Flanking group enters terrain. The Flank chit is removed when:\n- The FLANKED group has movement (even to remove Wire) or terrain placed on it.\n-  The FLANKING group has movement or Wire placed on it or rejects terrain. (Note: entering terrain is not included.)\n-  The FRONT group is eliminated or moved away.\n\nNote: As long as the Flank chit is play, any firepower is doubled.",
+      "debug": {
+        "executionTimeMs": 2033,
+        "verdict": "AMBIGUOUS",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 2.21,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 6
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2447913",
+      "overall_index": 92,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:31:53.544527",
+      "title": "Rule 19.11 Malfunction",
+      "query": "Rule 19.11 Malfunction: So I have a little bit truble separate all different rules of what weapon can be malfunction in a regular fire attack that draws a red 6 RNC.\n\nIn rule 19.11 it talks about weapon that ate not considered to be fire.\n\nBut later down in text it talks about weapon that still have 0fp are considered to fire.\n\nSo weapon that are not firing is weapons lile bazooka etc?\n\nBecouse it seems a crewmans is still targeted by a malfunction event.",
+      "intent": "direct_rule",
+      "expected_rules": [
+        "19.11",
+        "19.12",
+        "19.13",
+        "2.67"
+      ],
+      "retrieved_rules": [
+        "19.11",
+        "19.12",
+        "19.13",
+        "19.14",
+        "19.15"
+      ],
+      "rule_hit": true,
+      "hits": [
+        "19.11",
+        "19.12",
+        "19.13"
+      ],
+      "rule_recall": 0.75,
+      "adjudication": {
+        "status": "skipped"
+      },
+      "adjudicated_hit": true,
+      "adjudicated_recall": 0.75,
+      "latency_seconds": 3.9,
+      "generated_answer": "Verdict: CONDITIONAL\n\nRuling:\n1. **Rule 19.11** states that if a firing group contains only one firing weapon with usable firepower factors and a red 6 RNC is drawn, that weapon automatically malfunctions [19.11].\n2. **Rule 19.13** clarifies that all weapons in an attacking group are considered to be firing when the group attacks, with exceptions for flamethrowers, secondary weapons, ordnance, non-firing infiltrators, and the weapons of designated crewmen [19.13].\n3. **Rule 19.14** specifies that although pinned men and those with already malfunctioned weapons are not considered to be firing, their weapons are always subject to malfunction [19.14].\n4. **Rule 19.15** indicates that any weapon using a bracketed firepower or To Hit Frequency rating is also subject to malfunction on a red RNC one less than that which would otherwise result in a malfunction [19.15].\n\n**Conclusion**:\n- Weapons like bazookas (ordnance) are not considered firing unless they are actively being used in the attack [19.13].\n- Crewmen's weapons, even if they have 0 FP, are considered firing unless they are pinned or malfunctioned [19.13, 19.14].\n- Therefore, a crewman's weapon can be targeted by a malfunction event if it is considered firing [19.14].\n\nIn summary, whether a weapon is subject to malfunction depends on whether it is considered firing according to the rules outlined above.",
+      "ground_truth_answer": "I'll start by saying \"You're  welcome\", to the many thanks given above.\n\nMalfunction is one the areas of the ruled where so many ideas were included, that that when any question comes up, you can't really point to any one place in the rules.  One question leads to another...... The original errata keeper, Andy Maly, couldn't either.  Basically, my answer above is the whole errata.\n\nI could see what AH was trying to do with malfunction rules.  They wanted different weapons (particularly uncrewed MGs) to have different rates of failure. They wanted the resolution of the attack to be have a lower effect on the remaining men in target group, but they wanted a single weapon that broke to fall silent.  They wanted FTs & captured weapons  to be very prone to failure.  They wanted the possibility of broken weapons to be permanently broken.  They wanted MG belts to temporarily jam. Then they listed each of these ideas as individual rules instead of coming up with a process to determine which rule applies when (which the errata ends up doing)\n\nCould the malfunction rules have been made simpler?  Sure!  They could have made the malfunction occur after the completion of fire attack resolution.  (But that would remove the tactical play order of men in the group--the ones at the end of line have slightly lower fire attacks than the front of the line.  So you put your SL, low morale guys, MG, at the back.  I must confess I enjoy the tactical touches these rules bring, despite the added rules overhead.)\n\nYou could get rid 19.11 which creates a big exception that mostly ends up applying only to AFV MG and FTs--because other MGs and FTs are routinely placed in multi man groups.   If I had my way, this rule should simply be junked: after a malfunction, the resolution would always continue with FS reduction.  (Even worse, it was placed before the more commonly applied rule 19.13, giving the impression to some people that 19.11 should have priority.)\n\nAnd to add to that, from a realism point of view, there are still major issues:\nA) The more men in the firing group, the less chance each weapon will break.  (When there are 3 men in the firing group, when a malfunction occurs, 1/3 chance that weapon A breaks.  5 firing men, 1/5 chance weapon A breaks.)\nB)  The more men in target group, the greater the chance a weapon breaks.  (Firing at 3 men, 3 chances that the dreaded Red 6 will come up.  5 men, 5 chances.)\n\nBut for fixing those issues, the cure would be far worse than the disease.  DO NOT GO THERE!",
+      "debug": {
+        "executionTimeMs": 3511,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 3.9,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 5
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2433348",
+      "overall_index": 93,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:31:57.202584",
+      "title": "Infiltration questions.",
+      "query": "Infiltration questions.: 1.\nIf I want to infiltrate with 4 guys and have 2 movement cards.\nI first designate the 4 guys attempting to infiltrate.\nTheyI do the morale check for the first two, and the play the two movement cards to the discard pile for the last two guys, correct?\n\n2.\nWhen you do the coloumn check, for the red success or black unsuccsess you do it for each guy? Not one RPC for them all, correct?\n\n3.\nIt say if yhe group as already been infiltrated before you get two shift to the right. That means if they been succesfully infiltrated on a previousely turn, not this turn(the every guy after the first get the penalty), correct?",
+      "intent": "clarification",
+      "expected_rules": [
+        "20.39",
+        "20.51",
+        "20.73"
+      ],
+      "retrieved_rules": [
+        "20.1",
+        "20.2",
+        "20.3",
+        "20.4",
+        "20.5",
+        "20.6"
+      ],
+      "rule_hit": true,
+      "hits": [
+        "20.39",
+        "20.51"
+      ],
+      "rule_recall": 0.67,
+      "adjudication": {
+        "status": "skipped"
+      },
+      "adjudicated_hit": true,
+      "adjudicated_recall": 0.67,
+      "latency_seconds": 3.65,
+      "generated_answer": "**Verdict: CONDITIONAL**\n\n### Detailed Ruling:\n\n#### Question 1:\n**Ruling:** CONDITIONAL\n\n**Explanation:**\n- According to [Rule 20.2], unpinned men that start their player turn at Relative Range 5 to an enemy group(s) may attempt to individually infiltrate one or more of those groups with or without playing a Movement card. \n- The number of men and how they will attempt to infiltrate must be designated before the first attempt is resolved [Rule 20.2].\n- Therefore, you must designate all 4 men attempting to infiltrate before resolving any infiltration attempts.\n- You can choose to use Movement cards for some men and not for others, but this decision must be made before any infiltration attempts are resolved.\n- Thus, you can do the morale check for the first two men and then play the two Movement cards for the last two men, provided this was your initial designation.\n\n#### Question 2:\n**Ruling:** PROHIBITED\n\n**Explanation:**\n- According to [Rule 20.3], when checking for infiltration, the attacker draws a Random Position Check (RPC) and uses the column equalling the number of Personnel cards in the defending group as his starting point.\n- Each man attempting to infiltrate requires an individual RPC draw to determine success or failure [Rule 20.3].\n- Therefore, you must draw a separate RPC for each man attempting to infiltrate, not one RPC for all of them.\n\n#### Question 3:\n**Ruling:** PROHIBITED\n\n**Explanation:**\n- According to [Rule 20.3], if the group has already been infiltrated before, you get a two-column shift to the right.\n- This rule implies that the shift applies to infiltration attempts made in the same turn after the first successful infiltration, not necessarily on a previous turn [Rule 20.3].\n- Therefore, if the group has been successfully infiltrated earlier in the same turn, subsequent infiltration attempts receive a two-column shift to the right. \n- It does not specify that the penalty applies only if infiltration was successful on a previous turn, but rather on the current turn after the first success.",
+      "ground_truth_answer": "A new question.\nOn the back of the Infiltrator token it say:\n\"INF: 2xFP; +2 Right; Keep: +3\n\nWhat does \"+2 Right\" and \"Keep: +3\" mean?\nI understand its to help me remind of something, but couldent figure out what.\n\nI couldent find the info about this.\n\"INF: FPx2\" refers to allowing an infiltrator to fire at doubled firepower, but they will lose their infiltrator status. Think Rambo.  (You can choose to fire without using the infiltrator's FP to keep him infiltrating.)  (20.51)\n\n\"+2 Right\" is a reminder that there is 2 shifts right for the enemy group this man is infiltrating. (20.39)\n\n\"Keep +3\" is for close combat.  If the attacker wins by at least 3, then he keeps infiltrator status.  He took the enemy out quietly. (20.73)",
+      "debug": {
+        "executionTimeMs": 3439,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 3.65,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 6
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2431930",
+      "overall_index": 94,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:31:59.871163",
+      "title": "Wounded",
+      "query": "Wounded: It say wounded can hppend if fire attack total is exactly the same as KIA bumber or If it couse the soldier to rout.\n\nSo if it is exactly the Panic number but the aoldoer doesent rout its not possible to get a wound effect?",
+      "intent": "clarification",
+      "expected_rules": [
+        "33.1"
+      ],
+      "retrieved_rules": [
+        "10.1",
+        "10.2",
+        "10.3",
+        "10.4",
+        "2.1",
+        "2.2"
+      ],
+      "rule_hit": false,
+      "hits": [],
+      "rule_recall": 0.0,
+      "adjudication": {
+        "status": "skipped"
+      },
+      "adjudicated_hit": false,
+      "adjudicated_recall": 0.0,
+      "latency_seconds": 2.66,
+      "generated_answer": "Verdict: CONDITIONAL\n\nRuling:\nAccording to the provided context, there is no explicit rule that directly addresses the scenario of a soldier being wounded if the Fire Attack total equals the soldier's Panic number but does not cause the soldier to rout. However, we can infer the following based on existing rules:\n\n1. **Wounded Condition**: The context mentions that a soldier can be wounded if the Fire Attack total is exactly the same as the KIA number or if it causes the soldier to rout [context].\n\n2. **Panic vs. Rout**: A soldier will rout if the Fire Attack total exceeds their Panic number [context].\n\nGiven these points, if the Fire Attack total equals the soldier's Panic number but does not exceed it, the soldier does not rout. There is no rule that suggests a soldier is wounded merely by matching the Panic number without routing. Therefore, in this specific conditional scenario, the soldier would not be wounded.\n\nThus, the verdict is CONDITIONAL: A soldier is not wounded if the Fire Attack total equals their Panic number but does not cause them to rout.",
+      "ground_truth_answer": "Hmm ... this is interesting.  I am looking at the example after the first paragraph of 33.1, and it seems to contradict the rule itself.\n\nIt says ...\n\nCpl Jones [who I can't find in the game oddly enough] has a Morale value of 4 and a Panic value of 6.  An attack generating a KIA against him could possibly be commuted to a Wound result instead only if the final attack result was an 8 while he was in good order\nSo good so far...\n\n... or a 6, 7, 8 or 9 while he was pinned.\nThis is where it suddenly confuses me after all these years.  The example doesn't first check to see if he actually Routs instead of just Panicking.  So, for this example, if the soldier is already Panicked, they are using a 2-step determination to see if he's wounded, whereas the rule suggests to me that it should be a 3-step process.\n\nAm I reading something wrong?\nThe errata specifies you check for rout first before checking for wound.  If the man does not rout, he is KIA.  No need to check for wound. \n\nThe example is incorrect, in the way you thought.",
+      "debug": {
+        "executionTimeMs": 2541,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 2.66,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 6
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2416386",
+      "overall_index": 95,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:32:02.537616",
+      "title": "Berserk attacking into minefield?",
+      "query": "Berserk attacking into minefield?: Scenario C, the Germans in group A are advancing when they are hit with a minefield at RR 5. Russian group A is all pinned. German group B fires on Russian group A, and a Russian becomes berserk. Will the Russian attack the units in the minefield? Will the Russian under go any penalty for the minefield?",
+      "intent": "scenario",
+      "expected_rules": [
+        "24.7",
+        "45.423",
+        "6.52"
+      ],
+      "retrieved_rules": [
+        "10.1",
+        "10.2",
+        "10.3",
+        "10.4",
+        "11.1",
+        "14.6",
+        "2.1",
+        "2.2",
+        "20.1"
+      ],
+      "rule_hit": false,
+      "hits": [],
+      "rule_recall": 0.0,
+      "adjudication": {
+        "status": "skipped"
+      },
+      "adjudicated_hit": false,
+      "adjudicated_recall": 0.0,
+      "latency_seconds": 2.65,
+      "generated_answer": "Verdict: CONDITIONAL\n\nRuling:\n1. **Berserk Activation**: According to the rules, a berserk unit will attack the nearest enemy unit [Rule 20.1]. Since the Russian unit is now berserk, it will attempt to attack.\n\n2. **Minefield Interaction**: The minefield is at RR 5 relative to the berserk Russian unit. When a unit moves into or attacks through a minefield, it suffers casualties based on the minefield's strength [Rule 14.6].\n\n3. **Pinned Status**: The rule states that pinned men may perform no voluntary actions [Rule 10.1]. However, a berserk reaction is involuntary, thus the pinned status does not prevent the berserk attack.\n\n4. **Casualty from Minefield**: The berserk Russian unit will suffer casualties from the minefield as it moves through or attacks into it [Rule 14.6].\n\nConclusion: The berserk Russian unit will attack the nearest enemy unit, which includes those in the minefield, and will suffer casualties from the minefield.",
+      "ground_truth_answer": "Hi. Just to add a touch of something extra to the mix... \nWe were playing using the Japanese last night and I came across this in the Banzai rulebook (emphasis added):\n\n45.423 ... A Banzai group (or berserk man - ignore [24.7]) can perform Close Combat even while on a Minefield provided it is at Relative Range 5 to its target. However, each such man must draw a black RNC prior to entering Close Combat for the first time; if he draws a red RNC he is eliminated. After surviving one such RNC draw, the man need not draw again for the same minefield. \n\nSo maybe that means that yes a Beserk guy sometimes can CC in or into a minefield ...?\n\nTechnically, this rule is for when a Berserk or Banzai man is in a minefield and forced to perform CC--not for one in another terrain forced to go into the minefield to perform CC.\n\nBut I don't have a problem applying this rule which I missed when I wrote my reply above.  (Didn't check the Banzai rules.  Damn!)\n\nLuckily, Pillbox scenarios are not frequently played.",
+      "debug": {
+        "executionTimeMs": 2425,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 2.65,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 8
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2390951",
+      "overall_index": 96,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:32:05.116877",
+      "title": "AFV MG firing while moving",
+      "query": "AFV MG firing while moving: Being a non-ordnance weapon, does an AFV MG firepower get halved for firing while moving? I'm fairly certain it's a yes.",
+      "intent": "clarification",
+      "expected_rules": [],
+      "retrieved_rules": [],
+      "rule_hit": null,
+      "hits": [],
+      "rule_recall": null,
+      "adjudication": null,
+      "adjudicated_hit": null,
+      "adjudicated_recall": null,
+      "latency_seconds": 2.57,
+      "generated_answer": "Verdict: CONDITIONAL\n\nRuling:\n1. In the absence of specific codified rules, we must rely on standard game principles and the context of the scenario.\n2. Typically, in wargames, weapons that are not ordnance (such as artillery or rockets) and are part of a vehicle's integrated systems (like an AFV's machine gun) may have different rules for firing while moving compared to infantry weapons.\n3. It is a common principle in many wargames that vehicle-mounted weapons, including machine guns, may have reduced effectiveness when the vehicle is moving, to simulate the difficulty of aiming and stabilizing the weapon while in motion.\n4. Therefore, while there is no specific rule cited, the general principle suggests that an AFV's machine gun firepower should likely be halved when firing while the vehicle is moving.\n\nThus, based on standard wargame principles and the context provided, it is CONDITIONAL that an AFV MG's firepower gets halved for firing while moving, assuming this is a standard rule in the game being played.",
+      "ground_truth_answer": "Being a non-ordnance weapon, does an AFV MG firepower get halved for firing while moving? I'm fairly certain it's a yes.\n\nNo.  The firepower is unchanged. but the Fire Strength is halved rounded down (ie the value of EACH fire card.  So Fire 1 and Fire 3 is reduced to Fire 0 + Fire 1)\n\nFire Strength is always halved when moving non-ordnance is firing.  EXC: Flamethrowers providing all FP to the attack.\n\nFirepower is only halved for bolt action rifles (Semiautomatic rifles N/A) Also fully crewed LMGs use bracketed FP, not in Marsh or Stream.",
+      "debug": {
+        "executionTimeMs": 2440,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.75,
+        "roundTripTimeSec": 2.57,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 0
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2376834",
+      "overall_index": 97,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:32:07.128637",
+      "title": "Flanking and Encirclement",
+      "query": "Flanking and Encirclement: I'm having trouble with the relationship between flanking and encirclement. For one thing, they both sound like the same thing. (Edit: To clarify, natural flanking and encirclement sound like the same thing. Or, at least, they sound like they are both the result of getting directly behind an adjacent group)\n\nIt sounds like encirclement can only happen after (and due to) flanking. Is this correct?\n\nAre flanking and encircling like a 1-2 punch? First you flank, then you encircle?\n\nThanks. Sorry if I'm a little thick here. If anyone cares to expound on the relationship between the two, I'd be grateful.",
+      "intent": "scenario",
+      "expected_rules": [],
+      "retrieved_rules": [
+        "10.1",
+        "10.2",
+        "10.3",
+        "10.4",
+        "2.1",
+        "2.2"
+      ],
+      "rule_hit": null,
+      "hits": [],
+      "rule_recall": null,
+      "adjudication": null,
+      "adjudicated_hit": null,
+      "adjudicated_recall": null,
+      "latency_seconds": 2.0,
+      "generated_answer": "Verdict: AMBIGUOUS\n\nRuling: The provided codified rules context does not explicitly define the relationship between flanking and encirclement. While the user's interpretation suggests that flanking might lead to encirclement, the rules do not provide a clear, step-by-step process or definitive statement linking the two maneuvers. Therefore, the relationship between flanking and encirclement remains ambiguous based on the given rules text. Additional clarification or specific rule references would be needed to provide a definitive answer.",
+      "ground_truth_answer": "I'm having trouble with the relationship between flanking and encirclement. For one thing, they both sound like the same thing. (Edit: To clarify, natural flanking and encirclement sound like the same thing. Or, at least, they sound like they are both the result of getting directly behind an adjacent group)\n\nIt sounds like encirclement can only happen after (and due to) flanking. Is this correct?\n\nAre flanking and encircling like a 1-2 punch? First you flank, then you encircle?\n\nThanks. Sorry if I'm a little thick here. If anyone cares to expound on the relationship between the two, I'd be grateful.\n\nYes, they are related:  \n- To encircle, yes, the \"flanking\" must be in a natural flanking position (ie. Atotal of range chits =6.) but flank chit may have been subsequently removed.  (Via play of movement or terrain by the flanked group).  \n- Like flanking a front group is required.\n\nOnce the proper position is achieved, THEN when the flanking group plays a sideways movement, the the opposing group is encircled.  Essentially natural flanking position is a prerequisite by for encirclement.\n\nOnce encircled:\n-  All FP at the encircled group is doubled from any group (not just from the flanked group.)\n- The encircled group cannot  receive or exit individual transferring men.  Or laterally transfer to change its group ID.\n-  Panic -1.\n\nTo get out of an encirclement requires either:\n- elimination of either group forming the encircle (including if either group moved away via lateral transfer.\n- the encircled group infiltrates either encircling group, \n- either encircling group is RR1 or further from the encircled group, or\n- if both encircling groups end up in front of the encircled group. ie.  The encircled group retreated to get away in these last two situations.)\n\n(In most cases, the encirclement ends when the encircled group is eliminated. ;)  )",
+      "debug": {
+        "executionTimeMs": 1754,
+        "verdict": "AMBIGUOUS",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 2.0,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 6
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2324650",
+      "overall_index": 98,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:32:10.109903",
+      "title": "Basic game - two questions",
+      "query": "Basic game - two questions: Hello,\nI'm still studying the basic game, up to the first \"STOP\" in the rulebook (so no flanking, encirclement, AFVs, transfers...).\n\n1. if men in a moving group get pinned, the move card is not lost, right? They keep it in order to play a terrain over it, even if they cannot play another one until rallied. If this is correct - just out of curiosity - how is this explained? Are they still moving (like crawling) only to find cover while under fire?\n\n2. I understand that in the complete game you can play a move card sideways for lateral group transfer/flanking, but in the basic game? Apart getting out of a marsh, it seems the only reason I would play a movement sideways is to allow a future terrain placement without increasing or decreasing the relative range. Correct?\n\nThank you.",
+      "intent": "scenario",
+      "expected_rules": [
+        "10.12"
+      ],
+      "retrieved_rules": [
+        "10.1",
+        "10.2",
+        "10.3",
+        "10.4",
+        "11.1",
+        "2.1",
+        "2.2"
+      ],
+      "rule_hit": true,
+      "hits": [
+        "10.12"
+      ],
+      "rule_recall": 1.0,
+      "adjudication": null,
+      "adjudicated_hit": true,
+      "adjudicated_recall": 1.0,
+      "latency_seconds": 2.97,
+      "generated_answer": "**Verdict: CONDITIONAL**\n\n**Ruling:**\n\n1. **Pinned Men in a Moving Group:**\n   - **Permitted:** If men in a moving group get pinned, the move card is not lost. They can still play a terrain card over it, even though they cannot play another move card until rallied.\n   - **Explanation:** According to [Rule 10.1], pinned men can only serve as targets and cannot perform voluntary actions until rallied. However, playing a terrain card over a move card is not considered a voluntary action but rather a continuation of the move to find cover. This is inferred from the rule's silence on losing the move card and the practical need for pinned men to seek cover.\n\n2. **Playing a Move Card Sideways in the Basic Game:**\n   - **Conditional:** In the basic game, playing a move card sideways is primarily to allow a future terrain placement without changing the relative range. This is permitted under [Rule 2.2], which allows for the manipulation of movement cards in conjunction with terrain cards.\n   - **Explanation:** While flanking and lateral group transfers are not allowed in the basic game, playing a move card sideways to prepare for a terrain placement is a valid strategy to maintain positioning without altering range, as noted in the user's scenario. This use is consistent with the basic game's limitations and objectives.",
+      "ground_truth_answer": "Am I remembering correctly that if you have pinned men while moving you can play a card upside down (open terrain) on the movement card to show you have stopped to at lease lose the penalty for movement?\n\nAccording to the rulebook you should be able to play any type of terrain, not only open ground: \"...it may usually play a Terrain card over an already placed Movement card\" [10.12]",
+      "debug": {
+        "executionTimeMs": 2699,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 2.97,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 7
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2324200",
+      "overall_index": 99,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:32:13.643701",
+      "title": "Confused by opposing groups",
+      "query": "Confused by opposing groups: Hello,\nI'm a super newbie and going through the rulebook for the first time. I'm not sure what's the meaning of having opposing groups like AvsA, BvsB, etc. \nAt the moment the only rule I found is that if you want to fire at a \"non adjacent\" group you count 1 less range, so less fire power (Like, A has relative range of 3 on B but relative range of 2 on C and D).\n\nAre there any other situations were opposing groups are important in the gameplay?\n\nThank you.",
+      "intent": "concept",
+      "expected_rules": [],
+      "retrieved_rules": [
+        "3.0",
+        "4.0",
+        "5.0",
+        "6.0",
+        "7.0"
+      ],
+      "rule_hit": null,
+      "hits": [],
+      "rule_recall": null,
+      "adjudication": null,
+      "adjudicated_hit": null,
+      "adjudicated_recall": null,
+      "latency_seconds": 3.53,
+      "generated_answer": "Verdict: CONDITIONAL\n\n**Ruling:**\n\nThe concept of opposing groups in the Up Front card game is crucial for several gameplay mechanics beyond just modifying the range for firing. Here are some key situations where opposing groups play an important role:\n\n1. **Movement and Assault:**\n   - When a group moves or assaults, it typically does so against an opposing group. The success of these actions often depends on the relative positions and statuses of the opposing groups [UP FRONT 3.0].\n\n2. **Support Fire:**\n   - Groups can provide support fire to adjacent friendly groups that are engaged with opposing groups. This can affect the outcome of combat [UP FRONT 4.0].\n\n3. **Morale Checks:**\n   - When a group takes casualties, it must make a morale check. The presence and actions of opposing groups can influence the results of these checks, especially if the group feels threatened or is under heavy fire [UP FRONT 5.0].\n\n4. **Ambushes and Surprise:**\n   - Ambushes often rely on the element of surprise against opposing groups. The rules for ambushes specify conditions under which a group can ambush an opposing group, affecting the initial combat outcomes [UP FRONT 6.0].\n\n5. **Retreats:**\n   - When a group is forced to retreat, it typically moves away from the opposing group that is causing it to retreat. The dynamics of retreat are heavily influenced by the actions and positions of opposing groups [UP FRONT 7.0].\n\nIn summary, opposing groups are integral to various gameplay mechanics, influencing movement, combat, morale, and strategic decisions.",
+      "ground_truth_answer": "Hello,\nI'm a super newbie and going through the rulebook for the first time. I'm not sure what's the meaning of having opposing groups like AvsA, BvsB, etc. \nAt the moment the only rule I found is that if you want to fire at a \"non adjacent\" group you count 1 less range, so less fire power (Like, A has relative range of 3 on B but relative range of 2 on C and D).\n\nAre there any other situations were opposing groups are important in the gameplay?\n\nThank you.\n\nPoint by point:\n-  Directly opposing groups (ie A vs A, B vs B, etc) cannot advance past RR5, which means move through each other.  (With the exception of AFV overruns,)\n-  Because of the above, for group to reach the required range chit to win, it may have laterally move to group where there is no directly opposite group in order to advance.\n-  Flanking opposing group B requires a directly opposing \"front group\" and and adjacent group at either A or C to flank.  Encirclement also requires 2 groups in the same arrangement.\n-  The effective range is increased  by -1 when firing at groups that are directly opposed or adjacent (ie A vs C or D, etc.)  This can affect firepower or To Hit numbers on the weapons.  Also applies in retrograde movement (where at least opposing group must have RR>0) and night scenarios.\n-  Infiltration and close combat can only performed against directly opposing or adjacent groups.\n-  Generally groups are limited to A-D, except with reinforcements, team play and special scenario rules in three player scenarios.",
+      "debug": {
+        "executionTimeMs": 3392,
+        "verdict": "CONDITIONAL",
+        "confidenceScore": 0.75,
+        "roundTripTimeSec": 3.53,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 0
+      },
+      "error": null
+    },
+    {
+      "id": "bgg_uf_2321437",
+      "overall_index": 100,
+      "target": "cloud",
+      "timestamp": "2026-09-06T19:32:15.803445",
+      "title": "Hero for no affect?",
+      "query": "Hero for no affect?: What about playing a Hero for no affect- you can't do any of the things a Hero card allows you to do?  Is it allowed?  Two situations where I find this a plausible tactic.  To keep your cards cycling when you don't have a discard available.  And when playing a campaign.  The scenario is near its end and you want to give a PC the ELAN points bonus before the opportunity is lost.",
+      "intent": "scenario",
+      "expected_rules": [],
+      "retrieved_rules": [
+        "10.1",
+        "10.2",
+        "10.4",
+        "21.11",
+        "9.3"
+      ],
+      "rule_hit": null,
+      "hits": [],
+      "rule_recall": null,
+      "adjudication": null,
+      "adjudicated_hit": null,
+      "adjudicated_recall": null,
+      "latency_seconds": 2.15,
+      "generated_answer": "Verdict: PROHIBITED\n\nRuling: According to Rule 10.4, a Hero card can be played anytime to rally one pinned man without counting as an Action. However, the rule explicitly states that you cannot play a Hero card on an unpinned man just to get another draw [Rule 10.4]. Therefore, playing a Hero card for no effect, such as when there are no pinned men to rally, is not permitted. This includes situations where you might want to cycle cards or gain ELAN points without a valid target for the Hero card's effect.",
+      "ground_truth_answer": "As far as I know you must use a Hero card for some effect, although you can play it to double your firepower even if that extra FP isn't needed to play the Fire card\n\nWhat about +1 TH to 0-7? Legal play? Let's see is there even an odrenance weapon that can get an unmodified 0-5 TH? Then with acquisition you get 0-6. Finally the hero gives you the imaginary 0-7.\n\nHero cards cannot be played on ordnance weapons to improve their To Hit #.  They can only be used really men (or partially rally an IG or AFV.)\n\na light anti-tank weapon gets a TH improvement from a Hero.  But I don't think that type of weapon gets acquisition nor ever gets to 0-5TH.",
+      "debug": {
+        "executionTimeMs": 1936,
+        "verdict": "PROHIBITED",
+        "confidenceScore": 0.95,
+        "roundTripTimeSec": 2.15,
+        "api_url": "https://8ifjmds7mk.execute-api.ap-southeast-2.amazonaws.com/api/ask",
+        "num_citations": 5
+      },
+      "error": null
+    }
+  ]
+}

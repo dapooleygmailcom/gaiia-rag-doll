@@ -1,0 +1,198 @@
+Total benchmark items: 1689
+
+=== Items 11 to 20 ===
+
+================================================================================
+TC #11 | ID: bgg_asl_3725338 | Thread: None
+Title: Gullies
+Expected Rules: ['A10.531', 'B20.92', 'B27', 'B27.3']
+Query Intent: None | Concepts: ['movement_bypass', 'terrain_los', 'close_combat_melee', 'concealment_snipers', 'vehicles_afv', 'scenarios_setup']
+Query:
+Gullies: If a squad advances into crest status from IN a gully does it lose concealment? And what is the TEM be for units in crest status?
+----------------------------------------
+Ground Truth Answer:
+It depends...
+
+If a unit can see it through a non-Crest hexside or that have LOS into the gully (per B20.92), then I would say 'yes', as it is in Open Ground per A10.531.  But if the only units that can see it must cross a Crest hexside, then it gets the Crest TEM (B27.3 via B20.92) of +4 versus OVR or OBA and +2 versus non-CC, FT attacks.
+================================================================================
+
+================================================================================
+TC #12 | ID: bgg_asl_3722646 | Thread: None
+Title: Unknown enemy units
+Expected Rules: ['A12.13', 'A24', 'A24.31', 'A6.1', 'C3.33', 'C8', 'C8.52']
+Query Intent: None | Concepts: ['fire_attacks', 'morale_pin_rally', 'terrain_los', 'close_combat_melee', 'concealment_snipers', 'ordnance_guns', 'scenarios_setup']
+Query:
+Unknown enemy units: Can an unknown enemy unit(Concealed or IN a depression hex) be fired upon? In other words does there have to be a LOS to the units or can a hex be fired on even though it would be considered "empty' ?
+----------------------------------------
+Ground Truth Answer:
+There is another way of "attacking" when the only target in the hex is out-of-LOS: WP. The WP counter will generally "fall" to the ground level Location [C8.52]. When a WP counter is placed in a Location, all units in that Location must take a WP NMC regardless of whether they were hit or not (and if not in LOS with no other units that are in LOS the units not in LOS could not be hit) [A24.31].
+================================================================================
+
+================================================================================
+TC #13 | ID: bgg_asl_3717714 | Thread: None
+Title: fate of this routing unit
+Expected Rules: ['A10.5', 'A10.51']
+Query Intent: None | Concepts: ['morale_pin_rally', 'terrain_los', 'close_combat_melee']
+Query:
+fate of this routing unit: Hi, question: British Turn Rout Phase, what is the fate of the German unit in the white circle?
+
+As I see it there are 3 options:
+A- The German Unit surrenders to the British in J8
+B- The German Unit Low Crawls to J6
+C- The German Unit routs along the white arrow and gets Interdicted in J5-J4-J3
+
+Which one is correct? I think A, since they cannot rout adjacent to the Berserk unit in CC, even if they are Berserk and so not GO, is that right?
+
+Thanks!
+----------------------------------------
+Ground Truth Answer:
+Essentially my thought is the same as Robin's.
+
+Per A10.51, a routing unit may never Rout towards a Known, armed enemy unit nor, if ADJACENT, rout adjacent to it again.  Per 10.51 this also applies if the Known, armed enemy unit is broken or even disrupted (though its a bit unclear if this 'even if broken or disrupted' applies to routing ADJACENT-ADJACENT, tbh ...).
+
+The Berserk British unit in K7 is a Known, armed enemy unit.
+The Disrupted British unit in I8 is a Known, armed enemy unit.
+
+Since these sandwich the German, they cannot Rout anywhere to my understanding.  As such, it must surrender to one of these two units.  Note that this might be different if the Berserk unit was in MELEE, per A10.5 ... as you're allowed to end adjacent to an enemy unit if they are in Melee (but I still think the 10.51 proviso of Routing ADJACENT-ADJACENT would prevent low crawling to the Pinned German location...).
+================================================================================
+
+================================================================================
+TC #14 | ID: bgg_asl_3714794 | Thread: None
+Title: RB 1 SSR 3 question
+Expected Rules: []
+Query Intent: None | Concepts: ['morale_pin_rally', 'terrain_los', 'concealment_snipers', 'ordnance_guns', 'leaders_heroes', 'scenarios_setup']
+Query:
+RB 1 SSR 3 question: RB 1 SSR 3 states that Russian MMC must take a NMC after German reinforcements are setup. It states that a unit loses its concealment "only" if it loses its good order status. Does this mean that failure of the NMC only strips concealment or is the unit subject to breaking, ELR, casualty reduction also?
+----------------------------------------
+Ground Truth Answer:
+RB 1 SSR 3 states that Russian MMC must take a NMC after German reinforcements are setup. It states that a unit loses its concealment "only" if it loses its good order status. Does this mean that failure of the NMC only strips concealment or is the unit subject to breaking, ELR, casualty reduction also? 
+
+RB1 SSR3 "Each such unit loses its concealment (if any) only if the NMC causes it to lose Good Order status, regardless of enemy LOS."
+Could be read as: ""Each such unit loses its concealment (if any) as the sole consequence if the NMC causes it to lose Good Order status, regardless of enemy LOS.",
+or could be read as: ""Each such unit loses its concealment (if any) just in the case when the NMC causes it to lose Good Order status, regardless of enemy LOS."
+
+I can see reading this two ways, as you suggest. In one way the "only" is attached to the loss of concealment clause, i.e. the sole consequence of losing its Good Order is to lose concealment. But that means that the sole consequence of failing the NMC is to lose concealment, i.e. not only does failing the NMC not HoB, ELR or casualty reduce, it also does not break. If that is the case then the unit never breaks (or goes berserk) and so always remains Good Order after the NMC and so never becomes unconcealed. That seems unlikely. So I have to conclude the intention was the second interpretation, i.e. the NMC causes all normal effects including breaking, HoB, ELR and Casualty MC. If after that MC it is no longer Good Order, then it loses concealment. So for instance if the result of the NMC is HoB with hero creation and battle hardening then the unit does not lose concealment, but if the result is HoB, berserk then it does lose concealment.
+================================================================================
+
+================================================================================
+TC #15 | ID: bgg_asl_3710949 | Thread: None
+Title: Routing... again!
+Expected Rules: ['A10.51', 'A20.21']
+Query Intent: None | Concepts: ['movement_bypass', 'morale_pin_rally', 'terrain_los', 'ordnance_guns', 'vehicles_afv', 'leaders_heroes', 'scenarios_setup']
+Query:
+Routing... again!: The DM unit in G11 must rout.  Can it ignore G9?  The American in D10 is not visible from its current location, but will be visible upon the routing unit entering G10.  I think that all the info necessary to answer the question can be seen in the pic, but just in case...  G10 is not interdictable due to the WP in G11 and the CX unit in E11 and the orchard in E10.
+As a follow up, if G9 can be ignored, the routing unit would like to go to the building with the leader in H7.  G8 cannot be interdicted by the overstacked units in I11.
+
+Thanks
+----------------------------------------
+Ground Truth Answer:
+If I read you correctly:
+
+While in G11, I9 was ignore-able (owing to the no-farther-from-I11 allowable EXC).
+
+I9 is too far away to be considered in G11. It is four MF, vs. three MF for G9 & F9. F9 is ignorable but G9 is not. Klas's trick is to choose F9 anyway, knowing that the rout to F9 will be prevented once the unit reaches G10 by D3. 
+
+While in G10, you seemingly imply I9 is no longer ignore-able (owing to I11 LOS having been lost?).
+
+The way A10.51 is written, a unit allowing ignoring of a hex has to be Known, but unlike routing toward KEUs where the condition is either currently Known or Known at some point during this rout, ignoring due to Known unit does not mention units seen during the rout but no longer in LOS. The two are different; one uses memory, the other does not.
+
+I could imagine this being overturned in a q&a, i.e. that what is ignorable is based both on current LOS and on memory, but I could also imagine it being sustained as it seems to be written. I would give it 60-40 likely sustained, but that is merely my guess.
+
+While in H9 (w/I11 back in LOS and thus Known -- again) I9 (initially ignore-able, owing to I11) is no longer ignore-able (even though it was at the beginning)?
+
+While in H9 the broken unit has no reason to re-figure its rout. If it had a reason to re-figure its rout then I9 would be ignorable, but it can't start the re-figuring process. Re-figuring is not something that can be done whenever you want. You have to be prevented from reaching your previously designated rout target to re-figure. The q&a you give below says that.
+
+That certainly is chaotic -- okay, thematically, perhaps -- is it also Correct?
+A10.51 A broken unit starts to rout toward the
+nearest building/woods hex, but during its rout
+the building/woods hex is not farther from a
+Known enemy unit than its present hex. Can the
+broken unit now choose to ignore the building/-
+woods? Or must it continue to rout toward that
+target?
+A. It must continue (assuming it is otherwise able
+to). [An97; Mw]
+Does knowledge of the I11I9 range (and EXC) not persist from the start of the Rout move?  Upon entry of G10, does I9 indeed fall off the initial list of ignore-able Rout Targets?
+
+It would have been reasonable for A10.51 to include "remembered" units as well as units currently visible, but that is not what was written. 
+
+[ If so, then the list of initially ignore-able Rout Targets seems quite tenuous. ]
+I'm not understanding what you mean by, "tenuous." The list of initially ignorable rout targets is fleeting, i.e. for purposes of determining ignorable hexes memory of previously Known units is forgotten.
+================================================================================
+
+================================================================================
+TC #16 | ID: bgg_asl_3710650 | Thread: None
+Title: Pin task check
+Expected Rules: ['A14', 'A14.1', 'A7.305', 'B28.9', 'E9.42']
+Query Intent: None | Concepts: ['morale_pin_rally', 'concealment_snipers']
+Query:
+Pin task check: Is a pin task check passed or failed on a  DR that equals the morale of a squad?  I understand it fails on a morale check.
+----------------------------------------
+Ground Truth Answer:
+PTCs do not have any "special values." There is no odd thing that happens if you roll two, twelve or equal to the morale level [EXC: Booby Traps B28.9].
+Note that it may trigger a Sniper attack though [A14.1]. 
+
+;)
+================================================================================
+
+================================================================================
+TC #17 | ID: bgg_asl_3709414 | Thread: None
+Title: Fire lanes
+Expected Rules: ['A9.223']
+Query Intent: None | Concepts: ['fire_attacks', 'close_combat_melee', 'ordnance_guns', 'vehicles_afv', 'leaders_heroes', 'scenarios_setup']
+Query:
+Fire lanes: Can a squad who put down a fire lane with its mg later SFF and not cancel the fire lane? The example isn't helping!
+----------------------------------------
+Ground Truth Answer:
+The rule is clear. 
+A9.223 ... A MG may cancel its Fire Lane in order to gain freedom to fire elsewhere (/its manning Infantry may use Subsequent-FirstFire/FPF after establishing the Fire Lane) only if a TPBF/CC-Reaction-Fire situation occurs.
+================================================================================
+
+================================================================================
+TC #18 | ID: bgg_asl_3708116 | Thread: None
+Title: Desperation Morale
+Expected Rules: []
+Query Intent: None | Concepts: ['movement_bypass', 'fire_attacks', 'morale_pin_rally', 'terrain_los', 'ordnance_guns', 'leaders_heroes']
+Query:
+Desperation Morale: What does "taking the possibility of cowering into account" mean in rule 10.62 ?
+----------------------------------------
+Ground Truth Answer:
+What does "taking the possibility of cowering into account" mean in rule 10.62 ? 
+Take all thirty-six possible DRs, from 1,1 to 6,6. Look up the result on the IFT for that FP (applying the DRM for the attack) for all the thirty-six DRs. If a particular DR is a doubles, and the attack might cower, use the result from the IFT column for the cower, not the original IFT column. At the end of the exercise you will have thirty-six possible results. If any of them is a NMC or better, the broken unit is marked with a DM.
+
+As a practical matter it is sufficient to look at the result on a DR of three if the attack can cower or on a DR of two if the attack can't cower. If the result is a NMC or better, broken units will be marked DM by the attack.
+
+In both cases this is regardless of the actual IFT DR.
+================================================================================
+
+================================================================================
+TC #19 | ID: bgg_asl_3703874 | Thread: None
+Title: Level one LOS
+Expected Rules: ['B13', 'B13.8', 'B20', 'B20.9', 'B20.97', 'B23.8']
+Query Intent: None | Concepts: ['terrain_los', 'ordnance_guns', 'scenarios_setup']
+Query:
+Level one LOS: Just getting into tactical games and trying to wrap my head around line of sight. If a squad is in a level one building location can it see over level one woods to another level one building location? Seems to me that the woods will block Los.
+----------------------------------------
+Ground Truth Answer:
+I've followed this thread with interest. If I'm understanding the OP's question, he's asking if a squad in the stone building could see a squad in the wooden building (all the same height). Is this an accurate depiction of the question?  If so, wouldn't LOS be blocked?
+No, this is not correct. Per the OP the units should be at level one, and there is no level one location in hexes 1M2 or 1M4 unless rooftops are in play and by SSR B23.8 is overridden, allowing rooftops on single story buildings. (If the units were at ground level you would be correct that LOS is blocked.)
+
+This is an example of the situation the OP is interested in
+
+The units have LOS unless pine woods [B13.8] or jungle  are in effect.
+Thanks JR!
+================================================================================
+
+================================================================================
+TC #20 | ID: bgg_asl_3700469 | Thread: None
+Title: Assault movement
+Expected Rules: ['A24', 'A24.1']
+Query Intent: None | Concepts: ['movement_bypass', 'terrain_los', 'ordnance_guns', 'leaders_heroes']
+Query:
+Assault movement: If a squad with a leader declare assault movement and the squad attempts to place smoke before moving and the die roll comes up six,does the leader have to end it's move too?
+----------------------------------------
+Ground Truth Answer:
+If a squad with a leader declare assault movement and the squad attempts to place smoke before moving and the die roll comes up six,does the leader have to end it's move too?
+No, the dr of 6 only affects the unit that rolled it [A24.1]. There could be many squads moving as a stack, all trying to place smoke grenades at the same time; only those that roll "6" will end their MPh.
+================================================================================
+

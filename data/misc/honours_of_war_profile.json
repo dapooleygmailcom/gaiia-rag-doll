@@ -1,0 +1,45 @@
+{
+  "game_name": "Honours of War",
+  "game_id": "honours_of_war",
+  "pipeline_mode": "RULEBOOK_TECHNICAL",
+  "data_dir": "data/misc",
+  "text_dir": "data/misc_text",
+  "chroma_collection": "honours-of-war-rules-semantic",
+  "rule_index_file": "data/honours_of_war_rule_index.json",
+  "cooccurrence_graph_file": "data/honours_of_war_cooccurrence.json",
+  "section_tree_file": "data/honours_of_war_section_tree.json",
+  "rule_schema": "keyword_header",
+  "rule_pattern": "(?:^|\\n)([A-Z][A-Za-z0-9\\s&\\-\\']{3,60})(?:\\n|$)",
+  "cross_ref_pattern": "(?:see|See)\\s+(?:page\\s+\\d+|[A-Z][a-z]+(?:\\s+[A-Z][a-z]+)*)",
+  "scenario_format": "named",
+  "use_toc_bookmarks": true,
+  "extract_tables": true,
+  "glossary": {
+    "SSR": "Scenario Special Rules",
+    "VC": "Victory Conditions",
+    "SYW": "Seven Years War",
+    "OOB": "Order of Battle",
+    "C-in-C": "Commander in Chief",
+    "BR": "Brigade",
+    "BM": "Brigade Morale",
+    "LI": "Light Infantry",
+    "LH": "Light Horse",
+    "KN": "Kavalerie oder Kurassiere"
+  },
+  "agent_persona": {
+    "role": "Honours of War Seven Years War Wargame Rules Arbiter — Osprey Wargames No. 11",
+    "citation_format": "[HONOURS OF WAR, {section}]",
+    "conflict_resolution_rule": "Main rulebook text is primary authority. Designer commentary in italics is advisory only and does not override the main rule. Later errata from publisher supersedes original text.",
+    "query_intents": ["direct_rule", "concept", "situation", "comparison", "variant"],
+    "custom_instructions": "This is a brigade-level Seven Years War miniatures wargame (Osprey Wargames #11). Generals rated: Dashing, Dependable, Dithering. Movement orders generate: Vigorous, Steady, Poor, Feeble. Firing resolution uses cumulative hit tally: 5+ hits = Done For (rout and remove), 4 hits = Loss of morale (retreat 1 move), 3 hits = Continue with -1 modifier. Brigade Morale checked when half its units are Shaken. Melee uses opposed dice rolls with modifiers. Cavalry may pursue after winning melee."
+  },
+  "documents": {
+    "pdfcoffee.com_osprey-wargames-11-honours-of-war-wargames-rules-for-the-seven-yearsx27-war-pdf-free.pdf": {
+      "doc_type": "core_rules",
+      "priority": 1,
+      "description": "Honours of War — Osprey Wargames No. 11 — Seven Years War brigade wargame",
+      "total_pages": 68,
+      "extract_tables": true
+    }
+  }
+}

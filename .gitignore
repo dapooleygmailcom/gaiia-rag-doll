@@ -27,10 +27,26 @@ chroma/
 data/logs/
 data/entities/
 backups/
+data/asl_cooccurrence_graph.json
+data/*_cooccurrence_graph.json
+data/*cooccurrence_graph.json
 
-# Visual Media & Scanned Magazine Assets
+# Visual Media & Scanned Magazine / Game Asset Directories
 data/PB/
+data/HB/
+data/40k/
+data/SR/
+data/RL/
+data/asl/
+data/ambush/
+data/dnd/
+data/sfb/
 data/images/
+
+# Backup files
+*.bak
+*.bak_*
+data/eval/*.bak*
 
 # Testing and coverage caches
 .pytest_cache/

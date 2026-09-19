@@ -1,0 +1,92 @@
+[
+  {
+    "overall_idx": 14,
+    "id": "bgg_uf_3589681",
+    "title": "Does ordnance get any advantage from flanking fire?",
+    "expected_rules": [
+      "28.46"
+    ],
+    "citation_hit": false,
+    "referee_ruling": "ERROR",
+    "substantive_accuracy": false,
+    "confidence": "LOW",
+    "rationale": "timed out",
+    "candidate_answer": "[Rule: 17.4] Ordnance does not get any advantage from flanking fire against infantry targets. This is explicitly stated in the rule text: \"17.4 Can ordnance get flanking fire against infantry targets? A. No.\"\n\nThis text has not changed across versions.",
+    "ground_truth": "Yes, the errata clarifies mortars have no advantage when Flanking infantry targets.  (Actually, also the same vs. CE AFV targets.)\n\nAnd AFV must use FLANK defense when they tagetted by AT ordnance fire by a Flanking group or if a sideways movement cards is in play on the AFV or is BOGGED or IMMOBILIZED (28.46) (Exception:  ATR provides it's TH# by +1 when flanking.  This is in addition to using the FLANK defense values.)"
+  },
+  {
+    "overall_idx": 34,
+    "id": "bgg_uf_3206922",
+    "title": "Odd situation - Group behind opposing group",
+    "expected_rules": [
+      "23.7"
+    ],
+    "citation_hit": false,
+    "referee_ruling": "AGREE",
+    "substantive_accuracy": true,
+    "confidence": "MEDIUM",
+    "rationale": "The Candidate AI accurately concludes that the situation is allowed under governing movement rules, although it does not provide the same level of nuance and context as the Ground Truth expert ruling.",
+    "candidate_answer": "The provided text does not explicitly address the specific situation described, where a group moves to a flanking position behind an opposing group, and then the opposing group performs a Lateral Group Transfer to assume the same identity. However, based on the rules for Lateral Group Transfer [17.7] and Encirclement [17.6], it appears that the situation could logically occur if all conditions for Lateral Group Transfer are met. There is no explicit rule disallowing this specific scenario.\n\nThis text does not indicate any changes across versions. If you have a specific version in mind, please let me know.",
+    "ground_truth": "Situation : Russian Group C has no opposing German group.  Russian Group C moves to a Natural Flanking position behind German Group B.  German Group B does a Lateral Group Transfer to become Group C.  The Group C's are now in a position they normally couldn't be in (behind each other) if they had started opposing each other.  \n\nIs there anything in the rules, or other sources, to handle this situation?  Or do we just use the rules which may be affected as logically as we can.  Did I miss something which disallows the situation to occur?  \n\nNo, you didn't miss anything.  That is allowed (so long as 2 groups with same letter aren't created) and that is how happens and the only real references in the rule book  are 23.7 referring to getting \"behind\" the pillbox and the special scenario rules for X Surrounded (which the procede to modify).\n\nYou pretty much have to carefully apply the \"RR = 10 - chit total\" and have interpret things like \"directly opposite opposing group\" for flanking fire could be behind instead in front of  the flanked group.   Yes, it'll be confusing but be careful.  At least it happens very rarely.\n\nEven though I often complain about how bad the rulebook is, I'll cut them some slack here.  Writing a bulletproof rule set that is also clear and cogent to cover all of the situations when can be behind opposing groups would be extremely difficult.\n\nI tried to dissuade the LGT by discarding a Marsh on the group, but he accepted it.  D'oh.  \ud83d\ude06\n\nYou tried.\ud83e\udd17"
+  },
+  {
+    "overall_idx": 37,
+    "id": "bgg_uf_3199417",
+    "title": "Serman tank, for example.",
+    "expected_rules": [
+      "4.2"
+    ],
+    "citation_hit": false,
+    "referee_ruling": "AGREE",
+    "substantive_accuracy": true,
+    "confidence": "HIGH",
+    "rationale": "The Candidate AI accurately captures the core mechanical outcome, correctly distinguishing between firepower for claiming a Fire card and Fire Strength for damage calculation, and provides more granular governing sub-rules.",
+    "candidate_answer": "The firepower value of '10' for a Sherman tank at range '0' is indeed the firepower required to claim a Fire card [25.1]. However, this value is not directly the Fire Strength used to determine damage. The Fire Strength is determined by the Fire card played, which may require a certain number of firepower factors to be eligible [6.5]. The actual damage is then resolved by comparing the Final Combat Resolution Number (derived from the Fire Strength and a Random Number Card) to the defense values of the target [6.5].\n\nThis text has changed across versions. Would you like to know how it worked in a specific version, or how it has evolved over time?",
+    "ground_truth": "But, you can't fire more than one?\n\nNo, 1 action per group per turn.  (4.2) Firing different weapons are different actions."
+  },
+  {
+    "overall_idx": 54,
+    "id": "bgg_uf_2984341",
+    "title": "Missing a single card",
+    "expected_rules": [
+      "20.6"
+    ],
+    "citation_hit": false,
+    "referee_ruling": "AGREE",
+    "substantive_accuracy": true,
+    "confidence": "HIGH",
+    "rationale": "The Candidate AI correctly concludes that the missing card's details can be inferred from the roster, aligning with the Ground Truth's suggestion to use the identical card's values or photocopy and modify.",
+    "candidate_answer": "The provided text does not contain information about the specific card \"Sgt O'Neill\" from the Banzai expansion. Therefore, I cannot provide details about this card based on the given documents. If you have any other questions or need information on a different topic, please let me know.",
+    "ground_truth": "Or just check the roster from Banzai:\n\nBritish 21 and British 1 are identical (SL, Sgt. armed with a MP) except:\nName:  O'Niell vs. Vasey\nMor/Pan. 4/5 vs.5/6\nCCV:  7/4, Pinned: 3/0 vs. 8/5, Pinned: 4/1\n(Can be easily calculated using rule 20.6)\nDYO: 46 vs. 51\n\nJust photocopy the card and change the above items.\n\nOr just use Vasey and use the Morale/Panic chits for the correct values."
+  },
+  {
+    "overall_idx": 83,
+    "id": "bgg_uf_2633076",
+    "title": "Wire Cards",
+    "expected_rules": [
+      "25.8"
+    ],
+    "citation_hit": false,
+    "referee_ruling": "AGREE",
+    "substantive_accuracy": true,
+    "confidence": "HIGH",
+    "rationale": "The Candidate AI accurately identifies the relevant rules and their interactions, leading to the same core mechanical outcome as the Ground Truth. The Candidate's answer is more granular and precise in its citation of governing sub-rules.",
+    "candidate_answer": "[Rule: 13.3] [Rule: 4.3] [Rule: 4.3] [Scenario: A]\n\nThe rules state that a Wire card can be placed on an opposing group only in lieu of a discard [13.3]. According to the discard capability rules [4.3], an American player may discard up to two unused cards from his hand, but only if he performed no other action during his player turn [4.3] [Scenario: A]. Therefore, if you have already played a card from your A group, you cannot discard a Wire card from your B group in the same turn.\n\nThis text has changed across versions. Would you like to know how it worked in a specific version, or how it has evolved over time?",
+    "ground_truth": "It's in the errata:\n25.8 What other AFVs can fire smoke? \nA. British AFVs with an anti-armor Effect Number of 4 or more can fire smoke. \n\nThat's literally the only AFV that can fire smoke? That can't be true can it?"
+  },
+  {
+    "overall_idx": 90,
+    "id": "bgg_uf_2475533",
+    "title": "Infiltration to an opposing Group \u00bfCan I enter CC to an adjacent group?",
+    "expected_rules": [
+      "20.51"
+    ],
+    "citation_hit": false,
+    "referee_ruling": "ERROR",
+    "substantive_accuracy": false,
+    "confidence": "LOW",
+    "rationale": "timed out",
+    "candidate_answer": "An infiltrator cannot enter Close Combat (CC) with an adjacent enemy group while maintaining infiltrator status [20.53]. To enter CC, the infiltrator must first lose his infiltrator status by either being pinned, taking a prisoner, his group playing a Movement card (except to Remove Wire), firing, or the infiltrated group playing a Terrain card at Relative Range 4 to the infiltrator (or playing two consecutive Movement cards thereby moving to Relative Range 3 in lieu of placing a Terrain card) [20.53]. Once the infiltrator status is lost, the infiltrator can then attempt to infiltrate the adjacent enemy group B [20.53].\n\nThis text has changed across versions. Would you like to know how it worked in a specific version, or how it has evolved over time?",
+    "ground_truth": "With my group A I successfully infiltrated some men to the opposing enemy Group A.\nI know that an infiltrator only may double his firepower vs the group A (20.51). But can he enter CC to an adjacent enemy Group B? Or to enter CC, the infiltrator must lose first his INF status and then attempt an infiltration vs Group B?\n\nIf you have a man infiltrated in Group A, you can enter CC or double FP  or attempt acquisition of a dropped enemy weapon vs. Group A.\n\nIn order to enter CC against group B or acquire a dropped enemy weapon in group B, that infiltrator would have drop his Infiltration status and re-infiltrate in Group B.\n\nIf Group A (with an infiltrator in Enemy Group A) fired at another enemy group, the infiltrator may choose not to fire (thus not counting his FP) or the infiltrator may fire at the other group at regular FP, in which case he will lose his infiltrator status."
+  }
+]

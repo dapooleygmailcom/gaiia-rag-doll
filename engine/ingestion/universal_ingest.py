@@ -23,11 +23,8 @@ if sys.platform == "win32":
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, "../../"))
 
-# Import specialized ingestion pipelines
-try:
-    from engine.ingestion.ingest_visual import process_visual_pdf
-except ImportError:
-    from ingest_visual import process_visual_pdf
+# Note: Specialized pipelines (e.g. ingest_visual, ingest_rules) are imported lazily inside route handlers
+
 
 
 
@@ -119,31 +116,55 @@ class DocumentProfiler:
         confidence_reason = ""
         
         filename_lower = os.path.basename(pdf_path).lower()
-        
+
+        is_visual_media = any(term in filename_lower for term in [
+            "vixen", "playboy", "glamour", "portfolio", "lookbook",
+            "photo", "magazine", "comic", "catalog", "catalogue"
+        ])
+
         # 1. Visual Media (Magazines, Art, Comics, Portfolios, Lookbooks)
-        if (avg_coverage >= 0.35 or avg_images_per_page >= 0.8) and avg_chars_per_page < 1200:
+        if is_visual_media and (avg_coverage >= 0.35 or avg_images_per_page >= 0.8 or avg_chars_per_page < 1200):
             pipeline_type = "VISUAL_MEDIA"
-            confidence_reason = f"High visual image density ({avg_coverage:.1%}) with low-to-medium text density ({avg_chars_per_page:.0f} chars/pg)"
-        elif any(term in filename_lower for term in ["vixen", "playboy", "glamour", "portfolio", "lookbook", "photo", "magazine", "comic"]):
+            confidence_reason = (
+                f"Visual media publication ({avg_coverage:.1%} coverage, "
+                f"{avg_images_per_page:.1f} images/pg) with visual-media filename signal"
+            )
+        elif is_visual_media:
             pipeline_type = "VISUAL_MEDIA"
-            confidence_reason = f"Keyword match in filename with visual layout"
-            
-        # 2. Rulebook / Technical Specification
-        elif rule_pattern_hits >= 3 or any(term in filename_lower for term in ["rule", "errata", "asl", "upfront", "codex", "manual"]):
+            confidence_reason = "Visual-media keyword match in filename"
+
+        # 2. Scanned Text — A document with <50 native chars/page AND high image coverage
+        #    that is NOT an explicit visual media publication is a scanned document.
+        elif avg_chars_per_page < 50 and avg_coverage > 0.5:
+            pipeline_type = "SCANNED_OCR"
+            confidence_reason = (
+                f"Sparse native text ({avg_chars_per_page:.0f} chars/pg) with high image "
+                f"coverage ({avg_coverage:.1%}) — almost certainly a scanned document requiring OCR"
+            )
+
+        # 4. Rulebook / Technical Specification
+        elif rule_pattern_hits >= 3 or any(term in filename_lower for term in [
+            "rule", "errata", "asl", "upfront", "codex", "manual"
+        ]):
             pipeline_type = "RULEBOOK_TECHNICAL"
-            confidence_reason = f"Detected numbering schema ({rule_pattern_hits} pattern hits) or rulebook indicators"
-            
-        # 3. Policy / Legal / Insurance PDS
-        elif policy_keyword_hits >= 3 or any(term in filename_lower for term in ["pds", "policy", "insurance", "disclosure", "contract", "legal"]):
+            confidence_reason = (
+                f"Detected numbering schema ({rule_pattern_hits} pattern hits) "
+                f"or rulebook filename indicators"
+            )
+
+        # 5. Policy / Legal / Insurance PDS
+        elif policy_keyword_hits >= 3 or any(term in filename_lower for term in [
+            "pds", "policy", "insurance", "disclosure", "contract", "legal"
+        ]):
             pipeline_type = "POLICY_HIERARCHICAL"
             confidence_reason = f"Detected policy/legal ontology ({policy_keyword_hits} keyword hits)"
-            
-        # 4. Scanned Text (Requires OCR pre-pass)
+
+        # 6. Scanned Text fallback (low text, not already caught by guard above)
         elif avg_chars_per_page < 80:
             pipeline_type = "SCANNED_OCR"
-            confidence_reason = f"Sparse native text ({avg_chars_per_page:.0f} chars/pg), requires OCR extraction"
-            
-        # 5. Default General Text
+            confidence_reason = f"Sparse native text ({avg_chars_per_page:.0f} chars/pg), likely requires OCR"
+
+        # 7. Default General Text
         else:
             pipeline_type = "GENERAL_TEXT"
             confidence_reason = f"Standard text publication ({avg_chars_per_page:.0f} chars/pg)"
@@ -172,15 +193,15 @@ class UniversalIngestionEngine:
     def __init__(self):
         self.profiler = DocumentProfiler()
         
-    def ingest_file(self, file_path, category=None, max_pages=None):
-        """Profile and automatically ingest a single file."""
+    def ingest_file(self, file_path, category=None, max_pages=None, target=None, title_id=None, tenant_id=None, pre_extracted_text=None, pre_extracted_text_path=None):
+        """Profile and automatically ingest a single file. Supports pre-extracted OCR text."""
         if not os.path.exists(file_path):
             raise FileNotFoundError(f"Target file not found: {file_path}")
             
         ext = os.path.splitext(file_path)[1].lower()
         
         print("\n" + "=" * 70)
-        print(f" [Universal Ingest Engine] Inspecting: {os.path.basename(file_path)}")
+        print(f" [Universal Ingest Engine] Inspecting: {os.path.basename(file_path)} (Target: {target or 'DEFAULT'})")
         print("=" * 70)
         
         if ext == ".pdf":
@@ -198,34 +219,66 @@ class UniversalIngestionEngine:
             if route == "VISUAL_MEDIA":
                 cat = category or ("PB" if "pb" in file_path.lower() or "vixen" in file_path.lower() else "VISUAL")
                 print(f"[Router] Activating VISUAL MEDIA PIPELINE (Category: {cat})...")
+                try:
+                    from engine.ingestion.ingest_visual import process_visual_pdf
+                except ImportError:
+                    from ingest_visual import process_visual_pdf
                 return process_visual_pdf(file_path, category=cat, max_pages=max_pages)
                 
             elif route == "RULEBOOK_TECHNICAL":
-                print("[Router] Activating RULEBOOK & TECHNICAL SPEC PIPELINE...")
-                # Call ingest_rules if available
+                print(f"[Router] Activating RULEBOOK & TECHNICAL SPEC PIPELINE (Target: {target or 'DEFAULT'})...")
                 try:
                     from engine.ingestion.ingest_rules import process_rules_pdf
-                    return process_rules_pdf(file_path)
-                except Exception:
-                    print("  Note: Invoking generic rules chunker.")
-                    return profile
+                    return process_rules_pdf(
+                        file_path,
+                        target=target,
+                        game_id=title_id,
+                        tenant_id=tenant_id,
+                        pre_extracted_text=pre_extracted_text,
+                        pre_extracted_text_path=pre_extracted_text_path
+                    )
+                except Exception as e:
+                    import traceback
+                    traceback.print_exc()
+                    raise e
                     
             elif route == "POLICY_HIERARCHICAL":
                 print("[Router] Activating HIERARCHICAL POLICY & LEGAL PIPELINE...")
                 return profile
                 
             elif route == "SCANNED_OCR":
-                print("[Router] Activating RAPID_OCR PIPELINE...")
+                print(f"[Router] Activating SCANNED & OCR PIPELINE for {file_path} (Target: {target or 'DEFAULT'})...")
                 try:
-                    from engine.ingestion.ocr_processor import process_pdf, init_ocr
-                    ocr = init_ocr()
-                    return process_pdf(file_path, ocr)
+                    from engine.ingestion.ingest_rules import process_rules_pdf
+                    return process_rules_pdf(
+                        file_path,
+                        target=target,
+                        game_id=title_id,
+                        tenant_id=tenant_id,
+                        ocr_required=(not pre_extracted_text and not pre_extracted_text_path),
+                        pre_extracted_text=pre_extracted_text,
+                        pre_extracted_text_path=pre_extracted_text_path
+                    )
                 except Exception as e:
-                    print(f"  OCR processing fallback: {e}")
+                    print(f"  SCANNED_OCR ingestion error: {e}")
+                    import traceback
+                    traceback.print_exc()
                     return profile
             else:
-                print(f"[Router] Activating GENERAL TEXT PIPELINE for {file_path}...")
-                return profile
+                print(f"[Router] Activating GENERAL TEXT PIPELINE for {file_path} (Target: {target or 'DEFAULT'})...")
+                try:
+                    from engine.ingestion.ingest_rules import process_rules_pdf
+                    return process_rules_pdf(
+                        file_path,
+                        target=target,
+                        game_id=title_id,
+                        tenant_id=tenant_id,
+                        pre_extracted_text=pre_extracted_text,
+                        pre_extracted_text_path=pre_extracted_text_path
+                    )
+                except Exception as e:
+                    print(f"  General text routing fallback: {e}")
+                    return profile
                 
         elif ext in [".csv", ".tsv", ".xlsx"]:
             print("[Router] Activating NUMERICAL & TABULAR PIPELINE...")

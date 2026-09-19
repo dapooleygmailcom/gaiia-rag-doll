@@ -1,0 +1,225 @@
+Total benchmark items: 1689
+
+================================================================================
+TC #1 | ID: bgg_asl_3759227 | Thread: None
+Title: first fire and subsequent first fire sequence
+Expected Rules: []
+Query Intent: None | Concepts: ['movement_bypass', 'fire_attacks', 'terrain_los']
+Query:
+first fire and subsequent first fire sequence: Hi,
+when resolving Defensive First Fire against a moving unit (unit A) that spends 2 MF to enter a hex in LOS of 2 enemy units (B and C), what is the correct resolution?
+- Unit B uses First Fire, then Unit C uses First Fire, then both Unit can use Subsequent First Fire to fire on the 2nd MF spent
+- Unit B uses First Fire and then its Subsequent First Fire, then Unit C uses First Fire and then its Subsequent First Fire
+- a mix of the 2
+
+Thanks!
+----------------------------------------
+Ground Truth Answer:
+when resolving Defensive First Fire against a moving unit (unit A) that spends 2 MF to enter a hex in LOS of 2 enemy units (B and C), what is the correct resolution?
+- Unit B uses First Fire, then Unit C uses First Fire, then both Unit can use Subsequent First Fire to fire on the 2nd MF spent
+- Unit B uses First Fire and then its Subsequent First Fire, then Unit C uses First Fire and then its Subsequent First Fire
+- a mix of the 2
+
+As above, there is no ordering of DFF from different units/fire groups within a single expenditure. The units may make their allowed two attacks in any order desired.
+================================================================================
+
+================================================================================
+TC #2 | ID: bgg_asl_3758531 | Thread: None
+Title: Pinning a wounded leader that is being portaged
+Expected Rules: ['A13.52', 'A15.2', 'A15.42', 'A17.2', 'A20', 'A20.54', 'A25.231', 'A4.4', 'A7.8', 'A9', 'A9.74', 'B11.4', 'B21.41', 'D15.54', 'D2.5', 'D5', 'D5.341', 'G1.4', 'G12.13']
+Query Intent: None | Concepts: ['movement_bypass', 'fire_attacks', 'morale_pin_rally', 'terrain_los', 'close_combat_melee', 'concealment_snipers', 'ordnance_guns', 'vehicles_afv', 'leaders_heroes', 'scenarios_setup']
+Query:
+Pinning a wounded leader that is being portaged: A17.2... A Good Order wounded man who is not portaging a SW may be carried by any Good Order MMC at a cost of five PP. A wounded leaders two MF bonus for accompaniment throughout the MPh still applies.
+
+A SS squad picks up their wounded leader and carries him, as if he were a 5PP SW.
+Defensive fire gives a 1MC, which the leader just passes, and the squad passes.
+
+Does the pinned leader stop in the hex, or is he carried onwards?
+
+On one hand, Pin result stop the leader moving
+On the other hand, he is being carried anyway, and if he was a 5PP SW, then the squad could continue moving.
+----------------------------------------
+Ground Truth Answer:
+First cut: this condition is not on the list of "Pin NA" situations in the Index. This is not an exhaustive search, but should be good enough: 
+Pin NA: A7.8 [Berserk: A15.42] [Cavalry: A13.52] [Climbing: B11.4] [Fording: B21.41] [Hero: A15.2] [Human Wave: A25.231] [Japanese SMC: G1.4] [LC Passengers: G12.13] [Motorcyclist: D15.54]
+
+So the leader has to stop and they drop him if they want to move on. Which maybe is what this situation represents, leader writhing in pain from wounds, they lose control of him in portage (carry). He's personnel, not a support weapon, yeah? Note that they carry him, not portage him, if that distinction matters.
+================================================================================
+
+================================================================================
+TC #3 | ID: bgg_asl_3757812 | Thread: None
+Title: Booby Traps in Scenario 131, Penetration of Rostov
+Expected Rules: ['A12', 'A12.152', 'A12.154', 'B28', 'B28.9', 'D15', 'D15.54']
+Query Intent: None | Concepts: ['fire_attacks', 'ordnance_guns', 'scenarios_setup']
+Query:
+Booby Traps in Scenario 131, Penetration of Rostov: This scenario has an SSR that states, "Russians have Level B Booby Trap capability, which can only be activated by German TC". Does the second part of this sentence mean that Mopping Up (which would normally cause a Casualty dr if the DEFENEDER has Booby Trap capability, if I understand the rule correctly) will not cause such a dr here, only explicit German TCs will? Is Mopping Up the only thing other than a TC that can trigger a Casualty dr because of Booby Traps? I don't think I've ever played a scenario with Booby Traps before so just want to make sure I'm interpreting this correctly.
+----------------------------------------
+Ground Truth Answer:
+Too bad you picked this as your first booby trap scenario! The SSR means exactly what it says...?  Is there a reason to think otherwise? Yes, unfortunately. 
+
+The reason to think otherwise is that there is no definition of "booby trap activation" anywhere in the rule book. The author of the SSR is making up a concept, perhaps trying to conserve space on the scenario card (?) to add a nearly pointless SSR. Searching the ASLRB, there are (B28.9) "booby trap resolution", "booby trap attacks", and "booby trap capability", also "booby trap trigger (D15.54)" but no such thing as "booby trap activation".  The SSR lazily cites no rules to help clear things up, even though there is plenty of space on the scenario card.
+
+This forces us to conjecture what the hell the designer wanted when he wrote this. I would personally lean towards MR's view on this, but JR V has an equally valid argument, because no-one knows what the designer really meant here, so we are forced to offer opinions. 
+
+Since it's a matter of opinion due to poor SSR wording, I'd roll it off with the opponent if they disagree. But here is the silly thing... such a minor nuance is a bit over the top! Why are these booby traps in this scenario not effective under all circumstances possible? Is the scenario that finely tuned that the balance is in question without this scenario special rule? Which is, in any event, unclear? I can't possibly this scenario outcome hangs on a dime such as this! I can only imagine some weird playtest outcome caused one side to win when they otherwise "didn't deserve to" according to the views of the designer. Who knows? 
+
+Maybe use this: poorly worded and nearly useless SSR are to be ignored. Play on.
+================================================================================
+
+================================================================================
+TC #4 | ID: bgg_asl_3757558 | Thread: None
+Title: VCA, TCA or both?
+Expected Rules: ['D3.12']
+Query Intent: None | Concepts: ['vehicles_afv']
+Query:
+VCA, TCA or both?: Hi all.
+
+In the enemy MPh, I have a Sherman tank facing forward with no AAMG. Its bow-mounted MG and MA have already fired in this phase. 
+Now, a German tank approaches from the flank. Can I change the VCA to fire at it with the CMG (taking the corresponding penalty but exposing my frontal armor)? Or, since it is a coaxial machine gun, am I only allowed to change the TCA?
+
+I understand that I can choose either option, but I would appreciate confirmation.
+
+Thanks.
+----------------------------------------
+Ground Truth Answer:
+In the enemy MPh, I have a Sherman tank facing forward with no AAMG. Its bow-mounted MG and MA have already fired in this phase. 
+Now, a German tank approaches from the flank. Can I change the VCA to fire at it with the CMG (taking the corresponding penalty but exposing my frontal armor)? Or, since it is a coaxial machine gun, am I only allowed to change the TCA?
+
+I understand that I can choose either option, but I would appreciate confirmation.
+
+D3.12 "The TCA may change as a result of firing a turret-mounted weapon outside its current TCA and the VCA may change for firing a turret/bow-mounted weapon outside its current VCA (Case A)."
+================================================================================
+
+================================================================================
+TC #5 | ID: bgg_asl_3754629 | Thread: None
+Title: Set DC versus AFV.
+Expected Rules: ['A23.5', 'A23.71', 'G1', 'G1.6121']
+Query Intent: None | Concepts: ['movement_bypass', 'fire_attacks', 'terrain_los', 'concealment_snipers', 'vehicles_afv']
+Query:
+Set DC versus AFV.: Hi all.
+
+We know that for a Placed/Thrown DC to attack an armored vehicle, that must be pre-designated as its target. But what about a Set DC (other than a Japanese A-T set DC)? Can it destroy the AFV, or will it only affect vulnerable PRC?
+
+Thanks in advance.
+----------------------------------------
+Ground Truth Answer:
+A23.5 "In order for a DC attack (as with any ordnance Direct Fire vs a Location containing an AFV in combination with unarmored targets) to affect an AFV, it must be predesignated as being made against the AFV."
+
+A23.71 " A detonated Set DC is resolved on the 36+ FP column of the IFT (or with 18 FP [the 16 FP column] vs concealed units) with a -3 DRM and no TEM including vs the vulnerable PRC of an AFV (with +2 CE DRM)." 
+
+A DC can't be declared as set against a vehicle (and it is unlikely that there would be an enemy vehicle in the Location when it is set anyway). The only effect will be general collateral vs. PRC and/or possible indirect effects vs. terrain.
+
+An A-T Set DC can affect a vehicle [G1.6121].
+================================================================================
+
+================================================================================
+TC #6 | ID: bgg_asl_3751067 | Thread: None
+Title: Landing Craft vehicle unloading costs
+Expected Rules: ['A4.1', 'A4.11', 'D1.1', 'D12.5', 'D2', 'D2.14', 'D6', 'D6.5', 'D8.5']
+Query Intent: None | Concepts: ['movement_bypass', 'terrain_los', 'vehicles_afv']
+Query:
+Landing Craft vehicle unloading costs: A LCM(3) (4 MP movement allotment) beached across a not-exposed reef hexside last friendly MPh. At the start of this friendly MPh it unloads its Passenger Sherman. The cost for the Sherman is 1 MP to Start, 4 MP to unload to unload (25% of its MP allotment (FRU) = 13 * 0.25 = 3.25 MP, FRU to 4 MP) and 3 MP to wade in the reef hex (2 MP + 1 MP COT for waterproofed, fully-tracked)  for a total of 8 MP. What is the cost for the LC? Is it 1 MP (25%) to unload, 2 MP (1 MP spent while the Sherman started plus 25% to unload) or 3 MP (the Sherman spent 61.5% of its MP allotment in unloading, and the LC must expend a corresponding percentage of its MP allotment)?
+----------------------------------------
+Ground Truth Answer:
+The LCM(3) is a landing craft. I'd say LC rules apply, particularly this one quoted below. This rule does address the aforementioned uncertainty about the 25% MP expenditure. What I don't know is why an LTV4 is being cited here in reference to the question, instead of the data for LCM(3) and landing craft? I guess the unloading procedure could be similar for the lighter vehicles that the LTV4 can carry per chapter G, but it can't carry the Shermans. 
+
+As for the cost, I agree that more than 50% of the total cost of the vehicle to leave the LC is used, but less than 75%, so that would mean 3/4 of the points are spent. I don't think this is staggered incrementally but is totalled up. 
+
+[ EDIT -- USA Vehicle note 51 speaks of MP allotment and movement allotment in the same paragraph. Note that while MF and MP are defined in the index as "measures of movement capability" (no mention of "allotment"), MF allotment is adequately described in A4.11 and MP allotment is not so adequately described in D1.1. There is NO general definition of movement allotment, though it is used in A4.1, D12.5, USA Vehicle Note 51, Korean Vehicle Note 25. We can deduce that movement allotment really means MF allotment or MP allotment, depending on the unit type. IMO "movement allotment" should be added to the Index and defined. ]
+
+12.4 (UN)LOADING: Except as stated otherwise, normal Vehicle—not Boat—(un)loading rules (D6.4-.5; D8.5) apply to LC and their Passengers. A LC Passenger may unload into an enemy-occupied hex. If a LC is Aground (or is Beached across a hexside that is not within its VCA), units may unload from it only into its hex, and do so by expending 25% (FRU) of their MF/MP allotment (plus COT MP if it is a vehicle). There is no D2.14 penalty cost for the presence of the LC in the Location, but Overstacking will apply when a vehicle [EXC: motorcycle] is in the same Location as a LC but is not a Passenger on one. A unit wishing to load onto an Aground LC must be in (or enter, expending that Location's COT to do so—plus, if it is a vehicle, one extra MP for the presence of the LC; D2.14) that LC's Location, then expend 25% (FRU) of its MF/MP allotment (plus, if it is a vehicle, one MP as the LC's COT and one MP to Stop).
+================================================================================
+
+================================================================================
+TC #7 | ID: bgg_asl_3747585 | Thread: None
+Title: MMG vs HMG
+Expected Rules: ['A4', 'A9', 'A9.21', 'A9.8', 'B16', 'B16.32', 'B20', 'B20.95', 'C6', 'C6.41', 'D6', 'D6.1', 'E7.51', 'F5', 'F5.41']
+Query Intent: None | Concepts: ['morale_pin_rally', 'terrain_los', 'ordnance_guns', 'vehicles_afv']
+Query:
+MMG vs HMG: Generally, HMGs have a better ROF, range, and damage than MMGs. But rules-wise, are there any differences? Is there any rule that applies to an HMG but not an MMG?
+----------------------------------------
+Ground Truth Answer:
+Just realized some other differences between LMG and MMG/HMG. A LMG does not have restricted Field of Fire [A9.21] when firing from woods/building/rubble. A LMG can't be dismantled [A9.8]. For some nationalities (e.g. Japanese, Ethiopian) MMG/HMG is a crewed weapon. A LMG can be fired from crest [B20.95] or marsh [B16.32] and can fire outside the protected hexsides (as Area Fire) from a wadi [F5.41]. A LMG can be fired by a Passenger [D6.1]. A LMG can't be bore sighted [C6.41].
+
+I'm going to stop now, because that wasn't the original question. The differences between MMGs & HMGs are certainly fewer and may only be the Light AA difference.
+================================================================================
+
+================================================================================
+TC #8 | ID: bgg_asl_3731096 | Thread: None
+Title: Chapter K: Mortar and Wall Advantage example error !
+Expected Rules: []
+Query Intent: None | Concepts: ['terrain_los', 'ordnance_guns']
+Query:
+Chapter K: Mortar and Wall Advantage example error !: Hello,
+I'm currently reading Chapter K of the rules. On page K31, the Mortar and Wall Advantage example seems to contain an error. In both examples, indeed, the american M2 mortar is set up 2 hexes away from its target, which theoretically prevents it from firing since its minimum range is 3. Am I missing something?
+----------------------------------------
+Ground Truth Answer:
+Hello,
+I'm currently reading Chapter K of the rules. On page K31, the Mortar and Wall Advantage example seems to contain an error. In both examples, indeed, the american mortar is set up 2 hexes away from its target, which theoretically prevents it from firing since its minimum range is 3. Am I missing something?
+
+From what I read the Americans are in "those woods in hex 24W5" (end of second paragraph on K31). The German squad is in 24BB4, which is range five. If the German moved to the other side of the hedge, say 24AA5 the range would be four. 
+
+Ah, you are looking at the two EXs 24CC10 and 24Y10 firing at 24AA10. Here you are correct the American M2 60mm MTR has a minimum range of three and could not make those attacks. Assume it is a M19 mortar instead, or assume the attacks are made from 24W10 and 24EE10. I think the reduced TEM is the important part of the lesson, and the issue with minimum range is just there to make it less obvious.
+================================================================================
+
+================================================================================
+TC #9 | ID: bgg_asl_3728472 | Thread: None
+Title: Does the "No Quarter" declaration allow use Low Crawl to units adjacent to the enemy?
+Expected Rules: ['A10', 'A10.53', 'A10.531', 'A20', 'A20.21', 'A20.3', 'E1', 'E1.54']
+Query Intent: None | Concepts: ['movement_bypass', 'morale_pin_rally', 'terrain_los', 'close_combat_melee', 'concealment_snipers', 'ordnance_guns', 'leaders_heroes', 'scenarios_setup']
+Query:
+Does the "No Quarter" declaration allow use Low Crawl to units adjacent to the enemy?: Hi all.
+
+As stated in the question, I have a doubt regarding rules A20.21 and A20.3. If one side has declared No Quarter, can an enemy unit use Low Crawl if it is adjacent to that side at the start of its Rout Phase? Or does the prohibition under rule A20.21 still take precedence?
+
+Thanks in advance.
+----------------------------------------
+Ground Truth Answer:
+Why are you equating Low Crawl with being ADJACENT????
+
+10.52 LOW CRAWL: Low Crawl is a rout of one Location which requires 
+the entire MF allotment of the routing unit (but is still considered a form of 
+Assault Movement should the routing unit enter a FFE Blast Area). A rout-
+ing unit using Low Crawl cannot be Interdicted. Low Crawl cannot be used 
+to enter Marsh or a Water Obstacle, or in any stream unless dry. Low Crawl 
+cannot be used to exit an enemy-occupied Location [EXC: Night (E1.54)]. 
+All other Rout provisions apply unchanged to Low Crawl, e.g., rout must still 
+be towards the nearest woods/building Location within 6 MF.
+
+Nothing in 10.52 requires a unit that wants to Low Crawl be ADJACENT to an enemy unit (Known or otherwise).
+
+A Routing Unit has these options:
+* If not subject to possible surrender, it designates its Rout target (nearest woods/building within 6 MF) and:
+1) Routs using its 6 MF (3 for Wounded Leader, etc). towards that target; if moving into Open Ground it may be subject to Interdiction (A10.53; A10.531).
+2) Declares Low Crawl and only Routs a single hex, AGAIN TOWARDS THE ROUT TARGET.
+
+*If No Quarter has NOT been declared and it begins the Rout phase adjacent to a KEU and cannot Rout in any way to avoid Interdiction, it Surrenders to that adjacent KEU.
+
+*If No Quarter HAS been declared and it begins the Rout phase adjacent to a KEU and cannot Rout in any way to avoid Interdiction, it does NOT Surrender and may either Rout using its 6 MF (taking the Interdiction MC(s)) or Low Crawl one hex and avoiding all Interdiction rolls.
+
+Note that if the broken unit begins the Rout phase adjacent to a KEU, but has a VALID Rout path that does _not_ subject it to Interdiction, it does ** NOT ** Surrender and can Rout via the first bullet above (either using full 6 MF or Low Crawling one hex ... but both still must be towards it's designated Rout target).
+================================================================================
+
+================================================================================
+TC #10 | ID: bgg_asl_3728029 | Thread: None
+Title: Crew Final fire with Ordanace
+Expected Rules: ['A4.41', 'A7.25', 'A7.81', 'A8.3', 'A8.41', 'C2.241', 'C2.5', 'C3.33', 'C5', 'C5.6', 'C5.64', 'C8.92', 'S8.21']
+Query Intent: None | Concepts: ['fire_attacks', 'morale_pin_rally', 'ordnance_guns', 'vehicles_afv', 'scenarios_setup']
+Query:
+Crew Final fire with Ordanace: If a crew manning an AT gun first fired with its inherint FP,can it  then final fire with the AT gun in the MPh or Dfph?
+----------------------------------------
+Ground Truth Answer:
+It would be considered Intensive Fire if the Gun wasn't fired yet? And if so could the Gun fire on any target or just an adjacent one?
+C5.6 does not mandate that the gun itself needs to be fired before Intensive Firing. 
+
+Read below you will see nothing about previous firing as a gun being necessary for it to engage in Intensive Fire: 
+
+CASE F; INTENSIVE FIRE: Intensive Fire is available only to Guns (not SW), and can be used only if the crew of the Gun is not pinned, shocked, stunned, or marked with a Final/Intensive Fire counter. 
+
+As to your second question, here is the index entry to read and study:
+
+Intensive Fire (IF): C5.6 [AFPh Restriction: A4.41, A7.25] [Area Target Type: C3.33] [B#/X#: A.11] [Conditional ROF: C2.5] [Depletion Number: C8.92] [ENEMY will only use against an ADJACENT Target: S8.21] [Final Fire Restriction: A8.41, C2.241] [OVR Prevention: C5.64] [Pinned: A7.81] [Subsequent First Fire: A8.3]
+
+As you can see, there are AFPh restrictions, and most importantly for your situation, final fire restrictions, A8.41, read those.
+================================================================================
+

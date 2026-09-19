@@ -1,0 +1,54 @@
+{
+  "game_name": "Flames Of War",
+  "game_id": "flames_of_war",
+  "pipeline_mode": "RULEBOOK_TECHNICAL",
+  "data_dir": "data/misc",
+  "text_dir": "data/misc_text",
+  "chroma_collection": "flames-of-war-rules-semantic",
+  "rule_index_file": "data/flames_of_war_rule_index.json",
+  "cooccurrence_graph_file": "data/flames_of_war_cooccurrence.json",
+  "section_tree_file": "data/flames_of_war_section_tree.json",
+  "rule_schema": "keyword_header",
+  "rule_pattern": "(?:^|\\n)([A-Z][A-Z\\s&\\-\\/]{3,60})(?:\\n|$)",
+  "cross_ref_pattern": "(?:see|See)\\s+(?:page\\s+\\d+|[A-Z][a-z]+(?:\\s+[A-Z][a-z]+)*)",
+  "scenario_format": "named",
+  "scenario_pattern": "(?:^|\\n)\\s*(SCENARIO\\s+\\d+|[A-Z][A-Z\\s]{4,})\\n",
+  "extract_tables": true,
+  "glossary": {
+    "ROF": "Rate of Fire",
+    "AT": "Anti-tank Rating",
+    "FP": "Firepower Rating",
+    "TA": "Top Armour",
+    "FA": "Front Armour",
+    "SA": "Side Armour",
+    "HQ": "Headquarters Unit",
+    "MG": "Machine-gun",
+    "SMG": "Sub-machine gun",
+    "WYSIWYG": "What You See Is What You Get",
+    "SAS": "Shoot and Scoot",
+    "GtG": "Gone to Ground",
+    "Td": "Tactical Speed",
+    "Dash": "Dash Speed",
+    "LW": "Late War",
+    "EW": "Early War",
+    "MW": "Mid War",
+    "CiC": "Company in Command",
+    "2iC": "Second in Command"
+  },
+  "agent_persona": {
+    "role": "Flames of War WWII Miniatures Wargame Rules Arbiter — 4th Edition",
+    "citation_format": "[FLAMES OF WAR 4th Ed, {section}]",
+    "conflict_resolution_rule": "4th Edition rulebook is primary authority. Theatre-specific Intelligence Handbooks override for unit rules. Errata from Battlefront Miniatures overrides all.",
+    "query_intents": ["direct_rule", "concept", "situation", "comparison", "variant"],
+    "custom_instructions": "This is a WWII 15mm miniatures wargame. Distances measured in inches. Team stats include: Motivation, Skill, Is Hit On, Armour (Front/Side/Top), Tactical/Dash speed, ROF (Halted/Moving), Anti-tank, Firepower. Assaults are close combat resolved by opposed dice. Artillery uses template weapons placed on target. Morale checks use Motivation rating. GtG applies when teams do not move or shoot. Teams are destroyed when hit by a weapon whose AT exceeds armour, then FP test passed."
+  },
+  "documents": {
+    "pdfcoffee.com_flames-of-war-4th-ed-ew-amp-lw-rule-book-pdf-free.pdf": {
+      "doc_type": "core_rules",
+      "priority": 1,
+      "description": "Flames of War 4th Edition Early War and Late War combined rulebook",
+      "total_pages": 109,
+      "extract_tables": true
+    }
+  }
+}
