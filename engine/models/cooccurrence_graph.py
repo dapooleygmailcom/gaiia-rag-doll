@@ -9,7 +9,24 @@ Provides data structures for representing:
 import json
 import os
 from typing import Dict, List, Optional, Any, Tuple
-from pydantic import BaseModel, Field
+try:
+    from pydantic import BaseModel, Field
+except ImportError:
+    class BaseModel:
+        def __init__(self, **kwargs):
+            for k, v in kwargs.items():
+                setattr(self, k, v)
+        @classmethod
+        def model_validate(cls, data):
+            if isinstance(data, cls):
+                return data
+            return cls(**data)
+        def model_dump(self):
+            return {k: v for k, v in self.__dict__.items() if not k.startswith("_")}
+    def Field(*args, **kwargs):
+        if "default_factory" in kwargs:
+            return kwargs["default_factory"]()
+        return kwargs.get("default", None)
 
 
 class CooccurrenceEdge(BaseModel):
@@ -37,27 +54,31 @@ class CooccurrenceGraph(BaseModel):
         if not source or not target or source == target:
             return
 
+        if not hasattr(self, "_edge_index") or self._edge_index is None:
+            self._edge_index = {}
+
         if source not in self.adjacency:
             self.adjacency[source] = []
 
-        # Check if edge already exists
-        for edge in self.adjacency[source]:
-            if edge["target"] == target:
-                # Update weight to max of existing and new
-                if weight > edge.get("weight", 0.0):
-                    edge["weight"] = round(weight, 3)
-                    edge["relation_type"] = relation_type
-                    if shared_terms:
-                        edge["shared_terms"] = list(set(edge.get("shared_terms", []) + shared_terms))
-                return
+        key = (source, target)
+        if key in self._edge_index:
+            edge = self._edge_index[key]
+            if weight > edge.get("weight", 0.0):
+                edge["weight"] = round(weight, 3)
+                edge["relation_type"] = relation_type
+                if shared_terms:
+                    edge["shared_terms"] = list(set(edge.get("shared_terms", []) + shared_terms))
+            return
 
-        self.adjacency[source].append({
+        new_edge = {
             "target": target,
             "weight": round(weight, 3),
             "relation_type": relation_type,
             "shared_terms": shared_terms or [],
             "description": description or ""
-        })
+        }
+        self.adjacency[source].append(new_edge)
+        self._edge_index[key] = new_edge
 
     def add_bidirectional_edge(self, node_a: str, node_b: str, weight: float, relation_type: str, shared_terms: Optional[List[str]] = None):
         """Add symmetric edges between node_a and node_b."""
@@ -119,6 +140,13 @@ class SectionTree(BaseModel):
     sections: Dict[str, SectionNode] = Field(default_factory=dict)
     rule_to_section_map: Dict[str, str] = Field(default_factory=dict)
 
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        if hasattr(self, "sections") and isinstance(self.sections, dict):
+            for k, v in list(self.sections.items()):
+                if isinstance(v, dict):
+                    self.sections[k] = SectionNode(**v)
+
     def add_section(self, section_id: str, title: str, parent_id: Optional[str] = None, level: int = 1, doc_type: str = "core_rules", priority: int = 1) -> SectionNode:
         sec_id = str(section_id).strip()
         if sec_id not in self.sections:
@@ -158,13 +186,19 @@ class SectionTree(BaseModel):
     def get_parent_section(self, rule_or_section_id: str) -> Optional[SectionNode]:
         """Find the immediate parent SectionNode for a rule or sub-section."""
         query_id = str(rule_or_section_id).strip()
+        sec_id = None
         if query_id in self.rule_to_section_map:
             sec_id = self.rule_to_section_map[query_id]
-            return self.sections.get(sec_id)
-        if query_id in self.sections:
-            p_id = self.sections[query_id].parent_id
-            if p_id:
-                return self.sections.get(p_id)
+        elif query_id in self.sections:
+            sec_val = self.sections[query_id]
+            sec_id = getattr(sec_val, "parent_id", sec_val.get("parent_id") if isinstance(sec_val, dict) else None)
+
+        if sec_id and sec_id in self.sections:
+            node = self.sections[sec_id]
+            if isinstance(node, dict):
+                node = SectionNode(**node)
+                self.sections[sec_id] = node
+            return node
         return None
 
     def get_sibling_rules(self, rule_id: str) -> List[str]:

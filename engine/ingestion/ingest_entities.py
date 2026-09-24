@@ -1,8 +1,15 @@
 import os
 import glob
 import json
-import chromadb
-import ollama
+try:
+    import chromadb
+except ImportError:
+    chromadb = None
+
+try:
+    import ollama
+except ImportError:
+    ollama = None
 
 # Resolve paths
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))

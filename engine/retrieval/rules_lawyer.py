@@ -13,15 +13,33 @@ Models:
 import os
 import re
 import json
-import chromadb
-import ollama
+from typing import Optional, List, Dict, Any, Tuple
 
 try:
     from engine.models.cooccurrence_graph import CooccurrenceGraph, SectionTree
     from engine.retrieval.hyde_generator import HydeGenerator
-except ImportError:
-    from models.cooccurrence_graph import CooccurrenceGraph, SectionTree
-    from hyde_generator import HydeGenerator
+    from engine.providers import (
+        BaseLLMProvider,
+        BaseStorageProvider,
+        CloudDynamoStorageProvider,
+        StorageCollectionAdapter,
+        get_llm_provider,
+        get_storage_provider,
+    )
+except ImportError as _primary_err:
+    try:
+        from models.cooccurrence_graph import CooccurrenceGraph, SectionTree
+        from hyde_generator import HydeGenerator
+        from providers import (
+            BaseLLMProvider,
+            BaseStorageProvider,
+            CloudDynamoStorageProvider,
+            StorageCollectionAdapter,
+            get_llm_provider,
+            get_storage_provider,
+        )
+    except ImportError:
+        raise _primary_err
 
 # Resolve paths relative to this script
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -54,16 +72,16 @@ Respond with ONLY a JSON object: {{"query_type": "<type>", "rule_numbers": [<any
 User query: {query}"""
 
 
-def classify_query(query):
+def classify_query(query, llm_provider: Optional[BaseLLMProvider] = None):
     """
-    Classify a user query using llama3.1:8b.
-    Returns dict with query_type, rule_numbers, scenario.
+    Classify a user query using the active LLM provider.
+    Returns dict with query_type, rule_numbers, scenario, sub_queries.
     """
+    llm = llm_provider or get_llm_provider()
     prompt = CLASSIFY_PROMPT.format(query=query)
     
     try:
-        response = ollama.generate(model="llama3.1:8b", prompt=prompt)
-        raw = response["response"].strip()
+        raw = llm.generate(model_role="fast", prompt=prompt)
         
         # Extract JSON from response (handle markdown code blocks)
         json_match = re.search(r'\{[^}]+\}', raw, re.DOTALL)
@@ -76,10 +94,10 @@ def classify_query(query):
             return result
         else:
             print(f"  Warning: Could not parse classifier response: {raw[:100]}")
-            return {"query_type": "concept", "rule_numbers": [], "scenario": None}
+            return {"query_type": "concept", "rule_numbers": [], "scenario": None, "sub_queries": []}
     except Exception as e:
         print(f"  Error in query classification: {e}")
-        return {"query_type": "concept", "rule_numbers": [], "scenario": None}
+        return {"query_type": "concept", "rule_numbers": [], "scenario": None, "sub_queries": []}
 
 
 # ═══════════════════════════════════════════════════════════════════
@@ -117,9 +135,13 @@ def load_rule_index():
 
 
 def get_collection():
-    """Get the ChromaDB collection."""
-    client = chromadb.PersistentClient(path=CHROMA_DB_DIR)
-    return client.get_collection(name=CHROMA_COLLECTION)
+    """Get the ChromaDB collection if available."""
+    try:
+        import chromadb
+        client = chromadb.PersistentClient(path=CHROMA_DB_DIR)
+        return client.get_collection(name=CHROMA_COLLECTION)
+    except Exception:
+        return None
 
 
 def retrieve_by_rule_number(collection, rule_index, rule_numbers):
@@ -127,6 +149,9 @@ def retrieve_by_rule_number(collection, rule_index, rule_numbers):
     Direct rule-number lookup via JSON index → ChromaDB fetch.
     Returns chunks sorted by priority.
     """
+    if collection is None:
+        return [], []
+
     chunk_ids = []
     for rule_num in rule_numbers:
         entries = rule_index.get(rule_num, [])
@@ -148,16 +173,19 @@ def retrieve_by_rule_number(collection, rule_index, rule_numbers):
         return [], []
 
 
-def retrieve_semantic(collection, query, n_results=8, where_filter=None):
+def retrieve_semantic(collection, query, n_results=8, where_filter=None, llm_provider: Optional[BaseLLMProvider] = None):
     """
     Semantic search with hybrid keyword boosting.
     Returns (documents, metadatas, distances).
     """
+    llm = llm_provider or get_llm_provider()
     try:
-        response = ollama.embeddings(model="nomic-embed-text", prompt=query)
-        query_vector = response["embedding"]
+        query_vector = llm.embed(query)
     except Exception as e:
         print(f"  Error generating embedding: {e}")
+        return [], [], []
+    
+    if collection is None:
         return [], [], []
     
     # Oversample for reranking
@@ -584,14 +612,14 @@ User Question: {query}
 Detailed Answer (with citations):"""
 
 
-def generate_answer(query, context):
-    """Generate a cited answer using qwen2.5:14b."""
+def generate_answer(query, context, llm_provider: Optional[BaseLLMProvider] = None):
+    """Generate a cited answer using the reasoning LLM provider."""
+    llm = llm_provider or get_llm_provider()
     prompt = GENERATION_PROMPT.format(context=context, query=query)
     
     try:
-        response = ollama.generate(model="qwen2.5:14b", prompt=prompt)
-        answer = response["response"].strip()
-        return answer
+        answer = llm.generate(model_role="reasoning", prompt=prompt, max_tokens=1024)
+        return answer.strip()
     except Exception as e:
         print(f"  Error generating answer: {e}")
         return f"Error generating answer: {e}"
@@ -697,29 +725,37 @@ _active_cooccurrence_graph = None
 _active_section_tree = None
 
 
-def load_game_profile(profile_path):
+def load_game_profile(profile_source):
     """
-    Load a game profile JSON and update the active game config.
+    Load a game profile JSON (from file path or dict) and update the active game config.
     Call this before ask_rules_lawyer_game() to configure the agent.
     """
     global _game_config, _active_cooccurrence_graph, _active_section_tree
-    with open(profile_path, "r", encoding="utf-8") as f:
-        profile = json.load(f)
+    if isinstance(profile_source, dict):
+        profile = profile_source
+    elif isinstance(profile_source, str) and os.path.exists(profile_source):
+        with open(profile_source, "r", encoding="utf-8") as f:
+            profile = json.load(f)
+    else:
+        return _game_config
 
-    game_name = profile.get("game_name") or profile.get("domain_name", "Unknown Domain")
-    game_id = profile.get("game_id") or profile.get("domain_id", "generic")
+    game_name = profile.get("game_name") or profile.get("name") or profile.get("titleName") or profile.get("domain_name", "Unknown Domain")
+    game_id = profile.get("game_id") or profile.get("domain_id") or profile.get("titleId", "generic")
+
+    chroma_collection = profile.get("chroma_collection", f"{game_id}-entities")
+    rule_index_file = profile.get("rule_index_file", f"data/{game_id}_rule_index.json")
 
     _game_config = {
         "game_name": game_name,
         "game_id": game_id,
-        "chroma_collection": profile["chroma_collection"],
-        "rule_index_file": profile["rule_index_file"],
+        "chroma_collection": chroma_collection,
+        "rule_index_file": rule_index_file,
         "cooccurrence_graph_file": profile.get("cooccurrence_graph_file"),
         "section_tree_file": profile.get("section_tree_file"),
         "cross_ref_pattern": profile.get("cross_ref_pattern"),
         "rule_pattern": profile.get("rule_pattern"),
         "scenario_format": profile.get("scenario_format", "named"),
-        "glossary": profile.get("glossary", {}),
+        "glossary": profile.get("glossary") or profile.get("abbreviations") or {},
         "profile": profile,
     }
 
@@ -727,30 +763,55 @@ def load_game_profile(profile_path):
     _active_section_tree = None
 
     print(f"[Game Profile Loaded] {game_name} — "
-          f"collection={profile['chroma_collection']}")
+          f"collection={chroma_collection}")
     return _game_config
 
 
 def _get_active_collection():
-    """Return a ChromaDB collection for the active game."""
-    client = chromadb.PersistentClient(path=CHROMA_DB_DIR)
-    collection_name = _game_config["chroma_collection"]
+    """Return a ChromaDB collection for the active game if available."""
     try:
+        import chromadb
+        client = chromadb.PersistentClient(path=CHROMA_DB_DIR)
+        collection_name = _game_config["chroma_collection"]
         return client.get_collection(name=collection_name)
     except Exception:
-        raise RuntimeError(
-            f"ChromaDB collection '{collection_name}' not found. "
-            f"Run ingest_game() first."
-        )
+        return None
+
+
+def _find_data_file(relative_or_abs_path: Optional[str]) -> Optional[str]:
+    """Resolve a data file path across local and cloud lambda bundle directories."""
+    if not relative_or_abs_path:
+        return None
+    fname = os.path.basename(relative_or_abs_path)
+    candidates = [
+        relative_or_abs_path,
+        os.path.abspath(relative_or_abs_path),
+        os.path.join(PROJECT_ROOT, "data", fname),
+        os.path.join(SCRIPT_DIR, "../../data", fname),
+        os.path.join(SCRIPT_DIR, "../../../backend/data", fname),
+        os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../backend/data", fname)),
+        os.path.abspath(os.path.join(os.path.dirname(__file__), "../../data", fname)),
+        os.path.abspath(os.path.join("/var/task/data", fname)),
+        os.path.abspath(os.path.join("/var/task/backend/data", fname)),
+    ]
+    for c in candidates:
+        if c and os.path.exists(c):
+            return c
+    return None
 
 
 def _load_active_rule_index():
     """Load the rule index JSON for the active game."""
-    index_file = _game_config["rule_index_file"]
-    if not os.path.exists(index_file):
+    raw_path = _game_config.get("rule_index_file")
+    resolved = _find_data_file(raw_path)
+    if not resolved:
         return {}
-    with open(index_file, "r", encoding="utf-8") as f:
-        return json.load(f)
+    try:
+        with open(resolved, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:
+        print(f"  Warning: Failed to load rule index from {resolved}: {e}")
+        return {}
 
 
 def _load_active_cooccurrence_graph():
@@ -764,12 +825,13 @@ def _load_active_cooccurrence_graph():
         rule_idx_file = _game_config.get("rule_index_file", "")
         cooc_file = rule_idx_file.replace("_rule_index.json", "_cooccurrence_graph.json")
 
-    if cooc_file and os.path.exists(cooc_file):
+    resolved = _find_data_file(cooc_file)
+    if resolved:
         try:
-            _active_cooccurrence_graph = CooccurrenceGraph.load_json(cooc_file)
+            _active_cooccurrence_graph = CooccurrenceGraph.load_json(resolved)
             return _active_cooccurrence_graph
         except Exception as e:
-            print(f"  Warning: Failed to load co-occurrence graph from {cooc_file}: {e}")
+            print(f"  Warning: Failed to load co-occurrence graph from {resolved}: {e}")
 
     _active_cooccurrence_graph = CooccurrenceGraph(game_id=_game_config.get("game_id", "generic"))
     return _active_cooccurrence_graph
@@ -786,12 +848,13 @@ def _load_active_section_tree():
         rule_idx_file = _game_config.get("rule_index_file", "")
         sec_tree_file = rule_idx_file.replace("_rule_index.json", "_section_tree.json")
 
-    if sec_tree_file and os.path.exists(sec_tree_file):
+    resolved = _find_data_file(sec_tree_file)
+    if resolved:
         try:
-            _active_section_tree = SectionTree.load_json(sec_tree_file)
+            _active_section_tree = SectionTree.load_json(resolved)
             return _active_section_tree
         except Exception as e:
-            print(f"  Warning: Failed to load section tree from {sec_tree_file}: {e}")
+            print(f"  Warning: Failed to load section tree from {resolved}: {e}")
 
     # Fallback to embedded __section_tree__ in rule_index
     rule_index = _load_active_rule_index()
@@ -852,33 +915,157 @@ def _chase_cross_refs_game(text, rule_index, collection):
     return chased_chunks
 
 
-def _extract_hierarchy_from_rule(rule_str):
+def _extract_hierarchy_from_rule(rule_str, profile=None):
     """
-    Extract (root_section, parent_id, hierarchy_level) for a rule identifier.
-    Works across numeric_decimal (20.73), chapter_decimal (A7.21), and keyword schemas.
+    Extract (root_section, parent_id, hierarchy_level) for a rule identifier dynamically
+    using the parsing grammar / hierarchy strategy defined in the domain profile.
     """
     if not rule_str:
         return "", "", 1
     clean_r = re.sub(r'[\(\)\[\]]', '', str(rule_str)).strip()
-    parts = clean_r.split('.')
-    if len(parts) == 1:
-        return f"{parts[0]}.0" if parts[0].isdigit() else parts[0], "", 1
-    elif len(parts) == 2:
-        main_sec = parts[0]
-        sub = parts[1]
+    if not clean_r:
+        return "", "", 1
+
+    # Extract configuration from profile if provided
+    strategy = None
+    delimiter = " > "
+    custom_regex = None
+
+    if profile:
+        if hasattr(profile, "get_hierarchy_strategy"):
+            strategy = profile.get_hierarchy_strategy()
+            delimiter = profile.get_hierarchy_delimiter()
+            custom_regex = profile.get_hierarchy_regex()
+        elif isinstance(profile, dict):
+            grammar = profile.get("parsing_grammar") or {}
+            strategy = grammar.get("hierarchy_strategy") or profile.get("hierarchy_strategy") or profile.get("rule_schema")
+            delimiter = grammar.get("hierarchy_delimiter") or profile.get("hierarchy_delimiter") or " > "
+            custom_regex = grammar.get("hierarchy_regex")
+
+    # 1. Custom Regex strategy
+    if custom_regex:
+        m = re.match(custom_regex, clean_r)
+        if m:
+            gd = m.groupdict()
+            root = gd.get("root", "")
+            parent = gd.get("parent", "")
+            try:
+                level = int(gd.get("level", 2 if parent else 1))
+            except (ValueError, TypeError):
+                level = 2 if parent else 1
+            return root, parent, level
+
+    # 2. Breadcrumb Path strategy
+    if strategy in {"breadcrumb_path", "keyword_header"}:
+        eff_delim = delimiter if (delimiter and delimiter in clean_r) else (" > " if " > " in clean_r else None)
+        if eff_delim:
+            crumbs = [c.strip() for c in clean_r.split(eff_delim) if c.strip()]
+            if len(crumbs) == 1:
+                return crumbs[0], "", 1
+            elif len(crumbs) == 2:
+                return crumbs[0], crumbs[0], 2
+            else:
+                return crumbs[0], crumbs[-2], len(crumbs)
+        return clean_r, "", 1
+
+    # 3. Numbered Clause strategy
+    if strategy == "numbered_clause":
+        m_clause = re.match(r'^(\d{1,2})\.\s+([A-Za-z].*)', clean_r)
+        if m_clause:
+            clause_num = m_clause.group(1)
+            clause_title = m_clause.group(2).strip()
+            if not clause_title:
+                return f"{clause_num}.0", "", 1
+            return f"{clause_num}.0", f"{clause_num}.0", 2
+
+    # 4. Numeric Decimal strategy
+    if strategy == "numeric_decimal":
+        m_dec = re.match(r'^(\d{1,2})\.(\d{1,4})$', clean_r)
+        if m_dec:
+            main_sec = m_dec.group(1)
+            sub = m_dec.group(2)
+            if sub in {"0", "00"}:
+                return f"{main_sec}.0", "", 1
+            elif len(sub) == 1:
+                return f"{main_sec}.0", f"{main_sec}.0", 2
+            else:
+                return f"{main_sec}.0", f"{main_sec}.{sub[0]}", 3
+
+    # 5. Chapter Decimal strategy
+    if strategy == "chapter_decimal":
+        m_chap = re.match(r'^([A-Z])(\d{1,2})\.(\d{1,4})$', clean_r)
+        if m_chap:
+            chap = m_chap.group(1)
+            main_sec = m_chap.group(2)
+            sub = m_chap.group(3)
+            return f"{chap}{main_sec}.0", f"{chap}{main_sec}.{sub[0]}", 3
+
+    # 6. Outline Parenthetical strategy
+    if strategy == "outline_parenthetical":
+        m_out = re.match(r'^(?:\()?([A-Z])(\d{1,2})\.(\d{1,4})(?:\))?$', clean_r)
+        if m_out:
+            chap = m_out.group(1)
+            main_sec = m_out.group(2)
+            sub = m_out.group(3)
+            return f"({chap}{main_sec}.0)", f"({chap}{main_sec}.{sub[0]})", 3
+
+    # Fallback generic matching
+    if " > " in clean_r:
+        crumbs = [c.strip() for c in clean_r.split(" > ") if c.strip()]
+        if len(crumbs) == 1:
+            return crumbs[0], "", 1
+        elif len(crumbs) == 2:
+            return crumbs[0], crumbs[0], 2
+        else:
+            return crumbs[0], crumbs[-2], len(crumbs)
+
+    m_clause = re.match(r'^(\d{1,2})\.\s+([A-Za-z].*)', clean_r)
+    if m_clause:
+        clause_num = m_clause.group(1)
+        clause_title = m_clause.group(2).strip()
+        if not clause_title:
+            return f"{clause_num}.0", "", 1
+        return f"{clause_num}.0", f"{clause_num}.0", 2
+
+    m_chap = re.match(r'^([A-Z])(\d{1,2})\.(\d{1,4})$', clean_r)
+    if m_chap:
+        chap = m_chap.group(1)
+        main_sec = m_chap.group(2)
+        sub = m_chap.group(3)
+        return f"{chap}{main_sec}.0", f"{chap}{main_sec}.{sub[0]}", 3
+
+    m_dec = re.match(r'^(\d{1,2})\.(\d{1,4})$', clean_r)
+    if m_dec:
+        main_sec = m_dec.group(1)
+        sub = m_dec.group(2)
         if sub in {"0", "00"}:
             return f"{main_sec}.0", "", 1
         elif len(sub) == 1:
             return f"{main_sec}.0", f"{main_sec}.0", 2
         else:
             return f"{main_sec}.0", f"{main_sec}.{sub[0]}", 3
-    elif len(parts) >= 3:
-        main_sec = parts[0]
-        return f"{main_sec}.0", f"{main_sec}.{parts[1]}", 3
-    return f"{clean_r}.0", "", 1
+
+    parts = [p.strip() for p in clean_r.split('.') if p.strip()]
+    if len(parts) == 0:
+        return "", "", 1
+    elif len(parts) == 1:
+        return f"{parts[0]}.0" if parts[0].isdigit() else parts[0], "", 1
+    elif len(parts) == 2:
+        main_sec, sub = parts[0], parts[1]
+        if sub.isdigit():
+            if sub in {"0", "00"}:
+                return f"{main_sec}.0", "", 1
+            elif len(sub) == 1:
+                return f"{main_sec}.0", f"{main_sec}.0", 2
+            else:
+                return f"{main_sec}.0", f"{main_sec}.{sub[0]}", 3
+        else:
+            return main_sec, main_sec, 2
+    else:
+        return parts[0], parts[-2], len(parts)
 
 
-def expand_parent_sections(candidate_metas, section_tree, rule_index, collection, max_parents=6):
+def expand_parent_sections(candidate_metas, section_tree, rule_index, collection, max_parents=6, profile=None):
     """
     Stage 4: Hierarchical Bidirectional Section Closure with Symmetric Sibling and Child Windowing.
     - Leaf-to-Root: When any sub-clause X.YZ is hit, automatically retrieve Root Section X.0,
@@ -899,23 +1086,28 @@ def expand_parent_sections(candidate_metas, section_tree, rule_index, collection
 
         if r:
             # 1. Tree lookup
-            parent_node = section_tree.get_parent_section(r)
+            parent_node = section_tree.get_parent_section(r) if hasattr(section_tree, "get_parent_section") else None
             if parent_node:
-                parent_ids.add(parent_node.section_id)
+                sec_id = getattr(parent_node, "section_id", parent_node.get("section_id") if isinstance(parent_node, dict) else str(parent_node))
+                if sec_id:
+                    parent_ids.add(sec_id)
 
             # Direct section node check for child rules
-            sec_node = section_tree.sections.get(r) or section_tree.sections.get(f"{r}.0")
+            sections_dict = getattr(section_tree, "sections", section_tree if isinstance(section_tree, dict) else {})
+            sec_node = sections_dict.get(r) or sections_dict.get(f"{r}.0")
             if sec_node:
-                for cr in sec_node.child_rules:
+                c_rules = getattr(sec_node, "child_rules", sec_node.get("child_rules", []) if isinstance(sec_node, dict) else [])
+                for cr in c_rules:
                     child_rules.add(cr)
 
             # 2. Dynamic Hierarchy Decomposition & Bidirectional Closure
-            calc_root, calc_parent, _ = _extract_hierarchy_from_rule(r)
+            calc_root, calc_parent, _ = _extract_hierarchy_from_rule(r, profile=profile)
             if calc_parent:
                 parent_ids.add(calc_parent)
-                p_sec = section_tree.sections.get(calc_parent)
+                p_sec = sections_dict.get(calc_parent)
                 if p_sec:
-                    for cr in p_sec.child_rules:
+                    p_rules = getattr(p_sec, "child_rules", p_sec.get("child_rules", []) if isinstance(p_sec, dict) else [])
+                    for cr in p_rules:
                         sibling_rules.add(cr)
             if calc_root:
                 parent_ids.add(calc_root)
@@ -949,22 +1141,33 @@ def expand_parent_sections(candidate_metas, section_tree, rule_index, collection
 
     chunk_ids_to_fetch = []
     for pid in list(parent_ids)[:max_parents]:
-        sec_node = section_tree.sections.get(pid)
-        if sec_node and sec_node.chunk_ids:
+        sec_node = getattr(section_tree, "sections", {}).get(pid) if section_tree else None
+        if sec_node and getattr(sec_node, "chunk_ids", None):
             chunk_ids_to_fetch.extend(sec_node.chunk_ids[:4])
-        elif pid in rule_index:
-            for entry in rule_index[pid][:2]:
-                chunk_ids_to_fetch.append(entry["chunk_id"])
+        # Direct lookup or section overview rule fallback in rule_index
+        target_keys = [pid, f"{pid}1", f"{pid}.1", f"{pid}.0"]
+        matched_keys = [k for k in target_keys if k in rule_index]
+        if not matched_keys:
+            matched_keys = [k for k in rule_index.keys() if k.startswith(pid)][:2]
+        for mk in matched_keys[:2]:
+            for entry in rule_index[mk][:2]:
+                cid = entry.get("chunk_id") if isinstance(entry, dict) else str(entry)
+                if cid:
+                    chunk_ids_to_fetch.append(cid)
 
-    for sr in list(sibling_rules)[:12]:
+    for sr in list(sibling_rules)[:16]:
         if sr in rule_index:
             for entry in rule_index[sr][:2]:
-                chunk_ids_to_fetch.append(entry["chunk_id"])
+                cid = entry.get("chunk_id") if isinstance(entry, dict) else str(entry)
+                if cid:
+                    chunk_ids_to_fetch.append(cid)
 
     for cr in list(child_rules)[:16]:
         if cr in rule_index:
             for entry in rule_index[cr][:2]:
-                chunk_ids_to_fetch.append(entry["chunk_id"])
+                cid = entry.get("chunk_id") if isinstance(entry, dict) else str(entry)
+                if cid:
+                    chunk_ids_to_fetch.append(cid)
 
     if not chunk_ids_to_fetch:
         return [], []
@@ -1008,6 +1211,7 @@ def expand_via_cooccurrence(rule_numbers, cooc_graph, rule_index, collection, ma
 
     chunk_ids = []
     for tr in target_rules:
+        chunk_ids.append(tr)
         if tr in rule_index:
             for entry in rule_index[tr][:2]:
                 chunk_ids.append(entry["chunk_id"])
@@ -1065,6 +1269,7 @@ def expand_adjacent_windows(candidate_metas, rule_index, collection, max_adjacen
 
     chunk_ids = []
     for adj_r in list(adjacent_rules)[:max_adjacent]:
+        chunk_ids.append(adj_r)
         if adj_r in rule_index:
             for entry in rule_index[adj_r][:1]:
                 chunk_ids.append(entry["chunk_id"])
@@ -1116,6 +1321,7 @@ def expand_cross_expansion_correlations(candidate_metas, rule_index, collection,
 
     chunk_ids = []
     for tr in list(target_rules)[:max_expansion_rules]:
+        chunk_ids.append(tr)
         if tr in rule_index:
             for entry in rule_index[tr][:1]:
                 chunk_ids.append(entry["chunk_id"])
@@ -1145,17 +1351,18 @@ def build_game_prompt(game_name):
         f'You are an expert query classifier and query distiller for "{game_name}".\n\n'
         'TASK:\n'
         '1. Distill the user query: Strip all conversational narrative, personal gameplay background ("I have played for 40 years..."), and forum chatter to isolate the exact, concise technical rules question.\n'
-        '2. Extract all rule or section numbers mentioned anywhere in the prompt.\n'
+        '2. Domain-Specific Term Expansion: Map generic wargame terminology to game-specific terms (e.g. "faction" -> "nationality/side", "hand size" -> "full hand cards dealt 3.5", "victory points" -> "campaign victory points") in distilled_question and sub_queries.\n'
+        '3. Extract all rule or section numbers mentioned anywhere in the prompt.\n'
         '   If a rule has a letter prefix (e.g. A7.2, D5.6), include both the prefixed AND unprefixed versions in rule_numbers (e.g. ["A7.2", "7.2"]).\n'
-        '3. Extract any specific Scenario identifier (e.g. "Scenario A", "Scenario C", "Scenario 4").\n'
-        '4. Classify query_type into exactly ONE category:\n'
+        '4. Extract any specific Scenario identifier (e.g. "Scenario A", "Scenario C", "Scenario 4").\n'
+        '5. Classify query_type into exactly ONE category:\n'
         '   - "direct_rule": User asks about a specific rule, clause, or section number\n'
         '   - "concept": User asks about a general concept or mechanic\n'
         '   - "situation": User describes a situation and wants a ruling or clarification\n'
         '   - "scenario": User asks about a specific scenario, special case, or addendum\n'
         '   - "comparison": User asks about errata, amendments, or changes between versions\n'
         '   - "variant": User asks about unofficial, variant, or modified rules\n'
-        '5. If the query is complex or multi-faceted, decompose into 2-3 clean sub-queries.\n'
+        '6. If the query is complex, multi-faceted, or contains multiple numbered questions (e.g. "1) ... 2) ..."), decompose into clean, focused sub-queries for EACH distinct question or scenario.\n'
         'CRITICAL INSTRUCTION FOR ABBREVIATIONS: Expand domain-specific abbreviations in sub-queries to include BOTH the abbreviation and the full term.\n'
         f'{glossary_text}'
         'Respond with ONLY a valid JSON object:\n'
@@ -1170,51 +1377,87 @@ def build_game_prompt(game_name):
     )
 
     generation = (
-        f'You are an authoritative reference assistant for the document collection "{game_name}".\n\n'
-        'TASK: Answer the user\'s question using ONLY the provided text.\n\n'
-        '<thinking>\n'
-        'Before answering, work through:\n'
-        '1. Which sections directly address this question?\n'
-        '2. Identify and audit all preconditions, exception clauses ("EXC:"), and negative prerequisites (e.g. "Provided it has not already been...").\n'
-        '3. If the user asks a leading question ("...correct?" or "Can X do Y?"), verify whether the scenario facts meet or violate the rule\'s requirements. Do NOT assume the user\'s premise is true.\n'
-        '4. Do any errata, amendments, or Q&A entries supersede the base text?\n'
-        '5. What is the authoritative final answer?\n'
-        '</thinking>\n\n'
-        'DOCUMENTS:\n{context}\n\n'
-        'QUESTION: {query}\n\n'
-        'Rules for your response:\n'
-        '- EVERY factual statement must cite its source document or section number in [brackets]\n'
+        f'You are an authoritative, expert Rules Lawyer for "{game_name}".\n\n'
+        'TASK: Adjudicate the user\'s rules question using ONLY the provided document text.\n\n'
+        'CORE PRINCIPLES & CONTEXT FIDELITY:\n'
+        '1. ABSOLUTE PRIMACY OF RETRIEVED CONTEXT: The provided reference text is the sole and ultimate source of truth. Base your analysis and rulings strictly and solely on what is explicitly written in the reference documents.\n'
+        '2. NO EXTRAPOLATION OR SPECULATION: Do NOT invent, assume, or extrapolate unwritten rules, mechanics, timing windows, or physical dynamics. NEVER use speculative or hedging phrasing like "This implies that...", "It can be inferred...", "not necessarily", or "could occur at any point". Quote and state the exact conditions, timings, and locations documented in the text.\n'
+        '3. TARGET QUESTION ONLY: Answer ONLY the specific question asked under "USER QUESTION TO ANSWER". Reference documents frequently contain historical Q&A entries, errata examples, and sample questions — NEVER answer, repeat, or adjudicate questions found inside the reference documents.\n'
+        '4. AUDIT USER PREMISES: Carefully evaluate any assumptions, interpretations, or leading statements in the user\'s question against the authoritative text:\n'
+        '   - If the user\'s premise is contradicted, inverted, or unsupported by the text, rule Verdict: PROHIBITED (or CONDITIONAL / AMBIGUOUS if unverified).\n'
+        '   - Clearly state what the rules text ACTUALLY specifies (who can act, when, where, under what exact conditions, and what occurs).\n'
+        '5. CLEAN OUTPUT: Do NOT include internal reasoning tags, meta-commentary, greetings, or pleasantries.\n\n'
+        'MANDATORY FIRST LINE REQUIREMENT:\n'
+        'Your response MUST begin on Line 1 with EXACTLY:\n'
+        'Verdict: [PERMITTED | PROHIBITED | CONDITIONAL | AMBIGUOUS]\n\n'
+        'Followed by a blank line and:\n'
+        'Authoritative Breakdown:\n'
+        'Provide your step-by-step breakdown and sequence of play here, citing all applicable rules in clean brackets (e.g. [Rule 3.5] or [Rule: Withdrawal]).\n\n'
+        '(Note: If and ONLY if the user\'s question itself explicitly asks multiple numbered questions (e.g. 1, 2...), address EACH under a markdown header "### Question 1: [Topic]", "Verdict: ...", "Authoritative Breakdown:".)\n\n'
+        'VERDICT DEFINITIONS:\n'
+        '- PERMITTED: The action is allowed, or the user\'s factual premise is confirmed to be true and correct under the rules.\n'
+        '- PROHIBITED: The action is forbidden, or the user\'s premise is false, inverted, or contradicted by the rules.\n'
+        '- CONDITIONAL: The action or rule depends on specific prerequisites, leader checks, or phase conditions.\n'
+        '- AMBIGUOUS: The documents lack sufficient information to resolve this question.\n\n'
+        'FORMATTING & CITATION RULES:\n'
+        '- EVERY factual statement must cite its authoritative rule number in clean [brackets] (e.g. [Rule 3.5] or [Rule 3.5, UF RuleBook]). Do NOT output repetitive metadata tags like "[Doc: ...] [Section: ...] [Rule: ...]"\n'
         '- Pay careful attention to exceptions and negative conditions (e.g., "Provided it has not already been eliminated", "EXC:", "unless")\n'
-        '- When the user asks a leading question (e.g. "Can I do X, correct?"), do not simply agree. Verify all conditions in the rule text against the facts.\n'
-        '- If a rule states "Provided it has not already been eliminated", and the unit was already eliminated in the scenario, state clearly that the unit cannot perform the action and why.\n'
         '- If an amendment/errata supersedes a base rule, say so explicitly\n'
         '- If the user cites a specific section number but the provided text shows the concept is actually covered by a DIFFERENT section, correct the user and answer using the correct section\n'
         '- If the retrieved context contains text from multiple different editions or versions, formulate the definitive answer based on the LATEST edition available in the context. Then, explicitly conclude your answer by stating that it has changed across versions and ask the user a re-entrant question: "This text has changed across versions. Would you like to know how it worked in a specific version, or how it has evolved over time?"\n'
-        '- If you cannot find the answer in the provided text, say so clearly\n'
-        '- Be precise and concise\n\n'
-        'ANSWER:'
+        '- If you cannot find the answer in the provided text, say so clearly.\n\n'
+        'REFERENCE DOCUMENTS:\n{context}\n\n'
+        '================================================================================\n'
+        'USER QUESTION TO ANSWER (ONLY ANSWER THIS SPECIFIC QUESTION):\n'
+        '{query}\n'
+        '================================================================================\n\n'
+        'Adjudicate the user question above using ONLY the reference text. Your response MUST begin on line 1 with:\n'
+        'Verdict: [PERMITTED | PROHIBITED | CONDITIONAL | AMBIGUOUS]\n\n'
+        'Authoritative Breakdown:\n'
     )
 
     return classify, generation
 
 
-def ask_rules_lawyer_game(query, profile_path=None):
+def ask_rules_lawyer_game(
+    query,
+    profile_path=None,
+    llm_provider: Optional[BaseLLMProvider] = None,
+    storage_provider: Optional[BaseStorageProvider] = None,
+    game_id: Optional[str] = None,
+    game_name: Optional[str] = None,
+    profile_dict: Optional[Dict[str, Any]] = None,
+):
     """
     Ask the Rules Lawyer a question using the Decoupled Modular Pipeline:
-    - Stage 1: Query Distiller & Entity Classifier (llama3.1:8b | T=0.0)
-    - Stage 2: Dedicated HyDE Generator (llama3.1:8b | T=0.4)
-    - Stage 3: Dual Vector & Exact Rule Lookup (nomic-embed-text)
-    - Stage 4: Hierarchical Parent-Child Section Expansion
-    - Stage 5: Ingestion Co-Occurrence Graph Expansion (O(1))
-    - Stage 6: Priority Reranking & Authoritative Reasoning (qwen2.5:14b)
+    - Stage 1: Query Distiller & Entity Classifier (Fast model | T=0.0)
+    - Stage 2: Dedicated HyDE Generator (Fast model | T=0.4)
+    - Stage 3: Dual Vector & Exact Rule Lookup (Chroma local / DynamoDB+S3 cloud)
+    - Stage 4: Ingestion Co-Occurrence Graph Expansion
+    - Stage 5: Hierarchical Parent-Child Section Expansion & Contiguous Windowing
+    - Stage 6: Priority Reranking & Authoritative Reasoning (Reasoning model)
 
     Returns:
         (answer, context_chunks, debug_info)
     """
-    if profile_path:
+    if profile_dict:
+        load_game_profile(profile_dict)
+    elif profile_path and os.path.exists(profile_path):
         load_game_profile(profile_path)
 
-    game_name = _game_config.get("game_name", "Unknown Game")
+    llm = llm_provider or get_llm_provider()
+    storage = storage_provider or get_storage_provider()
+    is_cloud = (
+        isinstance(storage, CloudDynamoStorageProvider)
+        or os.environ.get("TARGET", "").lower() == "cloud"
+        or os.environ.get("PROVIDER", "").lower() == "cloud"
+    )
+
+    active_game_id = game_id or _game_config.get("game_id", "up-front-core")
+    active_game_name = game_name or _game_config.get("game_name", "Unknown Game")
+    title_id = active_game_id
+    game_name = active_game_name
+
     glossary = _game_config.get("glossary", {})
     classify_prompt, generation_prompt = build_game_prompt(game_name)
 
@@ -1222,12 +1465,12 @@ def ask_rules_lawyer_game(query, profile_path=None):
     # STAGE 1: Query Distiller & Entity Classifier (T=0.0)
     # ═══════════════════════════════════════════════════════════════════
     try:
-        clf_response = ollama.generate(
-            model="llama3.1:8b",
+        raw = llm.generate(
+            model_role="fast",
             prompt=classify_prompt.format(query=query),
-            options={"temperature": 0.0, "top_p": 0.9}
+            temperature=0.0,
+            max_tokens=512,
         )
-        raw = clf_response["response"].strip()
         json_match = re.search(r'\{.*\}', raw, re.DOTALL)
         classification = json.loads(json_match.group()) if json_match else {}
     except Exception:
@@ -1265,7 +1508,8 @@ def ask_rules_lawyer_game(query, profile_path=None):
     # ═══════════════════════════════════════════════════════════════════
     # STAGE 2: Multi-Perspective HyDE Pseudo-Clause Generator (T=0.4)
     # ═══════════════════════════════════════════════════════════════════
-    hyde_gen = HydeGenerator(default_model="llama3.1:8b", temperature=0.4)
+    fast_model_name = getattr(llm, "fast_model", "llama3.1:8b")
+    hyde_gen = HydeGenerator(llm_provider=llm, default_model=fast_model_name, temperature=0.4)
     hyde_clauses = hyde_gen.generate_multi_perspective_clauses(
         distilled_query=distilled_question,
         rule_numbers=rule_numbers,
@@ -1278,10 +1522,35 @@ def ask_rules_lawyer_game(query, profile_path=None):
     # ═══════════════════════════════════════════════════════════════════
     # STAGE 3: Multi-Vector Search & Exact Lookup
     # ═══════════════════════════════════════════════════════════════════
-    collection = _get_active_collection()
-    rule_index = _load_active_rule_index()
-    section_tree = _load_active_section_tree()
-    cooc_graph = _load_active_cooccurrence_graph()
+    if is_cloud:
+        collection = StorageCollectionAdapter(storage, title_id)
+        if hasattr(storage, "get_rule_index"):
+            rule_index = storage.get_rule_index(title_id)
+        else:
+            rule_index = _load_active_rule_index()
+
+        raw_sec = storage.get_section_tree(title_id)
+        if raw_sec and isinstance(raw_sec, dict):
+            try:
+                section_tree = SectionTree.model_validate(raw_sec)
+            except Exception:
+                section_tree = _load_active_section_tree()
+        else:
+            section_tree = _load_active_section_tree()
+
+        raw_cooc = storage.get_cooccurrence_graph(title_id)
+        if raw_cooc and isinstance(raw_cooc, dict):
+            try:
+                cooc_graph = CooccurrenceGraph.model_validate(raw_cooc)
+            except Exception:
+                cooc_graph = _load_active_cooccurrence_graph()
+        else:
+            cooc_graph = _load_active_cooccurrence_graph()
+    else:
+        collection = _get_active_collection()
+        rule_index = _load_active_rule_index()
+        section_tree = _load_active_section_tree()
+        cooc_graph = _load_active_cooccurrence_graph()
 
     queries_to_embed = [distilled_question]
     for hc in hyde_clauses:
@@ -1293,18 +1562,43 @@ def ask_rules_lawyer_game(query, profile_path=None):
 
     all_docs, all_metas = [], []
 
-    for q_text in queries_to_embed:
-        try:
-            emb_resp = ollama.embeddings(model="nomic-embed-text", prompt=q_text)
-            results = collection.query(
-                query_embeddings=[emb_resp["embedding"]],
-                n_results=8,
-                include=["documents", "metadatas"]
-            )
-            all_docs.extend(results["documents"][0])
-            all_metas.extend(results["metadatas"][0])
-        except Exception as e:
-            print(f"  [Retrieval Warning] Vector query failed: {e}")
+    if is_cloud:
+        for q_text in queries_to_embed:
+            try:
+                q_emb = llm.embed(q_text)
+                q_kw = extract_keywords(q_text)
+                matched_rules = storage.search_vectors(title_id, q_emb, q_kw, top_n=8)
+                for rn in matched_rules:
+                    item = storage.get_rule(title_id, rn)
+                    if item:
+                        src_list = item.get("sourceFiles", ["Up Front Rules"])
+                        src = src_list[0] if isinstance(src_list, list) and src_list else "Up Front Rules"
+                        all_docs.append(item.get("verbatimText", ""))
+                        all_metas.append({
+                            "rule_number": item.get("ruleNumber", rn),
+                            "source_file": src,
+                            "priority": int(item.get("priority", 1)),
+                            "title": item.get("title", f"Rule {rn}"),
+                            "chapter": item.get("chapter", ""),
+                            "breadcrumbs": item.get("breadcrumbs", []),
+                            "cross_references": item.get("crossReferences", []),
+                        })
+            except Exception as e:
+                print(f"  [Retrieval Cloud Warning] Vector query failed for '{q_text[:40]}': {e}")
+    else:
+        for q_text in queries_to_embed:
+            try:
+                emb_vec = llm.embed(q_text)
+                if collection:
+                    results = collection.query(
+                        query_embeddings=[emb_vec],
+                        n_results=8,
+                        include=["documents", "metadatas"]
+                    )
+                    all_docs.extend(results["documents"][0])
+                    all_metas.extend(results["metadatas"][0])
+            except Exception as e:
+                print(f"  [Retrieval Warning] Vector query failed: {e}")
 
     # Exact Rule Lookup + Chapter Family Expansion
     expanded_rules = list(rule_numbers)
@@ -1321,10 +1615,10 @@ def ask_rules_lawyer_game(query, profile_path=None):
             for entry in rule_index[rn][:limit]:
                 try:
                     res = collection.get(
-                        ids=[entry["chunk_id"]],
+                        ids=[entry.get("chunk_id"), rn],
                         include=["documents", "metadatas"]
                     )
-                    if res["documents"]:
+                    if res.get("documents"):
                         all_docs.extend(res["documents"])
                         all_metas.extend(res["metadatas"])
                 except Exception:
@@ -1380,13 +1674,42 @@ def ask_rules_lawyer_game(query, profile_path=None):
     all_query_text = f"{distilled_question} {hyde_clause_summary} {' '.join(sub_queries)}"
     keywords = extract_keywords(all_query_text)
 
+    # Pre-calculate active sections from candidate chunks with keyword relevance
+    active_sections = set()
+    for doc, meta in zip(unique_docs, unique_metas):
+        text_lower = doc.lower()
+        if any(kw in text_lower for kw in keywords):
+            rn = str(meta.get("rule_number", "")).strip()
+            if rn:
+                parts = rn.split('.')
+                if parts:
+                    active_sections.add(parts[0])
+                if len(parts) >= 2 and parts[1]:
+                    active_sections.add(f"{parts[0]}.{parts[1][0]}")
+
     def score_chunk(item):
         doc, meta = item
         p = meta.get("priority", 9)
         text_lower = doc.lower()
         kw_matches = sum(1 for kw in keywords if kw in text_lower)
-        rule_boost = 3 if meta.get("rule_number") in rule_numbers else 0
-        total_relevance = kw_matches + rule_boost
+        rn = str(meta.get("rule_number", "")).strip()
+        rule_boost = 3 if rn in rule_numbers else 0
+
+        # Section-root & parent bundling boost:
+        # If this chunk is a section root or overview rule (e.g. 19.11, 20.51, 10.1, or .0/.1/.11)
+        # whose section is actively referenced by relevant chunks, promote it so foundational rules
+        # accompany specific sub-rules into the top citation window.
+        parent_boost = 0
+        if rn:
+            parts = rn.split('.')
+            if len(parts) >= 2 and parts[1]:
+                sub = parts[1]
+                if sub in {"1", "11", "0", "01", "10"} or (len(sub) >= 2 and sub.endswith("1")):
+                    sec_key = f"{parts[0]}.{sub[0]}"
+                    if sec_key in active_sections or parts[0] in active_sections:
+                        parent_boost = 1
+
+        total_relevance = kw_matches + rule_boost + parent_boost
         return (p, -total_relevance)
 
     paired = sorted(
@@ -1405,26 +1728,29 @@ def ask_rules_lawyer_game(query, profile_path=None):
         p = meta.get("priority", 9)
         rn = meta.get("rule_number", "")
         header = f"[Source: {src} | Priority: P{p}{' | Rule: ' + rn if rn else ''}]"
-        context_parts.append(f"{header}\n{doc}")
+        # Clean leading [Doc: ...] [Section: ...] prefixes from chunk text so LLM doesn't echo them
+        clean_doc = re.sub(r'^(?:\[Doc:\s*[^\]]+\]\s*)?(?:\[Section:\s*[^\]]+\]\s*)?', '', doc)
+        context_parts.append(f"{header}\n{clean_doc}")
 
     for ch in chased[:4]:
         meta = ch["metadata"]
+        clean_ch_text = re.sub(r'^(?:\[Doc:\s*[^\]]+\]\s*)?(?:\[Section:\s*[^\]]+\]\s*)?', '', ch['text'])
         context_parts.append(
             f"[Cross-ref: {ch['chased_ref']} | Source: {meta.get('source_file', '')}]\n"
-            f"{ch['text']}"
+            f"{clean_ch_text}"
         )
 
     context = "\n\n---\n\n".join(context_parts)
 
     # ═══════════════════════════════════════════════════════════════════
-    # STAGE 6: Authoritative Adjudication & Generation (qwen2.5:14b)
+    # STAGE 6: Authoritative Adjudication & Generation (Reasoning model)
     # ═══════════════════════════════════════════════════════════════════
     try:
-        gen_response = ollama.generate(
-            model="qwen2.5:14b",
-            prompt=generation_prompt.format(context=context, query=query)
+        answer = llm.generate(
+            model_role="reasoning",
+            prompt=generation_prompt.format(context=context, query=query),
+            max_tokens=2500,
         )
-        answer = gen_response["response"].strip()
         answer = re.sub(
             r'<thinking>.*?</thinking>', '', answer,
             flags=re.DOTALL

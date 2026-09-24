@@ -10,7 +10,30 @@ from __future__ import annotations
 import os
 import json
 from typing import Dict, List, Optional, Any, Union
-from pydantic import BaseModel, Field, ConfigDict, model_validator
+try:
+    from pydantic import BaseModel, Field, ConfigDict, model_validator
+except ImportError:
+    class BaseModel:
+        def __init__(self, **kwargs):
+            for k, v in kwargs.items():
+                setattr(self, k, v)
+        @classmethod
+        def model_validate(cls, data):
+            if isinstance(data, cls):
+                return data
+            return cls(**data)
+        def model_dump(self):
+            return {k: v for k, v in self.__dict__.items() if not k.startswith("_")}
+    def Field(default=None, default_factory=None, **kwargs):
+        if default_factory is not None:
+            return default_factory()
+        return default
+    def ConfigDict(**kwargs):
+        return kwargs
+    def model_validator(*args, **kwargs):
+        def decorator(f):
+            return f
+        return decorator
 
 
 class DocumentMetadata(BaseModel):
@@ -26,6 +49,11 @@ class DocumentMetadata(BaseModel):
     edition: Optional[str] = Field(default=None, description="Edition label e.g. 1st, 2nd, 2006")
     supersedes: Optional[List[str]] = Field(default_factory=list, description="Filenames superseded by this document")
     carrier: Optional[str] = Field(default=None, description="Brand, carrier, or publisher name")
+    ocr_required: Optional[bool] = Field(default=None, description="Flag indicating if OCR extraction is required")
+    ocr_normalize: Optional[bool] = Field(default=None, description="Flag indicating whether to apply OCR character normalization")
+    extract_tables: Optional[bool] = Field(default=None, description="Flag indicating whether to extract structured tables")
+    ocr_regex_substitutions: Optional[List[Dict[str, str]]] = Field(default=None, description="List of regex substitution rules {'pattern': ..., 'replacement': ...}")
+    ocr_substitutions: Optional[Dict[str, str]] = Field(default=None, description="Literal character/word substitution mapping")
 
 
 class ParsingGrammar(BaseModel):
@@ -33,6 +61,9 @@ class ParsingGrammar(BaseModel):
     model_config = ConfigDict(extra="allow")
 
     rule_schema: Optional[str] = Field(default=None, description="Schema identifier (e.g. chapter_decimal, keyword_header)")
+    hierarchy_strategy: Optional[str] = Field(default=None, description="Hierarchy extraction strategy (breadcrumb_path, numeric_decimal, chapter_decimal, outline_parenthetical, numbered_clause, custom_regex)")
+    hierarchy_delimiter: Optional[str] = Field(default=None, description="Delimiter for hierarchical breadcrumbs, defaults to ' > '")
+    hierarchy_regex: Optional[str] = Field(default=None, description="Optional regex with named capture groups (?P<root>...), (?P<parent>...)")
     rule_pattern: Optional[str] = Field(default=None, description="Regex pattern matching primary section headers")
     cross_ref_pattern: Optional[str] = Field(default=None, description="Regex pattern matching cross-references")
     section_delimiter_regex: Optional[str] = Field(default=None, description="Optional regex splitting major chapters")
@@ -91,6 +122,8 @@ class DomainProfile(BaseModel):
     text_dir: Optional[str] = Field(default=None, description="Path to cached extracted text files")
     chroma_collection: str = Field(default="rag-doll-generic", description="ChromaDB collection name")
     rule_index_file: Optional[str] = Field(default=None, description="Path to exact-match JSON index")
+    cooccurrence_graph_file: Optional[str] = Field(default=None, description="Path to co-occurrence graph JSON")
+    section_tree_file: Optional[str] = Field(default=None, description="Path to section tree JSON")
 
     # Document map
     documents: Dict[str, DocumentMetadata] = Field(default_factory=dict, description="File-to-metadata registry")
@@ -109,6 +142,13 @@ class DomainProfile(BaseModel):
     structured_extraction: Optional[StructuredExtractionConfig] = None
     ontology: Optional[OntologyConfig] = None
     agent_persona: Optional[AgentPersonaConfig] = None
+
+    # OCR and Normalization sub-rules
+    ocr_required: Optional[bool] = None
+    ocr_normalize: Optional[bool] = None
+    extract_tables: Optional[bool] = None
+    ocr_regex_substitutions: Optional[List[Dict[str, str]]] = None
+    ocr_substitutions: Optional[Dict[str, str]] = None
 
     @model_validator(mode="before")
     @classmethod
@@ -182,6 +222,23 @@ class DomainProfile(BaseModel):
         if self.parsing_grammar and self.parsing_grammar.cross_ref_pattern:
             return self.parsing_grammar.cross_ref_pattern
         return self.cross_ref_pattern
+
+    def get_hierarchy_strategy(self) -> str:
+        if self.parsing_grammar and self.parsing_grammar.hierarchy_strategy:
+            return self.parsing_grammar.hierarchy_strategy
+        if self.rule_schema == "keyword_header":
+            return "breadcrumb_path"
+        return self.rule_schema or "breadcrumb_path"
+
+    def get_hierarchy_delimiter(self) -> str:
+        if self.parsing_grammar and self.parsing_grammar.hierarchy_delimiter:
+            return self.parsing_grammar.hierarchy_delimiter
+        return " > "
+
+    def get_hierarchy_regex(self) -> Optional[str]:
+        if self.parsing_grammar and self.parsing_grammar.hierarchy_regex:
+            return self.parsing_grammar.hierarchy_regex
+        return None
 
     def get_carrier_for_document(self, fname: str) -> Optional[str]:
         """Resolve publisher or carrier name for a document registered in the profile."""

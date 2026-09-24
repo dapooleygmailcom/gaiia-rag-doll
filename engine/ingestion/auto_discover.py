@@ -18,7 +18,7 @@ import os
 import re
 import json
 import fitz   # PyMuPDF
-import ollama
+# Note: ollama is imported lazily only when local LLM classification is invoked
 
 # ═══════════════════════════════════════════════════════════════════
 # Known Rule Schemas
@@ -35,6 +35,8 @@ KNOWN_SCHEMAS = [
             r"\[EXC:\s*([A-Z]\d{1,2}\.\d{1,4})[^\]]*\]|"
             r"(?:see|See|SEE)\s+([A-Z]\d{1,2}\.\d{1,4})"
         ),
+        "hierarchy_strategy": "chapter_decimal",
+        "hierarchy_delimiter": ".",
     },
     {
         "name": "numeric_decimal",
@@ -46,18 +48,27 @@ KNOWN_SCHEMAS = [
             r"(?:rule|Rule|RULE)\s+(\d{1,2}\.\d{1,3}(?:\.\d{1,2})?)|"
             r"EXC:\s*\[(\d{1,2}\.\d{1,3}(?:\.\d{1,2})?)\]"
         ),
+        "hierarchy_strategy": "numeric_decimal",
+        "hierarchy_delimiter": ".",
     },
     {
         "name": "outline_parenthetical",
         "description": "Parenthetical outline (SFB: (D2.31), (C3.1))",
-        "rule_pattern": r"\(([A-Z]\d{1,2}\.\d{1,3})\)",
-        "cross_ref_pattern": r"\(([A-Z]\d{1,2}\.\d{1,3})\)",
+        "rule_pattern": r"\(([A-Z]\d{1,2}\.\d{1,4})\)",
+        "cross_ref_pattern": (
+            r"\(([A-Z]\d{1,2}\.\d{1,4})\)|"
+            r"(?:see|See|SEE)\s+(?:\()?([A-Z]\d{1,2}\.\d{1,4})(?:\))?"
+        ),
+        "hierarchy_strategy": "outline_parenthetical",
+        "hierarchy_delimiter": ".",
     },
     {
         "name": "keyword_header",
-        "description": "Visual bold headers instead of numbers (Warhammer 40K)",
-        "rule_pattern": r"(?:^|\n)([A-Z\s]{4,})\n",
+        "description": "Visual bold headers, macro sections, and breadcrumb trails",
+        "rule_pattern": r"(?:^|\n)([A-Z][A-Za-z0-9\s&\-\']{3,60})(?:\n|$)",
         "cross_ref_pattern": r"(?:see|See|SEE)\s+(?:page\s+\d+|[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)",
+        "hierarchy_strategy": "breadcrumb_path",
+        "hierarchy_delimiter": " > ",
     },
 ]
 
@@ -116,6 +127,19 @@ FILENAME_HEURISTICS = [
     (r"2nd.*edition|2nd.*ed","core_rules",       1),
     (r"replacement.*page",   "errata",           3),
     (r"vb$",                 "errata",           3),   # e.g. A15-A16vB
+    # Displays / Tables / Stat sheets
+    (r"ssd|ship.*display",   "tables",           4),
+    (r"charts|tables",       "tables",           4),
+    # Core manuals and handbooks
+    (r"rulebook|rule_book",  "core_rules",       1),
+    (r"cadet.*handbook|handbook", "core_rules",  1),
+    (r"basic.*set",          "core_rules",       1),
+    (r"training.*manual",    "supplement",       2),
+    (r"captain.*log|captains_log", "journal",    6),
+    (r"supplement",          "supplement",       2),
+    (r"manual",              "supplement",       2),
+    (r"rules$",              "core_rules",       1),
+    (r"rules[-_\s]",         "core_rules",       1),
 ]
 
 # Title/content keywords → (doc_type, priority)
@@ -135,6 +159,11 @@ CONTENT_HEURISTICS = [
     (r"codex",                           "codex",            2),
     (r"variant|house rule|optional rule","variant",          7),
     (r"replacement page",               "errata",           3),
+    (r"cadet training handbook|handbook","core_rules",       1),
+    (r"official rulebook|rules of play", "core_rules",       1),
+    (r"volume\s+\d+,\s+number\s+\d+",   "journal",          6),
+    (r"ship system display",            "tables",           4),
+    (r"training manual",                "supplement",       2),
 ]
 
 # doc_type priority defaults (fallback when not already set)
@@ -143,6 +172,7 @@ PRIORITY_DEFAULTS = {
     "codex":          2,
     "version_tracker":2,
     "errata":         3,
+    "tables":         4,
     "scenario_errata":4,
     "scenario_balance":5,
     "qa":             6,
@@ -163,9 +193,46 @@ PRIORITY_DEFAULTS = {
 
 def sample_pdf_text(pdf_path, page_indices=None, max_chars_per_page=2000):
     """
-    Extract text from specified pages of a PDF using native extraction.
+    Extract text from specified pages of a PDF using native extraction or pre-extracted text cache.
     Returns list of (page_idx, text) tuples.
     """
+    # 1. Check for pre-extracted text cache first
+    base_stem = os.path.splitext(os.path.basename(pdf_path))[0]
+    fname_txt = f"{base_stem}.txt"
+    candidates = [
+        pdf_path.replace(".pdf", ".txt"),
+        os.path.join(os.path.dirname(pdf_path), fname_txt),
+        os.path.join("/tmp", fname_txt),
+        os.path.join("/tmp/data", f"{base_stem}_text", fname_txt),
+    ]
+    # Also check /tmp/data/*_text/
+    if os.path.exists("/tmp/data"):
+        for sub in os.listdir("/tmp/data"):
+            cand = os.path.join("/tmp/data", sub, fname_txt)
+            if cand not in candidates:
+                candidates.append(cand)
+
+    for cand in candidates:
+        if os.path.exists(cand) and cand.endswith(".txt"):
+            try:
+                with open(cand, "r", encoding="utf-8") as tf:
+                    raw_text = tf.read()
+                if len(raw_text) > 100:
+                    pages_raw = re.split(r'(?:^|\n)---\s*PAGE\s*\d+\s*---|\n---\s*PAGE\s*\d+\b', raw_text)
+                    if len(pages_raw) > 1:
+                        total_pages = len(pages_raw)
+                        if page_indices is None:
+                            candidates_idx = [0, 1, 2, 3, min(10, total_pages - 1), total_pages // 4, total_pages // 2]
+                            page_indices = sorted(set(p for p in candidates_idx if 0 <= p < total_pages))
+                        results = []
+                        for idx in page_indices:
+                            if 0 <= idx < total_pages:
+                                results.append((idx, pages_raw[idx].strip()[:max_chars_per_page]))
+                        if sum(len(t) for _, t in results) > 50:
+                            return results
+            except Exception:
+                pass
+
     try:
         doc = fitz.open(pdf_path)
         total_pages = len(doc)
@@ -182,11 +249,27 @@ def sample_pdf_text(pdf_path, page_indices=None, max_chars_per_page=2000):
                 text = doc[idx].get_text().strip()
                 results.append((idx, text[:max_chars_per_page]))
 
+        total_sample_chars = sum(len(t) for _, t in results)
+        if total_sample_chars < 50 and total_pages > 0:
+            try:
+                from engine.ingestion.ocr_processor import init_ocr, extract_ocr_text
+                ocr_eng = init_ocr()
+                ocr_results = []
+                for idx in page_indices[:4]:
+                    ocr_t = extract_ocr_text(ocr_eng, doc, idx, dpi=120).strip()
+                    if ocr_t:
+                        ocr_results.append((idx, ocr_t[:max_chars_per_page]))
+                if ocr_results:
+                    results = ocr_results
+            except Exception:
+                pass
+
         doc.close()
         return results
     except Exception as e:
         print(f"  Warning: could not sample {os.path.basename(pdf_path)}: {e}")
         return []
+
 
 
 def get_title_text(pdf_path, max_chars=1500):
@@ -206,6 +289,8 @@ def detect_rule_schema(sampled_texts):
     """
     Run each known schema's pattern against sampled text.
     Returns the schema dict with highest hit count, plus all scores.
+    Uses non-TOC rule density to prevent Table of Contents macro-sections
+    from misclassifying predominantly keyword-header rulebooks.
     """
     combined_text = "\n".join(sampled_texts)
     scores = {}
@@ -218,7 +303,42 @@ def detect_rule_schema(sampled_texts):
         except re.error:
             scores[schema["name"]] = 0
 
-    best_name = max(scores, key=scores.get)
+    # Non-TOC rule density calculation
+    non_toc_text = "\n".join(sampled_texts[1:]) if len(sampled_texts) > 1 else combined_text
+    non_toc_samples = max(1, len(sampled_texts) - 1) if len(sampled_texts) > 1 else 1
+
+    numeric_decimal_non_toc = len(re.findall(r'(?:^|\n)\s*(\d{1,2}\.\d{1,3}(?:\.\d{1,2})?)\b', non_toc_text))
+    numeric_density = numeric_decimal_non_toc / non_toc_samples
+
+    outline_score = scores.get("outline_parenthetical", 0)
+    chapter_score = scores.get("chapter_decimal", 0)
+    keyword_score = scores.get("keyword_header", 0)
+
+    # Priority 1: High-frequency outline parenthetical (e.g. SFB Cadet Handbook)
+    if outline_score >= 5 and outline_score >= scores.get("numeric_decimal", 0):
+        best_name = "outline_parenthetical"
+    # Priority 2: True high-density numeric decimal (e.g. Up Front with >= 2.0 rules per non-TOC page, or >= 20 total matches)
+    elif scores.get("numeric_decimal", 0) >= 20 or numeric_density >= 2.0:
+        best_name = "numeric_decimal"
+    # Priority 3: Chapter decimal (e.g. ASL A7.21)
+    elif chapter_score >= 5:
+        best_name = "chapter_decimal"
+    # Priority 4: Moderate outline parenthetical (>= 5)
+    elif outline_score >= 5:
+        best_name = "outline_parenthetical"
+    # Priority 5: If keyword headers dominate over sparse/low-density decimal numbers
+    elif keyword_score > 0 and keyword_score > scores.get("numeric_decimal", 0):
+        best_name = "keyword_header"
+    else:
+        structured_candidates = {
+            name: score for name, score in scores.items()
+            if name != "keyword_header" and score >= 5
+        }
+        if structured_candidates:
+            best_name = max(structured_candidates, key=structured_candidates.get)
+        else:
+            best_name = max(scores, key=scores.get)
+
     best_schema = next(s for s in KNOWN_SCHEMAS if s["name"] == best_name)
 
     return best_schema, scores
@@ -304,6 +424,7 @@ Respond with ONLY a JSON object (no explanation):
 Priority guide: core_rules=1, version_tracker=2, errata=3, scenario_errata=4, scenario_balance=5, qa=6, journal=6, scenarios=7-8, variant=7, tournament=7, unknown=9"""
 
     try:
+        import ollama
         response = ollama.generate(model="llama3.1:8b", prompt=prompt)
         raw = response["response"].strip()
         json_match = re.search(r'\{[^}]+\}', raw, re.DOTALL)
@@ -488,12 +609,12 @@ Candidates:
 # Main Discovery Function
 # ═══════════════════════════════════════════════════════════════════
 
-def discover(data_dir, game_name, game_id=None, use_llm=True, output_path=None):
+def discover(data_dir, game_name=None, game_id=None, use_llm=True, output_path=None):
     """
-    Analyze a directory of PDFs and produce a game profile.
+    Analyze a directory of PDFs or a single PDF file and produce a game profile.
 
     Args:
-        data_dir:    Path to directory containing game PDFs.
+        data_dir:    Path to directory containing game PDFs, or path to a single PDF.
         game_name:   Human-readable game name (e.g., "Advanced Squad Leader").
         game_id:     Short ID for paths (e.g., "asl"). Auto-derived if None.
         use_llm:     Use LLM for ambiguous document classification.
@@ -502,27 +623,41 @@ def discover(data_dir, game_name, game_id=None, use_llm=True, output_path=None):
     Returns:
         profile dict
     """
+    is_single_file = os.path.isfile(data_dir)
+    if is_single_file:
+        actual_data_dir = os.path.dirname(os.path.abspath(data_dir))
+        pdf_files = [os.path.basename(data_dir)]
+        if not game_name:
+            stem = os.path.splitext(os.path.basename(data_dir))[0]
+            game_name = re.sub(r'[-_]', ' ', stem).title()
+    elif os.path.isdir(data_dir):
+        actual_data_dir = data_dir
+        if not game_name:
+            game_name = os.path.basename(os.path.normpath(data_dir)).replace('_', ' ').title()
+        pdf_files = sorted([
+            f for f in os.listdir(data_dir)
+            if f.lower().endswith(".pdf")
+        ])
+    else:
+        print(f"ERROR: Target path does not exist: {data_dir}")
+        return None
+
     if not game_id:
         game_id = re.sub(r'[^a-z0-9]', '_', game_name.lower())[:20].strip('_')
 
-    if not output_path:
+    if output_path is None:
         output_path = f"data/{game_id}_profile.json"
 
     print("=" * 60)
     print(f"AUTO-DISCOVERY: {game_name}")
-    print(f"Directory: {data_dir}")
+    print(f"Target: {data_dir} ({'Single PDF' if is_single_file else 'Directory'})")
     print("=" * 60)
-
-    pdf_files = sorted([
-        f for f in os.listdir(data_dir)
-        if f.lower().endswith(".pdf")
-    ])
 
     if not pdf_files:
         print(f"ERROR: No PDF files found in {data_dir}")
         return None
 
-    print(f"\nFound {len(pdf_files)} PDF files")
+    print(f"\nFound {len(pdf_files)} PDF file(s)")
 
     # ─── Phase 1: Sample texts for schema detection ───
     print("\n[1/4] Sampling documents for rule schema detection...")
@@ -530,7 +665,7 @@ def discover(data_dir, game_name, game_id=None, use_llm=True, output_path=None):
     doc_samples = {}  # filename → title_text
 
     for fname in pdf_files:
-        fpath = os.path.join(data_dir, fname)
+        fpath = os.path.join(actual_data_dir, fname)
         size_mb = os.path.getsize(fpath) / 1024 / 1024
         samples = sample_pdf_text(fpath, page_indices=[0, 1, 5, 10, 20])
         texts = [text for _, text in samples if len(text) > 30]
@@ -544,11 +679,11 @@ def discover(data_dir, game_name, game_id=None, use_llm=True, output_path=None):
     print(f"  Selected: {schema['name']} — {schema['description']}")
 
     # ─── Phase 3: Classify each document ───
-    print(f"\n[3/4] Classifying {len(pdf_files)} documents...")
+    print(f"\n[3/4] Classifying {len(pdf_files)} document(s)...")
     documents = {}
 
     for fname in pdf_files:
-        fpath = os.path.join(data_dir, fname)
+        fpath = os.path.join(actual_data_dir, fname)
         size_mb = os.path.getsize(fpath) / 1024 / 1024
         try:
             doc = fitz.open(fpath)
@@ -593,7 +728,7 @@ def discover(data_dir, game_name, game_id=None, use_llm=True, output_path=None):
     core_rules_path = None
     for fname, info in documents.items():
         if info["doc_type"] == "core_rules":
-            core_rules_path = os.path.join(data_dir, fname)
+            core_rules_path = os.path.join(actual_data_dir, fname)
             break
             
     glossary = {}
@@ -604,36 +739,55 @@ def discover(data_dir, game_name, game_id=None, use_llm=True, output_path=None):
     # ─── Build profile ───
     profile = {
         "game_name": game_name,
+        "domain_name": game_name,
         "game_id": game_id,
-        "data_dir": data_dir,
+        "domain_id": game_id,
+        "pipeline_mode": "RULEBOOK_TECHNICAL",
+        "data_dir": actual_data_dir,
         "text_dir": f"data/{game_id}_text",
         "chroma_collection": f"{game_id}-rules-semantic",
         "rule_index_file": f"data/{game_id}_rule_index.json",
         "cooccurrence_graph_file": f"data/{game_id}_cooccurrence_graph.json",
         "section_tree_file": f"data/{game_id}_section_tree.json",
         "rule_schema": schema["name"],
+        "hierarchy_strategy": schema.get("hierarchy_strategy", "breadcrumb_path"),
+        "hierarchy_delimiter": schema.get("hierarchy_delimiter", " > "),
         "rule_pattern": schema["rule_pattern"],
         "cross_ref_pattern": schema["cross_ref_pattern"],
         "scenario_format": scenario_fmt,
         "scenario_pattern": scenario_pattern,
         "schema_detection_scores": schema_scores,
+        "parsing_grammar": {
+            "rule_schema": schema["name"],
+            "hierarchy_strategy": schema.get("hierarchy_strategy", "breadcrumb_path"),
+            "hierarchy_delimiter": schema.get("hierarchy_delimiter", " > "),
+            "rule_pattern": schema["rule_pattern"],
+            "cross_ref_pattern": schema["cross_ref_pattern"],
+        },
         "documents": documents,
         "glossary": glossary,
     }
 
-    # ─── Save profile ───
-    os.makedirs(os.path.dirname(output_path) if os.path.dirname(output_path) else ".", exist_ok=True)
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(profile, f, indent=2)
+    # Validate against DomainProfile meta-contract
+    try:
+        from engine.models.domain_profile import DomainProfile
+        DomainProfile.model_validate(profile)
+    except Exception as e:
+        print(f"  Notice: DomainProfile meta-contract validation warning: {e}")
 
-    print(f"\n{'=' * 60}")
-    print(f"PROFILE SAVED: {output_path}")
-    print(f"  Rule schema:     {schema['name']}")
-    print(f"  Scenario format: {scenario_fmt}")
-    print(f"  Documents:       {len(documents)}")
-    active = sum(1 for d in documents.values() if d.get("max_pages") != 0)
-    print(f"  Active (non-skip): {active}")
-    print(f"{'=' * 60}")
+    # ─── Save profile if output_path is specified ───
+    if output_path:
+        os.makedirs(os.path.dirname(output_path) if os.path.dirname(output_path) else ".", exist_ok=True)
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(profile, f, indent=2)
+        print(f"\n{'=' * 60}")
+        print(f"PROFILE SAVED: {output_path}")
+        print(f"  Rule schema:     {schema['name']}")
+        print(f"  Scenario format: {scenario_fmt}")
+        print(f"  Documents:       {len(documents)}")
+        active = sum(1 for d in documents.values() if d.get("max_pages") != 0)
+        print(f"  Active (non-skip): {active}")
+        print(f"{'=' * 60}")
 
     return profile
 
@@ -645,18 +799,19 @@ def discover(data_dir, game_name, game_id=None, use_llm=True, output_path=None):
 if __name__ == "__main__":
     import sys
 
-    if len(sys.argv) < 3:
-        print("Usage: python auto_discover.py <data_dir> <game_name> [game_id]")
+    if len(sys.argv) < 2:
+        print("Usage: python auto_discover.py <data_dir_or_pdf> [game_name] [game_id] [--no-llm]")
         print("  e.g: python auto_discover.py data/asl \"Advanced Squad Leader\" asl")
+        print("  e.g: python auto_discover.py data/sfb/CadetHandbook.pdf \"SFB Cadet\" sfb_cadet")
         sys.exit(1)
 
     data_dir = sys.argv[1]
-    game_name = sys.argv[2]
-    game_id = sys.argv[3] if len(sys.argv) > 3 else None
+    game_name = sys.argv[2] if len(sys.argv) > 2 and not sys.argv[2].startswith("--") else None
+    game_id = sys.argv[3] if len(sys.argv) > 3 and not sys.argv[3].startswith("--") else None
     no_llm = "--no-llm" in sys.argv
 
-    if not os.path.isdir(data_dir):
-        print(f"ERROR: Directory not found: {data_dir}")
+    if not os.path.exists(data_dir):
+        print(f"ERROR: Path not found: {data_dir}")
         sys.exit(1)
 
-    profile = discover(data_dir, game_name, game_id=game_id, use_llm=not no_llm)
+    profile = discover(data_dir, game_name=game_name, game_id=game_id, use_llm=not no_llm)

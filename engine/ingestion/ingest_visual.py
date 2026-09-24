@@ -2,21 +2,25 @@
 Visual & Periodical Media Ingestion Pipeline — Gaiia RAG Doll (Multi-Pass Generic Periodical Engine).
 
 Universal Multi-Pass Periodical Engine for Magazines & Visual Portfolios:
-1. Autonomous Page Archetype Classifier (Cover, Table_of_Contents, Structured_Grid_Directory, Feature_Pictorial, Advertisement, Reader_Letters, Editorial_Masthead, Back_Cover).
+1. Autonomous Adaptive Page Archetype Classifier (Cover, Table_of_Contents, Structured_Grid_Directory, Feature_Pictorial, Advertisement, Reader_Letters, Editorial_Masthead, Back_Cover):
+   - Analyzes ANY page dynamically based on structural density, semantic keywords, and regex layout signatures
+   - TOCs and BIO Directories can be located ANYWHERE (or be completely absent)
 2. Generic Structure Extractors:
    - 0-Indexed Document Structure (Cover = Page 0, Inside Front Cover = Page 1, etc.)
-   - TOC Parser & Thumbnail/Headshot Cropper
-   - Structured Grid/Directory Card Parser (Bios, Vital Stats, Measurements, Photographers, Page References)
+   - Dynamic TOC Parser & Thumbnail/Headshot Cropper (scans any page flagged as Table_of_Contents)
+   - Dynamic Structured Grid/Directory Card Parser (scans any page flagged as Structured_Grid_Directory)
+   - Caption & Pictorial Opener Entity Extractor (Positional mentions, biographical intros, photography credits)
    - Masthead & Location Credits Parser
    - Ad, Marketing, Contest & Casting Call Extractor
-   - Reader Letters & Cross-Publication Entity Extractor
+   - Reader Letters & Editorial Column Extractor
    - Cover Extractor (Separates publication title, issue date, covergirl, and taglines from wardrobe)
 3. Composite Chunking & Global Entity Fusion:
-   - Links dispersed pieces across the entire publication into an authoritative entity registry
-   - Enriches each pictorial spread with verified bio stats, photographer, and shoot location
+   - Dynamic issue entity graph construction linking dispersed spreads to model registries
+   - Seamless fallback when TOC/BIOs are absent (constructs registry from pictorial openers and captions)
    - Directs Vision LLM (VLM) to classify normalized POSES (Standing, Reclining, Kneeling, Sitting, Arched_Back, Close_Up, etc.), scene environment, wardrobe, and nudity level
 4. Dual-Page Panoramic Spread Stitching (spread_001_002.jpg, spread_003_004.jpg, etc.)
-5. Dual Indexing (ChromaDB vector embeddings + exact high-fidelity JSON catalog)
+5. Dual Indexing (ChromaDB vector embeddings + exact high-fidelity JSON catalog + master exact lookup index)
+   - Supports incremental resume across large magazine archives
 """
 
 import os
@@ -26,8 +30,21 @@ import json
 import io
 import fitz  # PyMuPDF
 from PIL import Image
-import chromadb
-import ollama
+try:
+    import chromadb
+except ImportError:
+    chromadb = None
+
+try:
+    import ollama
+except ImportError:
+    ollama = None
+try:
+    import cv2
+    import numpy as np
+except ImportError:
+    cv2 = None
+    np = None
 
 # Ensure unbuffered UTF-8 output encoding on Windows consoles
 if sys.platform == "win32":
@@ -44,6 +61,7 @@ PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, "../../"))
 CHROMA_DB_DIR = os.path.join(PROJECT_ROOT, "data/chroma")
 CHROMA_COLLECTION = "rag-doll-visual-catalog"
 DEFAULT_IMAGES_DIR = os.path.join(PROJECT_ROOT, "data/images")
+MASTER_INDEX_PATH = os.path.join(PROJECT_ROOT, "data/visual_catalog_index.json")
 
 # OCR Engine lazy loader
 _ocr_engine = None
@@ -76,7 +94,7 @@ def extract_ocr_from_pixmap(pix):
     return ""
 
 
-# Preferred Models
+# Preferred Vision Models
 VISION_MODEL_CANDIDATES = [
     "moondream:latest",
     "moondream",
@@ -155,21 +173,241 @@ def stitch_facing_pages(left_img, right_img):
     return spread_img
 
 
-def crop_and_save_headshot(pil_img, output_path, crop_box=None):
-    """Crop a portrait/headshot thumbnail from an image and save to disk."""
+# OpenCV Haar Cascade lazy loader
+_face_cascade = None
+_alt_cascade = None
+_alt2_cascade = None
+_profile_cascade = None
+_upper_cascade = None
+
+def get_face_cascades():
+    global _face_cascade, _alt_cascade, _alt2_cascade, _profile_cascade, _upper_cascade
+    if _face_cascade is None:
+        try:
+            import cv2
+            cascades_dir = cv2.data.haarcascades
+            _face_cascade = cv2.CascadeClassifier(cascades_dir + 'haarcascade_frontalface_default.xml')
+            _alt_cascade = cv2.CascadeClassifier(cascades_dir + 'haarcascade_frontalface_alt.xml')
+            _alt2_cascade = cv2.CascadeClassifier(cascades_dir + 'haarcascade_frontalface_alt2.xml')
+            _profile_cascade = cv2.CascadeClassifier(cascades_dir + 'haarcascade_profileface.xml')
+            _upper_cascade = cv2.CascadeClassifier(cascades_dir + 'haarcascade_upperbody.xml')
+        except Exception:
+            _face_cascade = False
+            _alt_cascade = False
+            _alt2_cascade = False
+            _profile_cascade = False
+            _upper_cascade = False
+    return _face_cascade, _alt_cascade, _alt2_cascade, _profile_cascade, _upper_cascade
+
+
+def crop_and_save_subject_thumbnail(pil_img, output_path, crop_box=None, positional_hint=None, model_name=None):
+    """
+    Intelligent Vision-Guided Subject Cropper:
+    Generates an aesthetic head or body shot of the named model.
+    1. Tier 1 (Computer Vision): Detects face/profile/upperbody via multi-cascade OpenCV detectors.
+       - Prioritizes high-precision alt/alt2 frontal cascades, followed by default frontal and profile.
+       - Expands detected face box with top padding (55% bh) and torso padding (200% bh) to frame full face + upper body at 3:4.
+    2. Tier 2 (Positional Crop): If no face detected but positional hint exists ('left', 'right', etc.),
+       crops the corresponding vertical/horizontal region of the page.
+    3. Tier 3 (Aesthetic Subject Fallback): Crops the central 76% width x 77% height to ensure
+       a clean head/body shot while avoiding outer page margins, headers, and footer typography.
+    """
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     w, h = pil_img.size
-    if crop_box is None:
-        left = int(w * 0.15)
-        top = int(h * 0.05)
-        right = int(w * 0.85)
-        bottom = int(h * 0.55)
-    else:
+
+    if crop_box is not None:
         left, top, right, bottom = crop_box
-    
+        cropped = pil_img.crop((left, top, right, bottom))
+        cropped.save(output_path, "JPEG", quality=90)
+        return output_path
+
+    face_cas, alt_cas, alt2_cas, prof_cas, upper_cas = get_face_cascades()
+    detected_candidates = []
+
+    try:
+        import cv2
+        import numpy as np
+        img_np = np.array(pil_img)
+        gray = cv2.cvtColor(img_np, cv2.COLOR_RGB2GRAY) if img_np.ndim == 3 else img_np
+        min_dim = int(min(w, h) * 0.05)
+        
+        cascades_to_run = [
+            (alt2_cas, 1.0, "alt2"),
+            (alt_cas, 0.95, "alt"),
+            (face_cas, 0.75, "face"),
+            (prof_cas, 0.65, "profile"),
+            (upper_cas, 0.50, "upperbody")
+        ]
+        for cas, weight, ctype in cascades_to_run:
+            if not cas:
+                continue
+            boxes = cas.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=4, minSize=(min_dim, min_dim))
+            for (bx, by, bw, bh) in boxes:
+                if by > h * 0.02 and (by + bh) < h * 0.90:
+                    score = (bw * bh) * weight
+                    detected_candidates.append({
+                        "score": score,
+                        "box": (bx, by, bw, bh, ctype)
+                    })
+    except Exception:
+        detected_candidates = []
+
+    if detected_candidates:
+        pos = str(positional_hint).lower() if positional_hint else ""
+        if pos:
+            for c in detected_candidates:
+                bx, by, bw, bh, _ = c["box"]
+                cx, cy = bx + bw / 2, by + bh / 2
+                if ("left" in pos and cx < w * 0.5) or ("right" in pos and cx > w * 0.5) or ("top" in pos and cy < h * 0.5) or ("bottom" in pos and cy > h * 0.5):
+                    c["score"] *= 1.3
+                    
+        best_cand = max(detected_candidates, key=lambda c: c["score"])
+        bx, by, bw, bh, btype = best_cand["box"]
+        cx = bx + bw // 2
+
+        if btype in ("face", "alt", "alt2", "profile"):
+            top_pad = int(bh * 0.55)
+            bottom_pad = int(bh * 2.0)
+            crop_top = max(0, int(by - top_pad))
+            crop_bottom = min(h, int(by + bh + bottom_pad))
+            target_h = crop_bottom - crop_top
+            target_w = int(target_h * 0.75)
+            
+            crop_left = max(0, int(cx - target_w / 2))
+            crop_right = min(w, crop_left + target_w)
+            if crop_right >= w:
+                crop_left = max(0, w - target_w)
+                crop_right = w
+        else:
+            top_pad = int(bh * 0.15)
+            bottom_pad = int(bh * 0.25)
+            crop_top = max(0, int(by - top_pad))
+            crop_bottom = min(h, int(by + bh + bottom_pad))
+            target_h = crop_bottom - crop_top
+            target_w = int(target_h * 0.75)
+            crop_left = max(0, int(cx - target_w / 2))
+            crop_right = min(w, crop_left + target_w)
+            if crop_right >= w:
+                crop_left = max(0, w - target_w)
+                crop_right = w
+        
+        cropped = pil_img.crop((crop_left, crop_top, crop_right, crop_bottom))
+        cropped.save(output_path, "JPEG", quality=90)
+        return output_path
+
+    pos = str(positional_hint).lower() if positional_hint else ""
+    if "left" in pos:
+        left, top, right, bottom = int(w * 0.05), int(h * 0.08), int(w * 0.52), int(h * 0.88)
+    elif "right" in pos or "opposite" in pos:
+        left, top, right, bottom = int(w * 0.48), int(h * 0.08), int(w * 0.95), int(h * 0.88)
+    elif "top" in pos or "above" in pos:
+        left, top, right, bottom = int(w * 0.10), int(h * 0.05), int(w * 0.90), int(h * 0.52)
+    elif "bottom" in pos or "below" in pos:
+        left, top, right, bottom = int(w * 0.10), int(h * 0.48), int(w * 0.90), int(h * 0.95)
+    else:
+        left = int(w * 0.12)
+        top = int(h * 0.08)
+        right = int(w * 0.88)
+        bottom = int(h * 0.85)
+
     cropped = pil_img.crop((left, top, right, bottom))
     cropped.save(output_path, "JPEG", quality=90)
     return output_path
+
+
+def crop_model_thumbnail_from_spread(doc, start_p, end_p, output_path, positional_hint=None, model_name=None, dpi=150):
+    """
+    Search across the model's pictorial spread pages (opener spread + pictorial pages)
+    to select and crop the highest quality, full-face portrait for the model's thumbnail.
+    """
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    total_pages = len(doc)
+    
+    face_cas, alt_cas, alt2_cas, prof_cas, upper_cas = get_face_cascades()
+    scan_pages = []
+    
+    # Check left page of opener spread if applicable
+    if start_p > 0 and start_p - 1 not in scan_pages:
+        scan_pages.append(start_p - 1)
+    # Check start page and subsequent spread pages up to end_p
+    for p in range(start_p, min(end_p + 1, start_p + 4)):
+        if 0 <= p < total_pages and p not in scan_pages:
+            scan_pages.append(p)
+            
+    spread_candidates = []
+    for pno in scan_pages:
+        try:
+            pil_img, _, _ = extract_page_image(doc[pno], dpi=dpi)
+            w, h = pil_img.size
+            img_np = np.array(pil_img)
+            gray = cv2.cvtColor(img_np, cv2.COLOR_RGB2GRAY) if img_np.ndim == 3 else img_np
+            min_dim = int(min(w, h) * 0.05)
+            
+            cascades_to_run = [
+                (alt2_cas, 1.0, "alt2"),
+                (alt_cas, 0.95, "alt"),
+                (face_cas, 0.75, "face"),
+                (prof_cas, 0.65, "profile")
+            ]
+            for cas, weight, ctype in cascades_to_run:
+                if not cas:
+                    continue
+                boxes = cas.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=4, minSize=(min_dim, min_dim))
+                for (bx, by, bw, bh) in boxes:
+                    if by > h * 0.02 and (by + bh) < h * 0.90:
+                        score = (bw * bh) * weight
+                        spread_candidates.append({
+                            "score": score,
+                            "pno": pno,
+                            "pil_img": pil_img,
+                            "box": (bx, by, bw, bh, ctype),
+                            "w": w,
+                            "h": h
+                        })
+        except Exception:
+            continue
+            
+    if spread_candidates:
+        pos = str(positional_hint).lower() if positional_hint else ""
+        if pos:
+            for c in spread_candidates:
+                bx, by, bw, bh, _ = c["box"]
+                cx, cy = bx + bw / 2, by + bh / 2
+                w, h = c["w"], c["h"]
+                if ("left" in pos and cx < w * 0.5) or ("right" in pos and cx > w * 0.5) or ("top" in pos and cy < h * 0.5) or ("bottom" in pos and cy > h * 0.5):
+                    c["score"] *= 1.3
+                    
+        best_cand = max(spread_candidates, key=lambda c: c["score"])
+        bx, by, bw, bh, btype = best_cand["box"]
+        w, h = best_cand["w"], best_cand["h"]
+        pil_img = best_cand["pil_img"]
+        cx = bx + bw // 2
+
+        top_pad = int(bh * 0.55)
+        bottom_pad = int(bh * 2.0)
+        crop_top = max(0, int(by - top_pad))
+        crop_bottom = min(h, int(by + bh + bottom_pad))
+        target_h = crop_bottom - crop_top
+        target_w = int(target_h * 0.75)
+        
+        crop_left = max(0, int(cx - target_w / 2))
+        crop_right = min(w, crop_left + target_w)
+        if crop_right >= w:
+            crop_left = max(0, w - target_w)
+            crop_right = w
+            
+        cropped = pil_img.crop((crop_left, crop_top, crop_right, crop_bottom))
+        cropped.save(output_path, "JPEG", quality=90)
+        return output_path
+
+    # Fallback to single-page crop on start_p
+    pil_img, _, _ = extract_page_image(doc[start_p], dpi=dpi)
+    return crop_and_save_subject_thumbnail(pil_img, output_path, positional_hint=positional_hint, model_name=model_name)
+
+
+def crop_and_save_headshot(pil_img, output_path, crop_box=None):
+    """Backwards compatibility wrapper for crop_and_save_subject_thumbnail."""
+    return crop_and_save_subject_thumbnail(pil_img, output_path, crop_box=crop_box)
 
 
 def slugify(text):
@@ -178,8 +416,342 @@ def slugify(text):
     return re.sub(r'[-\s]+', '_', text).strip('_')
 
 
+KNOWN_PHOTOGRAPHERS = [
+    "Arny Freytag", "Stephen Wayda", "Richard Fegley", "Mizuno", "Gen Mishino",
+    "Jarmo Pohjaniemi", "Byron Newman", "Ric Moore", "Sean Bolger", "J.R. Mounger",
+    "Wesley Martens", "Sasha Eisenman", "Josh Ryan", "Autumn Sonnichsen", "David Mecey",
+    "Kim Mizuno", "Mario Casilli", "Ken Marcus", "Guerin Blask", "Jeff Dunas"
+]
+
+NON_MODEL_KEYWORDS = {
+    "PLAYBOY", "SPECIAL", "PAGE", "EDITION", "DAS AUTO", "PASSAT", "VOLKSWAGEN",
+    "HUGOBOSS", "EDITORIAL", "CONTENTS", "INHALT", "BARE FACTS", "VITAL STATS",
+    "CYBER CLUB", "PLAYMATE OF", "MODEL OF", "COPYRIGHT", "PUBLISHER", "UNITED STATES",
+    "PRINTED IN", "ALL RIGHTS", "SUBSCRIBE", "ORDER TODAY", "OCTOBER", "NOVEMBER", "DECEMBER",
+    "JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER",
+    "MISS JANUARY", "MISS FEBRUARY", "MISS MARCH", "MISS APRIL", "MISS MAY", "MISS JUNE",
+    "MISS JULY", "MISS AUGUST", "MISS SEPTEMBER", "MISS OCTOBER", "MISS NOVEMBER", "MISS DECEMBER",
+    "THE CALENDAR", "HUGH HEFNER", "FIRST LADY", "COVER GIRL", "GIRLS OF", "PLAYBOYS",
+    "SPECIAL EDITIONS", "COLLECTORS EDITION", "CENTERFOLD", "PLAYMATES", "PAC STATS",
+    "IL STATS", "IN STATS", "NJ STATS", "OH STATS", "CA STATS", "TX STATS", "FL STATS", "NY STATS"
+}
+
+
+def normalize_ocr_text(text):
+    """
+    Preprocess and clean OCR text to fix common glued words, linebreaks in names,
+    and punctuation artifacts from magazine scans.
+    """
+    if not text:
+        return ""
+    # 1. Un-glue lowercase glued to uppercase: e.g. 'beautySaskia' -> 'beauty Saskia'
+    text = re.sub(r'([a-z])([A-Z])', r'\1 \2', text)
+    # 2. Un-glue letters glued to digits and vice-versa: e.g. 'April1992' -> 'April 1992'
+    text = re.sub(r'([a-zA-Z])(\d)', r'\1 \2', text)
+    text = re.sub(r'(\d)([a-zA-Z])', r'\1 \2', text)
+    # 3. Un-glue demonyms and nationality adjectives: e.g. 'Dutchbeauty' -> 'Dutch beauty'
+    lead_demonyms = r'(?:Dutch|German|Polish|American|French|Italian|Spanish|Greek|Swedish|Danish|Russian|Argentine|Brazilian|Canadian|Australian|British|English|Hungarian|Czech|Austrian|Japanese|Mexican|Sultry|Buxom|Blonde|Brunette|Beautiful)'
+    text = re.sub(rf'\b({lead_demonyms})(beauty|born|model|girl|playmate|[a-z]{{3,}})', r'\1 \2', text, flags=re.IGNORECASE)
+    # 4. Un-glue common verbs / keywords attached to names
+    keywords = [
+        "is", "was", "has", "had", "made", "hates", "loves", "enjoys", "appeared",
+        "began", "grew", "lives", "works", "born", "blessed", "named", "crowned",
+        "became", "knows", "first", "debut", "debuted", "hailed", "studied", "modeled",
+        "says", "hatesto", "insists"
+    ]
+    for kw in keywords:
+        text = re.sub(rf'([a-z]{{2,}})({kw})', r'\1 \2', text, flags=re.IGNORECASE)
+        text = re.sub(rf'\b({kw})([a-z]{{3,}})', r'\1 \2', text, flags=re.IGNORECASE)
+    # 5. Normalize whitespace
+    text = re.sub(r'[ \t]+', ' ', text)
+    return text
+
+
+STOPWORDS = {
+    "SHE", "HE", "HER", "HIS", "HIM", "THEY", "THEM", "THEIR", "THEIRS", "IT", "ITS",
+    "THIS", "THAT", "THERE", "THESE", "THOSE", "WHAT", "WHICH", "WHO", "WHOM", "WHOSE",
+    "WHERE", "WHEN", "WHY", "HOW", "OF", "AND", "OR", "BUT", "FOR", "WITH", "AT", "BY",
+    "FROM", "TO", "IN", "ON", "INTO", "ONTO", "UPON", "ABOUT", "UNTIL", "BEFORE", "AFTER",
+    "DURING", "SINCE", "NOT", "NO", "ALL", "ANY", "SOME", "EVERY", "EACH", "BOTH", "EITHER",
+    "NEITHER", "MORE", "MOST", "SUCH", "OTHER", "ANOTHER", "SAME", "ONLY", "OWN", "VERY",
+    "JUST", "ALSO", "EVEN", "NOW", "THEN", "ONCE", "ALREADY", "STILL", "YET", "AGAIN",
+    "RATHER", "QUITE", "ALMOST", "ENOUGH", "TOO", "IS", "WAS", "ARE", "WERE", "BE", "BEEN",
+    "BEING", "HAVE", "HAS", "HAD", "DO", "DOES", "DID", "WILL", "WOULD", "SHALL", "SHOULD",
+    "CAN", "COULD", "MAY", "MIGHT", "MUST", "PLAYMATE", "MONTH", "YEAR", "EDITION", "PHOTO",
+    "PHOTOS", "PAGE", "PAGES", "STATS", "CREDO", "THEATER", "TELEV", "SERIES", "MOTHER",
+    "FATHER", "SISTER", "BROTHER", "STUDIES", "BUSINESS", "DESKTOP", "QUALITY", "PROBABLY",
+    "INSTINCTS", "AMBITION", "BALLET", "MAN", "WOMAN", "GIRL", "GIRLS", "THE", "A", "AN",
+    "FIRST", "SECOND", "THIRD", "LAST", "NEXT", "NEW", "OLD", "GOOD", "GREAT", "HIGH",
+    "CURRENTLY", "ORIGINALLY", "ACTUALLY", "ESPECIALLY", "HELPED", "LOOK", "SEES", "GOING"
+}
+
+
+def clean_model_name(name):
+    """Clean model name by stripping demonyms, stop words, newlines, and non-name artifacts."""
+    if not name:
+        return None
+    # Replace internal newlines and multiple whitespaces
+    name = re.sub(r'[\r\n\t]+', ' ', name)
+    name = re.sub(r'[^\w\s-]', '', name).strip()
+    name = re.sub(r'\s+', ' ', name).strip()
+    
+    words = name.split(' ')
+    lead_stopwords = {
+        'DUTCH', 'GERMAN', 'POLISH', 'AMERICAN', 'FRENCH', 'ITALIAN', 'SPANISH',
+        'GREEK', 'SWEDISH', 'DANISH', 'RUSSIAN', 'ARGENTINE', 'ARGENTINAS',
+        'BRAZILIAN', 'CANADIAN', 'AUSTRALIAN', 'BRITISH', 'ENGLISH', 'HUNGARIAN',
+        'CZECH', 'AUSTRIAN', 'JAPANESE', 'MEXICAN', 'SULTRY', 'BEAUTIFUL', 'BEAUTY',
+        'BLONDE', 'BRUNETTE', 'STUNNING', 'GORGEOUS', 'LOVELY', 'TALL', 'PETITE',
+        'BUXOM', 'FORMER', 'WHEN', 'AND', 'AS', 'AFTER', 'WHILE', 'THEN', 'SINCE',
+        'MANSION', 'THE', 'MISS', 'MRS', 'MS', 'BORN'
+    }
+    
+    while words and (words[0].upper() in lead_stopwords or words[0].upper().endswith('-BORN')):
+        words = words[1:]
+        
+    if not words or len(words) not in (2, 3):
+        return None
+        
+    # Check that none of the words is in STOPWORDS and each is a capitalized token
+    for w in words:
+        wu = w.upper()
+        if wu in STOPWORDS:
+            return None
+        if not re.match(r'^[A-Z][a-z]+(-[A-Z][a-z]+)?$', w):
+            return None
+            
+    cleaned = ' '.join(words).strip()
+    upper = cleaned.upper()
+    if upper in NON_MODEL_KEYWORDS:
+        return None
+        
+    if re.search(r'\b[A-Z]{2}\s+STATS\b', upper):
+        return None
+        
+    return cleaned.title()
+
+
 # ═══════════════════════════════════════════════════════════════════
-# Authoritative Issue Knowledge Base (0-Indexed Page Ranges)
+# Layer 1: Filename Normalization & Metadata Parsing
+# ═══════════════════════════════════════════════════════════════════
+
+def parse_filename_metadata(pdf_path):
+    """
+    Extract publication, title, year, issue_date, and clean stem from magazine filename.
+    Strips web scraping artifacts like _Adultxxxmagazine, _Pdf_Xxx_Adult_Magazine, etc.
+    """
+    raw_stem = os.path.splitext(os.path.basename(pdf_path))[0]
+    
+    cleaned = raw_stem
+    cleaned = re.sub(r'_(?:Pdf_)?Xxx_(?:Adult_)?Magazine\w*', '', cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r'_Xxxmagazineporn(?:\s*\(\d+\))?', '', cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r'_Adultxxxmagazine\w*', '', cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r'^\d+playboy', 'Playboy', cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r'\s*\(\d+\)$', '', cleaned)
+    cleaned = cleaned.strip('_').strip()
+    
+    year = None
+    yr_matches = re.findall(r'(?:19\d\d|20\d\d)', cleaned)
+    if yr_matches:
+        year = int(yr_matches[-1])
+    else:
+        broken = re.search(r'(19\d|20\d)[\D]+(\d)', raw_stem)
+        if broken:
+            year = int(broken.group(1) + broken.group(2))
+            
+    issue_date = None
+    cleaned_spaced = cleaned.replace('_', ' ')
+    month_match = re.search(r'(\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*(?:[-_/]\s*(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*)?)[\s_-]*(\d{4})?', cleaned_spaced, re.IGNORECASE)
+    if month_match and month_match.group(0).strip():
+        issue_date = month_match.group(0).replace('_', ' ').strip()
+    elif year:
+        num_m = re.search(r'(\d{2})[-_](\d{2})[-_](\d{4})|(\d{4})[-_](\d{2})[-_](\d{2})|(\d{2})[-_](\d{4})', cleaned)
+        if num_m:
+            issue_date = num_m.group(0).replace('_', '-')
+            
+    if not issue_date and year:
+        issue_date = str(year)
+
+    title_norm = cleaned.replace('_', ' ')
+    path_norm = pdf_path.replace('\\', '/').lower()
+    
+    if 'harper' in title_norm.lower() or '/hb/' in path_norm or 'bazaar' in title_norm.lower():
+        publication = "Harper's Bazaar"
+        # Format magazine title e.g. "Harper's Bazaar USA"
+        mag_title = re.sub(r'[\d_-]+', ' ', cleaned).strip()
+        mag_title = re.sub(r'\s+', ' ', mag_title)
+        mag_title = re.sub(r'(?i)harpers?\s*bazaar', "Harper's Bazaar", mag_title).strip()
+    elif 'vogue' in title_norm.lower():
+        publication = "Vogue"
+        mag_title = re.sub(r'[\d_-]+', ' ', cleaned).strip()
+        mag_title = re.sub(r'\s+', ' ', mag_title)
+    elif 'elle' in title_norm.lower():
+        publication = "Elle"
+        mag_title = re.sub(r'[\d_-]+', ' ', cleaned).strip()
+        mag_title = re.sub(r'\s+', ' ', mag_title)
+    elif 'germany' in title_norm.lower():
+        publication = 'Playboy Germany'
+        mag_title = re.sub(r'[\d_-]+', ' ', cleaned).strip()
+        mag_title = re.sub(r'\s+', ' ', mag_title)
+        if not mag_title.lower().startswith('playboy'):
+            mag_title = f"Playboy's {mag_title}"
+        else:
+            mag_title = mag_title.replace('Playboys', "Playboy's").replace('Playboy ', "Playboy's ")
+    else:
+        publication = 'Playboy Special Editions'
+        mag_title = re.sub(r'[\d_-]+', ' ', cleaned).strip()
+        mag_title = re.sub(r'\s+', ' ', mag_title)
+        if not mag_title.lower().startswith('playboy'):
+            mag_title = f"Playboy's {mag_title}"
+        else:
+            mag_title = mag_title.replace('Playboys', "Playboy's").replace('Playboy ', "Playboy's ")
+
+    return {
+        "raw_stem": raw_stem,
+        "clean_stem": cleaned,
+        "filename": os.path.basename(pdf_path),
+        "publication": publication,
+        "magazine_title": mag_title,
+        "year": year or 2006,
+        "issue_date": issue_date or str(year or "Unknown")
+    }
+
+
+# ═══════════════════════════════════════════════════════════════════
+# Layer 2: Fully Content-Driven Adaptive Page Archetype Classifier
+# ═══════════════════════════════════════════════════════════════════
+
+LUXURY_FASHION_BRANDS = {
+    "CHANEL", "DIOR", "FENDI", "GUCCI", "PRADA", "LOUIS VUITTON", "ESTEE LAUDER",
+    "ESTÉE LAUDER", "CLARISONIC", "ESCADA", "HARRY WINSTON", "STUART WEITZMAN",
+    "COACH", "LAPERLA", "LA PERLA", "CAROLINA HERRERA", "L'OREAL", "L'ORÉAL",
+    "DOLCE & GABBANA", "DOLCE&GABBANA", "BURBERRY", "ROLEX", "CARTIER",
+    "CALVIN KLEIN", "RALPH LAUREN", "MICHAEL KORS", "TIFFANY", "TIFFANY & CO",
+    "GIVENCHY", "SAINT LAURENT", "YVES SAINT LAURENT", "VALENTINO", "LANVIN",
+    "BOTTEGA VENETA", "BALENCIAGA", "BALMAIN", "CHLOÉ", "CHLOE", "MAX MARA",
+    "VERSACE", "ARMANI", "GIORGIO ARMANI", "TOM FORD", "MARC JACOBS",
+    "DRIES VAN NOTEN", "SALVATORE FERRAGAMO", "FERRAGAMO", "ALEXANDER WANG",
+    "ISABEL MARANT", "WOLFORD", "FALKE", "EDDIE BORGO", "SWAROVSKI"
+}
+
+
+def classify_page_archetype_llm(ocr_text, page_num, total_pages, profile=None):
+    """
+    Lightweight LLM page role reasoning via Ollama.
+    Uses DomainProfile guidance to categorize visual pages dynamically.
+    """
+    if not ocr_text or len(ocr_text.strip()) < 5:
+        return None
+    
+    prompt = f"""You are an expert magazine page layout classifier.
+Classify the following magazine page text into EXACTLY ONE of these archetypes:
+- Cover
+- Back_Cover
+- Advertisement (commercial product ad, fashion brand ad, perfume, cosmetic, boutique announcement)
+- Table_of_Contents (issue index, highlights, section listing with page numbers)
+- Feature_Pictorial (fashion editorial, model spread, photoshoot narrative with credits)
+- Structured_Grid_Directory (vital stats cards, model directory)
+- Stockist_Directory (where to buy, retail stockist index with prices and phone/web contacts)
+- Shopping_Showcase (collage/grid showcasing clothing/accessories with prices)
+- Reader_Letters (letters to the editor, advice columns)
+
+Page Number: {page_num} of {total_pages}
+Text excerpt:
+{ocr_text[:1200]}
+
+Respond with ONLY the exact archetype name:"""
+
+    try:
+        res = ollama.generate(
+            model="gemma:2b",
+            prompt=prompt,
+            options={"temperature": 0.0}
+        )
+        ans = res["response"].strip()
+        for arch in ["Cover", "Back_Cover", "Advertisement", "Table_of_Contents", "Feature_Pictorial",
+                     "Structured_Grid_Directory", "Stockist_Directory", "Shopping_Showcase", "Reader_Letters"]:
+            if arch.lower() in ans.lower():
+                return arch
+    except Exception:
+        pass
+    return None
+
+
+def classify_page_archetype(page_num, total_pages, ocr_text, profile=None, use_llm=False):
+    """
+    Autonomous Content-Driven Page Role Classifier (0-Indexed):
+    Determines page role through lightweight LLM reasoning or robust multi-genre heuristics.
+    Supports both glamour publications (PB) and high-fashion magazines (HB).
+    """
+    if page_num == 0:
+        return "Cover"
+    if page_num == total_pages - 1:
+        return "Back_Cover"
+
+    if use_llm:
+        llm_res = classify_page_archetype_llm(ocr_text, page_num, total_pages, profile=profile)
+        if llm_res:
+            return llm_res
+
+    upper = ocr_text.upper()
+    word_count = len(ocr_text.split())
+    
+    # 1. Stockist / Where to Buy Directory (Can be anywhere, often at back)
+    prices_found = re.findall(r'\$\d[\d,]*(?:\.\d{2})?', ocr_text)
+    page_refs = re.findall(r'\bPage\s+\d{1,3}\b', ocr_text, re.IGNORECASE)
+    if any(kw in upper for kw in ["WHERE TO BUY", "WHERE TOBUY", "STOCKISTS", "BEZUGSQUELLEN"]):
+        return "Stockist_Directory"
+    if len(page_refs) >= 3 and len(prices_found) >= 3:
+        return "Stockist_Directory"
+    if "PRICE UPON REQUEST" in upper and len(page_refs) >= 2:
+        return "Stockist_Directory"
+
+    # 2. Structured Grid / Bio Directory Detection (Can be anywhere)
+    meas_count = len(re.findall(r'\b\d{2}[A-G]*\s*-\s*\d{2}\s*-\s*\d{2}\b', ocr_text))
+    if meas_count >= 2 or any(kw in upper for kw in ["BARE FACTS", "VITAL STATS", "STATS:", "THE BARE FACTS"]):
+        return "Structured_Grid_Directory"
+        
+    # 3. Shopping Showcase / Collage Grid (Multiple priced items with brand references)
+    if len(prices_found) >= 4 and (
+        any(kw in upper for kw in ["SHOPBAZAAR", "MUST-HAVES", "MUST HAVES", "SHOPPING", "BUY FROM", "NEW ARRIVALS", "THE LIST"])
+        or any(b in upper for b in LUXURY_FASHION_BRANDS)
+    ):
+        return "Shopping_Showcase"
+
+    # 4. Table of Contents Detection (Can be single-spread or multi-page segmented)
+    toc_lines_1 = len(re.findall(r'^[A-Z][a-z]+(?:\s+[A-Z][a-z]+)+\s+\d{1,3}\b', ocr_text, re.M))
+    toc_lines_2 = len(re.findall(r'^\d{1,3}\s+[A-Z][a-z]+(?:\s+[A-Z][a-z]+)+', ocr_text, re.M))
+    total_toc_lines = toc_lines_1 + toc_lines_2
+    
+    if (total_toc_lines >= 3 and any(kw in upper for kw in ["CONTENTS", "INHALT", "INDEX", "FEATURING", "SPECIAL EDITIONS", "GIRLS OF"])) or total_toc_lines >= 5:
+        return "Table_of_Contents"
+    if any(kw in upper for kw in ["TABLE OF CONTENTS", "TABLEOF CONTENTS", "INHALTSVERZEICHNIS"]):
+        return "Table_of_Contents"
+    if any(kw in upper for kw in ["HIGHLIGHTS", "COVER LOOKS"]) and ("CONTINUED ON PAGE" in upper or any(sec in upper for sec in ["THE BAZAAR", "THE LIST", "THE NEWS", "THE BEAUTY BAZAAR", "IN EVERY ISSUE"])):
+        return "Table_of_Contents"
+    if "CONTINUED ON PAGE" in upper and any(sec in upper for sec in ["FASHION", "FEATURES", "HOTTEST SHOES", "WHAT'S HOT NOW", "FABULOUS AT EVERY AGE"]):
+        return "Table_of_Contents"
+            
+    # 5. Ads / Commercial Promos (Including full-bleed minimal luxury ads)
+    if any(kw in upper for kw in ["SUBSCRIBE TODAY", "CASTING CALL", "PLAYBOY IS COMING", "ORDER THE DIGITAL", "DAS AUTO", "VOLKSWAGEN", "HUGOBOSS", "BOSS.BOTTLED", "SUBSCRIBE TO PLAYBOY", "BOUTIQUES", "BOUTIQUE"]):
+        return "Advertisement"
+        
+    has_luxury_brand = any(b in upper for b in LUXURY_FASHION_BRANDS)
+    has_contact_or_web = any(kw in upper for kw in [".COM", "800.", "888.", "800-", "888-", "PARFUM", "FRAGRANCE", "FOUNDATION", "DREAMERS", "SHOP ONLINE", "AVAILABLE AT", "FLAWLESS", "BECAUSE YOU'RE WORTH IT"])
+    if has_luxury_brand and (has_contact_or_web or word_count <= 25):
+        return "Advertisement"
+    if has_contact_or_web and word_count <= 15:
+        return "Advertisement"
+        
+    # 6. Reader Letters / Columns (Can be anywhere)
+    if any(kw in upper for kw in ["LETTERS TO THE EDITOR", "DEAR RITA", "FEEDBACK", "SE WRAP-UP", "SEWRAP-UP", "LOVE LETTERS", "TANTRIC SEX"]):
+        return "Reader_Letters"
+        
+    return "Feature_Pictorial"
+
+
+# ═══════════════════════════════════════════════════════════════════
+# Layer 3: Dynamic Entity Extraction & Global Issue Registry
 # ═══════════════════════════════════════════════════════════════════
 
 PLAYBOY_VIXENS_2006_08_09_REGISTRY = {
@@ -474,7 +1046,550 @@ PLAYBOY_VIXENS_2006_08_09_REGISTRY = {
 }
 
 
-def build_global_entity_registry(cover_data, doc_stem, total_pages, images_dir, category):
+KNOWN_GARMENTS = [
+    'gown', 'dress', 'jacket', 'blouse', 'top', 'shirt', 'pants', 'skirt', 'briefs',
+    'coat', 'trench', 'blazer', 'turban', 'hat', 'scarf', 'belt', 'shoes', 'sandals',
+    'pumps', 'boots', 'bag', 'clutch', 'ring', 'cuff', 'earrings', 'necklace', 'brooch',
+    'pendant', 'chain', 'tights', 'vest', 'shorts', 'bra', 'underwear', 'lingerie'
+]
+
+GARMENT_REGEX = r'\b(' + '|'.join(KNOWN_GARMENTS) + r')s?\b'
+
+
+def extract_stockist_directory_entries(text):
+    """
+    Parse designer credits, garment items, prices, page references, and stockist contacts
+    from 'Where to Buy' and shopping directory pages.
+    """
+    entries = []
+    markers = list(re.finditer(r'(?:([A-Za-z\s\'’]{3,40}?)\s+)?\bPage\s+(\d{1,3})\b', text, re.IGNORECASE))
+    
+    for i, m in enumerate(markers):
+        story = m.group(1).strip() if m.group(1) else None
+        p_num = int(m.group(2))
+        start_idx = m.end()
+        end_idx = markers[i + 1].start() if i + 1 < len(markers) else len(text)
+        block = text[start_idx:end_idx]
+        
+        # In each block, match designer + garment + price
+        clauses = re.split(r'[\.;]\s+', block)
+        for cl in clauses:
+            cl = cl.strip()
+            if not cl:
+                continue
+            
+            # Find all (garment, price) pairs in this clause
+            pair_pattern = r'\b(' + '|'.join(KNOWN_GARMENTS) + r')s?[,\s]*\$(\d[\d,]*(?:\.\d{2})?)'
+            pairs = list(re.finditer(pair_pattern, cl, re.IGNORECASE))
+            
+            if pairs:
+                # Designer is the prefix before the first pair
+                des_match = cl[:pairs[0].start()].strip().rstrip(',').strip()
+                designer = re.sub(r'^(?:Page\s+\d+|[A-Z\s]+Page\s+\d+)\s*', '', des_match, flags=re.IGNORECASE).strip()
+                designer = designer.rstrip(',').strip()
+                if designer and len(designer) >= 2 and not designer.isdigit():
+                    matched_items = set()
+                    for p in pairs:
+                        g_item = p.group(1).lower()
+                        matched_items.add(g_item)
+                        price_val = float(p.group(2).replace(',', ''))
+                        entries.append({
+                            'page_ref': p_num,
+                            'story': story,
+                            'designer': designer,
+                            'item': g_item,
+                            'price_usd': price_val,
+                            'raw_clause': cl
+                        })
+                    # Check for additional garments in the same clause without direct adjacent price
+                    for gm in re.finditer(GARMENT_REGEX, cl, re.IGNORECASE):
+                        item_name = gm.group(1).lower()
+                        if item_name not in matched_items and gm.start() >= len(des_match):
+                            entries.append({
+                                'page_ref': p_num,
+                                'story': story,
+                                'designer': designer,
+                                'item': item_name,
+                                'price_usd': None,
+                                'raw_clause': cl
+                            })
+                            matched_items.add(item_name)
+            else:
+                p_match = re.search(r'\$(\d[\d,]*(?:\.\d{2})?)', cl)
+                price_val = float(p_match.group(1).replace(',', '')) if p_match else None
+                
+                # Find garment
+                g_match = re.search(GARMENT_REGEX, cl, re.IGNORECASE)
+                g_item = g_match.group(1).lower() if g_match else 'item'
+                
+                # Extract designer before garment or before comma
+                des_match = None
+                if g_match:
+                    prefix = cl[:g_match.start()].strip()
+                    if prefix:
+                        des_match = prefix
+                if not des_match and p_match:
+                    prefix = cl[:p_match.start()].strip().rstrip(',')
+                    if prefix:
+                        des_match = prefix
+                        
+                if des_match:
+                    designer = re.sub(r'^(?:Page\s+\d+|[A-Z\s]+Page\s+\d+)\s*', '', des_match, flags=re.IGNORECASE).strip()
+                    designer = designer.rstrip(',').strip()
+                    if designer and len(designer) >= 2 and not designer.isdigit():
+                        entries.append({
+                            'page_ref': p_num,
+                            'story': story,
+                            'designer': designer,
+                            'item': g_item,
+                            'price_usd': price_val,
+                            'raw_clause': cl
+                        })
+    return entries
+
+
+def extract_fashion_and_creative_credits(text):
+    """
+    Extract photographer, fashion editor/stylist, hair, makeup, manicurist,
+    and wardrobe mentions from caption or editorial text.
+    Maintains full backwards compatibility with legacy PB photo credits.
+    """
+    credits = {
+        "photographer": None,
+        "fashion_editor_stylist": None,
+        "hair": None,
+        "makeup": None,
+        "manicure": None,
+        "wardrobe_mentions": []
+    }
+    
+    # 1. Photographer
+    p_m = re.search(r'(?:Photograph[s]?\s+by|Photographed\s+by|Photography\s+by|Photos\s+by)\s+([A-Z][a-zA-Z\s\'’\-]+?)(?:\.|\n|;|\s+Fashion|\s+Hair|\s+Styled|\s+Miss|$)', text, re.IGNORECASE)
+    if p_m:
+        raw_p = p_m.group(1).strip()
+        credits["photographer"] = raw_p.title() if raw_p.isupper() else raw_p
+        
+    # 2. Fashion Editor / Stylist
+    fe_m = re.search(r'(?:Fashion\s+Editor[:\s]+|Styled\s+by[:\s]+|Styling[:\s]+)\s*([A-Z][a-zA-Z\s\'’\-]+?)(?:\.|\n|;|\s+Hair|\s+Makeup|\s+Photographs|$)', text, re.IGNORECASE)
+    if fe_m:
+        raw_fe = fe_m.group(1).strip()
+        credits["fashion_editor_stylist"] = raw_fe.title() if raw_fe.isupper() else raw_fe
+        
+    # 3. Hair
+    hair_m = re.search(r'(?:Hair[:\s]+|Hair\s+by[:\s]+)\s*([A-Z][a-zA-Z\s\'’\-]+?)(?:\.|\n|;|\s+Makeup|\s+Manicure|\s+Prop|$)', text, re.IGNORECASE)
+    if hair_m:
+        raw_h = hair_m.group(1).strip()
+        credits["hair"] = raw_h.title() if raw_h.isupper() else raw_h
+        
+    # 4. Makeup
+    mu_m = re.search(r'(?:Makeup[:\s]+|Makeup\s+by[:\s]+)\s*([A-Z][a-zA-Z\s\'’\-]+?)(?:\.|\n|;|\s+Manicure|\s+Hair|\s+Prop|$)', text, re.IGNORECASE)
+    if mu_m:
+        raw_mu = mu_m.group(1).strip()
+        credits["makeup"] = raw_mu.title() if raw_mu.isupper() else raw_mu
+        
+    # 5. Manicure
+    mani_m = re.search(r'(?:Manicure[:\s]+|Manicure\s+by[:\s]+)\s*([A-Z][a-zA-Z\s\'’\-]+?)(?:\.|\n|;|$)', text, re.IGNORECASE)
+    if mani_m:
+        raw_mani = mani_m.group(1).strip()
+        credits["manicure"] = raw_mani.title() if raw_mani.isupper() else raw_mani
+        
+    # 6. Wardrobe mentions
+    wardrobe_blocks = re.findall(r'(?:THIS PAGE|OPPOSITE PAGE)[:\s]+(.*?)(?=(?:Photographs?|Fashion Editor|Hair|Makeup|See Where to Buy|\n\n|$))', text, re.IGNORECASE | re.DOTALL)
+    for wb in wardrobe_blocks:
+        items = [w.strip() for w in re.split(r'\.\s+|\n', wb) if w.strip()]
+        for itm in items:
+            if itm and len(itm) > 3 and not any(k in itm.lower() for k in ["photograph", "fashion editor", "hair:"]):
+                credits["wardrobe_mentions"].append(itm)
+                
+    return credits
+
+
+def extract_bio_cards_from_text(ocr_text, page_num):
+    """Parse bio cards, vital stats, measurements, and photographers from directory text."""
+    cards = []
+    ocr_text = normalize_ocr_text(ocr_text)
+    lines = [l.strip() for l in ocr_text.split('\n') if l.strip()]
+    full_text = " ".join(lines)
+    
+    meas_matches = list(re.finditer(r'(\b\d{2}[A-G]*\s*-\s*\d{2}\s*-\s*\d{2}\b)', full_text))
+    
+    for idx, mm in enumerate(meas_matches):
+        meas_str = mm.group(1).replace(' ', '')
+        start_idx = meas_matches[idx - 1].end() if idx > 0 else max(0, mm.start() - 250)
+        end_idx = meas_matches[idx + 1].start() if idx + 1 < len(meas_matches) else min(len(full_text), mm.end() + 150)
+        
+        block = full_text[start_idx:end_idx]
+        
+        h_match = re.search(r'(\b\d\s*[\'’`]\s*\d{1,2}\s*[\"”`]?\b)', block)
+        height = h_match.group(1).replace(' ', '').replace('’', "'").replace('`', "'") if h_match else None
+        
+        w_match = re.search(r'(\b\d{2,3})\s*(?:lbs?|pounds|Ibs|bs)\b', block, re.IGNORECASE)
+        weight = int(w_match.group(1)) if w_match else None
+        
+        photog = None
+        for kp in KNOWN_PHOTOGRAPHERS:
+            if kp.lower() in block.lower():
+                photog = kp
+                break
+        if not photog:
+            p_match = re.search(r'(?:photo(?:graphy)?\s*(?:by)?|photos\s*by)\s*([A-Z][a-z]+\s+[A-Z][a-z]+)', block, re.IGNORECASE)
+            if p_match:
+                photog = p_match.group(1)
+                
+        pages_ref = []
+        pg_m = re.findall(r'(?:pages?|p\.?|,\s*)(\d{1,3}(?:\s*-\s*\d{1,3})?)', block[mm.start()-start_idx:])
+        for pm in pg_m:
+            if '-' in pm:
+                ps, pe = pm.split('-')
+                try:
+                    pages_ref.extend(range(int(ps), int(pe) + 1))
+                except Exception:
+                    pass
+            else:
+                try:
+                    pages_ref.append(int(pm))
+                except Exception:
+                    pass
+        pages_ref = sorted(set(p for p in pages_ref if 1 <= p <= 200))
+        
+        pre_meas = full_text[start_idx:mm.start()]
+        name_cand = None
+        names_found = re.findall(r'\b([A-Z]{2,}(?:\s+[A-Z]{2,})+)\b', pre_meas)
+        if names_found:
+            name_cand = clean_model_name(names_found[-1].title())
+        if not name_cand:
+            names_mixed = re.findall(r'\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b', pre_meas)
+            if names_mixed:
+                for cand in reversed(names_mixed):
+                    cleaned = clean_model_name(cand)
+                    if cleaned:
+                        name_cand = cleaned
+                        break
+                    
+        if name_cand:
+            cards.append({
+                "model_name": name_cand,
+                "height": height,
+                "weight_lbs": weight,
+                "measurements": meas_str,
+                "photographer": photog,
+                "referenced_pages": pages_ref,
+                "directory_page": page_num,
+                "bio_snippet": block[:180]
+            })
+            
+    return cards
+
+
+def extract_dynamic_issue_structure(doc, pdf_path, category="PB"):
+    """
+    Fast Pass dynamic issue structure extractor:
+    Scans every page to classify its role (Cover, TOC, Directory, Pictorial, Ad, Letters).
+    Extracts TOC models and Bio cards wherever they are located in the document.
+    If TOC or Bio cards are absent, falls back to interior caption & opener entity extraction.
+    Returns fused model registry, cover data, and page-to-model map.
+    """
+    meta = parse_filename_metadata(pdf_path)
+    total_pages = len(doc)
+    
+    # 1. Cover
+    p0 = doc[0]
+    cover_text = p0.get_text().strip()
+    if not cover_text:
+        _, _, pix0 = extract_page_image(p0, dpi=100)
+        cover_text = extract_ocr_from_pixmap(pix0).strip()
+    
+    cover_girl = None
+    cg_match = re.search(r'(?:COVER\s*GIRL|FEATURING|ON\s*THE\s*COVER)\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)', cover_text, re.IGNORECASE)
+    if cg_match:
+        cover_girl = clean_model_name(cg_match.group(1).title())
+    if not cover_girl:
+        cand_names = re.findall(r'\b([A-Z][A-Z\s]{2,25})\b', cover_text)
+        for cand in cand_names:
+            c_clean = clean_model_name(cand.title())
+            if c_clean and len(c_clean.split()) == 2 and c_clean not in ["Spring Fashion", "Fashion Special", "Younger Instantly", "Great Hair", "Cover Looks"]:
+                cover_girl = c_clean
+                break
+
+    cover_data = {
+        "publication": meta["publication"],
+        "magazine_title": meta["magazine_title"],
+        "issue_date": meta["issue_date"],
+        "year": meta["year"],
+        "cover_girl": cover_girl or "Cover Girl",
+        "cover_taglines": [l.strip() for l in cover_text.split('\n')[:3] if l.strip()],
+        "stockist_directory": []
+    }
+
+    # 2. Dynamic Scan Across All Pages for TOC, Bio Cards, Stockist Directory, and Captions
+    toc_models = []
+    bio_cards = []
+    caption_models = []
+    all_stockist_entries = []
+    page_credits = {}
+
+    for pno in range(1, total_pages - 1):
+        p = doc[pno]
+        txt = p.get_text().strip()
+        if not txt:
+            if total_pages <= 100 and (pno <= 12 or pno >= total_pages - 10):
+                _, _, pix = extract_page_image(p, dpi=90)
+                txt = extract_ocr_from_pixmap(pix).strip()
+        if not txt:
+            continue
+            
+        txt = normalize_ocr_text(txt)
+        role = classify_page_archetype(pno, total_pages, txt)
+        
+        # 1. Table of Contents
+        if role == "Table_of_Contents":
+            lines = [l.strip() for l in txt.split('\n') if l.strip()]
+            current_photog = None
+            for idx, line in enumerate(lines):
+                pm = re.search(r'(?:Photographs?|Photography)\s+by\s+([A-Z][a-zA-Z\s\'-]+)', line, re.IGNORECASE)
+                if pm:
+                    current_photog = pm.group(1).strip().title()
+                    continue
+                
+                m_single = re.search(r'^(?:(?:\d+\s*[Ss]):\s*)?([A-Z][A-Za-z\s\'’\-]+?)(?::[^\d]+)?\s+(\d{2,3})$', line)
+                if m_single:
+                    raw_n = m_single.group(1).strip()
+                    pg = int(m_single.group(2))
+                    cleaned = clean_model_name(raw_n.title())
+                    if cleaned and cleaned not in ["Fashion", "Features", "Highlights", "Hottest Shoes", "Cover Looks"]:
+                        toc_models.append({
+                            "model_name": cleaned,
+                            "page_start": pg,
+                            "toc_page": pno,
+                            "photographer": current_photog
+                        })
+                    continue
+
+                if line.endswith(":") and len(line) < 35:
+                    cand_name = clean_model_name(line[:-1].strip().title())
+                    if cand_name and cand_name not in ["Fashion", "Features", "Highlights", "Cover Looks"]:
+                        for offset in [1, 2]:
+                            if idx + offset < len(lines):
+                                next_l = lines[idx + offset]
+                                pg_m = re.search(r'\b(\d{2,3})$', next_l)
+                                if pg_m:
+                                    pg = int(pg_m.group(1))
+                                    next_photog = current_photog
+                                    if idx + offset + 2 < len(lines):
+                                        p_match = re.search(r'(?:Photographs?|Photography)\s+by\s+([A-Z][a-zA-Z\s\'-]+)', lines[idx + offset + 2], re.IGNORECASE)
+                                        if p_match:
+                                            next_photog = p_match.group(1).strip().title()
+                                    toc_models.append({
+                                        "model_name": cand_name,
+                                        "page_start": pg,
+                                        "toc_page": pno,
+                                        "photographer": next_photog
+                                    })
+                                    break
+
+                m1 = re.search(r'^([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\s+(\d{1,3})\b', line)
+                m2 = re.search(r'^(\d{1,3})\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)', line)
+                if m1:
+                    raw_n, pg = m1.group(1).strip(), int(m1.group(2))
+                    name = clean_model_name(raw_n)
+                    if name and not any(tm["model_name"] == name for tm in toc_models):
+                        toc_models.append({"model_name": name, "page_start": pg, "toc_page": pno, "photographer": current_photog})
+                elif m2:
+                    pg, raw_n = int(m2.group(1)), m2.group(2).strip()
+                    name = clean_model_name(raw_n)
+                    if name and not any(tm["model_name"] == name for tm in toc_models):
+                        toc_models.append({"model_name": name, "page_start": pg, "toc_page": pno, "photographer": current_photog})
+
+        # 2. Stockist Directory / Where to Buy
+        elif role == "Stockist_Directory" or "WHERE TO BUY" in txt.upper() or "SHOPPING DIRECTORY" in txt.upper():
+            entries = extract_stockist_directory_entries(txt)
+            if entries:
+                all_stockist_entries.extend(entries)
+
+        # 3. Bio Directory
+        elif role == "Structured_Grid_Directory":
+            cards = extract_bio_cards_from_text(txt, pno)
+            if cards:
+                bio_cards.extend(cards)
+
+        # 4. Feature Pictorial & Interior Spreads
+        else:
+            credits = extract_fashion_and_creative_credits(txt)
+            if credits.get("photographer") or credits.get("fashion_editor_stylist") or credits.get("wardrobe_mentions"):
+                page_credits[pno] = credits
+
+            pos_matches = re.finditer(r'([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\s*\((above|below|left|right|top|opposite|center|seated|standing|reclining)[^\)]*\)', txt, re.IGNORECASE)
+            for pm in pos_matches:
+                raw_n = pm.group(1).strip()
+                c_name = clean_model_name(raw_n)
+                if c_name:
+                    caption_models.append({
+                        "model_name": c_name,
+                        "page": pno,
+                        "positional_hint": pm.group(2).lower(),
+                        "snippet": txt[:200]
+                    })
+                    
+            bio_matches = re.finditer(r'([A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,3})\s+(?:made her|was|is|knows(?:\s+that)?|enjoys|demonstrates|resists|shifts|pauses|appeared|hates(?:\s+to)?|hatesto|loves|began|debuted|says|lives|works|studied|attended|blessed)\b', txt, re.IGNORECASE)
+            for bm in bio_matches:
+                raw_n = bm.group(1).strip()
+                c_name = clean_model_name(raw_n)
+                if c_name:
+                    caption_models.append({
+                        "model_name": c_name,
+                        "page": pno,
+                        "snippet": txt[:200]
+                    })
+                    
+            photo_m = re.search(r'(?:PHOTOGRAPHY BY|PHOTOS BY|PHOTOGRAPHED BY)\s+([A-Z][a-z]+\s+[A-Z][a-z]+)', txt, re.IGNORECASE)
+            if photo_m:
+                photog_name = photo_m.group(1).strip()
+                for cm in caption_models:
+                    if cm["page"] == pno and "photographer" not in cm:
+                        cm["photographer"] = photog_name
+
+    # 3. Global Entity Assembly
+    cover_data["stockist_directory"] = all_stockist_entries
+    if cover_data["cover_girl"] in [None, "Cover Girl"] and toc_models:
+        cover_data["cover_girl"] = toc_models[0]["model_name"]
+
+    model_registry = {}
+    
+    # Priority A: Bio Cards (contains authoritative vital stats and photographers)
+    for card in bio_cards:
+        name = card["model_name"]
+        slug = slugify(name)
+        model_registry[slug] = {
+            "model_name": name,
+            "slug": slug,
+            "height": card["height"],
+            "weight_lbs": card["weight_lbs"],
+            "measurements": card["measurements"],
+            "photographer": card["photographer"],
+            "positional_hint": None,
+            "pages": card["referenced_pages"],
+            "start_page": card["referenced_pages"][0] if card["referenced_pages"] else None,
+            "end_page": card["referenced_pages"][-1] if card["referenced_pages"] else None,
+            "is_cover_girl": bool(cover_data["cover_girl"] and slugify(cover_data["cover_girl"]) == slug),
+            "bio_summary": card["bio_snippet"],
+            "wardrobe_items": []
+        }
+
+    # Priority B: TOC Entries (contains model names, starting pages, photographers, and stockist links)
+    sorted_toc = sorted(toc_models, key=lambda x: x["page_start"])
+    for i, tm in enumerate(sorted_toc):
+        name = tm["model_name"]
+        slug = slugify(name)
+        start_p = tm["page_start"]
+        end_p = sorted_toc[i + 1]["page_start"] - 1 if i + 1 < len(sorted_toc) else min(start_p + 7, total_pages - 2)
+        spread_pages = list(range(start_p, max(start_p, end_p) + 1))
+        
+        # Link wardrobe items from stockist directory
+        matched_wardrobe = []
+        for s_entry in all_stockist_entries:
+            p_ref = s_entry.get("page_ref")
+            if p_ref in spread_pages or (p_ref + 3) in spread_pages or (p_ref + 4) in spread_pages:
+                matched_wardrobe.append(s_entry)
+                
+        # Link credits from page_credits if any
+        photog = tm.get("photographer")
+        stylist = None
+        for p_cand in [start_p, start_p + 1, start_p + 2, start_p + 3, start_p + 4]:
+            if p_cand in page_credits:
+                if not photog and page_credits[p_cand].get("photographer"):
+                    photog = page_credits[p_cand]["photographer"]
+                if not stylist and page_credits[p_cand].get("fashion_editor_stylist"):
+                    stylist = page_credits[p_cand]["fashion_editor_stylist"]
+
+        if slug not in model_registry:
+            model_registry[slug] = {
+                "model_name": name,
+                "slug": slug,
+                "height": None,
+                "weight_lbs": None,
+                "measurements": None,
+                "photographer": photog,
+                "stylist": stylist,
+                "positional_hint": None,
+                "pages": spread_pages,
+                "start_page": start_p,
+                "end_page": end_p,
+                "is_cover_girl": bool(cover_data["cover_girl"] and slugify(cover_data["cover_girl"]) == slug),
+                "bio_summary": f"Featured in {meta['magazine_title']} {meta['issue_date']}",
+                "wardrobe_items": matched_wardrobe
+            }
+        else:
+            if not model_registry[slug]["pages"]:
+                model_registry[slug]["pages"] = spread_pages
+                model_registry[slug]["start_page"] = start_p
+                model_registry[slug]["end_page"] = end_p
+            if photog and not model_registry[slug].get("photographer"):
+                model_registry[slug]["photographer"] = photog
+            if matched_wardrobe:
+                model_registry[slug].setdefault("wardrobe_items", []).extend(matched_wardrobe)
+
+    # Priority C: Caption & Opener Scan (for vintage & collector issues where TOC/BIO are absent)
+    for cm in caption_models:
+        name = cm["model_name"]
+        slug = slugify(name)
+        p = cm["page"]
+        pos_hint = cm.get("positional_hint")
+        if slug not in model_registry:
+            model_registry[slug] = {
+                "model_name": name,
+                "slug": slug,
+                "height": None,
+                "weight_lbs": None,
+                "measurements": None,
+                "photographer": cm.get("photographer"),
+                "positional_hint": pos_hint,
+                "pages": [p],
+                "start_page": p,
+                "end_page": min(p + 3, total_pages - 1),
+                "is_cover_girl": bool(cover_data["cover_girl"] and slugify(cover_data["cover_girl"]) == slug),
+                "bio_summary": cm.get("snippet"),
+                "wardrobe_items": []
+            }
+        else:
+            if pos_hint and not model_registry[slug].get("positional_hint"):
+                model_registry[slug]["positional_hint"] = pos_hint
+            if p not in model_registry[slug]["pages"]:
+                model_registry[slug]["pages"].append(p)
+                model_registry[slug]["pages"].sort()
+
+    # Priority D: Fallback for known ground-truth issues (e.g. Playboy Vixens)
+    if "vixen" in pdf_path.lower():
+        for k, v in PLAYBOY_VIXENS_2006_08_09_REGISTRY.items():
+            if k not in model_registry:
+                model_registry[k] = dict(v)
+
+    # Cover Girl Entry
+    cg_name = cover_data.get("cover_girl")
+    if cg_name and cg_name != "Cover Girl":
+        c_slug = slugify(cg_name)
+        if c_slug in model_registry:
+            model_registry[c_slug]["is_cover_girl"] = True
+        else:
+            model_registry[c_slug] = {
+                "model_name": cg_name,
+                "slug": c_slug,
+                "height": None,
+                "weight_lbs": None,
+                "measurements": None,
+                "photographer": None,
+                "positional_hint": None,
+                "pages": [0],
+                "start_page": 0,
+                "end_page": 0,
+                "is_cover_girl": True,
+                "bio_summary": f"Cover Girl for {meta['magazine_title']} {meta['issue_date']}",
+                "wardrobe_items": []
+            }
+
+    return cover_data, model_registry
+
+
+def build_global_entity_registry(cover_data, doc_stem, total_pages, images_dir, category, doc=None, pdf_path=None, model_registry=None):
     """
     Entity Fusion & Composite Chunking:
     Loads authoritative model knowledge or dynamically constructs entity graph with 0-indexed page numbers.
@@ -485,6 +1600,10 @@ def build_global_entity_registry(cover_data, doc_stem, total_pages, images_dir, 
     
     if "vixen" in doc_stem.lower():
         model_registry = {k: dict(v) for k, v in PLAYBOY_VIXENS_2006_08_09_REGISTRY.items()}
+    elif model_registry is not None:
+        pass
+    elif doc is not None and pdf_path is not None:
+        _, model_registry = extract_dynamic_issue_structure(doc, pdf_path, category=category)
     else:
         model_registry = {}
         
@@ -495,7 +1614,6 @@ def build_global_entity_registry(cover_data, doc_stem, total_pages, images_dir, 
         entity["relative_thumbnail_path"] = f"data/images/{category}/{doc_stem}/thumbnails/{slug}_headshot.jpg"
         for p in entity.get("pages", []):
             if p in page_to_model:
-                # Tandem spread (e.g. Heather Bauer & Kelly Buchanan)
                 prev = page_to_model[p]
                 tandem = dict(prev)
                 tandem["model_name"] = f"{prev['model_name']} & {entity['model_name']}"
@@ -508,8 +1626,7 @@ def build_global_entity_registry(cover_data, doc_stem, total_pages, images_dir, 
             else:
                 page_to_model[p] = entity
 
-    # Ensure Cover Girl is registered for page 0 (Cover)
-    c_girl = cover_data.get("cover_girl", "Elizabeth JoAnne")
+    c_girl = cover_data.get("cover_girl", "Cover Girl")
     c_slug = slugify(c_girl)
     if c_slug in model_registry:
         model_registry[c_slug]["is_cover_girl"] = True
@@ -520,36 +1637,7 @@ def build_global_entity_registry(cover_data, doc_stem, total_pages, images_dir, 
 
 
 # ═══════════════════════════════════════════════════════════════════
-# Layer 2: Autonomous Page Archetype Classifier
-# ═══════════════════════════════════════════════════════════════════
-
-def classify_page_archetype(page_num, total_pages, ocr_text):
-    """
-    Autonomous Page Classifier (0-Indexed):
-    Determines whether a page is Cover (0), TOC (1-2), Pictorial, Structured Directory (84-85), Ad (86, 88), Letters (87), or Back Cover (total_pages - 1).
-    """
-    upper = ocr_text.upper()
-    
-    if page_num == 0:
-        return "Cover"
-    if page_num == total_pages - 1:
-        return "Back_Cover"
-    if page_num in [1, 2]:
-        return "Table_of_Contents"
-    if page_num in [84, 85] or "BARE FACTS" in upper or "VITAL STATS" in upper:
-        return "Structured_Grid_Directory"
-    if page_num == 86 or any(kw in upper for kw in ["SUBSCRIBE", "SUBSCRIBE TODAY", "ORDER THE DIGITAL"]):
-        return "Advertisement"
-    if page_num == 87 or any(kw in upper for kw in ["LETTERS", "DEAR RITA", "FEEDBACK", "TANTRIC SEX"]):
-        return "Reader_Letters"
-    if page_num == 88 or any(kw in upper for kw in ["CREDITS", "PLAYBOY IS COMING", "CASTING CALL"]):
-        return "Advertisement"
-        
-    return "Feature_Pictorial"
-
-
-# ═══════════════════════════════════════════════════════════════════
-# Layer 3: Two-Stage VLM Attribute Extraction (Pose & Visual Scene)
+# Layer 4: Two-Stage VLM Attribute Extraction (Pose & Visual Scene)
 # ═══════════════════════════════════════════════════════════════════
 
 POSE_TAXONOMY = [
@@ -699,7 +1787,7 @@ def structure_vlm_output(vlm_desc, ocr_text, page_type, page_num, active_entity,
             "weight_lbs": active_entity.get("weight_lbs") if active_entity else None,
             "bodily_dimensions": active_entity.get("measurements", "Unspecified") if active_entity else "Unspecified",
             "natural_status": "Natural",
-            "was_playmate": ("Miss" in str(active_entity.get("title_awards", []))),
+            "was_playmate": ("Miss" in str(active_entity.get("title_awards", []))) if active_entity else False,
             "playmate_details": active_entity.get("title_awards", [None])[0] if active_entity and active_entity.get("title_awards") else None,
             "title_awards": active_entity.get("title_awards", []) if active_entity else []
         },
@@ -756,32 +1844,31 @@ def analyze_specialized_page(page_type, ocr_text, page_num, cover_data, model_re
         data["visual_narrative"] = f"Model bio directory & vital stats compendium ('Bare Facts') covering measurements, bios, and photographers."
         
     elif page_type == "Advertisement":
-        promoted = "Playboy's Lingerie" if page_num == 86 else "Playboy Special Editions / Casting Call"
         data["marketing_and_promotions"] = {
-            "ad_category": "Subscription" if page_num == 86 else "Casting_Call",
-            "promoted_publication_or_brand": promoted,
-            "casting_locations": ["Cleveland", "Kansas City", "Seattle", "Chicago"] if page_num == 88 else [],
-            "referenced_models_or_celebrities": ["Brande Roderick", "Brande Moses"] if page_num == 86 else [],
+            "ad_category": "Magazine_Promotion",
+            "promoted_publication_or_brand": "Playboy Special Editions",
+            "casting_locations": [],
+            "referenced_models_or_celebrities": [],
             "summary": ocr_text[:250]
         }
-        data["visual_narrative"] = f"Advertisement / promotional notice for {promoted}."
+        data["visual_narrative"] = "Advertisement / promotional notice."
         
     elif page_type == "Reader_Letters":
         data["reader_letters_data"] = {
-            "referenced_celebrities": ["Marilyn Monroe", "Eva Longoria", "Angelina Jolie", "Breann McGregor"],
-            "topics": ["Reader debate on blonde vs brunette models", "Rita G advice column on relationships and tantric sex"],
+            "referenced_celebrities": [],
+            "topics": ["Reader letters & editorial feedback"],
             "summary": ocr_text[:250]
         }
-        data["visual_narrative"] = f"Reader letters, editorial feedback, and Rita G relationship advice column."
+        data["visual_narrative"] = "Reader letters and editorial feedback column."
         
     elif page_type == "Back_Cover":
-        data["visual_narrative"] = f"Rear cover of {cover_data.get('magazine_title', 'publication')} featuring overview thumbnail collage of all featured models."
+        data["visual_narrative"] = f"Rear cover of {cover_data.get('magazine_title', 'publication')}."
         
     return data
 
 
 # ═══════════════════════════════════════════════════════════════════
-# Layer 4: Semantic Vector Synthesis & ChromaDB Indexing
+# Layer 5: Semantic Vector Synthesis & ChromaDB Indexing
 # ═══════════════════════════════════════════════════════════════════
 
 def _format_generic_dict(d, prefix=""):
@@ -815,7 +1902,6 @@ def synthesize_vector_text(doc_id, page_num, data, cover_data=None):
     theme = data.get("visual_setting_and_theme", {})
     credits_info = data.get("production_and_credits", {})
     
-    # Check if this is a specialized or custom domain schema
     is_custom_schema = bool(not page_type and not attrs and not styling and not theme)
     
     if is_custom_schema:
@@ -896,7 +1982,7 @@ def synthesize_vector_text(doc_id, page_num, data, cover_data=None):
 
 
 # ═══════════════════════════════════════════════════════════════════
-# State Management & Ingestion Orchestrator (0-Indexed)
+# Layer 6: State Management & Ingestion Orchestrator
 # ═══════════════════════════════════════════════════════════════════
 
 def clear_image_state(doc_stem="Playboys_Vixens_2006-08_09", category="PB"):
@@ -915,7 +2001,6 @@ def clear_image_state(doc_stem="Playboys_Vixens_2006-08_09", category="PB"):
     os.makedirs(os.path.join(target_img_dir, "spreads"), exist_ok=True)
     os.makedirs(os.path.join(target_img_dir, "thumbnails"), exist_ok=True)
     
-    # Clear ChromaDB records for this document
     try:
         collection = get_chroma_collection()
         collection.delete(where={"document_id": doc_stem})
@@ -923,7 +2008,6 @@ def clear_image_state(doc_stem="Playboys_Vixens_2006-08_09", category="PB"):
     except Exception as e:
         print(f"  --> ChromaDB reset notice: {e}", flush=True)
         
-    # Clear Catalog JSON if exists
     catalog_path = os.path.join(PROJECT_ROOT, "data", category, f"{doc_stem}_catalog.json")
     if os.path.exists(catalog_path):
         try:
@@ -960,17 +2044,27 @@ def process_visual_pdf(
     pages=None,
     default_year=None,
     render_spreads=True,
-    clear_existing=False
+    clear_existing=False,
+    metadata_only=False,
+    force=False
 ):
     """
-    Full Universal Periodical Ingestion Pipeline (0-Indexed):
+    Universal Periodical Ingestion Pipeline (0-Indexed):
     Cover is Page 0, inside pages are Pages 1 to total_pages - 1.
-    Supports specific page lists (e.g. first 10 + last 5), full clearing, and dual indexing.
+    Supports Stage 1 Fast Metadata Ingestion (metadata_only=True) in ~2s,
+    as well as full Stage 2 multi-modal VLM and ChromaDB embedding.
     """
     if not os.path.exists(pdf_path):
         raise FileNotFoundError(f"PDF file not found: {pdf_path}")
         
-    doc_stem = os.path.splitext(os.path.basename(pdf_path))[0]
+    meta = parse_filename_metadata(pdf_path)
+    doc_stem = meta["clean_stem"]
+    
+    catalog_path = os.path.join(PROJECT_ROOT, "data", category, f"{doc_stem}_catalog.json")
+    
+    # Fast Resume: if metadata_only and catalog already exists and not clearing/forcing, return immediately
+    if metadata_only and not clear_existing and not force and os.path.exists(catalog_path):
+        return catalog_path
     
     if clear_existing:
         clear_image_state(doc_stem, category)
@@ -984,35 +2078,107 @@ def process_visual_pdf(
         os.makedirs(spreads_img_dir, exist_ok=True)
     os.makedirs(thumbnails_dir, exist_ok=True)
     
-    vlm_model = get_active_vision_model()
     doc = fitz.open(pdf_path)
     total_pages = len(doc)
     
     print(f"\n=======================================================", flush=True)
-    print(f" [Periodical Ingest Engine] Processing: {os.path.basename(pdf_path)} (0-Indexed)", flush=True)
+    print(f" [Periodical Ingest Engine] Processing: {meta['magazine_title']} ({meta['issue_date']})", flush=True)
     print(f"   Category:        {category}", flush=True)
-    print(f"   Vision LLM:      {vlm_model}", flush=True)
+    print(f"   Mode:            {'FAST STAGE 1 (Metadata Only)' if metadata_only else 'FULL MULTI-MODAL (VLM + Vector)'}", flush=True)
     print(f"   Images Target:   {output_img_dir}", flush=True)
     print(f"   Total Doc Pages: {total_pages} (0 to {total_pages - 1})", flush=True)
     print(f"=======================================================", flush=True)
     
-    cover_data = {
-        "publication": "Playboy Special Editions",
-        "magazine_title": "Playboy's Vixens",
-        "issue_date": "August/September 2006",
-        "year": 2006,
-        "cover_girl": "Elizabeth JoAnne",
-        "cover_taglines": ["The Power of Seduction", "Will Straighten More Than Your Tie"]
-    }
-
     # ─────────────────────────────────────────────────────────────
-    # PASS 1: Global Entity Fusion (0-Indexed)
+    # PASS 1: Dynamic Global Entity Fusion (0-Indexed)
     # ─────────────────────────────────────────────────────────────
+    cover_data, dynamic_registry = extract_dynamic_issue_structure(doc, pdf_path, category=category)
+    
     model_registry, page_to_model = build_global_entity_registry(
-        cover_data, doc_stem, total_pages, DEFAULT_IMAGES_DIR, category
+        cover_data, doc_stem, total_pages, DEFAULT_IMAGES_DIR, category, doc=doc, pdf_path=pdf_path, model_registry=dynamic_registry
     )
 
-    # Determine pages to process
+    os.makedirs(os.path.dirname(catalog_path), exist_ok=True)
+    
+    # Crop headshots and cover image
+    p0 = doc[0]
+    pil_p0, _, _ = extract_page_image(p0, dpi=150)
+    p0_path = os.path.join(output_img_dir, "page_000.jpg")
+    pil_p0.save(p0_path, "JPEG", quality=88)
+    
+    sorted_models = sorted(model_registry.items(), key=lambda x: x[1].get("start_page") or 0)
+    for idx, (m_slug, m_info) in enumerate(sorted_models):
+        t_path = m_info.get("thumbnail_path")
+        if t_path and (not os.path.exists(t_path) or clear_existing):
+            start_p = m_info.get("start_page") or 0
+            if 0 <= start_p < total_pages:
+                try:
+                    next_start = (sorted_models[idx + 1][1].get("start_page") or total_pages) if idx + 1 < len(sorted_models) else total_pages
+                    end_p = min(total_pages - 1, next_start - 1 if next_start > start_p else start_p + 3)
+                    crop_model_thumbnail_from_spread(
+                        doc,
+                        start_p,
+                        end_p,
+                        t_path,
+                        positional_hint=m_info.get("positional_hint"),
+                        model_name=m_info.get("model_name"),
+                        dpi=150
+                    )
+                except Exception:
+                    pass
+
+    # If metadata_only mode (Fast Pass Stage 1), construct catalog and return immediately
+    if metadata_only:
+        catalog_entries = []
+        catalog_entries.append({
+            "page_number": 0,
+            "page_type": "Cover",
+            "model_name": cover_data.get("cover_girl", "Cover Girl"),
+            "is_cover_girl": True,
+            "document_id": doc_stem,
+            "publication_metadata": cover_data,
+            "image_path": p0_path,
+            "relative_image_path": f"data/images/{category}/{doc_stem}/page_000.jpg",
+            "models_in_issue": list(model_registry.values())
+        })
+        
+        for m_slug, m_info in model_registry.items():
+            start_p = m_info.get("start_page") or 0
+            catalog_entries.append({
+                "page_number": start_p,
+                "page_type": "Feature_Pictorial" if start_p > 0 else "Cover",
+                "model_name": m_info.get("model_name"),
+                "is_cover_girl": m_info.get("is_cover_girl", False),
+                "document_id": doc_stem,
+                "physical_attributes": {
+                    "height": m_info.get("height", "Unspecified"),
+                    "weight_lbs": m_info.get("weight_lbs"),
+                    "bodily_dimensions": m_info.get("measurements", "Unspecified"),
+                    "hair_color": m_info.get("hair_color", "Unknown")
+                },
+                "production_and_credits": {
+                    "photographer": m_info.get("photographer"),
+                    "fashion_editor_stylist": m_info.get("stylist")
+                },
+                "wardrobe_items": m_info.get("wardrobe_items", []),
+                "spread_pages": m_info.get("pages", [start_p]),
+                "thumbnail_path": m_info.get("thumbnail_path"),
+                "relative_thumbnail_path": m_info.get("relative_thumbnail_path"),
+                "publication_metadata": cover_data
+            })
+            
+        with open(catalog_path, "w", encoding="utf-8") as f:
+            json.dump(catalog_entries, f, indent=2)
+            
+        doc.close()
+        print(f"[Stage 1 Fast Ingest] Generated issue catalog: {catalog_path} ({len(model_registry)} models)", flush=True)
+        return catalog_path
+
+    # ─────────────────────────────────────────────────────────────
+    # PASS 2: Full Multi-Modal VLM & ChromaDB Embedding Ingestion
+    # ─────────────────────────────────────────────────────────────
+    vlm_model = get_active_vision_model()
+    
     if pages is not None:
         target_pages = sorted(set(p for p in pages if 0 <= p < total_pages))
     elif max_pages is not None:
@@ -1022,27 +2188,13 @@ def process_visual_pdf(
         target_pages = list(range(start_page, total_pages))
         
     collection = get_chroma_collection()
-    catalog_path = os.path.join(PROJECT_ROOT, "data", category, f"{doc_stem}_catalog.json")
     catalog_dict = {}
-    if not clear_existing and os.path.exists(catalog_path):
-        try:
-            with open(catalog_path, "r", encoding="utf-8") as f:
-                existing_items = json.load(f)
-                for item in existing_items:
-                    if isinstance(item, dict) and "page_number" in item:
-                        catalog_dict[item["page_number"]] = item
-            print(f"  [Catalog Merge] Loaded {len(catalog_dict)} existing catalog entries from disk.", flush=True)
-        except Exception as e:
-            print(f"  [Catalog Merge Notice]: {e}", flush=True)
     
     print(f"\n[Pass 2: Multi-Modal Ingestion] Ingesting {len(target_pages)} selected pages: {target_pages}...", flush=True)
-    
     rendered_pil_pages = {}
     
     for page_num in target_pages:
         page = doc[page_num]
-        
-        # 1. Render single page image (0-indexed: page_000.jpg for Cover)
         img_filename = f"page_{page_num:03d}.jpg"
         img_path = os.path.join(output_img_dir, img_filename)
         rel_img_path = f"data/images/{category}/{doc_stem}/{img_filename}"
@@ -1053,7 +2205,6 @@ def process_visual_pdf(
         
         ocr_text = extract_ocr_from_pixmap(pix)
         
-        # 2. Render 2-Page Horizontal Facing Spread (Odd left + Even right: spread_001_002.jpg, spread_003_004.jpg)
         spread_img_path = None
         rel_spread_path = None
         if render_spreads and page_num % 2 == 0 and page_num > 0:
@@ -1061,7 +2212,6 @@ def process_visual_pdf(
             right_pno = page_num
             left_pil = rendered_pil_pages.get(left_pno)
             if left_pil is None:
-                # Check if rendered previously on disk
                 prev_path = os.path.join(output_img_dir, f"page_{left_pno:03d}.jpg")
                 if os.path.exists(prev_path):
                     left_pil = Image.open(prev_path)
@@ -1071,44 +2221,26 @@ def process_visual_pdf(
                 spread_img_path = os.path.join(spreads_img_dir, spread_filename)
                 rel_spread_path = f"data/images/{category}/{doc_stem}/spreads/{spread_filename}"
                 spread_pil.save(spread_img_path, "JPEG", quality=85)
-                print(f"  --> Facing spread saved: {spread_filename}", flush=True)
                 if left_pno in catalog_dict:
                     catalog_dict[left_pno]["spread_image_path"] = spread_img_path
                     catalog_dict[left_pno]["relative_spread_path"] = rel_spread_path
 
-        # 3. Classify Page Archetype (0-Indexed)
         page_type = classify_page_archetype(page_num, total_pages, ocr_text)
         active_entity = page_to_model.get(page_num)
         
-        # 4. Generate & Save Model Headshot Thumbnails for all models starting on this page
-        for m_slug, m_info in model_registry.items():
-            if m_info.get("start_page") == page_num or (page_num == 0 and m_info.get("is_cover_girl")):
-                t_path = m_info.get("thumbnail_path")
-                if t_path and not os.path.exists(t_path):
-                    crop_and_save_headshot(pil_img, t_path)
-                    print(f"  --> Cropped headshot thumbnail: {os.path.basename(t_path)}", flush=True)
-
         thumb_path = active_entity.get("thumbnail_path") if active_entity else None
         rel_thumb_path = active_entity.get("relative_thumbnail_path") if active_entity else None
 
-        # 5. Multi-Modal Vision & Attribute Extraction
-        print(f"\n--> Page {page_num:02d}/{total_pages - 1} ({img_filename}) [{page_type}]", flush=True)
-        
         if page_type in ["Feature_Pictorial", "Cover"]:
             model_label = active_entity.get('model_name') if active_entity else 'Unknown'
-            print(f"    Invoking VLM ({vlm_model}) for {model_label} (Classifying Pose, Wardrobe, Setting)...", flush=True)
-            
             vlm_prompt = build_vlm_prompt_for_page(page_type, active_entity)
             vlm_desc = analyze_page_with_vlm(img_bytes, vlm_model=vlm_model, prompt=vlm_prompt)
             if not vlm_desc:
                 vlm_desc = f"Pictorial spread featuring {model_label}."
-                
             page_data = structure_vlm_output(vlm_desc, ocr_text, page_type, page_num, active_entity, cover_data)
         else:
-            print(f"    Processing specialized layout [{page_type}]...", flush=True)
             page_data = analyze_specialized_page(page_type, ocr_text, page_num, cover_data, model_registry)
 
-        # Merge publication and image metadata
         page_data["publication_metadata"] = cover_data
         page_data["year"] = cover_data.get("year", 2006)
         page_data["page_number"] = page_num
@@ -1123,11 +2255,9 @@ def process_visual_pdf(
             page_data["thumbnail_path"] = thumb_path
             page_data["relative_thumbnail_path"] = rel_thumb_path
 
-        # 6. Vector Narrative & Embedding
         vector_text = synthesize_vector_text(doc_stem, page_num, page_data, cover_data)
         embedding = get_embedding(vector_text)
         
-        # 7. Metadata for ChromaDB
         attrs = page_data.get("physical_attributes", {})
         styling = page_data.get("presentation_and_styling", {})
         theme_info = page_data.get("visual_setting_and_theme", {})
@@ -1138,7 +2268,7 @@ def process_visual_pdf(
         
         metadata = {
             "document_id": str(doc_stem),
-            "magazine_title": str(cover_data.get("magazine_title", "Playboy's Vixens")),
+            "magazine_title": str(cover_data.get("magazine_title", meta["magazine_title"])),
             "issue_date": str(cover_data.get("issue_date", "")),
             "category": str(category),
             "page_number": int(page_num),
@@ -1175,24 +2305,199 @@ def process_visual_pdf(
             
         collection.upsert(**upsert_kwargs)
         catalog_dict[page_num] = page_data
-        
-        print(f"    Indexed: [{metadata['page_type']}] Model: {metadata['model_name']} | Pose: {metadata['pose']} | Photo: {metadata['photographer']}", flush=True)
 
     doc.close()
     
-    # 8. Save High-Fidelity Unified Catalog JSON
     final_catalog = [catalog_dict[k] for k in sorted(catalog_dict.keys())]
     with open(catalog_path, "w", encoding="utf-8") as f:
         json.dump(final_catalog, f, indent=2)
         
+    return catalog_path
+
+
+def update_master_index_with_catalog(entries, doc_stem, index_path=None):
+    """
+    Update unified master lookup index with entries from an issue catalog.
+    Schema supports:
+    - models (appearances, photographer, stylist, wardrobe_items, physical_attributes)
+    - photographers (shoots across all magazines)
+    - designers_and_brands (mentions, garments, prices)
+    - wardrobe_accessories (garments/accessories cross-indexed by item e.g. scarf, dress, jacket)
+    - issues (issue-level overview)
+    """
+    target_path = index_path or MASTER_INDEX_PATH
+    master_index = {
+        "models": {},
+        "issues": {},
+        "photographers": {},
+        "designers_and_brands": {},
+        "wardrobe_accessories": {}
+    }
+    
+    if os.path.exists(target_path):
+        try:
+            with open(target_path, "r", encoding="utf-8") as f:
+                loaded = json.load(f)
+                master_index.update(loaded)
+        except Exception:
+            pass
+            
+    # Ensure all required top-level keys exist
+    for k in ["models", "issues", "photographers", "designers_and_brands", "wardrobe_accessories"]:
+        if k not in master_index:
+            master_index[k] = {}
+
+    cover_entry = next((e for e in entries if e.get("page_number") == 0), {})
+    pub_meta = cover_entry.get("publication_metadata", {})
+    
+    master_index["issues"][doc_stem] = {
+        "document_id": doc_stem,
+        "magazine_title": pub_meta.get("magazine_title", doc_stem),
+        "year": pub_meta.get("year"),
+        "issue_date": pub_meta.get("issue_date"),
+        "cover_girl": cover_entry.get("model_name"),
+        "catalog_path": target_path
+    }
+    
+    for entry in entries:
+        m_name = entry.get("model_name")
+        prod_credits = entry.get("production_and_credits", {})
+        photog = prod_credits.get("photographer")
+        stylist = prod_credits.get("fashion_editor_stylist")
+        wardrobe_items = entry.get("wardrobe_items", [])
+        
+        # 1. Models & Celebrities
+        if m_name and m_name not in ["Unknown", "Cover Girl", "Featured Subject", "Featured Cast"]:
+            m_slug = slugify(m_name)
+            if m_slug not in master_index["models"]:
+                master_index["models"][m_slug] = {
+                    "model_name": m_name,
+                    "appearances": []
+                }
+                
+            appearance = {
+                "document_id": doc_stem,
+                "magazine_title": pub_meta.get("magazine_title", doc_stem),
+                "year": pub_meta.get("year"),
+                "issue_date": pub_meta.get("issue_date"),
+                "page_number": entry.get("page_number", 0),
+                "spread_pages": entry.get("spread_pages", [entry.get("page_number", 0)]),
+                "is_cover_girl": entry.get("is_cover_girl", False),
+                "physical_attributes": entry.get("physical_attributes", {}),
+                "photographer": photog,
+                "stylist": stylist,
+                "thumbnail_path": entry.get("thumbnail_path"),
+                "wardrobe_items": wardrobe_items
+            }
+            if not any(a["document_id"] == doc_stem and a["page_number"] == appearance["page_number"] for a in master_index["models"][m_slug]["appearances"]):
+                master_index["models"][m_slug]["appearances"].append(appearance)
+
+        # 2. Photographers (Cross-genre: Terry Richardson shoots in PB and HB)
+        if photog:
+            p_slug = slugify(photog)
+            if p_slug not in master_index["photographers"]:
+                master_index["photographers"][p_slug] = {"photographer": photog, "shoots": []}
+            if not any(s["document_id"] == doc_stem and s.get("page_number") == entry.get("page_number") for s in master_index["photographers"][p_slug]["shoots"]):
+                master_index["photographers"][p_slug]["shoots"].append({
+                    "document_id": doc_stem,
+                    "magazine_title": pub_meta.get("magazine_title"),
+                    "model_name": m_name,
+                    "editorial_title": entry.get("story_title"),
+                    "year": pub_meta.get("year"),
+                    "page_number": entry.get("page_number", 0)
+                })
+
+        # 3. Designers and Brands
+        for w in wardrobe_items:
+            des = w.get("designer")
+            if des:
+                d_clean = des.split(" by ")[0].strip()
+                d_slug = slugify(d_clean)
+                if d_slug not in master_index["designers_and_brands"]:
+                    master_index["designers_and_brands"][d_slug] = {"brand_name": d_clean, "mentions": []}
+                master_index["designers_and_brands"][d_slug]["mentions"].append({
+                    "document_id": doc_stem,
+                    "page_number": entry.get("page_number", 0),
+                    "item": w.get("item"),
+                    "designer_line": des,
+                    "price_usd": w.get("price_usd")
+                })
+
+        # 4. Wardrobe & Accessories (cross-indexed e.g. scarf, lingerie, jacket)
+        for w in wardrobe_items:
+            itm = w.get("item")
+            if itm:
+                itm_slug = slugify(itm)
+                if itm_slug not in master_index["wardrobe_accessories"]:
+                    master_index["wardrobe_accessories"][itm_slug] = []
+                master_index["wardrobe_accessories"][itm_slug].append({
+                    "document_id": doc_stem,
+                    "page_number": entry.get("page_number", 0),
+                    "designer": w.get("designer"),
+                    "item": itm,
+                    "price_usd": w.get("price_usd")
+                })
+
+    os.makedirs(os.path.dirname(os.path.abspath(target_path)), exist_ok=True)
+    with open(target_path, "w", encoding="utf-8") as f:
+        json.dump(master_index, f, indent=2)
+        
+    return master_index
+
+
+def ingest_visual_corpus_metadata(sample_files=None, dir_path=None, category="PB", force_reprocess=False):
+    """
+    Run Fast Stage 1 metadata & structure ingestion across sample issues or full directory.
+    Seamlessly resumes from where it left off, skipping already-generated issue catalogs.
+    Builds and updates the master exact lookup index at data/visual_catalog_index.json.
+    """
+    if sample_files is None and dir_path is None:
+        dir_path = os.path.join(PROJECT_ROOT, f"data/{category}")
+        
+    if sample_files is None:
+        sample_files = [
+            os.path.join(dir_path, f) for f in os.listdir(dir_path)
+            if f.endswith(".pdf") and not f.startswith("Ambush")
+        ]
+        
     print(f"\n=======================================================", flush=True)
-    print(f" [Periodical Ingest Complete] {len(target_pages)} pages processed (Total in catalog: {len(final_catalog)}).", flush=True)
-    print(f"   Catalog saved:    {catalog_path}", flush=True)
-    print(f"   Chroma Collection: {CHROMA_COLLECTION}", flush=True)
-    print(f"   Thumbnails Dir:   {thumbnails_dir}", flush=True)
+    print(f" [Master Visual Indexer] Processing Stage 1 across {len(sample_files)} issues...", flush=True)
     print(f"=======================================================", flush=True)
     
-    return catalog_path
+    last_index = None
+    for idx, pdf_p in enumerate(sample_files, 1):
+        if not os.path.exists(pdf_p):
+            continue
+        try:
+            meta = parse_filename_metadata(pdf_p)
+            doc_stem = meta["clean_stem"]
+            cat_path = os.path.join(PROJECT_ROOT, "data", category, f"{doc_stem}_catalog.json")
+            
+            if not os.path.exists(cat_path) or force_reprocess:
+                print(f"\n[{idx}/{len(sample_files)}] Ingesting new/unprocessed issue: {os.path.basename(pdf_p)}...", flush=True)
+                cat_path = process_visual_pdf(pdf_p, category=category, metadata_only=True, force=force_reprocess)
+            else:
+                print(f"[{idx}/{len(sample_files)}] [Resume] Loading existing catalog: {doc_stem}", flush=True)
+                
+            if not os.path.exists(cat_path):
+                continue
+                
+            with open(cat_path, "r", encoding="utf-8") as f:
+                entries = json.load(f)
+                
+            last_index = update_master_index_with_catalog(entries, doc_stem)
+                        
+        except Exception as e:
+            print(f"  [Error Indexing {os.path.basename(pdf_p)}]: {e}", flush=True)
+            
+    if last_index:
+        print(f"\n[Master Visual Indexer] Successfully saved master exact lookup index to: {MASTER_INDEX_PATH}", flush=True)
+        print(f"  Total models indexed: {len(last_index.get('models', {}))}", flush=True)
+        print(f"  Total issues indexed: {len(last_index.get('issues', {}))}", flush=True)
+        print(f"  Total photographers indexed: {len(last_index.get('photographers', {}))}", flush=True)
+        print(f"  Total designers indexed: {len(last_index.get('designers_and_brands', {}))}", flush=True)
+        print(f"  Total wardrobe accessories indexed: {len(last_index.get('wardrobe_accessories', {}))}\n", flush=True)
+    return MASTER_INDEX_PATH
 
 
 if __name__ == "__main__":
@@ -1200,7 +2505,6 @@ if __name__ == "__main__":
     
     default_pdf = os.path.join(PROJECT_ROOT, "data/PB/Playboys_Vixens_2006-08_09.pdf")
     
-    # Support backward compatible positional args or full flags
     parser = argparse.ArgumentParser(description="Gaiia RAG Doll Visual & Periodical Ingestion Engine")
     parser.add_argument("pdf_path", nargs="?", default=default_pdf, help="Path to target PDF")
     parser.add_argument("limit_pos", nargs="?", type=int, default=None, help="Positional max pages")
@@ -1209,32 +2513,33 @@ if __name__ == "__main__":
     parser.add_argument("--start", "-s", type=int, default=0, help="Start page index")
     parser.add_argument("--pages", "-p", type=str, default=None, help="Page list/ranges e.g. '0-9,85-89'")
     parser.add_argument("--clear", action="store_true", help="Clear existing image state before running")
-    parser.add_argument("--test-sample", action="store_true", help="Run test sample: first 10 and last 5 pages")
+    parser.add_argument("--metadata-only", action="store_true", help="Run Stage 1 fast metadata and TOC indexing only")
+    parser.add_argument("--index-all-metadata", action="store_true", help="Run Stage 1 fast indexing on all issues in data/PB")
+    parser.add_argument("--force", action="store_true", help="Force re-processing of already generated issue catalogs")
     parser.add_argument("--category", "-c", type=str, default="PB", help="Media category code")
     
     args = parser.parse_args()
     
-    target_pdf = args.pdf_path
-    
-    # Handle page selection
-    selected_pages = None
-    if args.test_sample:
-        selected_pages = list(range(0, 11)) + list(range(85, 90))
-    elif args.pages:
-        # Inspect doc to get total pages
-        _doc = fitz.open(target_pdf)
-        selected_pages = parse_page_spec(args.pages, len(_doc))
-        _doc.close()
-    
-    limit_val = args.limit if args.limit is not None else args.limit_pos
-    start_val = args.start if args.start != 0 else (args.start_pos or 0)
-    
-    process_visual_pdf(
-        target_pdf,
-        category=args.category,
-        max_pages=limit_val if selected_pages is None else None,
-        start_page=start_val if selected_pages is None else 0,
-        pages=selected_pages,
-        clear_existing=args.clear or args.test_sample
-    )
-
+    if args.index_all_metadata:
+        ingest_visual_corpus_metadata(category=args.category, force_reprocess=args.force)
+    else:
+        target_pdf = args.pdf_path
+        selected_pages = None
+        if args.pages:
+            _doc = fitz.open(target_pdf)
+            selected_pages = parse_page_spec(args.pages, len(_doc))
+            _doc.close()
+        
+        limit_val = args.limit if args.limit is not None else args.limit_pos
+        start_val = args.start if args.start != 0 else (args.start_pos or 0)
+        
+        process_visual_pdf(
+            target_pdf,
+            category=args.category,
+            max_pages=limit_val if selected_pages is None else None,
+            start_page=start_val if selected_pages is None else 0,
+            pages=selected_pages,
+            clear_existing=args.clear,
+            metadata_only=args.metadata_only,
+            force=args.force
+        )
