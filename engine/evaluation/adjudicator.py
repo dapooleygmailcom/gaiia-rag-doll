@@ -6,7 +6,11 @@ and partial citation gaps against ground truth community rulings, sandboxing ori
 import re
 import json
 import time
-import ollama
+
+try:
+    import ollama
+except ImportError:
+    ollama = None
 
 JUDGE_PROMPT_TEMPLATE = """You are an authoritative rules referee and evaluation adjudicator for wargaming rules reference systems.
 A candidate AI answered a user's rules question. In automated testing, it had a missing or partial rule citation match.

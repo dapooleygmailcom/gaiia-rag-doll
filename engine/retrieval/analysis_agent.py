@@ -1,6 +1,14 @@
 import json
-import ollama
-import chromadb
+
+try:
+    import chromadb
+except ImportError:
+    chromadb = None
+
+try:
+    import ollama
+except ImportError:
+    ollama = None
 
 CHROMA_DB_DIR = "data/chroma"
 CHROMA_COLLECTION_NAME = "airbnb-analysis"

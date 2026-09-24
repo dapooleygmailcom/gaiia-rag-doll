@@ -1,8 +1,16 @@
-import chromadb
-import ollama
 import json
 import os
 import re
+
+try:
+    import chromadb
+except ImportError:
+    chromadb = None
+
+try:
+    import ollama
+except ImportError:
+    ollama = None
 
 def generate_ontology(profile_path="data/renegade_legion_profile.json"):
     print("Loading profile...")

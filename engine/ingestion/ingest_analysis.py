@@ -1,8 +1,19 @@
 import os
 import csv
-import mysql.connector
-import chromadb
-import ollama
+try:
+    import mysql.connector
+except ImportError:
+    mysql = None
+
+try:
+    import chromadb
+except ImportError:
+    chromadb = None
+
+try:
+    import ollama
+except ImportError:
+    ollama = None
 
 DB_HOST = "127.0.0.1"
 DB_USER = "root"

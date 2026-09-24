@@ -30,8 +30,15 @@ import json
 import io
 import fitz  # PyMuPDF
 from PIL import Image
-import chromadb
-import ollama
+try:
+    import chromadb
+except ImportError:
+    chromadb = None
+
+try:
+    import ollama
+except ImportError:
+    ollama = None
 try:
     import cv2
     import numpy as np

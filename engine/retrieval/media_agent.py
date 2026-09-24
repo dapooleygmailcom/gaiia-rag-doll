@@ -15,9 +15,15 @@ import os
 import re
 import sys
 import json
-import argparse
-import chromadb
-import ollama
+try:
+    import chromadb
+except ImportError:
+    chromadb = None
+
+try:
+    import ollama
+except ImportError:
+    ollama = None
 
 # Ensure UTF-8 output encoding on Windows consoles
 if sys.platform == "win32":
